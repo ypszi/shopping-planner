@@ -1,0 +1,29 @@
+#!/usr/bin/env php
+<?php
+
+declare(strict_types=1);
+
+use DI\ContainerBuilder;
+use PeterPecosz\Kajatervezo\Command\KajatervezoCommand;
+use PeterPecosz\Kajatervezo\ServiceProvider\CommandServiceProvider;
+use Symfony\Component\Console\Application;
+use Symfony\Component\Console\Command\Command;
+
+require __DIR__ . '/../vendor/autoload.php';
+
+$application = new Application();
+
+$builder = new ContainerBuilder();
+$builder->addDefinitions((new CommandServiceProvider())->getDefinitions());
+$container = $builder->build();
+
+$command = $container->get(KajatervezoCommand::class);
+$application->add($command);
+
+try {
+    $application->run();
+} catch (Exception $e) {
+    echo $e->getMessage();
+
+    exit(Command::FAILURE);
+}

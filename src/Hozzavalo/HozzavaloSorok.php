@@ -1,0 +1,42 @@
+<?php
+
+declare(strict_types=1);
+
+namespace PeterPecosz\Kajatervezo\Hozzavalo;
+
+class HozzavaloSorok
+{
+    /** @var HozzavaloSor[] */
+    private array $hozzavaloSorok;
+
+    /**
+     * @param HozzavaloSor[] $hozzavaloSorok
+     */
+    public function __construct(array $hozzavaloSorok = [])
+    {
+        $this->hozzavaloSorok = $hozzavaloSorok;
+    }
+
+    public function add(HozzavaloSor $hozzavaloSor): self
+    {
+        $this->hozzavaloSorok[] = $hozzavaloSor;
+
+        return $this;
+    }
+
+    /**
+     * @return HozzavaloSor[]
+     */
+    public function getAll(): array
+    {
+        return $this->hozzavaloSorok;
+    }
+
+    /**
+     * @return array<string[]>
+     */
+    public function toArray(): array
+    {
+        return array_map(fn(HozzavaloSor $hozzavaloSor) => $hozzavaloSor->toArray(), $this->hozzavaloSorok);
+    }
+}
