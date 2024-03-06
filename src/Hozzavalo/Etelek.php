@@ -40,9 +40,7 @@ class Etelek
     private function addHozzavalo(HozzavaloSorok $hozzavaloSorok, Hozzavalo $hozzavalo): void
     {
         foreach ($hozzavaloSorok->getAll() as $hozzavaloSor) {
-            $isKategoriaFull = $hozzavaloSor->isKategoriaFull($hozzavalo);
-
-            if (!$isKategoriaFull) {
+            if ($hozzavaloSor->canAdd($hozzavalo)) {
                 $hozzavaloSor->add($hozzavalo);
 
                 return;

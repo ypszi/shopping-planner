@@ -30,11 +30,11 @@ class HozzavaloSor
         return $this;
     }
 
-    public function isKategoriaFull(Hozzavalo $hozzavalo): bool
+    public function canAdd(Hozzavalo $hozzavalo): bool
     {
         $hozzaadottHozzavalo = $this->hozzavalokPerKategoria[$hozzavalo->getKategoria()] ?? null;
 
-        return !empty($hozzaadottHozzavalo);
+        return empty($hozzaadottHozzavalo);
     }
 
     /**
