@@ -23,7 +23,24 @@ class HozzavaloSor
 
     public function add(Hozzavalo $hozzavalo): self
     {
-        $this->hozzavalokPerKategoria[$hozzavalo->getKategoria()] = $hozzavalo;
+        $hozzaadottHozzavalo = $this->hozzavalokPerKategoria[$hozzavalo->getKategoria()] ?? null;
+
+        if (empty($hozzaadottHozzavalo)) {
+            $this->hozzavalokPerKategoria[$hozzavalo->getKategoria()] = $hozzavalo;
+            $this->sort();
+
+            return $this;
+        }
+
+        if (
+            $hozzaadottHozzavalo->getNev() === $hozzavalo->getNev()
+            && $hozzaadottHozzavalo->getMertekegyseg() === $hozzavalo->getMertekegyseg()
+        ) {
+            $this->hozzavalokPerKategoria[$hozzavalo->getKategoria()] = Hozzavalo::fromHozzavalo(
+                $hozzavalo,
+                $hozzaadottHozzavalo->getMennyiseg() + $hozzavalo->getMennyiseg()
+            );
+        }
 
         $this->sort();
 
@@ -34,7 +51,12 @@ class HozzavaloSor
     {
         $hozzaadottHozzavalo = $this->hozzavalokPerKategoria[$hozzavalo->getKategoria()] ?? null;
 
-        return empty($hozzaadottHozzavalo);
+        if (empty($hozzaadottHozzavalo)) {
+            return true;
+        }
+
+        return $hozzaadottHozzavalo->getNev() === $hozzavalo->getNev()
+               && $hozzaadottHozzavalo->getMertekegyseg() === $hozzavalo->getMertekegyseg();
     }
 
     /**
