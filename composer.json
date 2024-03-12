@@ -13,7 +13,7 @@
     "autoload": {
         "psr-4": {
             "PeterPecosz\\Kajatervezo\\": "src/",
-            "PeterPecosz\\Kajatervezo\\Test\\Unit\\": "test/suite/unit"
+            "PeterPecosz\\Kajatervezo\\Tests\\": "tests/"
         }
     },
     "authors": [

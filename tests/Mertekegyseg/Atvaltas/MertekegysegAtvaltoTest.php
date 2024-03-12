@@ -2,8 +2,9 @@
 
 declare(strict_types=1);
 
-namespace PeterPecosz\Kajatervezo\Test\Unit;
+namespace PeterPecosz\Kajatervezo\Tests\Mertekegyseg\Atvaltas;
 
+use LogicException;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 use PeterPecosz\Kajatervezo\Mertekegyseg\MertekegysegAtvalto;
 use PHPUnit\Framework\Attributes\DataProvider;
@@ -29,13 +30,13 @@ class MertekegysegAtvaltoTest extends TestCase
     public static function mertekegysegDataProvider(): array
     {
         return [
-            'cl to dl' => [
+            'cl to dl'  => [
                 1,
                 Mertekegyseg::CL,
                 Mertekegyseg::DL,
                 0.1,
             ],
-            'cl to l'  => [
+            'cl to l'   => [
                 1,
                 Mertekegyseg::CL,
                 Mertekegyseg::L,
@@ -59,19 +60,19 @@ class MertekegysegAtvaltoTest extends TestCase
                 Mertekegyseg::ML,
                 100.0,
             ],
-            'l to cl'  => [
+            'l to cl'   => [
                 1,
                 Mertekegyseg::L,
                 Mertekegyseg::CL,
                 100.0,
             ],
-            'l to dl'  => [
+            'l to dl'   => [
                 1,
                 Mertekegyseg::L,
                 Mertekegyseg::DL,
                 10.0,
             ],
-            'l to ml'  => [
+            'l to ml'   => [
                 1,
                 Mertekegyseg::L,
                 Mertekegyseg::ML,
@@ -89,7 +90,7 @@ class MertekegysegAtvaltoTest extends TestCase
                 Mertekegyseg::DL,
                 0.01,
             ],
-            'ml to l'  => [
+            'ml to l'   => [
                 1,
                 Mertekegyseg::ML,
                 Mertekegyseg::L,
@@ -101,7 +102,7 @@ class MertekegysegAtvaltoTest extends TestCase
                 Mertekegyseg::G,
                 10.0,
             ],
-            'dkg to kg'  => [
+            'dkg to kg' => [
                 1,
                 Mertekegyseg::DKG,
                 Mertekegyseg::KG,
@@ -113,23 +114,83 @@ class MertekegysegAtvaltoTest extends TestCase
                 Mertekegyseg::DKG,
                 0.1,
             ],
-            'g to kg'  => [
+            'g to kg'   => [
                 1,
                 Mertekegyseg::G,
                 Mertekegyseg::KG,
                 0.001,
             ],
-            'kg to dkg'  => [
+            'kg to dkg' => [
                 1,
                 Mertekegyseg::KG,
                 Mertekegyseg::DKG,
                 100.0,
             ],
-            'kg to g'  => [
+            'kg to g'   => [
                 1,
                 Mertekegyseg::KG,
                 Mertekegyseg::G,
                 1000.0,
+            ],
+            'ek to ml'  => [
+                1,
+                Mertekegyseg::EK,
+                Mertekegyseg::ML,
+                15.0,
+            ],
+            'kvk to ml' => [
+                1,
+                Mertekegyseg::KVK,
+                Mertekegyseg::ML,
+                5.0,
+            ],
+            'kk to ml'  => [
+                1,
+                Mertekegyseg::KK,
+                Mertekegyseg::ML,
+                5.0,
+            ],
+            'ml to ek'  => [
+                1,
+                Mertekegyseg::ML,
+                Mertekegyseg::EK,
+                1 / 15.0,
+            ],
+            'ml to kvk' => [
+                1,
+                Mertekegyseg::ML,
+                Mertekegyseg::KVK,
+                0.2,
+            ],
+            'ml to kk'  => [
+                1,
+                Mertekegyseg::ML,
+                Mertekegyseg::KK,
+                0.2,
+            ],
+            'ml to mk'  => [
+                1,
+                Mertekegyseg::ML,
+                Mertekegyseg::MK,
+                0.5,
+            ],
+            'ml to tk'  => [
+                1,
+                Mertekegyseg::ML,
+                Mertekegyseg::TK,
+                0.2,
+            ],
+            'mk to ml'  => [
+                1,
+                Mertekegyseg::MK,
+                Mertekegyseg::ML,
+                2.0,
+            ],
+            'tk to ml'  => [
+                1,
+                Mertekegyseg::TK,
+                Mertekegyseg::ML,
+                5.0,
             ],
         ];
     }
@@ -140,7 +201,7 @@ class MertekegysegAtvaltoTest extends TestCase
         $mertekegyseget = 'from';
         $mertekegysegre = 'to';
 
-        $this->expectException(\LogicException::class);
+        $this->expectException(LogicException::class);
         $this->expectExceptionMessage(sprintf('Cannot convert %s to %s', $mertekegyseget, $mertekegysegre));
 
         $this->sut->valt(10, $mertekegyseget, $mertekegysegre);

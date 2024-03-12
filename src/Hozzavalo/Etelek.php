@@ -16,7 +16,7 @@ class Etelek
         $this->etelek = $etelek;
     }
 
-    public function toTable(): HozzavaloSorok
+    public function createHozzavaloSorok(): HozzavaloSorok
     {
         $hozzavaloSorok = new HozzavaloSorok();
 

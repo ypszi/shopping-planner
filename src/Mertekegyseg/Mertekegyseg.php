@@ -22,6 +22,8 @@ class Mertekegyseg
     final public const string MK = 'mk';
     // Kis kanál
     final public const string KK = 'kk';
+    // Teás kanál
+    final public const string TK = 'tk';
     // Kávés kanál
     final public const string KVK = 'kvk';
     // Evőkanál

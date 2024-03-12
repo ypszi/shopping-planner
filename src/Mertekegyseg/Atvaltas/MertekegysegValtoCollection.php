@@ -5,6 +5,16 @@ declare(strict_types=1);
 namespace PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas;
 
 use LogicException;
+use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kanal\EvoKanalToMilliliter;
+use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kanal\KavesKanalToMilliliter;
+use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kanal\KisKanalToMilliliter;
+use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kanal\MilliliterToEvoKanal;
+use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kanal\MilliliterToKavesKanal;
+use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kanal\MilliliterToKisKanal;
+use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kanal\MilliliterToMokkasKanal;
+use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kanal\MilliliterToTeasKanal;
+use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kanal\MokkasKanalToMilliliter;
+use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kanal\TeasKanalToMilliliter;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Tomeg\DekagramToGram;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Tomeg\DekagramToKilogram;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Tomeg\GramToDekagram;
@@ -48,6 +58,16 @@ class MertekegysegValtoCollection
             new GramToKilogram(),
             new KilogramToDekagram(),
             new KilogramToGram(),
+            new EvoKanalToMilliliter(),
+            new KavesKanalToMilliliter(),
+            new KisKanalToMilliliter(),
+            new MilliliterToEvoKanal(),
+            new MilliliterToKavesKanal(),
+            new MilliliterToKisKanal(),
+            new MilliliterToMokkasKanal(),
+            new MilliliterToTeasKanal(),
+            new MokkasKanalToMilliliter(),
+            new TeasKanalToMilliliter(),
         ];
     }
 
