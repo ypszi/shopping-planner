@@ -8,22 +8,22 @@ class Mertekegyseg
 {
     final public const string DB = 'db';
     final public const string GEREZD = 'gerezd';
-    /* tomeg */
+    /* tömeg */
     final public const string G = 'g';
     final public const string DKG = 'dkg';
     final public const string KG = 'kg';
-    /* folyadek */
+    /* űrtartalom */
     final public const string ML = 'ml';
     final public const string CL = 'cl';
     final public const string DL = 'dl';
     final public const string L = 'l';
-    /* kanal */
-    // Mokkas kanal
+    /* kanál */
+    // Mokkás kanál
     final public const string MK = 'mk';
-    // Kis kanal
+    // Kis kanál
     final public const string KK = 'kk';
-    // Kaves kanal
+    // Kávés kanál
     final public const string KVK = 'kvk';
-    // Evokanal
+    // Evőkanál
     final public const string EK = 'ek';
 }
