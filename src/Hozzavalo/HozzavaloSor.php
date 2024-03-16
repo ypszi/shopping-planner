@@ -37,9 +37,7 @@ class HozzavaloSor
             return $this;
         }
 
-        if ($hozzaadottHozzavalo->getNev() === $hozzavalo->getNev()
-            && $hozzaadottHozzavalo->getMertekegyseg() !== $hozzavalo->getMertekegyseg()
-        ) {
+        if ($this->canAddUsingConvert($hozzavalo, $hozzaadottHozzavalo)) {
             $newMennyiseg = $this->mertekegysegAtvalto->valt(
                 $hozzavalo->getMennyiseg(),
                 $hozzavalo->getMertekegyseg(),
@@ -78,7 +76,12 @@ class HozzavaloSor
             return true;
         }
 
-        return $hozzaadottHozzavalo->getNev() === $hozzavalo->getNev();
+        if ($this->canAddUsingConvert($hozzavalo, $hozzaadottHozzavalo)) {
+            return true;
+        }
+
+        return $hozzaadottHozzavalo->getNev() === $hozzavalo->getNev()
+               && $hozzaadottHozzavalo->getMertekegyseg() === $hozzavalo->getMertekegyseg();
     }
 
     /**
@@ -93,6 +96,21 @@ class HozzavaloSor
         }
 
         return $sor;
+    }
+
+    private function canAddUsingConvert(Hozzavalo $hozzavalo, Hozzavalo $hozzaadottHozzavalo): bool
+    {
+        if (
+            $hozzaadottHozzavalo->getNev() === $hozzavalo->getNev()
+            && $hozzaadottHozzavalo->getMertekegyseg() !== $hozzavalo->getMertekegyseg()
+        ) {
+            return $this->mertekegysegAtvalto->canValt(
+                $hozzavalo->getMertekegyseg(),
+                $hozzaadottHozzavalo->getMertekegyseg()
+            );
+        }
+
+        return false;
     }
 
     private function sort(): self

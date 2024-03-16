@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Tests\Mertekegyseg\Atvaltas;
 
-use LogicException;
+use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Exception\UnknownUnitOfMeasureException;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 use PeterPecosz\Kajatervezo\Mertekegyseg\MertekegysegAtvalto;
 use PHPUnit\Framework\Attributes\DataProvider;
@@ -201,7 +201,7 @@ class MertekegysegAtvaltoTest extends TestCase
         $mertekegyseget = 'from';
         $mertekegysegre = 'to';
 
-        $this->expectException(LogicException::class);
+        $this->expectException(UnknownUnitOfMeasureException::class);
         $this->expectExceptionMessage(sprintf('Cannot convert %s to %s', $mertekegyseget, $mertekegysegre));
 
         $this->sut->valt(10, $mertekegyseget, $mertekegysegre);

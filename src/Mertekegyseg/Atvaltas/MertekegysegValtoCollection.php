@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas;
 
-use LogicException;
+use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Exception\UnknownUnitOfMeasureException;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kanal\EvoKanalToMilliliter;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kanal\KavesKanalToMilliliter;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kanal\KisKanalToMilliliter;
@@ -79,6 +79,6 @@ class MertekegysegValtoCollection
             }
         }
 
-        throw new LogicException(sprintf('Cannot convert %s to %s', $mertekegyseget, $mertekegysegre));
+        throw new UnknownUnitOfMeasureException(sprintf('Cannot convert %s to %s', $mertekegyseget, $mertekegysegre));
     }
 }

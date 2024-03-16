@@ -25,12 +25,20 @@ class Hozzavalo
     final public const string BURGONYA = 'Burgonya';
     final public const string HEGYES_PAPRIKA = 'Hegyes paprika';
     /* FUSZER_ES_OLAJ */
+    final public const string CHILI = 'Chili';
+    final public const string NAPRAFORGO_OLAJ = 'Napraforgó olaj';
     final public const string PIROS_PAPRIKA = 'Piros paprika';
     final public const string FUSZER_PAPRIKA = 'Piros paprika';
     final public const string KAKUKKFU = 'Kakukkfű';
     /* HOSSZU_SOROK */
     final public const string FEHERBOR = 'Fehérbor';
     final public const string PENNE_TESZTA = 'Penne tészta';
+    final public const string SUTOPOR = 'Sütőpor';
+    final public const string KEMENYITO = 'Keményítő';
+    final public const string MEZ = 'Méz';
+    final public const string SZEZAMMAG = 'Szezámmag';
+    final public const string FINOMLISZT = 'Finomliszt';
+    final public const string LISZT = 'Finomliszt';
     /* HUS */
     final public const string CSIRKEMELL = 'Csirkemell';
     final public const string DARALT_HUS = 'Darált hús';
@@ -38,9 +46,11 @@ class Hozzavalo
     /* HUTOS */
     final public const string TEJFOL = 'Tejföl';
     final public const string PARMEZAN = 'Parmezán';
+    final public const string TOJAS = 'Tojás';
     /* HUTOS_UTAN */
     final public const string TEJSZIN = 'Főzőtejszín';
     final public const string FOZO_TEJSZIN = 'Főzőtejszín';
+    final public const string KETCHUP = 'Ketchup';
 
     private string $kategoria;
 

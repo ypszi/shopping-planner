@@ -6,6 +6,7 @@ namespace PeterPecosz\Kajatervezo\Command;
 
 use PeterPecosz\Kajatervezo\Etel\CitromosSpargasCsirkesPenne;
 use PeterPecosz\Kajatervezo\Etel\Csirkemellpaprikas;
+use PeterPecosz\Kajatervezo\Etel\KinaiSzezammagosCsirke;
 use PeterPecosz\Kajatervezo\Hozzavalo\Etelek;
 use PeterPecosz\Kajatervezo\Hozzavalo\HozzavaloKategoria;
 use Symfony\Component\Console\Command\Command;
@@ -32,6 +33,7 @@ class KajatervezoCommand extends Command
             [
                 new Csirkemellpaprikas(),
                 new CitromosSpargasCsirkesPenne(),
+                new KinaiSzezammagosCsirke(),
             ]
         );
         $io->table(
