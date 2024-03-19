@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas;
 
+use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Exception\UnknownUnitOfMeasureException;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kanal\EvoKanalToDeciliter;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kanal\EvoKanalToMilliliter;
@@ -77,14 +78,14 @@ class MertekegysegValtoCollection
         ];
     }
 
-    public function get(string $mertekegyseget, string $mertekegysegre): MertekegysegValto
+    public function get(Hozzavalo $hozzavalo, Hozzavalo $hozzaadottHozzavalo): MertekegysegValto
     {
         foreach ($this->elements as $element) {
-            if ($element->canValt($mertekegyseget, $mertekegysegre)) {
+            if ($element->canValt($hozzavalo, $hozzaadottHozzavalo)) {
                 return $element;
             }
         }
 
-        throw new UnknownUnitOfMeasureException(sprintf('Cannot convert %s to %s', $mertekegyseget, $mertekegysegre));
+        throw new UnknownUnitOfMeasureException(sprintf('Cannot convert %s to %s', $hozzavalo, $hozzaadottHozzavalo));
     }
 }

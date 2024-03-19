@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Mertekegyseg;
 
+use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Exception\UnknownUnitOfMeasureException;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\MertekegysegValtoCollection;
 
@@ -16,10 +17,10 @@ class MertekegysegAtvalto
         $this->mertekegysegValtoCollection = new MertekegysegValtoCollection();
     }
 
-    public function canValt(string $mertekegyseget, string $mertekegysegre): bool
+    public function canValt(Hozzavalo $hozzavalo, Hozzavalo $hozzaadottHozzavalo): bool
     {
         try {
-            $this->mertekegysegValtoCollection->get($mertekegyseget, $mertekegysegre);
+            $this->mertekegysegValtoCollection->get($hozzavalo, $hozzaadottHozzavalo);
         } catch (UnknownUnitOfMeasureException) {
             return false;
         }
@@ -27,8 +28,8 @@ class MertekegysegAtvalto
         return true;
     }
 
-    public function valt(float $mennyiseg, string $mertekegyseget, string $mertekegysegre): float
+    public function valt(Hozzavalo $hozzavalo, Hozzavalo $hozzaadottHozzavalo): float
     {
-        return $this->mertekegysegValtoCollection->get($mertekegyseget, $mertekegysegre)->valt($mennyiseg);
+        return $this->mertekegysegValtoCollection->get($hozzavalo, $hozzaadottHozzavalo)->valt($hozzavalo->getMennyiseg());
     }
 }

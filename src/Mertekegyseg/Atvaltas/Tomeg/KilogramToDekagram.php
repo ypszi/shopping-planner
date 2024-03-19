@@ -4,15 +4,16 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Tomeg;
 
+use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\MertekegysegValto;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class KilogramToDekagram extends MertekegysegValto
 {
-    #[\Override] public function canValt(string $mertekegyseget, string $mertekegysegre): bool
+    #[\Override] public function canValt(Hozzavalo $hozzavalo, Hozzavalo $hozzaadottHozzavalo): bool
     {
-        return $mertekegyseget === Mertekegyseg::KG
-               && $mertekegysegre === Mertekegyseg::DKG;
+        return $hozzavalo->getMertekegyseg() === Mertekegyseg::KG
+               && $hozzaadottHozzavalo->getMertekegyseg() === Mertekegyseg::DKG;
     }
 
     #[\Override] protected function getMultiplier(): float

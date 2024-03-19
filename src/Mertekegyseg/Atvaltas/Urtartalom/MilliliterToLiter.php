@@ -4,15 +4,16 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Urtartalom;
 
+use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\MertekegysegValto;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class MilliliterToLiter extends MertekegysegValto
 {
-    #[\Override] public function canValt(string $mertekegyseget, string $mertekegysegre): bool
+    #[\Override] public function canValt(Hozzavalo $hozzavalo, Hozzavalo $hozzaadottHozzavalo): bool
     {
-        return $mertekegyseget === Mertekegyseg::ML
-               && $mertekegysegre === Mertekegyseg::L;
+        return $hozzavalo->getMertekegyseg() === Mertekegyseg::ML
+               && $hozzaadottHozzavalo->getMertekegyseg() === Mertekegyseg::L;
     }
 
     #[\Override] protected function getMultiplier(): float

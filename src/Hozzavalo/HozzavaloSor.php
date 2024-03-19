@@ -39,9 +39,8 @@ class HozzavaloSor
 
         if ($this->canAddUsingConvert($hozzavalo, $hozzaadottHozzavalo)) {
             $newMennyiseg = $this->mertekegysegAtvalto->valt(
-                $hozzavalo->getMennyiseg(),
-                $hozzavalo->getMertekegyseg(),
-                $hozzaadottHozzavalo->getMertekegyseg()
+                $hozzavalo,
+                $hozzaadottHozzavalo
             );
 
             $this->hozzavalokPerKategoria[$hozzavalo->getKategoria()] = Hozzavalo::fromHozzavalo(
@@ -105,8 +104,8 @@ class HozzavaloSor
             && $hozzaadottHozzavalo->getMertekegyseg() !== $hozzavalo->getMertekegyseg()
         ) {
             return $this->mertekegysegAtvalto->canValt(
-                $hozzavalo->getMertekegyseg(),
-                $hozzaadottHozzavalo->getMertekegyseg()
+                $hozzavalo,
+                $hozzaadottHozzavalo
             );
         }
 
