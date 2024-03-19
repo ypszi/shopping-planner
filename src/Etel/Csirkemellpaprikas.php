@@ -10,11 +10,14 @@ use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class Csirkemellpaprikas extends Etel
 {
-    public function __construct()
+    #[\Override] public static function getName(): string
     {
-        parent::__construct();
+        return 'Csirkemell paprikás';
+    }
 
-        $this->hozzavalok = [
+    #[\Override] protected static function listHozzavalok(): array
+    {
+        return [
             new Hozzavalo(HozzavaloKategoria::ZOLDSEG, Hozzavalo::VOROSHAGYMA, 1, Mertekegyseg::DB),
             new Hozzavalo(HozzavaloKategoria::ZOLDSEG, Hozzavalo::FOKHAGYMA, 1, Mertekegyseg::GEREZD),
             new Hozzavalo(HozzavaloKategoria::ZOLDSEG, Hozzavalo::PARADICSOM, 1, Mertekegyseg::DB),
@@ -25,10 +28,5 @@ class Csirkemellpaprikas extends Etel
             new Hozzavalo(HozzavaloKategoria::HUTOS, Hozzavalo::TEJFOL, 1, Mertekegyseg::EK),
             new Hozzavalo(HozzavaloKategoria::HUTOS_UTAN, Hozzavalo::TEJSZIN, 1, Mertekegyseg::DL),
         ];
-    }
-
-    #[\Override] public static function getName(): string
-    {
-        return 'Csirkemell paprikás';
     }
 }

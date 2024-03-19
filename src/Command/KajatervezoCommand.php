@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Command;
 
+use PeterPecosz\Kajatervezo\Etel\BundasCsirke;
 use PeterPecosz\Kajatervezo\Etel\CitromosSpargasCsirkesPenne;
 use PeterPecosz\Kajatervezo\Etel\Csirkemellpaprikas;
 use PeterPecosz\Kajatervezo\Etel\KinaiSzezammagosCsirke;
@@ -31,6 +32,7 @@ class KajatervezoCommand extends Command
 
         $etelek = new Etelek(
             [
+                new BundasCsirke(),
                 new Csirkemellpaprikas(),
                 new CitromosSpargasCsirkesPenne(),
                 new KinaiSzezammagosCsirke(),

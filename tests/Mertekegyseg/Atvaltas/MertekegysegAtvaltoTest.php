@@ -30,6 +30,12 @@ class MertekegysegAtvaltoTest extends TestCase
     public static function mertekegysegDataProvider(): array
     {
         return [
+            'bogre to ml'  => [
+                1,
+                Mertekegyseg::BOGRE,
+                Mertekegyseg::ML,
+                250.0,
+            ],
             'cl to dl'  => [
                 1,
                 Mertekegyseg::CL,
@@ -47,6 +53,12 @@ class MertekegysegAtvaltoTest extends TestCase
                 Mertekegyseg::CL,
                 Mertekegyseg::ML,
                 10.0,
+            ],
+            'csesze to ml'  => [
+                1,
+                Mertekegyseg::CSESZE,
+                Mertekegyseg::ML,
+                250.0,
             ],
             'dl to cl'  => [
                 1,
@@ -131,6 +143,12 @@ class MertekegysegAtvaltoTest extends TestCase
                 Mertekegyseg::KG,
                 Mertekegyseg::G,
                 1000.0,
+            ],
+            'ek to dl'  => [
+                1,
+                Mertekegyseg::EK,
+                Mertekegyseg::DL,
+                0.15,
             ],
             'ek to ml'  => [
                 1,

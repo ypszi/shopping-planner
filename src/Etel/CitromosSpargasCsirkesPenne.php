@@ -10,11 +10,14 @@ use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class CitromosSpargasCsirkesPenne extends Etel
 {
-    public function __construct()
+    #[\Override] public static function getName(): string
     {
-        parent::__construct();
+        return 'Citromos Spárgás Csirkés Penne';
+    }
 
-        $this->hozzavalok = [
+    #[\Override] protected static function listHozzavalok(): array
+    {
+        return [
             new Hozzavalo(HozzavaloKategoria::ZOLDSEG, Hozzavalo::VOROSHAGYMA, 1, Mertekegyseg::DB),
             new Hozzavalo(HozzavaloKategoria::ZOLDSEG, Hozzavalo::CITROM, 1, Mertekegyseg::DB),
             new Hozzavalo(HozzavaloKategoria::ZOLDSEG, Hozzavalo::FOKHAGYMA, 6, Mertekegyseg::GEREZD),
@@ -25,10 +28,5 @@ class CitromosSpargasCsirkesPenne extends Etel
             new Hozzavalo(HozzavaloKategoria::HUTOS, Hozzavalo::PARMEZAN, 10, Mertekegyseg::G),
             new Hozzavalo(HozzavaloKategoria::HUTOS_UTAN, Hozzavalo::TEJSZIN, 4, Mertekegyseg::DL),
         ];
-    }
-
-    #[\Override] public static function getName(): string
-    {
-        return 'Citromos Spárgás Csirkés Penne';
     }
 }

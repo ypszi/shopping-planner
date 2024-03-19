@@ -8,20 +8,23 @@ use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
 
 abstract class Etel
 {
-    /**
-     * @var array<Hozzavalo>
-     */
+    /** @var Hozzavalo[] */
     protected array $hozzavalok;
 
     public function __construct()
     {
-        $this->hozzavalok = [];
+        $this->hozzavalok = static::listHozzavalok();
     }
 
     abstract public static function getName(): string;
 
     /**
-     * @return array<Hozzavalo>
+     * @return Hozzavalo[]
+     */
+    abstract protected static function listHozzavalok(): array;
+
+    /**
+     * @return Hozzavalo[]
      */
     public function getHozzavalok(): array
     {

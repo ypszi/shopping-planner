@@ -10,11 +10,14 @@ use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class KinaiSzezammagosCsirke extends Etel
 {
-    public function __construct()
+    #[\Override] public static function getName(): string
     {
-        parent::__construct();
+        return 'Kínai szezámmagos csirke';
+    }
 
-        $this->hozzavalok = [
+    #[\Override] protected static function listHozzavalok(): array
+    {
+        return [
             new Hozzavalo(HozzavaloKategoria::FUSZER_ES_OLAJ, Hozzavalo::NAPRAFORGO_OLAJ, 1, Mertekegyseg::EK),
             new Hozzavalo(HozzavaloKategoria::FUSZER_ES_OLAJ, Hozzavalo::NAPRAFORGO_OLAJ, 3, Mertekegyseg::DL),
             // chili ízlés szerint
@@ -28,10 +31,5 @@ class KinaiSzezammagosCsirke extends Etel
             new Hozzavalo(HozzavaloKategoria::HUTOS, Hozzavalo::TOJAS, 1, Mertekegyseg::DB),
             new Hozzavalo(HozzavaloKategoria::HUTOS_UTAN, Hozzavalo::KETCHUP, 100, Mertekegyseg::G),
         ];
-    }
-
-    #[\Override] public static function getName(): string
-    {
-        return 'Kínai szezámmagos csirke';
     }
 }

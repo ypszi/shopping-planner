@@ -17,6 +17,9 @@ class Mertekegyseg
     final public const string CL = 'cl';
     final public const string DL = 'dl';
     final public const string L = 'l';
+    /* pohár */
+    final public const string CSESZE = 'csésze';
+    final public const string BOGRE = 'bögre';
     /* kanál */
     // Mokkás kanál
     final public const string MK = 'mk';
