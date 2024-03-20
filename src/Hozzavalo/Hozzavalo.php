@@ -35,6 +35,7 @@ class Hozzavalo
     final public const string KAKUKKFU = 'Kakukkfű';
     final public const string NAPRAFORGO_OLAJ = 'Napraforgó olaj';
     final public const string OLIVA_OLAJ = 'Olíva olaj';
+    final public const string OREGANO = 'Oregánó';
     final public const string PIROS_PAPRIKA = 'Piros paprika';
     final public const string SZERECSENDIO = 'Szerecsendió';
     final public const string ZOLDFUSZER = 'Zöldfűszer';
@@ -56,6 +57,8 @@ class Hozzavalo
     final public const string LAZAC = 'Lazac';
 
     /* HUTOS */
+    final public const string FETA_SAJT = 'Feta sajt';
+    final public const string NATUR_JOGHURT = 'Natúr joghurt';
     final public const string PARMEZAN = 'Parmezán';
     final public const string TEJFOL = 'Tejföl';
     final public const string TOJAS = 'Tojás';
@@ -67,8 +70,10 @@ class Hozzavalo
 
     /** @var array<string, string> */
     final public const array MERTEKEGYSEG_PREFERENCE = [
-        Hozzavalo::CSIRKEMELL => Mertekegyseg::KG,
-        Hozzavalo::LISZT      => Mertekegyseg::DKG,
+        Hozzavalo::CSIRKEMELL      => Mertekegyseg::KG,
+        Hozzavalo::LISZT           => Mertekegyseg::DKG,
+        Hozzavalo::NAPRAFORGO_OLAJ => Mertekegyseg::DL,
+        Hozzavalo::OLIVA_OLAJ      => Mertekegyseg::DL,
     ];
 
     private string $kategoria;

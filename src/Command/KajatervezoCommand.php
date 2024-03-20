@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace PeterPecosz\Kajatervezo\Command;
 
 use PeterPecosz\Kajatervezo\Etel\BundasCsirke;
+use PeterPecosz\Kajatervezo\Etel\CitromosJoghurtosCsirkemell;
 use PeterPecosz\Kajatervezo\Etel\CitromosSpargasCsirkesPenne;
 use PeterPecosz\Kajatervezo\Etel\Csirkemellpaprikas;
 use PeterPecosz\Kajatervezo\Etel\KinaiSzezammagosCsirke;
@@ -36,8 +37,10 @@ class KajatervezoCommand extends Command
                 new Csirkemellpaprikas(),
                 new CitromosSpargasCsirkesPenne(),
                 new KinaiSzezammagosCsirke(),
+                new CitromosJoghurtosCsirkemell(),
             ]
         );
+
         $io->table(
             ['Ételek'],
             array_map(fn (string $etel) => [$etel], $etelek->toArray())
