@@ -5,6 +5,10 @@ declare(strict_types=1);
 namespace PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas;
 
 use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
+use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Csirkemell\DarabToDekagram as CsirkemellDarabToDekagram;
+use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Csirkemell\DarabToKilogram as CsirkemellDarabToKilogram;
+use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Csirkemell\DekagramToDarab as CsirkemellDekagramToDarab;
+use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Csirkemell\KilogramToDarab as CsirkemellKilogramToDarab;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Exception\UnknownUnitOfMeasureException;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kanal\EvoKanalToDeciliter;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kanal\EvoKanalToMilliliter;
@@ -45,6 +49,10 @@ class MertekegysegValtoCollection
     public function __construct()
     {
         $this->elements = [
+            new CsirkemellDarabToDekagram(),
+            new CsirkemellDarabToKilogram(),
+            new CsirkemellDekagramToDarab(),
+            new CsirkemellKilogramToDarab(),
             new BogreToMilliliter(),
             new CentiliterToDeciliter(),
             new CentiliterToLiter(),

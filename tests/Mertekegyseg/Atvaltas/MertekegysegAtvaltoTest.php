@@ -31,6 +31,26 @@ class MertekegysegAtvaltoTest extends TestCase
     public static function mertekegysegDataProvider(): array
     {
         return [
+            'csirkemell db to dkg'  => [
+                new Hozzavalo('kategoria', Hozzavalo::CSIRKEMELL, 1, Mertekegyseg::DB),
+                new Hozzavalo('kategoria', Hozzavalo::CSIRKEMELL, 0, Mertekegyseg::DKG),
+                25.0,
+            ],
+            'csirkemell db to kg'  => [
+                new Hozzavalo('kategoria', Hozzavalo::CSIRKEMELL, 1, Mertekegyseg::DB),
+                new Hozzavalo('kategoria', Hozzavalo::CSIRKEMELL, 0, Mertekegyseg::KG),
+                0.25,
+            ],
+            'csirkemell dkg to db'  => [
+                new Hozzavalo('kategoria', Hozzavalo::CSIRKEMELL, 25, Mertekegyseg::DKG),
+                new Hozzavalo('kategoria', Hozzavalo::CSIRKEMELL, 0, Mertekegyseg::DB),
+                1.0,
+            ],
+            'csirkemell kg to db'  => [
+                new Hozzavalo('kategoria', Hozzavalo::CSIRKEMELL, 1, Mertekegyseg::KG),
+                new Hozzavalo('kategoria', Hozzavalo::CSIRKEMELL, 0, Mertekegyseg::DB),
+                4.0,
+            ],
             'bogre to ml'  => [
                 new Hozzavalo('kategoria', 'name', 1, Mertekegyseg::BOGRE),
                 new Hozzavalo('kategoria', 'name', 0, Mertekegyseg::ML),
