@@ -10,6 +10,7 @@ use PeterPecosz\Kajatervezo\Etel\CitromosSpargasCsirkesPenne;
 use PeterPecosz\Kajatervezo\Etel\Csirkemellpaprikas;
 use PeterPecosz\Kajatervezo\Etel\KefiresCsirke;
 use PeterPecosz\Kajatervezo\Etel\KinaiSzezammagosCsirke;
+use PeterPecosz\Kajatervezo\Etel\PorehagymaLeves;
 use PeterPecosz\Kajatervezo\Etel\Rizskoch;
 use PeterPecosz\Kajatervezo\Etel\ToltottKaposzta;
 use PeterPecosz\Kajatervezo\Hozzavalo\Etelek;
@@ -44,6 +45,7 @@ class KajatervezoCommand extends Command
                 new Rizskoch(),
                 new ToltottKaposzta(),
                 new KefiresCsirke(),
+                new PorehagymaLeves(),
             ]
         );
 

@@ -22,13 +22,16 @@ class Hozzavalo
     final public const string KARALABE = 'Karalabé';
     final public const string KIGYOUBORKA = 'Kigyóuborka';
     final public const string KOKTELPARADICSOM = 'Koktélparadicsom';
+    final public const string KRUMPLI = 'Burgonya';
     final public const string LILAHAGYMA = 'Lilahagyma';
     final public const string PAPRIKA = 'Paprika';
     final public const string PARADICSOM = 'Paradicsom';
+    final public const string POREHAGYMA = 'Póréhagyma';
     final public const string REPA = 'Répa';
     final public const string SAVANYU_KAPOSZTA = 'Savanyú káposzta';
     final public const string VOROSHAGYMA = 'Vöröshagyma';
     final public const string ZELLER = 'Zeller';
+    final public const string ZELLERSZAR = 'Zellerszár';
     /* FUSZER_ES_OLAJ */
     final public const string BABERLEVEL = 'Babérlevél';
     final public const string CAYENNE_BORS = 'Cayenne bors';
@@ -37,6 +40,7 @@ class Hozzavalo
     final public const string FUSZERKOMENY = 'Fűszerkömény';
     final public const string FUSZER_PAPRIKA = 'Piros paprika';
     final public const string GYOMBER_POR = 'Gyömbér por';
+    final public const string HUSLEVES_KOCKA = 'Húsleves kocka';
     final public const string KAKUKKFU = 'Kakukkfű';
     final public const string NAPRAFORGO_OLAJ = 'Napraforgó olaj';
     final public const string OLIVA_OLAJ = 'Olíva olaj';
@@ -75,9 +79,11 @@ class Hozzavalo
     final public const string TOJAS = 'Tojás';
     /* HUTOS_UTAN */
     final public const string FOZO_TEJSZIN = 'Főzőtejszín';
+    final public const string HABTEJSZIN = 'Habtejszín';
     final public const string KETCHUP = 'Ketchup';
     final public const string TEJ = 'Tej';
     final public const string TEJSZIN = 'Főzőtejszín';
+    final public const string VAJ = 'Vaj';
     /** @var array<string, string> */
     final public const array MERTEKEGYSEG_PREFERENCE = [
         self::CSIRKEMELL      => Mertekegyseg::KG,
@@ -104,16 +110,19 @@ class Hozzavalo
         self::LILAHAGYMA          => HozzavaloKategoria::ZOLDSEG,
         self::PAPRIKA             => HozzavaloKategoria::ZOLDSEG,
         self::PARADICSOM          => HozzavaloKategoria::ZOLDSEG,
+        self::POREHAGYMA          => HozzavaloKategoria::ZOLDSEG,
         self::REPA                => HozzavaloKategoria::ZOLDSEG,
         self::SAVANYU_KAPOSZTA    => HozzavaloKategoria::ZOLDSEG,
         self::VOROSHAGYMA         => HozzavaloKategoria::ZOLDSEG,
         self::ZELLER              => HozzavaloKategoria::ZOLDSEG,
+        self::ZELLERSZAR          => HozzavaloKategoria::ZOLDSEG,
         self::BABERLEVEL          => HozzavaloKategoria::FUSZER_ES_OLAJ,
         self::CAYENNE_BORS        => HozzavaloKategoria::FUSZER_ES_OLAJ,
         self::CHILI               => HozzavaloKategoria::FUSZER_ES_OLAJ,
         self::FUSZERKEVEREK       => HozzavaloKategoria::FUSZER_ES_OLAJ,
         self::FUSZERKOMENY        => HozzavaloKategoria::FUSZER_ES_OLAJ,
         self::GYOMBER_POR         => HozzavaloKategoria::FUSZER_ES_OLAJ,
+        self::HUSLEVES_KOCKA      => HozzavaloKategoria::FUSZER_ES_OLAJ,
         self::KAKUKKFU            => HozzavaloKategoria::FUSZER_ES_OLAJ,
         self::NAPRAFORGO_OLAJ     => HozzavaloKategoria::FUSZER_ES_OLAJ,
         self::OLIVA_OLAJ          => HozzavaloKategoria::FUSZER_ES_OLAJ,
@@ -147,8 +156,10 @@ class Hozzavalo
         self::TEJFOL              => HozzavaloKategoria::HUTOS,
         self::TOJAS               => HozzavaloKategoria::HUTOS,
         self::FOZO_TEJSZIN        => HozzavaloKategoria::HUTOS_UTAN,
+        self::HABTEJSZIN          => HozzavaloKategoria::HUTOS_UTAN,
         self::KETCHUP             => HozzavaloKategoria::HUTOS_UTAN,
         self::TEJ                 => HozzavaloKategoria::HUTOS_UTAN,
+        self::VAJ                 => HozzavaloKategoria::HUTOS_UTAN,
     ];
 
     private string $kategoria;
