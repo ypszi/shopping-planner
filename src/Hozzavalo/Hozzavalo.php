@@ -17,6 +17,7 @@ class Hozzavalo
     final public const string FOKHAGYMA = 'Fokhagyma';
     final public const string HEGYES_PAPRIKA = 'Hegyes paprika';
     final public const string JEGSALATA = 'Jégsaláta';
+    final public const string KAPOSZTA = 'Káposzta';
     final public const string KARALABE = 'Karalabé';
     final public const string KIGYOUBORKA = 'Kigyóuborka';
     final public const string KOKTELPARADICSOM = 'Koktélparadicsom';
@@ -24,12 +25,15 @@ class Hozzavalo
     final public const string PAPRIKA = 'Paprika';
     final public const string PARADICSOM = 'Paradicsom';
     final public const string REPA = 'Répa';
+    final public const string SAVANYU_KAPOSZTA = 'Savanyú káposzta';
     final public const string VOROSHAGYMA = 'Vöröshagyma';
     final public const string ZELLER = 'Zeller';
 
     /* FUSZER_ES_OLAJ */
+    final public const string BABERLEVEL = 'Babérlevél';
     final public const string CAYENNE_BORS = 'Cayenne bors';
     final public const string CHILI = 'Chili';
+    final public const string FUSZERKOMENY = 'Fűszerkömény';
     final public const string FUSZER_PAPRIKA = 'Piros paprika';
     final public const string GYOMBER_POR = 'Gyömbér por';
     final public const string KAKUKKFU = 'Kakukkfű';
@@ -59,7 +63,10 @@ class Hozzavalo
     /* HUS */
     final public const string DARALT_HUS = 'Darált hús';
     final public const string CSIRKEMELL = 'Csirkemell';
+    final public const string KOLBASZ = 'Kolbász';
+    final public const string KOLOZSVARI_SZALONNA = 'Kolozsvári szalonna';
     final public const string LAZAC = 'Lazac';
+    final public const string SERTES_ZSIR = 'Sertészsír';
 
     /* HUTOS */
     final public const string FETA_SAJT = 'Feta sajt';
@@ -78,6 +85,7 @@ class Hozzavalo
     final public const array MERTEKEGYSEG_PREFERENCE = [
         Hozzavalo::CSIRKEMELL      => Mertekegyseg::KG,
         Hozzavalo::CUKOR           => Mertekegyseg::KG,
+        Hozzavalo::DARALT_HUS      => Mertekegyseg::KG,
         Hozzavalo::LISZT           => Mertekegyseg::KG,
         Hozzavalo::NAPRAFORGO_OLAJ => Mertekegyseg::DL,
         Hozzavalo::OLIVA_OLAJ      => Mertekegyseg::DL,
