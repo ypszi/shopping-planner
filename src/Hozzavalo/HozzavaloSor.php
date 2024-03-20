@@ -43,7 +43,7 @@ class HozzavaloSor
                 $hozzaadottHozzavalo
             );
 
-            $this->hozzavalokPerKategoria[$hozzavalo->getKategoria()] = Hozzavalo::fromHozzavalo(
+            $this->hozzavalokPerKategoria[$hozzavalo->getKategoria()] = Hozzavalo::fromHozzavaloWithMennyiseg(
                 $hozzaadottHozzavalo,
                 $hozzaadottHozzavalo->getMennyiseg() + $newMennyiseg
             );
@@ -56,7 +56,7 @@ class HozzavaloSor
             $hozzaadottHozzavalo->getNev() === $hozzavalo->getNev()
             && $hozzaadottHozzavalo->getMertekegyseg() === $hozzavalo->getMertekegyseg()
         ) {
-            $this->hozzavalokPerKategoria[$hozzavalo->getKategoria()] = Hozzavalo::fromHozzavalo(
+            $this->hozzavalokPerKategoria[$hozzavalo->getKategoria()] = Hozzavalo::fromHozzavaloWithMennyiseg(
                 $hozzaadottHozzavalo,
                 $hozzaadottHozzavalo->getMennyiseg() + $hozzavalo->getMennyiseg()
             );
@@ -81,6 +81,26 @@ class HozzavaloSor
 
         return $hozzaadottHozzavalo->getNev() === $hozzavalo->getNev()
                && $hozzaadottHozzavalo->getMertekegyseg() === $hozzavalo->getMertekegyseg();
+    }
+
+    public function convert(): self
+    {
+        foreach ($this->hozzavalokPerKategoria as $kategoria => $hozzavalo) {
+            $newMertekegyseg = Hozzavalo::MERTEKEGYSEG_PREFERENCE[$hozzavalo->getNev()] ?? $hozzavalo->getMertekegyseg();
+
+            if ($newMertekegyseg === $hozzavalo->getMertekegyseg()) {
+                continue;
+            }
+
+            $newMennyiseg = $this->mertekegysegAtvalto->valt(
+                $hozzavalo,
+                Hozzavalo::fromHozzavaloWithMertekegyseg($hozzavalo, $newMertekegyseg)
+            );
+
+            $this->hozzavalokPerKategoria[$kategoria] = Hozzavalo::fromHozzavalo($hozzavalo, $newMennyiseg, $newMertekegyseg);
+        }
+
+        return $this;
     }
 
     /**

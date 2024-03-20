@@ -201,6 +201,36 @@ class MertekegysegAtvaltoTest extends TestCase
                 new Hozzavalo('kategoria', 'name', 0, Mertekegyseg::ML),
                 5.0,
             ],
+            'liszt bogre to dkg'  => [
+                new Hozzavalo('kategoria', Hozzavalo::LISZT, 1, Mertekegyseg::BOGRE),
+                new Hozzavalo('kategoria', Hozzavalo::LISZT, 0, Mertekegyseg::DKG),
+                15.0,
+            ],
+            'liszt bogre to g'  => [
+                new Hozzavalo('kategoria', Hozzavalo::LISZT, 1, Mertekegyseg::BOGRE),
+                new Hozzavalo('kategoria', Hozzavalo::LISZT, 0, Mertekegyseg::G),
+                150.0,
+            ],
+            'liszt bogre to kg'  => [
+                new Hozzavalo('kategoria', Hozzavalo::LISZT, 1, Mertekegyseg::BOGRE),
+                new Hozzavalo('kategoria', Hozzavalo::LISZT, 0, Mertekegyseg::KG),
+                0.15,
+            ],
+            'liszt evokanal to dkg'  => [
+                new Hozzavalo('kategoria', Hozzavalo::LISZT, 1, Mertekegyseg::EK),
+                new Hozzavalo('kategoria', Hozzavalo::LISZT, 0, Mertekegyseg::DKG),
+                2.0,
+            ],
+            'liszt evokanal to g'  => [
+                new Hozzavalo('kategoria', Hozzavalo::LISZT, 1, Mertekegyseg::EK),
+                new Hozzavalo('kategoria', Hozzavalo::LISZT, 0, Mertekegyseg::G),
+                20.0,
+            ],
+            'liszt evokanal to kg'  => [
+                new Hozzavalo('kategoria', Hozzavalo::LISZT, 1, Mertekegyseg::EK),
+                new Hozzavalo('kategoria', Hozzavalo::LISZT, 0, Mertekegyseg::KG),
+                0.02,
+            ],
         ];
     }
 

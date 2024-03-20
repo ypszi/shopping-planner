@@ -21,6 +21,12 @@ use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kanal\MilliliterToMokkasKanal;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kanal\MilliliterToTeasKanal;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kanal\MokkasKanalToMilliliter;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kanal\TeasKanalToMilliliter;
+use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Liszt\BogreToDekagram as LisztBogreToDekagram;
+use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Liszt\BogreToGram as LisztBogreToGram;
+use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Liszt\BogreToKilogram as LisztBogreToKilogram;
+use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Liszt\EvokanalToDekagram as LisztEvokanalToDekagram;
+use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Liszt\EvokanalToGram as LisztEvokanalToGram;
+use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Liszt\EvokanalToKilogram as LisztEvokanalToKiloGram;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Tomeg\DekagramToGram;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Tomeg\DekagramToKilogram;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Tomeg\GramToDekagram;
@@ -83,6 +89,12 @@ class MertekegysegValtoCollection
             new MilliliterToTeasKanal(),
             new MokkasKanalToMilliliter(),
             new TeasKanalToMilliliter(),
+            new LisztBogreToDekagram(),
+            new LisztBogreToGram(),
+            new LisztBogreToKilogram(),
+            new LisztEvokanalToDekagram(),
+            new LisztEvokanalToGram(),
+            new LisztEvokanalToKiloGram(),
         ];
     }
 

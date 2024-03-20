@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Hozzavalo;
 
+use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
+
 class Hozzavalo
 {
     /* ZOLDSEG */
@@ -63,6 +65,12 @@ class Hozzavalo
     final public const string KETCHUP = 'Ketchup';
     final public const string TEJSZIN = 'Főzőtejszín';
 
+    /** @var array<string, string> */
+    final public const array MERTEKEGYSEG_PREFERENCE = [
+        Hozzavalo::CSIRKEMELL => Mertekegyseg::KG,
+        Hozzavalo::LISZT      => Mertekegyseg::DKG,
+    ];
+
     private string $kategoria;
 
     private string $nev;
@@ -79,9 +87,19 @@ class Hozzavalo
         $this->mertekegyseg = $mertekegyseg;
     }
 
-    public static function fromHozzavalo(Hozzavalo $hozzavalo, float $mennyiseg): self
+    public static function fromHozzavaloWithMennyiseg(Hozzavalo $hozzavalo, float $mennyiseg): self
     {
         return new self($hozzavalo->getKategoria(), $hozzavalo->getNev(), $mennyiseg, $hozzavalo->getMertekegyseg());
+    }
+
+    public static function fromHozzavaloWithMertekegyseg(Hozzavalo $hozzavalo, string $mertekegyseg): self
+    {
+        return new self($hozzavalo->getKategoria(), $hozzavalo->getNev(), $hozzavalo->getMennyiseg(), $mertekegyseg);
+    }
+
+    public static function fromHozzavalo(Hozzavalo $hozzavalo, float $mennyiseg, string $mertekegyseg): self
+    {
+        return new self($hozzavalo->getKategoria(), $hozzavalo->getNev(), $mennyiseg, $mertekegyseg);
     }
 
     public function getKategoria(): string

@@ -32,6 +32,15 @@ class HozzavaloSorok
         return $this->hozzavaloSorok;
     }
 
+    public function convert(): self
+    {
+        foreach ($this->hozzavaloSorok as $hozzavaloSor) {
+            $hozzavaloSor->convert();
+        }
+
+        return $this;
+    }
+
     /**
      * @return array<string[]>
      */
