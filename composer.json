@@ -16,6 +16,9 @@
             "PeterPecosz\\Kajatervezo\\Tests\\": "tests/"
         }
     },
+    "scripts": {
+        "tests": "vendor/bin/phpunit --configuration phpunit.xml"
+    },
     "authors": [
         {
             "name": "Peter Pecosz",
