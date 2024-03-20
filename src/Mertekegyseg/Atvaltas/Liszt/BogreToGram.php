@@ -20,6 +20,6 @@ class BogreToGram extends MertekegysegValto
 
     #[\Override] protected function getMultiplier(): float
     {
-        return 150;
+        return 150.0;
     }
 }

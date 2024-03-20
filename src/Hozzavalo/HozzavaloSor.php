@@ -18,7 +18,7 @@ class HozzavaloSor
      */
     public function __construct(array $hozzavalok = [])
     {
-        $this->mertekegysegAtvalto = new MertekegysegAtvalto();
+        $this->mertekegysegAtvalto    = new MertekegysegAtvalto();
         $this->hozzavalokPerKategoria = [];
 
         foreach ($hozzavalok as $hozzavalo) {
@@ -28,6 +28,7 @@ class HozzavaloSor
 
     public function add(Hozzavalo $hozzavalo): self
     {
+        $hozzavalo           = $this->convertToPreference($hozzavalo);
         $hozzaadottHozzavalo = $this->hozzavalokPerKategoria[$hozzavalo->getKategoria()] ?? null;
 
         if (empty($hozzaadottHozzavalo)) {
@@ -83,24 +84,20 @@ class HozzavaloSor
                && $hozzaadottHozzavalo->getMertekegyseg() === $hozzavalo->getMertekegyseg();
     }
 
-    public function convert(): self
+    private function convertToPreference(Hozzavalo $hozzavalo): Hozzavalo
     {
-        foreach ($this->hozzavalokPerKategoria as $kategoria => $hozzavalo) {
-            $newMertekegyseg = Hozzavalo::MERTEKEGYSEG_PREFERENCE[$hozzavalo->getNev()] ?? $hozzavalo->getMertekegyseg();
+        $newMertekegyseg = Hozzavalo::MERTEKEGYSEG_PREFERENCE[$hozzavalo->getNev()] ?? $hozzavalo->getMertekegyseg();
 
-            if ($newMertekegyseg === $hozzavalo->getMertekegyseg()) {
-                continue;
-            }
-
-            $newMennyiseg = $this->mertekegysegAtvalto->valt(
-                $hozzavalo,
-                Hozzavalo::fromHozzavaloWithMertekegyseg($hozzavalo, $newMertekegyseg)
-            );
-
-            $this->hozzavalokPerKategoria[$kategoria] = Hozzavalo::fromHozzavalo($hozzavalo, $newMennyiseg, $newMertekegyseg);
+        if ($newMertekegyseg === $hozzavalo->getMertekegyseg()) {
+            return $hozzavalo;
         }
 
-        return $this;
+        $newMennyiseg = $this->mertekegysegAtvalto->valt(
+            $hozzavalo,
+            Hozzavalo::fromHozzavaloWithMertekegyseg($hozzavalo, $newMertekegyseg)
+        );
+
+        return Hozzavalo::fromHozzavalo($hozzavalo, $newMennyiseg, $newMertekegyseg);
     }
 
     /**

@@ -46,9 +46,7 @@ class KajatervezoCommand extends Command
         $io->writeln('Hozzávalók:');
         $io->table(
             HozzavaloKategoria::SORREND,
-            $etelek->createHozzavaloSorok()
-                ->convert()
-                ->toArray()
+            $etelek->createHozzavaloSorok()->toArray()
         );
 
         return Command::SUCCESS;

@@ -30,7 +30,7 @@ class BundasCsirke extends Etel
             new Hozzavalo(HozzavaloKategoria::HOSSZU_SOROK, Hozzavalo::MEZ, 50, Mertekegyseg::ML),
             new Hozzavalo(HozzavaloKategoria::HOSSZU_SOROK, Hozzavalo::SZOJASZOSZ, 50, Mertekegyseg::ML),
             new Hozzavalo(HozzavaloKategoria::HUS, Hozzavalo::CSIRKEMELL, 4, Mertekegyseg::DB),
-            new Hozzavalo(HozzavaloKategoria::HUTOS_UTAN, Hozzavalo::TOJAS, 3, Mertekegyseg::DB),
+            new Hozzavalo(HozzavaloKategoria::HUTOS, Hozzavalo::TOJAS, 3, Mertekegyseg::DB),
         ];
     }
 }
