@@ -38,14 +38,14 @@ class KajatervezoCommand extends Command
         $etelek = new Etelek(
             [
                 new BundasCsirke(),
-                new Csirkemellpaprikas(),
-                new CitromosSpargasCsirkesPenne(),
-                new KinaiSzezammagosCsirke(),
                 new CitromosJoghurtosCsirkemell(),
+                new CitromosSpargasCsirkesPenne(),
+                new Csirkemellpaprikas(),
+                new KefiresCsirke(),
+                new KinaiSzezammagosCsirke(),
+                new PorehagymaLeves(),
                 new Rizskoch(),
                 new ToltottKaposzta(),
-                new KefiresCsirke(),
-                new PorehagymaLeves(),
             ]
         );
 
