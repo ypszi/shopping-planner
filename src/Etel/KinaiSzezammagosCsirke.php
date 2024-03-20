@@ -31,4 +31,9 @@ class KinaiSzezammagosCsirke extends Etel
             new Hozzavalo(Hozzavalo::KETCHUP, 100, Mertekegyseg::G),
         ];
     }
+
+    #[\Override] protected static function getDefaultAdag(): int
+    {
+        return 4;
+    }
 }

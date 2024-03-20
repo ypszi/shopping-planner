@@ -43,9 +43,9 @@ class KajatervezoCommand extends Command
                 new Csirkemellpaprikas(),
                 new KefiresCsirke(),
                 new KinaiSzezammagosCsirke(),
-                new PorehagymaLeves(),
+                new PorehagymaLeves(adag: 8),
                 new Rizskoch(),
-                new ToltottKaposzta(),
+                new ToltottKaposzta(adag: 8),
             ]
         );
 

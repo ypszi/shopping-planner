@@ -11,9 +11,17 @@ abstract class Etel
     /** @var Hozzavalo[] */
     protected array $hozzavalok;
 
-    public function __construct()
+    private int $adag;
+
+    public function __construct(?int $adag = null)
     {
-        $this->hozzavalok = static::listHozzavalok();
+        $defaultAdag = static::getDefaultAdag();
+        $this->adag  = $adag ?? $defaultAdag;
+
+        foreach (static::listHozzavalok() as $hozzavalo) {
+            $adagMennyiseg      = $hozzavalo->getMennyiseg() / $defaultAdag * $this->adag;
+            $this->hozzavalok[] = Hozzavalo::fromHozzavaloWithMennyiseg($hozzavalo, $adagMennyiseg);
+        }
     }
 
     abstract public static function getName(): string;
@@ -23,11 +31,18 @@ abstract class Etel
      */
     abstract protected static function listHozzavalok(): array;
 
+    abstract protected static function getDefaultAdag(): int;
+
     /**
      * @return Hozzavalo[]
      */
     public function getHozzavalok(): array
     {
         return $this->hozzavalok;
+    }
+
+    public function getAdag(): int
+    {
+        return $this->adag;
     }
 }

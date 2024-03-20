@@ -29,4 +29,9 @@ class Rizskoch extends Etel
             new Hozzavalo(Hozzavalo::TEJ, 8, Mertekegyseg::DL),
         ];
     }
+
+    #[\Override] protected static function getDefaultAdag(): int
+    {
+        return 4;
+    }
 }

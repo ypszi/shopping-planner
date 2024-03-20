@@ -30,4 +30,9 @@ class CitromosJoghurtosCsirkemell extends Etel
             new Hozzavalo(Hozzavalo::FETA_SAJT, 20, Mertekegyseg::DKG),
         ];
     }
+
+    #[\Override] protected static function getDefaultAdag(): int
+    {
+        return 4;
+    }
 }

@@ -25,4 +25,9 @@ class PorehagymaLeves extends Etel
             new Hozzavalo(Hozzavalo::HABTEJSZIN, 200, Mertekegyseg::ML),
         ];
     }
+
+    #[\Override] protected static function getDefaultAdag(): int
+    {
+        return 4;
+    }
 }

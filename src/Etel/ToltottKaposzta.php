@@ -32,4 +32,9 @@ class ToltottKaposzta extends Etel
             new Hozzavalo(Hozzavalo::SERTES_ZSIR, 1, Mertekegyseg::EK),
         ];
     }
+
+    #[\Override] protected static function getDefaultAdag(): int
+    {
+        return 8;
+    }
 }

@@ -34,7 +34,7 @@ class Etelek
      */
     public function toArray(): array
     {
-        return array_map(fn(Etel $etel) => $etel::getName(), $this->etelek);
+        return array_map(fn(Etel $etel) => sprintf('%s (%d adag)', $etel::getName(), $etel->getAdag()), $this->etelek);
     }
 
     private function addHozzavalo(HozzavaloSorok $hozzavaloSorok, Hozzavalo $hozzavalo): void

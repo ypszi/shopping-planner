@@ -28,4 +28,9 @@ class CitromosSpargasCsirkesPenne extends Etel
             new Hozzavalo(Hozzavalo::TEJSZIN, 4, Mertekegyseg::DL),
         ];
     }
+
+    #[\Override] protected static function getDefaultAdag(): int
+    {
+        return 4;
+    }
 }

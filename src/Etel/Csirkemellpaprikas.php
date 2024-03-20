@@ -11,7 +11,7 @@ class Csirkemellpaprikas extends Etel
 {
     #[\Override] public static function getName(): string
     {
-        return 'Csirkemell paprikás';
+        return 'Csirkemellpaprikás';
     }
 
     #[\Override] protected static function listHozzavalok(): array
@@ -27,5 +27,10 @@ class Csirkemellpaprikas extends Etel
             new Hozzavalo(Hozzavalo::TEJFOL, 1, Mertekegyseg::EK),
             new Hozzavalo(Hozzavalo::TEJSZIN, 1, Mertekegyseg::DL),
         ];
+    }
+
+    #[\Override] protected static function getDefaultAdag(): int
+    {
+        return 4;
     }
 }

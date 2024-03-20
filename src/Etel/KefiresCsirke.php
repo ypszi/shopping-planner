@@ -26,4 +26,9 @@ class KefiresCsirke extends Etel
             new Hozzavalo(Hozzavalo::KEFIR, 3, Mertekegyseg::DL),
         ];
     }
+
+    #[\Override] protected static function getDefaultAdag(): int
+    {
+        return 4;
+    }
 }

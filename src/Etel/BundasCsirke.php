@@ -32,4 +32,9 @@ class BundasCsirke extends Etel
             new Hozzavalo(Hozzavalo::TOJAS, 3, Mertekegyseg::DB),
         ];
     }
+
+    #[\Override] protected static function getDefaultAdag(): int
+    {
+        return 4;
+    }
 }
