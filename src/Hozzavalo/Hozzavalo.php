@@ -33,6 +33,7 @@ class Hozzavalo
     final public const string BABERLEVEL = 'Babérlevél';
     final public const string CAYENNE_BORS = 'Cayenne bors';
     final public const string CHILI = 'Chili';
+    final public const string FUSZERKEVEREK = 'Fűszerkeverék';
     final public const string FUSZERKOMENY = 'Fűszerkömény';
     final public const string FUSZER_PAPRIKA = 'Piros paprika';
     final public const string GYOMBER_POR = 'Gyömbér por';
@@ -71,6 +72,7 @@ class Hozzavalo
     /* HUTOS */
     final public const string FETA_SAJT = 'Feta sajt';
     final public const string NATUR_JOGHURT = 'Natúr joghurt';
+    final public const string KEFIR = 'Kefír';
     final public const string PARMEZAN = 'Parmezán';
     final public const string TEJFOL = 'Tejföl';
     final public const string TOJAS = 'Tojás';
