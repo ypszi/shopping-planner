@@ -11,9 +11,16 @@ class Etelek
     /** @var Etel[] */
     private array $etelek;
 
-    public function __construct(array $etelek)
+    public function __construct(array $etelek = [])
     {
         $this->etelek = $etelek;
+    }
+
+    public function add(Etel $etel): self
+    {
+        $this->etelek[] = $etel;
+
+        return $this;
     }
 
     public function createHozzavaloSorok(): HozzavaloSorok

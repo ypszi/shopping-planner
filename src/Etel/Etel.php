@@ -26,12 +26,12 @@ abstract class Etel
 
     abstract public static function getName(): string;
 
+    abstract public static function getDefaultAdag(): int;
+
     /**
      * @return Hozzavalo[]
      */
     abstract protected static function listHozzavalok(): array;
-
-    abstract protected static function getDefaultAdag(): int;
 
     /**
      * @return Hozzavalo[]

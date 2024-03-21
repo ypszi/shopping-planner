@@ -30,7 +30,7 @@ class Rizskoch extends Etel
         ];
     }
 
-    #[\Override] protected static function getDefaultAdag(): int
+    #[\Override] public static function getDefaultAdag(): int
     {
         return 4;
     }
