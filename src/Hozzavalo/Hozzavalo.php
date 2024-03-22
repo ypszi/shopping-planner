@@ -35,12 +35,15 @@ class Hozzavalo
     final public const string ZOLDBORSO = 'Zöldborsó';
     /* FUSZER_ES_OLAJ */
     final public const string BABERLEVEL = 'Babérlevél';
+    final public const string BORS = 'Bors';
     final public const string CAYENNE_BORS = 'Cayenne bors';
     final public const string CHILI = 'Chili';
     final public const string EROLEVES_KOCKA = 'Erőleves kocka';
+    final public const string FEKETE_BORS = 'Bors';
     final public const string FUSZERKEVEREK = 'Fűszerkeverék';
     final public const string FUSZERKOMENY = 'Fűszerkömény';
     final public const string FUSZER_PAPRIKA = 'Piros paprika';
+    final public const string GULYAS_KREM = 'Gulyás krém';
     final public const string GYOMBER_POR = 'Gyömbér por';
     final public const string HUSLEVES_KOCKA = 'Húsleves kocka';
     final public const string KAKUKKFU = 'Kakukkfű';
@@ -49,6 +52,7 @@ class Hozzavalo
     final public const string OREGANO = 'Oregánó';
     final public const string PETREZSELYEM = 'Petrezselyem';
     final public const string PIROS_PAPRIKA = 'Piros paprika';
+    final public const string SO = 'Só';
     final public const string SZERECSENDIO = 'Szerecsendió';
     final public const string TARKONY = 'Tárkony';
     final public const string ZOLDFUSZER = 'Zöldfűszer';
@@ -76,6 +80,7 @@ class Hozzavalo
     final public const string KOLBASZ = 'Kolbász';
     final public const string KOLOZSVARI_SZALONNA = 'Kolozsvári szalonna';
     final public const string LAZAC = 'Lazac';
+    final public const string SERTESCOMB = 'Sertéscomb';
     final public const string SERTES_ZSIR = 'Sertészsír';
     /* HUTOS */
     final public const string FETA_SAJT = 'Feta sajt';
@@ -127,11 +132,13 @@ class Hozzavalo
         self::ZELLERSZAR          => HozzavaloKategoria::ZOLDSEG,
         self::ZOLDBORSO           => HozzavaloKategoria::ZOLDSEG,
         self::BABERLEVEL          => HozzavaloKategoria::FUSZER_ES_OLAJ,
+        self::BORS                => HozzavaloKategoria::FUSZER_ES_OLAJ,
         self::CAYENNE_BORS        => HozzavaloKategoria::FUSZER_ES_OLAJ,
         self::CHILI               => HozzavaloKategoria::FUSZER_ES_OLAJ,
         self::EROLEVES_KOCKA      => HozzavaloKategoria::FUSZER_ES_OLAJ,
         self::FUSZERKEVEREK       => HozzavaloKategoria::FUSZER_ES_OLAJ,
         self::FUSZERKOMENY        => HozzavaloKategoria::FUSZER_ES_OLAJ,
+        self::GULYAS_KREM         => HozzavaloKategoria::FUSZER_ES_OLAJ,
         self::GYOMBER_POR         => HozzavaloKategoria::FUSZER_ES_OLAJ,
         self::HUSLEVES_KOCKA      => HozzavaloKategoria::FUSZER_ES_OLAJ,
         self::KAKUKKFU            => HozzavaloKategoria::FUSZER_ES_OLAJ,
@@ -140,6 +147,7 @@ class Hozzavalo
         self::OREGANO             => HozzavaloKategoria::FUSZER_ES_OLAJ,
         self::PETREZSELYEM        => HozzavaloKategoria::FUSZER_ES_OLAJ,
         self::PIROS_PAPRIKA       => HozzavaloKategoria::FUSZER_ES_OLAJ,
+        self::SO                  => HozzavaloKategoria::FUSZER_ES_OLAJ,
         self::SZERECSENDIO        => HozzavaloKategoria::FUSZER_ES_OLAJ,
         self::TARKONY             => HozzavaloKategoria::FUSZER_ES_OLAJ,
         self::ZOLDFUSZER          => HozzavaloKategoria::FUSZER_ES_OLAJ,
@@ -164,6 +172,7 @@ class Hozzavalo
         self::KOLBASZ             => HozzavaloKategoria::HUS,
         self::KOLOZSVARI_SZALONNA => HozzavaloKategoria::HUS,
         self::LAZAC               => HozzavaloKategoria::HUS,
+        self::SERTESCOMB          => HozzavaloKategoria::HUS,
         self::SERTES_ZSIR         => HozzavaloKategoria::HUS,
         self::FETA_SAJT           => HozzavaloKategoria::HUTOS,
         self::NATUR_JOGHURT       => HozzavaloKategoria::HUTOS,
