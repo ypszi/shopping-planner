@@ -12,8 +12,12 @@ use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
 
-class KajatervezoCommand extends Command
+class PlanShoppingCommand extends Command
 {
+    private Etelek $etelek;
+
+    private SymfonyStyle $io;
+
     protected function configure(): void
     {
         $this
@@ -21,38 +25,44 @@ class KajatervezoCommand extends Command
             ->setDescription('Megtervezi a hozzávalók bevásárlását');
     }
 
-    protected function execute(InputInterface $input, OutputInterface $output): int
+    #[\Override] protected function initialize(InputInterface $input, OutputInterface $output): void
     {
-        $io = new SymfonyStyle($input, $output);
+        $this->etelek = new Etelek();
+        $this->io     = new SymfonyStyle($input, $output);
 
-        $io->title('BEVÁSÁRLÁS TERVEZŐ');
+        $this->io->title('BEVÁSÁRLÁS TERVEZŐ');
+    }
 
+    #[\Override] protected function interact(InputInterface $input, OutputInterface $output): void
+    {
         /** @var string[] $kajaNevek */
-        $kajaNevek = $io->choice(
+        $kajaNevek = $this->io->choice(
             question:    'Melyik kajákhoz kell bevásárolni?',
             choices:     array_keys(EtelFactory::etelMap()),
             multiSelect: true
         );
 
-        $etelek = new Etelek();
         foreach ($kajaNevek as $kajaNev) {
-            $adag = (int)$io->ask(
+            $adag = (int)$this->io->ask(
                 sprintf('Hány adagot főzöl ebből: "%s"?', $kajaNev),
                 (string)EtelFactory::create($kajaNev)::getDefaultAdag()
             );
 
-            $etelek->add(EtelFactory::createWithAdag($kajaNev, $adag));
+            $this->etelek->add(EtelFactory::createWithAdag($kajaNev, $adag));
         }
 
-        $io->table(
+        $this->io->table(
             ['Ételek'],
-            array_map(fn(string $etel) => [$etel], $etelek->toArray())
+            array_map(fn(string $etel) => [$etel], $this->etelek->toArray())
         );
+    }
 
-        $io->writeln('Hozzávalók:');
-        $io->table(
+    protected function execute(InputInterface $input, OutputInterface $output): int
+    {
+        $this->io->writeln('Hozzávalók:');
+        $this->io->table(
             HozzavaloKategoria::SORREND,
-            $etelek->createHozzavaloSorok()->toArray()
+            $this->etelek->createHozzavaloSorok()->toArray()
         );
 
         return Command::SUCCESS;

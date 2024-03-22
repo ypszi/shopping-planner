@@ -4,7 +4,7 @@
 declare(strict_types=1);
 
 use DI\ContainerBuilder;
-use PeterPecosz\Kajatervezo\Command\KajatervezoCommand;
+use PeterPecosz\Kajatervezo\Command\PlanShoppingCommand;
 use PeterPecosz\Kajatervezo\ServiceProvider\CommandServiceProvider;
 use Symfony\Component\Console\Application;
 use Symfony\Component\Console\Command\Command;
@@ -17,7 +17,7 @@ $builder = new ContainerBuilder();
 $builder->addDefinitions((new CommandServiceProvider())->getDefinitions());
 $container = $builder->build();
 
-$command = $container->get(KajatervezoCommand::class);
+$command = $container->get(PlanShoppingCommand::class);
 $application->add($command);
 
 try {
