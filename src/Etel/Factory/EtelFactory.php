@@ -14,6 +14,7 @@ use PeterPecosz\Kajatervezo\Etel\KefiresCsirke;
 use PeterPecosz\Kajatervezo\Etel\KinaiSzezammagosCsirke;
 use PeterPecosz\Kajatervezo\Etel\PorehagymaLeves;
 use PeterPecosz\Kajatervezo\Etel\Rizskoch;
+use PeterPecosz\Kajatervezo\Etel\TarkonyosCsirkeraguLeves;
 use PeterPecosz\Kajatervezo\Etel\ToltottKaposzta;
 
 class EtelFactory
@@ -54,6 +55,7 @@ class EtelFactory
             KinaiSzezammagosCsirke::getName()      => KinaiSzezammagosCsirke::class,
             PorehagymaLeves::getName()             => PorehagymaLeves::class,
             Rizskoch::getName()                    => Rizskoch::class,
+            TarkonyosCsirkeraguLeves::getName()    => TarkonyosCsirkeraguLeves::class,
             ToltottKaposzta::getName()             => ToltottKaposzta::class,
         ];
     }

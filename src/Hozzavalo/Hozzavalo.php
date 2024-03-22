@@ -27,15 +27,17 @@ class Hozzavalo
     final public const string PAPRIKA = 'Paprika';
     final public const string PARADICSOM = 'Paradicsom';
     final public const string POREHAGYMA = 'Póréhagyma';
-    final public const string REPA = 'Répa';
+    final public const string SARGAREPA = 'Sárgarépa';
     final public const string SAVANYU_KAPOSZTA = 'Savanyú káposzta';
     final public const string VOROSHAGYMA = 'Vöröshagyma';
     final public const string ZELLER = 'Zeller';
     final public const string ZELLERSZAR = 'Zellerszár';
+    final public const string ZOLDBORSO = 'Zöldborsó';
     /* FUSZER_ES_OLAJ */
     final public const string BABERLEVEL = 'Babérlevél';
     final public const string CAYENNE_BORS = 'Cayenne bors';
     final public const string CHILI = 'Chili';
+    final public const string EROLEVES_KOCKA = 'Erőleves kocka';
     final public const string FUSZERKEVEREK = 'Fűszerkeverék';
     final public const string FUSZERKOMENY = 'Fűszerkömény';
     final public const string FUSZER_PAPRIKA = 'Piros paprika';
@@ -45,8 +47,10 @@ class Hozzavalo
     final public const string NAPRAFORGO_OLAJ = 'Napraforgó olaj';
     final public const string OLIVA_OLAJ = 'Olíva olaj';
     final public const string OREGANO = 'Oregánó';
+    final public const string PETREZSELYEM = 'Petrezselyem';
     final public const string PIROS_PAPRIKA = 'Piros paprika';
     final public const string SZERECSENDIO = 'Szerecsendió';
+    final public const string TARKONY = 'Tárkony';
     final public const string ZOLDFUSZER = 'Zöldfűszer';
     /* HOSSZU_SOROK */
     final public const string BARACK_LEKVAR = 'Baracklekvár';
@@ -111,14 +115,16 @@ class Hozzavalo
         self::PAPRIKA             => HozzavaloKategoria::ZOLDSEG,
         self::PARADICSOM          => HozzavaloKategoria::ZOLDSEG,
         self::POREHAGYMA          => HozzavaloKategoria::ZOLDSEG,
-        self::REPA                => HozzavaloKategoria::ZOLDSEG,
+        self::SARGAREPA           => HozzavaloKategoria::ZOLDSEG,
         self::SAVANYU_KAPOSZTA    => HozzavaloKategoria::ZOLDSEG,
         self::VOROSHAGYMA         => HozzavaloKategoria::ZOLDSEG,
         self::ZELLER              => HozzavaloKategoria::ZOLDSEG,
         self::ZELLERSZAR          => HozzavaloKategoria::ZOLDSEG,
+        self::ZOLDBORSO           => HozzavaloKategoria::ZOLDSEG,
         self::BABERLEVEL          => HozzavaloKategoria::FUSZER_ES_OLAJ,
         self::CAYENNE_BORS        => HozzavaloKategoria::FUSZER_ES_OLAJ,
         self::CHILI               => HozzavaloKategoria::FUSZER_ES_OLAJ,
+        self::EROLEVES_KOCKA      => HozzavaloKategoria::FUSZER_ES_OLAJ,
         self::FUSZERKEVEREK       => HozzavaloKategoria::FUSZER_ES_OLAJ,
         self::FUSZERKOMENY        => HozzavaloKategoria::FUSZER_ES_OLAJ,
         self::GYOMBER_POR         => HozzavaloKategoria::FUSZER_ES_OLAJ,
@@ -127,8 +133,10 @@ class Hozzavalo
         self::NAPRAFORGO_OLAJ     => HozzavaloKategoria::FUSZER_ES_OLAJ,
         self::OLIVA_OLAJ          => HozzavaloKategoria::FUSZER_ES_OLAJ,
         self::OREGANO             => HozzavaloKategoria::FUSZER_ES_OLAJ,
+        self::PETREZSELYEM        => HozzavaloKategoria::FUSZER_ES_OLAJ,
         self::PIROS_PAPRIKA       => HozzavaloKategoria::FUSZER_ES_OLAJ,
         self::SZERECSENDIO        => HozzavaloKategoria::FUSZER_ES_OLAJ,
+        self::TARKONY             => HozzavaloKategoria::FUSZER_ES_OLAJ,
         self::ZOLDFUSZER          => HozzavaloKategoria::FUSZER_ES_OLAJ,
         self::BARACK_LEKVAR       => HozzavaloKategoria::HOSSZU_SOROK,
         self::CUKOR               => HozzavaloKategoria::HOSSZU_SOROK,
