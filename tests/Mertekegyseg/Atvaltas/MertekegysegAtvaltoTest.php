@@ -231,6 +231,16 @@ class MertekegysegAtvaltoTest extends TestCase
                 new Hozzavalo(Hozzavalo::LISZT, 0, Mertekegyseg::KG),
                 0.02,
             ],
+            'kukorica konzerv to g'  => [
+                new Hozzavalo(Hozzavalo::KUKORICA, 1, Mertekegyseg::KONZERV),
+                new Hozzavalo(Hozzavalo::KUKORICA, 0, Mertekegyseg::G),
+                140.0,
+            ],
+            'vorosbab konzerv to g'  => [
+                new Hozzavalo(Hozzavalo::VOROSBAB, 1, Mertekegyseg::KONZERV),
+                new Hozzavalo(Hozzavalo::VOROSBAB, 0, Mertekegyseg::G),
+                250.0,
+            ],
         ];
     }
 

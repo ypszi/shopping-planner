@@ -8,6 +8,7 @@ class Mertekegyseg
 {
     final public const string DB = 'db';
     final public const string GEREZD = 'gerezd';
+    final public const string KONZERV = 'konzerv';
     /* tömeg */
     final public const string G = 'g';
     final public const string DKG = 'dkg';

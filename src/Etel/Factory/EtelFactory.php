@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace PeterPecosz\Kajatervezo\Etel\Factory;
 
 use PeterPecosz\Kajatervezo\Etel\BundasCsirke;
+use PeterPecosz\Kajatervezo\Etel\ChilisBab;
 use PeterPecosz\Kajatervezo\Etel\CitromosJoghurtosCsirkemell;
 use PeterPecosz\Kajatervezo\Etel\CitromosSpargasCsirkesPenne;
 use PeterPecosz\Kajatervezo\Etel\Csirkemellpaprikas;
@@ -48,6 +49,7 @@ class EtelFactory
     {
         return [
             BundasCsirke::getName()                => BundasCsirke::class,
+            ChilisBab::getName()                   => ChilisBab::class,
             CitromosJoghurtosCsirkemell::getName() => CitromosJoghurtosCsirkemell::class,
             CitromosSpargasCsirkesPenne::getName() => CitromosSpargasCsirkesPenne::class,
             Csirkemellpaprikas::getName()          => Csirkemellpaprikas::class,
