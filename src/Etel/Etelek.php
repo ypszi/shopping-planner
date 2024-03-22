@@ -2,9 +2,11 @@
 
 declare(strict_types=1);
 
-namespace PeterPecosz\Kajatervezo\Hozzavalo;
+namespace PeterPecosz\Kajatervezo\Etel;
 
-use PeterPecosz\Kajatervezo\Etel\Etel;
+use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
+use PeterPecosz\Kajatervezo\Hozzavalo\HozzavaloSor;
+use PeterPecosz\Kajatervezo\Hozzavalo\HozzavaloSorok;
 
 class Etelek
 {

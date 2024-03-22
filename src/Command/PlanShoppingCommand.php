@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Command;
 
+use PeterPecosz\Kajatervezo\Etel\Etelek;
 use PeterPecosz\Kajatervezo\Etel\Factory\EtelFactory;
-use PeterPecosz\Kajatervezo\Hozzavalo\Etelek;
 use PeterPecosz\Kajatervezo\Hozzavalo\HozzavaloKategoria;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
