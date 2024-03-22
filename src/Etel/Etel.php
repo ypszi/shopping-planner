@@ -41,8 +41,8 @@ abstract class Etel
         return $this->hozzavalok;
     }
 
-    public function getAdag(): int
+    public function __toString(): string
     {
-        return $this->adag;
+        return sprintf('%s (%d adag)', static::getName(), $this->adag);
     }
 }
