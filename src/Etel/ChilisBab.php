@@ -9,7 +9,7 @@ use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class ChilisBab extends Etel
 {
-    #[\Override] public static function getName(): string
+    #[\Override] public static function name(): string
     {
         return 'Chilis bab';
     }
@@ -29,12 +29,12 @@ class ChilisBab extends Etel
         ];
     }
 
-    #[\Override] public static function getDefaultAdag(): int
+    #[\Override] public static function defaultAdag(): int
     {
         return 4;
     }
 
-    #[\Override] public function getReceptUrl(): string
+    #[\Override] public function receptUrl(): string
     {
         return 'https://www.mindmegette.hu/chilis-bab.recept/';
     }

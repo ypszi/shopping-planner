@@ -56,7 +56,7 @@ class EtelFactory
 
             if (self::isEtel($etelReflection)) {
                 try {
-                    $etelMap[$etelReflection->getMethod('getName')->invoke($etelReflection)] = $etelFqcn;
+                    $etelMap[$etelReflection->getMethod('name')->invoke($etelReflection)] = $etelFqcn;
                 } catch (ReflectionException) {
                     continue;
                 }

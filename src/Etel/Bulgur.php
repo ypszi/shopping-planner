@@ -9,7 +9,7 @@ use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class Bulgur extends Etel
 {
-    #[\Override] public static function getName(): string
+    #[\Override] public static function name(): string
     {
         return 'Bulgur';
     }
@@ -28,12 +28,12 @@ class Bulgur extends Etel
         ];
     }
 
-    #[\Override] public static function getDefaultAdag(): int
+    #[\Override] public static function defaultAdag(): int
     {
         return 4;
     }
 
-    #[\Override] public function getReceptUrl(): string
+    #[\Override] public function receptUrl(): string
     {
         return 'https://eletszepitok.hu/igy-keszul-a-paradicsomos-bulgur-azaz-a-torok-rizs/';
     }

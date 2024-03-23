@@ -20,7 +20,7 @@ class EtelekTest extends TestCase
     protected function setUp(): void
     {
         $this->testFood = new class() extends Etel {
-            #[\Override] public static function getName(): string
+            #[\Override] public static function name(): string
             {
                 return 'test food';
             }
@@ -32,12 +32,12 @@ class EtelekTest extends TestCase
                 ];
             }
 
-            #[\Override] public static function getDefaultAdag(): int
+            #[\Override] public static function defaultAdag(): int
             {
                 return 1;
             }
 
-            #[\Override] public function getReceptUrl(): string
+            #[\Override] public function receptUrl(): string
             {
                 return 'https://online-recept-konyv.hu/test-food';
             }

@@ -9,12 +9,12 @@ use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class TarkonyosCsirkeraguLeves extends Etel
 {
-    #[\Override] public static function getName(): string
+    #[\Override] public static function name(): string
     {
         return 'Tárkonyos csirkeraguleves';
     }
 
-    #[\Override] public static function getDefaultAdag(): int
+    #[\Override] public static function defaultAdag(): int
     {
         return 4;
     }
@@ -38,7 +38,7 @@ class TarkonyosCsirkeraguLeves extends Etel
         ];
     }
 
-    #[\Override] public function getReceptUrl(): string
+    #[\Override] public function receptUrl(): string
     {
         return sprintf('https://www.nosalty.hu/recept/tarkonyos-csirkeraguleves-tarkonyos-raguleves-3?adag=%d', $this->adag);
     }

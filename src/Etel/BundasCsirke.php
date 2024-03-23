@@ -9,7 +9,7 @@ use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class BundasCsirke extends Etel
 {
-    #[\Override] public static function getName(): string
+    #[\Override] public static function name(): string
     {
         return 'Bundás csirke';
     }
@@ -33,12 +33,12 @@ class BundasCsirke extends Etel
         ];
     }
 
-    #[\Override] public static function getDefaultAdag(): int
+    #[\Override] public static function defaultAdag(): int
     {
         return 4;
     }
 
-    #[\Override] public function getReceptUrl(): string
+    #[\Override] public function receptUrl(): string
     {
         return sprintf('https://www.nosalty.hu/recept/puha-ropogos-fokhagymas-mezes-csirkemell?adag=%d', $this->adag);
     }

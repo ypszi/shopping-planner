@@ -9,7 +9,7 @@ use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class KefiresCsirke extends Etel
 {
-    #[\Override] public static function getName(): string
+    #[\Override] public static function name(): string
     {
         return 'Kefíres csirke';
     }
@@ -27,12 +27,12 @@ class KefiresCsirke extends Etel
         ];
     }
 
-    #[\Override] public static function getDefaultAdag(): int
+    #[\Override] public static function defaultAdag(): int
     {
         return 4;
     }
 
-    #[\Override] public function getReceptUrl(): string
+    #[\Override] public function receptUrl(): string
     {
         return 'http://chiliesvanilia.blogspot.com/2016/08/szuperropogos-rantott-csirke-husz-perc.html';
     }

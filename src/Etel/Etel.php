@@ -15,7 +15,7 @@ abstract class Etel
 
     public function __construct(?int $adag = null)
     {
-        $defaultAdag = static::getDefaultAdag();
+        $defaultAdag = static::defaultAdag();
         $this->adag  = $adag ?? $defaultAdag;
 
         foreach (static::listHozzavalok() as $hozzavalo) {
@@ -24,11 +24,11 @@ abstract class Etel
         }
     }
 
-    abstract public static function getName(): string;
+    abstract public static function name(): string;
 
-    abstract public static function getDefaultAdag(): int;
+    abstract public static function defaultAdag(): int;
 
-    abstract public function getReceptUrl(): string;
+    abstract public function receptUrl(): string;
 
     /**
      * @return Hozzavalo[]
@@ -45,6 +45,6 @@ abstract class Etel
 
     public function __toString(): string
     {
-        return sprintf('%s (%d adag)', static::getName(), $this->adag);
+        return sprintf('%s (%d adag)', static::name(), $this->adag);
     }
 }

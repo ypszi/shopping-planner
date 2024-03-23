@@ -10,7 +10,6 @@ use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 class Hozzavalo
 {
     /* ZOLDSEG */
-    final public const string BROKKOLI = 'Brokkoli';
     final public const string BURGONYA = 'Burgonya';
     final public const string CITROM = 'Citrom';
     final public const string EDESBURGONYA = 'Édesburgonya';
@@ -63,6 +62,7 @@ class Hozzavalo
     final public const string FEHERBOR = 'Fehérbor';
     final public const string FINOMLISZT = 'Finomliszt';
     final public const string HUSLEVES_KOCKA = 'Húsleves kocka';
+    final public const string KAKAOPOR = 'Kakaópor';
     final public const string KEMENYITO = 'Keményítő';
     final public const string KUKORICA = 'Kukorica';
     final public const string LISZT = 'Finomliszt';
@@ -114,7 +114,6 @@ class Hozzavalo
         self::VOROSBAB        => Mertekegyseg::G,
     ];
     private const array HOZZAVALO_KATEGORIA = [
-        self::BROKKOLI            => HozzavaloKategoria::ZOLDSEG,
         self::BURGONYA            => HozzavaloKategoria::ZOLDSEG,
         self::CITROM              => HozzavaloKategoria::ZOLDSEG,
         self::EDESBURGONYA        => HozzavaloKategoria::ZOLDSEG,
@@ -161,6 +160,7 @@ class Hozzavalo
         self::CUKOR               => HozzavaloKategoria::HOSSZU_SOROK,
         self::FEHERBOR            => HozzavaloKategoria::HOSSZU_SOROK,
         self::HUSLEVES_KOCKA      => HozzavaloKategoria::HOSSZU_SOROK,
+        self::KAKAOPOR            => HozzavaloKategoria::HOSSZU_SOROK,
         self::KEMENYITO           => HozzavaloKategoria::HOSSZU_SOROK,
         self::KUKORICA            => HozzavaloKategoria::HOSSZU_SOROK,
         self::LISZT               => HozzavaloKategoria::HOSSZU_SOROK,
@@ -205,13 +205,16 @@ class Hozzavalo
 
     private string $mertekegyseg;
 
-    public function __construct(string $name, float $mennyiseg, string $mertekegyseg)
+    // TODO: remove $kategoria arg [peter.pecosz]
+    public function __construct(string $name, float $mennyiseg, string $mertekegyseg, ?string $kategoria = null)
     {
-        if (!isset(self::HOZZAVALO_KATEGORIA[$name])) {
+        $kategoria = $kategoria ?: self::HOZZAVALO_KATEGORIA[$name] ?? '';
+
+        if (empty($kategoria)) {
             throw new UnknownHozzavaloException(sprintf('Unknown hozzavalo, cannot determine kategoria for "%s"', $name));
         }
 
-        $this->kategoria    = self::HOZZAVALO_KATEGORIA[$name];
+        $this->kategoria    = $kategoria;
         $this->nev          = $name;
         $this->mennyiseg    = $mennyiseg;
         $this->mertekegyseg = $mertekegyseg;
@@ -219,17 +222,29 @@ class Hozzavalo
 
     public static function fromHozzavaloWithMennyiseg(Hozzavalo $hozzavalo, float $mennyiseg): self
     {
-        return new self($hozzavalo->getNev(), $mennyiseg, $hozzavalo->getMertekegyseg());
+        return new self($hozzavalo->getNev(), $mennyiseg, $hozzavalo->getMertekegyseg(), $hozzavalo->getKategoria());
     }
 
     public static function fromHozzavaloWithMertekegyseg(Hozzavalo $hozzavalo, string $mertekegyseg): self
     {
-        return new self($hozzavalo->getNev(), $hozzavalo->getMennyiseg(), $mertekegyseg);
+        return new self($hozzavalo->getNev(), $hozzavalo->getMennyiseg(), $mertekegyseg, $hozzavalo->getKategoria());
     }
 
     public static function fromHozzavalo(Hozzavalo $hozzavalo, float $mennyiseg, string $mertekegyseg): self
     {
-        return new self($hozzavalo->getNev(), $mennyiseg, $mertekegyseg);
+        return new self($hozzavalo->getNev(), $mennyiseg, $mertekegyseg, $hozzavalo->getKategoria());
+    }
+
+    // TODO: make abstract [peter.pecosz]
+    public static function name(): string
+    {
+        return '';
+    }
+
+    // TODO: make abstract [peter.pecosz]
+    public static function kategoria(): string
+    {
+        return '';
     }
 
     public function getKategoria(): string

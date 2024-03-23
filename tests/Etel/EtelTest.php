@@ -17,7 +17,7 @@ class EtelTest extends TestCase
     protected function setUp(): void
     {
         $this->testFood = new class() extends Etel {
-            #[\Override] public static function getName(): string
+            #[\Override] public static function name(): string
             {
                 return 'test food';
             }
@@ -29,12 +29,12 @@ class EtelTest extends TestCase
                 ];
             }
 
-            #[\Override] public static function getDefaultAdag(): int
+            #[\Override] public static function defaultAdag(): int
             {
                 return 1;
             }
 
-            #[\Override] public function getReceptUrl(): string
+            #[\Override] public function receptUrl(): string
             {
                 return 'https://online-recept-konyv.hu/test-food';
             }
@@ -44,19 +44,19 @@ class EtelTest extends TestCase
     #[Test]
     public function testGetName(): void
     {
-        $this->assertEquals('test food', $this->testFood::getName());
+        $this->assertEquals('test food', $this->testFood::name());
     }
 
     #[Test]
     public function testGetReceptUrl(): void
     {
-        $this->assertEquals('https://online-recept-konyv.hu/test-food', $this->testFood->getReceptUrl());
+        $this->assertEquals('https://online-recept-konyv.hu/test-food', $this->testFood->receptUrl());
     }
 
     #[Test]
     public function testGetDefaultAdag(): void
     {
-        $this->assertEquals(1, $this->testFood::getDefaultAdag());
+        $this->assertEquals(1, $this->testFood::defaultAdag());
     }
 
     #[Test]

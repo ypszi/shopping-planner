@@ -9,7 +9,7 @@ use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class ToltottKaposzta extends Etel
 {
-    #[\Override] public static function getName(): string
+    #[\Override] public static function name(): string
     {
         return 'Töltött káposzta';
     }
@@ -33,12 +33,12 @@ class ToltottKaposzta extends Etel
         ];
     }
 
-    #[\Override] public static function getDefaultAdag(): int
+    #[\Override] public static function defaultAdag(): int
     {
         return 8;
     }
 
-    #[\Override] public function getReceptUrl(): string
+    #[\Override] public function receptUrl(): string
     {
         return sprintf('https://www.nosalty.hu/recept/klasszikus-toltott-kaposzta?adag=%d', $this->adag);
     }
