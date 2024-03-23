@@ -5,15 +5,12 @@ declare(strict_types=1);
 namespace PeterPecosz\Kajatervezo\Tests\Etel;
 
 use PeterPecosz\Kajatervezo\Etel\Etel;
-use PeterPecosz\Kajatervezo\Etel\Etelek;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
-use PeterPecosz\Kajatervezo\Hozzavalo\HozzavaloSor;
-use PeterPecosz\Kajatervezo\Hozzavalo\HozzavaloSorok;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 
-class EtelekTest extends TestCase
+class EtelTest extends TestCase
 {
     private Etel $testFood;
 
@@ -45,27 +42,37 @@ class EtelekTest extends TestCase
     }
 
     #[Test]
-    public function testAdd(): void
+    public function testGetName(): void
     {
-        $sut = new Etelek();
-        $sut->add($this->testFood);
-
-        $this->assertEquals(new Etelek([$this->testFood]), $sut);
+        $this->assertEquals('test food', $this->testFood::getName());
     }
 
     #[Test]
-    public function testCreateHozzavaloSorok(): void
+    public function testGetReceptUrl(): void
     {
-        $sut = new Etelek([$this->testFood]);
-
-        $hozzavaloSorok = $sut->createHozzavaloSorok();
-
-        $this->assertEquals(new HozzavaloSorok([new HozzavaloSor([new Hozzavalo(Hozzavalo::TOJAS, 1, Mertekegyseg::DB)])]), $hozzavaloSorok);
+        $this->assertEquals('https://online-recept-konyv.hu/test-food', $this->testFood->getReceptUrl());
     }
 
     #[Test]
-    public function testToArray(): void
+    public function testGetDefaultAdag(): void
     {
-        $this->assertEquals([$this->testFood], (new Etelek([$this->testFood]))->toArray());
+        $this->assertEquals(1, $this->testFood::getDefaultAdag());
+    }
+
+    #[Test]
+    public function testGetHozzavalok(): void
+    {
+        $this->assertEquals(
+            [
+                new Hozzavalo(Hozzavalo::TOJAS, 1, Mertekegyseg::DB),
+            ],
+            $this->testFood->getHozzavalok()
+        );
+    }
+
+    #[Test]
+    public function testStringify(): void
+    {
+        $this->assertEquals('test food (1 adag)', (string)$this->testFood);
     }
 }

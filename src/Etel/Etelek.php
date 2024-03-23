@@ -39,11 +39,11 @@ class Etelek
     }
 
     /**
-     * @return string[]
+     * @return Etel[]
      */
     public function toArray(): array
     {
-        return array_map(fn(Etel $etel) => (string)$etel, $this->etelek);
+        return $this->etelek;
     }
 
     private function addHozzavalo(HozzavaloSorok $hozzavaloSorok, Hozzavalo $hozzavalo): void

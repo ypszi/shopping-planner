@@ -37,4 +37,9 @@ class TarkonyosCsirkeraguLeves extends Etel
             new Hozzavalo(Hozzavalo::PETREZSELYEM, 3, Mertekegyseg::EK),
         ];
     }
+
+    #[\Override] public function getReceptUrl(): string
+    {
+        return sprintf('https://www.nosalty.hu/recept/tarkonyos-csirkeraguleves-tarkonyos-raguleves-3?adag=%d', $this->adag);
+    }
 }

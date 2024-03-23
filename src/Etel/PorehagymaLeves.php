@@ -30,4 +30,9 @@ class PorehagymaLeves extends Etel
     {
         return 4;
     }
+
+    #[\Override] public function getReceptUrl(): string
+    {
+        return sprintf('https://www.nosalty.hu/recept/klasszikus-porehagyma-kremleves?adag=%d', $this->adag);
+    }
 }

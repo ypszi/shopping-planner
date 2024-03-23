@@ -31,4 +31,9 @@ class KefiresCsirke extends Etel
     {
         return 4;
     }
+
+    #[\Override] public function getReceptUrl(): string
+    {
+        return 'http://chiliesvanilia.blogspot.com/2016/08/szuperropogos-rantott-csirke-husz-perc.html';
+    }
 }

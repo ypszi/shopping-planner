@@ -9,9 +9,9 @@ use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
 abstract class Etel
 {
     /** @var Hozzavalo[] */
-    protected array $hozzavalok;
+    private array $hozzavalok;
 
-    private int $adag;
+    protected int $adag;
 
     public function __construct(?int $adag = null)
     {
@@ -27,6 +27,8 @@ abstract class Etel
     abstract public static function getName(): string;
 
     abstract public static function getDefaultAdag(): int;
+
+    abstract public function getReceptUrl(): string;
 
     /**
      * @return Hozzavalo[]

@@ -11,7 +11,7 @@ class CitromosSpargasCsirkesPenne extends Etel
 {
     #[\Override] public static function getName(): string
     {
-        return 'Citromos Spárgás Csirkés Penne';
+        return 'Citromos spárgás csirkés penne';
     }
 
     #[\Override] protected static function listHozzavalok(): array
@@ -32,5 +32,10 @@ class CitromosSpargasCsirkesPenne extends Etel
     #[\Override] public static function getDefaultAdag(): int
     {
         return 4;
+    }
+
+    #[\Override] public function getReceptUrl(): string
+    {
+        return 'https://www.mindmegette.hu/citromos-spargas-csirkes-penne.recept/';
     }
 }

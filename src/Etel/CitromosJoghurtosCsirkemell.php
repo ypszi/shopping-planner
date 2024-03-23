@@ -35,4 +35,9 @@ class CitromosJoghurtosCsirkemell extends Etel
     {
         return 4;
     }
+
+    #[\Override] public function getReceptUrl(): string
+    {
+        return 'https://www.mindmegette.hu/citromos-joghurtos-csirkemell-gorogsalataval.recept/';
+    }
 }

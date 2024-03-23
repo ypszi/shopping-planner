@@ -37,4 +37,9 @@ class ToltottKaposzta extends Etel
     {
         return 8;
     }
+
+    #[\Override] public function getReceptUrl(): string
+    {
+        return sprintf('https://www.nosalty.hu/recept/klasszikus-toltott-kaposzta?adag=%d', $this->adag);
+    }
 }

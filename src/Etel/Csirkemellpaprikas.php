@@ -33,4 +33,9 @@ class Csirkemellpaprikas extends Etel
     {
         return 4;
     }
+
+    #[\Override] public function getReceptUrl(): string
+    {
+        return 'https://www.mindmegette.hu/csirkemellpaprikas.recept/';
+    }
 }

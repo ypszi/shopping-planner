@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Command;
 
+use PeterPecosz\Kajatervezo\Etel\Etel;
 use PeterPecosz\Kajatervezo\Etel\Etelek;
 use PeterPecosz\Kajatervezo\Etel\Factory\EtelFactory;
 use PeterPecosz\Kajatervezo\Hozzavalo\HozzavaloKategoria;
@@ -22,7 +23,8 @@ class PlanShoppingCommand extends Command
     {
         $this
             ->setName('plan:shopping')
-            ->setDescription('Megtervezi a hozzávalók bevásárlását');
+            ->setDescription('Megtervezi a hozzávalók bevásárlását')
+            ->addOption('testing', 't');
     }
 
     #[\Override] protected function initialize(InputInterface $input, OutputInterface $output): void
@@ -35,6 +37,12 @@ class PlanShoppingCommand extends Command
 
     #[\Override] protected function interact(InputInterface $input, OutputInterface $output): void
     {
+        if ($input->getOption('testing')) {
+            $this->prepareTestingRun();
+
+            return;
+        }
+
         /** @var string[] $kajaNevek */
         $kajaNevek = $this->io->choice(
             question:    'Melyik kajákhoz kell bevásárolni?',
@@ -51,10 +59,7 @@ class PlanShoppingCommand extends Command
             $this->etelek->add(EtelFactory::createWithAdag($kajaNev, $adag));
         }
 
-        $this->io->table(
-            ['Ételek'],
-            array_map(fn(string $etel) => [$etel], $this->etelek->toArray())
-        );
+        $this->renderEtelek();
     }
 
     protected function execute(InputInterface $input, OutputInterface $output): int
@@ -66,5 +71,24 @@ class PlanShoppingCommand extends Command
         );
 
         return Command::SUCCESS;
+    }
+
+    private function prepareTestingRun(): void
+    {
+        $kajaNevek = array_keys(EtelFactory::etelMap());
+
+        foreach ($kajaNevek as $kajaNev) {
+            $this->etelek->add(EtelFactory::create($kajaNev));
+        }
+
+        $this->renderEtelek();
+    }
+
+    private function renderEtelek(): void
+    {
+        $this->io->table(
+            ['Étel', 'Recept'],
+            array_map(fn(Etel $etel) => [(string)$etel, $etel->getReceptUrl()], $this->etelek->toArray())
+        );
     }
 }

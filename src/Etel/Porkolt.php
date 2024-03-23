@@ -35,4 +35,9 @@ class Porkolt extends Etel
     {
         return 4;
     }
+
+    #[\Override] public function getReceptUrl(): string
+    {
+        return 'https://www.mindmegette.hu/klasszikus-sertesporkolt.recept/';
+    }
 }

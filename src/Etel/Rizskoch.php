@@ -34,4 +34,9 @@ class Rizskoch extends Etel
     {
         return 4;
     }
+
+    #[\Override] public function getReceptUrl(): string
+    {
+        return 'https://streetkitchen.hu/meguszos-sutik/rizskoch-baracklekvarral/';
+    }
 }

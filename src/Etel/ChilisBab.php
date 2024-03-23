@@ -33,4 +33,9 @@ class ChilisBab extends Etel
     {
         return 4;
     }
+
+    #[\Override] public function getReceptUrl(): string
+    {
+        return 'https://www.mindmegette.hu/chilis-bab.recept/';
+    }
 }
