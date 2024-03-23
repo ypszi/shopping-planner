@@ -4,21 +4,12 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Etel\Factory;
 
-use PeterPecosz\Kajatervezo\Etel\BundasCsirke;
-use PeterPecosz\Kajatervezo\Etel\ChilisBab;
-use PeterPecosz\Kajatervezo\Etel\CitromosJoghurtosCsirkemell;
-use PeterPecosz\Kajatervezo\Etel\CitromosSpargasCsirkesPenne;
-use PeterPecosz\Kajatervezo\Etel\Csirkemellpaprikas;
+use FilesystemIterator;
 use PeterPecosz\Kajatervezo\Etel\Etel;
 use PeterPecosz\Kajatervezo\Etel\Exception\UnknownEtelException;
-use PeterPecosz\Kajatervezo\Etel\KefiresCsirke;
-use PeterPecosz\Kajatervezo\Etel\KinaiSzezammagosCsirke;
-use PeterPecosz\Kajatervezo\Etel\PorehagymaLeves;
-use PeterPecosz\Kajatervezo\Etel\Porkolt;
-use PeterPecosz\Kajatervezo\Etel\Rizskoch;
-use PeterPecosz\Kajatervezo\Etel\SertesPorkolt;
-use PeterPecosz\Kajatervezo\Etel\TarkonyosCsirkeraguLeves;
-use PeterPecosz\Kajatervezo\Etel\ToltottKaposzta;
+use ReflectionClass;
+use ReflectionException;
+use SplFileInfo;
 
 class EtelFactory
 {
@@ -45,24 +36,46 @@ class EtelFactory
     }
 
     /**
-     * @return array<string, string>
+     * @return array<string, string> Where key is the name of the Etel and the value is the FQCN of the Etel
      */
     public static function etelMap(): array
     {
-        return [
-            BundasCsirke::getName()                => BundasCsirke::class,
-            ChilisBab::getName()                   => ChilisBab::class,
-            CitromosJoghurtosCsirkemell::getName() => CitromosJoghurtosCsirkemell::class,
-            CitromosSpargasCsirkesPenne::getName() => CitromosSpargasCsirkesPenne::class,
-            Csirkemellpaprikas::getName()          => Csirkemellpaprikas::class,
-            KefiresCsirke::getName()               => KefiresCsirke::class,
-            KinaiSzezammagosCsirke::getName()      => KinaiSzezammagosCsirke::class,
-            PorehagymaLeves::getName()             => PorehagymaLeves::class,
-            Porkolt::getName()                     => Porkolt::class,
-            Rizskoch::getName()                    => Rizskoch::class,
-            SertesPorkolt::getName()               => SertesPorkolt::class,
-            TarkonyosCsirkeraguLeves::getName()    => TarkonyosCsirkeraguLeves::class,
-            ToltottKaposzta::getName()             => ToltottKaposzta::class,
-        ];
+        $etelMap = [];
+        $etelDir = new FilesystemIterator(__DIR__ . '/../');
+
+        /** @var SplFileInfo $etelFile */
+        foreach ($etelDir as $etelFile) {
+            $etelClassName = str_replace('.' . $etelFile->getExtension(), '', $etelFile->getBasename());
+            $etelFqcn      = preg_replace('/^([\w\\\\]+)(\\\\\w+)$/', '${1}\\', __NAMESPACE__) . $etelClassName;
+
+            try {
+                $etelReflection = new ReflectionClass($etelFqcn);
+            } catch (ReflectionException) {
+                continue;
+            }
+
+            if (self::isEtel($etelReflection)) {
+                try {
+                    $etelMap[$etelReflection->getMethod('getName')->invoke($etelReflection)] = $etelFqcn;
+                } catch (ReflectionException) {
+                    continue;
+                }
+            }
+        }
+
+        return $etelMap;
+    }
+
+    private static function isEtel(ReflectionClass $reflectionClass): bool
+    {
+        if ($reflectionClass->getParentClass()) {
+            if ($reflectionClass->getParentClass()->getName() === Etel::class) {
+                return true;
+            }
+
+            return self::isEtel($reflectionClass->getParentClass());
+        }
+
+        return false;
     }
 }
