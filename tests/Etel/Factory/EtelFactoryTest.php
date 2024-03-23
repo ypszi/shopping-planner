@@ -45,6 +45,6 @@ class EtelFactoryTest extends TestCase
     #[Test]
     public function testEtelMap(): void
     {
-        $this->assertCount(16, EtelFactory::etelMap());
+        $this->assertCount(15, EtelFactory::etelMap());
     }
 }

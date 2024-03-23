@@ -9,29 +9,6 @@ use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class Hozzavalo
 {
-    /* ZOLDSEG */
-    final public const string BURGONYA = 'Burgonya';
-    final public const string CITROM = 'Citrom';
-    final public const string EDESBURGONYA = 'Édesburgonya';
-    final public const string FEHERREPA = 'Fehérrépa';
-    final public const string FOKHAGYMA = 'Fokhagyma';
-    final public const string HEGYES_PAPRIKA = 'Hegyes paprika';
-    final public const string JEGSALATA = 'Jégsaláta';
-    final public const string KAPOSZTA = 'Káposzta';
-    final public const string KARALABE = 'Karalabé';
-    final public const string KIGYOUBORKA = 'Kigyóuborka';
-    final public const string KOKTELPARADICSOM = 'Koktélparadicsom';
-    final public const string KRUMPLI = 'Burgonya';
-    final public const string LILAHAGYMA = 'Lilahagyma';
-    final public const string PAPRIKA = 'Paprika';
-    final public const string PARADICSOM = 'Paradicsom';
-    final public const string POREHAGYMA = 'Póréhagyma';
-    final public const string SARGAREPA = 'Sárgarépa';
-    final public const string SAVANYU_KAPOSZTA = 'Savanyú káposzta';
-    final public const string VOROSHAGYMA = 'Vöröshagyma';
-    final public const string ZELLER = 'Zeller';
-    final public const string ZELLERSZAR = 'Zellerszár';
-    final public const string ZOLDBORSO = 'Zöldborsó';
     /* FUSZER_ES_OLAJ */
     final public const string BABERLEVEL = 'Babérlevél';
     final public const string BAZSALIKOM = 'Bazsalikom';
@@ -114,27 +91,6 @@ class Hozzavalo
         self::VOROSBAB        => Mertekegyseg::G,
     ];
     private const array HOZZAVALO_KATEGORIA = [
-        self::BURGONYA            => HozzavaloKategoria::ZOLDSEG,
-        self::CITROM              => HozzavaloKategoria::ZOLDSEG,
-        self::EDESBURGONYA        => HozzavaloKategoria::ZOLDSEG,
-        self::FEHERREPA           => HozzavaloKategoria::ZOLDSEG,
-        self::FOKHAGYMA           => HozzavaloKategoria::ZOLDSEG,
-        self::HEGYES_PAPRIKA      => HozzavaloKategoria::ZOLDSEG,
-        self::JEGSALATA           => HozzavaloKategoria::ZOLDSEG,
-        self::KAPOSZTA            => HozzavaloKategoria::ZOLDSEG,
-        self::KARALABE            => HozzavaloKategoria::ZOLDSEG,
-        self::KIGYOUBORKA         => HozzavaloKategoria::ZOLDSEG,
-        self::KOKTELPARADICSOM    => HozzavaloKategoria::ZOLDSEG,
-        self::LILAHAGYMA          => HozzavaloKategoria::ZOLDSEG,
-        self::PAPRIKA             => HozzavaloKategoria::ZOLDSEG,
-        self::PARADICSOM          => HozzavaloKategoria::ZOLDSEG,
-        self::POREHAGYMA          => HozzavaloKategoria::ZOLDSEG,
-        self::SARGAREPA           => HozzavaloKategoria::ZOLDSEG,
-        self::SAVANYU_KAPOSZTA    => HozzavaloKategoria::ZOLDSEG,
-        self::VOROSHAGYMA         => HozzavaloKategoria::ZOLDSEG,
-        self::ZELLER              => HozzavaloKategoria::ZOLDSEG,
-        self::ZELLERSZAR          => HozzavaloKategoria::ZOLDSEG,
-        self::ZOLDBORSO           => HozzavaloKategoria::ZOLDSEG,
         self::BABERLEVEL          => HozzavaloKategoria::FUSZER_ES_OLAJ,
         self::BAZSALIKOM          => HozzavaloKategoria::FUSZER_ES_OLAJ,
         self::BORS                => HozzavaloKategoria::FUSZER_ES_OLAJ,

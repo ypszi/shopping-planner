@@ -5,6 +5,9 @@ declare(strict_types=1);
 namespace PeterPecosz\Kajatervezo\Etel;
 
 use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
+use PeterPecosz\Kajatervezo\Hozzavalo\Paprika;
+use PeterPecosz\Kajatervezo\Hozzavalo\Paradicsom;
+use PeterPecosz\Kajatervezo\Hozzavalo\Voroshagyma;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class Bulgur extends Etel
@@ -18,9 +21,9 @@ class Bulgur extends Etel
     {
         return [
             new Hozzavalo(Hozzavalo::BULGUR, 30, Mertekegyseg::DKG),
-            new Hozzavalo(Hozzavalo::VOROSHAGYMA, 1, Mertekegyseg::DB),
-            new Hozzavalo(Hozzavalo::PARADICSOM, 2, Mertekegyseg::DB),
-            new Hozzavalo(Hozzavalo::PAPRIKA, 1, Mertekegyseg::DB),
+            new Voroshagyma(1, Mertekegyseg::DB),
+            new Paradicsom(2, Mertekegyseg::DB),
+            new Paprika(1, Mertekegyseg::DB),
             new Hozzavalo(Hozzavalo::OLIVA_OLAJ, 2, Mertekegyseg::EK),
             new Hozzavalo(Hozzavalo::HUSLEVES_KOCKA, 1, Mertekegyseg::DB),
             new Hozzavalo(Hozzavalo::SO, 0.5, Mertekegyseg::TK),

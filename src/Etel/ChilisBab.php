@@ -4,7 +4,9 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Etel;
 
+use PeterPecosz\Kajatervezo\Hozzavalo\Fokhagyma;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
+use PeterPecosz\Kajatervezo\Hozzavalo\Voroshagyma;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class ChilisBab extends Etel
@@ -17,9 +19,9 @@ class ChilisBab extends Etel
     #[\Override] protected static function listHozzavalok(): array
     {
         return [
-            new Hozzavalo(Hozzavalo::VOROSHAGYMA, 2, Mertekegyseg::DB),
+            new Voroshagyma(2, Mertekegyseg::DB),
             new Hozzavalo(Hozzavalo::NAPRAFORGO_OLAJ, 3, Mertekegyseg::EK),
-            new Hozzavalo(Hozzavalo::FOKHAGYMA, 4, Mertekegyseg::GEREZD),
+            new Fokhagyma(4, Mertekegyseg::GEREZD),
             new Hozzavalo(Hozzavalo::PIROS_PAPRIKA, 1, Mertekegyseg::TK),
             new Hozzavalo(Hozzavalo::DARALT_HUS, 50, Mertekegyseg::DKG),
             new Hozzavalo(Hozzavalo::PARADICSOM_PURE, 10, Mertekegyseg::DKG),
