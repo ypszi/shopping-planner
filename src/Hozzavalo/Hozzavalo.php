@@ -46,7 +46,6 @@ class Hozzavalo
     final public const string FUSZER_PAPRIKA = 'Piros paprika';
     final public const string GULYAS_KREM = 'Gulyás krém';
     final public const string GYOMBER_POR = 'Gyömbér por';
-    final public const string HUSLEVES_KOCKA = 'Húsleves kocka';
     final public const string KAKUKKFU = 'Kakukkfű';
     final public const string NAPRAFORGO_OLAJ = 'Napraforgó olaj';
     final public const string OLIVA_OLAJ = 'Olíva olaj';
@@ -59,9 +58,11 @@ class Hozzavalo
     final public const string ZOLDFUSZER = 'Zöldfűszer';
     /* HOSSZU_SOROK */
     final public const string BARACK_LEKVAR = 'Baracklekvár';
+    final public const string BULGUR = 'Bulgur';
     final public const string CUKOR = 'Cukor';
     final public const string FEHERBOR = 'Fehérbor';
     final public const string FINOMLISZT = 'Finomliszt';
+    final public const string HUSLEVES_KOCKA = 'Húsleves kocka';
     final public const string KEMENYITO = 'Keményítő';
     final public const string KUKORICA = 'Kukorica';
     final public const string LISZT = 'Finomliszt';
@@ -145,7 +146,6 @@ class Hozzavalo
         self::FUSZERKOMENY        => HozzavaloKategoria::FUSZER_ES_OLAJ,
         self::GULYAS_KREM         => HozzavaloKategoria::FUSZER_ES_OLAJ,
         self::GYOMBER_POR         => HozzavaloKategoria::FUSZER_ES_OLAJ,
-        self::HUSLEVES_KOCKA      => HozzavaloKategoria::FUSZER_ES_OLAJ,
         self::KAKUKKFU            => HozzavaloKategoria::FUSZER_ES_OLAJ,
         self::NAPRAFORGO_OLAJ     => HozzavaloKategoria::FUSZER_ES_OLAJ,
         self::OLIVA_OLAJ          => HozzavaloKategoria::FUSZER_ES_OLAJ,
@@ -157,8 +157,10 @@ class Hozzavalo
         self::TARKONY             => HozzavaloKategoria::FUSZER_ES_OLAJ,
         self::ZOLDFUSZER          => HozzavaloKategoria::FUSZER_ES_OLAJ,
         self::BARACK_LEKVAR       => HozzavaloKategoria::HOSSZU_SOROK,
+        self::BULGUR              => HozzavaloKategoria::HOSSZU_SOROK,
         self::CUKOR               => HozzavaloKategoria::HOSSZU_SOROK,
         self::FEHERBOR            => HozzavaloKategoria::HOSSZU_SOROK,
+        self::HUSLEVES_KOCKA      => HozzavaloKategoria::HOSSZU_SOROK,
         self::KEMENYITO           => HozzavaloKategoria::HOSSZU_SOROK,
         self::KUKORICA            => HozzavaloKategoria::HOSSZU_SOROK,
         self::LISZT               => HozzavaloKategoria::HOSSZU_SOROK,

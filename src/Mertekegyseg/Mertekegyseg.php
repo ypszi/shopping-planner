@@ -7,6 +7,7 @@ namespace PeterPecosz\Kajatervezo\Mertekegyseg;
 class Mertekegyseg
 {
     final public const string DB = 'db';
+    final public const string CSIPET = 'csipet';
     final public const string GEREZD = 'gerezd';
     final public const string KONZERV = 'konzerv';
     /* tömeg */
