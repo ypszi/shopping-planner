@@ -35,6 +35,7 @@ class Hozzavalo
     final public const string ZOLDBORSO = 'Zöldborsó';
     /* FUSZER_ES_OLAJ */
     final public const string BABERLEVEL = 'Babérlevél';
+    final public const string BAZSALIKOM = 'Bazsalikom';
     final public const string BORS = 'Bors';
     final public const string CAYENNE_BORS = 'Cayenne bors';
     final public const string CHILI = 'Chili';
@@ -75,6 +76,8 @@ class Hozzavalo
     final public const string VANILIAS_CUKOR = 'Vaníliás cukor';
     final public const string VOROSBAB = 'Vörösbab';
     /* HUS */
+    final public const string BACON_KOCKAZOTT = 'Bacon (kockázott)';
+    final public const string BACON_SZELETELT = 'Bacon (szeletelt)';
     final public const string DARALT_HUS = 'Darált hús';
     final public const string CSIRKEMELL = 'Csirkemell';
     final public const string KOLBASZ = 'Kolbász';
@@ -84,6 +87,7 @@ class Hozzavalo
     final public const string SERTES_ZSIR = 'Sertészsír';
     /* HUTOS */
     final public const string FETA_SAJT = 'Feta sajt';
+    final public const string MOZZARELLA_SAJT = 'Mozzarella sajt';
     final public const string NATUR_JOGHURT = 'Natúr joghurt';
     final public const string KEFIR = 'Kefír';
     final public const string PARMEZAN = 'Parmezán';
@@ -132,6 +136,7 @@ class Hozzavalo
         self::ZELLERSZAR          => HozzavaloKategoria::ZOLDSEG,
         self::ZOLDBORSO           => HozzavaloKategoria::ZOLDSEG,
         self::BABERLEVEL          => HozzavaloKategoria::FUSZER_ES_OLAJ,
+        self::BAZSALIKOM          => HozzavaloKategoria::FUSZER_ES_OLAJ,
         self::BORS                => HozzavaloKategoria::FUSZER_ES_OLAJ,
         self::CAYENNE_BORS        => HozzavaloKategoria::FUSZER_ES_OLAJ,
         self::CHILI               => HozzavaloKategoria::FUSZER_ES_OLAJ,
@@ -167,6 +172,8 @@ class Hozzavalo
         self::SZOJASZOSZ          => HozzavaloKategoria::HOSSZU_SOROK,
         self::VANILIAS_CUKOR      => HozzavaloKategoria::HOSSZU_SOROK,
         self::VOROSBAB            => HozzavaloKategoria::HOSSZU_SOROK,
+        self::BACON_KOCKAZOTT     => HozzavaloKategoria::HUS,
+        self::BACON_SZELETELT     => HozzavaloKategoria::HUS,
         self::DARALT_HUS          => HozzavaloKategoria::HUS,
         self::CSIRKEMELL          => HozzavaloKategoria::HUS,
         self::KOLBASZ             => HozzavaloKategoria::HUS,
@@ -175,6 +182,7 @@ class Hozzavalo
         self::SERTESCOMB          => HozzavaloKategoria::HUS,
         self::SERTES_ZSIR         => HozzavaloKategoria::HUS,
         self::FETA_SAJT           => HozzavaloKategoria::HUTOS,
+        self::MOZZARELLA_SAJT     => HozzavaloKategoria::HUTOS,
         self::NATUR_JOGHURT       => HozzavaloKategoria::HUTOS,
         self::KEFIR               => HozzavaloKategoria::HUTOS,
         self::PARMEZAN            => HozzavaloKategoria::HUTOS,
