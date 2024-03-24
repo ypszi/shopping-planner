@@ -9,6 +9,9 @@ use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Csirkemell\DarabToDekagram as 
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Csirkemell\DarabToKilogram as CsirkemellDarabToKilogram;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Csirkemell\DekagramToDarab as CsirkemellDekagramToDarab;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Csirkemell\KilogramToDarab as CsirkemellKilogramToDarab;
+use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Cukor\EvokanalToDekagram as CukorEvokanalToDekagram;
+use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Cukor\EvokanalToGram as CukorEvokanalToGram;
+use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Cukor\EvokanalToKilogram as CukorEvokanalToKiloGram;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Exception\UnknownUnitOfMeasureException;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\FinomLiszt\BogreToDekagram as FinomLisztBogreToDekagram;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\FinomLiszt\BogreToGram as FinomLisztBogreToGram;
@@ -103,6 +106,9 @@ class MertekegysegValtoCollection
             new PorcukorEvokanalToDekagram(),
             new PorcukorEvokanalToGram(),
             new PorcukorEvokanalToKiloGram(),
+            new CukorEvokanalToDekagram(),
+            new CukorEvokanalToGram(),
+            new CukorEvokanalToKiloGram(),
             new KukoricaKonzervToGram(),
             new VorosbabKonzervToGram(),
         ];

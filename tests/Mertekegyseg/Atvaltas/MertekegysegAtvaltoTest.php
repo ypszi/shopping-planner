@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace PeterPecosz\Kajatervezo\Tests\Mertekegyseg\Atvaltas;
 
 use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\NapraforgoOlaj;
+use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Cukor;
 use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Finomliszt;
 use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Kukorica;
 use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Liszt;
@@ -281,6 +282,21 @@ class MertekegysegAtvaltoTest extends TestCase
             'porcukor evokanal to kg'    => [
                 new Porcukor(1, Mertekegyseg::EK),
                 new Porcukor(0, Mertekegyseg::KG),
+                0.02,
+            ],
+            'cukor evokanal to dkg'      => [
+                new Cukor(1, Mertekegyseg::EK),
+                new Cukor(0, Mertekegyseg::DKG),
+                2.0,
+            ],
+            'cukor evokanal to g'        => [
+                new Cukor(1, Mertekegyseg::EK),
+                new Cukor(0, Mertekegyseg::G),
+                20.0,
+            ],
+            'cukor evokanal to kg'       => [
+                new Cukor(1, Mertekegyseg::EK),
+                new Cukor(0, Mertekegyseg::KG),
                 0.02,
             ],
             'kukorica konzerv to g'      => [
