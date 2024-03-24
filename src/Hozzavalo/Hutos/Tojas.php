@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Hozzavalo\Hutos;
 
-use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\HosszuSorok;
+use PeterPecosz\Kajatervezo\Hozzavalo\Hus\Hutos;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
-class Tojas extends HosszuSorok
+class Tojas extends Hutos
 {
     public function __construct(float $mennyiseg, string $mertekegyseg = Mertekegyseg::DB)
     {
