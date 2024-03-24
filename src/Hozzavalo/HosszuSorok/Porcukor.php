@@ -10,7 +10,7 @@ class Porcukor extends HosszuSorok
 {
     public function __construct(float $mennyiseg, string $mertekegyseg = Mertekegyseg::G)
     {
-        parent::__construct(static::name(), $mennyiseg, $mertekegyseg, static::kategoria());
+        parent::__construct(static::name(), $mennyiseg, $mertekegyseg);
     }
 
     #[\Override] public static function name(): string

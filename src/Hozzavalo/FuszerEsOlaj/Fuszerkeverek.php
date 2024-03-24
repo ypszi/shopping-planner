@@ -10,7 +10,7 @@ class Fuszerkeverek extends FuszerEsOlaj
 {
     public function __construct(float $mennyiseg, string $mertekegyseg = Mertekegyseg::TK)
     {
-        parent::__construct(static::name(), $mennyiseg, $mertekegyseg, static::kategoria());
+        parent::__construct(static::name(), $mennyiseg, $mertekegyseg);
     }
 
     #[\Override] public static function name(): string
