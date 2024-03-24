@@ -8,21 +8,6 @@ use PeterPecosz\Kajatervezo\Hozzavalo\Exception\UnknownHozzavaloException;
 
 class Hozzavalo
 {
-    /* HUTOS_UTAN */
-    final public const string FOZO_TEJSZIN = 'Főzőtejszín';
-    final public const string HABTEJSZIN = 'Habtejszín';
-    final public const string KETCHUP = 'Ketchup';
-    final public const string TEJ = 'Tej';
-    final public const string TEJSZIN = 'Főzőtejszín';
-    final public const string VAJ = 'Vaj';
-    private const array HOZZAVALO_KATEGORIA = [
-        self::FOZO_TEJSZIN => HozzavaloKategoria::HUTOS_UTAN,
-        self::HABTEJSZIN   => HozzavaloKategoria::HUTOS_UTAN,
-        self::KETCHUP      => HozzavaloKategoria::HUTOS_UTAN,
-        self::TEJ          => HozzavaloKategoria::HUTOS_UTAN,
-        self::VAJ          => HozzavaloKategoria::HUTOS_UTAN,
-    ];
-
     private string $kategoria;
 
     private string $nev;
@@ -34,7 +19,7 @@ class Hozzavalo
     // TODO: remove $kategoria arg [peter.pecosz]
     public function __construct(string $name, float $mennyiseg, string $mertekegyseg, ?string $kategoria = null)
     {
-        $kategoria = $kategoria ?: self::HOZZAVALO_KATEGORIA[$name] ?? '';
+        $kategoria = $kategoria ?: '';
 
         if (empty($kategoria)) {
             throw new UnknownHozzavaloException(sprintf('Unknown hozzavalo, cannot determine kategoria for "%s"', $name));

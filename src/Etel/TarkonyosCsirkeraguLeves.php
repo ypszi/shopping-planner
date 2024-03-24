@@ -8,8 +8,8 @@ use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\ErolevesKocka;
 use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\NapraforgoOlaj;
 use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\Petrezselyem;
 use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\Tarkony;
-use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hus\Csirkemell;
+use PeterPecosz\Kajatervezo\Hozzavalo\HutosUtan\Fozotejszin;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Citrom;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Feherrepa;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Karalabe;
@@ -43,7 +43,7 @@ class TarkonyosCsirkeraguLeves extends Etel
             new Voroshagyma(1, Mertekegyseg::DB),
             new Zoldborso(30, Mertekegyseg::DKG),
             new Tarkony(1, Mertekegyseg::EK),
-            new Hozzavalo(Hozzavalo::FOZO_TEJSZIN, 3, Mertekegyseg::DL),
+            new Fozotejszin(3, Mertekegyseg::DL),
             new Citrom(1, Mertekegyseg::DB),
             new ErolevesKocka(4, Mertekegyseg::DB),
             new Petrezselyem(3, Mertekegyseg::EK),

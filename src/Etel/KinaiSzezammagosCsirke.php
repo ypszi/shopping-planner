@@ -11,9 +11,9 @@ use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Kemenyito;
 use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Mez;
 use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Sutopor;
 use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Szezammag;
-use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hus\Csirkemell;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hutos\Tojas;
+use PeterPecosz\Kajatervezo\Hozzavalo\HutosUtan\Ketchup;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class KinaiSzezammagosCsirke extends Etel
@@ -39,7 +39,7 @@ class KinaiSzezammagosCsirke extends Etel
             new Finomliszt(6, Mertekegyseg::EK),
             new Csirkemell(1, Mertekegyseg::DB),
             new Tojas(1, Mertekegyseg::DB),
-            new Hozzavalo(Hozzavalo::KETCHUP, 100, Mertekegyseg::G),
+            new Ketchup(100, Mertekegyseg::G),
         ];
     }
 

@@ -5,7 +5,8 @@ declare(strict_types=1);
 namespace PeterPecosz\Kajatervezo\Etel;
 
 use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\HuslevesKocka;
-use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
+use PeterPecosz\Kajatervezo\Hozzavalo\HutosUtan\Habtejszin;
+use PeterPecosz\Kajatervezo\Hozzavalo\HutosUtan\Vaj;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Krumpli;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Porehagyma;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Zellerszar;
@@ -25,8 +26,8 @@ class PorehagymaLeves extends Etel
             new Krumpli(2, Mertekegyseg::DB),
             new Zellerszar(1, Mertekegyseg::DB),
             new HuslevesKocka(1, Mertekegyseg::DB),
-            new Hozzavalo(Hozzavalo::VAJ, 3, Mertekegyseg::DKG),
-            new Hozzavalo(Hozzavalo::HABTEJSZIN, 200, Mertekegyseg::ML),
+            new Vaj(3, Mertekegyseg::DKG),
+            new Habtejszin(200, Mertekegyseg::ML),
         ];
     }
 
