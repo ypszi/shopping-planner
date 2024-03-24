@@ -7,7 +7,7 @@ namespace PeterPecosz\Kajatervezo\Hozzavalo\HutosUtan;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
 use PeterPecosz\Kajatervezo\Hozzavalo\HozzavaloKategoria;
 
-class HutosUtan extends Hozzavalo
+abstract class HutosUtan extends Hozzavalo
 {
     #[\Override] public static function kategoria(): string
     {

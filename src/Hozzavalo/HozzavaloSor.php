@@ -29,10 +29,10 @@ class HozzavaloSor
     public function add(Hozzavalo $hozzavalo): self
     {
         $hozzavalo           = $this->convertToPreference($hozzavalo);
-        $hozzaadottHozzavalo = $this->hozzavalokPerKategoria[$hozzavalo->getKategoria()] ?? null;
+        $hozzaadottHozzavalo = $this->hozzavalokPerKategoria[$hozzavalo::kategoria()] ?? null;
 
         if (empty($hozzaadottHozzavalo)) {
-            $this->hozzavalokPerKategoria[$hozzavalo->getKategoria()] = $hozzavalo;
+            $this->hozzavalokPerKategoria[$hozzavalo::kategoria()] = $hozzavalo;
             $this->sort();
 
             return $this;
@@ -44,7 +44,7 @@ class HozzavaloSor
                 $hozzaadottHozzavalo
             );
 
-            $this->hozzavalokPerKategoria[$hozzavalo->getKategoria()] = $hozzaadottHozzavalo->withMennyiseg(
+            $this->hozzavalokPerKategoria[$hozzavalo::kategoria()] = $hozzaadottHozzavalo->withMennyiseg(
                 $hozzaadottHozzavalo->getMennyiseg() + $newMennyiseg
             );
             $this->sort();
@@ -56,7 +56,7 @@ class HozzavaloSor
             $hozzaadottHozzavalo->getNev() === $hozzavalo->getNev()
             && $hozzaadottHozzavalo->getMertekegyseg() === $hozzavalo->getMertekegyseg()
         ) {
-            $this->hozzavalokPerKategoria[$hozzavalo->getKategoria()] = $hozzaadottHozzavalo->withMennyiseg(
+            $this->hozzavalokPerKategoria[$hozzavalo::kategoria()] = $hozzaadottHozzavalo->withMennyiseg(
                 $hozzaadottHozzavalo->getMennyiseg() + $hozzavalo->getMennyiseg()
             );
         }
@@ -68,7 +68,7 @@ class HozzavaloSor
 
     public function canAdd(Hozzavalo $hozzavalo): bool
     {
-        $hozzaadottHozzavalo = $this->hozzavalokPerKategoria[$hozzavalo->getKategoria()] ?? null;
+        $hozzaadottHozzavalo = $this->hozzavalokPerKategoria[$hozzavalo::kategoria()] ?? null;
 
         if (empty($hozzaadottHozzavalo)) {
             return true;

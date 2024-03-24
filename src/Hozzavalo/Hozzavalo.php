@@ -4,28 +4,16 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Hozzavalo;
 
-use PeterPecosz\Kajatervezo\Hozzavalo\Exception\UnknownHozzavaloException;
-
-class Hozzavalo
+abstract class Hozzavalo
 {
-    private string $kategoria;
-
     private string $nev;
 
     private float $mennyiseg;
 
     private string $mertekegyseg;
 
-    // TODO: remove $kategoria arg [peter.pecosz]
-    public function __construct(string $name, float $mennyiseg, string $mertekegyseg, ?string $kategoria = null)
+    public function __construct(string $name, float $mennyiseg, string $mertekegyseg)
     {
-        $kategoria = $kategoria ?: '';
-
-        if (empty($kategoria)) {
-            throw new UnknownHozzavaloException(sprintf('Unknown hozzavalo, cannot determine kategoria for "%s"', $name));
-        }
-
-        $this->kategoria    = $kategoria;
         $this->nev          = $name;
         $this->mennyiseg    = $mennyiseg;
         $this->mertekegyseg = $mertekegyseg;
@@ -47,26 +35,13 @@ class Hozzavalo
         return $clone;
     }
 
-    // TODO: make abstract [peter.pecosz]
-    public static function name(): string
-    {
-        return '';
-    }
+    abstract public static function name(): string;
 
-    // TODO: make abstract [peter.pecosz]
-    public static function kategoria(): string
-    {
-        return '';
-    }
+    abstract public static function kategoria(): string;
 
     public static function mertekegysegPreference(): ?string
     {
         return null;
-    }
-
-    public function getKategoria(): string
-    {
-        return $this->kategoria;
     }
 
     public function getNev(): string
