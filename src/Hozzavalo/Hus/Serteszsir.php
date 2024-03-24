@@ -4,10 +4,9 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Hozzavalo\Hus;
 
-use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\HosszuSorok;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
-class Serteszsir extends HosszuSorok
+class Serteszsir extends Hus
 {
     public function __construct(float $mennyiseg, string $mertekegyseg = Mertekegyseg::DKG)
     {
