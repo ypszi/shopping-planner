@@ -43,24 +43,21 @@ class PlanShoppingCommand extends Command
             return;
         }
 
-        /** @var string[] $etelNames */
-        $etelNames = array_keys(EtelFactory::etelMap());
-        sort($etelNames);
-
         /** @var string[] $kajaNames */
         $kajaNames = $this->io->choice(
             question:    'Melyik kajákhoz kell bevásárolni?',
-            choices:     $etelNames,
+            choices:     EtelFactory::listAvailableEtelek(),
             multiSelect: true
         );
 
         foreach ($kajaNames as $kajaName) {
+            $etel = EtelFactory::create($kajaName);
             $adag = (int)$this->io->ask(
                 sprintf('Hány adagot főzöl ebből: "%s"?', $kajaName),
-                (string)EtelFactory::create($kajaName)::defaultAdag()
+                (string)$etel::defaultAdag()
             );
 
-            $this->etelek->add(EtelFactory::createWithAdag($kajaName, $adag));
+            $this->etelek->add($etel->withAdag($adag));
         }
 
         $this->renderEtelek();
@@ -79,11 +76,7 @@ class PlanShoppingCommand extends Command
 
     private function prepareTestingRun(): void
     {
-        /** @var string[] $etelNames */
-        $etelNames = array_keys(EtelFactory::etelMap());
-        sort($etelNames);
-
-        foreach ($etelNames as $etelName) {
+        foreach (EtelFactory::listAvailableEtelek() as $etelName) {
             $this->etelek->add(EtelFactory::create($etelName));
         }
 

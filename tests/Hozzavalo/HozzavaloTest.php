@@ -22,26 +22,18 @@ class HozzavaloTest extends TestCase
     }
 
     #[Test]
-    public function testFromHozzavalo(): void
+    public function testWithMertekegyseg(): void
     {
         $hozzavalo = new Hozzavalo(Hozzavalo::CSIRKEMELL, 50, Mertekegyseg::DKG);
 
-        $this->assertEquals(new Hozzavalo(Hozzavalo::CSIRKEMELL, 20, Mertekegyseg::KG), Hozzavalo::fromHozzavalo($hozzavalo, 20, Mertekegyseg::KG));
+        $this->assertEquals(new Hozzavalo(Hozzavalo::CSIRKEMELL, 50, Mertekegyseg::KG), $hozzavalo->withMertekegyseg(Mertekegyseg::KG));
     }
 
     #[Test]
-    public function testFromHozzavaloWithMertekegyseg(): void
+    public function testWithMennyiseg(): void
     {
         $hozzavalo = new Hozzavalo(Hozzavalo::CSIRKEMELL, 50, Mertekegyseg::DKG);
 
-        $this->assertEquals(new Hozzavalo(Hozzavalo::CSIRKEMELL, 50, Mertekegyseg::KG), Hozzavalo::fromHozzavaloWithMertekegyseg($hozzavalo, Mertekegyseg::KG));
-    }
-
-    #[Test]
-    public function testFromHozzavaloWithMennyiseg(): void
-    {
-        $hozzavalo = new Hozzavalo(Hozzavalo::CSIRKEMELL, 50, Mertekegyseg::DKG);
-
-        $this->assertEquals(new Hozzavalo(Hozzavalo::CSIRKEMELL, 20, Mertekegyseg::DKG), Hozzavalo::fromHozzavaloWithMennyiseg($hozzavalo, 20));
+        $this->assertEquals(new Hozzavalo(Hozzavalo::CSIRKEMELL, 20, Mertekegyseg::DKG), $hozzavalo->withMennyiseg(20));
     }
 }

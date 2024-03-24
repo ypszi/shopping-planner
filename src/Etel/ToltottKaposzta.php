@@ -4,11 +4,14 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Etel;
 
-use PeterPecosz\Kajatervezo\Hozzavalo\Fokhagyma;
+use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\Baberlevel;
+use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\Fuszerkomeny;
+use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\FuszerPaprika;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
-use PeterPecosz\Kajatervezo\Hozzavalo\Kaposzta;
-use PeterPecosz\Kajatervezo\Hozzavalo\SavanyuKaposzta;
-use PeterPecosz\Kajatervezo\Hozzavalo\Voroshagyma;
+use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Fokhagyma;
+use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Kaposzta;
+use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\SavanyuKaposzta;
+use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Voroshagyma;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class ToltottKaposzta extends Etel
@@ -25,9 +28,9 @@ class ToltottKaposzta extends Etel
             new Kaposzta(1, Mertekegyseg::DB),
             new Voroshagyma(1, Mertekegyseg::DB),
             new Fokhagyma(2, Mertekegyseg::GEREZD),
-            new Hozzavalo(Hozzavalo::FUSZER_PAPRIKA, 3, Mertekegyseg::TK),
-            new Hozzavalo(Hozzavalo::FUSZERKOMENY, 1, Mertekegyseg::TK),
-            new Hozzavalo(Hozzavalo::BABERLEVEL, 5, Mertekegyseg::DB),
+            new FuszerPaprika(3, Mertekegyseg::TK),
+            new Fuszerkomeny(1, Mertekegyseg::TK),
+            new Baberlevel(5, Mertekegyseg::DB),
             new Hozzavalo(Hozzavalo::RIZS, 20, Mertekegyseg::DKG),
             new Hozzavalo(Hozzavalo::FINOMLISZT, 1, Mertekegyseg::EK),
             new Hozzavalo(Hozzavalo::DARALT_HUS, 50, Mertekegyseg::DKG),

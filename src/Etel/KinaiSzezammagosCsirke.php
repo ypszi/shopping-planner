@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Etel;
 
+use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\Chili;
+use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\NapraforgoOlaj;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
@@ -17,10 +19,12 @@ class KinaiSzezammagosCsirke extends Etel
     #[\Override] protected static function listHozzavalok(): array
     {
         return [
-            new Hozzavalo(Hozzavalo::NAPRAFORGO_OLAJ, 1, Mertekegyseg::EK),
-            new Hozzavalo(Hozzavalo::NAPRAFORGO_OLAJ, 3, Mertekegyseg::DL),
+            // a bundához
+            new NapraforgoOlaj(1, Mertekegyseg::EK),
+            // a sütéshez
+            new NapraforgoOlaj(3, Mertekegyseg::DL),
             // chili ízlés szerint
-            new Hozzavalo(Hozzavalo::CHILI, 1, Mertekegyseg::MK),
+            new Chili(1, Mertekegyseg::MK),
             new Hozzavalo(Hozzavalo::SUTOPOR, 1.5, Mertekegyseg::KK),
             new Hozzavalo(Hozzavalo::KEMENYITO, 3, Mertekegyseg::EK),
             new Hozzavalo(Hozzavalo::MEZ, 2, Mertekegyseg::TK),

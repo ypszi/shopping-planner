@@ -24,21 +24,22 @@ class EtelFactory
         return new $etelClass();
     }
 
-    public static function createWithAdag(string $name, int $adag): Etel
+    /**
+     * @return string[]
+     */
+    public static function listAvailableEtelek(): array
     {
-        $etelClass = self::etelMap()[$name] ?? null;
+        /** @var string[] $etelNames */
+        $etelNames = array_keys(self::etelMap());
+        sort($etelNames);
 
-        if (!$etelClass) {
-            throw new UnknownEtelException(sprintf('Unknown etel found: "%s"', $name));
-        }
-
-        return new $etelClass(adag: $adag);
+        return $etelNames;
     }
 
     /**
      * @return array<string, string> Where key is the name of the Etel and the value is the FQCN of the Etel
      */
-    public static function etelMap(): array
+    private static function etelMap(): array
     {
         $etelMap = [];
         $etelDir = new FilesystemIterator(__DIR__ . '/../');

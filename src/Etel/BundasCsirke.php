@@ -4,8 +4,15 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Etel;
 
-use PeterPecosz\Kajatervezo\Hozzavalo\Fokhagyma;
+use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\CayenneBors;
+use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\FuszerPaprika;
+use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\GyomberPor;
+use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\NapraforgoOlaj;
+use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\OlivaOlaj;
+use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\Szerecsendio;
+use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\Zoldfuszer;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
+use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Fokhagyma;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class BundasCsirke extends Etel
@@ -19,13 +26,13 @@ class BundasCsirke extends Etel
     {
         return [
             new Fokhagyma(3, Mertekegyseg::GEREZD),
-            new Hozzavalo(Hozzavalo::NAPRAFORGO_OLAJ, 2, Mertekegyseg::DL),
-            new Hozzavalo(Hozzavalo::GYOMBER_POR, 1.5, Mertekegyseg::TK),
-            new Hozzavalo(Hozzavalo::SZERECSENDIO, 1, Mertekegyseg::TK),
-            new Hozzavalo(Hozzavalo::FUSZER_PAPRIKA, 1, Mertekegyseg::TK),
-            new Hozzavalo(Hozzavalo::ZOLDFUSZER, 1, Mertekegyseg::TK),
-            new Hozzavalo(Hozzavalo::CAYENNE_BORS, 0.5, Mertekegyseg::TK),
-            new Hozzavalo(Hozzavalo::OLIVA_OLAJ, 2, Mertekegyseg::EK),
+            new NapraforgoOlaj(2, Mertekegyseg::DL),
+            new GyomberPor(1.5, Mertekegyseg::TK),
+            new Szerecsendio(1, Mertekegyseg::TK),
+            new FuszerPaprika(1, Mertekegyseg::TK),
+            new Zoldfuszer(1, Mertekegyseg::TK),
+            new CayenneBors(0.5, Mertekegyseg::TK),
+            new OlivaOlaj(2, Mertekegyseg::EK),
             new Hozzavalo(Hozzavalo::FINOMLISZT, 1, Mertekegyseg::BOGRE),
             new Hozzavalo(Hozzavalo::MEZ, 50, Mertekegyseg::ML),
             new Hozzavalo(Hozzavalo::SZOJASZOSZ, 50, Mertekegyseg::ML),

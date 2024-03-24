@@ -4,12 +4,17 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Etel;
 
-use PeterPecosz\Kajatervezo\Hozzavalo\Fokhagyma;
-use PeterPecosz\Kajatervezo\Hozzavalo\HegyesPaprika;
+use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\Fuszerkomeny;
+use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\GulyasKrem;
+use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\OlivaOlaj;
+use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\PirosPaprika;
+use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\So;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
-use PeterPecosz\Kajatervezo\Hozzavalo\Paprika;
-use PeterPecosz\Kajatervezo\Hozzavalo\Paradicsom;
-use PeterPecosz\Kajatervezo\Hozzavalo\Voroshagyma;
+use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Fokhagyma;
+use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\HegyesPaprika;
+use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Paprika;
+use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Paradicsom;
+use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Voroshagyma;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class Porkolt extends Etel
@@ -28,11 +33,11 @@ class Porkolt extends Etel
             new Paradicsom(2, Mertekegyseg::DB),
             new Paprika(2, Mertekegyseg::DB),
             new HegyesPaprika(1, Mertekegyseg::DB),
-            new Hozzavalo(Hozzavalo::OLIVA_OLAJ, 6, Mertekegyseg::EK),
-            new Hozzavalo(Hozzavalo::FUSZERKOMENY, 1, Mertekegyseg::KVK),
-            new Hozzavalo(Hozzavalo::SO, 1, Mertekegyseg::TK),
-            new Hozzavalo(Hozzavalo::GULYAS_KREM, 1, Mertekegyseg::TK),
-            new Hozzavalo(Hozzavalo::PIROS_PAPRIKA, 1, Mertekegyseg::EK),
+            new OlivaOlaj(6, Mertekegyseg::EK),
+            new Fuszerkomeny(1, Mertekegyseg::KVK),
+            new So(1, Mertekegyseg::TK),
+            new GulyasKrem(1, Mertekegyseg::TK),
+            new PirosPaprika(1, Mertekegyseg::EK),
         ];
     }
 

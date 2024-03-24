@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Etel;
 
+use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\Fuszerkeverek;
+use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\NapraforgoOlaj;
+use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\PirosPaprika;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
@@ -17,9 +20,9 @@ class KefiresCsirke extends Etel
     #[\Override] protected static function listHozzavalok(): array
     {
         return [
-            new Hozzavalo(Hozzavalo::PIROS_PAPRIKA, 1, Mertekegyseg::TK),
-            new Hozzavalo(Hozzavalo::FUSZERKEVEREK, 1, Mertekegyseg::EK),
-            new Hozzavalo(Hozzavalo::NAPRAFORGO_OLAJ, 4, Mertekegyseg::DL),
+            new PirosPaprika(1, Mertekegyseg::TK),
+            new Fuszerkeverek(1, Mertekegyseg::EK),
+            new NapraforgoOlaj(4, Mertekegyseg::DL),
             new Hozzavalo(Hozzavalo::LISZT, 25, Mertekegyseg::DKG),
             new Hozzavalo(Hozzavalo::SUTOPOR, 1, Mertekegyseg::EK),
             new Hozzavalo(Hozzavalo::CSIRKEMELL, 50, Mertekegyseg::DKG),

@@ -20,7 +20,7 @@ abstract class Etel
 
         foreach (static::listHozzavalok() as $hozzavalo) {
             $adagMennyiseg      = $hozzavalo->getMennyiseg() / $defaultAdag * $this->adag;
-            $this->hozzavalok[] = Hozzavalo::fromHozzavaloWithMennyiseg($hozzavalo, $adagMennyiseg);
+            $this->hozzavalok[] = $hozzavalo->withMennyiseg($adagMennyiseg);
         }
     }
 
@@ -34,6 +34,14 @@ abstract class Etel
      * @return Hozzavalo[]
      */
     abstract protected static function listHozzavalok(): array;
+
+    public function withAdag(int $adag): self
+    {
+        $clone       = clone $this;
+        $clone->adag = $adag;
+
+        return $clone;
+    }
 
     /**
      * @return Hozzavalo[]

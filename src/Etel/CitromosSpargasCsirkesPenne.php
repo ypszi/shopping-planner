@@ -4,10 +4,11 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Etel;
 
-use PeterPecosz\Kajatervezo\Hozzavalo\Citrom;
-use PeterPecosz\Kajatervezo\Hozzavalo\Fokhagyma;
+use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\Kakukkfu;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
-use PeterPecosz\Kajatervezo\Hozzavalo\Voroshagyma;
+use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Citrom;
+use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Fokhagyma;
+use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Voroshagyma;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class CitromosSpargasCsirkesPenne extends Etel
@@ -23,7 +24,7 @@ class CitromosSpargasCsirkesPenne extends Etel
             new Voroshagyma(1, Mertekegyseg::DB),
             new Citrom(1, Mertekegyseg::DB),
             new Fokhagyma(6, Mertekegyseg::GEREZD),
-            new Hozzavalo(Hozzavalo::KAKUKKFU, 1, Mertekegyseg::KK),
+            new Kakukkfu(1, Mertekegyseg::KK),
             new Hozzavalo(Hozzavalo::FEHERBOR, 1, Mertekegyseg::DL),
             new Hozzavalo(Hozzavalo::PENNE_TESZTA, 50, Mertekegyseg::DKG),
             new Hozzavalo(Hozzavalo::CSIRKEMELL, 50, Mertekegyseg::DKG),

@@ -44,8 +44,7 @@ class HozzavaloSor
                 $hozzaadottHozzavalo
             );
 
-            $this->hozzavalokPerKategoria[$hozzavalo->getKategoria()] = Hozzavalo::fromHozzavaloWithMennyiseg(
-                $hozzaadottHozzavalo,
+            $this->hozzavalokPerKategoria[$hozzavalo->getKategoria()] = $hozzaadottHozzavalo->withMennyiseg(
                 $hozzaadottHozzavalo->getMennyiseg() + $newMennyiseg
             );
             $this->sort();
@@ -57,8 +56,7 @@ class HozzavaloSor
             $hozzaadottHozzavalo->getNev() === $hozzavalo->getNev()
             && $hozzaadottHozzavalo->getMertekegyseg() === $hozzavalo->getMertekegyseg()
         ) {
-            $this->hozzavalokPerKategoria[$hozzavalo->getKategoria()] = Hozzavalo::fromHozzavaloWithMennyiseg(
-                $hozzaadottHozzavalo,
+            $this->hozzavalokPerKategoria[$hozzavalo->getKategoria()] = $hozzaadottHozzavalo->withMennyiseg(
                 $hozzaadottHozzavalo->getMennyiseg() + $hozzavalo->getMennyiseg()
             );
         }
@@ -86,7 +84,7 @@ class HozzavaloSor
 
     private function convertToPreference(Hozzavalo $hozzavalo): Hozzavalo
     {
-        $newMertekegyseg = Hozzavalo::MERTEKEGYSEG_PREFERENCE[$hozzavalo->getNev()] ?? $hozzavalo->getMertekegyseg();
+        $newMertekegyseg = $hozzavalo::mertekegysegPreference() ?? Hozzavalo::MERTEKEGYSEG_PREFERENCE[$hozzavalo->getNev()] ?? $hozzavalo->getMertekegyseg();
 
         if ($newMertekegyseg === $hozzavalo->getMertekegyseg()) {
             return $hozzavalo;
@@ -94,10 +92,12 @@ class HozzavaloSor
 
         $newMennyiseg = $this->mertekegysegAtvalto->valt(
             $hozzavalo,
-            Hozzavalo::fromHozzavaloWithMertekegyseg($hozzavalo, $newMertekegyseg)
+            $hozzavalo->withMertekegyseg($newMertekegyseg)
         );
 
-        return Hozzavalo::fromHozzavalo($hozzavalo, $newMennyiseg, $newMertekegyseg);
+        return $hozzavalo
+            ->withMennyiseg($newMennyiseg)
+            ->withMertekegyseg($newMertekegyseg);
     }
 
     /**

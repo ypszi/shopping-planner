@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace PeterPecosz\Kajatervezo\Etel;
 
 use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
-use PeterPecosz\Kajatervezo\Hozzavalo\Krumpli;
-use PeterPecosz\Kajatervezo\Hozzavalo\Porehagyma;
-use PeterPecosz\Kajatervezo\Hozzavalo\Zellerszar;
+use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Krumpli;
+use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Porehagyma;
+use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Zellerszar;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class PorehagymaLeves extends Etel

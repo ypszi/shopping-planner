@@ -28,23 +28,8 @@ class EtelFactoryTest extends TestCase
     }
 
     #[Test]
-    public function testCreateWithAdag(): void
+    public function testListAvailableEtelek(): void
     {
-        $this->assertEquals(new ChilisBab(adag: 8), EtelFactory::createWithAdag(name: ChilisBab::name(), adag: 8));
-    }
-
-    #[Test]
-    public function testCreateWithAdagFailsWhenEtelIsUnknown(): void
-    {
-        $this->expectException(UnknownEtelException::class);
-        $this->expectExceptionMessage('Unknown etel found: "unknown food"');
-
-        EtelFactory::createWithAdag(name: 'unknown food', adag: 2);
-    }
-
-    #[Test]
-    public function testEtelMap(): void
-    {
-        $this->assertCount(15, EtelFactory::etelMap());
+        $this->assertCount(15, EtelFactory::listAvailableEtelek());
     }
 }

@@ -9,29 +9,6 @@ use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class Hozzavalo
 {
-    /* FUSZER_ES_OLAJ */
-    final public const string BABERLEVEL = 'Babérlevél';
-    final public const string BAZSALIKOM = 'Bazsalikom';
-    final public const string BORS = 'Bors';
-    final public const string CAYENNE_BORS = 'Cayenne bors';
-    final public const string CHILI = 'Chili';
-    final public const string EROLEVES_KOCKA = 'Erőleves kocka';
-    final public const string FEKETE_BORS = 'Bors';
-    final public const string FUSZERKEVEREK = 'Fűszerkeverék';
-    final public const string FUSZERKOMENY = 'Fűszerkömény';
-    final public const string FUSZER_PAPRIKA = 'Piros paprika';
-    final public const string GULYAS_KREM = 'Gulyás krém';
-    final public const string GYOMBER_POR = 'Gyömbér por';
-    final public const string KAKUKKFU = 'Kakukkfű';
-    final public const string NAPRAFORGO_OLAJ = 'Napraforgó olaj';
-    final public const string OLIVA_OLAJ = 'Olíva olaj';
-    final public const string OREGANO = 'Oregánó';
-    final public const string PETREZSELYEM = 'Petrezselyem';
-    final public const string PIROS_PAPRIKA = 'Piros paprika';
-    final public const string SO = 'Só';
-    final public const string SZERECSENDIO = 'Szerecsendió';
-    final public const string TARKONY = 'Tárkony';
-    final public const string ZOLDFUSZER = 'Zöldfűszer';
     /* HOSSZU_SOROK */
     final public const string BARACK_LEKVAR = 'Baracklekvár';
     final public const string BULGUR = 'Bulgur';
@@ -80,37 +57,15 @@ class Hozzavalo
     final public const string VAJ = 'Vaj';
     /** @var array<string, string> */
     final public const array MERTEKEGYSEG_PREFERENCE = [
-        self::CSIRKEMELL      => Mertekegyseg::KG,
-        self::CUKOR           => Mertekegyseg::KG,
-        self::DARALT_HUS      => Mertekegyseg::KG,
-        self::KUKORICA        => Mertekegyseg::G,
-        self::LISZT           => Mertekegyseg::KG,
-        self::NAPRAFORGO_OLAJ => Mertekegyseg::DL,
-        self::OLIVA_OLAJ      => Mertekegyseg::DL,
-        self::RIZS            => Mertekegyseg::KG,
-        self::VOROSBAB        => Mertekegyseg::G,
+        self::CSIRKEMELL => Mertekegyseg::KG,
+        self::CUKOR      => Mertekegyseg::KG,
+        self::DARALT_HUS => Mertekegyseg::KG,
+        self::KUKORICA   => Mertekegyseg::G,
+        self::LISZT      => Mertekegyseg::KG,
+        self::RIZS       => Mertekegyseg::KG,
+        self::VOROSBAB   => Mertekegyseg::G,
     ];
     private const array HOZZAVALO_KATEGORIA = [
-        self::BABERLEVEL          => HozzavaloKategoria::FUSZER_ES_OLAJ,
-        self::BAZSALIKOM          => HozzavaloKategoria::FUSZER_ES_OLAJ,
-        self::BORS                => HozzavaloKategoria::FUSZER_ES_OLAJ,
-        self::CAYENNE_BORS        => HozzavaloKategoria::FUSZER_ES_OLAJ,
-        self::CHILI               => HozzavaloKategoria::FUSZER_ES_OLAJ,
-        self::EROLEVES_KOCKA      => HozzavaloKategoria::FUSZER_ES_OLAJ,
-        self::FUSZERKEVEREK       => HozzavaloKategoria::FUSZER_ES_OLAJ,
-        self::FUSZERKOMENY        => HozzavaloKategoria::FUSZER_ES_OLAJ,
-        self::GULYAS_KREM         => HozzavaloKategoria::FUSZER_ES_OLAJ,
-        self::GYOMBER_POR         => HozzavaloKategoria::FUSZER_ES_OLAJ,
-        self::KAKUKKFU            => HozzavaloKategoria::FUSZER_ES_OLAJ,
-        self::NAPRAFORGO_OLAJ     => HozzavaloKategoria::FUSZER_ES_OLAJ,
-        self::OLIVA_OLAJ          => HozzavaloKategoria::FUSZER_ES_OLAJ,
-        self::OREGANO             => HozzavaloKategoria::FUSZER_ES_OLAJ,
-        self::PETREZSELYEM        => HozzavaloKategoria::FUSZER_ES_OLAJ,
-        self::PIROS_PAPRIKA       => HozzavaloKategoria::FUSZER_ES_OLAJ,
-        self::SO                  => HozzavaloKategoria::FUSZER_ES_OLAJ,
-        self::SZERECSENDIO        => HozzavaloKategoria::FUSZER_ES_OLAJ,
-        self::TARKONY             => HozzavaloKategoria::FUSZER_ES_OLAJ,
-        self::ZOLDFUSZER          => HozzavaloKategoria::FUSZER_ES_OLAJ,
         self::BARACK_LEKVAR       => HozzavaloKategoria::HOSSZU_SOROK,
         self::BULGUR              => HozzavaloKategoria::HOSSZU_SOROK,
         self::CUKOR               => HozzavaloKategoria::HOSSZU_SOROK,
@@ -176,19 +131,20 @@ class Hozzavalo
         $this->mertekegyseg = $mertekegyseg;
     }
 
-    public static function fromHozzavaloWithMennyiseg(Hozzavalo $hozzavalo, float $mennyiseg): self
+    public function withMennyiseg(float $mennyiseg): self
     {
-        return new self($hozzavalo->getNev(), $mennyiseg, $hozzavalo->getMertekegyseg(), $hozzavalo->getKategoria());
+        $clone            = clone $this;
+        $clone->mennyiseg = $mennyiseg;
+
+        return $clone;
     }
 
-    public static function fromHozzavaloWithMertekegyseg(Hozzavalo $hozzavalo, string $mertekegyseg): self
+    public function withMertekegyseg(string $mertekegyseg): self
     {
-        return new self($hozzavalo->getNev(), $hozzavalo->getMennyiseg(), $mertekegyseg, $hozzavalo->getKategoria());
-    }
+        $clone               = clone $this;
+        $clone->mertekegyseg = $mertekegyseg;
 
-    public static function fromHozzavalo(Hozzavalo $hozzavalo, float $mennyiseg, string $mertekegyseg): self
-    {
-        return new self($hozzavalo->getNev(), $mennyiseg, $mertekegyseg, $hozzavalo->getKategoria());
+        return $clone;
     }
 
     // TODO: make abstract [peter.pecosz]
@@ -201,6 +157,11 @@ class Hozzavalo
     public static function kategoria(): string
     {
         return '';
+    }
+
+    public static function mertekegysegPreference(): ?string
+    {
+        return null;
     }
 
     public function getKategoria(): string

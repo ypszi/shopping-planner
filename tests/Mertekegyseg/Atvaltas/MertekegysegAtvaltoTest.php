@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Tests\Mertekegyseg\Atvaltas;
 
+use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\NapraforgoOlaj;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Exception\UnknownUnitOfMeasureException;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
@@ -52,68 +53,68 @@ class MertekegysegAtvaltoTest extends TestCase
                 4.0,
             ],
             'bogre to ml'  => [
-                new Hozzavalo(Hozzavalo::NAPRAFORGO_OLAJ, 1, Mertekegyseg::BOGRE),
-                new Hozzavalo(Hozzavalo::NAPRAFORGO_OLAJ, 0, Mertekegyseg::ML),
+                new NapraforgoOlaj(1, Mertekegyseg::BOGRE),
+                new NapraforgoOlaj(0, Mertekegyseg::ML),
                 250.0,
             ],
             'cl to dl'  => [
-                new Hozzavalo(Hozzavalo::NAPRAFORGO_OLAJ, 1, Mertekegyseg::CL),
-                new Hozzavalo(Hozzavalo::NAPRAFORGO_OLAJ, 0, Mertekegyseg::DL),
+                new NapraforgoOlaj(1, Mertekegyseg::CL),
+                new NapraforgoOlaj(0, Mertekegyseg::DL),
                 0.1,
             ],
             'cl to l'   => [
-                new Hozzavalo(Hozzavalo::NAPRAFORGO_OLAJ, 1, Mertekegyseg::CL),
-                new Hozzavalo(Hozzavalo::NAPRAFORGO_OLAJ, 0, Mertekegyseg::L),
+                new NapraforgoOlaj(1, Mertekegyseg::CL),
+                new NapraforgoOlaj(0, Mertekegyseg::L),
                 0.01,
             ],
             'cl to ml'  => [
-                new Hozzavalo(Hozzavalo::NAPRAFORGO_OLAJ, 1, Mertekegyseg::CL),
-                new Hozzavalo(Hozzavalo::NAPRAFORGO_OLAJ, 0, Mertekegyseg::ML),
+                new NapraforgoOlaj(1, Mertekegyseg::CL),
+                new NapraforgoOlaj(0, Mertekegyseg::ML),
                 10.0,
             ],
             'csesze to ml'  => [
-                new Hozzavalo(Hozzavalo::NAPRAFORGO_OLAJ, 1, Mertekegyseg::CSESZE),
-                new Hozzavalo(Hozzavalo::NAPRAFORGO_OLAJ, 0, Mertekegyseg::ML),
+                new NapraforgoOlaj(1, Mertekegyseg::CSESZE),
+                new NapraforgoOlaj(0, Mertekegyseg::ML),
                 250.0,
             ],
             'dl to cl'  => [
-                new Hozzavalo(Hozzavalo::NAPRAFORGO_OLAJ, 1, Mertekegyseg::DL),
-                new Hozzavalo(Hozzavalo::NAPRAFORGO_OLAJ, 0, Mertekegyseg::CL),
+                new NapraforgoOlaj(1, Mertekegyseg::DL),
+                new NapraforgoOlaj(0, Mertekegyseg::CL),
                 10.0,
             ],
             'dl to ml'  => [
-                new Hozzavalo(Hozzavalo::NAPRAFORGO_OLAJ, 1, Mertekegyseg::DL),
-                new Hozzavalo(Hozzavalo::NAPRAFORGO_OLAJ, 0, Mertekegyseg::ML),
+                new NapraforgoOlaj(1, Mertekegyseg::DL),
+                new NapraforgoOlaj(0, Mertekegyseg::ML),
                 100.0,
             ],
             'l to cl'   => [
-                new Hozzavalo(Hozzavalo::NAPRAFORGO_OLAJ, 1, Mertekegyseg::L),
-                new Hozzavalo(Hozzavalo::NAPRAFORGO_OLAJ, 0, Mertekegyseg::CL),
+                new NapraforgoOlaj(1, Mertekegyseg::L),
+                new NapraforgoOlaj(0, Mertekegyseg::CL),
                 100.0,
             ],
             'l to dl'   => [
-                new Hozzavalo(Hozzavalo::NAPRAFORGO_OLAJ, 1, Mertekegyseg::L),
-                new Hozzavalo(Hozzavalo::NAPRAFORGO_OLAJ, 0, Mertekegyseg::DL),
+                new NapraforgoOlaj(1, Mertekegyseg::L),
+                new NapraforgoOlaj(0, Mertekegyseg::DL),
                 10.0,
             ],
             'l to ml'   => [
-                new Hozzavalo(Hozzavalo::NAPRAFORGO_OLAJ, 1, Mertekegyseg::L),
-                new Hozzavalo(Hozzavalo::NAPRAFORGO_OLAJ, 0, Mertekegyseg::ML),
+                new NapraforgoOlaj(1, Mertekegyseg::L),
+                new NapraforgoOlaj(0, Mertekegyseg::ML),
                 1000.0,
             ],
             'ml to cl'  => [
-                new Hozzavalo(Hozzavalo::NAPRAFORGO_OLAJ, 1, Mertekegyseg::ML),
-                new Hozzavalo(Hozzavalo::NAPRAFORGO_OLAJ, 0, Mertekegyseg::CL),
+                new NapraforgoOlaj(1, Mertekegyseg::ML),
+                new NapraforgoOlaj(0, Mertekegyseg::CL),
                 0.1,
             ],
             'ml to dl'  => [
-                new Hozzavalo(Hozzavalo::NAPRAFORGO_OLAJ, 1, Mertekegyseg::ML),
-                new Hozzavalo(Hozzavalo::NAPRAFORGO_OLAJ, 0, Mertekegyseg::DL),
+                new NapraforgoOlaj(1, Mertekegyseg::ML),
+                new NapraforgoOlaj(0, Mertekegyseg::DL),
                 0.01,
             ],
             'ml to l'   => [
-                new Hozzavalo(Hozzavalo::NAPRAFORGO_OLAJ, 1, Mertekegyseg::ML),
-                new Hozzavalo(Hozzavalo::NAPRAFORGO_OLAJ, 0, Mertekegyseg::L),
+                new NapraforgoOlaj(1, Mertekegyseg::ML),
+                new NapraforgoOlaj(0, Mertekegyseg::L),
                 0.001,
             ],
             'dkg to g'  => [
@@ -147,58 +148,58 @@ class MertekegysegAtvaltoTest extends TestCase
                 1000.0,
             ],
             'ek to dl'  => [
-                new Hozzavalo(Hozzavalo::NAPRAFORGO_OLAJ, 1, Mertekegyseg::EK),
-                new Hozzavalo(Hozzavalo::NAPRAFORGO_OLAJ, 0, Mertekegyseg::DL),
+                new NapraforgoOlaj(1, Mertekegyseg::EK),
+                new NapraforgoOlaj(0, Mertekegyseg::DL),
                 0.15,
             ],
             'ek to ml'  => [
-                new Hozzavalo(Hozzavalo::NAPRAFORGO_OLAJ, 1, Mertekegyseg::EK),
-                new Hozzavalo(Hozzavalo::NAPRAFORGO_OLAJ, 0, Mertekegyseg::ML),
+                new NapraforgoOlaj(1, Mertekegyseg::EK),
+                new NapraforgoOlaj(0, Mertekegyseg::ML),
                 15.0,
             ],
             'kvk to ml' => [
-                new Hozzavalo(Hozzavalo::NAPRAFORGO_OLAJ, 1, Mertekegyseg::KVK),
-                new Hozzavalo(Hozzavalo::NAPRAFORGO_OLAJ, 0, Mertekegyseg::ML),
+                new NapraforgoOlaj(1, Mertekegyseg::KVK),
+                new NapraforgoOlaj(0, Mertekegyseg::ML),
                 5.0,
             ],
             'kk to ml'  => [
-                new Hozzavalo(Hozzavalo::NAPRAFORGO_OLAJ, 1, Mertekegyseg::KK),
-                new Hozzavalo(Hozzavalo::NAPRAFORGO_OLAJ, 0, Mertekegyseg::ML),
+                new NapraforgoOlaj(1, Mertekegyseg::KK),
+                new NapraforgoOlaj(0, Mertekegyseg::ML),
                 5.0,
             ],
             'ml to ek'  => [
-                new Hozzavalo(Hozzavalo::NAPRAFORGO_OLAJ, 1, Mertekegyseg::ML),
-                new Hozzavalo(Hozzavalo::NAPRAFORGO_OLAJ, 0, Mertekegyseg::EK),
+                new NapraforgoOlaj(1, Mertekegyseg::ML),
+                new NapraforgoOlaj(0, Mertekegyseg::EK),
                 1 / 15.0,
             ],
             'ml to kvk' => [
-                new Hozzavalo(Hozzavalo::NAPRAFORGO_OLAJ, 1, Mertekegyseg::ML),
-                new Hozzavalo(Hozzavalo::NAPRAFORGO_OLAJ, 0, Mertekegyseg::KVK),
+                new NapraforgoOlaj(1, Mertekegyseg::ML),
+                new NapraforgoOlaj(0, Mertekegyseg::KVK),
                 0.2,
             ],
             'ml to kk'  => [
-                new Hozzavalo(Hozzavalo::NAPRAFORGO_OLAJ, 1, Mertekegyseg::ML),
-                new Hozzavalo(Hozzavalo::NAPRAFORGO_OLAJ, 0, Mertekegyseg::KK),
+                new NapraforgoOlaj(1, Mertekegyseg::ML),
+                new NapraforgoOlaj(0, Mertekegyseg::KK),
                 0.2,
             ],
             'ml to mk'  => [
-                new Hozzavalo(Hozzavalo::NAPRAFORGO_OLAJ, 1, Mertekegyseg::ML),
-                new Hozzavalo(Hozzavalo::NAPRAFORGO_OLAJ, 0, Mertekegyseg::MK),
+                new NapraforgoOlaj(1, Mertekegyseg::ML),
+                new NapraforgoOlaj(0, Mertekegyseg::MK),
                 0.5,
             ],
             'ml to tk'  => [
-                new Hozzavalo(Hozzavalo::NAPRAFORGO_OLAJ, 1, Mertekegyseg::ML),
-                new Hozzavalo(Hozzavalo::NAPRAFORGO_OLAJ, 0, Mertekegyseg::TK),
+                new NapraforgoOlaj(1, Mertekegyseg::ML),
+                new NapraforgoOlaj(0, Mertekegyseg::TK),
                 0.2,
             ],
             'mk to ml'  => [
-                new Hozzavalo(Hozzavalo::NAPRAFORGO_OLAJ, 1, Mertekegyseg::MK),
-                new Hozzavalo(Hozzavalo::NAPRAFORGO_OLAJ, 0, Mertekegyseg::ML),
+                new NapraforgoOlaj(1, Mertekegyseg::MK),
+                new NapraforgoOlaj(0, Mertekegyseg::ML),
                 2.0,
             ],
             'tk to ml'  => [
-                new Hozzavalo(Hozzavalo::NAPRAFORGO_OLAJ, 1, Mertekegyseg::TK),
-                new Hozzavalo(Hozzavalo::NAPRAFORGO_OLAJ, 0, Mertekegyseg::ML),
+                new NapraforgoOlaj(1, Mertekegyseg::TK),
+                new NapraforgoOlaj(0, Mertekegyseg::ML),
                 5.0,
             ],
             'liszt bogre to dkg'  => [

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Etel;
 
+use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\NapraforgoOlaj;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
@@ -23,7 +24,7 @@ class BogresSuti extends Etel
             new Hozzavalo(Hozzavalo::KAKAOPOR, 2, Mertekegyseg::EK),
             new Hozzavalo(Hozzavalo::TOJAS, 1, Mertekegyseg::DB),
             new Hozzavalo(Hozzavalo::TEJ, 3, Mertekegyseg::EK),
-            new Hozzavalo(Hozzavalo::NAPRAFORGO_OLAJ, 3, Mertekegyseg::EK),
+            new NapraforgoOlaj(3, Mertekegyseg::EK),
         ];
     }
 
