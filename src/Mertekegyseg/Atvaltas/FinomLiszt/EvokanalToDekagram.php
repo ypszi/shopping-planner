@@ -2,8 +2,9 @@
 
 declare(strict_types=1);
 
-namespace PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Liszt;
+namespace PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\FinomLiszt;
 
+use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Finomliszt;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\MertekegysegValto;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
@@ -12,8 +13,8 @@ class EvokanalToDekagram extends MertekegysegValto
 {
     #[\Override] public function canValt(Hozzavalo $hozzavalo, Hozzavalo $hozzaadottHozzavalo): bool
     {
-        return $hozzavalo->getNev() === Hozzavalo::LISZT
-               && $hozzaadottHozzavalo->getNev() === Hozzavalo::LISZT
+        return $hozzavalo instanceof FinomLiszt
+               && $hozzaadottHozzavalo instanceof Finomliszt
                && $hozzavalo->getMertekegyseg() === Mertekegyseg::EK
                && $hozzaadottHozzavalo->getMertekegyseg() === Mertekegyseg::DKG;
     }

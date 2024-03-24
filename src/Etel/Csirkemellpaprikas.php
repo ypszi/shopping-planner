@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace PeterPecosz\Kajatervezo\Etel;
 
 use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\PirosPaprika;
+use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Feherbor;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Fokhagyma;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Paprika;
@@ -26,7 +27,7 @@ class Csirkemellpaprikas extends Etel
             new Fokhagyma(1, Mertekegyseg::GEREZD),
             new Paradicsom(1, Mertekegyseg::DB),
             new PirosPaprika(1, Mertekegyseg::EK),
-            new Hozzavalo(Hozzavalo::FEHERBOR, 1, Mertekegyseg::DL),
+            new Feherbor(1, Mertekegyseg::DL),
             new Paprika(2, Mertekegyseg::DB),
             new Hozzavalo(Hozzavalo::CSIRKEMELL, 1, Mertekegyseg::KG),
             new Hozzavalo(Hozzavalo::TEJFOL, 1, Mertekegyseg::EK),

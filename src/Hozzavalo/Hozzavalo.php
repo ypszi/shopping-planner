@@ -9,27 +9,6 @@ use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class Hozzavalo
 {
-    /* HOSSZU_SOROK */
-    final public const string BARACK_LEKVAR = 'Baracklekvár';
-    final public const string BULGUR = 'Bulgur';
-    final public const string CUKOR = 'Cukor';
-    final public const string FEHERBOR = 'Fehérbor';
-    final public const string FINOMLISZT = 'Finomliszt';
-    final public const string HUSLEVES_KOCKA = 'Húsleves kocka';
-    final public const string KAKAOPOR = 'Kakaópor';
-    final public const string KEMENYITO = 'Keményítő';
-    final public const string KUKORICA = 'Kukorica';
-    final public const string LISZT = 'Finomliszt';
-    final public const string MEZ = 'Méz';
-    final public const string PARADICSOM_PURE = 'Paradicsom püré';
-    final public const string PENNE_TESZTA = 'Penne tészta';
-    final public const string PORCUKOR = 'Porcukor';
-    final public const string RIZS = 'Rizs';
-    final public const string SUTOPOR = 'Sütőpor';
-    final public const string SZEZAMMAG = 'Szezámmag';
-    final public const string SZOJASZOSZ = 'Szójaszósz';
-    final public const string VANILIAS_CUKOR = 'Vaníliás cukor';
-    final public const string VOROSBAB = 'Vörösbab';
     /* HUS */
     final public const string BACON_KOCKAZOTT = 'Bacon (kockázott)';
     final public const string BACON_SZELETELT = 'Bacon (szeletelt)';
@@ -58,33 +37,9 @@ class Hozzavalo
     /** @var array<string, string> */
     final public const array MERTEKEGYSEG_PREFERENCE = [
         self::CSIRKEMELL => Mertekegyseg::KG,
-        self::CUKOR      => Mertekegyseg::KG,
         self::DARALT_HUS => Mertekegyseg::KG,
-        self::KUKORICA   => Mertekegyseg::G,
-        self::LISZT      => Mertekegyseg::KG,
-        self::RIZS       => Mertekegyseg::KG,
-        self::VOROSBAB   => Mertekegyseg::G,
     ];
     private const array HOZZAVALO_KATEGORIA = [
-        self::BARACK_LEKVAR       => HozzavaloKategoria::HOSSZU_SOROK,
-        self::BULGUR              => HozzavaloKategoria::HOSSZU_SOROK,
-        self::CUKOR               => HozzavaloKategoria::HOSSZU_SOROK,
-        self::FEHERBOR            => HozzavaloKategoria::HOSSZU_SOROK,
-        self::HUSLEVES_KOCKA      => HozzavaloKategoria::HOSSZU_SOROK,
-        self::KAKAOPOR            => HozzavaloKategoria::HOSSZU_SOROK,
-        self::KEMENYITO           => HozzavaloKategoria::HOSSZU_SOROK,
-        self::KUKORICA            => HozzavaloKategoria::HOSSZU_SOROK,
-        self::LISZT               => HozzavaloKategoria::HOSSZU_SOROK,
-        self::MEZ                 => HozzavaloKategoria::HOSSZU_SOROK,
-        self::PARADICSOM_PURE     => HozzavaloKategoria::HOSSZU_SOROK,
-        self::PENNE_TESZTA        => HozzavaloKategoria::HOSSZU_SOROK,
-        self::PORCUKOR            => HozzavaloKategoria::HOSSZU_SOROK,
-        self::RIZS                => HozzavaloKategoria::HOSSZU_SOROK,
-        self::SUTOPOR             => HozzavaloKategoria::HOSSZU_SOROK,
-        self::SZEZAMMAG           => HozzavaloKategoria::HOSSZU_SOROK,
-        self::SZOJASZOSZ          => HozzavaloKategoria::HOSSZU_SOROK,
-        self::VANILIAS_CUKOR      => HozzavaloKategoria::HOSSZU_SOROK,
-        self::VOROSBAB            => HozzavaloKategoria::HOSSZU_SOROK,
         self::BACON_KOCKAZOTT     => HozzavaloKategoria::HUS,
         self::BACON_SZELETELT     => HozzavaloKategoria::HUS,
         self::DARALT_HUS          => HozzavaloKategoria::HUS,

@@ -7,6 +7,9 @@ namespace PeterPecosz\Kajatervezo\Etel;
 use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\Chili;
 use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\NapraforgoOlaj;
 use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\PirosPaprika;
+use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Kukorica;
+use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\ParadicsomPure;
+use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Vorosbab;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Fokhagyma;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Voroshagyma;
@@ -27,10 +30,10 @@ class ChilisBab extends Etel
             new Fokhagyma(4, Mertekegyseg::GEREZD),
             new PirosPaprika(1, Mertekegyseg::TK),
             new Hozzavalo(Hozzavalo::DARALT_HUS, 50, Mertekegyseg::DKG),
-            new Hozzavalo(Hozzavalo::PARADICSOM_PURE, 10, Mertekegyseg::DKG),
+            new ParadicsomPure(10, Mertekegyseg::DKG),
             new Chili(1, Mertekegyseg::TK),
-            new Hozzavalo(Hozzavalo::VOROSBAB, 2, Mertekegyseg::KONZERV),
-            new Hozzavalo(Hozzavalo::KUKORICA, 1, Mertekegyseg::KONZERV),
+            new Vorosbab(2, Mertekegyseg::KONZERV),
+            new Kukorica(1, Mertekegyseg::KONZERV),
         ];
     }
 

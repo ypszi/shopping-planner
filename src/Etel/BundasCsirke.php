@@ -11,6 +11,9 @@ use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\NapraforgoOlaj;
 use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\OlivaOlaj;
 use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\Szerecsendio;
 use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\Zoldfuszer;
+use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Finomliszt;
+use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Mez;
+use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Szojaszosz;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Fokhagyma;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
@@ -33,9 +36,9 @@ class BundasCsirke extends Etel
             new Zoldfuszer(1, Mertekegyseg::TK),
             new CayenneBors(0.5, Mertekegyseg::TK),
             new OlivaOlaj(2, Mertekegyseg::EK),
-            new Hozzavalo(Hozzavalo::FINOMLISZT, 1, Mertekegyseg::BOGRE),
-            new Hozzavalo(Hozzavalo::MEZ, 50, Mertekegyseg::ML),
-            new Hozzavalo(Hozzavalo::SZOJASZOSZ, 50, Mertekegyseg::ML),
+            new Finomliszt(1, Mertekegyseg::BOGRE),
+            new Mez(50, Mertekegyseg::ML),
+            new Szojaszosz(50, Mertekegyseg::ML),
             new Hozzavalo(Hozzavalo::CSIRKEMELL, 4, Mertekegyseg::DB),
             new Hozzavalo(Hozzavalo::TOJAS, 3, Mertekegyseg::DB),
         ];

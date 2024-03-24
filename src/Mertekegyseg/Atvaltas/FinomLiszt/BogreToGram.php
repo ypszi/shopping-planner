@@ -2,25 +2,25 @@
 
 declare(strict_types=1);
 
-namespace PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Vorosbab;
+namespace PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\FinomLiszt;
 
-use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Vorosbab;
+use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Finomliszt;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\MertekegysegValto;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
-class KonzervToGram extends MertekegysegValto
+class BogreToGram extends MertekegysegValto
 {
     #[\Override] public function canValt(Hozzavalo $hozzavalo, Hozzavalo $hozzaadottHozzavalo): bool
     {
-        return $hozzavalo instanceof Vorosbab
-               && $hozzaadottHozzavalo instanceof Vorosbab
-               && $hozzavalo->getMertekegyseg() === Mertekegyseg::KONZERV
+        return $hozzavalo instanceof Finomliszt
+               && $hozzaadottHozzavalo instanceof FinomLiszt
+               && $hozzavalo->getMertekegyseg() === Mertekegyseg::BOGRE
                && $hozzaadottHozzavalo->getMertekegyseg() === Mertekegyseg::G;
     }
 
     #[\Override] protected function getMultiplier(): float
     {
-        return 250.0;
+        return 150.0;
     }
 }

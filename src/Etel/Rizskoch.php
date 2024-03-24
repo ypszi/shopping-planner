@@ -4,6 +4,11 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Etel;
 
+use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Baracklekvar;
+use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Cukor;
+use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Porcukor;
+use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Rizs;
+use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\VaniliasCukor;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Citrom;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
@@ -19,13 +24,13 @@ class Rizskoch extends Etel
     {
         return [
             new Citrom(0.5, Mertekegyseg::DB),
-            new Hozzavalo(Hozzavalo::RIZS, 250, Mertekegyseg::G),
-            new Hozzavalo(Hozzavalo::VANILIAS_CUKOR, 250, Mertekegyseg::G),
-            new Hozzavalo(Hozzavalo::CUKOR, 130, Mertekegyseg::G),
+            new Rizs(250, Mertekegyseg::G),
+            new VaniliasCukor(250, Mertekegyseg::G),
+            new Cukor(130, Mertekegyseg::G),
             // porcukor ízlés szerint
-            new Hozzavalo(Hozzavalo::PORCUKOR, 100, Mertekegyseg::G),
+            new Porcukor(100, Mertekegyseg::G),
             // baracklekvár ízlés szerint
-            new Hozzavalo(Hozzavalo::BARACK_LEKVAR, 150, Mertekegyseg::G),
+            new Baracklekvar(150, Mertekegyseg::G),
             new Hozzavalo(Hozzavalo::TOJAS, 5, Mertekegyseg::DB),
             new Hozzavalo(Hozzavalo::TEJ, 8, Mertekegyseg::DL),
         ];

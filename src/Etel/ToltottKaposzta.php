@@ -7,6 +7,8 @@ namespace PeterPecosz\Kajatervezo\Etel;
 use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\Baberlevel;
 use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\Fuszerkomeny;
 use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\FuszerPaprika;
+use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Finomliszt;
+use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Rizs;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Fokhagyma;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Kaposzta;
@@ -31,8 +33,8 @@ class ToltottKaposzta extends Etel
             new FuszerPaprika(3, Mertekegyseg::TK),
             new Fuszerkomeny(1, Mertekegyseg::TK),
             new Baberlevel(5, Mertekegyseg::DB),
-            new Hozzavalo(Hozzavalo::RIZS, 20, Mertekegyseg::DKG),
-            new Hozzavalo(Hozzavalo::FINOMLISZT, 1, Mertekegyseg::EK),
+            new Rizs(20, Mertekegyseg::DKG),
+            new Finomliszt(1, Mertekegyseg::EK),
             new Hozzavalo(Hozzavalo::DARALT_HUS, 50, Mertekegyseg::DKG),
             new Hozzavalo(Hozzavalo::KOLOZSVARI_SZALONNA, 20, Mertekegyseg::DKG),
             new Hozzavalo(Hozzavalo::KOLBASZ, 20, Mertekegyseg::DKG),

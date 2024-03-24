@@ -7,7 +7,8 @@ namespace PeterPecosz\Kajatervezo\Etel;
 use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\Bors;
 use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\OlivaOlaj;
 use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\So;
-use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
+use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Bulgur as NyersBulgur;
+use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\HuslevesKocka;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Paprika;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Paradicsom;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Voroshagyma;
@@ -23,12 +24,12 @@ class Bulgur extends Etel
     #[\Override] protected static function listHozzavalok(): array
     {
         return [
-            new Hozzavalo(Hozzavalo::BULGUR, 30, Mertekegyseg::DKG),
+            new NyersBulgur(30, Mertekegyseg::DKG),
             new Voroshagyma(1, Mertekegyseg::DB),
             new Paradicsom(2, Mertekegyseg::DB),
             new Paprika(1, Mertekegyseg::DB),
             new OlivaOlaj(2, Mertekegyseg::EK),
-            new Hozzavalo(Hozzavalo::HUSLEVES_KOCKA, 1, Mertekegyseg::DB),
+            new HuslevesKocka(1, Mertekegyseg::DB),
             new So(0.5, Mertekegyseg::TK),
             new Bors(1, Mertekegyseg::CSIPET),
         ];
