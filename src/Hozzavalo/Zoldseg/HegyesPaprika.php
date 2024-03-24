@@ -8,11 +8,6 @@ use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class HegyesPaprika extends Zoldseg
 {
-    public function __construct(float $mennyiseg, string $mertekegyseg = Mertekegyseg::KG)
-    {
-        parent::__construct(static::name(), $mennyiseg, $mertekegyseg);
-    }
-
     #[\Override] public static function name(): string
     {
         return 'Hegyes paprika';

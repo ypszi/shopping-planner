@@ -8,11 +8,6 @@ use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class FetaSajt extends Hutos
 {
-    public function __construct(float $mennyiseg, string $mertekegyseg = Mertekegyseg::DKG)
-    {
-        parent::__construct(static::name(), $mennyiseg, $mertekegyseg);
-    }
-
     #[\Override] public static function name(): string
     {
         return 'Feta sajt';

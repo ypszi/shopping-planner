@@ -15,12 +15,7 @@ class HozzavaloTest extends TestCase
 
     protected function setUp(): void
     {
-        $this->testHozzavalo = new class(mennyiseg: 50) extends Hozzavalo {
-            public function __construct(float $mennyiseg, string $mertekegyseg = Mertekegyseg::DB)
-            {
-                parent::__construct(static::name(), $mennyiseg, $mertekegyseg);
-            }
-
+        $this->testHozzavalo = new class(mennyiseg: 50, mertekegyseg: Mertekegyseg::DB) extends Hozzavalo {
             #[\Override] public static function name(): string
             {
                 return 'Teszt Hozzavalo';

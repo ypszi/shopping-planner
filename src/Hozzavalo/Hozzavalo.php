@@ -6,15 +6,12 @@ namespace PeterPecosz\Kajatervezo\Hozzavalo;
 
 abstract class Hozzavalo
 {
-    private string $nev;
-
     private float $mennyiseg;
 
     private string $mertekegyseg;
 
-    public function __construct(string $name, float $mennyiseg, string $mertekegyseg)
+    public function __construct(float $mennyiseg, string $mertekegyseg)
     {
-        $this->nev          = $name;
         $this->mennyiseg    = $mennyiseg;
         $this->mertekegyseg = $mertekegyseg;
     }
@@ -44,11 +41,6 @@ abstract class Hozzavalo
         return null;
     }
 
-    public function getNev(): string
-    {
-        return $this->nev;
-    }
-
     public function getMennyiseg(): float
     {
         return $this->mennyiseg;
@@ -61,6 +53,6 @@ abstract class Hozzavalo
 
     public function __toString(): string
     {
-        return sprintf('%.2f %s %s', $this->mennyiseg, $this->mertekegyseg, $this->nev);
+        return sprintf('%.2f %s %s', $this->mennyiseg, $this->mertekegyseg, static::name());
     }
 }

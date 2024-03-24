@@ -8,11 +8,6 @@ use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class Jegsalata extends Zoldseg
 {
-    public function __construct(float $mennyiseg, string $mertekegyseg = Mertekegyseg::DB)
-    {
-        parent::__construct(static::name(), $mennyiseg, $mertekegyseg);
-    }
-
     #[\Override] public static function name(): string
     {
         return 'Jégsaláta';

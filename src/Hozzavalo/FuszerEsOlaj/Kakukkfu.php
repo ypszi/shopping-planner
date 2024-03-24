@@ -8,11 +8,6 @@ use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class Kakukkfu extends FuszerEsOlaj
 {
-    public function __construct(float $mennyiseg, string $mertekegyseg = Mertekegyseg::TK)
-    {
-        parent::__construct(static::name(), $mennyiseg, $mertekegyseg);
-    }
-
     #[\Override] public static function name(): string
     {
         return 'Kakukkfű';
