@@ -6,9 +6,9 @@ namespace PeterPecosz\Kajatervezo\Tests\Etel;
 
 use PeterPecosz\Kajatervezo\Etel\Etel;
 use PeterPecosz\Kajatervezo\Etel\Etelek;
-use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
 use PeterPecosz\Kajatervezo\Hozzavalo\HozzavaloSor;
 use PeterPecosz\Kajatervezo\Hozzavalo\HozzavaloSorok;
+use PeterPecosz\Kajatervezo\Hozzavalo\Hutos\Tojas;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
@@ -28,7 +28,7 @@ class EtelekTest extends TestCase
             #[\Override] protected static function listHozzavalok(): array
             {
                 return [
-                    new Hozzavalo(Hozzavalo::TOJAS, 1, Mertekegyseg::DB),
+                    new Tojas(1, Mertekegyseg::DB),
                 ];
             }
 
@@ -60,7 +60,7 @@ class EtelekTest extends TestCase
 
         $hozzavaloSorok = $sut->createHozzavaloSorok();
 
-        $this->assertEquals(new HozzavaloSorok([new HozzavaloSor([new Hozzavalo(Hozzavalo::TOJAS, 1, Mertekegyseg::DB)])]), $hozzavaloSorok);
+        $this->assertEquals(new HozzavaloSorok([new HozzavaloSor([new Tojas(1, Mertekegyseg::DB)])]), $hozzavaloSorok);
     }
 
     #[Test]

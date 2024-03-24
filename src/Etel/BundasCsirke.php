@@ -14,8 +14,8 @@ use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\Zoldfuszer;
 use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Finomliszt;
 use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Mez;
 use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Szojaszosz;
-use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hus\Csirkemell;
+use PeterPecosz\Kajatervezo\Hozzavalo\Hutos\Tojas;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Fokhagyma;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
@@ -41,7 +41,7 @@ class BundasCsirke extends Etel
             new Mez(50, Mertekegyseg::ML),
             new Szojaszosz(50, Mertekegyseg::ML),
             new Csirkemell(4, Mertekegyseg::DB),
-            new Hozzavalo(Hozzavalo::TOJAS, 3, Mertekegyseg::DB),
+            new Tojas(3, Mertekegyseg::DB),
         ];
     }
 

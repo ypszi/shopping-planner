@@ -7,9 +7,9 @@ namespace PeterPecosz\Kajatervezo\Etel;
 use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\Bazsalikom;
 use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\OlivaOlaj;
 use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\So;
-use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hus\BaconSzeletelt;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hus\Csirkemell;
+use PeterPecosz\Kajatervezo\Hozzavalo\Hutos\MozzarellaSajt;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class BaconbeGongyoltMozzarellasCsirkemell extends Etel
@@ -23,7 +23,7 @@ class BaconbeGongyoltMozzarellasCsirkemell extends Etel
     {
         return [
             new Csirkemell(50, Mertekegyseg::DKG),
-            new Hozzavalo(Hozzavalo::MOZZARELLA_SAJT, 20, Mertekegyseg::DKG),
+            new MozzarellaSajt(20, Mertekegyseg::DKG),
             new BaconSzeletelt(20, Mertekegyseg::DKG),
             new So(1, Mertekegyseg::TK),
             new Bazsalikom(1, Mertekegyseg::TK),

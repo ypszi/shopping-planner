@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace PeterPecosz\Kajatervezo\Tests\Etel;
 
 use PeterPecosz\Kajatervezo\Etel\Etel;
-use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
+use PeterPecosz\Kajatervezo\Hozzavalo\Hutos\Tojas;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
@@ -25,7 +25,7 @@ class EtelTest extends TestCase
             #[\Override] protected static function listHozzavalok(): array
             {
                 return [
-                    new Hozzavalo(Hozzavalo::TOJAS, 1, Mertekegyseg::DB),
+                    new Tojas(1, Mertekegyseg::DB),
                 ];
             }
 
@@ -64,7 +64,7 @@ class EtelTest extends TestCase
     {
         $this->assertEquals(
             [
-                new Hozzavalo(Hozzavalo::TOJAS, 1, Mertekegyseg::DB),
+                new Tojas(1, Mertekegyseg::DB),
             ],
             $this->testFood->getHozzavalok()
         );

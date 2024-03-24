@@ -10,6 +10,7 @@ use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Porcukor;
 use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Rizs;
 use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\VaniliasCukor;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
+use PeterPecosz\Kajatervezo\Hozzavalo\Hutos\Tojas;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Citrom;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
@@ -31,7 +32,7 @@ class Rizskoch extends Etel
             new Porcukor(100, Mertekegyseg::G),
             // baracklekvár ízlés szerint
             new Baracklekvar(150, Mertekegyseg::G),
-            new Hozzavalo(Hozzavalo::TOJAS, 5, Mertekegyseg::DB),
+            new Tojas(5, Mertekegyseg::DB),
             new Hozzavalo(Hozzavalo::TEJ, 8, Mertekegyseg::DL),
         ];
     }

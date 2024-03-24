@@ -10,6 +10,7 @@ use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Kakaopor;
 use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Porcukor;
 use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Sutopor;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
+use PeterPecosz\Kajatervezo\Hozzavalo\Hutos\Tojas;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class BogresSuti extends Etel
@@ -26,7 +27,7 @@ class BogresSuti extends Etel
             new Sutopor(1, Mertekegyseg::KK),
             new Porcukor(4, Mertekegyseg::EK),
             new Kakaopor(2, Mertekegyseg::EK),
-            new Hozzavalo(Hozzavalo::TOJAS, 1, Mertekegyseg::DB),
+            new Tojas(1, Mertekegyseg::DB),
             new Hozzavalo(Hozzavalo::TEJ, 3, Mertekegyseg::EK),
             new NapraforgoOlaj(3, Mertekegyseg::EK),
         ];

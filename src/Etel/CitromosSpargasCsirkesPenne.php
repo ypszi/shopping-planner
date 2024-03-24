@@ -9,6 +9,7 @@ use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Feherbor;
 use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\PenneTeszta;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hus\Csirkemell;
+use PeterPecosz\Kajatervezo\Hozzavalo\Hutos\ParmezanSajt;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Citrom;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Fokhagyma;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Voroshagyma;
@@ -31,7 +32,7 @@ class CitromosSpargasCsirkesPenne extends Etel
             new Feherbor(1, Mertekegyseg::DL),
             new PenneTeszta(50, Mertekegyseg::DKG),
             new Csirkemell(50, Mertekegyseg::DKG),
-            new Hozzavalo(Hozzavalo::PARMEZAN, 10, Mertekegyseg::G),
+            new ParmezanSajt(10, Mertekegyseg::G),
             new Hozzavalo(Hozzavalo::TEJSZIN, 4, Mertekegyseg::DL),
         ];
     }

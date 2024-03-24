@@ -6,8 +6,9 @@ namespace PeterPecosz\Kajatervezo\Etel;
 
 use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\OlivaOlaj;
 use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\Oregano;
-use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hus\Csirkemell;
+use PeterPecosz\Kajatervezo\Hozzavalo\Hutos\FetaSajt;
+use PeterPecosz\Kajatervezo\Hozzavalo\Hutos\NaturJoghurt;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Citrom;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Jegsalata;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Kigyouborka;
@@ -34,8 +35,8 @@ class CitromosJoghurtosCsirkemell extends Etel
             // oregano ízlés szerint
             new Oregano(1, Mertekegyseg::TK),
             new Csirkemell(50, Mertekegyseg::DKG),
-            new Hozzavalo(Hozzavalo::NATUR_JOGHURT, 37.5, Mertekegyseg::DKG),
-            new Hozzavalo(Hozzavalo::FETA_SAJT, 20, Mertekegyseg::DKG),
+            new NaturJoghurt(37.5, Mertekegyseg::DKG),
+            new FetaSajt(20, Mertekegyseg::DKG),
         ];
     }
 
