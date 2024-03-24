@@ -9,7 +9,7 @@ use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\GulyasKrem;
 use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\OlivaOlaj;
 use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\PirosPaprika;
 use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\So;
-use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
+use PeterPecosz\Kajatervezo\Hozzavalo\Hus\Sertescomb;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Fokhagyma;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\HegyesPaprika;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Paprika;
@@ -27,7 +27,7 @@ class Porkolt extends Etel
     #[\Override] protected static function listHozzavalok(): array
     {
         return [
-            new Hozzavalo(Hozzavalo::SERTESCOMB, 1, Mertekegyseg::KG),
+            new Sertescomb(1, Mertekegyseg::KG),
             new Voroshagyma(4, Mertekegyseg::DB),
             new Fokhagyma(4, Mertekegyseg::GEREZD),
             new Paradicsom(2, Mertekegyseg::DB),

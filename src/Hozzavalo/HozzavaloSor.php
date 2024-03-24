@@ -84,7 +84,7 @@ class HozzavaloSor
 
     private function convertToPreference(Hozzavalo $hozzavalo): Hozzavalo
     {
-        $newMertekegyseg = $hozzavalo::mertekegysegPreference() ?? Hozzavalo::MERTEKEGYSEG_PREFERENCE[$hozzavalo->getNev()] ?? $hozzavalo->getMertekegyseg();
+        $newMertekegyseg = $hozzavalo::mertekegysegPreference() ?? $hozzavalo->getMertekegyseg();
 
         if ($newMertekegyseg === $hozzavalo->getMertekegyseg()) {
             return $hozzavalo;

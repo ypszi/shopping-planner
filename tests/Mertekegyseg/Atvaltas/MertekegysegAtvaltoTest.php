@@ -11,6 +11,7 @@ use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Liszt;
 use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Porcukor;
 use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Vorosbab;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
+use PeterPecosz\Kajatervezo\Hozzavalo\Hus\Csirkemell;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Exception\UnknownUnitOfMeasureException;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 use PeterPecosz\Kajatervezo\Mertekegyseg\MertekegysegAtvalto;
@@ -38,23 +39,23 @@ class MertekegysegAtvaltoTest extends TestCase
     {
         return [
             'csirkemell db to dkg'       => [
-                new Hozzavalo(Hozzavalo::CSIRKEMELL, 1, Mertekegyseg::DB),
-                new Hozzavalo(Hozzavalo::CSIRKEMELL, 0, Mertekegyseg::DKG),
+                new Csirkemell(1, Mertekegyseg::DB),
+                new Csirkemell(0, Mertekegyseg::DKG),
                 25.0,
             ],
             'csirkemell db to kg'        => [
-                new Hozzavalo(Hozzavalo::CSIRKEMELL, 1, Mertekegyseg::DB),
-                new Hozzavalo(Hozzavalo::CSIRKEMELL, 0, Mertekegyseg::KG),
+                new Csirkemell(1, Mertekegyseg::DB),
+                new Csirkemell(0, Mertekegyseg::KG),
                 0.25,
             ],
             'csirkemell dkg to db'       => [
-                new Hozzavalo(Hozzavalo::CSIRKEMELL, 25, Mertekegyseg::DKG),
-                new Hozzavalo(Hozzavalo::CSIRKEMELL, 0, Mertekegyseg::DB),
+                new Csirkemell(25, Mertekegyseg::DKG),
+                new Csirkemell(0, Mertekegyseg::DB),
                 1.0,
             ],
             'csirkemell kg to db'        => [
-                new Hozzavalo(Hozzavalo::CSIRKEMELL, 1, Mertekegyseg::KG),
-                new Hozzavalo(Hozzavalo::CSIRKEMELL, 0, Mertekegyseg::DB),
+                new Csirkemell(1, Mertekegyseg::KG),
+                new Csirkemell(0, Mertekegyseg::DB),
                 4.0,
             ],
             'bogre to ml'                => [
@@ -123,33 +124,33 @@ class MertekegysegAtvaltoTest extends TestCase
                 0.001,
             ],
             'dkg to g'                   => [
-                new Hozzavalo(Hozzavalo::CSIRKEMELL, 1, Mertekegyseg::DKG),
-                new Hozzavalo(Hozzavalo::CSIRKEMELL, 0, Mertekegyseg::G),
+                new Csirkemell(1, Mertekegyseg::DKG),
+                new Csirkemell(0, Mertekegyseg::G),
                 10.0,
             ],
             'dkg to kg'                  => [
-                new Hozzavalo(Hozzavalo::CSIRKEMELL, 1, Mertekegyseg::DKG),
-                new Hozzavalo(Hozzavalo::CSIRKEMELL, 0, Mertekegyseg::KG),
+                new Csirkemell(1, Mertekegyseg::DKG),
+                new Csirkemell(0, Mertekegyseg::KG),
                 0.01,
             ],
             'g to dkg'                   => [
-                new Hozzavalo(Hozzavalo::CSIRKEMELL, 1, Mertekegyseg::G),
-                new Hozzavalo(Hozzavalo::CSIRKEMELL, 0, Mertekegyseg::DKG),
+                new Csirkemell(1, Mertekegyseg::G),
+                new Csirkemell(0, Mertekegyseg::DKG),
                 0.1,
             ],
             'g to kg'                    => [
-                new Hozzavalo(Hozzavalo::CSIRKEMELL, 1, Mertekegyseg::G),
-                new Hozzavalo(Hozzavalo::CSIRKEMELL, 0, Mertekegyseg::KG),
+                new Csirkemell(1, Mertekegyseg::G),
+                new Csirkemell(0, Mertekegyseg::KG),
                 0.001,
             ],
             'kg to dkg'                  => [
-                new Hozzavalo(Hozzavalo::CSIRKEMELL, 1, Mertekegyseg::KG),
-                new Hozzavalo(Hozzavalo::CSIRKEMELL, 0, Mertekegyseg::DKG),
+                new Csirkemell(1, Mertekegyseg::KG),
+                new Csirkemell(0, Mertekegyseg::DKG),
                 100.0,
             ],
             'kg to g'                    => [
-                new Hozzavalo(Hozzavalo::CSIRKEMELL, 1, Mertekegyseg::KG),
-                new Hozzavalo(Hozzavalo::CSIRKEMELL, 0, Mertekegyseg::G),
+                new Csirkemell(1, Mertekegyseg::KG),
+                new Csirkemell(0, Mertekegyseg::G),
                 1000.0,
             ],
             'ek to dl'                   => [
@@ -298,8 +299,8 @@ class MertekegysegAtvaltoTest extends TestCase
     #[Test]
     public function testNemValt(): void
     {
-        $hozzavalo           = new Hozzavalo(Hozzavalo::CSIRKEMELL, 10, 'from');
-        $hozzaadottHozzavalo = new Hozzavalo(Hozzavalo::CSIRKEMELL, 10, 'to');
+        $hozzavalo           = new Csirkemell(10, 'from');
+        $hozzaadottHozzavalo = new Csirkemell(10, 'to');
 
         $this->expectException(UnknownUnitOfMeasureException::class);
         $this->expectExceptionMessage(sprintf('Cannot convert %s to %s', $hozzavalo, $hozzaadottHozzavalo));

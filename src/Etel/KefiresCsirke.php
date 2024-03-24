@@ -10,6 +10,7 @@ use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\PirosPaprika;
 use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Liszt;
 use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Sutopor;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
+use PeterPecosz\Kajatervezo\Hozzavalo\Hus\Csirkemell;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class KefiresCsirke extends Etel
@@ -27,7 +28,7 @@ class KefiresCsirke extends Etel
             new NapraforgoOlaj(4, Mertekegyseg::DL),
             new Liszt(25, Mertekegyseg::DKG),
             new Sutopor(1, Mertekegyseg::EK),
-            new Hozzavalo(Hozzavalo::CSIRKEMELL, 50, Mertekegyseg::DKG),
+            new Csirkemell(50, Mertekegyseg::DKG),
             new Hozzavalo(Hozzavalo::KEFIR, 3, Mertekegyseg::DL),
         ];
     }

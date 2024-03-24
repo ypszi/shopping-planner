@@ -9,7 +9,10 @@ use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\Fuszerkomeny;
 use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\FuszerPaprika;
 use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Finomliszt;
 use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Rizs;
-use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
+use PeterPecosz\Kajatervezo\Hozzavalo\Hus\DaraltHus;
+use PeterPecosz\Kajatervezo\Hozzavalo\Hus\Kolbasz;
+use PeterPecosz\Kajatervezo\Hozzavalo\Hus\KolozsvariSzalonna;
+use PeterPecosz\Kajatervezo\Hozzavalo\Hus\Serteszsir;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Fokhagyma;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Kaposzta;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\SavanyuKaposzta;
@@ -35,10 +38,10 @@ class ToltottKaposzta extends Etel
             new Baberlevel(5, Mertekegyseg::DB),
             new Rizs(20, Mertekegyseg::DKG),
             new Finomliszt(1, Mertekegyseg::EK),
-            new Hozzavalo(Hozzavalo::DARALT_HUS, 50, Mertekegyseg::DKG),
-            new Hozzavalo(Hozzavalo::KOLOZSVARI_SZALONNA, 20, Mertekegyseg::DKG),
-            new Hozzavalo(Hozzavalo::KOLBASZ, 20, Mertekegyseg::DKG),
-            new Hozzavalo(Hozzavalo::SERTES_ZSIR, 1, Mertekegyseg::EK),
+            new DaraltHus(50, Mertekegyseg::DKG),
+            new KolozsvariSzalonna(20, Mertekegyseg::DKG),
+            new Kolbasz(20, Mertekegyseg::DKG),
+            new Serteszsir(1, Mertekegyseg::EK),
         ];
     }
 

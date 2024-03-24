@@ -9,6 +9,7 @@ use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\NapraforgoOlaj;
 use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\Petrezselyem;
 use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\Tarkony;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
+use PeterPecosz\Kajatervezo\Hozzavalo\Hus\Csirkemell;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Citrom;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Feherrepa;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Karalabe;
@@ -33,7 +34,7 @@ class TarkonyosCsirkeraguLeves extends Etel
     #[\Override] protected static function listHozzavalok(): array
     {
         return [
-            new Hozzavalo(Hozzavalo::CSIRKEMELL, 1, Mertekegyseg::DB),
+            new Csirkemell(1, Mertekegyseg::DB),
             new NapraforgoOlaj(3, Mertekegyseg::EK),
             new Sargarepa(3, Mertekegyseg::DB),
             new Feherrepa(2, Mertekegyseg::DB),

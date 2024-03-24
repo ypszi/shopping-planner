@@ -5,20 +5,9 @@ declare(strict_types=1);
 namespace PeterPecosz\Kajatervezo\Hozzavalo;
 
 use PeterPecosz\Kajatervezo\Hozzavalo\Exception\UnknownHozzavaloException;
-use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class Hozzavalo
 {
-    /* HUS */
-    final public const string BACON_KOCKAZOTT = 'Bacon (kockázott)';
-    final public const string BACON_SZELETELT = 'Bacon (szeletelt)';
-    final public const string DARALT_HUS = 'Darált hús';
-    final public const string CSIRKEMELL = 'Csirkemell';
-    final public const string KOLBASZ = 'Kolbász';
-    final public const string KOLOZSVARI_SZALONNA = 'Kolozsvári szalonna';
-    final public const string LAZAC = 'Lazac';
-    final public const string SERTESCOMB = 'Sertéscomb';
-    final public const string SERTES_ZSIR = 'Sertészsír';
     /* HUTOS */
     final public const string FETA_SAJT = 'Feta sajt';
     final public const string MOZZARELLA_SAJT = 'Mozzarella sajt';
@@ -34,33 +23,19 @@ class Hozzavalo
     final public const string TEJ = 'Tej';
     final public const string TEJSZIN = 'Főzőtejszín';
     final public const string VAJ = 'Vaj';
-    /** @var array<string, string> */
-    final public const array MERTEKEGYSEG_PREFERENCE = [
-        self::CSIRKEMELL => Mertekegyseg::KG,
-        self::DARALT_HUS => Mertekegyseg::KG,
-    ];
     private const array HOZZAVALO_KATEGORIA = [
-        self::BACON_KOCKAZOTT     => HozzavaloKategoria::HUS,
-        self::BACON_SZELETELT     => HozzavaloKategoria::HUS,
-        self::DARALT_HUS          => HozzavaloKategoria::HUS,
-        self::CSIRKEMELL          => HozzavaloKategoria::HUS,
-        self::KOLBASZ             => HozzavaloKategoria::HUS,
-        self::KOLOZSVARI_SZALONNA => HozzavaloKategoria::HUS,
-        self::LAZAC               => HozzavaloKategoria::HUS,
-        self::SERTESCOMB          => HozzavaloKategoria::HUS,
-        self::SERTES_ZSIR         => HozzavaloKategoria::HUS,
-        self::FETA_SAJT           => HozzavaloKategoria::HUTOS,
-        self::MOZZARELLA_SAJT     => HozzavaloKategoria::HUTOS,
-        self::NATUR_JOGHURT       => HozzavaloKategoria::HUTOS,
-        self::KEFIR               => HozzavaloKategoria::HUTOS,
-        self::PARMEZAN            => HozzavaloKategoria::HUTOS,
-        self::TEJFOL              => HozzavaloKategoria::HUTOS,
-        self::TOJAS               => HozzavaloKategoria::HUTOS,
-        self::FOZO_TEJSZIN        => HozzavaloKategoria::HUTOS_UTAN,
-        self::HABTEJSZIN          => HozzavaloKategoria::HUTOS_UTAN,
-        self::KETCHUP             => HozzavaloKategoria::HUTOS_UTAN,
-        self::TEJ                 => HozzavaloKategoria::HUTOS_UTAN,
-        self::VAJ                 => HozzavaloKategoria::HUTOS_UTAN,
+        self::FETA_SAJT       => HozzavaloKategoria::HUTOS,
+        self::MOZZARELLA_SAJT => HozzavaloKategoria::HUTOS,
+        self::NATUR_JOGHURT   => HozzavaloKategoria::HUTOS,
+        self::KEFIR           => HozzavaloKategoria::HUTOS,
+        self::PARMEZAN        => HozzavaloKategoria::HUTOS,
+        self::TEJFOL          => HozzavaloKategoria::HUTOS,
+        self::TOJAS           => HozzavaloKategoria::HUTOS,
+        self::FOZO_TEJSZIN    => HozzavaloKategoria::HUTOS_UTAN,
+        self::HABTEJSZIN      => HozzavaloKategoria::HUTOS_UTAN,
+        self::KETCHUP         => HozzavaloKategoria::HUTOS_UTAN,
+        self::TEJ             => HozzavaloKategoria::HUTOS_UTAN,
+        self::VAJ             => HozzavaloKategoria::HUTOS_UTAN,
     ];
 
     private string $kategoria;
