@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace PeterPecosz\Kajatervezo\Hozzavalo\Hus;
+namespace PeterPecosz\Kajatervezo\Hozzavalo\Hutos;
 
 use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
 use PeterPecosz\Kajatervezo\Hozzavalo\HozzavaloKategoria;
