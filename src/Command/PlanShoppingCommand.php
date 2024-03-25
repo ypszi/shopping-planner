@@ -46,7 +46,7 @@ class PlanShoppingCommand extends Command
         /** @var string[] $kajaNames */
         $kajaNames = $this->io->choice(
             question:    'Melyik kajákhoz kell bevásárolni?',
-            choices:     EtelFactory::listAvailableEtelek(),
+            choices:     array_combine(range(1, count(EtelFactory::listAvailableEtelek())), array_values(EtelFactory::listAvailableEtelek())),
             multiSelect: true
         );
 
