@@ -42,31 +42,37 @@ class EtelTest extends TestCase
     }
 
     #[Test]
-    public function testGetName(): void
+    public function testName(): void
     {
         $this->assertEquals('test food', $this->testFood::name());
     }
 
     #[Test]
-    public function testGetReceptUrl(): void
+    public function testReceptUrl(): void
     {
         $this->assertEquals('https://online-recept-konyv.hu/test-food', $this->testFood->receptUrl());
     }
 
     #[Test]
-    public function testGetDefaultAdag(): void
+    public function testDefaultAdag(): void
     {
         $this->assertEquals(1, $this->testFood::defaultAdag());
     }
 
     #[Test]
-    public function testGetHozzavalok(): void
+    public function testWithAdag(): void
+    {
+        $this->assertEquals(new $this->testFood(4), $this->testFood->withAdag(4));
+    }
+
+    #[Test]
+    public function testHozzavalok(): void
     {
         $this->assertEquals(
             [
                 new Tojas(1, Mertekegyseg::DB),
             ],
-            $this->testFood->getHozzavalok()
+            $this->testFood->hozzavalok()
         );
     }
 

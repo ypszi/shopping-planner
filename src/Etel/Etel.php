@@ -15,13 +15,9 @@ abstract class Etel
 
     public function __construct(?int $adag = null)
     {
-        $defaultAdag = static::defaultAdag();
-        $this->adag  = $adag ?? $defaultAdag;
+        $this->adag = $adag ?? static::defaultAdag();
 
-        foreach (static::listHozzavalok() as $hozzavalo) {
-            $adagMennyiseg      = $hozzavalo->getMennyiseg() / $defaultAdag * $this->adag;
-            $this->hozzavalok[] = $hozzavalo->withMennyiseg($adagMennyiseg);
-        }
+        $this->addHozzavalok();
     }
 
     abstract public static function name(): string;
@@ -40,13 +36,15 @@ abstract class Etel
         $clone       = clone $this;
         $clone->adag = $adag;
 
+        $clone->addHozzavalok();
+
         return $clone;
     }
 
     /**
      * @return Hozzavalo[]
      */
-    public function getHozzavalok(): array
+    public function hozzavalok(): array
     {
         return $this->hozzavalok;
     }
@@ -63,5 +61,15 @@ abstract class Etel
     public function __toString(): string
     {
         return sprintf('%s (%d adag)', static::name(), $this->adag);
+    }
+
+    private function addHozzavalok(): void
+    {
+        $this->hozzavalok = [];
+
+        foreach (static::listHozzavalok() as $hozzavalo) {
+            $adagMennyiseg      = $hozzavalo->getMennyiseg() / static::defaultAdag() * $this->adag;
+            $this->hozzavalok[] = $hozzavalo->withMennyiseg($adagMennyiseg);
+        }
     }
 }

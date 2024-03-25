@@ -30,7 +30,7 @@ class Etelek
         $hozzavaloSorok = new HozzavaloSorok();
 
         foreach ($this->etelek as $etel) {
-            foreach ($etel->getHozzavalok() as $hozzavalo) {
+            foreach ($etel->hozzavalok() as $hozzavalo) {
                 $this->addHozzavalo($hozzavaloSorok, $hozzavalo);
             }
         }
