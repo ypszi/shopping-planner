@@ -51,6 +51,15 @@ abstract class Etel
         return $this->hozzavalok;
     }
 
+    protected function decorateNoSaltyReceptUrl(string $receptUrl): string
+    {
+        if (str_contains($receptUrl, 'nosalty.hu')) {
+            return sprintf('%s?adag=%d', $receptUrl, $this->adag);
+        }
+
+        return $receptUrl;
+    }
+
     public function __toString(): string
     {
         return sprintf('%s (%d adag)', static::name(), $this->adag);

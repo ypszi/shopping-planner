@@ -50,6 +50,6 @@ class KinaiSzezammagosCsirke extends Etel
 
     #[\Override] public function receptUrl(): string
     {
-        return sprintf('https://www.nosalty.hu/recept/kinai-szezammagos-csirke?adag=%d', $this->adag);
+        return $this->decorateNoSaltyReceptUrl('https://www.nosalty.hu/recept/kinai-szezammagos-csirke');
     }
 }

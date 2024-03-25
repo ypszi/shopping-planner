@@ -52,6 +52,6 @@ class BundasCsirke extends Etel
 
     #[\Override] public function receptUrl(): string
     {
-        return sprintf('https://www.nosalty.hu/recept/puha-ropogos-fokhagymas-mezes-csirkemell?adag=%d', $this->adag);
+        return $this->decorateNoSaltyReceptUrl('https://www.nosalty.hu/recept/puha-ropogos-fokhagymas-mezes-csirkemell');
     }
 }

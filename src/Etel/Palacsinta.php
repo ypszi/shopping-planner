@@ -40,6 +40,6 @@ class Palacsinta extends Etel
 
     #[\Override] public function receptUrl(): string
     {
-        return sprintf('https://www.nosalty.hu/recept/palacsinta-alaprecept?adag=%d', $this->adag);
+        return $this->decorateNoSaltyReceptUrl('https://www.nosalty.hu/recept/palacsinta-alaprecept');
     }
 }

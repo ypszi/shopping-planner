@@ -43,6 +43,6 @@ class BogresSuti extends Etel
      */
     #[\Override] public function receptUrl(): string
     {
-        return sprintf('https://www.nosalty.hu/recept/bogreben-sult-suti-5-perc-alatt?adag=%d', $this->adag);
+        return $this->decorateNoSaltyReceptUrl('https://www.nosalty.hu/recept/bogreben-sult-suti-5-perc-alatt');
     }
 }
