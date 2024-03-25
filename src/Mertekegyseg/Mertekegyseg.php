@@ -10,6 +10,8 @@ class Mertekegyseg
     final public const string CSIPET = 'csipet';
     final public const string GEREZD = 'gerezd';
     final public const string KONZERV = 'konzerv';
+    /* késhegy */
+    final public const string KH = 'kh';
     /* tömeg */
     final public const string G = 'g';
     final public const string DKG = 'dkg';
