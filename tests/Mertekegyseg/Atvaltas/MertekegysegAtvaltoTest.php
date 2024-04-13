@@ -209,6 +209,11 @@ class MertekegysegAtvaltoTest extends TestCase
                 new NapraforgoOlaj(0, Mertekegyseg::ML),
                 5.0,
             ],
+            'tk to dl'                   => [
+                new NapraforgoOlaj(1, Mertekegyseg::TK),
+                new NapraforgoOlaj(0, Mertekegyseg::DL),
+                0.05,
+            ],
             'finomliszt bogre to dkg'    => [
                 new FinomLiszt(1, Mertekegyseg::BOGRE),
                 new FinomLiszt(0, Mertekegyseg::DKG),
@@ -298,6 +303,21 @@ class MertekegysegAtvaltoTest extends TestCase
                 new Cukor(1, Mertekegyseg::EK),
                 new Cukor(0, Mertekegyseg::KG),
                 0.02,
+            ],
+            'cukor mokkaskanal to dkg'   => [
+                new Cukor(1, Mertekegyseg::MK),
+                new Cukor(0, Mertekegyseg::DKG),
+                0.2,
+            ],
+            'cukor mokkaskanal to g'     => [
+                new Cukor(1, Mertekegyseg::MK),
+                new Cukor(0, Mertekegyseg::G),
+                2.0,
+            ],
+            'cukor mokkaskanal to kg'    => [
+                new Cukor(1, Mertekegyseg::MK),
+                new Cukor(0, Mertekegyseg::KG),
+                0.002,
             ],
             'kukorica konzerv to g'      => [
                 new Kukorica(1, Mertekegyseg::KONZERV),

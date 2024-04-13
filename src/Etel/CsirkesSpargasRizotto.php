@@ -21,7 +21,7 @@ class CsirkesSpargasRizotto extends Etel
 {
     #[\Override] public static function name(): string
     {
-        return 'Csirkés, spárgás rizottó';
+        return 'Csirkés spárgás rizottó';
     }
 
     #[\Override] protected static function listHozzavalok(): array
