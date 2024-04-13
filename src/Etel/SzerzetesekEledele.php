@@ -39,7 +39,7 @@ class SzerzetesekEledele extends Etel
             new Bors(1, Mertekegyseg::MK),
             new Cukor(1, Mertekegyseg::MK),
             new Kemenyito(1, Mertekegyseg::EK),
-            new SzezamOlaj(20, Mertekegyseg::ML),
+            new SzezamOlaj(2, Mertekegyseg::TK),
         ];
     }
 

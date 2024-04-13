@@ -24,8 +24,8 @@ class TepsisKrumpli extends Etel
         return [
             new Burgonya(1, Mertekegyseg::KG),
             new PirosPaprika(1, Mertekegyseg::TK),
-            new So(1, Mertekegyseg::KK),
-            new Bors(1, Mertekegyseg::KK),
+            new So(1, Mertekegyseg::KVK),
+            new Bors(1, Mertekegyseg::KVK),
             new Rozmaring(1, Mertekegyseg::MK),
             new NapraforgoOlaj(1, Mertekegyseg::DL),
         ];
