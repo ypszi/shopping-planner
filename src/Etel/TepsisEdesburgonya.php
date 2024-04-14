@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Etel;
 
+use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Edesburgonya;
+use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
+
 class TepsisEdesburgonya extends Etel
 {
     #[\Override] public static function name(): string
@@ -13,7 +16,9 @@ class TepsisEdesburgonya extends Etel
 
     #[\Override] protected static function listHozzavalok(): array
     {
-        return [];
+        return [
+            new Edesburgonya(1, Mertekegyseg::KG),
+        ];
     }
 
     #[\Override] public static function defaultAdag(): int
