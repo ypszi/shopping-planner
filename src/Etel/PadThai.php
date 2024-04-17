@@ -8,9 +8,12 @@ use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\Chili;
 use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\Mogyoro;
 use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\NapraforgoOlaj;
 use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\SzezamOlaj;
+use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Cukor;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hus\Csirkemell;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hutos\Tojas;
+use PeterPecosz\Kajatervezo\Hozzavalo\HutosUtan\HalSzosz;
 use PeterPecosz\Kajatervezo\Hozzavalo\HutosUtan\RizsTeszta;
+use PeterPecosz\Kajatervezo\Hozzavalo\HutosUtan\TamarindSzosz;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Fokhagyma;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Gyomber;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Lime;
@@ -40,6 +43,10 @@ class PadThai extends Etel
             new Tojas(2, Mertekegyseg::DB),
             new Mogyoro(100, Mertekegyseg::G),
             new Lime(0.5, Mertekegyseg::DB),
+            new TamarindSzosz(2, Mertekegyseg::TK),
+            new HalSzosz(0.5, Mertekegyseg::TK),
+            new SzezamOlaj(1, Mertekegyseg::EK),
+            new Cukor(1, Mertekegyseg::TK),
         ];
     }
 
