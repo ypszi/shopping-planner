@@ -11,7 +11,7 @@ class TepsisEdesburgonya extends Etel
 {
     #[\Override] public static function name(): string
     {
-        return 'Tepsis Égesburgonya';
+        return 'Tepsis édesburgonya';
     }
 
     #[\Override] protected static function listHozzavalok(): array

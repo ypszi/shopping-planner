@@ -28,9 +28,11 @@ class SzerzetesekEledele extends Etel
     #[\Override] protected static function listHozzavalok(): array
     {
         return [
+            // 50 g fafülgomba
             new Brokkoli(200, Mertekegyseg::G),
             new KinaiKel(100, Mertekegyseg::G),
             new Sargarepa(1, Mertekegyseg::DB),
+            // 2 fej csiperkegomba (50 g/fej)
             new Gyomber(1, Mertekegyseg::DB),
             new Fokhagyma(2, Mertekegyseg::GEREZD),
             new Etolaj(2, Mertekegyseg::EK),
