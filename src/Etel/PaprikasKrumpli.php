@@ -9,6 +9,7 @@ use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\FuszerPaprika;
 use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\OlivaOlaj;
 use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\So;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hus\Kolbasz;
+use PeterPecosz\Kajatervezo\Hozzavalo\Hus\Virsli;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Burgonya;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Fokhagyma;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Voroshagyma;
@@ -26,6 +27,7 @@ class PaprikasKrumpli extends Etel
         return [
             new Burgonya(1, Mertekegyseg::KG),
             new Kolbasz(15, Mertekegyseg::DKG),
+            new Virsli(20, Mertekegyseg::DKG),
             new Voroshagyma(1, Mertekegyseg::DB),
             new Fokhagyma(2, Mertekegyseg::GEREZD),
             new OlivaOlaj(4, Mertekegyseg::EK),
