@@ -16,11 +16,11 @@ use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Koktelparadicsom;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Lilahagyma;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
-class CitromosJoghurtosCsirkemell extends Etel
+class CitromosJoghurtosCsirkemellGorogsalataval extends Etel
 {
     #[\Override] public static function name(): string
     {
-        return 'Citromos joghurtos csirkemell';
+        return 'Citromos joghurtos csirkemell görögsalátával';
     }
 
     #[\Override] protected static function listHozzavalok(): array
