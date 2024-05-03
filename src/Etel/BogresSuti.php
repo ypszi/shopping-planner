@@ -25,11 +25,13 @@ class BogresSuti extends Etel
         return [
             new Finomliszt(4, Mertekegyseg::EK),
             new Sutopor(1, Mertekegyseg::KK),
-            new Porcukor(4, Mertekegyseg::EK),
+            // 4 EK helyett
+            new Porcukor(2, Mertekegyseg::EK),
             new Kakaopor(2, Mertekegyseg::EK),
             new Tojas(1, Mertekegyseg::DB),
             new Tej(3, Mertekegyseg::EK),
-            new NapraforgoOlaj(3, Mertekegyseg::EK),
+            // 3 EK helyett
+            new NapraforgoOlaj(1, Mertekegyseg::EK),
         ];
     }
 
