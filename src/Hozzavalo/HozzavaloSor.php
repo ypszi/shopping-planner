@@ -26,6 +26,14 @@ class HozzavaloSor
         }
     }
 
+    /**
+     * @return array<string, Hozzavalo>
+     */
+    public function getHozzavalokPerKategoria(): array
+    {
+        return $this->hozzavalokPerKategoria;
+    }
+
     public function add(Hozzavalo $hozzavalo): self
     {
         $hozzavalo           = $this->convertToPreference($hozzavalo);

@@ -4,8 +4,6 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Etel;
 
-use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
-use PeterPecosz\Kajatervezo\Hozzavalo\HozzavaloSor;
 use PeterPecosz\Kajatervezo\Hozzavalo\HozzavaloSorok;
 
 class Etelek
@@ -31,11 +29,11 @@ class Etelek
 
         foreach ($this->etelek as $etel) {
             foreach ($etel->hozzavalok() as $hozzavalo) {
-                $this->addHozzavalo($hozzavaloSorok, $hozzavalo);
+                $hozzavaloSorok->addHozzavalo($hozzavalo);
             }
         }
 
-        return $hozzavaloSorok;
+        return $hozzavaloSorok->sort();
     }
 
     /**
@@ -44,20 +42,5 @@ class Etelek
     public function toArray(): array
     {
         return $this->etelek;
-    }
-
-    private function addHozzavalo(HozzavaloSorok $hozzavaloSorok, Hozzavalo $hozzavalo): void
-    {
-        foreach ($hozzavaloSorok->getAll() as $hozzavaloSor) {
-            if ($hozzavaloSor->canAdd($hozzavalo)) {
-                $hozzavaloSor->add($hozzavalo);
-
-                return;
-            }
-        }
-
-        $nextHozzavaloSor = new HozzavaloSor();
-        $nextHozzavaloSor->add($hozzavalo);
-        $hozzavaloSorok->add($nextHozzavaloSor);
     }
 }
