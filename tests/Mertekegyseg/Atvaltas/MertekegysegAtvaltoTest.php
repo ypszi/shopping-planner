@@ -13,6 +13,7 @@ use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Porcukor;
 use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Vorosbab;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hus\Csirkemell;
+use PeterPecosz\Kajatervezo\Hozzavalo\Hutos\Tejfol;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Exception\UnknownUnitOfMeasureException;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 use PeterPecosz\Kajatervezo\Mertekegyseg\MertekegysegAtvalto;
@@ -39,295 +40,325 @@ class MertekegysegAtvaltoTest extends TestCase
     public static function mertekegysegDataProvider(): array
     {
         return [
-            'csirkemell db to dkg'       => [
+            'csirkemell db to dkg'    => [
                 new Csirkemell(1, Mertekegyseg::DB),
                 new Csirkemell(0, Mertekegyseg::DKG),
                 25.0,
             ],
-            'csirkemell db to kg'        => [
+            'csirkemell db to kg'     => [
                 new Csirkemell(1, Mertekegyseg::DB),
                 new Csirkemell(0, Mertekegyseg::KG),
                 0.25,
             ],
-            'csirkemell dkg to db'       => [
+            'csirkemell dkg to db'    => [
                 new Csirkemell(25, Mertekegyseg::DKG),
                 new Csirkemell(0, Mertekegyseg::DB),
                 1.0,
             ],
-            'csirkemell kg to db'        => [
+            'csirkemell kg to db'     => [
                 new Csirkemell(1, Mertekegyseg::KG),
                 new Csirkemell(0, Mertekegyseg::DB),
                 4.0,
             ],
-            'bogre to ml'                => [
+            'bogre to ml'             => [
                 new NapraforgoOlaj(1, Mertekegyseg::BOGRE),
                 new NapraforgoOlaj(0, Mertekegyseg::ML),
                 250.0,
             ],
-            'cl to dl'                   => [
+            'cl to dl'                => [
                 new NapraforgoOlaj(1, Mertekegyseg::CL),
                 new NapraforgoOlaj(0, Mertekegyseg::DL),
                 0.1,
             ],
-            'cl to l'                    => [
+            'cl to l'                 => [
                 new NapraforgoOlaj(1, Mertekegyseg::CL),
                 new NapraforgoOlaj(0, Mertekegyseg::L),
                 0.01,
             ],
-            'cl to ml'                   => [
+            'cl to ml'                => [
                 new NapraforgoOlaj(1, Mertekegyseg::CL),
                 new NapraforgoOlaj(0, Mertekegyseg::ML),
                 10.0,
             ],
-            'csesze to ml'               => [
+            'csesze to ml'            => [
                 new NapraforgoOlaj(1, Mertekegyseg::CSESZE),
                 new NapraforgoOlaj(0, Mertekegyseg::ML),
                 250.0,
             ],
-            'dl to cl'                   => [
+            'dl to cl'                => [
                 new NapraforgoOlaj(1, Mertekegyseg::DL),
                 new NapraforgoOlaj(0, Mertekegyseg::CL),
                 10.0,
             ],
-            'dl to ml'                   => [
+            'dl to ml'                => [
                 new NapraforgoOlaj(1, Mertekegyseg::DL),
                 new NapraforgoOlaj(0, Mertekegyseg::ML),
                 100.0,
             ],
-            'l to cl'                    => [
+            'l to cl'                 => [
                 new NapraforgoOlaj(1, Mertekegyseg::L),
                 new NapraforgoOlaj(0, Mertekegyseg::CL),
                 100.0,
             ],
-            'l to dl'                    => [
+            'l to dl'                 => [
                 new NapraforgoOlaj(1, Mertekegyseg::L),
                 new NapraforgoOlaj(0, Mertekegyseg::DL),
                 10.0,
             ],
-            'l to ml'                    => [
+            'l to ml'                 => [
                 new NapraforgoOlaj(1, Mertekegyseg::L),
                 new NapraforgoOlaj(0, Mertekegyseg::ML),
                 1000.0,
             ],
-            'ml to cl'                   => [
+            'ml to cl'                => [
                 new NapraforgoOlaj(1, Mertekegyseg::ML),
                 new NapraforgoOlaj(0, Mertekegyseg::CL),
                 0.1,
             ],
-            'ml to dl'                   => [
+            'ml to dl'                => [
                 new NapraforgoOlaj(1, Mertekegyseg::ML),
                 new NapraforgoOlaj(0, Mertekegyseg::DL),
                 0.01,
             ],
-            'ml to l'                    => [
+            'ml to l'                 => [
                 new NapraforgoOlaj(1, Mertekegyseg::ML),
                 new NapraforgoOlaj(0, Mertekegyseg::L),
                 0.001,
             ],
-            'dkg to g'                   => [
+            'dkg to g'                => [
                 new Csirkemell(1, Mertekegyseg::DKG),
                 new Csirkemell(0, Mertekegyseg::G),
                 10.0,
             ],
-            'dkg to kg'                  => [
+            'dkg to kg'               => [
                 new Csirkemell(1, Mertekegyseg::DKG),
                 new Csirkemell(0, Mertekegyseg::KG),
                 0.01,
             ],
-            'g to dkg'                   => [
+            'g to dkg'                => [
                 new Csirkemell(1, Mertekegyseg::G),
                 new Csirkemell(0, Mertekegyseg::DKG),
                 0.1,
             ],
-            'g to kg'                    => [
+            'g to kg'                 => [
                 new Csirkemell(1, Mertekegyseg::G),
                 new Csirkemell(0, Mertekegyseg::KG),
                 0.001,
             ],
-            'kg to dkg'                  => [
+            'kg to dkg'               => [
                 new Csirkemell(1, Mertekegyseg::KG),
                 new Csirkemell(0, Mertekegyseg::DKG),
                 100.0,
             ],
-            'kg to g'                    => [
+            'kg to g'                 => [
                 new Csirkemell(1, Mertekegyseg::KG),
                 new Csirkemell(0, Mertekegyseg::G),
                 1000.0,
             ],
-            'ek to dl'                   => [
+            'ek to dl'                => [
                 new NapraforgoOlaj(1, Mertekegyseg::EK),
                 new NapraforgoOlaj(0, Mertekegyseg::DL),
                 0.15,
             ],
-            'ek to ml'                   => [
+            'ek to ml'                => [
                 new NapraforgoOlaj(1, Mertekegyseg::EK),
                 new NapraforgoOlaj(0, Mertekegyseg::ML),
                 15.0,
             ],
-            'kvk to ml'                  => [
+            'kvk to ml'               => [
                 new NapraforgoOlaj(1, Mertekegyseg::KVK),
                 new NapraforgoOlaj(0, Mertekegyseg::ML),
                 5.0,
             ],
-            'kk to ml'                   => [
+            'kk to ml'                => [
                 new NapraforgoOlaj(1, Mertekegyseg::KK),
                 new NapraforgoOlaj(0, Mertekegyseg::ML),
                 5.0,
             ],
-            'ml to ek'                   => [
+            'ml to ek'                => [
                 new NapraforgoOlaj(1, Mertekegyseg::ML),
                 new NapraforgoOlaj(0, Mertekegyseg::EK),
                 1 / 15.0,
             ],
-            'ml to kvk'                  => [
+            'ml to kvk'               => [
                 new NapraforgoOlaj(1, Mertekegyseg::ML),
                 new NapraforgoOlaj(0, Mertekegyseg::KVK),
                 0.2,
             ],
-            'ml to kk'                   => [
+            'ml to kk'                => [
                 new NapraforgoOlaj(1, Mertekegyseg::ML),
                 new NapraforgoOlaj(0, Mertekegyseg::KK),
                 0.2,
             ],
-            'ml to mk'                   => [
+            'ml to mk'                => [
                 new NapraforgoOlaj(1, Mertekegyseg::ML),
                 new NapraforgoOlaj(0, Mertekegyseg::MK),
                 0.5,
             ],
-            'ml to tk'                   => [
+            'ml to tk'                => [
                 new NapraforgoOlaj(1, Mertekegyseg::ML),
                 new NapraforgoOlaj(0, Mertekegyseg::TK),
                 0.2,
             ],
-            'mk to ml'                   => [
+            'mk to ml'                => [
                 new NapraforgoOlaj(1, Mertekegyseg::MK),
                 new NapraforgoOlaj(0, Mertekegyseg::ML),
                 2.0,
             ],
-            'tk to ml'                   => [
+            'tk to ml'                => [
                 new NapraforgoOlaj(1, Mertekegyseg::TK),
                 new NapraforgoOlaj(0, Mertekegyseg::ML),
                 5.0,
             ],
-            'tk to dl'                   => [
+            'tk to dl'                => [
                 new NapraforgoOlaj(1, Mertekegyseg::TK),
                 new NapraforgoOlaj(0, Mertekegyseg::DL),
                 0.05,
             ],
-            'finomliszt bogre to dkg'    => [
+            'finomliszt bogre to dkg' => [
                 new FinomLiszt(1, Mertekegyseg::BOGRE),
                 new FinomLiszt(0, Mertekegyseg::DKG),
                 15.0,
             ],
-            'finomliszt bogre to g'      => [
+            'finomliszt bogre to g'   => [
                 new FinomLiszt(1, Mertekegyseg::BOGRE),
                 new FinomLiszt(0, Mertekegyseg::G),
                 150.0,
             ],
-            'finomliszt bogre to kg'     => [
+            'finomliszt bogre to kg'  => [
                 new FinomLiszt(1, Mertekegyseg::BOGRE),
                 new FinomLiszt(0, Mertekegyseg::KG),
                 0.15,
             ],
-            'finomliszt evokanal to dkg' => [
+            'finomliszt ek to dkg'    => [
                 new FinomLiszt(1, Mertekegyseg::EK),
                 new FinomLiszt(0, Mertekegyseg::DKG),
                 2.0,
             ],
-            'finomliszt evokanal to g'   => [
+            'finomliszt ek to g'      => [
                 new FinomLiszt(1, Mertekegyseg::EK),
                 new FinomLiszt(0, Mertekegyseg::G),
                 20.0,
             ],
-            'finomliszt evokanal to kg'  => [
+            'finomliszt ek to kg'     => [
                 new FinomLiszt(1, Mertekegyseg::EK),
                 new FinomLiszt(0, Mertekegyseg::KG),
                 0.02,
             ],
-            'liszt bogre to dkg'         => [
+            'liszt bogre to dkg'      => [
                 new Liszt(1, Mertekegyseg::BOGRE),
                 new Liszt(0, Mertekegyseg::DKG),
                 15.0,
             ],
-            'liszt bogre to g'           => [
+            'liszt bogre to g'        => [
                 new Liszt(1, Mertekegyseg::BOGRE),
                 new Liszt(0, Mertekegyseg::G),
                 150.0,
             ],
-            'liszt bogre to kg'          => [
+            'liszt bogre to kg'       => [
                 new Liszt(1, Mertekegyseg::BOGRE),
                 new Liszt(0, Mertekegyseg::KG),
                 0.15,
             ],
-            'liszt evokanal to dkg'      => [
+            'liszt ek to dkg'         => [
                 new Liszt(1, Mertekegyseg::EK),
                 new Liszt(0, Mertekegyseg::DKG),
                 2.0,
             ],
-            'liszt evokanal to g'        => [
+            'liszt ek to g'           => [
                 new Liszt(1, Mertekegyseg::EK),
                 new Liszt(0, Mertekegyseg::G),
                 20.0,
             ],
-            'liszt evokanal to kg'       => [
+            'liszt ek to kg'          => [
                 new Liszt(1, Mertekegyseg::EK),
                 new Liszt(0, Mertekegyseg::KG),
                 0.02,
             ],
-            'porcukor evokanal to dkg'   => [
+            'porcukor ek to dkg'      => [
                 new Porcukor(1, Mertekegyseg::EK),
                 new Porcukor(0, Mertekegyseg::DKG),
                 2.0,
             ],
-            'porcukor evokanal to g'     => [
+            'porcukor ek to g'        => [
                 new Porcukor(1, Mertekegyseg::EK),
                 new Porcukor(0, Mertekegyseg::G),
                 20.0,
             ],
-            'porcukor evokanal to kg'    => [
+            'porcukor ek to kg'       => [
                 new Porcukor(1, Mertekegyseg::EK),
                 new Porcukor(0, Mertekegyseg::KG),
                 0.02,
             ],
-            'cukor evokanal to dkg'      => [
+            'cukor ek to dkg'         => [
                 new Cukor(1, Mertekegyseg::EK),
                 new Cukor(0, Mertekegyseg::DKG),
                 2.0,
             ],
-            'cukor evokanal to g'        => [
+            'cukor ek to g'           => [
                 new Cukor(1, Mertekegyseg::EK),
                 new Cukor(0, Mertekegyseg::G),
                 20.0,
             ],
-            'cukor evokanal to kg'       => [
+            'cukor ek to kg'          => [
                 new Cukor(1, Mertekegyseg::EK),
                 new Cukor(0, Mertekegyseg::KG),
                 0.02,
             ],
-            'cukor mokkaskanal to dkg'   => [
+            'cukor mk to dkg'         => [
                 new Cukor(1, Mertekegyseg::MK),
                 new Cukor(0, Mertekegyseg::DKG),
                 0.2,
             ],
-            'cukor mokkaskanal to g'     => [
+            'cukor mk to g'           => [
                 new Cukor(1, Mertekegyseg::MK),
                 new Cukor(0, Mertekegyseg::G),
                 2.0,
             ],
-            'cukor mokkaskanal to kg'    => [
+            'cukor mk to kg'          => [
                 new Cukor(1, Mertekegyseg::MK),
                 new Cukor(0, Mertekegyseg::KG),
                 0.002,
             ],
-            'kukorica konzerv to g'      => [
+            'cukor tk to dkg'         => [
+                new Cukor(1, Mertekegyseg::TK),
+                new Cukor(0, Mertekegyseg::DKG),
+                0.6,
+            ],
+            'cukor tk to g'           => [
+                new Cukor(1, Mertekegyseg::TK),
+                new Cukor(0, Mertekegyseg::G),
+                6.0,
+            ],
+            'cukor tk to kg'          => [
+                new Cukor(1, Mertekegyseg::TK),
+                new Cukor(0, Mertekegyseg::KG),
+                0.006,
+            ],
+            'kukorica konzerv to g'   => [
                 new Kukorica(1, Mertekegyseg::KONZERV),
                 new Kukorica(0, Mertekegyseg::G),
                 140.0,
             ],
-            'vorosbab konzerv to g'      => [
+            'vorosbab konzerv to g'   => [
                 new Vorosbab(1, Mertekegyseg::KONZERV),
                 new Vorosbab(0, Mertekegyseg::G),
                 250.0,
+            ],
+            'tejfol ml to g'          => [
+                new Tejfol(1, Mertekegyseg::ML),
+                new Tejfol(0.1, Mertekegyseg::G),
+                0.1,
+            ],
+            'tejfol cl to g'          => [
+                new Tejfol(1, Mertekegyseg::CL),
+                new Tejfol(1, Mertekegyseg::G),
+                1.0,
+            ],
+            'tejfol dl to g'          => [
+                new Tejfol(1, Mertekegyseg::DL),
+                new Tejfol(10, Mertekegyseg::G),
+                10.0,
             ],
         ];
     }

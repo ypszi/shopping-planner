@@ -41,6 +41,9 @@ use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kukorica\KonzervToGram as Kuko
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Porcukor\EvokanalToDekagram as PorcukorEvokanalToDekagram;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Porcukor\EvokanalToGram as PorcukorEvokanalToGram;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Porcukor\EvokanalToKilogram as PorcukorEvokanalToKiloGram;
+use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Tejfol\CentiliterToGram as TejfolCentiliterToGram;
+use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Tejfol\DeciliterToGram as TejfolDeciliterToGram;
+use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Tejfol\MilliliterToGram as TejfolMilliliterToGram;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Tomeg\DekagramToGram;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Tomeg\DekagramToKilogram;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Tomeg\GramToDekagram;
@@ -125,6 +128,9 @@ class MertekegysegValtoCollection
             new CukorMokkaskanalToKiloGram(),
             new KukoricaKonzervToGram(),
             new VorosbabKonzervToGram(),
+            new TejfolMilliliterToGram(),
+            new TejfolCentiliterToGram(),
+            new TejfolDeciliterToGram(),
         ];
     }
 
