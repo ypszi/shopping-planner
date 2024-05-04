@@ -85,6 +85,11 @@ class MertekegysegAtvaltoTest extends TestCase
                 new NapraforgoOlaj(0, Mertekegyseg::ML),
                 250.0,
             ],
+            'dl to l'                 => [
+                new NapraforgoOlaj(1, Mertekegyseg::DL),
+                new NapraforgoOlaj(0, Mertekegyseg::L),
+                0.1,
+            ],
             'dl to cl'                => [
                 new NapraforgoOlaj(1, Mertekegyseg::DL),
                 new NapraforgoOlaj(0, Mertekegyseg::CL),

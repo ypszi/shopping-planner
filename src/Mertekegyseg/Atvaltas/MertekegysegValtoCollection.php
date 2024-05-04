@@ -56,6 +56,7 @@ use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Urtartalom\CentiliterToLiter;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Urtartalom\CentiliterToMilliliter;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Urtartalom\CseszeToMilliliter;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Urtartalom\DeciliterToCentiliter;
+use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Urtartalom\DeciliterToLiter;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Urtartalom\DeciliterToMilliliter;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Urtartalom\LiterToCentiliter;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Urtartalom\LiterToDeciliter;
@@ -82,6 +83,7 @@ class MertekegysegValtoCollection
             new CentiliterToLiter(),
             new CentiliterToMilliliter(),
             new CseszeToMilliliter(),
+            new DeciliterToLiter(),
             new DeciliterToCentiliter(),
             new DeciliterToMilliliter(),
             new LiterToCentiliter(),
