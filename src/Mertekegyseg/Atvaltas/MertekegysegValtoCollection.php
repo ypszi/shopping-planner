@@ -15,6 +15,9 @@ use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Cukor\EvokanalToKilogram as Cu
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Cukor\MokkaskanalToDekagram as CukorMokkaskanalToDekagram;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Cukor\MokkaskanalToGram as CukorMokkaskanalToGram;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Cukor\MokkaskanalToKilogram as CukorMokkaskanalToKiloGram;
+use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Cukor\TeaskanalToDekagram as CukorTeaskanalToDekagram;
+use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Cukor\TeaskanalToGram as CukorTeaskanalToGram;
+use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Cukor\TeaskanalToKilogram as CukorTeaskanalToKilogram;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Exception\UnknownUnitOfMeasureException;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\FinomLiszt\BogreToDekagram as FinomLisztBogreToDekagram;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\FinomLiszt\BogreToGram as FinomLisztBogreToGram;
@@ -114,6 +117,9 @@ class MertekegysegValtoCollection
             new CukorEvokanalToDekagram(),
             new CukorEvokanalToGram(),
             new CukorEvokanalToKiloGram(),
+            new CukorTeaskanalToDekagram(),
+            new CukorTeaskanalToGram(),
+            new CukorTeaskanalToKilogram(),
             new CukorMokkaskanalToDekagram(),
             new CukorMokkaskanalToGram(),
             new CukorMokkaskanalToKiloGram(),
