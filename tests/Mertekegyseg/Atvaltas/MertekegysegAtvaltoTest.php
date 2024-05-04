@@ -7,10 +7,10 @@ namespace PeterPecosz\Kajatervezo\Tests\Mertekegyseg\Atvaltas;
 use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\NapraforgoOlaj;
 use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Cukor;
 use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Finomliszt;
-use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Kukorica;
+use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\KukoricaKonzerv;
 use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Liszt;
 use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Porcukor;
-use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Vorosbab;
+use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\VorosbabKonzerv;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hus\Csirkemell;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hutos\Tejfol;
@@ -336,13 +336,13 @@ class MertekegysegAtvaltoTest extends TestCase
                 0.006,
             ],
             'kukorica konzerv to g'   => [
-                new Kukorica(1, Mertekegyseg::KONZERV),
-                new Kukorica(0, Mertekegyseg::G),
+                new KukoricaKonzerv(1, Mertekegyseg::KONZERV),
+                new KukoricaKonzerv(0, Mertekegyseg::G),
                 140.0,
             ],
             'vorosbab konzerv to g'   => [
-                new Vorosbab(1, Mertekegyseg::KONZERV),
-                new Vorosbab(0, Mertekegyseg::G),
+                new VorosbabKonzerv(1, Mertekegyseg::KONZERV),
+                new VorosbabKonzerv(0, Mertekegyseg::G),
                 250.0,
             ],
             'tejfol ml to g'          => [

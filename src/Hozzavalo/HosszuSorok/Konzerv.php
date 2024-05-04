@@ -6,13 +6,8 @@ namespace PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok;
 
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
-class Vorosbab extends HosszuSorok
+abstract class Konzerv extends HosszuSorok
 {
-    #[\Override] public static function name(): string
-    {
-        return 'Vörösbab';
-    }
-
     #[\Override] public static function mertekegysegPreference(): ?string
     {
         return Mertekegyseg::G;

@@ -9,8 +9,8 @@ use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\NapraforgoOlaj;
 use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\Petrezselyem;
 use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\So;
 use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Cukor;
-use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Feherbab;
-use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Tonhal;
+use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\FeherbabKonzerv;
+use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\TonhalKonzerv;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\BalzsamecetFeher;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Citrom;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Koktelparadicsom;
@@ -34,8 +34,8 @@ class TonhalasBabsalata extends Etel
             new Cukor(1, Mertekegyseg::CSIPET),
             new NapraforgoOlaj(2, Mertekegyseg::EK),
             new Petrezselyem(1, Mertekegyseg::TK),
-            new Feherbab(250, Mertekegyseg::G),
-            new Tonhal(185, Mertekegyseg::G),
+            new FeherbabKonzerv(250, Mertekegyseg::G),
+            new TonhalKonzerv(185, Mertekegyseg::G),
             new Lilahagyma(1, Mertekegyseg::DB),
             new Koktelparadicsom(20, Mertekegyseg::DKG),
         ];
