@@ -9,7 +9,7 @@ use PeterPecosz\Kajatervezo\Hozzavalo\Hus\Felvagott;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hutos\GoudaSajt;
 use PeterPecosz\Kajatervezo\Hozzavalo\HutosUtan\Tej;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Kigyouborka;
-use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Paradicsom;
+use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Koktelparadicsom;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class Reggeli extends Etel
@@ -26,7 +26,7 @@ class Reggeli extends Etel
             new Felvagott(40, Mertekegyseg::DKG),
             new GoudaSajt(20, Mertekegyseg::DKG),
             new Tej(1, Mertekegyseg::L),
-            new Paradicsom(20, Mertekegyseg::DKG),
+            new Koktelparadicsom(20, Mertekegyseg::DKG),
             new Kigyouborka(1, Mertekegyseg::DB),
         ];
     }
