@@ -12,6 +12,7 @@ use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\Rozmaring;
 use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\So;
 use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\Szerecsendio;
 use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\ParadicsomPure;
+use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\SpagettiTeszta;
 use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\VorosborSzaraz;
 use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\WorcesterSzosz;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hus\DaraltHus;
@@ -50,7 +51,7 @@ class Bolognai extends Etel
             new WorcesterSzosz(1, Mertekegyseg::TK),
             // 3 dl víz
             new Tej(100, Mertekegyseg::ML),
-            // 400 g spagetti
+            new SpagettiTeszta(400, Mertekegyseg::G),
             new ParmezanSajt(40, Mertekegyseg::G),
         ];
     }
