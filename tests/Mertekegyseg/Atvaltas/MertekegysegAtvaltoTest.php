@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace PeterPecosz\Kajatervezo\Tests\Mertekegyseg\Atvaltas;
 
 use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\NapraforgoOlaj;
+use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\So;
 use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Cukor;
 use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Finomliszt;
 use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\KukoricaKonzerv;
@@ -170,6 +171,11 @@ class MertekegysegAtvaltoTest extends TestCase
                 new NapraforgoOlaj(0, Mertekegyseg::ML),
                 15.0,
             ],
+            'ek to tk'                => [
+                new NapraforgoOlaj(1, Mertekegyseg::EK),
+                new NapraforgoOlaj(3, Mertekegyseg::TK),
+                3.0,
+            ],
             'kvk to ml'               => [
                 new NapraforgoOlaj(1, Mertekegyseg::KVK),
                 new NapraforgoOlaj(0, Mertekegyseg::ML),
@@ -219,6 +225,11 @@ class MertekegysegAtvaltoTest extends TestCase
                 new NapraforgoOlaj(1, Mertekegyseg::TK),
                 new NapraforgoOlaj(0, Mertekegyseg::DL),
                 0.05,
+            ],
+            'tk to ek'                => [
+                new NapraforgoOlaj(1, Mertekegyseg::TK),
+                new NapraforgoOlaj(0.3, Mertekegyseg::EK),
+                0.3,
             ],
             'finomliszt bogre to dkg' => [
                 new FinomLiszt(1, Mertekegyseg::BOGRE),
@@ -352,18 +363,38 @@ class MertekegysegAtvaltoTest extends TestCase
             ],
             'tejfol ml to g'          => [
                 new Tejfol(1, Mertekegyseg::ML),
-                new Tejfol(0.1, Mertekegyseg::G),
+                new Tejfol(0, Mertekegyseg::G),
                 0.1,
             ],
             'tejfol cl to g'          => [
                 new Tejfol(1, Mertekegyseg::CL),
-                new Tejfol(1, Mertekegyseg::G),
+                new Tejfol(0, Mertekegyseg::G),
                 1.0,
             ],
             'tejfol dl to g'          => [
                 new Tejfol(1, Mertekegyseg::DL),
-                new Tejfol(10, Mertekegyseg::G),
+                new Tejfol(0, Mertekegyseg::G),
                 10.0,
+            ],
+            'So ek to g'              => [
+                new So(1, Mertekegyseg::EK),
+                new So(0, Mertekegyseg::G),
+                20.0,
+            ],
+            'So tk to g'              => [
+                new So(1, Mertekegyseg::TK),
+                new So(0, Mertekegyseg::G),
+                8.0,
+            ],
+            'So kvk to g'             => [
+                new So(1, Mertekegyseg::KVK),
+                new So(0, Mertekegyseg::G),
+                2.0,
+            ],
+            'So kk to g'              => [
+                new So(1, Mertekegyseg::KK),
+                new So(0, Mertekegyseg::G),
+                2.0,
             ],
         ];
     }

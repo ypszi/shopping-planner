@@ -27,6 +27,7 @@ use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\FinomLiszt\EvokanalToGram as F
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\FinomLiszt\EvokanalToKilogram as FinomLisztEvokanalToKiloGram;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kanal\EvoKanalToDeciliter;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kanal\EvoKanalToMilliliter;
+use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kanal\EvoKanalToTeasKanal;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kanal\KavesKanalToMilliliter;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kanal\KisKanalToMilliliter;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kanal\MilliliterToEvoKanal;
@@ -36,11 +37,16 @@ use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kanal\MilliliterToMokkasKanal;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kanal\MilliliterToTeasKanal;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kanal\MokkasKanalToMilliliter;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kanal\TeasKanalToDeciliter;
+use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kanal\TeasKanalToEvokanal;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kanal\TeasKanalToMilliliter;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kukorica\KonzervToGram as KukoricaKonzervToGram;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Porcukor\EvokanalToDekagram as PorcukorEvokanalToDekagram;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Porcukor\EvokanalToGram as PorcukorEvokanalToGram;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Porcukor\EvokanalToKilogram as PorcukorEvokanalToKiloGram;
+use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\So\EvokanalToGram as SoEvokanalToGram;
+use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\So\KaveskanalToGram as SoKaveskanalToGram;
+use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\So\KiskanalToGram as SoKiskanalToGram;
+use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\So\TeaskanalToGram as SoTeaskanalToGram;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Tejfol\CentiliterToGram as TejfolCentiliterToGram;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Tejfol\DeciliterToGram as TejfolDeciliterToGram;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Tejfol\MilliliterToGram as TejfolMilliliterToGram;
@@ -100,6 +106,7 @@ class MertekegysegValtoCollection
             new KilogramToGram(),
             new EvoKanalToDeciliter(),
             new EvoKanalToMilliliter(),
+            new EvoKanalToTeasKanal(),
             new KavesKanalToMilliliter(),
             new KisKanalToMilliliter(),
             new MilliliterToEvoKanal(),
@@ -110,6 +117,7 @@ class MertekegysegValtoCollection
             new MokkasKanalToMilliliter(),
             new TeasKanalToMilliliter(),
             new TeasKanalToDeciliter(),
+            new TeasKanalToEvokanal(),
             new FinomLisztBogreToDekagram(),
             new FinomLisztBogreToGram(),
             new FinomLisztBogreToKilogram(),
@@ -133,6 +141,10 @@ class MertekegysegValtoCollection
             new TejfolMilliliterToGram(),
             new TejfolCentiliterToGram(),
             new TejfolDeciliterToGram(),
+            new SoEvokanalToGram(),
+            new SoTeaskanalToGram(),
+            new SoKaveskanalToGram(),
+            new SoKiskanalToGram(),
         ];
     }
 
