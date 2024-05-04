@@ -13,7 +13,7 @@ use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\FusilliTeszta;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hutos\ParmezanSajt;
 use PeterPecosz\Kajatervezo\Hozzavalo\HutosUtan\Fozotejszin;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Fokhagyma;
-use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Paradicsom;
+use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Koktelparadicsom;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Voroshagyma;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
@@ -35,7 +35,7 @@ class ParadicsomosTeszta extends Etel
             new So(1, Mertekegyseg::TK),
             new Bors(1, Mertekegyseg::CSIPET),
             new Fozotejszin(2, Mertekegyseg::DL),
-            new Paradicsom(45, Mertekegyseg::DKG),
+            new Koktelparadicsom(45, Mertekegyseg::DKG),
             new ParmezanSajt(10, Mertekegyseg::DKG),
             new FusilliTeszta(40, Mertekegyseg::DKG),
         ];
