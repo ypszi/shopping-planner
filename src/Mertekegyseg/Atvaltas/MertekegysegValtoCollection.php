@@ -128,6 +128,9 @@ class MertekegysegValtoCollection
         ];
     }
 
+    /**
+     * @throws UnknownUnitOfMeasureException
+     */
     public function get(Hozzavalo $hozzavalo, Hozzavalo $hozzaadottHozzavalo): MertekegysegValto
     {
         foreach ($this->elements as $element) {

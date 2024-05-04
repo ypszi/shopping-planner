@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Hozzavalo;
 
+use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Exception\UnknownUnitOfMeasureException;
 use PeterPecosz\Kajatervezo\Mertekegyseg\MertekegysegAtvalto;
 
 class HozzavaloSor
@@ -98,10 +99,15 @@ class HozzavaloSor
             return $hozzavalo;
         }
 
-        $newMennyiseg = $this->mertekegysegAtvalto->valt(
-            $hozzavalo,
-            $hozzavalo->withMertekegyseg($newMertekegyseg)
-        );
+        try {
+            $newMennyiseg = $this->mertekegysegAtvalto->valt(
+                $hozzavalo,
+                $hozzavalo->withMertekegyseg($newMertekegyseg)
+            );
+        } catch (UnknownUnitOfMeasureException) {
+            $newMennyiseg    = $hozzavalo->getMennyiseg();
+            $newMertekegyseg = $hozzavalo->getMertekegyseg();
+        }
 
         return $hozzavalo
             ->withMennyiseg($newMennyiseg)
