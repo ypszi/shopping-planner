@@ -68,19 +68,53 @@ class HozzavaloSorok
      */
     private function sortHozzavalok(): array
     {
-        $orderedHozzavalok = [];
+        return $this->sortByName($this->sortByMertekegyseg($this->groupHozzavalokByKategoria()));
+    }
+
+    /**
+     * @return array<string, Hozzavalo[]>
+     */
+    private function groupHozzavalokByKategoria(): array
+    {
+        $hozzavalokByKategoria = [];
         foreach ($this->hozzavaloSorok as $hozzavaloSor) {
             foreach ($hozzavaloSor->getHozzavalokPerKategoria() as $kategoria => $hozzavalo) {
-                $orderedHozzavalok[$kategoria][] = $hozzavalo;
+                $hozzavalokByKategoria[$kategoria][] = $hozzavalo;
             }
         }
 
-        foreach ($orderedHozzavalok as &$orderedHozzavalo) {
-            usort($orderedHozzavalo, function (Hozzavalo $hozzavalo1, Hozzavalo $hozzavalo2) {
+        return $hozzavalokByKategoria;
+    }
+
+    /**
+     * @param array<string, Hozzavalo[]> $hozzavalokByKategoria
+     *
+     * @return array<string, Hozzavalo[]>
+     */
+    private function sortByMertekegyseg(array $hozzavalokByKategoria): array
+    {
+        foreach ($hozzavalokByKategoria as &$hozzavalok) {
+            usort($hozzavalok, function (Hozzavalo $hozzavalo1, Hozzavalo $hozzavalo2) {
+                return strnatcmp($hozzavalo1->getMertekegyseg(), $hozzavalo2->getMertekegyseg());
+            });
+        }
+
+        return $hozzavalokByKategoria;
+    }
+
+    /**
+     * @param array<string, Hozzavalo[]> $hozzavalokByKategoria
+     *
+     * @return array<string, Hozzavalo[]>
+     */
+    private function sortByName(array $hozzavalokByKategoria): array
+    {
+        foreach ($hozzavalokByKategoria as &$hozzavalok) {
+            usort($hozzavalok, function (Hozzavalo $hozzavalo1, Hozzavalo $hozzavalo2) {
                 return strnatcmp($hozzavalo1::name(), $hozzavalo2::name());
             });
         }
 
-        return $orderedHozzavalok;
+        return $hozzavalokByKategoria;
     }
 }
