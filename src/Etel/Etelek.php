@@ -4,9 +4,14 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Etel;
 
-use PeterPecosz\Kajatervezo\Hozzavalo\HozzavaloSorok;
+use ArrayIterator;
+use IteratorAggregate;
+use Traversable;
 
-class Etelek
+/**
+ * @template-implements IteratorAggregate<int, Etel>
+ */
+class Etelek implements IteratorAggregate
 {
     /** @var Etel[] */
     private array $etelek;
@@ -23,24 +28,16 @@ class Etelek
         return $this;
     }
 
-    public function createHozzavaloSorok(): HozzavaloSorok
-    {
-        $hozzavaloSorok = new HozzavaloSorok();
-
-        foreach ($this->etelek as $etel) {
-            foreach ($etel->hozzavalok() as $hozzavalo) {
-                $hozzavaloSorok->addHozzavalo($hozzavalo);
-            }
-        }
-
-        return $hozzavaloSorok->sort();
-    }
-
     /**
      * @return Etel[]
      */
     public function toArray(): array
     {
         return $this->etelek;
+    }
+
+    #[\Override] public function getIterator(): Traversable
+    {
+        return new ArrayIterator($this->etelek);
     }
 }

@@ -8,6 +8,9 @@ use PeterPecosz\Kajatervezo\Etel\Etel;
 use PeterPecosz\Kajatervezo\Etel\Etelek;
 use PeterPecosz\Kajatervezo\Etel\Factory\EtelFactory;
 use PeterPecosz\Kajatervezo\Hozzavalo\HozzavaloKategoria;
+use PeterPecosz\Kajatervezo\Supermarket\KauflandTrier;
+use PeterPecosz\Kajatervezo\Supermarket\Supermarket;
+use PeterPecosz\Kajatervezo\Supermarket\SupermarketFactory;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -15,6 +18,8 @@ use Symfony\Component\Console\Style\SymfonyStyle;
 
 class PlanShoppingCommand extends Command
 {
+    private Supermarket $supermarket;
+
     private Etelek $etelek;
 
     private SymfonyStyle $io;
@@ -43,6 +48,17 @@ class PlanShoppingCommand extends Command
             return;
         }
 
+        /** @var string $supermarket */
+        $supermarket = $this->io->choice(
+            question: 'Hova mész bevásárolni?',
+            choices:  [
+                          KauflandTrier::name(),
+                      ],
+            default:  KauflandTrier::name()
+        );
+
+        $this->supermarket = SupermarketFactory::create($supermarket);
+
         /** @var string[] $kajaNames */
         $kajaNames = $this->io->choice(
             question:    'Melyik kajákhoz kell bevásárolni?',
@@ -65,10 +81,13 @@ class PlanShoppingCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
-        $this->io->writeln('Hozzávalók:');
+        $this->io->section('Bevásárlóközpont:');
+        $this->io->text($this->supermarket::name());
+
+        $this->io->section('Hozzávalók:');
         $this->io->table(
             HozzavaloKategoria::SORREND,
-            $this->etelek->createHozzavaloSorok()->toArray()
+            $this->supermarket->createHozzavaloSorok($this->etelek)->toArray()
         );
 
         return Command::SUCCESS;
@@ -76,6 +95,8 @@ class PlanShoppingCommand extends Command
 
     private function prepareTestingRun(): void
     {
+        $this->supermarket = SupermarketFactory::create(KauflandTrier::name());
+
         foreach (EtelFactory::listAvailableEtelek() as $etelName) {
             $this->etelek->add(EtelFactory::create($etelName));
         }
