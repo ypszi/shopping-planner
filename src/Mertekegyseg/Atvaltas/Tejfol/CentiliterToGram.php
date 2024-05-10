@@ -21,6 +21,6 @@ class CentiliterToGram extends MertekegysegValto
 
     #[\Override] protected function getMultiplier(): float
     {
-        return 1;
+        return 1.0;
     }
 }

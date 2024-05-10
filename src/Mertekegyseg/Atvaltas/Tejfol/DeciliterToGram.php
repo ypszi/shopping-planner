@@ -21,6 +21,6 @@ class DeciliterToGram extends MertekegysegValto
 
     #[\Override] protected function getMultiplier(): float
     {
-        return 10;
+        return 10.0;
     }
 }
