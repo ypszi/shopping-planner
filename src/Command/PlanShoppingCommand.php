@@ -12,6 +12,7 @@ use PeterPecosz\Kajatervezo\Supermarket\KauflandTrier;
 use PeterPecosz\Kajatervezo\Supermarket\Supermarket;
 use PeterPecosz\Kajatervezo\Supermarket\SupermarketFactory;
 use Symfony\Component\Console\Command\Command;
+use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
@@ -24,12 +25,18 @@ class PlanShoppingCommand extends Command
 
     private SymfonyStyle $io;
 
+    /** @var string[] */
+    private array $availableFoodNames;
+
     protected function configure(): void
     {
+        $this->availableFoodNames = array_combine(range(1, count(EtelFactory::listAvailableEtelek())), array_values(EtelFactory::listAvailableEtelek()));
+
         $this
             ->setName('plan:shopping')
             ->setDescription('Megtervezi a hozzávalók bevásárlását')
-            ->addOption('testing', 't');
+            ->addOption('testing', 't')
+            ->addArgument('foods', InputArgument::OPTIONAL, 'List of food names to prepare for', null, $this->availableFoodNames);
     }
 
     #[\Override] protected function initialize(InputInterface $input, OutputInterface $output): void
@@ -51,22 +58,23 @@ class PlanShoppingCommand extends Command
         /** @var string $supermarket */
         $supermarket = $this->io->choice(
             question: 'Hova mész bevásárolni?',
-            choices:  [
-                          KauflandTrier::name(),
-                      ],
-            default:  KauflandTrier::name()
+            choices: [
+                KauflandTrier::name(),
+            ],
+            default: KauflandTrier::name()
         );
 
         $this->supermarket = SupermarketFactory::create($supermarket);
 
-        /** @var string[] $kajaNames */
-        $kajaNames = $this->io->choice(
-            question:    'Melyik kajákhoz kell bevásárolni?',
-            choices:     array_combine(range(1, count(EtelFactory::listAvailableEtelek())), array_values(EtelFactory::listAvailableEtelek())),
-            multiSelect: true
-        );
+        /** @var string[] $foodNames */
+        $foodNames = array_map('trim', explode(',', $input->getArgument('foods') ?? ''))
+            ?: $this->io->choice(
+                question: 'Melyik kajákhoz kell bevásárolni?',
+                choices: $this->availableFoodNames,
+                multiSelect: true
+            );
 
-        foreach ($kajaNames as $kajaName) {
+        foreach ($foodNames as $kajaName) {
             $etel = EtelFactory::create($kajaName);
             $adag = (int)$this->io->ask(
                 sprintf('Hány adagot főzöl ebből: "%s"?', $kajaName),
