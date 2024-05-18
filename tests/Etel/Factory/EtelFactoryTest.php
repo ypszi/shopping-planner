@@ -30,6 +30,6 @@ class EtelFactoryTest extends TestCase
     #[Test]
     public function testListAvailableEtelek(): void
     {
-        $this->assertCount(49, EtelFactory::listAvailableEtelek());
+        $this->assertCount(50, EtelFactory::listAvailableEtelek());
     }
 }
