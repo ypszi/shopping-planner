@@ -4,17 +4,19 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Hozzavalo;
 
+use PeterPecosz\Kajatervezo\Supermarket\Supermarket;
+
 class HozzavaloSorok
 {
+    private Supermarket $supermarket;
+
     /** @var HozzavaloSor[] */
     private array $hozzavaloSorok;
 
-    /**
-     * @param HozzavaloSor[] $hozzavaloSorok
-     */
-    public function __construct(array $hozzavaloSorok = [])
+    public function __construct(Supermarket $supermarket)
     {
-        $this->hozzavaloSorok = $hozzavaloSorok;
+        $this->supermarket    = $supermarket;
+        $this->hozzavaloSorok = [];
     }
 
     public function add(HozzavaloSor $hozzavaloSor): self
@@ -35,7 +37,7 @@ class HozzavaloSorok
     public function sort(): self
     {
         $sortedHozzavalok = $this->sortHozzavalok();
-        $hozzavaloSorok   = new self();
+        $hozzavaloSorok   = new self($this->supermarket);
 
         foreach ($sortedHozzavalok as $hozzavalok) {
             foreach ($hozzavalok as $hozzavalo) {
@@ -53,6 +55,7 @@ class HozzavaloSorok
         foreach ($this->hozzavaloSorok as $hozzavaloSor) {
             if ($hozzavaloSor->canAdd($hozzavalo)) {
                 $hozzavaloSor->add($hozzavalo);
+                $hozzavaloSor->sort($this->supermarket::sorrend());
 
                 return;
             }
@@ -60,6 +63,8 @@ class HozzavaloSorok
 
         $nextHozzavaloSor = new HozzavaloSor();
         $nextHozzavaloSor->add($hozzavalo);
+        $nextHozzavaloSor->sort($this->supermarket::sorrend());
+
         $this->add($nextHozzavaloSor);
     }
 

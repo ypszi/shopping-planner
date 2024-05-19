@@ -10,10 +10,13 @@ abstract class Hozzavalo
 
     private string $mertekegyseg;
 
-    public function __construct(float $mennyiseg, string $mertekegyseg)
+    private Kategoria $kategoria;
+
+    public function __construct(float $mennyiseg, string $mertekegyseg, Kategoria $kategoria)
     {
         $this->mennyiseg    = $mennyiseg;
         $this->mertekegyseg = $mertekegyseg;
+        $this->kategoria    = $kategoria;
     }
 
     public function withMennyiseg(float $mennyiseg): self
@@ -32,9 +35,20 @@ abstract class Hozzavalo
         return $clone;
     }
 
+    public function withKategoria(Kategoria $kategoria): self
+    {
+        $clone            = clone $this;
+        $clone->kategoria = $kategoria;
+
+        return $clone;
+    }
+
     abstract public static function name(): string;
 
-    abstract public static function kategoria(): string;
+    public function kategoria(): Kategoria
+    {
+        return $this->kategoria;
+    }
 
     public static function mertekegysegPreference(): ?string
     {

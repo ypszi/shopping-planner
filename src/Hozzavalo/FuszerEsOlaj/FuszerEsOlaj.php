@@ -9,8 +9,8 @@ use PeterPecosz\Kajatervezo\Hozzavalo\HozzavaloKategoria;
 
 abstract class FuszerEsOlaj extends Hozzavalo
 {
-    #[\Override] public static function kategoria(): string
+    public function __construct(float $mennyiseg, string $mertekegyseg)
     {
-        return HozzavaloKategoria::FUSZER_ES_OLAJ;
+        parent::__construct($mennyiseg, $mertekegyseg, HozzavaloKategoria::FUSZER_ES_OLAJ);
     }
 }

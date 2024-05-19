@@ -9,8 +9,8 @@ use PeterPecosz\Kajatervezo\Hozzavalo\HozzavaloKategoria;
 
 abstract class Hus extends Hozzavalo
 {
-    #[\Override] public static function kategoria(): string
+    public function __construct(float $mennyiseg, string $mertekegyseg)
     {
-        return HozzavaloKategoria::HUS;
+        parent::__construct($mennyiseg, $mertekegyseg, HozzavaloKategoria::HUS);
     }
 }

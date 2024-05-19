@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace PeterPecosz\Kajatervezo\Supermarket;
 
 use PeterPecosz\Kajatervezo\Supermarket\Exception\UnknownSupermarketException;
+use PeterPecosz\Kajatervezo\Supermarket\KauflandTrier\KauflandTrier;
 
 class SupermarketFactory
 {

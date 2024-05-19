@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace PeterPecosz\Kajatervezo\Tests\Hozzavalo;
 
 use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
+use PeterPecosz\Kajatervezo\Hozzavalo\HozzavaloKategoria;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
@@ -16,14 +17,14 @@ class HozzavaloTest extends TestCase
     protected function setUp(): void
     {
         $this->testHozzavalo = new class(mennyiseg: 50, mertekegyseg: Mertekegyseg::DB) extends Hozzavalo {
+            public function __construct(float $mennyiseg, string $mertekegyseg)
+            {
+                parent::__construct($mennyiseg, $mertekegyseg, HozzavaloKategoria::HUS);
+            }
+
             #[\Override] public static function name(): string
             {
                 return 'Teszt Hozzavalo';
-            }
-
-            #[\Override] public static function kategoria(): string
-            {
-                return 'Teszt Kategoria';
             }
         };
     }
@@ -35,6 +36,7 @@ class HozzavaloTest extends TestCase
 
         $this->assertEquals(50, $testHozzavalo->getMennyiseg());
         $this->assertEquals(Mertekegyseg::KG, $testHozzavalo->getMertekegyseg());
+        $this->assertEquals(HozzavaloKategoria::HUS, $testHozzavalo->kategoria());
     }
 
     #[Test]
@@ -44,5 +46,16 @@ class HozzavaloTest extends TestCase
 
         $this->assertEquals(20, $testHozzavalo->getMennyiseg());
         $this->assertEquals(Mertekegyseg::DB, $testHozzavalo->getMertekegyseg());
+        $this->assertEquals(HozzavaloKategoria::HUS, $testHozzavalo->kategoria());
+    }
+
+    #[Test]
+    public function testWithKategoria(): void
+    {
+        $testHozzavalo = $this->testHozzavalo->withKategoria(HozzavaloKategoria::UDITOK);
+
+        $this->assertEquals(50, $testHozzavalo->getMennyiseg());
+        $this->assertEquals(Mertekegyseg::DB, $testHozzavalo->getMertekegyseg());
+        $this->assertEquals(HozzavaloKategoria::UDITOK, $testHozzavalo->kategoria());
     }
 }

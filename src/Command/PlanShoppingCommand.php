@@ -7,8 +7,8 @@ namespace PeterPecosz\Kajatervezo\Command;
 use PeterPecosz\Kajatervezo\Etel\Etel;
 use PeterPecosz\Kajatervezo\Etel\Etelek;
 use PeterPecosz\Kajatervezo\Etel\Factory\EtelFactory;
-use PeterPecosz\Kajatervezo\Hozzavalo\HozzavaloKategoria;
-use PeterPecosz\Kajatervezo\Supermarket\KauflandTrier;
+use PeterPecosz\Kajatervezo\Hozzavalo\HozzavalokByKategoria;
+use PeterPecosz\Kajatervezo\Supermarket\KauflandTrier\KauflandTrier;
 use PeterPecosz\Kajatervezo\Supermarket\Supermarket;
 use PeterPecosz\Kajatervezo\Supermarket\SupermarketFactory;
 use Symfony\Component\Console\Command\Command;
@@ -92,10 +92,15 @@ class PlanShoppingCommand extends Command
         $this->io->section('Bevásárlóközpont:');
         $this->io->text($this->supermarket::name());
 
+        $hozzavalokByKategoria = new HozzavalokByKategoria();
+        foreach ($this->etelek as $etel) {
+            $hozzavalokByKategoria->addMultipleHozzavalo($etel->hozzavalok());
+        }
+
         $this->io->section('Hozzávalók:');
         $this->io->table(
-            HozzavaloKategoria::SORREND,
-            $this->supermarket->createHozzavaloSorok($this->etelek)->toArray()
+            $this->supermarket::sorrend(),
+            $this->supermarket->toShoppingList($hozzavalokByKategoria)
         );
 
         return Command::SUCCESS;

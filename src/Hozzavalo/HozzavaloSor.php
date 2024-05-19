@@ -6,6 +6,7 @@ namespace PeterPecosz\Kajatervezo\Hozzavalo;
 
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Exception\UnknownUnitOfMeasureException;
 use PeterPecosz\Kajatervezo\Mertekegyseg\MertekegysegAtvalto;
+use PeterPecosz\Kajatervezo\Supermarket\KauflandTrier\KauflandTrier;
 
 class HozzavaloSor
 {
@@ -14,17 +15,10 @@ class HozzavaloSor
     /** @var array<string, Hozzavalo> */
     private array $hozzavalokPerKategoria;
 
-    /**
-     * @param array<Hozzavalo> $hozzavalok
-     */
-    public function __construct(array $hozzavalok = [])
+    public function __construct()
     {
         $this->mertekegysegAtvalto    = new MertekegysegAtvalto();
         $this->hozzavalokPerKategoria = [];
-
-        foreach ($hozzavalok as $hozzavalo) {
-            $this->add($hozzavalo);
-        }
     }
 
     /**
@@ -38,11 +32,10 @@ class HozzavaloSor
     public function add(Hozzavalo $hozzavalo): self
     {
         $hozzavalo           = $this->convertToPreference($hozzavalo);
-        $hozzaadottHozzavalo = $this->hozzavalokPerKategoria[$hozzavalo::kategoria()] ?? null;
+        $hozzaadottHozzavalo = $this->hozzavalokPerKategoria[$hozzavalo->kategoria()->value()] ?? null;
 
         if (empty($hozzaadottHozzavalo)) {
-            $this->hozzavalokPerKategoria[$hozzavalo::kategoria()] = $hozzavalo;
-            $this->sort();
+            $this->hozzavalokPerKategoria[$hozzavalo->kategoria()->value()] = $hozzavalo;
 
             return $this;
         }
@@ -53,10 +46,9 @@ class HozzavaloSor
                 $hozzaadottHozzavalo
             );
 
-            $this->hozzavalokPerKategoria[$hozzavalo::kategoria()] = $hozzaadottHozzavalo->withMennyiseg(
+            $this->hozzavalokPerKategoria[$hozzavalo->kategoria()->value()] = $hozzaadottHozzavalo->withMennyiseg(
                 $hozzaadottHozzavalo->getMennyiseg() + $newMennyiseg
             );
-            $this->sort();
 
             return $this;
         }
@@ -65,19 +57,17 @@ class HozzavaloSor
             $hozzaadottHozzavalo::name() === $hozzavalo::name()
             && $hozzaadottHozzavalo->getMertekegyseg() === $hozzavalo->getMertekegyseg()
         ) {
-            $this->hozzavalokPerKategoria[$hozzavalo::kategoria()] = $hozzaadottHozzavalo->withMennyiseg(
+            $this->hozzavalokPerKategoria[$hozzavalo->kategoria()->value()] = $hozzaadottHozzavalo->withMennyiseg(
                 $hozzaadottHozzavalo->getMennyiseg() + $hozzavalo->getMennyiseg()
             );
         }
-
-        $this->sort();
 
         return $this;
     }
 
     public function canAdd(Hozzavalo $hozzavalo): bool
     {
-        $hozzaadottHozzavalo = $this->hozzavalokPerKategoria[$hozzavalo::kategoria()] ?? null;
+        $hozzaadottHozzavalo = $this->hozzavalokPerKategoria[$hozzavalo->kategoria()->value()] ?? null;
 
         if (empty($hozzaadottHozzavalo)) {
             return true;
@@ -120,7 +110,7 @@ class HozzavaloSor
     public function toArray(): array
     {
         $sor = [];
-        foreach (HozzavaloKategoria::SORREND as $kategoria) {
+        foreach (KauflandTrier::sorrend() as $kategoria) {
             $hozzavalo = $this->hozzavalokPerKategoria[$kategoria] ?? null;
             $sor[]     = $hozzavalo ? (string)$hozzavalo : '';
         }
@@ -143,11 +133,14 @@ class HozzavaloSor
         return false;
     }
 
-    private function sort(): self
+    /**
+     * @param string[] $sorrend
+     */
+    public function sort(array $sorrend): self
     {
         uksort(
             $this->hozzavalokPerKategoria,
-            fn(string $hozzavaloKategoria1, string $hozzavaloKategoria2) => array_search($hozzavaloKategoria1, HozzavaloKategoria::SORREND) <=> array_search($hozzavaloKategoria2, HozzavaloKategoria::SORREND)
+            fn(string $hozzavaloKategoria1, string $hozzavaloKategoria2) => array_search($hozzavaloKategoria1, $sorrend) <=> array_search($hozzavaloKategoria2, $sorrend)
         );
 
         return $this;

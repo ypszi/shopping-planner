@@ -9,8 +9,8 @@ use PeterPecosz\Kajatervezo\Hozzavalo\HozzavaloKategoria;
 
 abstract class Zoldseg extends Hozzavalo
 {
-    #[\Override] public static function kategoria(): string
+    public function __construct(float $mennyiseg, string $mertekegyseg)
     {
-        return HozzavaloKategoria::ZOLDSEG;
+        parent::__construct($mennyiseg, $mertekegyseg, HozzavaloKategoria::ZOLDSEG);
     }
 }

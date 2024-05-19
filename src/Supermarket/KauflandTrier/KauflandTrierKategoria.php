@@ -2,9 +2,11 @@
 
 declare(strict_types=1);
 
-namespace PeterPecosz\Kajatervezo\Hozzavalo;
+namespace PeterPecosz\Kajatervezo\Supermarket\KauflandTrier;
 
-enum HozzavaloKategoria: string implements Kategoria
+use PeterPecosz\Kajatervezo\Hozzavalo\Kategoria;
+
+enum KauflandTrierKategoria: string implements Kategoria
 {
     case ZOLDSEG = 'Zöldség';
     case FUSZER_ES_OLAJ = 'Fűszer és Olaj';

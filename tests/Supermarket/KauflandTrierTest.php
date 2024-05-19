@@ -6,11 +6,12 @@ namespace PeterPecosz\Kajatervezo\Tests\Supermarket;
 
 use PeterPecosz\Kajatervezo\Etel\Etel;
 use PeterPecosz\Kajatervezo\Etel\Etelek;
+use PeterPecosz\Kajatervezo\Hozzavalo\HozzavalokByKategoria;
 use PeterPecosz\Kajatervezo\Hozzavalo\HozzavaloSor;
-use PeterPecosz\Kajatervezo\Hozzavalo\HozzavaloSorok;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hutos\Tojas;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
-use PeterPecosz\Kajatervezo\Supermarket\KauflandTrier;
+use PeterPecosz\Kajatervezo\Supermarket\KauflandTrier\KauflandTrier;
+use PeterPecosz\Kajatervezo\Supermarket\KauflandTrier\KauflandTrierKategoriaMap;
 use PeterPecosz\Kajatervezo\Supermarket\Supermarket;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
@@ -47,7 +48,7 @@ class KauflandTrierTest extends TestCase
             }
         };
 
-        $this->supermarket = new KauflandTrier();
+        $this->supermarket = new KauflandTrier(new KauflandTrierKategoriaMap());
     }
 
     #[Test]
@@ -57,10 +58,49 @@ class KauflandTrierTest extends TestCase
     }
 
     #[Test]
-    public function testCreateHozzavaloSorok(): void
+    public function testSorrend(): void
     {
-        $hozzavaloSorok = $this->supermarket->createHozzavaloSorok(new Etelek([$this->testFood]));
+        $this->assertEquals(
+            [
+                'Zöldség',
+                'Fűszer és Olaj',
+                'Hosszú sorok',
+                'Hús',
+                'Hűtős',
+                'Hűtős után',
+                'Üditők',
+            ],
+            $this->supermarket::sorrend()
+        );
+    }
 
-        $this->assertEquals(new HozzavaloSorok([new HozzavaloSor([new Tojas(1, Mertekegyseg::DB)])]), $hozzavaloSorok);
+    #[Test]
+    public function testToShoppingList(): void
+    {
+        $hozzavalokByKategoria = new HozzavalokByKategoria();
+
+        foreach (new Etelek([$this->testFood]) as $etel) {
+            $hozzavalokByKategoria->addMultipleHozzavalo($etel->hozzavalok());
+        }
+
+        $shoppingList = $this->supermarket->toShoppingList($hozzavalokByKategoria);
+
+        $hozzavaloSor = new HozzavaloSor();
+        $hozzavaloSor->add(new Tojas(1, Mertekegyseg::DB));
+
+        $this->assertEquals(
+            [
+                [
+                    '',
+                    '',
+                    '',
+                    '',
+                    '1.00 db Tojás',
+                    '',
+                    '',
+                ],
+            ],
+            $shoppingList
+        );
     }
 }
