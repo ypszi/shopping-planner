@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Etel;
 
-use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Kenyer;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hus\Felvagott;
-use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\GoudaSajt;
 use PeterPecosz\Kajatervezo\Hozzavalo\HutosUtan\Tej;
+use PeterPecosz\Kajatervezo\Hozzavalo\Pekaru\Kenyer;
+use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\GoudaSajt;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Kigyouborka;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Koktelparadicsom;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;

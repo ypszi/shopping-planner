@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok;
+namespace PeterPecosz\Kajatervezo\Hozzavalo\Pekaru;
 
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
-class Kenyer extends HosszuSorok
+class Kenyer extends Pekaru
 {
     #[\Override] public static function name(): string
     {

@@ -16,6 +16,7 @@ enum HozzavaloKategoria: string implements Kategoria
     case TEJTERMEK = 'Tejtermék';
     case HUTOS_UTAN = 'Hűtős után';
     case UDITOK = 'Üditők';
+    case PEKARU = 'Pékárú';
 
     #[\Override] public function value(): string
     {
