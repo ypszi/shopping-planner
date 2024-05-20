@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace PeterPecosz\Kajatervezo\Etel;
 
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\So;
-use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\CsuszaTeszta;
+use PeterPecosz\Kajatervezo\Hozzavalo\TartosElelmiszer\CsuszaTeszta;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hus\KolozsvariSzalonna;
 use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\Tejfol;
 use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\Turo;

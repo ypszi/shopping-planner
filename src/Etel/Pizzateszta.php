@@ -6,9 +6,9 @@ namespace PeterPecosz\Kajatervezo\Etel;
 
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\So;
 use PeterPecosz\Kajatervezo\Hozzavalo\Olaj\OlivaOlaj;
-use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Cukor;
-use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Eleszto;
-use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Finomliszt;
+use PeterPecosz\Kajatervezo\Hozzavalo\TartosElelmiszer\Cukor;
+use PeterPecosz\Kajatervezo\Hozzavalo\TartosElelmiszer\Eleszto;
+use PeterPecosz\Kajatervezo\Hozzavalo\TartosElelmiszer\Finomliszt;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class Pizzateszta extends Etel

@@ -9,7 +9,7 @@ use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\FuszerPaprika;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Majoranna;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\So;
 use PeterPecosz\Kajatervezo\Hozzavalo\Olaj\NapraforgoOlaj;
-use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Finomliszt;
+use PeterPecosz\Kajatervezo\Hozzavalo\TartosElelmiszer\Finomliszt;
 use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\Tejfol;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Burgonya;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;

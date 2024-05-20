@@ -47,7 +47,7 @@ class KauflandTrierKategoriaMapTest extends TestCase
                 KauflandTrierKategoria::HOSSZU_SOROK,
             ],
             [
-                HozzavaloKategoria::HOSSZU_SOROK,
+                HozzavaloKategoria::TARTOS_ELELMISZER,
                 KauflandTrierKategoria::HOSSZU_SOROK,
             ],
             [

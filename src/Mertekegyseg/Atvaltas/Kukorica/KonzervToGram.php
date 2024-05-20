@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kukorica;
 
-use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\KukoricaKonzerv;
+use PeterPecosz\Kajatervezo\Hozzavalo\TartosElelmiszer\KukoricaKonzerv;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\MertekegysegValto;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;

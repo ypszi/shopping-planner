@@ -6,12 +6,12 @@ namespace PeterPecosz\Kajatervezo\Tests\Mertekegyseg\Atvaltas;
 
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\So;
 use PeterPecosz\Kajatervezo\Hozzavalo\Olaj\NapraforgoOlaj;
-use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Cukor;
-use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Finomliszt;
-use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\KukoricaKonzerv;
-use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Liszt;
-use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Porcukor;
-use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\VorosbabKonzerv;
+use PeterPecosz\Kajatervezo\Hozzavalo\TartosElelmiszer\Cukor;
+use PeterPecosz\Kajatervezo\Hozzavalo\TartosElelmiszer\Finomliszt;
+use PeterPecosz\Kajatervezo\Hozzavalo\TartosElelmiszer\KukoricaKonzerv;
+use PeterPecosz\Kajatervezo\Hozzavalo\TartosElelmiszer\Liszt;
+use PeterPecosz\Kajatervezo\Hozzavalo\TartosElelmiszer\Porcukor;
+use PeterPecosz\Kajatervezo\Hozzavalo\TartosElelmiszer\VorosbabKonzerv;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hus\Csirkemell;
 use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\Tejfol;

@@ -8,7 +8,7 @@ use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Chili;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Mogyoro;
 use PeterPecosz\Kajatervezo\Hozzavalo\Olaj\NapraforgoOlaj;
 use PeterPecosz\Kajatervezo\Hozzavalo\Olaj\SzezamOlaj;
-use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Cukor;
+use PeterPecosz\Kajatervezo\Hozzavalo\TartosElelmiszer\Cukor;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hus\Csirkemell;
 use PeterPecosz\Kajatervezo\Hozzavalo\HutosUtan\HalSzosz;
 use PeterPecosz\Kajatervezo\Hozzavalo\HutosUtan\RizsTeszta;

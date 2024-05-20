@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Porcukor;
 
-use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Porcukor;
+use PeterPecosz\Kajatervezo\Hozzavalo\TartosElelmiszer\Porcukor;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\MertekegysegValto;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;

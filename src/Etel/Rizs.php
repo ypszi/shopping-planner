@@ -6,7 +6,7 @@ namespace PeterPecosz\Kajatervezo\Etel;
 
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Bors;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\So;
-use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Rizs as HozzavaloRizs;
+use PeterPecosz\Kajatervezo\Hozzavalo\TartosElelmiszer\Rizs as HozzavaloRizs;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class Rizs extends Etel
