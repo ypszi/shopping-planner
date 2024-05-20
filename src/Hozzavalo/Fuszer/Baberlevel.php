@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj;
+namespace PeterPecosz\Kajatervezo\Hozzavalo\Fuszer;
 
-class Baberlevel extends FuszerEsOlaj
+class Baberlevel extends Fuszer
 {
     #[\Override] public static function name(): string
     {

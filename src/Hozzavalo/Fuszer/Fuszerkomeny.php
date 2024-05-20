@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj;
+namespace PeterPecosz\Kajatervezo\Hozzavalo\Fuszer;
 
 class Fuszerkomeny extends Komenymag
 {

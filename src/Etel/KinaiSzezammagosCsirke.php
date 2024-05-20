@@ -4,16 +4,16 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Etel;
 
-use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\Chili;
-use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\NapraforgoOlaj;
+use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Chili;
+use PeterPecosz\Kajatervezo\Hozzavalo\Olaj\NapraforgoOlaj;
 use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Finomliszt;
 use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Kemenyito;
 use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Mez;
 use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Sutopor;
 use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Szezammag;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hus\Csirkemell;
-use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\Tojas;
 use PeterPecosz\Kajatervezo\Hozzavalo\HutosUtan\Ketchup;
+use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\Tojas;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class KinaiSzezammagosCsirke extends Etel

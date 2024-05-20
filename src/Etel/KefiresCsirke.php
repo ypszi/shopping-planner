@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Etel;
 
-use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\Fuszerkeverek;
-use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\NapraforgoOlaj;
-use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\PirosPaprika;
+use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Fuszerkeverek;
+use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\PirosPaprika;
+use PeterPecosz\Kajatervezo\Hozzavalo\Olaj\NapraforgoOlaj;
 use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Liszt;
 use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Sutopor;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hus\Csirkemell;

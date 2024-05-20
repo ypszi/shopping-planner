@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj;
+namespace PeterPecosz\Kajatervezo\Hozzavalo\Fuszer;
 
-class Chili extends FuszerEsOlaj
+class Chili extends Fuszer
 {
     #[\Override] public static function name(): string
     {

@@ -5,23 +5,79 @@ declare(strict_types=1);
 namespace PeterPecosz\Kajatervezo\Tests\Supermarket\KauflandTrier;
 
 use PeterPecosz\Kajatervezo\Hozzavalo\HozzavaloKategoria;
+use PeterPecosz\Kajatervezo\Hozzavalo\Kategoria;
+use PeterPecosz\Kajatervezo\Supermarket\KauflandTrier\KauflandTrierKategoria;
 use PeterPecosz\Kajatervezo\Supermarket\KauflandTrier\KauflandTrierKategoriaMap;
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 
 class KauflandTrierKategoriaMapTest extends TestCase
 {
     #[Test]
-    public function testMap(): void
+    #[DataProvider('kategoriaMapDataProvider')]
+    public function testMap(Kategoria $from, Kategoria $to): void
     {
         $map = new KauflandTrierKategoriaMap();
 
-        $this->assertEquals(HozzavaloKategoria::ZOLDSEG->value(), $map->map(HozzavaloKategoria::ZOLDSEG)->value());
-        $this->assertEquals(HozzavaloKategoria::FUSZER_ES_OLAJ->value(), $map->map(HozzavaloKategoria::FUSZER_ES_OLAJ)->value());
-        $this->assertEquals(HozzavaloKategoria::HOSSZU_SOROK->value(), $map->map(HozzavaloKategoria::HOSSZU_SOROK)->value());
-        $this->assertEquals(HozzavaloKategoria::HUS->value(), $map->map(HozzavaloKategoria::HUS)->value());
-        $this->assertEquals(HozzavaloKategoria::HUTOS->value(), $map->map(HozzavaloKategoria::HUTOS)->value());
-        $this->assertEquals(HozzavaloKategoria::HUTOS_UTAN->value(), $map->map(HozzavaloKategoria::HUTOS_UTAN)->value());
-        $this->assertEquals(HozzavaloKategoria::UDITOK->value(), $map->map(HozzavaloKategoria::UDITOK)->value());
+        $this->assertEquals($to->value(), $map->map($from)->value());
+    }
+
+    public static function kategoriaMapDataProvider(): array
+    {
+        return [
+            [
+                HozzavaloKategoria::ZOLDSEG,
+                KauflandTrierKategoria::ZOLDSEG,
+            ],
+            [
+                HozzavaloKategoria::OLAJ,
+                KauflandTrierKategoria::FUSZER_ES_OLAJ,
+            ],
+            [
+                HozzavaloKategoria::FUSZER,
+                KauflandTrierKategoria::FUSZER_ES_OLAJ,
+            ],
+            [
+                HozzavaloKategoria::BOR,
+                KauflandTrierKategoria::HOSSZU_SOROK,
+            ],
+            [
+                HozzavaloKategoria::PEKARU,
+                KauflandTrierKategoria::HOSSZU_SOROK,
+            ],
+            [
+                HozzavaloKategoria::HOSSZU_SOROK,
+                KauflandTrierKategoria::HOSSZU_SOROK,
+            ],
+            [
+                HozzavaloKategoria::FELVAGOTT,
+                KauflandTrierKategoria::HUS,
+            ],
+            [
+                HozzavaloKategoria::HUS,
+                KauflandTrierKategoria::HUS,
+            ],
+            [
+                HozzavaloKategoria::HUTOS,
+                KauflandTrierKategoria::HUTOS,
+            ],
+            [
+                HozzavaloKategoria::MIRELIT,
+                KauflandTrierKategoria::HUTOS,
+            ],
+            [
+                HozzavaloKategoria::TEJTERMEK,
+                KauflandTrierKategoria::HUTOS,
+            ],
+            [
+                HozzavaloKategoria::HUTOS_UTAN,
+                KauflandTrierKategoria::HUTOS_UTAN,
+            ],
+            [
+                HozzavaloKategoria::UDITOK,
+                KauflandTrierKategoria::UDITOK,
+            ],
+        ];
     }
 }

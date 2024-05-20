@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Etel;
 
-use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\ErolevesKocka;
-use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\NapraforgoOlaj;
-use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\Petrezselyem;
-use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\Tarkony;
+use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\ErolevesKocka;
+use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Petrezselyem;
+use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Tarkony;
+use PeterPecosz\Kajatervezo\Hozzavalo\Olaj\NapraforgoOlaj;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hus\Csirkemell;
 use PeterPecosz\Kajatervezo\Hozzavalo\HutosUtan\Fozotejszin;
 use PeterPecosz\Kajatervezo\Hozzavalo\Mirelit\ZoldborsoMirelit;
