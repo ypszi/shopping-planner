@@ -38,7 +38,7 @@ class KauflandTrier implements Supermarket
             KauflandTrierKategoria::HUS->value,
             KauflandTrierKategoria::HUTOS->value,
             KauflandTrierKategoria::HUTOS_UTAN->value,
-            KauflandTrierKategoria::UDITOK->value,
+            KauflandTrierKategoria::UDITO->value,
         ];
     }
 

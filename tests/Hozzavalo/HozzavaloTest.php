@@ -52,10 +52,10 @@ class HozzavaloTest extends TestCase
     #[Test]
     public function testWithKategoria(): void
     {
-        $testHozzavalo = $this->testHozzavalo->withKategoria(HozzavaloKategoria::UDITOK);
+        $testHozzavalo = $this->testHozzavalo->withKategoria(HozzavaloKategoria::UDITO);
 
         $this->assertEquals(50, $testHozzavalo->getMennyiseg());
         $this->assertEquals(Mertekegyseg::DB, $testHozzavalo->getMertekegyseg());
-        $this->assertEquals(HozzavaloKategoria::UDITOK, $testHozzavalo->kategoria());
+        $this->assertEquals(HozzavaloKategoria::UDITO, $testHozzavalo->kategoria());
     }
 }

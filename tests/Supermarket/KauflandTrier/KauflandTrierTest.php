@@ -69,7 +69,7 @@ class KauflandTrierTest extends TestCase
                 'Hús',
                 'Hűtős',
                 'Hűtős után',
-                'Üditők',
+                'Üditő',
             ],
             $this->supermarket::sorrend()
         );

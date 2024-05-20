@@ -79,8 +79,8 @@ class KauflandTrierKategoriaMapTest extends TestCase
                 KauflandTrierKategoria::HUTOS_UTAN,
             ],
             [
-                HozzavaloKategoria::UDITOK,
-                KauflandTrierKategoria::UDITOK,
+                HozzavaloKategoria::UDITO,
+                KauflandTrierKategoria::UDITO,
             ],
         ];
     }

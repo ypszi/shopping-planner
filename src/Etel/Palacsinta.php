@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Etel;
 
-use PeterPecosz\Kajatervezo\Hozzavalo\HutosUtan\Szodaviz;
 use PeterPecosz\Kajatervezo\Hozzavalo\Olaj\NapraforgoOlaj;
 use PeterPecosz\Kajatervezo\Hozzavalo\TartosElelmiszer\Cukor;
 use PeterPecosz\Kajatervezo\Hozzavalo\TartosElelmiszer\Finomliszt;
 use PeterPecosz\Kajatervezo\Hozzavalo\TartosElelmiszer\VaniliasCukor;
 use PeterPecosz\Kajatervezo\Hozzavalo\TartosTejtermek\Tej;
 use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\Tojas;
+use PeterPecosz\Kajatervezo\Hozzavalo\Udito\Szodaviz;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class Palacsinta extends Etel

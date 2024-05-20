@@ -14,7 +14,7 @@ enum KauflandTrierKategoria: string implements Kategoria
     case HUS = 'Hús';
     case HUTOS = 'Hűtős';
     case HUTOS_UTAN = 'Hűtős után';
-    case UDITOK = 'Üditők';
+    case UDITO = 'Üditő';
 
     #[\Override] public function value(): string
     {
