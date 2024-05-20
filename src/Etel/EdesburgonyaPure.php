@@ -6,7 +6,7 @@ namespace PeterPecosz\Kajatervezo\Etel;
 
 use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\So;
 use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\Szerecsendio;
-use PeterPecosz\Kajatervezo\Hozzavalo\Hutos\MozzarellaSajt;
+use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\MozzarellaSajt;
 use PeterPecosz\Kajatervezo\Hozzavalo\HutosUtan\Vaj;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Edesburgonya;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Fokhagyma;

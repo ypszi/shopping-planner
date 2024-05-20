@@ -7,8 +7,8 @@ namespace PeterPecosz\Kajatervezo\Etel;
 use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\So;
 use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\CsuszaTeszta;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hus\KolozsvariSzalonna;
-use PeterPecosz\Kajatervezo\Hozzavalo\Hutos\Tejfol;
-use PeterPecosz\Kajatervezo\Hozzavalo\Hutos\Turo;
+use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\Tejfol;
+use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\Turo;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class TurosTeszta extends Etel

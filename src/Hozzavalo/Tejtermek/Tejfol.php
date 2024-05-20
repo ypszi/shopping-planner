@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace PeterPecosz\Kajatervezo\Hozzavalo\Hutos;
+namespace PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek;
 
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
-class Tejfol extends Hutos
+class Tejfol extends Tejtermek
 {
     #[\Override] public static function name(): string
     {

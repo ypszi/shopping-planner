@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace PeterPecosz\Kajatervezo\Hozzavalo\Hutos;
+namespace PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek;
 
-class Turo extends Hutos
+class Turo extends Tejtermek
 {
     #[\Override] public static function name(): string
     {

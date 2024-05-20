@@ -10,7 +10,7 @@ use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\PirosPaprika;
 use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Liszt;
 use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Sutopor;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hus\Csirkemell;
-use PeterPecosz\Kajatervezo\Hozzavalo\Hutos\Kefir;
+use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\Kefir;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class KefiresCsirke extends Etel

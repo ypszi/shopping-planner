@@ -10,7 +10,7 @@ use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\Majoranna;
 use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\NapraforgoOlaj;
 use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\So;
 use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Finomliszt;
-use PeterPecosz\Kajatervezo\Hozzavalo\Hutos\Tejfol;
+use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\Tejfol;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Burgonya;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 

@@ -10,8 +10,8 @@ use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\OlivaOlaj;
 use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\Petrezselyem;
 use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\So;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hus\Csirkemell;
-use PeterPecosz\Kajatervezo\Hozzavalo\Hutos\GoudaSajt;
-use PeterPecosz\Kajatervezo\Hozzavalo\Hutos\Tejfol;
+use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\GoudaSajt;
+use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\Tejfol;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class TejfolosSajtosCsirkemell extends Etel

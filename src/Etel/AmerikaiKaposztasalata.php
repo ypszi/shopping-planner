@@ -7,7 +7,7 @@ namespace PeterPecosz\Kajatervezo\Etel;
 use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\Bors;
 use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\So;
 use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Cukor;
-use PeterPecosz\Kajatervezo\Hozzavalo\Hutos\Tejfol;
+use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\Tejfol;
 use PeterPecosz\Kajatervezo\Hozzavalo\HutosUtan\Majonez;
 use PeterPecosz\Kajatervezo\Hozzavalo\HutosUtan\Mustar;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Citrom;

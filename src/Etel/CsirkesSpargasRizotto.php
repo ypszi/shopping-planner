@@ -11,7 +11,7 @@ use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Feherbor;
 use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\HuslevesKocka;
 use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\RizottoRizs;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hus\Csirkemell;
-use PeterPecosz\Kajatervezo\Hozzavalo\Hutos\ParmezanSajt;
+use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\ParmezanSajt;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Fokhagyma;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Sparga;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Voroshagyma;

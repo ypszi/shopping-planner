@@ -16,7 +16,7 @@ use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\SpagettiTeszta;
 use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\VorosborSzaraz;
 use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\WorcesterSzosz;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hus\DaraltHus;
-use PeterPecosz\Kajatervezo\Hozzavalo\Hutos\ParmezanSajt;
+use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\ParmezanSajt;
 use PeterPecosz\Kajatervezo\Hozzavalo\HutosUtan\Tej;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Fokhagyma;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Sargarepa;
