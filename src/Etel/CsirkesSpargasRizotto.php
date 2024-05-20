@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Etel;
 
+use PeterPecosz\Kajatervezo\Hozzavalo\Bor\Feherbor;
 use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\Bors;
 use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\OlivaOlaj;
 use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\So;
-use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Feherbor;
 use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\HuslevesKocka;
 use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\RizottoRizs;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hus\Csirkemell;

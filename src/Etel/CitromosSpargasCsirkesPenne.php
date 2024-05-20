@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Etel;
 
+use PeterPecosz\Kajatervezo\Hozzavalo\Bor\Feherbor;
 use PeterPecosz\Kajatervezo\Hozzavalo\FuszerEsOlaj\Kakukkfu;
-use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\Feherbor;
 use PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok\PenneTeszta;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hus\Csirkemell;
-use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\ParmezanSajt;
 use PeterPecosz\Kajatervezo\Hozzavalo\HutosUtan\Tejszin;
+use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\ParmezanSajt;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Citrom;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Fokhagyma;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Voroshagyma;

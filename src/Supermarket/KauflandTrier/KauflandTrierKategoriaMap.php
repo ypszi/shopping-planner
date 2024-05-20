@@ -30,6 +30,7 @@ class KauflandTrierKategoriaMap implements KategoriaMap
         return [
             HozzavaloKategoria::ZOLDSEG->value        => KauflandTrierKategoria::ZOLDSEG->value,
             HozzavaloKategoria::FUSZER_ES_OLAJ->value => KauflandTrierKategoria::FUSZER_ES_OLAJ->value,
+            HozzavaloKategoria::BOR->value            => KauflandTrierKategoria::HOSSZU_SOROK->value,
             HozzavaloKategoria::HOSSZU_SOROK->value   => KauflandTrierKategoria::HOSSZU_SOROK->value,
             HozzavaloKategoria::HUS->value            => KauflandTrierKategoria::HUS->value,
             HozzavaloKategoria::HUTOS->value          => KauflandTrierKategoria::HUTOS->value,

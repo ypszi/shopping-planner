@@ -6,6 +6,7 @@ namespace PeterPecosz\Kajatervezo\Hozzavalo;
 
 enum HozzavaloKategoria: string implements Kategoria
 {
+    case BOR = 'Bor';
     case ZOLDSEG = 'Zöldség';
     case FUSZER_ES_OLAJ = 'Fűszer és Olaj';
     case HOSSZU_SOROK = 'Hosszú sorok';

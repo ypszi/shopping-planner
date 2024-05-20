@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok;
+namespace PeterPecosz\Kajatervezo\Hozzavalo\Bor;
 
-class Vorosbor extends HosszuSorok
+class Vorosbor extends Bor
 {
     #[\Override] public static function name(): string
     {

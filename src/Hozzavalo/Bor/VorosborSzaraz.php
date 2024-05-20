@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace PeterPecosz\Kajatervezo\Hozzavalo\HosszuSorok;
+namespace PeterPecosz\Kajatervezo\Hozzavalo\Bor;
 
 class VorosborSzaraz extends Vorosbor
 {
