@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace PeterPecosz\Kajatervezo\Tests\Supermarket;
+namespace PeterPecosz\Kajatervezo\Tests\Supermarket\KauflandTrier;
 
 use PeterPecosz\Kajatervezo\Etel\Etel;
 use PeterPecosz\Kajatervezo\Etel\Etelek;
 use PeterPecosz\Kajatervezo\Hozzavalo\HozzavalokByKategoria;
-use PeterPecosz\Kajatervezo\Hozzavalo\HozzavaloSor;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hutos\Tojas;
+use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Ecet;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 use PeterPecosz\Kajatervezo\Supermarket\KauflandTrier\KauflandTrier;
 use PeterPecosz\Kajatervezo\Supermarket\KauflandTrier\KauflandTrierKategoriaMap;
@@ -34,6 +34,7 @@ class KauflandTrierTest extends TestCase
             {
                 return [
                     new Tojas(1, Mertekegyseg::DB),
+                    new Ecet(1, Mertekegyseg::L),
                 ];
             }
 
@@ -85,13 +86,10 @@ class KauflandTrierTest extends TestCase
 
         $shoppingList = $this->supermarket->toShoppingList($hozzavalokByKategoria);
 
-        $hozzavaloSor = new HozzavaloSor();
-        $hozzavaloSor->add(new Tojas(1, Mertekegyseg::DB));
-
         $this->assertEquals(
             [
                 [
-                    '',
+                    '1.00 l Ecet',
                     '',
                     '',
                     '',

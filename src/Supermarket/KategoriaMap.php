@@ -8,5 +8,5 @@ use PeterPecosz\Kajatervezo\Hozzavalo\Kategoria;
 
 interface KategoriaMap
 {
-    public static function map(Kategoria $kategoria): Kategoria;
+    public function map(Kategoria $kategoria): Kategoria;
 }

@@ -13,11 +13,12 @@ class KauflandTrier implements Supermarket
 {
     private KauflandTrierKategoriaMap $kategoriaMap;
 
-    private ?HozzavaloSorok $hozzavaloSorok = null;
+    private KauflandTrierHozzavaloToKategoriaMap $hozzavaloToKategoriaMap;
 
     public function __construct()
     {
-        $this->kategoriaMap = new KauflandTrierKategoriaMap();
+        $this->kategoriaMap            = new KauflandTrierKategoriaMap();
+        $this->hozzavaloToKategoriaMap = new KauflandTrierHozzavaloToKategoriaMap();
     }
 
     public static function name(): string
@@ -46,24 +47,27 @@ class KauflandTrier implements Supermarket
      */
     #[\Override] public function toShoppingList(HozzavalokByKategoria $hozzavalokByKategoria): array
     {
-        $this->createHozzavaloSorok($hozzavalokByKategoria);
-
-        return $this->hozzavaloSorok?->toArray();
+        return $this->createHozzavaloSorok($hozzavalokByKategoria)->toArray();
     }
 
     private function createHozzavaloSorok(HozzavalokByKategoria $hozzavalokByKategoria): HozzavaloSorok
     {
-        $this->hozzavaloSorok = new HozzavaloSorok($this);
+        $hozzavaloSorok = new HozzavaloSorok($this);
 
         foreach ($hozzavalokByKategoria as $hozzavalok) {
             /** @var Hozzavalo $hozzavalo */
             foreach ($hozzavalok as $hozzavalo) {
-                $mappedKategoria = $this->kategoriaMap::map($hozzavalo->kategoria());
+                $hozzavalo = $hozzavalo->withKategoria(
+                    $this->kategoriaMap->map($hozzavalo->kategoria())
+                );
+                $hozzavalo = $hozzavalo->withKategoria(
+                    $this->hozzavaloToKategoriaMap->map($hozzavalo)
+                );
 
-                $this->hozzavaloSorok->addHozzavalo($hozzavalo->withKategoria($mappedKategoria));
+                $hozzavaloSorok->addHozzavalo($hozzavalo);
             }
         }
 
-        return $this->hozzavaloSorok->sort();
+        return $hozzavaloSorok->sort();
     }
 }
