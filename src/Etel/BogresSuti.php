@@ -9,8 +9,8 @@ use PeterPecosz\Kajatervezo\Hozzavalo\TartosElelmiszer\Finomliszt;
 use PeterPecosz\Kajatervezo\Hozzavalo\TartosElelmiszer\Kakaopor;
 use PeterPecosz\Kajatervezo\Hozzavalo\TartosElelmiszer\Porcukor;
 use PeterPecosz\Kajatervezo\Hozzavalo\TartosElelmiszer\Sutopor;
+use PeterPecosz\Kajatervezo\Hozzavalo\TartosTejtermek\Tej;
 use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\Tojas;
-use PeterPecosz\Kajatervezo\Hozzavalo\HutosUtan\Tej;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class BogresSuti extends Etel

@@ -67,6 +67,10 @@ class KauflandTrierKategoriaMapTest extends TestCase
                 KauflandTrierKategoria::HUTOS,
             ],
             [
+                HozzavaloKategoria::TARTOS_TEJTERMEK,
+                KauflandTrierKategoria::HUTOS_UTAN,
+            ],
+            [
                 HozzavaloKategoria::HUTOS_UTAN,
                 KauflandTrierKategoria::HUTOS_UTAN,
             ],

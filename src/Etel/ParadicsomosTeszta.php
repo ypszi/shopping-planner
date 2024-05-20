@@ -11,7 +11,7 @@ use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\So;
 use PeterPecosz\Kajatervezo\Hozzavalo\Olaj\OlivaOlaj;
 use PeterPecosz\Kajatervezo\Hozzavalo\TartosElelmiszer\FusilliTeszta;
 use PeterPecosz\Kajatervezo\Hozzavalo\TartosElelmiszer\ParadicsomKonzerv;
-use PeterPecosz\Kajatervezo\Hozzavalo\HutosUtan\Fozotejszin;
+use PeterPecosz\Kajatervezo\Hozzavalo\TartosTejtermek\Fozotejszin;
 use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\ParmezanSajt;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Fokhagyma;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Voroshagyma;

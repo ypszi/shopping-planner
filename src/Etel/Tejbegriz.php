@@ -8,7 +8,7 @@ use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\So;
 use PeterPecosz\Kajatervezo\Hozzavalo\TartosElelmiszer\Buzadara;
 use PeterPecosz\Kajatervezo\Hozzavalo\TartosElelmiszer\Cukor;
 use PeterPecosz\Kajatervezo\Hozzavalo\TartosElelmiszer\Kakaopor;
-use PeterPecosz\Kajatervezo\Hozzavalo\HutosUtan\Tej;
+use PeterPecosz\Kajatervezo\Hozzavalo\TartosTejtermek\Tej;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class Tejbegriz extends Etel

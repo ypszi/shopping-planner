@@ -9,8 +9,8 @@ use PeterPecosz\Kajatervezo\Hozzavalo\TartosElelmiszer\Cukor;
 use PeterPecosz\Kajatervezo\Hozzavalo\TartosElelmiszer\Porcukor;
 use PeterPecosz\Kajatervezo\Hozzavalo\TartosElelmiszer\Rizs;
 use PeterPecosz\Kajatervezo\Hozzavalo\TartosElelmiszer\VaniliasCukor;
+use PeterPecosz\Kajatervezo\Hozzavalo\TartosTejtermek\Tej;
 use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\Tojas;
-use PeterPecosz\Kajatervezo\Hozzavalo\HutosUtan\Tej;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Citrom;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 

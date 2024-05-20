@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace PeterPecosz\Kajatervezo\Etel;
 
 use PeterPecosz\Kajatervezo\Hozzavalo\Felvagott\Felvagott;
-use PeterPecosz\Kajatervezo\Hozzavalo\HutosUtan\Tej;
 use PeterPecosz\Kajatervezo\Hozzavalo\Pekaru\Kenyer;
+use PeterPecosz\Kajatervezo\Hozzavalo\TartosTejtermek\Tej;
 use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\GoudaSajt;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Kigyouborka;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Koktelparadicsom;
