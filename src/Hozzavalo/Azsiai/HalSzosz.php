@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace PeterPecosz\Kajatervezo\Hozzavalo\HutosUtan;
+namespace PeterPecosz\Kajatervezo\Hozzavalo\Azsiai;
 
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
-class TamarindSzosz extends HutosUtan
+class HalSzosz extends Azsiai
 {
     #[\Override] public static function name(): string
     {
-        return 'Tamarind Szósz';
+        return 'Hal Szósz';
     }
 
     #[\Override] public static function mertekegysegPreference(): ?string
