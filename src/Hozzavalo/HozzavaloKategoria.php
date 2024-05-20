@@ -11,6 +11,7 @@ enum HozzavaloKategoria: string implements Kategoria
     case HOSSZU_SOROK = 'Hosszú sorok';
     case HUS = 'Hús';
     case HUTOS = 'Hűtős';
+    case MIRELIT = 'Mirelit';
     case HUTOS_UTAN = 'Hűtős után';
     case UDITOK = 'Üditők';
 
