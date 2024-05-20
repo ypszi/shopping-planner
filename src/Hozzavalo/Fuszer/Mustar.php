@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace PeterPecosz\Kajatervezo\Hozzavalo\HutosUtan;
+namespace PeterPecosz\Kajatervezo\Hozzavalo\Fuszer;
 
-class Mustar extends HutosUtan
+class Mustar extends Fuszer
 {
     #[\Override] public static function name(): string
     {

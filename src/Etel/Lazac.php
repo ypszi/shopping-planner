@@ -8,9 +8,9 @@ use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Bors;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Kakukkfu;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Rozmaring;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\So;
-use PeterPecosz\Kajatervezo\Hozzavalo\Olaj\NapraforgoOlaj;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hus\Lazac as NyersLazac;
-use PeterPecosz\Kajatervezo\Hozzavalo\HutosUtan\Vaj;
+use PeterPecosz\Kajatervezo\Hozzavalo\Olaj\NapraforgoOlaj;
+use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\Vaj;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class Lazac extends Etel

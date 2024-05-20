@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Etel;
 
-use PeterPecosz\Kajatervezo\Hozzavalo\HutosUtan\Vaj;
 use PeterPecosz\Kajatervezo\Hozzavalo\TartosElelmiszer\HuslevesKocka;
 use PeterPecosz\Kajatervezo\Hozzavalo\TartosTejtermek\Habtejszin;
+use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\Vaj;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Krumpli;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Porehagyma;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Zellerszar;

@@ -39,7 +39,6 @@ class KauflandTrierKategoriaMap implements KategoriaMap
             HozzavaloKategoria::MIRELIT->value           => KauflandTrierKategoria::HUTOS->value,
             HozzavaloKategoria::TEJTERMEK->value         => KauflandTrierKategoria::HUTOS->value,
             HozzavaloKategoria::TARTOS_TEJTERMEK->value  => KauflandTrierKategoria::HUTOS_UTAN->value,
-            HozzavaloKategoria::HUTOS_UTAN->value        => KauflandTrierKategoria::HUTOS_UTAN->value,
             HozzavaloKategoria::AZSIAI->value            => KauflandTrierKategoria::HUTOS_UTAN->value,
             HozzavaloKategoria::UDITO->value             => KauflandTrierKategoria::UDITO->value,
         ];

@@ -7,9 +7,9 @@ namespace PeterPecosz\Kajatervezo\Etel;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\So;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hus\BaconKockazott;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hus\Kolbasz;
-use PeterPecosz\Kajatervezo\Hozzavalo\HutosUtan\Vaj;
 use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\Tejfol;
 use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\Tojas;
+use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\Vaj;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Krumpli;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 

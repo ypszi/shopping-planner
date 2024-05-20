@@ -71,10 +71,6 @@ class KauflandTrierKategoriaMapTest extends TestCase
                 KauflandTrierKategoria::HUTOS_UTAN,
             ],
             [
-                HozzavaloKategoria::HUTOS_UTAN,
-                KauflandTrierKategoria::HUTOS_UTAN,
-            ],
-            [
                 HozzavaloKategoria::AZSIAI,
                 KauflandTrierKategoria::HUTOS_UTAN,
             ],

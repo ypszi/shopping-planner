@@ -8,9 +8,9 @@ use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Bors;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Citrombors;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Petrezselyem;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\So;
-use PeterPecosz\Kajatervezo\Hozzavalo\Olaj\OlivaOlaj;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hus\Lazac;
-use PeterPecosz\Kajatervezo\Hozzavalo\HutosUtan\Vaj;
+use PeterPecosz\Kajatervezo\Hozzavalo\Olaj\OlivaOlaj;
+use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\Vaj;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Brokkoli;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
