@@ -10,6 +10,7 @@ enum HozzavaloKategoria: string implements Kategoria
     case ZOLDSEG = 'Zöldség';
     case FUSZER_ES_OLAJ = 'Fűszer és Olaj';
     case HOSSZU_SOROK = 'Hosszú sorok';
+    case FELVAGOTT = 'Felvágott';
     case HUS = 'Hús';
     case HUTOS = 'Hűtős';
     case MIRELIT = 'Mirelit';

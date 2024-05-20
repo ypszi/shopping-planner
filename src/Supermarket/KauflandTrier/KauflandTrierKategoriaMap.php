@@ -33,6 +33,7 @@ class KauflandTrierKategoriaMap implements KategoriaMap
             HozzavaloKategoria::BOR->value            => KauflandTrierKategoria::HOSSZU_SOROK->value,
             HozzavaloKategoria::PEKARU->value         => KauflandTrierKategoria::HOSSZU_SOROK->value,
             HozzavaloKategoria::HOSSZU_SOROK->value   => KauflandTrierKategoria::HOSSZU_SOROK->value,
+            HozzavaloKategoria::FELVAGOTT->value      => KauflandTrierKategoria::HUS->value,
             HozzavaloKategoria::HUS->value            => KauflandTrierKategoria::HUS->value,
             HozzavaloKategoria::HUTOS->value          => KauflandTrierKategoria::HUTOS->value,
             HozzavaloKategoria::MIRELIT->value        => KauflandTrierKategoria::HUTOS->value,
