@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Etel;
 
+use Override;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Bazsalikom;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Bors;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Majoranna;
@@ -19,12 +20,12 @@ use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class ParadicsomosTeszta extends Etel
 {
-    #[\Override] public static function name(): string
+    #[Override] public static function name(): string
     {
         return 'Paradicsomos tészta';
     }
 
-    #[\Override] protected static function listHozzavalok(): array
+    #[Override] protected static function listHozzavalok(): array
     {
         return [
             new OlivaOlaj(2, Mertekegyseg::EK),
@@ -41,12 +42,12 @@ class ParadicsomosTeszta extends Etel
         ];
     }
 
-    #[\Override] public static function defaultAdag(): int
+    #[Override] public static function defaultAdag(): int
     {
         return 4;
     }
 
-    #[\Override] public function receptUrl(): string
+    #[Override] public function receptUrl(): string
     {
         return 'https://www.mindmegette.hu/nagyon-kremes-paradicsomos-teszta-husmentesen.recept/';
     }

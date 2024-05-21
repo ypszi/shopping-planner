@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Etel;
 
+use Override;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Bazsalikom;
 use PeterPecosz\Kajatervezo\Hozzavalo\Olaj\OlivaOlaj;
 use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\FetaSajt;
@@ -15,12 +16,12 @@ use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class GorogSalata extends Etel
 {
-    #[\Override] public static function name(): string
+    #[Override] public static function name(): string
     {
         return 'Görög saláta';
     }
 
-    #[\Override] protected static function listHozzavalok(): array
+    #[Override] protected static function listHozzavalok(): array
     {
         return [
             new Paradicsom(4, Mertekegyseg::DB),
@@ -34,12 +35,12 @@ class GorogSalata extends Etel
         ];
     }
 
-    #[\Override] public static function defaultAdag(): int
+    #[Override] public static function defaultAdag(): int
     {
         return 6;
     }
 
-    #[\Override] public function receptUrl(): string
+    #[Override] public function receptUrl(): string
     {
         return $this->decorateNoSaltyReceptUrl('https://www.nosalty.hu/recept/eredeti-gorog-salata');
     }

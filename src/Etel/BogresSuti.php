@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Etel;
 
+use Override;
 use PeterPecosz\Kajatervezo\Hozzavalo\Olaj\NapraforgoOlaj;
 use PeterPecosz\Kajatervezo\Hozzavalo\TartosElelmiszer\Finomliszt;
 use PeterPecosz\Kajatervezo\Hozzavalo\TartosElelmiszer\Kakaopor;
@@ -15,12 +16,12 @@ use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class BogresSuti extends Etel
 {
-    #[\Override] public static function name(): string
+    #[Override] public static function name(): string
     {
         return 'Bögrés süti';
     }
 
-    #[\Override] protected static function listHozzavalok(): array
+    #[Override] protected static function listHozzavalok(): array
     {
         return [
             new Finomliszt(4, Mertekegyseg::EK),
@@ -35,7 +36,7 @@ class BogresSuti extends Etel
         ];
     }
 
-    #[\Override] public static function defaultAdag(): int
+    #[Override] public static function defaultAdag(): int
     {
         return 2;
     }
@@ -43,7 +44,7 @@ class BogresSuti extends Etel
     /**
      * 2 perc mikro
      */
-    #[\Override] public function receptUrl(): string
+    #[Override] public function receptUrl(): string
     {
         return $this->decorateNoSaltyReceptUrl('https://www.nosalty.hu/recept/bogreben-sult-suti-5-perc-alatt');
     }

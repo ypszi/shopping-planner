@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Etel;
 
+use Override;
 use PeterPecosz\Kajatervezo\Hozzavalo\Olaj\NapraforgoOlaj;
 use PeterPecosz\Kajatervezo\Hozzavalo\TartosElelmiszer\Cukor;
 use PeterPecosz\Kajatervezo\Hozzavalo\TartosElelmiszer\Finomliszt;
@@ -15,12 +16,12 @@ use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class Palacsinta extends Etel
 {
-    #[\Override] public static function name(): string
+    #[Override] public static function name(): string
     {
         return 'Palacsinta';
     }
 
-    #[\Override] protected static function listHozzavalok(): array
+    #[Override] protected static function listHozzavalok(): array
     {
         return [
             new Tojas(3, Mertekegyseg::DB),
@@ -33,12 +34,12 @@ class Palacsinta extends Etel
         ];
     }
 
-    #[\Override] public static function defaultAdag(): int
+    #[Override] public static function defaultAdag(): int
     {
         return 4;
     }
 
-    #[\Override] public function receptUrl(): string
+    #[Override] public function receptUrl(): string
     {
         return $this->decorateNoSaltyReceptUrl('https://www.nosalty.hu/recept/palacsinta-alaprecept');
     }

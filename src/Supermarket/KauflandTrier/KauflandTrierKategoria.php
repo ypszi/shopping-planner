@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Supermarket\KauflandTrier;
 
+use Override;
 use PeterPecosz\Kajatervezo\Hozzavalo\Kategoria;
 
 enum KauflandTrierKategoria: string implements Kategoria
@@ -16,7 +17,7 @@ enum KauflandTrierKategoria: string implements Kategoria
     case HUTOS_UTAN = 'Hűtős után';
     case UDITO = 'Üditő';
 
-    #[\Override] public function value(): string
+    #[Override] public function value(): string
     {
         return $this->value;
     }

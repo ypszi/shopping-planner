@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Tests\Supermarket\KauflandTrier;
 
+use Override;
 use PeterPecosz\Kajatervezo\Etel\Etel;
 use PeterPecosz\Kajatervezo\Etel\Etelek;
 use PeterPecosz\Kajatervezo\Hozzavalo\HozzavalokByKategoria;
@@ -11,7 +12,6 @@ use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\Tojas;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Ecet;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 use PeterPecosz\Kajatervezo\Supermarket\KauflandTrier\KauflandTrier;
-use PeterPecosz\Kajatervezo\Supermarket\KauflandTrier\KauflandTrierKategoriaMap;
 use PeterPecosz\Kajatervezo\Supermarket\Supermarket;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
@@ -25,12 +25,12 @@ class KauflandTrierTest extends TestCase
     protected function setUp(): void
     {
         $this->testFood = new class() extends Etel {
-            #[\Override] public static function name(): string
+            #[Override] public static function name(): string
             {
                 return 'test food';
             }
 
-            #[\Override] protected static function listHozzavalok(): array
+            #[Override] protected static function listHozzavalok(): array
             {
                 return [
                     new Tojas(1, Mertekegyseg::DB),
@@ -38,18 +38,18 @@ class KauflandTrierTest extends TestCase
                 ];
             }
 
-            #[\Override] public static function defaultAdag(): int
+            #[Override] public static function defaultAdag(): int
             {
                 return 1;
             }
 
-            #[\Override] public function receptUrl(): string
+            #[Override] public function receptUrl(): string
             {
                 return 'https://online-recept-konyv.hu/test-food';
             }
         };
 
-        $this->supermarket = new KauflandTrier(new KauflandTrierKategoriaMap());
+        $this->supermarket = new KauflandTrier();
     }
 
     #[Test]

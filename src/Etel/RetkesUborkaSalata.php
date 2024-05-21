@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Etel;
 
+use Override;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\So;
 use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\Tejfol;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Csemegehagyma;
@@ -13,12 +14,12 @@ use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class RetkesUborkaSalata extends Etel
 {
-    #[\Override] public static function name(): string
+    #[Override] public static function name(): string
     {
         return 'Retkes uborka saláta';
     }
 
-    #[\Override] protected static function listHozzavalok(): array
+    #[Override] protected static function listHozzavalok(): array
     {
         return [
             new Kigyouborka(1, Mertekegyseg::DB),
@@ -29,12 +30,12 @@ class RetkesUborkaSalata extends Etel
         ];
     }
 
-    #[\Override] public static function defaultAdag(): int
+    #[Override] public static function defaultAdag(): int
     {
         return 4;
     }
 
-    #[\Override] public function receptUrl(): string
+    #[Override] public function receptUrl(): string
     {
         return 'https://natashaskitchen.com/cucumber-radish-salad-recipe/';
     }

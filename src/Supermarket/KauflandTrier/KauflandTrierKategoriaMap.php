@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Supermarket\KauflandTrier;
 
+use Override;
 use PeterPecosz\Kajatervezo\Hozzavalo\HozzavaloKategoria;
 use PeterPecosz\Kajatervezo\Hozzavalo\Kategoria;
 use PeterPecosz\Kajatervezo\Supermarket\Exception\UnknownSupermarketKategoriaException;
@@ -11,7 +12,7 @@ use PeterPecosz\Kajatervezo\Supermarket\KategoriaMap;
 
 class KauflandTrierKategoriaMap implements KategoriaMap
 {
-    #[\Override] public function map(Kategoria $kategoria): Kategoria
+    #[Override] public function map(Kategoria $kategoria): Kategoria
     {
         $mappedKategoria = $this->kategoriaMap()[$kategoria->value()] ?? null;
 

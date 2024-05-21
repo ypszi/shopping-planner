@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Etel;
 
+use Override;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Oregano;
 use PeterPecosz\Kajatervezo\Hozzavalo\Olaj\OlivaOlaj;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hus\Csirkemell;
@@ -18,12 +19,12 @@ use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class CitromosJoghurtosCsirkemellGorogsalataval extends Etel
 {
-    #[\Override] public static function name(): string
+    #[Override] public static function name(): string
     {
         return 'Citromos joghurtos csirkemell görögsalátával';
     }
 
-    #[\Override] protected static function listHozzavalok(): array
+    #[Override] protected static function listHozzavalok(): array
     {
         return [
             new Citrom(1, Mertekegyseg::DB),
@@ -40,12 +41,12 @@ class CitromosJoghurtosCsirkemellGorogsalataval extends Etel
         ];
     }
 
-    #[\Override] public static function defaultAdag(): int
+    #[Override] public static function defaultAdag(): int
     {
         return 4;
     }
 
-    #[\Override] public function receptUrl(): string
+    #[Override] public function receptUrl(): string
     {
         return 'https://www.mindmegette.hu/citromos-joghurtos-csirkemell-gorogsalataval.recept/';
     }

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Tests\Etel;
 
+use Override;
 use PeterPecosz\Kajatervezo\Etel\Etel;
 use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\Tojas;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
@@ -17,24 +18,24 @@ class EtelTest extends TestCase
     protected function setUp(): void
     {
         $this->testFood = new class() extends Etel {
-            #[\Override] public static function name(): string
+            #[Override] public static function name(): string
             {
                 return 'test food';
             }
 
-            #[\Override] protected static function listHozzavalok(): array
+            #[Override] protected static function listHozzavalok(): array
             {
                 return [
                     new Tojas(1, Mertekegyseg::DB),
                 ];
             }
 
-            #[\Override] public static function defaultAdag(): int
+            #[Override] public static function defaultAdag(): int
             {
                 return 1;
             }
 
-            #[\Override] public function receptUrl(): string
+            #[Override] public function receptUrl(): string
             {
                 return 'https://online-recept-konyv.hu/test-food';
             }

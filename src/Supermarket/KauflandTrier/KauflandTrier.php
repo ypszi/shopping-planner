@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Supermarket\KauflandTrier;
 
+use Override;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
 use PeterPecosz\Kajatervezo\Hozzavalo\HozzavalokByKategoria;
 use PeterPecosz\Kajatervezo\Hozzavalo\HozzavaloSorok;
@@ -29,7 +30,7 @@ class KauflandTrier implements Supermarket
     /**
      * @return string[]
      */
-    #[\Override] public static function sorrend(): array
+    #[Override] public static function sorrend(): array
     {
         return [
             KauflandTrierKategoria::ZOLDSEG->value,
@@ -45,7 +46,7 @@ class KauflandTrier implements Supermarket
     /**
      * @return array<string[]>
      */
-    #[\Override] public function toShoppingList(HozzavalokByKategoria $hozzavalokByKategoria): array
+    #[Override] public function toShoppingList(HozzavalokByKategoria $hozzavalokByKategoria): array
     {
         return $this->createHozzavaloSorok($hozzavalokByKategoria)->toArray();
     }

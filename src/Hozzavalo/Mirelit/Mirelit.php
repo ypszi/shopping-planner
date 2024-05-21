@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Hozzavalo\Mirelit;
 
+use Override;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
 use PeterPecosz\Kajatervezo\Hozzavalo\HozzavaloKategoria;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
@@ -15,7 +16,7 @@ abstract class Mirelit extends Hozzavalo
         parent::__construct($mennyiseg, $mertekegyseg, HozzavaloKategoria::MIRELIT);
     }
 
-    #[\Override] public static function mertekegysegPreference(): ?string
+    #[Override] public static function mertekegysegPreference(): ?string
     {
         return Mertekegyseg::G;
     }

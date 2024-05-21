@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Etel;
 
+use Override;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Bors;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\PirosPaprika;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Rozmaring;
@@ -14,12 +15,12 @@ use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class TepsisKrumpli extends Etel
 {
-    #[\Override] public static function name(): string
+    #[Override] public static function name(): string
     {
         return 'Tepsis Krumpli';
     }
 
-    #[\Override] protected static function listHozzavalok(): array
+    #[Override] protected static function listHozzavalok(): array
     {
         return [
             new Burgonya(1, Mertekegyseg::KG),
@@ -31,12 +32,12 @@ class TepsisKrumpli extends Etel
         ];
     }
 
-    #[\Override] public static function defaultAdag(): int
+    #[Override] public static function defaultAdag(): int
     {
         return 3;
     }
 
-    #[\Override] public function receptUrl(): string
+    #[Override] public function receptUrl(): string
     {
         return $this->decorateNoSaltyReceptUrl('https://www.nosalty.hu/recept/fuszeres-sult-krumpli-szilvus-konyhajabol');
     }

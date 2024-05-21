@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Etel;
 
+use Override;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Bors;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Rozmaring;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\So;
@@ -14,12 +15,12 @@ use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class FuszeresEdesburgonya extends Etel
 {
-    #[\Override] public static function name(): string
+    #[Override] public static function name(): string
     {
         return 'Fűszeres édesburgonya';
     }
 
-    #[\Override] protected static function listHozzavalok(): array
+    #[Override] protected static function listHozzavalok(): array
     {
         return [
             new Edesburgonya(1, Mertekegyseg::KG),
@@ -32,12 +33,12 @@ class FuszeresEdesburgonya extends Etel
         ];
     }
 
-    #[\Override] public static function defaultAdag(): int
+    #[Override] public static function defaultAdag(): int
     {
         return 4;
     }
 
-    #[\Override] public function receptUrl(): string
+    #[Override] public function receptUrl(): string
     {
         return 'https://femina.hu/recept/fuszeres-edesburgonya-receptje/';
     }

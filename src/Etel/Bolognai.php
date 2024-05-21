@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Etel;
 
+use Override;
 use PeterPecosz\Kajatervezo\Hozzavalo\Bor\VorosborSzaraz;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Baberlevel;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Bors;
@@ -26,12 +27,12 @@ use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class Bolognai extends Etel
 {
-    #[\Override] public static function name(): string
+    #[Override] public static function name(): string
     {
         return 'Bolognai';
     }
 
-    #[\Override] protected static function listHozzavalok(): array
+    #[Override] protected static function listHozzavalok(): array
     {
         return [
             new OlivaOlaj(3, Mertekegyseg::EK),
@@ -56,12 +57,12 @@ class Bolognai extends Etel
         ];
     }
 
-    #[\Override] public static function defaultAdag(): int
+    #[Override] public static function defaultAdag(): int
     {
         return 4;
     }
 
-    #[\Override] public function receptUrl(): string
+    #[Override] public function receptUrl(): string
     {
         return 'https://streetkitchen.hu/tesztapolc/ime-tokeletes-bolognai-spagetti/';
     }

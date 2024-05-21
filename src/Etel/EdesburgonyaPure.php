@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Etel;
 
+use Override;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\So;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Szerecsendio;
 use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\MozzarellaSajt;
@@ -14,12 +15,12 @@ use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class EdesburgonyaPure extends Etel
 {
-    #[\Override] public static function name(): string
+    #[Override] public static function name(): string
     {
         return 'Édesburgonya püré';
     }
 
-    #[\Override] protected static function listHozzavalok(): array
+    #[Override] protected static function listHozzavalok(): array
     {
         return [
             new Edesburgonya(30, Mertekegyseg::DKG),
@@ -31,12 +32,12 @@ class EdesburgonyaPure extends Etel
         ];
     }
 
-    #[\Override] public static function defaultAdag(): int
+    #[Override] public static function defaultAdag(): int
     {
         return 2;
     }
 
-    #[\Override] public function receptUrl(): string
+    #[Override] public function receptUrl(): string
     {
         return 'https://www.mindmegette.hu/edesburgonya-pure.recept/';
     }

@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Hozzavalo;
 
+use Override;
+
 enum HozzavaloKategoria: string implements Kategoria
 {
     case BOR = 'Bor';
@@ -20,7 +22,7 @@ enum HozzavaloKategoria: string implements Kategoria
     case UDITO = 'Üditő';
     case PEKARU = 'Pékárú';
 
-    #[\Override] public function value(): string
+    #[Override] public function value(): string
     {
         return $this->value;
     }

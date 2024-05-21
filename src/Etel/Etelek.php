@@ -6,6 +6,7 @@ namespace PeterPecosz\Kajatervezo\Etel;
 
 use ArrayIterator;
 use IteratorAggregate;
+use Override;
 use Traversable;
 
 /**
@@ -36,7 +37,7 @@ class Etelek implements IteratorAggregate
         return $this->etelek;
     }
 
-    #[\Override] public function getIterator(): Traversable
+    #[Override] public function getIterator(): Traversable
     {
         return new ArrayIterator($this->etelek);
     }
