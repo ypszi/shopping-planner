@@ -31,7 +31,7 @@ class HozzavaloSorok
      */
     public function toArray(): array
     {
-        return array_map(fn(HozzavaloSor $hozzavaloSor) => $hozzavaloSor->toArray(), $this->hozzavaloSorok);
+        return array_map(fn(HozzavaloSor $hozzavaloSor) => $hozzavaloSor->toArray($this->supermarket), $this->hozzavaloSorok);
     }
 
     public function sort(): self

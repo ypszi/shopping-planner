@@ -6,7 +6,7 @@ namespace PeterPecosz\Kajatervezo\Hozzavalo;
 
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Exception\UnknownUnitOfMeasureException;
 use PeterPecosz\Kajatervezo\Mertekegyseg\MertekegysegAtvalto;
-use PeterPecosz\Kajatervezo\Supermarket\KauflandTrier\KauflandTrier;
+use PeterPecosz\Kajatervezo\Supermarket\Supermarket;
 
 class HozzavaloSor
 {
@@ -107,10 +107,10 @@ class HozzavaloSor
     /**
      * @return string[]
      */
-    public function toArray(): array
+    public function toArray(Supermarket $supermarket): array
     {
         $sor = [];
-        foreach (KauflandTrier::sorrend() as $kategoria) {
+        foreach ($supermarket::sorrend() as $kategoria) {
             $hozzavalo = $this->hozzavalokPerKategoria[$kategoria] ?? null;
             $sor[]     = $hozzavalo ? (string)$hozzavalo : '';
         }
