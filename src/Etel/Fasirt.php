@@ -8,6 +8,7 @@ use Override;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Bors;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\So;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hus\DaraltHus;
+use PeterPecosz\Kajatervezo\Hozzavalo\TartosElelmiszer\Zsemlemorzsa;
 use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\Tojas;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Fokhagyma;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Voroshagyma;
@@ -30,6 +31,8 @@ class Fasirt extends Etel
             new Fokhagyma(3, Mertekegyseg::GEREZD),
             new So(1, Mertekegyseg::TK),
             new Bors(1, Mertekegyseg::MK),
+            // annyi zsemlemorzsát adunk hozzá, hogy golyókat tudjunk belőle formálni
+            new Zsemlemorzsa(50, Mertekegyseg::G),
         ];
     }
 
