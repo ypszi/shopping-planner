@@ -10,11 +10,11 @@ use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Majonez;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Mustar;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\So;
 use PeterPecosz\Kajatervezo\Hozzavalo\TartosElelmiszer\Cukor;
+use PeterPecosz\Kajatervezo\Hozzavalo\TartosElelmiszer\Ecet;
 use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\Tejfol;
 use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\TrappistaSajt;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Alma;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Dio;
-use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Ecet;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Lilahagyma;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 

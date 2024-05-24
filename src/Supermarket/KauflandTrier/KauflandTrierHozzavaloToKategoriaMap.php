@@ -10,8 +10,9 @@ use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Majonez;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Mustar;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
 use PeterPecosz\Kajatervezo\Hozzavalo\Kategoria;
+use PeterPecosz\Kajatervezo\Hozzavalo\TartosElelmiszer\BalzsamecetFeher;
+use PeterPecosz\Kajatervezo\Hozzavalo\TartosElelmiszer\Ecet;
 use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\Vaj;
-use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Ecet;
 use PeterPecosz\Kajatervezo\Supermarket\HozzavaloToKategoriaMap;
 
 class KauflandTrierHozzavaloToKategoriaMap implements HozzavaloToKategoriaMap
@@ -33,11 +34,12 @@ class KauflandTrierHozzavaloToKategoriaMap implements HozzavaloToKategoriaMap
     private function hozzavaloMap(): array
     {
         return [
-            Ecet::name()    => KauflandTrierKategoria::ZOLDSEG->value,
-            Ketchup::name() => KauflandTrierKategoria::HUTOS_UTAN->value,
-            Majonez::name() => KauflandTrierKategoria::HUTOS_UTAN->value,
-            Mustar::name()  => KauflandTrierKategoria::HUTOS_UTAN->value,
-            Vaj::name()     => KauflandTrierKategoria::HUTOS_UTAN->value,
+            BalzsamecetFeher::name() => KauflandTrierKategoria::ZOLDSEG->value,
+            Ecet::name()             => KauflandTrierKategoria::ZOLDSEG->value,
+            Ketchup::name()          => KauflandTrierKategoria::HUTOS_UTAN->value,
+            Majonez::name()          => KauflandTrierKategoria::HUTOS_UTAN->value,
+            Mustar::name()           => KauflandTrierKategoria::HUTOS_UTAN->value,
+            Vaj::name()              => KauflandTrierKategoria::HUTOS_UTAN->value,
         ];
     }
 }
