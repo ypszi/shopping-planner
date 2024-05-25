@@ -58,6 +58,6 @@ class IllatosOmlosCsirkemell extends Etel
 
     #[Override] public function receptUrl(): string
     {
-        return $this->decorateNoSaltyReceptUrl('https://www.nosalty.hu/recept/kinai-szezammagos-csirke');
+        return $this->decorateNoSaltyReceptUrl('https://www.nosalty.hu/recept/illatos-omlos-csirkemell');
     }
 }
