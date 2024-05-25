@@ -9,7 +9,7 @@ use PeterPecosz\Kajatervezo\Hozzavalo\Kategoria;
 
 enum KauflandTrierKategoria: string implements Kategoria
 {
-    case ZOLDSEG = 'Zöldség';
+    case ZOLDSEG_GYUMOLCS = 'Zöldség / Gyümölcs';
     case FUSZER_ES_OLAJ = 'Fűszer és Olaj';
     case HOSSZU_SOROK = 'Hosszú sorok';
     case HUS = 'Hús';

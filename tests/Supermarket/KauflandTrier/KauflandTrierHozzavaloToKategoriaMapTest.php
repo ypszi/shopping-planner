@@ -10,7 +10,6 @@ use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Mustar;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hus\Csirkemell;
 use PeterPecosz\Kajatervezo\Hozzavalo\Kategoria;
-use PeterPecosz\Kajatervezo\Hozzavalo\TartosElelmiszer\Ecet;
 use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\Vaj;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 use PeterPecosz\Kajatervezo\Supermarket\KauflandTrier\KauflandTrierHozzavaloToKategoriaMap;
@@ -33,10 +32,6 @@ class KauflandTrierHozzavaloToKategoriaMapTest extends TestCase
     public static function hozzavaloTokategoriaMapDataProvider(): array
     {
         return [
-            [
-                new Ecet(1, Mertekegyseg::L),
-                KauflandTrierKategoria::ZOLDSEG,
-            ],
             [
                 new Ketchup(1, Mertekegyseg::G),
                 KauflandTrierKategoria::HUTOS_UTAN,

@@ -33,7 +33,7 @@ class KauflandTrier implements Supermarket
     #[Override] public static function sorrend(): array
     {
         return [
-            KauflandTrierKategoria::ZOLDSEG->value,
+            KauflandTrierKategoria::ZOLDSEG_GYUMOLCS->value,
             KauflandTrierKategoria::FUSZER_ES_OLAJ->value,
             KauflandTrierKategoria::HOSSZU_SOROK->value,
             KauflandTrierKategoria::HUS->value,

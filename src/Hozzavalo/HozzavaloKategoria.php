@@ -9,8 +9,10 @@ use Override;
 enum HozzavaloKategoria: string implements Kategoria
 {
     case BOR = 'Bor';
-    case ZOLDSEG = 'Zöldség';
+    case CUKRASZ = 'Cukrász';
+    case ZOLDSEG_GYUMOLCS = 'Zöldség / Gyümölcs';
     case OLAJ = 'Olaj';
+    case ECET = 'Ecet';
     case FUSZER = 'Fűszer';
     case TARTOS_ELELMISZER = 'Tartós élelmiszer';
     case TARTOS_TEJTERMEK = 'Tartós tejtermék';

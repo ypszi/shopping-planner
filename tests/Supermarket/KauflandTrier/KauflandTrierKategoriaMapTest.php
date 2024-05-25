@@ -27,8 +27,12 @@ class KauflandTrierKategoriaMapTest extends TestCase
     {
         return [
             [
-                HozzavaloKategoria::ZOLDSEG,
-                KauflandTrierKategoria::ZOLDSEG,
+                HozzavaloKategoria::ECET,
+                KauflandTrierKategoria::ZOLDSEG_GYUMOLCS,
+            ],
+            [
+                HozzavaloKategoria::ZOLDSEG_GYUMOLCS,
+                KauflandTrierKategoria::ZOLDSEG_GYUMOLCS,
             ],
             [
                 HozzavaloKategoria::OLAJ,
@@ -48,6 +52,10 @@ class KauflandTrierKategoriaMapTest extends TestCase
             ],
             [
                 HozzavaloKategoria::TARTOS_ELELMISZER,
+                KauflandTrierKategoria::HOSSZU_SOROK,
+            ],
+            [
+                HozzavaloKategoria::CUKRASZ,
                 KauflandTrierKategoria::HOSSZU_SOROK,
             ],
             [

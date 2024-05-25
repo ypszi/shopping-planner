@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace PeterPecosz\Kajatervezo\Etel;
 
 use Override;
-use PeterPecosz\Kajatervezo\Hozzavalo\TartosElelmiszer\HuslevesKocka;
+use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\HuslevesKocka;
 use PeterPecosz\Kajatervezo\Hozzavalo\TartosTejtermek\Habtejszin;
 use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\Vaj;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Krumpli;

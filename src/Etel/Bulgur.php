@@ -6,10 +6,10 @@ namespace PeterPecosz\Kajatervezo\Etel;
 
 use Override;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Bors;
+use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\HuslevesKocka;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\So;
 use PeterPecosz\Kajatervezo\Hozzavalo\Olaj\OlivaOlaj;
 use PeterPecosz\Kajatervezo\Hozzavalo\TartosElelmiszer\Bulgur as NyersBulgur;
-use PeterPecosz\Kajatervezo\Hozzavalo\TartosElelmiszer\HuslevesKocka;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Paprika;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Paradicsom;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Voroshagyma;

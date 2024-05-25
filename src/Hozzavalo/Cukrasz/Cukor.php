@@ -2,20 +2,20 @@
 
 declare(strict_types=1);
 
-namespace PeterPecosz\Kajatervezo\Hozzavalo\TartosElelmiszer;
+namespace PeterPecosz\Kajatervezo\Hozzavalo\Cukrasz;
 
 use Override;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
-class Porcukor extends TartosElelmiszer
+class Cukor extends Cukrasz
 {
     #[Override] public static function name(): string
     {
-        return 'Porcukor';
+        return 'Cukor';
     }
 
     #[Override] public static function mertekegysegPreference(): ?string
     {
-        return Mertekegyseg::G;
+        return Mertekegyseg::KG;
     }
 }

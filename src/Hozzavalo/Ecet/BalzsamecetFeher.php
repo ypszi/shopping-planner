@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace PeterPecosz\Kajatervezo\Hozzavalo\TartosElelmiszer;
+namespace PeterPecosz\Kajatervezo\Hozzavalo\Ecet;
 
 use Override;
 
-class BalzsamecetFeher extends TartosElelmiszer
+class BalzsamecetFeher extends Ecet
 {
     #[Override] public static function name(): string
     {

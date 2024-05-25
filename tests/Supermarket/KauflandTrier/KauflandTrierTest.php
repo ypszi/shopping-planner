@@ -7,8 +7,8 @@ namespace PeterPecosz\Kajatervezo\Tests\Supermarket\KauflandTrier;
 use Override;
 use PeterPecosz\Kajatervezo\Etel\Etel;
 use PeterPecosz\Kajatervezo\Etel\Etelek;
+use PeterPecosz\Kajatervezo\Hozzavalo\Ecet\Ecet;
 use PeterPecosz\Kajatervezo\Hozzavalo\HozzavalokByKategoria;
-use PeterPecosz\Kajatervezo\Hozzavalo\TartosElelmiszer\Ecet;
 use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\Tojas;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 use PeterPecosz\Kajatervezo\Supermarket\KauflandTrier\KauflandTrier;
@@ -63,7 +63,7 @@ class KauflandTrierTest extends TestCase
     {
         $this->assertEquals(
             [
-                'Zöldség',
+                'Zöldség / Gyümölcs',
                 'Fűszer és Olaj',
                 'Hosszú sorok',
                 'Hús',

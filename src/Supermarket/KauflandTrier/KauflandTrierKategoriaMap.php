@@ -29,12 +29,14 @@ class KauflandTrierKategoriaMap implements KategoriaMap
     private function kategoriaMap(): array
     {
         return [
-            HozzavaloKategoria::ZOLDSEG->value           => KauflandTrierKategoria::ZOLDSEG->value,
+            HozzavaloKategoria::ECET->value              => KauflandTrierKategoria::ZOLDSEG_GYUMOLCS->value,
+            HozzavaloKategoria::ZOLDSEG_GYUMOLCS->value  => KauflandTrierKategoria::ZOLDSEG_GYUMOLCS->value,
             HozzavaloKategoria::OLAJ->value              => KauflandTrierKategoria::FUSZER_ES_OLAJ->value,
             HozzavaloKategoria::FUSZER->value            => KauflandTrierKategoria::FUSZER_ES_OLAJ->value,
             HozzavaloKategoria::BOR->value               => KauflandTrierKategoria::HOSSZU_SOROK->value,
             HozzavaloKategoria::PEKARU->value            => KauflandTrierKategoria::HOSSZU_SOROK->value,
             HozzavaloKategoria::TARTOS_ELELMISZER->value => KauflandTrierKategoria::HOSSZU_SOROK->value,
+            HozzavaloKategoria::CUKRASZ->value           => KauflandTrierKategoria::HOSSZU_SOROK->value,
             HozzavaloKategoria::FELVAGOTT->value         => KauflandTrierKategoria::HUS->value,
             HozzavaloKategoria::HUS->value               => KauflandTrierKategoria::HUS->value,
             HozzavaloKategoria::MIRELIT->value           => KauflandTrierKategoria::HUTOS->value,

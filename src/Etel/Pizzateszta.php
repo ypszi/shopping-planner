@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace PeterPecosz\Kajatervezo\Etel;
 
 use Override;
+use PeterPecosz\Kajatervezo\Hozzavalo\Cukrasz\Cukor;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\So;
 use PeterPecosz\Kajatervezo\Hozzavalo\Olaj\OlivaOlaj;
-use PeterPecosz\Kajatervezo\Hozzavalo\TartosElelmiszer\Cukor;
 use PeterPecosz\Kajatervezo\Hozzavalo\TartosElelmiszer\Eleszto;
 use PeterPecosz\Kajatervezo\Hozzavalo\TartosElelmiszer\Finomliszt;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;

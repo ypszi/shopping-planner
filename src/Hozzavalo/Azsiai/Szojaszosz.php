@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace PeterPecosz\Kajatervezo\Hozzavalo\Hus;
+namespace PeterPecosz\Kajatervezo\Hozzavalo\Azsiai;
 
 use Override;
 
-class Kolbasz extends Hus
+class Szojaszosz extends Azsiai
 {
     #[Override] public static function name(): string
     {
-        return 'Kolbász';
+        return 'Szójaszósz';
     }
 }

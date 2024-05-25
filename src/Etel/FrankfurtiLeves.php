@@ -5,13 +5,13 @@ declare(strict_types=1);
 namespace PeterPecosz\Kajatervezo\Etel;
 
 use Override;
+use PeterPecosz\Kajatervezo\Hozzavalo\Felvagott\Virsli;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Bors;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\FuszerPaprika;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Komenymag;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\So;
-use PeterPecosz\Kajatervezo\Hozzavalo\TartosElelmiszer\Finomliszt;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hus\Serteszsir;
-use PeterPecosz\Kajatervezo\Hozzavalo\Hus\Virsli;
+use PeterPecosz\Kajatervezo\Hozzavalo\TartosElelmiszer\Finomliszt;
 use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\Tejfol;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Burgonya;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Fokhagyma;

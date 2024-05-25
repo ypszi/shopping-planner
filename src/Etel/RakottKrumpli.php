@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace PeterPecosz\Kajatervezo\Etel;
 
 use Override;
+use PeterPecosz\Kajatervezo\Hozzavalo\Felvagott\BaconKockazott;
+use PeterPecosz\Kajatervezo\Hozzavalo\Felvagott\Kolbasz;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\So;
-use PeterPecosz\Kajatervezo\Hozzavalo\Hus\BaconKockazott;
-use PeterPecosz\Kajatervezo\Hozzavalo\Hus\Kolbasz;
 use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\Tejfol;
 use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\Tojas;
 use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\Vaj;
