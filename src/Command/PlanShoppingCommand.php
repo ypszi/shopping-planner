@@ -27,17 +27,22 @@ class PlanShoppingCommand extends Command
     private SymfonyStyle $io;
 
     /** @var string[] */
+    private array $availableSupermarkets;
+
+    /** @var string[] */
     private array $availableFoodNames;
 
     protected function configure(): void
     {
-        $this->availableFoodNames = array_combine(range(1, count(EtelFactory::listAvailableEtelek())), array_values(EtelFactory::listAvailableEtelek()));
+        $this->availableSupermarkets = array_combine(range(1, count(SupermarketFactory::listAvailableSupermarkets())), array_values(SupermarketFactory::listAvailableSupermarkets()));
+        $this->availableFoodNames    = array_combine(range(1, count(EtelFactory::listAvailableEtelek())), array_values(EtelFactory::listAvailableEtelek()));
 
         $this
             ->setName('plan:shopping')
             ->setDescription('Megtervezi a hozzávalók bevásárlását')
             ->addOption('testing', 't')
-            ->addArgument('foods', InputArgument::OPTIONAL, 'List of food names to prepare for', null, $this->availableFoodNames);
+            ->addOption('supermarket', 's', InputArgument::OPTIONAL, 'Name of supermarket to go to', null, $this->availableSupermarkets)
+            ->addOption('foods', 'f', InputArgument::OPTIONAL, 'List of food names to prepare for', null, $this->availableFoodNames);
     }
 
     #[Override] protected function initialize(InputInterface $input, OutputInterface $output): void
@@ -50,25 +55,16 @@ class PlanShoppingCommand extends Command
 
     #[Override] protected function interact(InputInterface $input, OutputInterface $output): void
     {
+        $this->askSupermarket($input);
+
         if ($input->getOption('testing')) {
             $this->prepareTestingRun();
 
             return;
         }
 
-        /** @var string $supermarket */
-        $supermarket = $this->io->choice(
-            question: 'Hova mész bevásárolni?',
-            choices: [
-                KauflandTrier::name(),
-            ],
-            default: KauflandTrier::name()
-        );
-
-        $this->supermarket = SupermarketFactory::create($supermarket);
-
         /** @var string[] $foodNames */
-        $foodNames = array_map('trim', explode(',', $input->getArgument('foods') ?? ''))
+        $foodNames = array_map('trim', explode(',', $input->getOption('foods') ?? ''))
             ?: $this->io->choice(
                 question: 'Melyik kajákhoz kell bevásárolni?',
                 choices: $this->availableFoodNames,
@@ -78,7 +74,7 @@ class PlanShoppingCommand extends Command
         foreach ($foodNames as $kajaName) {
             $etel = EtelFactory::create($kajaName);
             $adag = (int)$this->io->ask(
-                sprintf('Hány adagot főzöl ebből: "%s"?', $kajaName),
+                sprintf('Hány adagot készítesz ebből: "%s"?', $kajaName),
                 (string)$etel::defaultAdag()
             );
 
@@ -109,13 +105,22 @@ class PlanShoppingCommand extends Command
 
     private function prepareTestingRun(): void
     {
-        $this->supermarket = SupermarketFactory::create(KauflandTrier::name());
-
         foreach (EtelFactory::listAvailableEtelek() as $etelName) {
             $this->etelek->add(EtelFactory::create($etelName));
         }
+    }
 
-        $this->renderEtelek();
+    private function askSupermarket(InputInterface $input): void
+    {
+        /** @var string $supermarket */
+        $supermarket = trim($input->getOption('supermarket'))
+            ?: $this->io->choice(
+                question: 'Hova mész bevásárolni?',
+                choices: $this->availableSupermarkets,
+                default: KauflandTrier::name()
+            );
+
+        $this->supermarket = SupermarketFactory::create($supermarket);
     }
 
     private function renderEtelek(): void
