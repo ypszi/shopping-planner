@@ -20,7 +20,7 @@ class FuszeresEdesburgonya extends Etel
         return 'Fűszeres édesburgonya';
     }
 
-    #[Override] protected static function listHozzavalok(): array
+    #[Override] protected function listHozzavalok(): array
     {
         return [
             new Edesburgonya(1, Mertekegyseg::KG),

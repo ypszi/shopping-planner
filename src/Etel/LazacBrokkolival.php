@@ -22,7 +22,7 @@ class LazacBrokkolival extends Etel
         return 'Lazac brokkolival';
     }
 
-    #[Override] protected static function listHozzavalok(): array
+    #[Override] protected function listHozzavalok(): array
     {
         return [
             new Lazac(40, Mertekegyseg::DKG),

@@ -20,7 +20,7 @@ class Reggeli extends Etel
         return 'Reggeli';
     }
 
-    #[Override] protected static function listHozzavalok(): array
+    #[Override] protected function listHozzavalok(): array
     {
         return [
             new Kenyer(0.5, Mertekegyseg::KG),

@@ -23,7 +23,7 @@ class CitromosSpargasCsirkesPenne extends Etel
         return 'Citromos spárgás csirkés penne';
     }
 
-    #[Override] protected static function listHozzavalok(): array
+    #[Override] protected function listHozzavalok(): array
     {
         return [
             new Voroshagyma(1, Mertekegyseg::DB),

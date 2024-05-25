@@ -23,7 +23,7 @@ class FuszeresCsirkeszarnyak extends Etel
         return 'Fűszeres csirkeszárnyak';
     }
 
-    #[Override] protected static function listHozzavalok(): array
+    #[Override] protected function listHozzavalok(): array
     {
         return [
             new Csirkeszarny(1, Mertekegyseg::KG),

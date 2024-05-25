@@ -25,7 +25,7 @@ class AmerikaiKaposztasalata extends Etel
         return 'Amerikai káposztasaláta';
     }
 
-    #[Override] protected static function listHozzavalok(): array
+    #[Override] protected function listHozzavalok(): array
     {
         return [
             new Sargarepa(1, Mertekegyseg::DB),

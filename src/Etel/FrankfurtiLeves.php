@@ -26,7 +26,7 @@ class FrankfurtiLeves extends Etel
         return 'Frankfurti leves';
     }
 
-    #[Override] protected static function listHozzavalok(): array
+    #[Override] protected function listHozzavalok(): array
     {
         return [
             new Serteszsir(1, Mertekegyseg::EK),

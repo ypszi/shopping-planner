@@ -23,7 +23,7 @@ class EtelTest extends TestCase
                 return 'test food';
             }
 
-            #[Override] protected static function listHozzavalok(): array
+            #[Override] protected function listHozzavalok(): array
             {
                 return [
                     new Tojas(1, Mertekegyseg::DB),

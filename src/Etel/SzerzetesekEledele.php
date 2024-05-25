@@ -26,7 +26,7 @@ class SzerzetesekEledele extends Etel
         return 'Szerzetesek eledele';
     }
 
-    #[Override] protected static function listHozzavalok(): array
+    #[Override] protected function listHozzavalok(): array
     {
         return [
             // 50 g fafülgomba

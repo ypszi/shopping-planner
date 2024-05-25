@@ -25,7 +25,7 @@ class CsirkesSpargasRizotto extends Etel
         return 'Csirkés spárgás rizottó';
     }
 
-    #[Override] protected static function listHozzavalok(): array
+    #[Override] protected function listHozzavalok(): array
     {
         return [
             new Csirkemell(35, Mertekegyseg::DKG),

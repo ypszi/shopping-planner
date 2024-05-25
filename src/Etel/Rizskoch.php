@@ -22,7 +22,7 @@ class Rizskoch extends Etel
         return 'Rizskoch';
     }
 
-    #[Override] protected static function listHozzavalok(): array
+    #[Override] protected function listHozzavalok(): array
     {
         return [
             new Citrom(0.5, Mertekegyseg::DB),

@@ -20,7 +20,7 @@ class PorehagymaLeves extends Etel
         return 'Póréhagyma leves';
     }
 
-    #[Override] protected static function listHozzavalok(): array
+    #[Override] protected function listHozzavalok(): array
     {
         return [
             new Porehagyma(2, Mertekegyseg::DB),

@@ -27,7 +27,7 @@ class IllatosOmlosCsirkemell extends Etel
         return 'Illatos omlós csirkemell';
     }
 
-    #[Override] protected static function listHozzavalok(): array
+    #[Override] protected function listHozzavalok(): array
     {
         return [
             new Csirkemell(60, Mertekegyseg::DKG),

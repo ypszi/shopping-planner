@@ -24,7 +24,7 @@ class CitromosJoghurtosCsirkemellGorogsalataval extends Etel
         return 'Citromos joghurtos csirkemell görögsalátával';
     }
 
-    #[Override] protected static function listHozzavalok(): array
+    #[Override] protected function listHozzavalok(): array
     {
         return [
             new Citrom(1, Mertekegyseg::DB),

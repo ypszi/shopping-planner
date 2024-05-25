@@ -21,7 +21,7 @@ class KefiresCsirke extends Etel
         return 'Kefíres csirke';
     }
 
-    #[Override] protected static function listHozzavalok(): array
+    #[Override] protected function listHozzavalok(): array
     {
         return [
             new PirosPaprika(1, Mertekegyseg::TK),

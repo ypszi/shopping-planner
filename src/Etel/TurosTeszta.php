@@ -19,7 +19,7 @@ class TurosTeszta extends Etel
         return 'Túrós tészta';
     }
 
-    #[Override] protected static function listHozzavalok(): array
+    #[Override] protected function listHozzavalok(): array
     {
         return [
             new CsuszaTeszta(500, Mertekegyseg::G),

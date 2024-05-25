@@ -19,7 +19,7 @@ class Pizzateszta extends Etel
         return 'Pizzatészta';
     }
 
-    #[Override] protected static function listHozzavalok(): array
+    #[Override] protected function listHozzavalok(): array
     {
         return [
             new Finomliszt(500, Mertekegyseg::G),

@@ -17,7 +17,7 @@ class Rizs extends Etel
         return 'Rizs';
     }
 
-    #[Override] protected static function listHozzavalok(): array
+    #[Override] protected function listHozzavalok(): array
     {
         return [
             new HozzavaloRizs(200, Mertekegyseg::G),

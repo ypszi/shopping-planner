@@ -19,7 +19,7 @@ class RetkesUborkaSalata extends Etel
         return 'Retkes uborka saláta';
     }
 
-    #[Override] protected static function listHozzavalok(): array
+    #[Override] protected function listHozzavalok(): array
     {
         return [
             new Kigyouborka(1, Mertekegyseg::DB),

@@ -29,7 +29,7 @@ class PadThai extends Etel
         return 'Pad thai';
     }
 
-    #[Override] protected static function listHozzavalok(): array
+    #[Override] protected function listHozzavalok(): array
     {
         return [
             new Voroshagyma(1, Mertekegyseg::DB),

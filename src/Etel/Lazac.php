@@ -21,7 +21,7 @@ class Lazac extends Etel
         return 'Lazac';
     }
 
-    #[Override] protected static function listHozzavalok(): array
+    #[Override] protected function listHozzavalok(): array
     {
         return [
             new NyersLazac(36, Mertekegyseg::DKG),

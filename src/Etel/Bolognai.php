@@ -32,7 +32,7 @@ class Bolognai extends Etel
         return 'Bolognai';
     }
 
-    #[Override] protected static function listHozzavalok(): array
+    #[Override] protected function listHozzavalok(): array
     {
         return [
             new OlivaOlaj(3, Mertekegyseg::EK),

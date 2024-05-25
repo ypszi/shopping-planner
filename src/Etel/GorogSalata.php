@@ -21,7 +21,7 @@ class GorogSalata extends Etel
         return 'Görög saláta';
     }
 
-    #[Override] protected static function listHozzavalok(): array
+    #[Override] protected function listHozzavalok(): array
     {
         return [
             new Paradicsom(4, Mertekegyseg::DB),

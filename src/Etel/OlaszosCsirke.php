@@ -22,7 +22,7 @@ class OlaszosCsirke extends Etel
         return 'Olaszos csirke';
     }
 
-    #[Override] protected static function listHozzavalok(): array
+    #[Override] protected function listHozzavalok(): array
     {
         return [
             new Csirkemell(2, Mertekegyseg::DB),

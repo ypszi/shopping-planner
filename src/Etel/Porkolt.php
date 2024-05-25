@@ -25,7 +25,7 @@ class Porkolt extends Etel
         return 'Pörkölt';
     }
 
-    #[Override] protected static function listHozzavalok(): array
+    #[Override] protected function listHozzavalok(): array
     {
         return [
             new Sertescomb(1, Mertekegyseg::KG),

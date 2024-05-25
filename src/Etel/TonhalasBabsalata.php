@@ -25,7 +25,7 @@ class TonhalasBabsalata extends Etel
         return 'Tonhalas babsaláta';
     }
 
-    #[Override] protected static function listHozzavalok(): array
+    #[Override] protected function listHozzavalok(): array
     {
         return [
             new Citrom(1, Mertekegyseg::DB),

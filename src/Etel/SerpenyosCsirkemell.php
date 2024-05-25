@@ -21,7 +21,7 @@ class SerpenyosCsirkemell extends Etel
         return 'Serpenyős csirkemell';
     }
 
-    #[Override] protected static function listHozzavalok(): array
+    #[Override] protected function listHozzavalok(): array
     {
         return [
             new Csirkemell(60, Mertekegyseg::DKG),

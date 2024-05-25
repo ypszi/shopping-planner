@@ -21,7 +21,7 @@ class Fasirt extends Etel
         return 'Fasírt';
     }
 
-    #[Override] protected static function listHozzavalok(): array
+    #[Override] protected function listHozzavalok(): array
     {
         return [
             new DaraltHus(1, Mertekegyseg::KG),

@@ -32,7 +32,7 @@ class TarkonyosCsirkeraguLeves extends Etel
         return 4;
     }
 
-    #[Override] protected static function listHozzavalok(): array
+    #[Override] protected function listHozzavalok(): array
     {
         return [
             new Csirkemell(1, Mertekegyseg::DB),

@@ -19,7 +19,7 @@ class Tejbegriz extends Etel
         return 'Tejbegríz';
     }
 
-    #[Override] protected static function listHozzavalok(): array
+    #[Override] protected function listHozzavalok(): array
     {
         return [
             new Tej(5, Mertekegyseg::DL),

@@ -25,7 +25,7 @@ class ParadicsomosTeszta extends Etel
         return 'Paradicsomos tészta';
     }
 
-    #[Override] protected static function listHozzavalok(): array
+    #[Override] protected function listHozzavalok(): array
     {
         return [
             new OlivaOlaj(2, Mertekegyseg::EK),

@@ -21,7 +21,7 @@ class BogresSuti extends Etel
         return 'Bögrés süti';
     }
 
-    #[Override] protected static function listHozzavalok(): array
+    #[Override] protected function listHozzavalok(): array
     {
         return [
             new Finomliszt(4, Mertekegyseg::EK),

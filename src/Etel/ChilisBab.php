@@ -23,7 +23,7 @@ class ChilisBab extends Etel
         return 'Chilis bab';
     }
 
-    #[Override] protected static function listHozzavalok(): array
+    #[Override] protected function listHozzavalok(): array
     {
         return [
             new Voroshagyma(2, Mertekegyseg::DB),

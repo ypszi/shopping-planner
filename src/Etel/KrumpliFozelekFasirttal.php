@@ -17,28 +17,35 @@ use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class KrumpliFozelekFasirttal extends Etel
 {
+    private Fasirt $fasirt;
+
+    public function __construct(?int $adag = null)
+    {
+        $this->fasirt = new Fasirt($adag);
+
+        parent::__construct($adag);
+    }
+
     #[Override] public static function name(): string
     {
         return 'Krumpli főzelék fasírttal';
     }
 
-    #[Override] protected static function listHozzavalok(): array
+    #[Override] protected function listHozzavalok(): array
     {
-        return array_merge(
-            [
-                new NapraforgoOlaj(2, Mertekegyseg::EK),
-                new FuszerPaprika(1, Mertekegyseg::TK),
-                new Burgonya(70, Mertekegyseg::DKG),
-                new Majoranna(2, Mertekegyseg::EK),
-                new Baberlevel(3, Mertekegyseg::DB),
-                // só ízlés szerint
-                new So(1, Mertekegyseg::KK),
-                new Tejfol(2, Mertekegyseg::DL),
-                new Finomliszt(1.5, Mertekegyseg::DKG),
-                // 4 dl víz (kb.)
-            ],
-            (new Fasirt(static::defaultAdag()))->hozzavalok()
-        );
+        return [
+            new NapraforgoOlaj(2, Mertekegyseg::EK),
+            new FuszerPaprika(1, Mertekegyseg::TK),
+            new Burgonya(70, Mertekegyseg::DKG),
+            new Majoranna(2, Mertekegyseg::EK),
+            new Baberlevel(3, Mertekegyseg::DB),
+            // só ízlés szerint
+            new So(1, Mertekegyseg::KK),
+            new Tejfol(2, Mertekegyseg::DL),
+            new Finomliszt(1.5, Mertekegyseg::DKG),
+            // 4 dl víz (kb.)
+            ...$this->fasirt->hozzavalok(),
+        ];
     }
 
     #[Override] public static function defaultAdag(): int

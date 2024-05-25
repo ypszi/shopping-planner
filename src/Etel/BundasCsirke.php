@@ -27,7 +27,7 @@ class BundasCsirke extends Etel
         return 'Bundás csirke';
     }
 
-    #[Override] protected static function listHozzavalok(): array
+    #[Override] protected function listHozzavalok(): array
     {
         return [
             new Fokhagyma(3, Mertekegyseg::GEREZD),

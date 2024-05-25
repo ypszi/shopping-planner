@@ -19,7 +19,7 @@ class Krumplipure extends Etel
         return 'Krumplipüré';
     }
 
-    #[Override] protected static function listHozzavalok(): array
+    #[Override] protected function listHozzavalok(): array
     {
         return [
             new Krumpli(1, Mertekegyseg::KG),

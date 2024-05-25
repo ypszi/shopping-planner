@@ -23,7 +23,7 @@ class Csirkemellpaprikas extends Etel
         return 'Csirkemellpaprikás';
     }
 
-    #[Override] protected static function listHozzavalok(): array
+    #[Override] protected function listHozzavalok(): array
     {
         return [
             new Voroshagyma(1, Mertekegyseg::DB),

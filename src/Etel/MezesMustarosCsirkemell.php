@@ -22,7 +22,7 @@ class MezesMustarosCsirkemell extends Etel
         return 'Mézes-mustáros csirkemell';
     }
 
-    #[Override] protected static function listHozzavalok(): array
+    #[Override] protected function listHozzavalok(): array
     {
         return [
             new Csirkemell(50, Mertekegyseg::DKG),

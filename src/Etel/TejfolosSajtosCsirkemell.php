@@ -22,7 +22,7 @@ class TejfolosSajtosCsirkemell extends Etel
         return 'Tejfölös-sajtos csirkemell';
     }
 
-    #[Override] protected static function listHozzavalok(): array
+    #[Override] protected function listHozzavalok(): array
     {
         return [
             new Csirkemell(2, Mertekegyseg::DB),

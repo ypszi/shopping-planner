@@ -27,7 +27,7 @@ class ToltottKaposzta extends Etel
         return 'Töltött káposzta';
     }
 
-    #[Override] protected static function listHozzavalok(): array
+    #[Override] protected function listHozzavalok(): array
     {
         return [
             new SavanyuKaposzta(1, Mertekegyseg::KG),

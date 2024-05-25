@@ -18,7 +18,7 @@ class Rantotta extends Etel
         return 'Rántotta';
     }
 
-    #[Override] protected static function listHozzavalok(): array
+    #[Override] protected function listHozzavalok(): array
     {
         return [
             new Kenyer(10, Mertekegyseg::DKG),

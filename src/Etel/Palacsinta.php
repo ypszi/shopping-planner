@@ -21,7 +21,7 @@ class Palacsinta extends Etel
         return 'Palacsinta';
     }
 
-    #[Override] protected static function listHozzavalok(): array
+    #[Override] protected function listHozzavalok(): array
     {
         return [
             new Tojas(3, Mertekegyseg::DB),

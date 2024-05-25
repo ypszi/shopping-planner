@@ -21,7 +21,7 @@ class Lecso extends Etel
         return 'Lecsó';
     }
 
-    #[Override] protected static function listHozzavalok(): array
+    #[Override] protected function listHozzavalok(): array
     {
         return [
             new Paradicsom(40, Mertekegyseg::DKG),

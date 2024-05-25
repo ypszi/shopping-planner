@@ -22,7 +22,7 @@ class Bulgur extends Etel
         return 'Bulgur';
     }
 
-    #[Override] protected static function listHozzavalok(): array
+    #[Override] protected function listHozzavalok(): array
     {
         return [
             new NyersBulgur(30, Mertekegyseg::DKG),

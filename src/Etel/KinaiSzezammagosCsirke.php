@@ -24,7 +24,7 @@ class KinaiSzezammagosCsirke extends Etel
         return 'Kínai szezámmagos csirke';
     }
 
-    #[Override] protected static function listHozzavalok(): array
+    #[Override] protected function listHozzavalok(): array
     {
         return [
             // a bundához

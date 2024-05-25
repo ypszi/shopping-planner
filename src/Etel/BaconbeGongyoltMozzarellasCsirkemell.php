@@ -20,7 +20,7 @@ class BaconbeGongyoltMozzarellasCsirkemell extends Etel
         return 'Baconbe göngyölt mozzarellás csirkemell';
     }
 
-    #[Override] protected static function listHozzavalok(): array
+    #[Override] protected function listHozzavalok(): array
     {
         return [
             new Csirkemell(50, Mertekegyseg::DKG),

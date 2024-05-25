@@ -25,7 +25,7 @@ class DiosAlmasSajtsalata extends Etel
         return 'Diós-almás sajtsaláta';
     }
 
-    #[Override] protected static function listHozzavalok(): array
+    #[Override] protected function listHozzavalok(): array
     {
         return [
             new Tejfol(450, Mertekegyseg::G),

@@ -23,7 +23,7 @@ class PaprikasKrumpli extends Etel
         return 'Paprikás krumpli';
     }
 
-    #[Override] protected static function listHozzavalok(): array
+    #[Override] protected function listHozzavalok(): array
     {
         return [
             new Burgonya(1, Mertekegyseg::KG),
