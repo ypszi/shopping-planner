@@ -84,14 +84,14 @@ class PlanShoppingCommand extends Command
 
             $this->etelek->add($etel->withAdag($adag));
         }
-
-        $this->renderEtelek();
     }
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
         $this->io->section('Bevásárlóközpont:');
         $this->io->text($this->supermarket::name());
+
+        $this->renderEtelek();
 
         $hozzavalokByKategoria = new HozzavalokByKategoria();
         foreach ($this->etelek as $etel) {
@@ -120,6 +120,7 @@ class PlanShoppingCommand extends Command
 
     private function renderEtelek(): void
     {
+        $this->io->section('Ételek:');
         $this->io->table(
             ['Étel', 'Recept'],
             array_map(fn(Etel $etel) => [(string)$etel, $etel->receptUrl()], $this->etelek->toArray())
