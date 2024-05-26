@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Etel;
 
-use Override;
 use PeterPecosz\Kajatervezo\Hozzavalo\Felvagott\Felvagott;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Ketchup;
 use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\MozzarellaSajtReszelt;
@@ -21,12 +20,12 @@ class Pizza extends Etel
         parent::__construct($adag);
     }
 
-    #[Override] public static function name(): string
+    public static function name(): string
     {
         return 'Pizza';
     }
 
-    #[Override] protected function listHozzavalok(): array
+    protected function listHozzavalok(): array
     {
         return [
             new Felvagott(15, Mertekegyseg::DKG),
@@ -36,12 +35,12 @@ class Pizza extends Etel
         ];
     }
 
-    #[Override] public static function defaultAdag(): int
+    public static function defaultAdag(): int
     {
         return Pizzateszta::defaultAdag();
     }
 
-    #[Override] public function receptUrl(): string
+    public function receptUrl(): string
     {
         return $this->pizzateszta->receptUrl();
     }

@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Etel;
 
-use Override;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Bors;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Kakukkfu;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Rozmaring;
@@ -16,12 +15,12 @@ use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class Lazac extends Etel
 {
-    #[Override] public static function name(): string
+    public static function name(): string
     {
         return 'Lazac';
     }
 
-    #[Override] protected function listHozzavalok(): array
+    protected function listHozzavalok(): array
     {
         return [
             new NyersLazac(36, Mertekegyseg::DKG),
@@ -34,12 +33,12 @@ class Lazac extends Etel
         ];
     }
 
-    #[Override] public static function defaultAdag(): int
+    public static function defaultAdag(): int
     {
         return 2;
     }
 
-    #[Override] public function receptUrl(): string
+    public function receptUrl(): string
     {
         return $this->decorateNoSaltyReceptUrl('https://www.nosalty.hu/recept/lazac-egyszeruen');
     }

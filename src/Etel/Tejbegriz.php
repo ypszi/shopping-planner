@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Etel;
 
-use Override;
 use PeterPecosz\Kajatervezo\Hozzavalo\Cukrasz\Cukor;
 use PeterPecosz\Kajatervezo\Hozzavalo\Cukrasz\Kakaopor;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\So;
@@ -14,12 +13,12 @@ use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class Tejbegriz extends Etel
 {
-    #[Override] public static function name(): string
+    public static function name(): string
     {
         return 'Tejbegríz';
     }
 
-    #[Override] protected function listHozzavalok(): array
+    protected function listHozzavalok(): array
     {
         return [
             new Tej(5, Mertekegyseg::DL),
@@ -30,12 +29,12 @@ class Tejbegriz extends Etel
         ];
     }
 
-    #[Override] public static function defaultAdag(): int
+    public static function defaultAdag(): int
     {
         return 2;
     }
 
-    #[Override] public function receptUrl(): string
+    public function receptUrl(): string
     {
         return 'https://www.mindmegette.hu/tejbegriz.recept/';
     }

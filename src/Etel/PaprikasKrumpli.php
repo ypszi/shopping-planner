@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Etel;
 
-use Override;
 use PeterPecosz\Kajatervezo\Hozzavalo\Felvagott\Kolbasz;
 use PeterPecosz\Kajatervezo\Hozzavalo\Felvagott\Virsli;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Bors;
@@ -18,12 +17,12 @@ use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class PaprikasKrumpli extends Etel
 {
-    #[Override] public static function name(): string
+    public static function name(): string
     {
         return 'Paprikás krumpli';
     }
 
-    #[Override] protected function listHozzavalok(): array
+    protected function listHozzavalok(): array
     {
         return [
             new Burgonya(1, Mertekegyseg::KG),
@@ -38,12 +37,12 @@ class PaprikasKrumpli extends Etel
         ];
     }
 
-    #[Override] public static function defaultAdag(): int
+    public static function defaultAdag(): int
     {
         return 4;
     }
 
-    #[Override] public function receptUrl(): string
+    public function receptUrl(): string
     {
         return $this->decorateNoSaltyReceptUrl('https://www.nosalty.hu/recept/paprikas-krumpli-kolbasszal');
     }

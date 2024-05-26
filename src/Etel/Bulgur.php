@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Etel;
 
-use Override;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Bors;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\HuslevesKocka;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\So;
@@ -17,12 +16,12 @@ use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class Bulgur extends Etel
 {
-    #[Override] public static function name(): string
+    public static function name(): string
     {
         return 'Bulgur';
     }
 
-    #[Override] protected function listHozzavalok(): array
+    protected function listHozzavalok(): array
     {
         return [
             new NyersBulgur(30, Mertekegyseg::DKG),
@@ -36,12 +35,12 @@ class Bulgur extends Etel
         ];
     }
 
-    #[Override] public static function defaultAdag(): int
+    public static function defaultAdag(): int
     {
         return 4;
     }
 
-    #[Override] public function receptUrl(): string
+    public function receptUrl(): string
     {
         return 'https://eletszepitok.hu/igy-keszul-a-paradicsomos-bulgur-azaz-a-torok-rizs/';
     }

@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Tests\Supermarket;
 
-use Override;
 use PeterPecosz\Kajatervezo\Hozzavalo\HozzavaloKategoria;
 use PeterPecosz\Kajatervezo\Hozzavalo\Kategoria;
 use PeterPecosz\Kajatervezo\Supermarket\KategoriaMap;
@@ -21,7 +20,7 @@ class KategoriaMapTest extends TestCase
             /**
              * @return array<string, Kategoria>
              */
-            #[Override] protected function kategoriaMap(): array
+            protected function kategoriaMap(): array
             {
                 return [
                     HozzavaloKategoria::BOR->value => HozzavaloKategoria::TEJTERMEK,

@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Supermarket\AuchanLuxembourg;
 
-use Override;
 use PeterPecosz\Kajatervezo\Supermarket\Supermarket;
 
 class AuchanLuxembourg extends Supermarket
@@ -17,7 +16,7 @@ class AuchanLuxembourg extends Supermarket
     /**
      * @return string[]
      */
-    #[Override] public static function sorrend(): array
+    public static function sorrend(): array
     {
         return [
             AuchanLuxembourgKategoria::UDITO->value,

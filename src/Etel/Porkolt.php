@@ -4,13 +4,12 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Etel;
 
-use Override;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Fuszerkomeny;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\GulyasKrem;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\PirosPaprika;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\So;
-use PeterPecosz\Kajatervezo\Hozzavalo\Olaj\OlivaOlaj;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hus\Sertescomb;
+use PeterPecosz\Kajatervezo\Hozzavalo\Olaj\OlivaOlaj;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Fokhagyma;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\HegyesPaprika;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Paprika;
@@ -20,12 +19,12 @@ use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class Porkolt extends Etel
 {
-    #[Override] public static function name(): string
+    public static function name(): string
     {
         return 'Pörkölt';
     }
 
-    #[Override] protected function listHozzavalok(): array
+    protected function listHozzavalok(): array
     {
         return [
             new Sertescomb(1, Mertekegyseg::KG),
@@ -42,12 +41,12 @@ class Porkolt extends Etel
         ];
     }
 
-    #[Override] public static function defaultAdag(): int
+    public static function defaultAdag(): int
     {
         return 4;
     }
 
-    #[Override] public function receptUrl(): string
+    public function receptUrl(): string
     {
         return 'https://www.mindmegette.hu/klasszikus-sertesporkolt.recept/';
     }

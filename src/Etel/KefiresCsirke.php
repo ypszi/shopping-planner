@@ -4,24 +4,23 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Etel;
 
-use Override;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Fuszerkeverek;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\PirosPaprika;
+use PeterPecosz\Kajatervezo\Hozzavalo\Hus\Csirkemell;
 use PeterPecosz\Kajatervezo\Hozzavalo\Olaj\NapraforgoOlaj;
 use PeterPecosz\Kajatervezo\Hozzavalo\TartosElelmiszer\Liszt;
 use PeterPecosz\Kajatervezo\Hozzavalo\TartosElelmiszer\Sutopor;
-use PeterPecosz\Kajatervezo\Hozzavalo\Hus\Csirkemell;
 use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\Kefir;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class KefiresCsirke extends Etel
 {
-    #[Override] public static function name(): string
+    public static function name(): string
     {
         return 'Kefíres csirke';
     }
 
-    #[Override] protected function listHozzavalok(): array
+    protected function listHozzavalok(): array
     {
         return [
             new PirosPaprika(1, Mertekegyseg::TK),
@@ -34,12 +33,12 @@ class KefiresCsirke extends Etel
         ];
     }
 
-    #[Override] public static function defaultAdag(): int
+    public static function defaultAdag(): int
     {
         return 4;
     }
 
-    #[Override] public function receptUrl(): string
+    public function receptUrl(): string
     {
         return 'http://chiliesvanilia.blogspot.com/2016/08/szuperropogos-rantott-csirke-husz-perc.html';
     }

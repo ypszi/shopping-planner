@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Supermarket\KauflandTrier;
 
-use Override;
 use PeterPecosz\Kajatervezo\Supermarket\Supermarket;
 
 class KauflandTrier extends Supermarket
@@ -17,7 +16,7 @@ class KauflandTrier extends Supermarket
     /**
      * @return string[]
      */
-    #[Override] public static function sorrend(): array
+    public static function sorrend(): array
     {
         return [
             KauflandTrierKategoria::ZOLDSEG_GYUMOLCS->value,

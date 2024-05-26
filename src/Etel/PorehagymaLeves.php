@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Etel;
 
-use Override;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\HuslevesKocka;
 use PeterPecosz\Kajatervezo\Hozzavalo\TartosTejtermek\Habtejszin;
 use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\Vaj;
@@ -15,12 +14,12 @@ use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class PorehagymaLeves extends Etel
 {
-    #[Override] public static function name(): string
+    public static function name(): string
     {
         return 'Póréhagyma leves';
     }
 
-    #[Override] protected function listHozzavalok(): array
+    protected function listHozzavalok(): array
     {
         return [
             new Porehagyma(2, Mertekegyseg::DB),
@@ -32,12 +31,12 @@ class PorehagymaLeves extends Etel
         ];
     }
 
-    #[Override] public static function defaultAdag(): int
+    public static function defaultAdag(): int
     {
         return 4;
     }
 
-    #[Override] public function receptUrl(): string
+    public function receptUrl(): string
     {
         return $this->decorateNoSaltyReceptUrl('https://www.nosalty.hu/recept/klasszikus-porehagyma-kremleves');
     }

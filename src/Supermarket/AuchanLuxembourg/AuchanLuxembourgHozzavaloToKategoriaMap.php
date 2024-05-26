@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Supermarket\AuchanLuxembourg;
 
-use Override;
 use PeterPecosz\Kajatervezo\Hozzavalo\HozzavaloKategoria;
 use PeterPecosz\Kajatervezo\Hozzavalo\Kategoria;
 use PeterPecosz\Kajatervezo\Hozzavalo\TartosElelmiszer\TonhalKonzerv;
@@ -22,7 +21,7 @@ class AuchanLuxembourgHozzavaloToKategoriaMap extends HozzavaloToKategoriaMap
     /**
      * @return array<string, Kategoria>
      */
-    #[Override] protected function hozzavaloMap(): array
+    protected function hozzavaloMap(): array
     {
         return [
             FetaSajt::name()              => AuchanLuxembourgKategoria::SAJT,

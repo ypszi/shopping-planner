@@ -6,33 +6,33 @@ namespace PeterPecosz\Kajatervezo\Mertekegyseg;
 
 class Mertekegyseg
 {
-    final public const string DB = 'db';
-    final public const string CSIPET = 'csipet';
-    final public const string GEREZD = 'gerezd';
-    final public const string KONZERV = 'konzerv';
+    final public const DB = 'db';
+    final public const CSIPET = 'csipet';
+    final public const GEREZD = 'gerezd';
+    final public const KONZERV = 'konzerv';
     /* késhegy */
-    final public const string KH = 'kh';
+    final public const KH = 'kh';
     /* tömeg */
-    final public const string G = 'g';
-    final public const string DKG = 'dkg';
-    final public const string KG = 'kg';
+    final public const G = 'g';
+    final public const DKG = 'dkg';
+    final public const KG = 'kg';
     /* űrtartalom */
-    final public const string ML = 'ml';
-    final public const string CL = 'cl';
-    final public const string DL = 'dl';
-    final public const string L = 'l';
+    final public const ML = 'ml';
+    final public const CL = 'cl';
+    final public const DL = 'dl';
+    final public const L = 'l';
     /* pohár */
-    final public const string CSESZE = 'csésze';
-    final public const string BOGRE = 'bögre';
+    final public const CSESZE = 'csésze';
+    final public const BOGRE = 'bögre';
     /* kanál */
     // Mokkás kanál
-    final public const string MK = 'mk';
+    final public const MK = 'mk';
     // Kis kanál
-    final public const string KK = 'kk';
+    final public const KK = 'kk';
     // Teás kanál
-    final public const string TK = 'tk';
+    final public const TK = 'tk';
     // Kávés kanál
-    final public const string KVK = 'kvk';
+    final public const KVK = 'kvk';
     // Evőkanál
-    final public const string EK = 'ek';
+    final public const EK = 'ek';
 }

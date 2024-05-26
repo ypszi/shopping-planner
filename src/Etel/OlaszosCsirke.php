@@ -4,25 +4,24 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Etel;
 
-use Override;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Bazsalikom;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Bors;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Oregano;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\So;
-use PeterPecosz\Kajatervezo\Hozzavalo\Olaj\NapraforgoOlaj;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hus\Csirkemell;
+use PeterPecosz\Kajatervezo\Hozzavalo\Olaj\NapraforgoOlaj;
 use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\TrappistaSajt;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Paradicsom;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class OlaszosCsirke extends Etel
 {
-    #[Override] public static function name(): string
+    public static function name(): string
     {
         return 'Olaszos csirke';
     }
 
-    #[Override] protected function listHozzavalok(): array
+    protected function listHozzavalok(): array
     {
         return [
             new Csirkemell(2, Mertekegyseg::DB),
@@ -36,12 +35,12 @@ class OlaszosCsirke extends Etel
         ];
     }
 
-    #[Override] public static function defaultAdag(): int
+    public static function defaultAdag(): int
     {
         return 4;
     }
 
-    #[Override] public function receptUrl(): string
+    public function receptUrl(): string
     {
         return $this->decorateNoSaltyReceptUrl('https://www.nosalty.hu/recept/olaszos-csirke-tepsiben');
     }

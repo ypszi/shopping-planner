@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Etel;
 
-use Override;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Baberlevel;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\FuszerPaprika;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Majoranna;
@@ -26,12 +25,12 @@ class KrumpliFozelekFasirttal extends Etel
         parent::__construct($adag);
     }
 
-    #[Override] public static function name(): string
+    public static function name(): string
     {
         return 'Krumpli főzelék fasírttal';
     }
 
-    #[Override] protected function listHozzavalok(): array
+    protected function listHozzavalok(): array
     {
         return [
             new NapraforgoOlaj(2, Mertekegyseg::EK),
@@ -48,12 +47,12 @@ class KrumpliFozelekFasirttal extends Etel
         ];
     }
 
-    #[Override] public static function defaultAdag(): int
+    public static function defaultAdag(): int
     {
         return 4;
     }
 
-    #[Override] public function receptUrl(): string
+    public function receptUrl(): string
     {
         return $this->decorateNoSaltyReceptUrl('https://www.nosalty.hu/recept/legegyszerubb-krumplifozelek');
     }

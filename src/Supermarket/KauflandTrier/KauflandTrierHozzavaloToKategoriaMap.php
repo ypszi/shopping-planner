@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Supermarket\KauflandTrier;
 
-use Override;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Ketchup;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Majonez;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Mustar;
@@ -17,7 +16,7 @@ class KauflandTrierHozzavaloToKategoriaMap extends HozzavaloToKategoriaMap
     /**
      * @return array<string, Kategoria>
      */
-    #[Override] protected function hozzavaloMap(): array
+    protected function hozzavaloMap(): array
     {
         return [
             Ketchup::name() => KauflandTrierKategoria::HUTOS_UTAN,

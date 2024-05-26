@@ -4,26 +4,25 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Etel;
 
-use Override;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Bors;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Chili;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Kakukkfu;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\PirosPaprika;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\So;
-use PeterPecosz\Kajatervezo\Hozzavalo\Olaj\NapraforgoOlaj;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hus\Csirkeszarny;
+use PeterPecosz\Kajatervezo\Hozzavalo\Olaj\NapraforgoOlaj;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Citrom;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Fokhagyma;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class FuszeresCsirkeszarnyak extends Etel
 {
-    #[Override] public static function name(): string
+    public static function name(): string
     {
         return 'Fűszeres csirkeszárnyak';
     }
 
-    #[Override] protected function listHozzavalok(): array
+    protected function listHozzavalok(): array
     {
         return [
             new Csirkeszarny(1, Mertekegyseg::KG),
@@ -38,12 +37,12 @@ class FuszeresCsirkeszarnyak extends Etel
         ];
     }
 
-    #[Override] public static function defaultAdag(): int
+    public static function defaultAdag(): int
     {
         return 4;
     }
 
-    #[Override] public function receptUrl(): string
+    public function receptUrl(): string
     {
         return 'https://femina.hu/recept/fuszeres-csirkeszarnyak/';
     }

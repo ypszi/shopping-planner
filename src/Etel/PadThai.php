@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Etel;
 
-use Override;
 use PeterPecosz\Kajatervezo\Hozzavalo\Azsiai\HalSzosz;
 use PeterPecosz\Kajatervezo\Hozzavalo\Azsiai\RizsTeszta;
 use PeterPecosz\Kajatervezo\Hozzavalo\Azsiai\TamarindSzosz;
@@ -24,12 +23,12 @@ use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class PadThai extends Etel
 {
-    #[Override] public static function name(): string
+    public static function name(): string
     {
         return 'Pad thai';
     }
 
-    #[Override] protected function listHozzavalok(): array
+    protected function listHozzavalok(): array
     {
         return [
             new Voroshagyma(1, Mertekegyseg::DB),
@@ -51,12 +50,12 @@ class PadThai extends Etel
         ];
     }
 
-    #[Override] public static function defaultAdag(): int
+    public static function defaultAdag(): int
     {
         return 2;
     }
 
-    #[Override] public function receptUrl(): string
+    public function receptUrl(): string
     {
         return 'https://streetkitchen.hu/tesztapolc/az-igazi-pad-thai/';
     }

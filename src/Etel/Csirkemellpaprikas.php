@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Etel;
 
-use Override;
 use PeterPecosz\Kajatervezo\Hozzavalo\Bor\Feherbor;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\PirosPaprika;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hus\Csirkemell;
@@ -18,12 +17,12 @@ use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class Csirkemellpaprikas extends Etel
 {
-    #[Override] public static function name(): string
+    public static function name(): string
     {
         return 'Csirkemellpaprikás';
     }
 
-    #[Override] protected function listHozzavalok(): array
+    protected function listHozzavalok(): array
     {
         return [
             new Voroshagyma(1, Mertekegyseg::DB),
@@ -38,12 +37,12 @@ class Csirkemellpaprikas extends Etel
         ];
     }
 
-    #[Override] public static function defaultAdag(): int
+    public static function defaultAdag(): int
     {
         return 4;
     }
 
-    #[Override] public function receptUrl(): string
+    public function receptUrl(): string
     {
         return 'https://www.mindmegette.hu/csirkemellpaprikas.recept/';
     }

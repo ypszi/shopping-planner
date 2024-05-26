@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Command;
 
-use Override;
 use PeterPecosz\Kajatervezo\Etel\Etel;
 use PeterPecosz\Kajatervezo\Etel\Etelek;
 use PeterPecosz\Kajatervezo\Etel\Factory\EtelFactory;
@@ -45,7 +44,7 @@ class PlanShoppingCommand extends Command
             ->addOption('foods', 'f', InputArgument::OPTIONAL, 'List of food names to prepare for', null, $this->availableFoodNames);
     }
 
-    #[Override] protected function initialize(InputInterface $input, OutputInterface $output): void
+    protected function initialize(InputInterface $input, OutputInterface $output): void
     {
         $this->etelek = new Etelek();
         $this->io     = new SymfonyStyle($input, $output);
@@ -53,7 +52,7 @@ class PlanShoppingCommand extends Command
         $this->io->title('BEVÁSÁRLÁS TERVEZŐ');
     }
 
-    #[Override] protected function interact(InputInterface $input, OutputInterface $output): void
+    protected function interact(InputInterface $input, OutputInterface $output): void
     {
         $supermarketName   = $this->askSupermarketName($input);
         $this->supermarket = SupermarketFactory::create($supermarketName);

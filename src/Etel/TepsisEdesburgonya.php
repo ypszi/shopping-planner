@@ -4,30 +4,29 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Etel;
 
-use Override;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Edesburgonya;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class TepsisEdesburgonya extends Etel
 {
-    #[Override] public static function name(): string
+    public static function name(): string
     {
         return 'Tepsis édesburgonya';
     }
 
-    #[Override] protected function listHozzavalok(): array
+    protected function listHozzavalok(): array
     {
         return [
             new Edesburgonya(1, Mertekegyseg::KG),
         ];
     }
 
-    #[Override] public static function defaultAdag(): int
+    public static function defaultAdag(): int
     {
         return 4;
     }
 
-    #[Override] public function receptUrl(): string
+    public function receptUrl(): string
     {
         return '';
     }

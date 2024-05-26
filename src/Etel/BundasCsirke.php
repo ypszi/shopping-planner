@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Etel;
 
-use Override;
 use PeterPecosz\Kajatervezo\Hozzavalo\Azsiai\Szojaszosz;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\CayenneBors;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\FuszerPaprika;
@@ -22,12 +21,12 @@ use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class BundasCsirke extends Etel
 {
-    #[Override] public static function name(): string
+    public static function name(): string
     {
         return 'Bundás csirke';
     }
 
-    #[Override] protected function listHozzavalok(): array
+    protected function listHozzavalok(): array
     {
         return [
             new Fokhagyma(3, Mertekegyseg::GEREZD),
@@ -46,12 +45,12 @@ class BundasCsirke extends Etel
         ];
     }
 
-    #[Override] public static function defaultAdag(): int
+    public static function defaultAdag(): int
     {
         return 4;
     }
 
-    #[Override] public function receptUrl(): string
+    public function receptUrl(): string
     {
         return $this->decorateNoSaltyReceptUrl('https://www.nosalty.hu/recept/puha-ropogos-fokhagymas-mezes-csirkemell');
     }

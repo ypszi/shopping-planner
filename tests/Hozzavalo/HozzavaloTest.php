@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Tests\Hozzavalo;
 
-use Override;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
 use PeterPecosz\Kajatervezo\Hozzavalo\HozzavaloKategoria;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
@@ -23,7 +22,7 @@ class HozzavaloTest extends TestCase
                 parent::__construct($mennyiseg, $mertekegyseg, HozzavaloKategoria::HUS);
             }
 
-            #[Override] public static function name(): string
+            public static function name(): string
             {
                 return 'Teszt Hozzavalo';
             }

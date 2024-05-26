@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Supermarket\AuchanLuxembourg;
 
-use Override;
 use PeterPecosz\Kajatervezo\Hozzavalo\HozzavaloKategoria;
 use PeterPecosz\Kajatervezo\Hozzavalo\Kategoria;
 
@@ -27,7 +26,7 @@ enum AuchanLuxembourgKategoria: string implements Kategoria
     case HAL = 'Hal';
     case PEKARU = HozzavaloKategoria::PEKARU->value;
 
-    #[Override] public function value(): string
+    public function value(): string
     {
         return $this->value;
     }

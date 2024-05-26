@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Supermarket\KauflandTrier;
 
-use Override;
 use PeterPecosz\Kajatervezo\Hozzavalo\HozzavaloKategoria;
 use PeterPecosz\Kajatervezo\Hozzavalo\Kategoria;
 use PeterPecosz\Kajatervezo\Supermarket\KategoriaMap;
@@ -14,7 +13,7 @@ class KauflandTrierKategoriaMap extends KategoriaMap
     /**
      * @return array<string, Kategoria>
      */
-    #[Override] protected function kategoriaMap(): array
+    protected function kategoriaMap(): array
     {
         return [
             HozzavaloKategoria::ECET->value              => KauflandTrierKategoria::ZOLDSEG_GYUMOLCS,

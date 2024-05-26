@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Etel;
 
-use Override;
 use PeterPecosz\Kajatervezo\Hozzavalo\Felvagott\BaconKockazott;
 use PeterPecosz\Kajatervezo\Hozzavalo\Felvagott\Kolbasz;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\So;
@@ -16,12 +15,12 @@ use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class RakottKrumpli extends Etel
 {
-    #[Override] public static function name(): string
+    public static function name(): string
     {
         return 'Rakott krumpli';
     }
 
-    #[Override] protected function listHozzavalok(): array
+    protected function listHozzavalok(): array
     {
         return [
             new Krumpli(1, Mertekegyseg::KG),
@@ -34,12 +33,12 @@ class RakottKrumpli extends Etel
         ];
     }
 
-    #[Override] public static function defaultAdag(): int
+    public static function defaultAdag(): int
     {
         return 4;
     }
 
-    #[Override] public function receptUrl(): string
+    public function receptUrl(): string
     {
         return 'https://www.mindmegette.hu/rakott-krumpli.recept/';
     }

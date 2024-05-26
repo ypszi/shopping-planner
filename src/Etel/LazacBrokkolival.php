@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Etel;
 
-use Override;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Bors;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Citrombors;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Petrezselyem;
@@ -17,12 +16,12 @@ use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class LazacBrokkolival extends Etel
 {
-    #[Override] public static function name(): string
+    public static function name(): string
     {
         return 'Lazac brokkolival';
     }
 
-    #[Override] protected function listHozzavalok(): array
+    protected function listHozzavalok(): array
     {
         return [
             new Lazac(40, Mertekegyseg::DKG),
@@ -36,12 +35,12 @@ class LazacBrokkolival extends Etel
         ];
     }
 
-    #[Override] public static function defaultAdag(): int
+    public static function defaultAdag(): int
     {
         return 4;
     }
 
-    #[Override] public function receptUrl(): string
+    public function receptUrl(): string
     {
         return $this->decorateNoSaltyReceptUrl('https://www.nosalty.hu/recept/lazac-brokkolival');
     }

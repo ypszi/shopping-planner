@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Etel;
 
-use Override;
 use PeterPecosz\Kajatervezo\Hozzavalo\Cukrasz\Cukor;
 use PeterPecosz\Kajatervezo\Hozzavalo\Cukrasz\Porcukor;
 use PeterPecosz\Kajatervezo\Hozzavalo\Cukrasz\VaniliasCukor;
@@ -17,12 +16,12 @@ use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class Rizskoch extends Etel
 {
-    #[Override] public static function name(): string
+    public static function name(): string
     {
         return 'Rizskoch';
     }
 
-    #[Override] protected function listHozzavalok(): array
+    protected function listHozzavalok(): array
     {
         return [
             new Citrom(0.5, Mertekegyseg::DB),
@@ -38,12 +37,12 @@ class Rizskoch extends Etel
         ];
     }
 
-    #[Override] public static function defaultAdag(): int
+    public static function defaultAdag(): int
     {
         return 4;
     }
 
-    #[Override] public function receptUrl(): string
+    public function receptUrl(): string
     {
         return 'https://streetkitchen.hu/meguszos-sutik/rizskoch-baracklekvarral/';
     }

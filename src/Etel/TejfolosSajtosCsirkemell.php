@@ -4,25 +4,24 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Etel;
 
-use Override;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Bors;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\FuszerPaprika;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Petrezselyem;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\So;
-use PeterPecosz\Kajatervezo\Hozzavalo\Olaj\OlivaOlaj;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hus\Csirkemell;
+use PeterPecosz\Kajatervezo\Hozzavalo\Olaj\OlivaOlaj;
 use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\GoudaSajt;
 use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\Tejfol;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class TejfolosSajtosCsirkemell extends Etel
 {
-    #[Override] public static function name(): string
+    public static function name(): string
     {
         return 'Tejfölös-sajtos csirkemell';
     }
 
-    #[Override] protected function listHozzavalok(): array
+    protected function listHozzavalok(): array
     {
         return [
             new Csirkemell(2, Mertekegyseg::DB),
@@ -36,12 +35,12 @@ class TejfolosSajtosCsirkemell extends Etel
         ];
     }
 
-    #[Override] public static function defaultAdag(): int
+    public static function defaultAdag(): int
     {
         return 4;
     }
 
-    #[Override] public function receptUrl(): string
+    public function receptUrl(): string
     {
         return $this->decorateNoSaltyReceptUrl('https://www.nosalty.hu/recept/tejfolos-sajtos-csirkemell');
     }

@@ -6,7 +6,6 @@ namespace PeterPecosz\Kajatervezo\Hozzavalo;
 
 use ArrayIterator;
 use IteratorAggregate;
-use Override;
 use Traversable;
 
 /**
@@ -34,7 +33,7 @@ class HozzavalokByKategoria implements IteratorAggregate
         return $this;
     }
 
-    #[Override] public function getIterator(): Traversable
+    public function getIterator(): Traversable
     {
         return new ArrayIterator($this->hozzavalok);
     }

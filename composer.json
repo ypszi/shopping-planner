@@ -1,10 +1,12 @@
 {
     "name": "peter.pecosz/kajatervezo",
     "type": "project",
-    "license": ["proprietary"],
+    "license": [
+        "proprietary"
+    ],
     "description": "Bevásárlás tervező",
     "require": {
-        "php": "^8.3",
+        "php": "^8.2",
         "symfony/console": "^7.0",
         "php-di/php-di": "^7.0",
         "doctrine/collections": "^2.2"

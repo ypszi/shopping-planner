@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Etel;
 
-use Override;
 use PeterPecosz\Kajatervezo\Hozzavalo\Felvagott\Felvagott;
 use PeterPecosz\Kajatervezo\Hozzavalo\Pekaru\Kenyer;
 use PeterPecosz\Kajatervezo\Hozzavalo\TartosTejtermek\Tej;
@@ -15,12 +14,12 @@ use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class Reggeli extends Etel
 {
-    #[Override] public static function name(): string
+    public static function name(): string
     {
         return 'Reggeli';
     }
 
-    #[Override] protected function listHozzavalok(): array
+    protected function listHozzavalok(): array
     {
         return [
             new Kenyer(0.5, Mertekegyseg::KG),
@@ -32,12 +31,12 @@ class Reggeli extends Etel
         ];
     }
 
-    #[Override] public static function defaultAdag(): int
+    public static function defaultAdag(): int
     {
         return 4;
     }
 
-    #[Override] public function receptUrl(): string
+    public function receptUrl(): string
     {
         return '';
     }

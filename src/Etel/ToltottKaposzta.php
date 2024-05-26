@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Etel;
 
-use Override;
 use PeterPecosz\Kajatervezo\Hozzavalo\Felvagott\Kolbasz;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Baberlevel;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Fuszerkomeny;
@@ -22,12 +21,12 @@ use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class ToltottKaposzta extends Etel
 {
-    #[Override] public static function name(): string
+    public static function name(): string
     {
         return 'Töltött káposzta';
     }
 
-    #[Override] protected function listHozzavalok(): array
+    protected function listHozzavalok(): array
     {
         return [
             new SavanyuKaposzta(1, Mertekegyseg::KG),
@@ -46,12 +45,12 @@ class ToltottKaposzta extends Etel
         ];
     }
 
-    #[Override] public static function defaultAdag(): int
+    public static function defaultAdag(): int
     {
         return 8;
     }
 
-    #[Override] public function receptUrl(): string
+    public function receptUrl(): string
     {
         return $this->decorateNoSaltyReceptUrl('https://www.nosalty.hu/recept/klasszikus-toltott-kaposzta');
     }

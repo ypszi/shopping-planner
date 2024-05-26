@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Etel;
 
-use Override;
 use PeterPecosz\Kajatervezo\Hozzavalo\Azsiai\Szojaszosz;
 use PeterPecosz\Kajatervezo\Hozzavalo\Ecet\BalzsamecetFeher;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Bors;
@@ -22,12 +21,12 @@ use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class IllatosOmlosCsirkemell extends Etel
 {
-    #[Override] public static function name(): string
+    public static function name(): string
     {
         return 'Illatos omlós csirkemell';
     }
 
-    #[Override] protected function listHozzavalok(): array
+    protected function listHozzavalok(): array
     {
         return [
             new Csirkemell(60, Mertekegyseg::DKG),
@@ -51,12 +50,12 @@ class IllatosOmlosCsirkemell extends Etel
         ];
     }
 
-    #[Override] public static function defaultAdag(): int
+    public static function defaultAdag(): int
     {
         return 4;
     }
 
-    #[Override] public function receptUrl(): string
+    public function receptUrl(): string
     {
         return $this->decorateNoSaltyReceptUrl('https://www.nosalty.hu/recept/illatos-omlos-csirkemell');
     }

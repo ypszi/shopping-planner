@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Etel;
 
-use Override;
 use PeterPecosz\Kajatervezo\Hozzavalo\Cukrasz\Cukor;
 use PeterPecosz\Kajatervezo\Hozzavalo\Ecet\Ecet;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Bors;
@@ -20,12 +19,12 @@ use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class DiosAlmasSajtsalata extends Etel
 {
-    #[Override] public static function name(): string
+    public static function name(): string
     {
         return 'Diós-almás sajtsaláta';
     }
 
-    #[Override] protected function listHozzavalok(): array
+    protected function listHozzavalok(): array
     {
         return [
             new Tejfol(450, Mertekegyseg::G),
@@ -42,12 +41,12 @@ class DiosAlmasSajtsalata extends Etel
         ];
     }
 
-    #[Override] public static function defaultAdag(): int
+    public static function defaultAdag(): int
     {
         return 6;
     }
 
-    #[Override] public function receptUrl(): string
+    public function receptUrl(): string
     {
         return $this->decorateNoSaltyReceptUrl('https://www.nosalty.hu/recept/dios-almas-sajtsalata');
     }
