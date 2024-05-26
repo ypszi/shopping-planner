@@ -27,7 +27,7 @@ class HozzavaloSorok
     }
 
     /**
-     * @return array<string[]>
+     * @return string[][]
      */
     public function toArray(): array
     {

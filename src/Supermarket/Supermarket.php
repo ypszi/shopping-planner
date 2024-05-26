@@ -7,6 +7,7 @@ namespace PeterPecosz\Kajatervezo\Supermarket;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
 use PeterPecosz\Kajatervezo\Hozzavalo\HozzavalokByKategoria;
 use PeterPecosz\Kajatervezo\Hozzavalo\HozzavaloSorok;
+use PeterPecosz\Kajatervezo\ShoppingList\ShoppingList;
 
 abstract class Supermarket
 {
@@ -27,12 +28,12 @@ abstract class Supermarket
      */
     abstract public static function sorrend(): array;
 
-    /**
-     * @return array<string[]>
-     */
-    public function toShoppingList(HozzavalokByKategoria $hozzavalokByKategoria): array
+    public function toShoppingList(HozzavalokByKategoria $hozzavalokByKategoria): ShoppingList
     {
-        return $this->createHozzavaloSorok($hozzavalokByKategoria)->toArray();
+        return new ShoppingList(
+            $this->sorrend(),
+            $this->createHozzavaloSorok($hozzavalokByKategoria)->toArray()
+        );
     }
 
     private function createHozzavaloSorok(HozzavalokByKategoria $hozzavalokByKategoria): HozzavaloSorok

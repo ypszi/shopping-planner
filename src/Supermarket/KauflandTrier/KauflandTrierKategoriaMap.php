@@ -7,43 +7,31 @@ namespace PeterPecosz\Kajatervezo\Supermarket\KauflandTrier;
 use Override;
 use PeterPecosz\Kajatervezo\Hozzavalo\HozzavaloKategoria;
 use PeterPecosz\Kajatervezo\Hozzavalo\Kategoria;
-use PeterPecosz\Kajatervezo\Supermarket\Exception\UnknownSupermarketKategoriaException;
 use PeterPecosz\Kajatervezo\Supermarket\KategoriaMap;
 
-class KauflandTrierKategoriaMap implements KategoriaMap
+class KauflandTrierKategoriaMap extends KategoriaMap
 {
-    #[Override] public function map(Kategoria $kategoria): Kategoria
-    {
-        $mappedKategoria = $this->kategoriaMap()[$kategoria->value()] ?? null;
-
-        if (!isset($mappedKategoria)) {
-            throw new UnknownSupermarketKategoriaException(sprintf('Kategoria "%s" cannot be mapped for "%s"', $kategoria->value(), KauflandTrier::name()));
-        }
-
-        return KauflandTrierKategoria::from($mappedKategoria);
-    }
-
     /**
-     * @return array<string, string>
+     * @return array<string, Kategoria>
      */
-    private function kategoriaMap(): array
+    #[Override] protected function kategoriaMap(): array
     {
         return [
-            HozzavaloKategoria::ECET->value              => KauflandTrierKategoria::ZOLDSEG_GYUMOLCS->value,
-            HozzavaloKategoria::ZOLDSEG_GYUMOLCS->value  => KauflandTrierKategoria::ZOLDSEG_GYUMOLCS->value,
-            HozzavaloKategoria::OLAJ->value              => KauflandTrierKategoria::FUSZER_ES_OLAJ->value,
-            HozzavaloKategoria::FUSZER->value            => KauflandTrierKategoria::FUSZER_ES_OLAJ->value,
-            HozzavaloKategoria::BOR->value               => KauflandTrierKategoria::HOSSZU_SOROK->value,
-            HozzavaloKategoria::PEKARU->value            => KauflandTrierKategoria::HOSSZU_SOROK->value,
-            HozzavaloKategoria::TARTOS_ELELMISZER->value => KauflandTrierKategoria::HOSSZU_SOROK->value,
-            HozzavaloKategoria::CUKRASZ->value           => KauflandTrierKategoria::HOSSZU_SOROK->value,
-            HozzavaloKategoria::FELVAGOTT->value         => KauflandTrierKategoria::HUS->value,
-            HozzavaloKategoria::HUS->value               => KauflandTrierKategoria::HUS->value,
-            HozzavaloKategoria::MIRELIT->value           => KauflandTrierKategoria::HUTOS->value,
-            HozzavaloKategoria::TEJTERMEK->value         => KauflandTrierKategoria::HUTOS->value,
-            HozzavaloKategoria::TARTOS_TEJTERMEK->value  => KauflandTrierKategoria::HUTOS_UTAN->value,
-            HozzavaloKategoria::AZSIAI->value            => KauflandTrierKategoria::HUTOS_UTAN->value,
-            HozzavaloKategoria::UDITO->value             => KauflandTrierKategoria::UDITO->value,
+            HozzavaloKategoria::ECET->value              => KauflandTrierKategoria::ZOLDSEG_GYUMOLCS,
+            HozzavaloKategoria::ZOLDSEG_GYUMOLCS->value  => KauflandTrierKategoria::ZOLDSEG_GYUMOLCS,
+            HozzavaloKategoria::OLAJ->value              => KauflandTrierKategoria::FUSZER_ES_OLAJ,
+            HozzavaloKategoria::FUSZER->value            => KauflandTrierKategoria::FUSZER_ES_OLAJ,
+            HozzavaloKategoria::BOR->value               => KauflandTrierKategoria::HOSSZU_SOROK,
+            HozzavaloKategoria::PEKARU->value            => KauflandTrierKategoria::HOSSZU_SOROK,
+            HozzavaloKategoria::TARTOS_ELELMISZER->value => KauflandTrierKategoria::HOSSZU_SOROK,
+            HozzavaloKategoria::CUKRASZ->value           => KauflandTrierKategoria::HOSSZU_SOROK,
+            HozzavaloKategoria::FELVAGOTT->value         => KauflandTrierKategoria::HUS,
+            HozzavaloKategoria::HUS->value               => KauflandTrierKategoria::HUS,
+            HozzavaloKategoria::MIRELIT->value           => KauflandTrierKategoria::HUTOS,
+            HozzavaloKategoria::TEJTERMEK->value         => KauflandTrierKategoria::HUTOS,
+            HozzavaloKategoria::TARTOS_TEJTERMEK->value  => KauflandTrierKategoria::HUTOS_UTAN,
+            HozzavaloKategoria::AZSIAI->value            => KauflandTrierKategoria::HUTOS_UTAN,
+            HozzavaloKategoria::UDITO->value             => KauflandTrierKategoria::UDITO,
         ];
     }
 }

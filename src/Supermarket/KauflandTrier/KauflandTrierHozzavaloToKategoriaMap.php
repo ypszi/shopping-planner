@@ -8,34 +8,22 @@ use Override;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Ketchup;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Majonez;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Mustar;
-use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
 use PeterPecosz\Kajatervezo\Hozzavalo\Kategoria;
 use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\Vaj;
 use PeterPecosz\Kajatervezo\Supermarket\HozzavaloToKategoriaMap;
 
-class KauflandTrierHozzavaloToKategoriaMap implements HozzavaloToKategoriaMap
+class KauflandTrierHozzavaloToKategoriaMap extends HozzavaloToKategoriaMap
 {
-    #[Override] public function map(Hozzavalo $hozzavalo): Kategoria
-    {
-        $mappedKategoria = $this->hozzavaloMap()[$hozzavalo::name()] ?? null;
-
-        if (!$mappedKategoria) {
-            return $hozzavalo->kategoria();
-        }
-
-        return KauflandTrierKategoria::from($mappedKategoria);
-    }
-
     /**
-     * @return array<string, string>
+     * @return array<string, Kategoria>
      */
-    private function hozzavaloMap(): array
+    #[Override] protected function hozzavaloMap(): array
     {
         return [
-            Ketchup::name() => KauflandTrierKategoria::HUTOS_UTAN->value,
-            Majonez::name() => KauflandTrierKategoria::HUTOS_UTAN->value,
-            Mustar::name()  => KauflandTrierKategoria::HUTOS_UTAN->value,
-            Vaj::name()     => KauflandTrierKategoria::HUTOS_UTAN->value,
+            Ketchup::name() => KauflandTrierKategoria::HUTOS_UTAN,
+            Majonez::name() => KauflandTrierKategoria::HUTOS_UTAN,
+            Mustar::name()  => KauflandTrierKategoria::HUTOS_UTAN,
+            Vaj::name()     => KauflandTrierKategoria::HUTOS_UTAN,
         ];
     }
 }

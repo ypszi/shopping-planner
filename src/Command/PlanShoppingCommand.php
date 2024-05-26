@@ -94,10 +94,12 @@ class PlanShoppingCommand extends Command
             $hozzavalokByKategoria->addMultipleHozzavalo($etel->hozzavalok());
         }
 
+        $shoppingList = $this->supermarket->toShoppingList($hozzavalokByKategoria);
+
         $this->io->section('Hozzávalók:');
         $this->io->table(
-            $this->supermarket::sorrend(),
-            $this->supermarket->toShoppingList($hozzavalokByKategoria)
+            $shoppingList->getHeader(),
+            $shoppingList->getRows()
         );
 
         return Command::SUCCESS;

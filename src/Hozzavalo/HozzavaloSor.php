@@ -115,6 +115,13 @@ class HozzavaloSor
             $sor[]     = $hozzavalo ? (string)$hozzavalo : '';
         }
 
+        $notFoundCategories = array_diff(array_keys($this->hozzavalokPerKategoria), $supermarket::sorrend());
+
+        foreach ($notFoundCategories as $kategoria) {
+            $hozzavalo = $this->hozzavalokPerKategoria[$kategoria] ?? null;
+            $sor[]     = $hozzavalo ? (string)$hozzavalo : '';
+        }
+
         return $sor;
     }
 

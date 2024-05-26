@@ -6,7 +6,21 @@ namespace PeterPecosz\Kajatervezo\Supermarket;
 
 use PeterPecosz\Kajatervezo\Hozzavalo\Kategoria;
 
-interface KategoriaMap
+abstract class KategoriaMap
 {
-    public function map(Kategoria $kategoria): Kategoria;
+    public function map(Kategoria $kategoria): Kategoria
+    {
+        $mappedKategoria = $this->kategoriaMap()[$kategoria->value()] ?? null;
+
+        if (!isset($mappedKategoria)) {
+            return $kategoria;
+        }
+
+        return $mappedKategoria;
+    }
+
+    /**
+     * @return array<string, Kategoria>
+     */
+    abstract protected function kategoriaMap(): array;
 }

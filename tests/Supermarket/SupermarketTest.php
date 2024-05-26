@@ -12,6 +12,7 @@ use PeterPecosz\Kajatervezo\Hozzavalo\HozzavaloKategoria;
 use PeterPecosz\Kajatervezo\Hozzavalo\HozzavalokByKategoria;
 use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\Tojas;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
+use PeterPecosz\Kajatervezo\ShoppingList\ShoppingList;
 use PeterPecosz\Kajatervezo\Supermarket\HozzavaloToKategoriaMap;
 use PeterPecosz\Kajatervezo\Supermarket\KategoriaMap;
 use PeterPecosz\Kajatervezo\Supermarket\Supermarket;
@@ -106,15 +107,24 @@ class SupermarketTest extends TestCase
         $shoppingList = $this->supermarket->toShoppingList($hozzavalokByKategoria);
 
         $this->assertEquals(
-            [
+            new ShoppingList(
                 [
-                    '',
-                    '1.00 l Ecet',
-                    '',
-                    '1.00 db Tojás',
-                    '',
+                    HozzavaloKategoria::ZOLDSEG_GYUMOLCS->value,
+                    HozzavaloKategoria::ECET->value,
+                    HozzavaloKategoria::OLAJ->value,
+                    HozzavaloKategoria::TEJTERMEK->value,
+                    HozzavaloKategoria::TARTOS_TEJTERMEK->value,
                 ],
-            ],
+                [
+                    [
+                        '',
+                        '1.00 l Ecet',
+                        '',
+                        '1.00 db Tojás',
+                        '',
+                    ],
+                ]
+            ),
             $shoppingList
         );
     }
