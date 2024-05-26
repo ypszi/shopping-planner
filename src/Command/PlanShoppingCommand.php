@@ -129,7 +129,7 @@ class PlanShoppingCommand extends Command
             );
     }
 
-    public function renderSupermarket(): void
+    private function renderSupermarket(): void
     {
         $this->io->section('Bevásárlóközpont:');
         $this->io->text($this->supermarket::name());
@@ -144,7 +144,7 @@ class PlanShoppingCommand extends Command
         );
     }
 
-    public function renderHozzavalok(ShoppingList $shoppingList): void
+    private function renderHozzavalok(ShoppingList $shoppingList): void
     {
         $this->io->section('Hozzávalók:');
         $this->io->table(
