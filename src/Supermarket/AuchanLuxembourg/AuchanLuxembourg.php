@@ -5,23 +5,10 @@ declare(strict_types=1);
 namespace PeterPecosz\Kajatervezo\Supermarket\AuchanLuxembourg;
 
 use Override;
-use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
-use PeterPecosz\Kajatervezo\Hozzavalo\HozzavalokByKategoria;
-use PeterPecosz\Kajatervezo\Hozzavalo\HozzavaloSorok;
 use PeterPecosz\Kajatervezo\Supermarket\Supermarket;
 
-class AuchanLuxembourg implements Supermarket
+class AuchanLuxembourg extends Supermarket
 {
-    private AuchanLuxembourgKategoriaMap $kategoriaMap;
-
-    private AuchanLuxembourgHozzavaloToKategoriaMap $hozzavaloToKategoriaMap;
-
-    public function __construct()
-    {
-        $this->kategoriaMap            = new AuchanLuxembourgKategoriaMap();
-        $this->hozzavaloToKategoriaMap = new AuchanLuxembourgHozzavaloToKategoriaMap();
-    }
-
     public static function name(): string
     {
         return 'Auchan - Luxembourg';
@@ -50,34 +37,5 @@ class AuchanLuxembourg implements Supermarket
             AuchanLuxembourgKategoria::HAL->value,
             AuchanLuxembourgKategoria::PEKARU->value,
         ];
-    }
-
-    /**
-     * @return array<string[]>
-     */
-    #[Override] public function toShoppingList(HozzavalokByKategoria $hozzavalokByKategoria): array
-    {
-        return $this->createHozzavaloSorok($hozzavalokByKategoria)->toArray();
-    }
-
-    private function createHozzavaloSorok(HozzavalokByKategoria $hozzavalokByKategoria): HozzavaloSorok
-    {
-        $hozzavaloSorok = new HozzavaloSorok($this);
-
-        foreach ($hozzavalokByKategoria as $hozzavalok) {
-            /** @var Hozzavalo $hozzavalo */
-            foreach ($hozzavalok as $hozzavalo) {
-                $hozzavalo = $hozzavalo->withKategoria(
-                    $this->kategoriaMap->map($hozzavalo->kategoria())
-                );
-                $hozzavalo = $hozzavalo->withKategoria(
-                    $this->hozzavaloToKategoriaMap->map($hozzavalo)
-                );
-
-                $hozzavaloSorok->addHozzavalo($hozzavalo);
-            }
-        }
-
-        return $hozzavaloSorok->sort();
     }
 }

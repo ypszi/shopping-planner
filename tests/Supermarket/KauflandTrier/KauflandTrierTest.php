@@ -4,13 +4,8 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Tests\Supermarket\KauflandTrier;
 
-use Override;
-use PeterPecosz\Kajatervezo\Etel\Etel;
-use PeterPecosz\Kajatervezo\Etel\Etelek;
-use PeterPecosz\Kajatervezo\Hozzavalo\Ecet\Ecet;
-use PeterPecosz\Kajatervezo\Hozzavalo\HozzavalokByKategoria;
-use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\Tojas;
-use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
+use PeterPecosz\Kajatervezo\Supermarket\HozzavaloToKategoriaMap;
+use PeterPecosz\Kajatervezo\Supermarket\KategoriaMap;
 use PeterPecosz\Kajatervezo\Supermarket\KauflandTrier\KauflandTrier;
 use PeterPecosz\Kajatervezo\Supermarket\Supermarket;
 use PHPUnit\Framework\Attributes\Test;
@@ -18,38 +13,14 @@ use PHPUnit\Framework\TestCase;
 
 class KauflandTrierTest extends TestCase
 {
-    private Etel $testFood;
-
     private Supermarket $supermarket;
 
     protected function setUp(): void
     {
-        $this->testFood = new class() extends Etel {
-            #[Override] public static function name(): string
-            {
-                return 'test food';
-            }
-
-            #[Override] protected function listHozzavalok(): array
-            {
-                return [
-                    new Tojas(1, Mertekegyseg::DB),
-                    new Ecet(1, Mertekegyseg::L),
-                ];
-            }
-
-            #[Override] public static function defaultAdag(): int
-            {
-                return 1;
-            }
-
-            #[Override] public function receptUrl(): string
-            {
-                return 'https://online-recept-konyv.hu/test-food';
-            }
-        };
-
-        $this->supermarket = new KauflandTrier();
+        $this->supermarket = new KauflandTrier(
+            $this->createMock(KategoriaMap::class),
+            $this->createMock(HozzavaloToKategoriaMap::class)
+        );
     }
 
     #[Test]
@@ -72,33 +43,6 @@ class KauflandTrierTest extends TestCase
                 'Üditő',
             ],
             $this->supermarket::sorrend()
-        );
-    }
-
-    #[Test]
-    public function testToShoppingList(): void
-    {
-        $hozzavalokByKategoria = new HozzavalokByKategoria();
-
-        foreach (new Etelek([$this->testFood]) as $etel) {
-            $hozzavalokByKategoria->addMultipleHozzavalo($etel->hozzavalok());
-        }
-
-        $shoppingList = $this->supermarket->toShoppingList($hozzavalokByKategoria);
-
-        $this->assertEquals(
-            [
-                [
-                    '1.00 l Ecet',
-                    '',
-                    '',
-                    '',
-                    '1.00 db Tojás',
-                    '',
-                    '',
-                ],
-            ],
-            $shoppingList
         );
     }
 }
