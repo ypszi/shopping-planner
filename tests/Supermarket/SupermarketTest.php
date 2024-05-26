@@ -9,7 +9,6 @@ use PeterPecosz\Kajatervezo\Etel\Etel;
 use PeterPecosz\Kajatervezo\Etel\Etelek;
 use PeterPecosz\Kajatervezo\Hozzavalo\Ecet\Ecet;
 use PeterPecosz\Kajatervezo\Hozzavalo\HozzavaloKategoria;
-use PeterPecosz\Kajatervezo\Hozzavalo\HozzavalokByKategoria;
 use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\Tojas;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 use PeterPecosz\Kajatervezo\ShoppingList\ShoppingList;
@@ -82,12 +81,6 @@ class SupermarketTest extends TestCase
     #[Test]
     public function testToShoppingList(): void
     {
-        $hozzavalokByKategoria = new HozzavalokByKategoria();
-
-        foreach (new Etelek([$this->testFood]) as $etel) {
-            $hozzavalokByKategoria->addMultipleHozzavalo($etel->hozzavalok());
-        }
-
         $this->kategoriaMap
             ->expects(self::exactly(2))
             ->method('map')
@@ -104,7 +97,7 @@ class SupermarketTest extends TestCase
                 HozzavaloKategoria::ECET,
             );
 
-        $shoppingList = $this->supermarket->toShoppingList($hozzavalokByKategoria);
+        $shoppingList = $this->supermarket->toShoppingList(new Etelek([$this->testFood]));
 
         $this->assertEquals(
             new ShoppingList(

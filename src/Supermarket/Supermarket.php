@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Supermarket;
 
+use PeterPecosz\Kajatervezo\Etel\Etelek;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
 use PeterPecosz\Kajatervezo\Hozzavalo\HozzavalokByKategoria;
 use PeterPecosz\Kajatervezo\Hozzavalo\HozzavaloSorok;
@@ -28,8 +29,13 @@ abstract class Supermarket
      */
     abstract public static function sorrend(): array;
 
-    public function toShoppingList(HozzavalokByKategoria $hozzavalokByKategoria): ShoppingList
+    public function toShoppingList(Etelek $etelek): ShoppingList
     {
+        $hozzavalokByKategoria = new HozzavalokByKategoria();
+        foreach ($etelek as $etel) {
+            $hozzavalokByKategoria->addMultipleHozzavalo($etel->hozzavalok());
+        }
+
         return new ShoppingList(
             $this->sorrend(),
             $this->createHozzavaloSorok($hozzavalokByKategoria)->toArray()

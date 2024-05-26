@@ -8,7 +8,7 @@ use Override;
 use PeterPecosz\Kajatervezo\Etel\Etel;
 use PeterPecosz\Kajatervezo\Etel\Etelek;
 use PeterPecosz\Kajatervezo\Etel\Factory\EtelFactory;
-use PeterPecosz\Kajatervezo\Hozzavalo\HozzavalokByKategoria;
+use PeterPecosz\Kajatervezo\ShoppingList\ShoppingList;
 use PeterPecosz\Kajatervezo\Supermarket\KauflandTrier\KauflandTrier;
 use PeterPecosz\Kajatervezo\Supermarket\Supermarket;
 use PeterPecosz\Kajatervezo\Supermarket\SupermarketFactory;
@@ -55,22 +55,45 @@ class PlanShoppingCommand extends Command
 
     #[Override] protected function interact(InputInterface $input, OutputInterface $output): void
     {
-        $this->askSupermarket($input);
+        $supermarketName   = $this->askSupermarketName($input);
+        $this->supermarket = SupermarketFactory::create($supermarketName);
 
         if ($input->getOption('testing')) {
-            $this->prepareTestingRun();
+            $this->prepareTestingRunEtelek();
 
             return;
         }
 
-        /** @var string[] $foodNames */
-        $foodNames = array_map('trim', explode(',', $input->getOption('foods') ?? ''))
-            ?: $this->io->choice(
-                question: 'Melyik kajákhoz kell bevásárolni?',
-                choices: $this->availableFoodNames,
-                multiSelect: true
-            );
+        $foodNames = $this->askFoodNames($input);
 
+        $this->prepareEtelek($foodNames);
+    }
+
+    protected function execute(InputInterface $input, OutputInterface $output): int
+    {
+        $this->renderSupermarket();
+
+        $this->renderEtelek();
+
+        $shoppingList = $this->supermarket->toShoppingList($this->etelek);
+
+        $this->renderHozzavalok($shoppingList);
+
+        return Command::SUCCESS;
+    }
+
+    private function prepareTestingRunEtelek(): void
+    {
+        foreach (EtelFactory::listAvailableEtelek() as $etelName) {
+            $this->etelek->add(EtelFactory::create($etelName));
+        }
+    }
+
+    /**
+     * @param string[] $foodNames
+     */
+    public function prepareEtelek(array $foodNames): void
+    {
         foreach ($foodNames as $kajaName) {
             $etel = EtelFactory::create($kajaName);
             $adag = (int)$this->io->ask(
@@ -82,47 +105,34 @@ class PlanShoppingCommand extends Command
         }
     }
 
-    protected function execute(InputInterface $input, OutputInterface $output): int
+    private function askSupermarketName(InputInterface $input): string
     {
-        $this->io->section('Bevásárlóközpont:');
-        $this->io->text($this->supermarket::name());
-
-        $this->renderEtelek();
-
-        $hozzavalokByKategoria = new HozzavalokByKategoria();
-        foreach ($this->etelek as $etel) {
-            $hozzavalokByKategoria->addMultipleHozzavalo($etel->hozzavalok());
-        }
-
-        $shoppingList = $this->supermarket->toShoppingList($hozzavalokByKategoria);
-
-        $this->io->section('Hozzávalók:');
-        $this->io->table(
-            $shoppingList->getHeader(),
-            $shoppingList->getRows()
-        );
-
-        return Command::SUCCESS;
-    }
-
-    private function prepareTestingRun(): void
-    {
-        foreach (EtelFactory::listAvailableEtelek() as $etelName) {
-            $this->etelek->add(EtelFactory::create($etelName));
-        }
-    }
-
-    private function askSupermarket(InputInterface $input): void
-    {
-        /** @var string $supermarket */
-        $supermarket = trim($input->getOption('supermarket'))
+        return trim($input->getOption('supermarket'))
             ?: $this->io->choice(
                 question: 'Hova mész bevásárolni?',
                 choices: $this->availableSupermarkets,
                 default: KauflandTrier::name()
             );
+    }
 
-        $this->supermarket = SupermarketFactory::create($supermarket);
+    /**
+     * @return string[]
+     */
+    private function askFoodNames(InputInterface $input): array
+    {
+        /** @var string[] $foodNames */
+        return array_map('trim', explode(',', $input->getOption('foods') ?? ''))
+            ?: $this->io->choice(
+                question: 'Melyik kajákhoz kell bevásárolni?',
+                choices: $this->availableFoodNames,
+                multiSelect: true
+            );
+    }
+
+    public function renderSupermarket(): void
+    {
+        $this->io->section('Bevásárlóközpont:');
+        $this->io->text($this->supermarket::name());
     }
 
     private function renderEtelek(): void
@@ -131,6 +141,15 @@ class PlanShoppingCommand extends Command
         $this->io->table(
             ['Étel', 'Recept'],
             array_map(fn(Etel $etel) => [(string)$etel, $etel->receptUrl()], $this->etelek->toArray())
+        );
+    }
+
+    public function renderHozzavalok(ShoppingList $shoppingList): void
+    {
+        $this->io->section('Hozzávalók:');
+        $this->io->table(
+            $shoppingList->getHeader(),
+            $shoppingList->getRows()
         );
     }
 }
