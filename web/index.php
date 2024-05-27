@@ -125,9 +125,10 @@ if (!empty($_POST)) {
                 <?php endforeach; ?>
             </fieldset>
 
-
-            <div class="col-12">
-                <button class="btn btn-primary" type="submit">PLAN</button>
+            <div class="sticky-bottom">
+                <div class="row justify-content-center">
+                    <button class="btn btn-primary col-2" type="submit" style="margin-bottom: 1rem;">PLAN</button>
+                </div>
             </div>
         </form>
     <?php else: ?>
@@ -172,7 +173,11 @@ if (!empty($_POST)) {
             </tbody>
         </table>
 
-        <button type="reset" onclick="location.href=''" class="btn btn-secondary">BACK</button>
+        <div class="sticky-bottom">
+            <div class="row justify-content-center">
+                <button class="btn btn-secondary col-2" type="button" style="margin-bottom: 1rem;" onclick="location.href=''">BACK</button>
+            </div>
+        </div>
     <?php endif; ?>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
