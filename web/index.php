@@ -131,44 +131,45 @@ if (!empty($_POST)) {
             </div>
         </form>
     <?php else: ?>
-        <h1>Bevásárlóközpont:</h1>
+        <h3 class="text-success">Bevásárlóközpont:</h3>
         <p><?= $supermarket::name() ?></p>
 
-        <h1>Ételek:</h1>
-        <table class="table">
-            <tr>
-                <th scope="col">Étel</th>
-                <th scope="col">Recept</th>
-            </tr>
-            <?php foreach ($etelek->toArray() as $etel): ?>
+        <h3 class="text-success">Ételek (<?= count($etelek->toArray()) ?> db):</h3>
+        <table class="table table-bordered">
+            <thead class="table-dark">
                 <tr>
-                    <td>
-                        <?= $etel; ?>
-                    </td>
-                    <td>
-                        <a href="<?= $etel->receptUrl(); ?>"><?= $etel->receptUrl(); ?></a>
-                    </td>
+                    <th scope="col">Étel</th>
+                    <th scope="col">Recept</th>
                 </tr>
-            <?php endforeach; ?>
+            </thead>
+            <tbody class="table-group-divider">
+                <?php foreach ($etelek->toArray() as $etel): ?>
+                    <tr>
+                        <td><?= $etel; ?></td>
+                        <td><a href="<?= $etel->receptUrl(); ?>"><?= $etel->receptUrl(); ?></a></td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
         </table>
 
-
-        <h1>Hozzávalók:</h1>
-        <table class="table">
-            <tr>
-                <?php foreach ($shoppingList->getHeader() as $header): ?>
-                    <th scope="col"><?= $header ?></th>
-                <?php endforeach; ?>
-            </tr>
-            <?php foreach ($shoppingList->getRows() as $row): ?>
+        <h3 class="text-success">Hozzávalók (<?= count($shoppingList->getRows()) ?> sor):</h3>
+        <table class="table table-bordered">
+            <thead class="table-dark">
                 <tr>
-                    <?php foreach ($row as $col): ?>
-                        <td>
-                            <?= $col ?>
-                        </td>
+                    <?php foreach ($shoppingList->getHeader() as $header): ?>
+                        <th scope="col"><?= $header ?></th>
                     <?php endforeach; ?>
                 </tr>
-            <?php endforeach; ?>
+            </thead>
+            <tbody class="table-group-divider">
+                <?php foreach ($shoppingList->getRows() as $row): ?>
+                    <tr>
+                        <?php foreach ($row as $col): ?>
+                            <td><?= $col ?></td>
+                        <?php endforeach; ?>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
         </table>
 
         <button type="reset" onclick="location.href=''" class="btn btn-secondary">BACK</button>
