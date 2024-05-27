@@ -64,17 +64,18 @@ if (!empty($_POST)) {
                     <span class="display-6">Hova mész bevásárolni?</span>
                 </legend>
                 <?php foreach ($availableSupermarkets as $availableSupermarket): ?>
+                    <?php $availableSupermarketKey = str_replace(' ', '_', $availableSupermarket); ?>
                     <div class="col-sm-12">
                         <div class="form-check">
                             <input
                                 type="radio"
-                                id="<?= $availableSupermarket ?>"
+                                id="<?= $availableSupermarketKey ?>"
                                 value="<?= $availableSupermarket ?>"
                                 name="supermarket"
                                 class="form-check-input"
                                 <?php if ($availableSupermarket === KauflandTrier::name()): ?>checked=checked<?php endif; ?>
                             >
-                            <label for="<?= $availableSupermarket ?>" class="form-check-label">
+                            <label for="<?= $availableSupermarketKey ?>" class="form-check-label">
                                 <?= $availableSupermarket ?>
                             </label>
                         </div>
@@ -87,16 +88,18 @@ if (!empty($_POST)) {
                     <span class="display-6">Melyik kajákhoz kell bevásárolni?</span>
                 </legend>
                 <?php foreach ($availableFoodNames as $availableFoodName): ?>
+                    <?php $availableFoodNameKey = str_replace(' ', '_', $availableFoodName); ?>
                     <div class="col-sm-6 mb-2">
                         <div class="form-check">
                             <input
                                 type="checkbox"
-                                id="<?= $availableFoodName ?>"
+                                id="<?= $availableFoodNameKey ?>"
                                 value="<?= $availableFoodName ?>"
-                                name="food-<?= $availableFoodName ?>"
+                                name="food-<?= $availableFoodNameKey ?>"
                                 class="form-check-input"
+                                onchange="this.checked ? document.getElementById('portion-<?= $availableFoodNameKey ?>').disabled = '' : document.getElementById('portion-<?= $availableFoodNameKey ?>').disabled = 'disabled'"
                             >
-                            <label for="<?= $availableFoodName ?>" class="form-check-label"><?= $availableFoodName ?></label>
+                            <label for="<?= $availableFoodNameKey ?>" class="form-check-label"><?= $availableFoodName ?></label>
                         </div>
                     </div>
                     <div class="col-sm-4 mb-2">
@@ -104,19 +107,20 @@ if (!empty($_POST)) {
                         <div class="input-group">
                             <input
                                 type="range"
-                                id="portion-<?= $availableFoodName ?>"
+                                id="portion-<?= $availableFoodNameKey ?>"
                                 value="<?= $etel::defaultAdag() ?>"
-                                name="portion-<?= $availableFoodName ?>"
+                                name="portion-<?= $availableFoodNameKey ?>"
                                 class="form-range"
                                 min="1"
                                 max="12"
                                 step="1"
-                                oninput="document.getElementById('portion-output-<?= $availableFoodName ?>').value = this.value + ' Adag'"
+                                disabled="disabled"
+                                oninput="document.getElementById('portion-output-<?= $availableFoodNameKey ?>').value = this.value + ' Adag'"
                             >
                         </div>
                     </div>
                     <div class="col-sm-2 mb-2">
-                        <output class="input-group-text" id="portion-output-<?= $availableFoodName ?>"><?= $etel::defaultAdag() ?> Adag</output>
+                        <output class="input-group-text" id="portion-output-<?= $availableFoodNameKey ?>"><?= $etel::defaultAdag() ?> Adag</output>
                     </div>
                 <?php endforeach; ?>
             </fieldset>
