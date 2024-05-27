@@ -60,7 +60,9 @@ if (!empty($_POST)) {
     <?php if (empty($_POST)): ?>
         <form action="" method="post" class="row">
             <fieldset class="row mb-2">
-                <legend class="col-form-label col-sm-12 pt-0">Hova mész bevásárolni?</legend>
+                <legend class="col-form-label col-sm-12 pt-0">
+                    <span class="display-6">Hova mész bevásárolni?</span>
+                </legend>
                 <?php foreach ($availableSupermarkets as $availableSupermarket): ?>
                     <div class="col-sm-12">
                         <div class="form-check">
@@ -81,9 +83,11 @@ if (!empty($_POST)) {
             </fieldset>
 
             <fieldset class="row mb-2">
-                <legend class="col-form-label col-sm-12 pt-0">Melyik kajákhoz kell bevásárolni?</legend>
+                <legend class="col-form-label col-sm-12 pt-0">
+                    <span class="display-6">Melyik kajákhoz kell bevásárolni?</span>
+                </legend>
                 <?php foreach ($availableFoodNames as $availableFoodName): ?>
-                    <div class="col-sm-10 mb-2">
+                    <div class="col-sm-6 mb-2">
                         <div class="form-check">
                             <input
                                 type="checkbox"
@@ -95,18 +99,24 @@ if (!empty($_POST)) {
                             <label for="<?= $availableFoodName ?>" class="form-check-label"><?= $availableFoodName ?></label>
                         </div>
                     </div>
-                    <div class="col-sm-2 mb-2">
+                    <div class="col-sm-4 mb-2">
                         <?php $etel = EtelFactory::create($availableFoodName); ?>
                         <div class="input-group">
                             <input
-                                type="number"
+                                type="range"
                                 id="portion-<?= $availableFoodName ?>"
                                 value="<?= $etel::defaultAdag() ?>"
                                 name="portion-<?= $availableFoodName ?>"
-                                class="form-control"
+                                class="form-range"
+                                min="1"
+                                max="12"
+                                step="1"
+                                oninput="document.getElementById('portion-output-<?= $availableFoodName ?>').value = this.value + ' Adag'"
                             >
-                            <span class="input-group-text" id="portion-<?= $availableFoodName ?>">Adag</span>
                         </div>
+                    </div>
+                    <div class="col-sm-2 mb-2">
+                        <output class="input-group-text" id="portion-output-<?= $availableFoodName ?>"><?= $etel::defaultAdag() ?> Adag</output>
                     </div>
                 <?php endforeach; ?>
             </fieldset>
