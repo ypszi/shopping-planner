@@ -27,8 +27,12 @@ class AuchanLuxembourgKategoriaMapTest extends TestCase
     {
         return [
             [
-                HozzavaloKategoria::ZOLDSEG_GYUMOLCS,
-                AuchanLuxembourgKategoria::ZOLDSEG_GYUMOLCS,
+                HozzavaloKategoria::UDITO,
+                AuchanLuxembourgKategoria::UDITO,
+            ],
+            [
+                HozzavaloKategoria::BOR,
+                AuchanLuxembourgKategoria::UDITO,
             ],
             [
                 HozzavaloKategoria::OLAJ,
@@ -43,14 +47,6 @@ class AuchanLuxembourgKategoriaMapTest extends TestCase
                 AuchanLuxembourgKategoria::KONZERV_SZOSZ_OLAJ_ECET_FUSZER,
             ],
             [
-                HozzavaloKategoria::BOR,
-                AuchanLuxembourgKategoria::UDITO,
-            ],
-            [
-                HozzavaloKategoria::PEKARU,
-                AuchanLuxembourgKategoria::PEKARU,
-            ],
-            [
                 HozzavaloKategoria::TARTOS_ELELMISZER,
                 AuchanLuxembourgKategoria::TESZTA_RIZS_PARADICSOMSZOSZ_PURE,
             ],
@@ -59,32 +55,44 @@ class AuchanLuxembourgKategoriaMapTest extends TestCase
                 AuchanLuxembourgKategoria::CUKRASZ_KEKSZ,
             ],
             [
-                HozzavaloKategoria::FELVAGOTT,
-                AuchanLuxembourgKategoria::FELVAGOTT,
-            ],
-            [
-                HozzavaloKategoria::HUS,
-                AuchanLuxembourgKategoria::HUS,
+                HozzavaloKategoria::AZSIAI,
+                AuchanLuxembourgKategoria::NEMZETKOZI,
             ],
             [
                 HozzavaloKategoria::MIRELIT,
                 AuchanLuxembourgKategoria::MIRELIT,
             ],
             [
-                HozzavaloKategoria::TEJTERMEK,
-                AuchanLuxembourgKategoria::TEJTERMEK,
+                HozzavaloKategoria::SAJT,
+                AuchanLuxembourgKategoria::SAJT,
             ],
             [
                 HozzavaloKategoria::TARTOS_TEJTERMEK,
                 AuchanLuxembourgKategoria::TARTOS_TEJTERMEK,
             ],
             [
-                HozzavaloKategoria::AZSIAI,
-                AuchanLuxembourgKategoria::NEMZETKOZI,
+                HozzavaloKategoria::TEJTERMEK,
+                AuchanLuxembourgKategoria::TEJTERMEK,
             ],
             [
-                HozzavaloKategoria::UDITO,
-                AuchanLuxembourgKategoria::UDITO,
+                HozzavaloKategoria::HUS,
+                AuchanLuxembourgKategoria::HUS,
+            ],
+            [
+                HozzavaloKategoria::FELVAGOTT,
+                AuchanLuxembourgKategoria::FELVAGOTT,
+            ],
+            [
+                HozzavaloKategoria::ZOLDSEG_GYUMOLCS,
+                AuchanLuxembourgKategoria::ZOLDSEG_GYUMOLCS,
+            ],
+            [
+                HozzavaloKategoria::HAL,
+                AuchanLuxembourgKategoria::HAL,
+            ],
+            [
+                HozzavaloKategoria::PEKARU,
+                AuchanLuxembourgKategoria::PEKARU,
             ],
         ];
     }

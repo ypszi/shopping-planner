@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek;
+namespace PeterPecosz\Kajatervezo\Hozzavalo\Sajt;
 
-class ParmezanSajt extends Tejtermek
+class ParmezanSajt extends Sajt
 {
     public static function name(): string
     {

@@ -8,6 +8,6 @@ class KukoricaKonzerv extends Konzerv
 {
     public static function name(): string
     {
-        return 'Kukorica konzerv';
+        return 'Kukorica (konzerv)';
     }
 }

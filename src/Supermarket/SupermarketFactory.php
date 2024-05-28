@@ -11,6 +11,8 @@ use PeterPecosz\Kajatervezo\Supermarket\Exception\UnknownSupermarketException;
 use PeterPecosz\Kajatervezo\Supermarket\KauflandTrier\KauflandTrier;
 use PeterPecosz\Kajatervezo\Supermarket\KauflandTrier\KauflandTrierHozzavaloToKategoriaMap;
 use PeterPecosz\Kajatervezo\Supermarket\KauflandTrier\KauflandTrierKategoriaMap;
+use PeterPecosz\Kajatervezo\Supermarket\LidlWasserbillig\LidlWasserbillig;
+use PeterPecosz\Kajatervezo\Supermarket\LidlWasserbillig\LidlWasserbilligKategoriaMap;
 
 class SupermarketFactory
 {
@@ -25,6 +27,9 @@ class SupermarketFactory
                 new AuchanLuxembourgKategoriaMap(),
                 new AuchanLuxembourgHozzavaloToKategoriaMap()
             ),
+            LidlWasserbillig::name() => new LidlWasserbillig(
+                new LidlWasserbilligKategoriaMap()
+            ),
             default => throw new UnknownSupermarketException(sprintf('Unknown supermarket: "%s"', $name)),
         };
     }
@@ -37,6 +42,7 @@ class SupermarketFactory
         $supermarketNames = [
             KauflandTrier::name(),
             AuchanLuxembourg::name(),
+            LidlWasserbillig::name(),
         ];
 
         sort($supermarketNames);

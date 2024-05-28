@@ -10,7 +10,7 @@ use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Oregano;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\So;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hus\Csirkemell;
 use PeterPecosz\Kajatervezo\Hozzavalo\Olaj\NapraforgoOlaj;
-use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\TrappistaSajt;
+use PeterPecosz\Kajatervezo\Hozzavalo\Sajt\TrappistaSajt;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Paradicsom;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 

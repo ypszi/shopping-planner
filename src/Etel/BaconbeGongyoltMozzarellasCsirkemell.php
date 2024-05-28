@@ -9,7 +9,7 @@ use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Bazsalikom;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\So;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hus\Csirkemell;
 use PeterPecosz\Kajatervezo\Hozzavalo\Olaj\OlivaOlaj;
-use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\MozzarellaSajt;
+use PeterPecosz\Kajatervezo\Hozzavalo\Sajt\MozzarellaSajt;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class BaconbeGongyoltMozzarellasCsirkemell extends Etel

@@ -14,9 +14,9 @@ abstract class Supermarket
 {
     private KategoriaMap $kategoriaMap;
 
-    private HozzavaloToKategoriaMap $hozzavaloToKategoriaMap;
+    private ?HozzavaloToKategoriaMap $hozzavaloToKategoriaMap;
 
-    public function __construct(KategoriaMap $kategoriaMap, HozzavaloToKategoriaMap $hozzavaloToKategoriaMap)
+    public function __construct(KategoriaMap $kategoriaMap, ?HozzavaloToKategoriaMap $hozzavaloToKategoriaMap = null)
     {
         $this->kategoriaMap            = $kategoriaMap;
         $this->hozzavaloToKategoriaMap = $hozzavaloToKategoriaMap;
@@ -52,9 +52,12 @@ abstract class Supermarket
                 $hozzavalo = $hozzavalo->withKategoria(
                     $this->kategoriaMap->map($hozzavalo->kategoria())
                 );
-                $hozzavalo = $hozzavalo->withKategoria(
-                    $this->hozzavaloToKategoriaMap->map($hozzavalo)
-                );
+
+                if ($this->hozzavaloToKategoriaMap) {
+                    $hozzavalo = $hozzavalo->withKategoria(
+                        $this->hozzavaloToKategoriaMap->map($hozzavalo)
+                    );
+                }
 
                 $hozzavaloSorok->addHozzavalo($hozzavalo);
             }

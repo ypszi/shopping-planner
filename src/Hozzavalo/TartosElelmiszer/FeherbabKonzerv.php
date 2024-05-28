@@ -8,6 +8,6 @@ class FeherbabKonzerv extends Konzerv
 {
     public static function name(): string
     {
-        return 'Fehérbab konzerv';
+        return 'Fehérbab (konzerv)';
     }
 }

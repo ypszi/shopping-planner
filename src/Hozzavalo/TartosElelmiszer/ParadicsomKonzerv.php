@@ -8,6 +8,6 @@ class ParadicsomKonzerv extends Konzerv
 {
     public static function name(): string
     {
-        return 'Paradicsom konzerv';
+        return 'Paradicsom (konzerv)';
     }
 }

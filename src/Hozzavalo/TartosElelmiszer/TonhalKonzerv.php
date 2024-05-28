@@ -8,6 +8,6 @@ class TonhalKonzerv extends Konzerv
 {
     public static function name(): string
     {
-        return 'Tonhal konzerv';
+        return 'Tonhal (konzerv)';
     }
 }

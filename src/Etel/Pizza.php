@@ -6,7 +6,7 @@ namespace PeterPecosz\Kajatervezo\Etel;
 
 use PeterPecosz\Kajatervezo\Hozzavalo\Felvagott\Felvagott;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Ketchup;
-use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\MozzarellaSajtReszelt;
+use PeterPecosz\Kajatervezo\Hozzavalo\Sajt\MozzarellaSajtReszelt;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
 class Pizza extends Etel

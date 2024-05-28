@@ -8,6 +8,6 @@ class VorosbabKonzerv extends Konzerv
 {
     public static function name(): string
     {
-        return 'Vörösbab konzerv';
+        return 'Vörösbab (konzerv)';
     }
 }

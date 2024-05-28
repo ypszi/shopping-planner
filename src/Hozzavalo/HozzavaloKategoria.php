@@ -17,7 +17,9 @@ enum HozzavaloKategoria: string implements Kategoria
     case AZSIAI = 'Ázsiai';
     case FELVAGOTT = 'Felvágott';
     case HUS = 'Hús';
+    case HAL = 'Hal';
     case MIRELIT = 'Mirelit';
+    case SAJT = 'Sajt';
     case TEJTERMEK = 'Tejtermék';
     case UDITO = 'Üditő';
     case PEKARU = 'Pékárú';

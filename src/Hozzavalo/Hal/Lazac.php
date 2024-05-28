@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace PeterPecosz\Kajatervezo\Hozzavalo\Hus;
+namespace PeterPecosz\Kajatervezo\Hozzavalo\Hal;
 
-class Lazac extends Hus
+class Lazac extends Hal
 {
     public static function name(): string
     {

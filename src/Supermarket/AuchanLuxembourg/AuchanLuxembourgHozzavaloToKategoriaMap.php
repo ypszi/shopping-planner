@@ -6,14 +6,14 @@ namespace PeterPecosz\Kajatervezo\Supermarket\AuchanLuxembourg;
 
 use PeterPecosz\Kajatervezo\Hozzavalo\HozzavaloKategoria;
 use PeterPecosz\Kajatervezo\Hozzavalo\Kategoria;
+use PeterPecosz\Kajatervezo\Hozzavalo\Sajt\FetaSajt;
+use PeterPecosz\Kajatervezo\Hozzavalo\Sajt\GoudaSajt;
+use PeterPecosz\Kajatervezo\Hozzavalo\Sajt\MozzarellaSajt;
+use PeterPecosz\Kajatervezo\Hozzavalo\Sajt\MozzarellaSajtReszelt;
+use PeterPecosz\Kajatervezo\Hozzavalo\Sajt\ParmezanSajt;
+use PeterPecosz\Kajatervezo\Hozzavalo\Sajt\TrappistaSajt;
 use PeterPecosz\Kajatervezo\Hozzavalo\TartosElelmiszer\TonhalKonzerv;
-use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\FetaSajt;
-use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\GoudaSajt;
-use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\MozzarellaSajt;
-use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\MozzarellaSajtReszelt;
-use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\ParmezanSajt;
 use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\Tojas;
-use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\TrappistaSajt;
 use PeterPecosz\Kajatervezo\Supermarket\HozzavaloToKategoriaMap;
 
 class AuchanLuxembourgHozzavaloToKategoriaMap extends HozzavaloToKategoriaMap
