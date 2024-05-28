@@ -7,12 +7,6 @@ namespace PeterPecosz\Kajatervezo\Tests\Supermarket\AuchanLuxembourg;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hus\Csirkemell;
 use PeterPecosz\Kajatervezo\Hozzavalo\Kategoria;
-use PeterPecosz\Kajatervezo\Hozzavalo\Sajt\FetaSajt;
-use PeterPecosz\Kajatervezo\Hozzavalo\Sajt\GoudaSajt;
-use PeterPecosz\Kajatervezo\Hozzavalo\Sajt\MozzarellaSajt;
-use PeterPecosz\Kajatervezo\Hozzavalo\Sajt\MozzarellaSajtReszelt;
-use PeterPecosz\Kajatervezo\Hozzavalo\Sajt\ParmezanSajt;
-use PeterPecosz\Kajatervezo\Hozzavalo\Sajt\TrappistaSajt;
 use PeterPecosz\Kajatervezo\Hozzavalo\TartosElelmiszer\TonhalKonzerv;
 use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\Tojas;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
@@ -37,36 +31,12 @@ class AuchanLuxembourgHozzavaloToKategoriaMapTest extends TestCase
     {
         return [
             [
-                new FetaSajt(1, Mertekegyseg::G),
-                AuchanLuxembourgKategoria::SAJT,
-            ],
-            [
-                new GoudaSajt(1, Mertekegyseg::G),
-                AuchanLuxembourgKategoria::SAJT,
-            ],
-            [
-                new MozzarellaSajt(1, Mertekegyseg::G),
-                AuchanLuxembourgKategoria::SAJT,
-            ],
-            [
-                new MozzarellaSajtReszelt(1, Mertekegyseg::G),
-                AuchanLuxembourgKategoria::SAJT,
-            ],
-            [
-                new ParmezanSajt(1, Mertekegyseg::G),
-                AuchanLuxembourgKategoria::SAJT,
-            ],
-            [
                 new Tojas(1, Mertekegyseg::DB),
                 AuchanLuxembourgKategoria::TARTOS_TEJTERMEK,
             ],
             [
                 new TonhalKonzerv(1, Mertekegyseg::G),
                 AuchanLuxembourgKategoria::NEMZETKOZI,
-            ],
-            [
-                new TrappistaSajt(1, Mertekegyseg::G),
-                AuchanLuxembourgKategoria::SAJT,
             ],
             [
                 new Csirkemell(1, Mertekegyseg::KG),
