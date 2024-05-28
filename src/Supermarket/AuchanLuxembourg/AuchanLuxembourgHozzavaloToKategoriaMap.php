@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Supermarket\AuchanLuxembourg;
 
-use PeterPecosz\Kajatervezo\Hozzavalo\HozzavaloKategoria;
 use PeterPecosz\Kajatervezo\Hozzavalo\Kategoria;
 use PeterPecosz\Kajatervezo\Hozzavalo\Sajt\FetaSajt;
 use PeterPecosz\Kajatervezo\Hozzavalo\Sajt\GoudaSajt;
@@ -29,7 +28,7 @@ class AuchanLuxembourgHozzavaloToKategoriaMap extends HozzavaloToKategoriaMap
             MozzarellaSajt::name()        => AuchanLuxembourgKategoria::SAJT,
             MozzarellaSajtReszelt::name() => AuchanLuxembourgKategoria::SAJT,
             ParmezanSajt::name()          => AuchanLuxembourgKategoria::SAJT,
-            Tojas::name()                 => HozzavaloKategoria::TARTOS_TEJTERMEK,
+            Tojas::name()                 => AuchanLuxembourgKategoria::TARTOS_TEJTERMEK,
             TonhalKonzerv::name()         => AuchanLuxembourgKategoria::NEMZETKOZI,
             TrappistaSajt::name()         => AuchanLuxembourgKategoria::SAJT,
         ];
