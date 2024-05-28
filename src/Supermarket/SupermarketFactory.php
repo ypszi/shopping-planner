@@ -13,6 +13,8 @@ use PeterPecosz\Kajatervezo\Supermarket\KauflandTrier\KauflandTrierHozzavaloToKa
 use PeterPecosz\Kajatervezo\Supermarket\KauflandTrier\KauflandTrierKategoriaMap;
 use PeterPecosz\Kajatervezo\Supermarket\LidlWasserbillig\LidlWasserbillig;
 use PeterPecosz\Kajatervezo\Supermarket\LidlWasserbillig\LidlWasserbilligKategoriaMap;
+use PeterPecosz\Kajatervezo\Supermarket\MatchWasserbillig\MatchWasserbillig;
+use PeterPecosz\Kajatervezo\Supermarket\MatchWasserbillig\MatchWasserbilligKategoriaMap;
 
 class SupermarketFactory
 {
@@ -30,6 +32,9 @@ class SupermarketFactory
             LidlWasserbillig::name() => new LidlWasserbillig(
                 new LidlWasserbilligKategoriaMap()
             ),
+            MatchWasserbillig::name() => new MatchWasserbillig(
+                new MatchWasserbilligKategoriaMap()
+            ),
             default => throw new UnknownSupermarketException(sprintf('Unknown supermarket: "%s"', $name)),
         };
     }
@@ -43,6 +48,7 @@ class SupermarketFactory
             KauflandTrier::name(),
             AuchanLuxembourg::name(),
             LidlWasserbillig::name(),
+            MatchWasserbillig::name(),
         ];
 
         sort($supermarketNames);

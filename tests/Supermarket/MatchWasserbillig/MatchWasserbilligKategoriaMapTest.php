@@ -2,23 +2,23 @@
 
 declare(strict_types=1);
 
-namespace PeterPecosz\Kajatervezo\Tests\Supermarket\LidlWasserbillig;
+namespace PeterPecosz\Kajatervezo\Tests\Supermarket\MatchWasserbillig;
 
 use PeterPecosz\Kajatervezo\Hozzavalo\HozzavaloKategoria;
 use PeterPecosz\Kajatervezo\Hozzavalo\Kategoria;
-use PeterPecosz\Kajatervezo\Supermarket\LidlWasserbillig\LidlWasserbilligKategoria;
-use PeterPecosz\Kajatervezo\Supermarket\LidlWasserbillig\LidlWasserbilligKategoriaMap;
+use PeterPecosz\Kajatervezo\Supermarket\MatchWasserbillig\MatchWasserbilligKategoria;
+use PeterPecosz\Kajatervezo\Supermarket\MatchWasserbillig\MatchWasserbilligKategoriaMap;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 
-class LidlWasserbilligKategoriaMapTest extends TestCase
+class MatchWasserbilligKategoriaMapTest extends TestCase
 {
     #[Test]
     #[DataProvider('kategoriaMapDataProvider')]
     public function testMap(Kategoria $from, Kategoria $to): void
     {
-        $map = new LidlWasserbilligKategoriaMap();
+        $map = new MatchWasserbilligKategoriaMap();
 
         $this->assertEquals($to->value(), $map->map($from)->value());
     }
@@ -28,71 +28,71 @@ class LidlWasserbilligKategoriaMapTest extends TestCase
         return [
             [
                 HozzavaloKategoria::PEKARU,
-                LidlWasserbilligKategoria::MUZLI_PEKARU,
+                MatchWasserbilligKategoria::PEKARU,
             ],
             [
                 HozzavaloKategoria::ZOLDSEG_GYUMOLCS,
-                LidlWasserbilligKategoria::ZOLDSEG_GYUMOLCS,
+                MatchWasserbilligKategoria::ZOLDSEG_GYUMOLCS,
             ],
             [
                 HozzavaloKategoria::FELVAGOTT,
-                LidlWasserbilligKategoria::FELVAGOTT,
+                MatchWasserbilligKategoria::FELVAGOTT,
             ],
             [
                 HozzavaloKategoria::HUS,
-                LidlWasserbilligKategoria::HUS,
+                MatchWasserbilligKategoria::HUS,
             ],
             [
                 HozzavaloKategoria::HAL,
-                LidlWasserbilligKategoria::FUSZER_HAL,
+                MatchWasserbilligKategoria::HAL,
             ],
             [
                 HozzavaloKategoria::FUSZER,
-                LidlWasserbilligKategoria::FUSZER_HAL,
+                MatchWasserbilligKategoria::FUSZER,
             ],
             [
                 HozzavaloKategoria::SAJT,
-                LidlWasserbilligKategoria::SAJT,
+                MatchWasserbilligKategoria::SAJT,
             ],
             [
                 HozzavaloKategoria::TEJTERMEK,
-                LidlWasserbilligKategoria::TEJTERMEK,
+                MatchWasserbilligKategoria::TEJTERMEK,
             ],
             [
                 HozzavaloKategoria::UDITO,
-                LidlWasserbilligKategoria::UDITO,
+                MatchWasserbilligKategoria::UDITO,
             ],
             [
                 HozzavaloKategoria::MIRELIT,
-                LidlWasserbilligKategoria::MIRELIT,
+                MatchWasserbilligKategoria::MIRELIT,
             ],
             [
                 HozzavaloKategoria::BOR,
-                LidlWasserbilligKategoria::SOS_RAGCSA_SOR_BOR,
+                MatchWasserbilligKategoria::BOR,
             ],
             [
                 HozzavaloKategoria::TARTOS_TEJTERMEK,
-                LidlWasserbilligKategoria::TARTOS_ELELMISZER,
+                MatchWasserbilligKategoria::TARTOS_TEJTERMEK,
             ],
             [
                 HozzavaloKategoria::TARTOS_ELELMISZER,
-                LidlWasserbilligKategoria::TARTOS_ELELMISZER,
+                MatchWasserbilligKategoria::RIZS_TESZTA,
             ],
             [
                 HozzavaloKategoria::OLAJ,
-                LidlWasserbilligKategoria::TARTOS_ELELMISZER,
+                MatchWasserbilligKategoria::OLAJ_ECET,
             ],
             [
                 HozzavaloKategoria::ECET,
-                LidlWasserbilligKategoria::TARTOS_ELELMISZER,
+                MatchWasserbilligKategoria::OLAJ_ECET,
             ],
             [
                 HozzavaloKategoria::CUKRASZ,
-                LidlWasserbilligKategoria::TARTOS_ELELMISZER,
+                MatchWasserbilligKategoria::RIZS_TESZTA,
             ],
             [
                 HozzavaloKategoria::AZSIAI,
-                LidlWasserbilligKategoria::TARTOS_ELELMISZER,
+                MatchWasserbilligKategoria::AZSIAI,
             ],
         ];
     }

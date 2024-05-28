@@ -2,22 +2,22 @@
 
 declare(strict_types=1);
 
-namespace PeterPecosz\Kajatervezo\Tests\Supermarket\LidlWasserbillig;
+namespace PeterPecosz\Kajatervezo\Tests\Supermarket\MatchWasserbillig;
 
 use PeterPecosz\Kajatervezo\Supermarket\HozzavaloToKategoriaMap;
 use PeterPecosz\Kajatervezo\Supermarket\KategoriaMap;
-use PeterPecosz\Kajatervezo\Supermarket\LidlWasserbillig\LidlWasserbillig;
+use PeterPecosz\Kajatervezo\Supermarket\MatchWasserbillig\MatchWasserbillig;
 use PeterPecosz\Kajatervezo\Supermarket\Supermarket;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 
-class LidlWasserbilligTest extends TestCase
+class MatchWasserbilligTest extends TestCase
 {
     private Supermarket $supermarket;
 
     protected function setUp(): void
     {
-        $this->supermarket = new LidlWasserbillig(
+        $this->supermarket = new MatchWasserbillig(
             $this->createMock(KategoriaMap::class),
             $this->createMock(HozzavaloToKategoriaMap::class)
         );
@@ -26,7 +26,7 @@ class LidlWasserbilligTest extends TestCase
     #[Test]
     public function testName(): void
     {
-        $this->assertEquals('Lidl - Wasserbillig', $this->supermarket::name());
+        $this->assertEquals('Match - Wasserbillig', $this->supermarket::name());
     }
 
     #[Test]
@@ -34,18 +34,23 @@ class LidlWasserbilligTest extends TestCase
     {
         $this->assertEquals(
             [
-                'Müzli / Pékárú',
+                'Pékárú',
                 'Zöldség / Gyümölcs',
-                'Kávé / Tea / Keksz',
-                'Felvágott',
-                'Hús',
-                'Fűszer / Hal',
-                'Sajt',
+                'Kávé / Tea',
+                'Bor',
+                'Tartós tejtermék',
                 'Tejtermék',
-                'Üditő',
+                'Sajt',
+                'Hús',
+                'Hal',
                 'Mirelit',
-                'Sós rágcsa / Sör / Bor',
-                'Tartós tejtermék / Csoki / Tojás / Olaj / Ecet / Tészta / Konzerv',
+                'Felvágott',
+                'Rizs / Tészta',
+                'Fűszer',
+                'Ázsiai',
+                'Olaj / Ecet',
+                'Konzerv',
+                'Üditő',
             ],
             $this->supermarket::sorrend()
         );
