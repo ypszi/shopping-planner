@@ -147,7 +147,7 @@ if (!empty($_POST)) {
                 <?php foreach ($etelek->toArray() as $etel): ?>
                     <tr>
                         <td><?= $etel; ?></td>
-                        <td><a href="<?= $etel->receptUrl(); ?>"><?= $etel->receptUrl(); ?></a></td>
+                        <td><a href="<?= $etel->receptUrl(); ?>" target="_blank"><?= $etel->receptUrl(); ?></a></td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>
