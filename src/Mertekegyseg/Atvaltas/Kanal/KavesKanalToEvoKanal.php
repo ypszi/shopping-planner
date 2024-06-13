@@ -8,11 +8,11 @@ use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\MertekegysegValto;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
-class TeasKanalToEvokanal extends MertekegysegValto
+class KavesKanalToEvoKanal extends MertekegysegValto
 {
     public function canValt(Hozzavalo $hozzavalo, Hozzavalo $hozzaadottHozzavalo): bool
     {
-        return $hozzavalo->getMertekegyseg() === Mertekegyseg::TK
+        return $hozzavalo->getMertekegyseg() === Mertekegyseg::KVK
                && $hozzaadottHozzavalo->getMertekegyseg() === Mertekegyseg::EK;
     }
 

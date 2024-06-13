@@ -8,16 +8,16 @@ use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\MertekegysegValto;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
-class TeasKanalToEvokanal extends MertekegysegValto
+class KavesKanalToMokkasKanal extends MertekegysegValto
 {
     public function canValt(Hozzavalo $hozzavalo, Hozzavalo $hozzaadottHozzavalo): bool
     {
-        return $hozzavalo->getMertekegyseg() === Mertekegyseg::TK
-               && $hozzaadottHozzavalo->getMertekegyseg() === Mertekegyseg::EK;
+        return $hozzavalo->getMertekegyseg() === Mertekegyseg::KVK
+               && $hozzaadottHozzavalo->getMertekegyseg() === Mertekegyseg::MK;
     }
 
     protected function getMultiplier(): float
     {
-        return 5.0 / 15.0;
+        return 5.0 / 2.0;
     }
 }

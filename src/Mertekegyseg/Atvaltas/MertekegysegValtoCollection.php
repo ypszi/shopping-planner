@@ -26,19 +26,37 @@ use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\FinomLiszt\EvokanalToDekagram 
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\FinomLiszt\EvokanalToGram as FinomLisztEvokanalToGram;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\FinomLiszt\EvokanalToKilogram as FinomLisztEvokanalToKiloGram;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kanal\EvoKanalToDeciliter;
+use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kanal\EvoKanalToKavesKanal;
+use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kanal\EvoKanalToKisKanal;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kanal\EvoKanalToMilliliter;
+use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kanal\EvoKanalToMokkasKanal;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kanal\EvoKanalToTeasKanal;
+use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kanal\KavesKanalToEvoKanal;
+use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kanal\KavesKanalToKisKanal;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kanal\KavesKanalToMilliliter;
+use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kanal\KavesKanalToMokkasKanal;
+use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kanal\KavesKanalToTeasKanal;
+use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kanal\KisKanalToEvoKanal;
+use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kanal\KisKanalToKavesKanal;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kanal\KisKanalToMilliliter;
+use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kanal\KisKanalToMokkasKanal;
+use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kanal\KisKanalToTeasKanal;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kanal\MilliliterToEvoKanal;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kanal\MilliliterToKavesKanal;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kanal\MilliliterToKisKanal;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kanal\MilliliterToMokkasKanal;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kanal\MilliliterToTeasKanal;
+use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kanal\MokkasKanalToEvoKanal;
+use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kanal\MokkasKanalToKavesKanal;
+use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kanal\MokkasKanalToKisKanal;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kanal\MokkasKanalToMilliliter;
+use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kanal\MokkasKanalToTeasKanal;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kanal\TeasKanalToDeciliter;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kanal\TeasKanalToEvokanal;
+use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kanal\TeasKanalToKaveskanal;
+use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kanal\TeasKanalToKiskanal;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kanal\TeasKanalToMilliliter;
+use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kanal\TeasKanalToMokkaskanal;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kukorica\KonzervToGram as KukoricaKonzervToGram;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Porcukor\EvokanalToDekagram as PorcukorEvokanalToDekagram;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Porcukor\EvokanalToGram as PorcukorEvokanalToGram;
@@ -105,19 +123,37 @@ class MertekegysegValtoCollection
             new KilogramToDekagram(),
             new KilogramToGram(),
             new EvoKanalToDeciliter(),
+            new EvoKanalToKavesKanal(),
+            new EvoKanalToKisKanal(),
             new EvoKanalToMilliliter(),
+            new EvoKanalToMokkasKanal(),
             new EvoKanalToTeasKanal(),
+            new KavesKanalToEvoKanal(),
+            new KavesKanalToKisKanal(),
             new KavesKanalToMilliliter(),
+            new KavesKanalToMokkasKanal(),
+            new KavesKanalToTeasKanal(),
+            new KisKanalToEvoKanal(),
+            new KisKanalToKavesKanal(),
             new KisKanalToMilliliter(),
+            new KisKanalToMokkasKanal(),
+            new KisKanalToTeasKanal(),
             new MilliliterToEvoKanal(),
             new MilliliterToKavesKanal(),
             new MilliliterToKisKanal(),
             new MilliliterToMokkasKanal(),
             new MilliliterToTeasKanal(),
+            new MokkasKanalToEvoKanal(),
+            new MokkasKanalToKavesKanal(),
+            new MokkasKanalToKisKanal(),
             new MokkasKanalToMilliliter(),
-            new TeasKanalToMilliliter(),
+            new MokkasKanalToTeasKanal(),
             new TeasKanalToDeciliter(),
             new TeasKanalToEvokanal(),
+            new TeasKanalToKaveskanal(),
+            new TeasKanalToKiskanal(),
+            new TeasKanalToMilliliter(),
+            new TeasKanalToMokkaskanal(),
             new FinomLisztBogreToDekagram(),
             new FinomLisztBogreToGram(),
             new FinomLisztBogreToKilogram(),

@@ -166,25 +166,80 @@ class MertekegysegAtvaltoTest extends TestCase
                 new NapraforgoOlaj(0, Mertekegyseg::DL),
                 0.15,
             ],
+            'ek to kvk'               => [
+                new NapraforgoOlaj(1, Mertekegyseg::EK),
+                new NapraforgoOlaj(3, Mertekegyseg::KVK),
+                15.0 / 5.0,
+            ],
+            'ek to kk'                => [
+                new NapraforgoOlaj(1, Mertekegyseg::EK),
+                new NapraforgoOlaj(3, Mertekegyseg::KK),
+                15.0 / 5.0,
+            ],
             'ek to ml'                => [
                 new NapraforgoOlaj(1, Mertekegyseg::EK),
                 new NapraforgoOlaj(0, Mertekegyseg::ML),
                 15.0,
             ],
+            'ek to mk'                => [
+                new NapraforgoOlaj(1, Mertekegyseg::EK),
+                new NapraforgoOlaj(0, Mertekegyseg::MK),
+                15.0 / 2.0,
+            ],
             'ek to tk'                => [
                 new NapraforgoOlaj(1, Mertekegyseg::EK),
                 new NapraforgoOlaj(3, Mertekegyseg::TK),
-                3.0,
+                15.0 / 5.0,
+            ],
+            'kvk to ek'               => [
+                new NapraforgoOlaj(1, Mertekegyseg::KVK),
+                new NapraforgoOlaj(0, Mertekegyseg::EK),
+                5.0 / 15.0,
+            ],
+            'kvk to kk'               => [
+                new NapraforgoOlaj(1, Mertekegyseg::KVK),
+                new NapraforgoOlaj(0, Mertekegyseg::KK),
+                1.0,
             ],
             'kvk to ml'               => [
                 new NapraforgoOlaj(1, Mertekegyseg::KVK),
                 new NapraforgoOlaj(0, Mertekegyseg::ML),
                 5.0,
             ],
+            'kvk to mk'               => [
+                new NapraforgoOlaj(1, Mertekegyseg::KVK),
+                new NapraforgoOlaj(0, Mertekegyseg::MK),
+                5.0 / 2.0,
+            ],
+            'kvk to tk'               => [
+                new NapraforgoOlaj(1, Mertekegyseg::KVK),
+                new NapraforgoOlaj(3, Mertekegyseg::TK),
+                1.0,
+            ],
+            'kk to ek'                => [
+                new NapraforgoOlaj(1, Mertekegyseg::KK),
+                new NapraforgoOlaj(0, Mertekegyseg::EK),
+                5.0 / 15.0,
+            ],
+            'kk to kvk'               => [
+                new NapraforgoOlaj(1, Mertekegyseg::KK),
+                new NapraforgoOlaj(0, Mertekegyseg::KVK),
+                1.0,
+            ],
             'kk to ml'                => [
                 new NapraforgoOlaj(1, Mertekegyseg::KK),
                 new NapraforgoOlaj(0, Mertekegyseg::ML),
                 5.0,
+            ],
+            'kk to mk'                => [
+                new NapraforgoOlaj(1, Mertekegyseg::KK),
+                new NapraforgoOlaj(0, Mertekegyseg::MK),
+                5.0 / 2.0,
+            ],
+            'kk to tk'                => [
+                new NapraforgoOlaj(1, Mertekegyseg::KK),
+                new NapraforgoOlaj(0, Mertekegyseg::TK),
+                1.0,
             ],
             'ml to ek'                => [
                 new NapraforgoOlaj(1, Mertekegyseg::ML),
@@ -211,15 +266,30 @@ class MertekegysegAtvaltoTest extends TestCase
                 new NapraforgoOlaj(0, Mertekegyseg::TK),
                 0.2,
             ],
+            'mk to ek'                => [
+                new NapraforgoOlaj(1, Mertekegyseg::MK),
+                new NapraforgoOlaj(0, Mertekegyseg::EK),
+                2.0 / 15.0,
+            ],
+            'mk to kvk'               => [
+                new NapraforgoOlaj(1, Mertekegyseg::MK),
+                new NapraforgoOlaj(0, Mertekegyseg::KVK),
+                2.0 / 5.0,
+            ],
+            'mk to kk'                => [
+                new NapraforgoOlaj(1, Mertekegyseg::MK),
+                new NapraforgoOlaj(0, Mertekegyseg::KK),
+                2.0 / 5.0,
+            ],
             'mk to ml'                => [
                 new NapraforgoOlaj(1, Mertekegyseg::MK),
                 new NapraforgoOlaj(0, Mertekegyseg::ML),
                 2.0,
             ],
-            'tk to ml'                => [
-                new NapraforgoOlaj(1, Mertekegyseg::TK),
-                new NapraforgoOlaj(0, Mertekegyseg::ML),
-                5.0,
+            'mk to tk'                => [
+                new NapraforgoOlaj(1, Mertekegyseg::MK),
+                new NapraforgoOlaj(0, Mertekegyseg::TK),
+                2.0 / 5.0,
             ],
             'tk to dl'                => [
                 new NapraforgoOlaj(1, Mertekegyseg::TK),
@@ -229,7 +299,27 @@ class MertekegysegAtvaltoTest extends TestCase
             'tk to ek'                => [
                 new NapraforgoOlaj(1, Mertekegyseg::TK),
                 new NapraforgoOlaj(0.3, Mertekegyseg::EK),
-                0.3,
+                5.0 / 15.0,
+            ],
+            'tk to kvk'               => [
+                new NapraforgoOlaj(1, Mertekegyseg::TK),
+                new NapraforgoOlaj(0.3, Mertekegyseg::KVK),
+                1.0,
+            ],
+            'tk to kk'                => [
+                new NapraforgoOlaj(1, Mertekegyseg::TK),
+                new NapraforgoOlaj(0.3, Mertekegyseg::KK),
+                1.0,
+            ],
+            'tk to ml'                => [
+                new NapraforgoOlaj(1, Mertekegyseg::TK),
+                new NapraforgoOlaj(0, Mertekegyseg::ML),
+                5.0,
+            ],
+            'tk to mk'                => [
+                new NapraforgoOlaj(1, Mertekegyseg::TK),
+                new NapraforgoOlaj(0.3, Mertekegyseg::MK),
+                5.0 / 2.0,
             ],
             'finomliszt bogre to dkg' => [
                 new FinomLiszt(1, Mertekegyseg::BOGRE),
