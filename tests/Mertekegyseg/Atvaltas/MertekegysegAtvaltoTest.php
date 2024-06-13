@@ -466,6 +466,11 @@ class MertekegysegAtvaltoTest extends TestCase
                 new Tejfol(0, Mertekegyseg::G),
                 10.0,
             ],
+            'So csipet to g'          => [
+                new So(1, Mertekegyseg::CSIPET),
+                new So(0, Mertekegyseg::G),
+                0.5,
+            ],
             'So ek to g'              => [
                 new So(1, Mertekegyseg::EK),
                 new So(0, Mertekegyseg::G),
