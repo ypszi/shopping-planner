@@ -54,18 +54,36 @@ if (!empty($_POST)) {
     <title>BEVÁSÁRLÁS TERVEZŐ</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style media="all">
+		label.form-check-label {
+			font-weight: 600;
+		}
+
+		output {
+			font-size: 0.7rem;
+			vertical-align: text-bottom;
+		}
+
+		button#plan-btn {
+			margin-bottom: 1rem;
+		}
+
+		button#back-btn {
+			margin-bottom: 1rem;
+		}
+    </style>
 </head>
 <body>
 <div class="container-fluid">
     <?php if (empty($_POST)): ?>
         <form action="" method="post" class="row">
             <fieldset class="row mb-2">
-                <legend class="col-form-label col-sm-12 pt-0">
+                <legend class="col-form-label col-md-12 pt-0">
                     <span class="display-6">Hova mész bevásárolni?</span>
                 </legend>
                 <?php foreach ($availableSupermarkets as $availableSupermarket): ?>
                     <?php $availableSupermarketKey = str_replace(' ', '_', $availableSupermarket); ?>
-                    <div class="col-sm-12">
+                    <div class="col-md-12">
                         <div class="form-check">
                             <input
                                 type="radio"
@@ -84,15 +102,17 @@ if (!empty($_POST)) {
             </fieldset>
 
             <fieldset class="row mb-2">
-                <legend class="col-form-label col-sm-12 pt-0">
+                <legend class="col-form-label col-md-12 pt-0">
                     <span class="display-6">Melyik kajákhoz kell bevásárolni?</span>
                 </legend>
                 <?php foreach ($availableFoodNames as $availableFoodName): ?>
                     <?php $availableFoodNameKey = str_replace(' ', '_', $availableFoodName); ?>
-                    <div class="col-sm-6 mb-2">
-                        <div class="form-check">
+                    <?php $etel = EtelFactory::create($availableFoodName); ?>
+                    <div class="col-md-8">
+                        <div class="form-check form-switch">
                             <input
                                 type="checkbox"
+                                role="switch"
                                 id="<?= $availableFoodNameKey ?>"
                                 value="<?= $availableFoodName ?>"
                                 name="food-<?= $availableFoodNameKey ?>"
@@ -100,10 +120,10 @@ if (!empty($_POST)) {
                                 onchange="this.checked ? document.getElementById('portion-<?= $availableFoodNameKey ?>').disabled = '' : document.getElementById('portion-<?= $availableFoodNameKey ?>').disabled = 'disabled'"
                             >
                             <label for="<?= $availableFoodNameKey ?>" class="form-check-label"><?= $availableFoodName ?></label>
+                            <output id="portion-output-<?= $availableFoodNameKey ?>">(<?= $etel::defaultAdag() ?> Adag)</output>
                         </div>
                     </div>
-                    <div class="col-sm-4 mb-2">
-                        <?php $etel = EtelFactory::create($availableFoodName); ?>
+                    <div class="col-md-4">
                         <div class="input-group">
                             <input
                                 type="range"
@@ -115,19 +135,16 @@ if (!empty($_POST)) {
                                 max="12"
                                 step="1"
                                 disabled="disabled"
-                                oninput="document.getElementById('portion-output-<?= $availableFoodNameKey ?>').value = this.value + ' Adag'"
+                                oninput="document.getElementById('portion-output-<?= $availableFoodNameKey ?>').value = '(' + this.value + ' Adag)'"
                             >
                         </div>
-                    </div>
-                    <div class="col-sm-2 mb-2">
-                        <output class="input-group-text" id="portion-output-<?= $availableFoodNameKey ?>"><?= $etel::defaultAdag() ?> Adag</output>
                     </div>
                 <?php endforeach; ?>
             </fieldset>
 
             <div class="sticky-bottom">
                 <div class="row justify-content-center">
-                    <button class="btn btn-primary col-2" type="submit" style="margin-bottom: 1rem;">PLAN</button>
+                    <button class="btn btn-primary col-2" type="submit" id="plan-btn">PLAN</button>
                 </div>
             </div>
         </form>
@@ -175,7 +192,7 @@ if (!empty($_POST)) {
 
         <div class="sticky-bottom">
             <div class="row justify-content-center">
-                <button class="btn btn-secondary col-2" type="button" style="margin-bottom: 1rem;" onclick="location.href=''">BACK</button>
+                <button class="btn btn-secondary col-2" type="button" id="back-btn" onclick="location.href=''">BACK</button>
             </div>
         </div>
     <?php endif; ?>
