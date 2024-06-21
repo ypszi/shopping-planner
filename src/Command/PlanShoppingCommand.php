@@ -106,12 +106,14 @@ class PlanShoppingCommand extends Command
 
     private function askSupermarketName(InputInterface $input): string
     {
-        return trim($input->getOption('supermarket'))
-            ?: $this->io->choice(
+        return trim(
+            $input->getOption('supermarket')
+                ?: $this->io->choice(
                 question: 'Hova mész bevásárolni?',
                 choices: $this->availableSupermarkets,
                 default: KauflandTrier::name()
-            );
+            )
+        );
     }
 
     /**
@@ -120,7 +122,7 @@ class PlanShoppingCommand extends Command
     private function askFoodNames(InputInterface $input): array
     {
         /** @var string[] $foodNames */
-        return array_map('trim', explode(',', $input->getOption('foods') ?? ''))
+        return array_filter(array_map('trim', explode(',', $input->getOption('foods') ?? '')))
             ?: $this->io->choice(
                 question: 'Melyik kajákhoz kell bevásárolni?',
                 choices: $this->availableFoodNames,
@@ -138,8 +140,15 @@ class PlanShoppingCommand extends Command
     {
         $this->io->section('Ételek:');
         $this->io->table(
-            ['Étel', 'Recept'],
-            array_map(fn(Etel $etel) => [(string)$etel, $etel->receptUrl()], $this->etelek->toArray())
+            ['Étel', 'Recept', 'Kommentek'],
+            array_map(
+                fn(Etel $etel) => [
+                    (string)$etel,
+                    $etel->receptUrl(),
+                    implode(PHP_EOL, array_map(fn(string $comment) => '- ' . $comment, $etel->comments())),
+                ],
+                $this->etelek->toArray()
+            )
         );
     }
 

@@ -7,6 +7,7 @@ namespace PeterPecosz\Kajatervezo\Etel;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Bazsalikom;
 use PeterPecosz\Kajatervezo\Hozzavalo\Olaj\OlivaOlaj;
 use PeterPecosz\Kajatervezo\Hozzavalo\Sajt\FetaSajt;
+use PeterPecosz\Kajatervezo\Hozzavalo\TartosElelmiszer\OlivabogyoKonzerv;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Citrom;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Kigyouborka;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Lilahagyma;
@@ -26,7 +27,6 @@ class GorogSalata extends Etel
             new Paradicsom(4, Mertekegyseg::DB),
             new Kigyouborka(1, Mertekegyseg::DB),
             new Lilahagyma(4, Mertekegyseg::DB),
-            // 20 dkg olajbogyó
             new FetaSajt(125, Mertekegyseg::G),
             new OlivaOlaj(4, Mertekegyseg::EK),
             new Citrom(1, Mertekegyseg::DB),
@@ -42,5 +42,10 @@ class GorogSalata extends Etel
     public function receptUrl(): string
     {
         return $this->decorateNoSaltyReceptUrl('https://www.nosalty.hu/recept/eredeti-gorog-salata');
+    }
+
+    public function comments(): array
+    {
+        return ['opcionális: ' . new OlivabogyoKonzerv(20, Mertekegyseg::DKG), ...parent::comments()];
     }
 }

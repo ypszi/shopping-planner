@@ -158,13 +158,19 @@ if (!empty($_POST)) {
                 <tr>
                     <th scope="col">Étel</th>
                     <th scope="col">Recept</th>
+                    <th scope="col">Kommentek</th>
                 </tr>
             </thead>
             <tbody class="table-group-divider">
                 <?php foreach ($etelek->toArray() as $etel): ?>
                     <tr>
-                        <td><?= $etel; ?></td>
+                        <td><?= $etel ?></td>
                         <td><a href="<?= $etel->receptUrl(); ?>" target="_blank"><?= $etel->receptUrl(); ?></a></td>
+                        <td>
+                            <?php foreach ($etel->comments() as $comment): ?>
+                                <li><?= $comment ?></li>
+                            <?php endforeach; ?>
+                        </td>
                     </tr>
                 <?php endforeach; ?>
             </tbody>

@@ -49,6 +49,11 @@ abstract class Etel
         return $this->hozzavalok;
     }
 
+    public function comments(): array
+    {
+        return [];
+    }
+
     protected function decorateNoSaltyReceptUrl(string $receptUrl): string
     {
         if (str_contains($receptUrl, 'nosalty.hu')) {
