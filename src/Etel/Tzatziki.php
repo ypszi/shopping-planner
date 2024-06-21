@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Etel;
 
+use PeterPecosz\Kajatervezo\Hozzavalo\Ecet\Almaborecet;
 use PeterPecosz\Kajatervezo\Hozzavalo\Ecet\Feherborecet;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Bors;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\So;
@@ -41,5 +42,10 @@ class Tzatziki extends Etel
     public function receptUrl(): string
     {
         return 'https://akispetretzikis.com/recipe/1485/tzatziki';
+    }
+
+    public function comments(): array
+    {
+        return [new Feherborecet(3, Mertekegyseg::TK) . ' vagy ' . new Almaborecet(3, Mertekegyseg::TK), ...parent::comments()];
     }
 }
