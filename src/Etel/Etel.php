@@ -64,20 +64,10 @@ abstract class Etel
         $urlParts = parse_url($receptUrl);
 
         if (str_contains($urlParts['host'], 'nosalty.hu')) {
-            $originalQueryString = $urlParts['query'] ?? '';
-            $queryString         = $originalQueryString;
+            $baseUri     = $this->removeQueryString($receptUrl);
+            $queryString = $this->replaceAdagQueryString($receptUrl);
 
-            if (preg_match('/adag=\d+/', $originalQueryString)) {
-                $queryString = preg_replace('/adag=\d+/', '', $originalQueryString);
-            }
-
-            if (!empty($queryString)) {
-                $queryString .= '&';
-            }
-
-            $queryString .= sprintf('adag=%d', $this->adag);
-
-            return sprintf('%s?%s', rtrim(str_replace($originalQueryString, '', $receptUrl), '?'), $queryString);
+            return sprintf('%s?%s', $baseUri, $queryString);
         }
 
         return $receptUrl;
@@ -96,5 +86,32 @@ abstract class Etel
             $adagMennyiseg      = $hozzavalo->getMennyiseg() / static::defaultAdag() * $this->adag;
             $this->hozzavalok[] = $hozzavalo->withMennyiseg($adagMennyiseg);
         }
+    }
+
+    private function replaceAdagQueryString(string $receptUrl): string
+    {
+        $urlParts            = parse_url($receptUrl);
+        $originalQueryString = $urlParts['query'] ?? '';
+        $queryString         = $originalQueryString;
+
+        if (preg_match('/adag=\d+/', $originalQueryString)) {
+            $queryString = preg_replace('/adag=\d+/', '', $originalQueryString);
+        }
+
+        if (!empty($queryString)) {
+            $queryString .= '&';
+        }
+
+        $queryString .= sprintf('adag=%d', $this->adag);
+
+        return $queryString;
+    }
+
+    public function removeQueryString(string $receptUrl): string
+    {
+        $urlParts            = parse_url($receptUrl);
+        $originalQueryString = $urlParts['query'] ?? '';
+
+        return rtrim(str_replace($originalQueryString, '', $receptUrl), '?');
     }
 }
