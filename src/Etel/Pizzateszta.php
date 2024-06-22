@@ -34,8 +34,8 @@ class Pizzateszta extends Etel
         return 2;
     }
 
-    public function receptUrl(): string
+    public function rawReceptUrl(): string
     {
-        return $this->decorateNoSaltyReceptUrl('https://www.nosalty.hu/recept/pizzateszta-jamie-oliver-tol');
+        return 'https://www.nosalty.hu/recept/pizzateszta-jamie-oliver-tol';
     }
 }

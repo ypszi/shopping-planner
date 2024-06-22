@@ -34,7 +34,7 @@ class Tejbegriz extends Etel
         return 2;
     }
 
-    public function receptUrl(): string
+    public function rawReceptUrl(): string
     {
         return 'https://www.mindmegette.hu/tejbegriz.recept/';
     }

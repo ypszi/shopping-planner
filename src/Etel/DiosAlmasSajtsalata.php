@@ -46,8 +46,8 @@ class DiosAlmasSajtsalata extends Etel
         return 6;
     }
 
-    public function receptUrl(): string
+    public function rawReceptUrl(): string
     {
-        return $this->decorateNoSaltyReceptUrl('https://www.nosalty.hu/recept/dios-almas-sajtsalata');
+        return 'https://www.nosalty.hu/recept/dios-almas-sajtsalata';
     }
 }

@@ -32,7 +32,7 @@ class Rantotta extends Etel
         return 2;
     }
 
-    public function receptUrl(): string
+    public function rawReceptUrl(): string
     {
         return '';
     }

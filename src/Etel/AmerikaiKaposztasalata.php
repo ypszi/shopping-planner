@@ -46,7 +46,7 @@ class AmerikaiKaposztasalata extends Etel
         return 8;
     }
 
-    public function receptUrl(): string
+    public function rawReceptUrl(): string
     {
         return 'https://www.mindmegette.hu/amerikai-kaposztasalata-a-coleslaw-salata.recept/';
     }

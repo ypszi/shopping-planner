@@ -46,7 +46,7 @@ class CsirkesSpargasRizotto extends Etel
         return 4;
     }
 
-    public function receptUrl(): string
+    public function rawReceptUrl(): string
     {
         return 'https://femina.hu/recept/csirkes-spargas-rizotto-receptje/';
     }

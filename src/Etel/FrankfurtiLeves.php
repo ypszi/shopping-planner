@@ -49,8 +49,8 @@ class FrankfurtiLeves extends Etel
         return 8;
     }
 
-    public function receptUrl(): string
+    public function rawReceptUrl(): string
     {
-        return $this->decorateNoSaltyReceptUrl('https://www.nosalty.hu/recept/frankfurti-leves-egyszeruen');
+        return 'https://www.nosalty.hu/recept/frankfurti-leves-egyszeruen';
     }
 }

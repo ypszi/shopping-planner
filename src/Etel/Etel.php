@@ -24,12 +24,17 @@ abstract class Etel
 
     abstract public static function defaultAdag(): int;
 
-    abstract public function receptUrl(): string;
+    public function receptUrl(): string
+    {
+        return $this->decorateNoSaltyReceptUrl($this->rawReceptUrl());
+    }
 
     /**
      * @return Hozzavalo[]
      */
     abstract protected function listHozzavalok(): array;
+
+    abstract protected function rawReceptUrl(): string;
 
     public function withAdag(int $adag): self
     {
@@ -56,8 +61,23 @@ abstract class Etel
 
     protected function decorateNoSaltyReceptUrl(string $receptUrl): string
     {
-        if (str_contains($receptUrl, 'nosalty.hu')) {
-            return sprintf('%s?adag=%d', $receptUrl, $this->adag);
+        $urlParts = parse_url($receptUrl);
+
+        if (str_contains($urlParts['host'], 'nosalty.hu')) {
+            $originalQueryString = $urlParts['query'] ?? '';
+            $queryString         = $originalQueryString;
+
+            if (preg_match('/adag=\d+/', $originalQueryString)) {
+                $queryString = preg_replace('/adag=\d+/', '', $originalQueryString);
+            }
+
+            if (!empty($queryString)) {
+                $queryString .= '&';
+            }
+
+            $queryString .= sprintf('adag=%d', $this->adag);
+
+            return sprintf('%s?%s', rtrim(str_replace($originalQueryString, '', $receptUrl), '?'), $queryString);
         }
 
         return $receptUrl;

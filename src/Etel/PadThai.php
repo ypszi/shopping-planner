@@ -55,7 +55,7 @@ class PadThai extends Etel
         return 2;
     }
 
-    public function receptUrl(): string
+    public function rawReceptUrl(): string
     {
         return 'https://streetkitchen.hu/tesztapolc/az-igazi-pad-thai/';
     }

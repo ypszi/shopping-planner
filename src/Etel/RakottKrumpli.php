@@ -38,7 +38,7 @@ class RakottKrumpli extends Etel
         return 4;
     }
 
-    public function receptUrl(): string
+    public function rawReceptUrl(): string
     {
         return 'https://www.mindmegette.hu/rakott-krumpli.recept/';
     }

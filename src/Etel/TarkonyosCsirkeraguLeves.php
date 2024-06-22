@@ -50,8 +50,8 @@ class TarkonyosCsirkeraguLeves extends Etel
         ];
     }
 
-    public function receptUrl(): string
+    public function rawReceptUrl(): string
     {
-        return $this->decorateNoSaltyReceptUrl('https://www.nosalty.hu/recept/tarkonyos-csirkeraguleves-tarkonyos-raguleves-3');
+        return 'https://www.nosalty.hu/recept/tarkonyos-csirkeraguleves-tarkonyos-raguleves-3';
     }
 }

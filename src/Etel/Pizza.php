@@ -40,7 +40,7 @@ class Pizza extends Etel
         return Pizzateszta::defaultAdag();
     }
 
-    public function receptUrl(): string
+    public function rawReceptUrl(): string
     {
         return $this->pizzateszta->receptUrl();
     }

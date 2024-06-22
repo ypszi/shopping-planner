@@ -34,7 +34,7 @@ class RetkesUborkaSalata extends Etel
         return 4;
     }
 
-    public function receptUrl(): string
+    public function rawReceptUrl(): string
     {
         return 'https://natashaskitchen.com/cucumber-radish-salad-recipe/';
     }

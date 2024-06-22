@@ -42,7 +42,7 @@ class CitromosSpargasCsirkesPenne extends Etel
         return 4;
     }
 
-    public function receptUrl(): string
+    public function rawReceptUrl(): string
     {
         return 'https://www.mindmegette.hu/citromos-spargas-csirkes-penne.recept/';
     }

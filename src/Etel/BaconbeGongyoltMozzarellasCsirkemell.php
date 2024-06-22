@@ -36,7 +36,7 @@ class BaconbeGongyoltMozzarellasCsirkemell extends Etel
         return 4;
     }
 
-    public function receptUrl(): string
+    public function rawReceptUrl(): string
     {
         return 'https://www.mindmegette.hu/baconbe-gongyolt-mozzarellas-csirkemell.recept/';
     }

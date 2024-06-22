@@ -42,8 +42,8 @@ class PaprikasKrumpli extends Etel
         return 4;
     }
 
-    public function receptUrl(): string
+    public function rawReceptUrl(): string
     {
-        return $this->decorateNoSaltyReceptUrl('https://www.nosalty.hu/recept/paprikas-krumpli-kolbasszal');
+        return 'https://www.nosalty.hu/recept/paprikas-krumpli-kolbasszal';
     }
 }

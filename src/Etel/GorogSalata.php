@@ -39,9 +39,9 @@ class GorogSalata extends Etel
         return 6;
     }
 
-    public function receptUrl(): string
+    public function rawReceptUrl(): string
     {
-        return $this->decorateNoSaltyReceptUrl('https://www.nosalty.hu/recept/eredeti-gorog-salata');
+        return 'https://www.nosalty.hu/recept/eredeti-gorog-salata';
     }
 
     public function comments(): array

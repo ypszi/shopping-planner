@@ -36,8 +36,8 @@ class TepsisKrumpli extends Etel
         return 3;
     }
 
-    public function receptUrl(): string
+    public function rawReceptUrl(): string
     {
-        return $this->decorateNoSaltyReceptUrl('https://www.nosalty.hu/recept/fuszeres-sult-krumpli-szilvus-konyhajabol');
+        return 'https://www.nosalty.hu/recept/fuszeres-sult-krumpli-szilvus-konyhajabol';
     }
 }

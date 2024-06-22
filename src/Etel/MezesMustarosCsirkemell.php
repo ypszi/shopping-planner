@@ -41,7 +41,7 @@ class MezesMustarosCsirkemell extends Etel
         return 2;
     }
 
-    public function receptUrl(): string
+    public function rawReceptUrl(): string
     {
         return 'https://www.mindmegette.hu/mezes-mustaros-csirkemell-video.recept/';
     }

@@ -42,7 +42,7 @@ class ChilisBab extends Etel
         return 4;
     }
 
-    public function receptUrl(): string
+    public function rawReceptUrl(): string
     {
         return 'https://www.mindmegette.hu/chilis-bab.recept/';
     }

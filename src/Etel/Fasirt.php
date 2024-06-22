@@ -40,7 +40,7 @@ class Fasirt extends Etel
         return 4;
     }
 
-    public function receptUrl(): string
+    public function rawReceptUrl(): string
     {
         return 'https://www.mindmegette.hu/fasirt-sutoben-sutve.recept/';
     }

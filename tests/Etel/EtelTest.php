@@ -34,7 +34,7 @@ class EtelTest extends TestCase
                 return 1;
             }
 
-            public function receptUrl(): string
+            public function rawReceptUrl(): string
             {
                 return 'https://online-recept-konyv.hu/test-food';
             }
@@ -51,6 +51,96 @@ class EtelTest extends TestCase
     public function testReceptUrl(): void
     {
         $this->assertEquals('https://online-recept-konyv.hu/test-food', $this->testFood->receptUrl());
+    }
+
+    #[Test]
+    public function testReceptUrlHasNosalty(): void
+    {
+        $sut = new class() extends Etel {
+            public static function name(): string
+            {
+                return 'test food';
+            }
+
+            protected function listHozzavalok(): array
+            {
+                return [
+                    new Tojas(1, Mertekegyseg::DB),
+                ];
+            }
+
+            public static function defaultAdag(): int
+            {
+                return 1;
+            }
+
+            public function rawReceptUrl(): string
+            {
+                return 'https://www.nosalty.hu/recept/test-food';
+            }
+        };
+
+        $this->assertEquals('https://www.nosalty.hu/recept/test-food?adag=1', $sut->receptUrl());
+    }
+
+    #[Test]
+    public function testReceptUrlHasNosaltyHavingQueryParam(): void
+    {
+        $sut = new class() extends Etel {
+            public static function name(): string
+            {
+                return 'test food';
+            }
+
+            protected function listHozzavalok(): array
+            {
+                return [
+                    new Tojas(1, Mertekegyseg::DB),
+                ];
+            }
+
+            public static function defaultAdag(): int
+            {
+                return 1;
+            }
+
+            public function rawReceptUrl(): string
+            {
+                return 'https://www.nosalty.hu/recept/test-food?query=test';
+            }
+        };
+
+        $this->assertEquals('https://www.nosalty.hu/recept/test-food?query=test&adag=1', $sut->receptUrl());
+    }
+
+    #[Test]
+    public function testReceptUrlHasNosaltyHavingAdagQueryParam(): void
+    {
+        $sut = new class() extends Etel {
+            public static function name(): string
+            {
+                return 'test food';
+            }
+
+            protected function listHozzavalok(): array
+            {
+                return [
+                    new Tojas(1, Mertekegyseg::DB),
+                ];
+            }
+
+            public static function defaultAdag(): int
+            {
+                return 1;
+            }
+
+            public function rawReceptUrl(): string
+            {
+                return 'https://www.nosalty.hu/recept/test-food?adag=1';
+            }
+        };
+
+        $this->assertEquals('https://www.nosalty.hu/recept/test-food?adag=1', $sut->receptUrl());
     }
 
     #[Test]

@@ -49,7 +49,7 @@ class SupermarketTest extends TestCase
                 return 1;
             }
 
-            public function receptUrl(): string
+            public function rawReceptUrl(): string
             {
                 return 'https://online-recept-konyv.hu/test-food';
             }

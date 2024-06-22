@@ -36,7 +36,7 @@ class Krumplipure extends Etel
         return 4;
     }
 
-    public function receptUrl(): string
+    public function rawReceptUrl(): string
     {
         return 'https://www.mindmegette.hu/krumplipure-alaprecept.recept/';
     }

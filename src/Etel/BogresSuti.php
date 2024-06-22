@@ -43,8 +43,8 @@ class BogresSuti extends Etel
     /**
      * 2 perc mikro
      */
-    public function receptUrl(): string
+    public function rawReceptUrl(): string
     {
-        return $this->decorateNoSaltyReceptUrl('https://www.nosalty.hu/recept/bogreben-sult-suti-5-perc-alatt');
+        return 'https://www.nosalty.hu/recept/bogreben-sult-suti-5-perc-alatt';
     }
 }

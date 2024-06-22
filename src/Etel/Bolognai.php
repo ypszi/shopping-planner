@@ -61,7 +61,7 @@ class Bolognai extends Etel
         return 4;
     }
 
-    public function receptUrl(): string
+    public function rawReceptUrl(): string
     {
         return 'https://streetkitchen.hu/tesztapolc/ime-tokeletes-bolognai-spagetti/';
     }
