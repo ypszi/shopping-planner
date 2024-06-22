@@ -3,22 +3,14 @@
 
 declare(strict_types=1);
 
-use DI\ContainerBuilder;
 use PeterPecosz\Kajatervezo\Command\PlanShoppingCommand;
-use PeterPecosz\Kajatervezo\ServiceProvider\CommandServiceProvider;
 use Symfony\Component\Console\Application;
 use Symfony\Component\Console\Command\Command;
 
 require __DIR__ . '/../vendor/autoload.php';
 
 $application = new Application();
-
-$builder = new ContainerBuilder();
-$builder->addDefinitions((new CommandServiceProvider())->getDefinitions());
-$container = $builder->build();
-
-$command = $container->get(PlanShoppingCommand::class);
-$application->add($command);
+$application->add(new PlanShoppingCommand());
 
 try {
     $application->run();
