@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg;
 
-class Karalabe extends Zoldseg
+class KaliforniaiPaprikaPiros extends KaliforniaiPaprika
 {
     public static function name(): string
     {
-        return 'Karalábé';
+        return parent::name() . ' (piros)';
     }
 }

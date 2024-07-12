@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg;
 
-class Karalabe extends Zoldseg
+abstract class KaliforniaiPaprika extends Zoldseg
 {
     public static function name(): string
     {
-        return 'Karalábé';
+        return 'Kaliforniai paprika';
     }
 }
