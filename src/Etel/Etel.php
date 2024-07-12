@@ -26,7 +26,13 @@ abstract class Etel
 
     public function receptUrl(): string
     {
-        return $this->decorateNoSaltyReceptUrl($this->rawReceptUrl());
+        $rawReceptUrl = $this->rawReceptUrl();
+
+        if (empty($rawReceptUrl)) {
+            return $rawReceptUrl;
+        }
+
+        return $this->decorateNoSaltyReceptUrl($rawReceptUrl);
     }
 
     /**
