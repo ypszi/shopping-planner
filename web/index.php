@@ -71,6 +71,14 @@ if (!empty($_POST)) {
 		button#back-btn {
 			margin-bottom: 1rem;
 		}
+
+		span.hozzavalo {
+			cursor: pointer;
+		}
+
+		span.hozzavalo-done {
+			text-decoration: line-through;
+		}
     </style>
 </head>
 <body>
@@ -186,10 +194,21 @@ if (!empty($_POST)) {
                 </tr>
             </thead>
             <tbody class="table-group-divider">
-                <?php foreach ($shoppingList->getRows() as $row): ?>
+                <?php foreach ($shoppingList->getRows() as $rowId => $row): ?>
                     <tr>
-                        <?php foreach ($row as $col): ?>
-                            <td><?= $col ?></td>
+                        <?php foreach ($row as $colId => $col): ?>
+                            <?php $cellId = $rowId . '-' . $colId; ?>
+                            <td>
+                                <span
+                                    id="hozzavalo-cell-label-<?= $cellId ?>"
+                                    class="form-check-label hozzavalo"
+                                    onclick="this.classList.contains('hozzavalo-done')
+                                        ? this.classList.remove('hozzavalo-done')
+                                        : this.classList.add('hozzavalo-done')"
+                                >
+                                    <?= $col ?>
+                                </span>
+                            </td>
                         <?php endforeach; ?>
                     </tr>
                 <?php endforeach; ?>
