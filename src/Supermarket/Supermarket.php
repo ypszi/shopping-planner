@@ -9,6 +9,7 @@ use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
 use PeterPecosz\Kajatervezo\Hozzavalo\HozzavalokByKategoria;
 use PeterPecosz\Kajatervezo\Hozzavalo\HozzavaloSorok;
 use PeterPecosz\Kajatervezo\ShoppingList\ShoppingList;
+use PeterPecosz\Kajatervezo\ShoppingList\ShoppingListByFood;
 
 abstract class Supermarket
 {
@@ -36,10 +37,20 @@ abstract class Supermarket
             $hozzavalokByKategoria->addMultipleHozzavalo($etel->hozzavalok());
         }
 
-        return new ShoppingList(
-            $this->sorrend(),
-            $this->createHozzavaloSorok($hozzavalokByKategoria)->toArray()
-        );
+        return new ShoppingList($this->sorrend(), $this->createHozzavaloSorok($hozzavalokByKategoria)->toArray());
+    }
+
+    public function toShoppingListByFood(Etelek $etelek): ShoppingListByFood
+    {
+        $rows = [];
+        foreach ($etelek as $etel) {
+            $hozzavalokByKategoria = new HozzavalokByKategoria();
+            $hozzavalokByKategoria->addMultipleHozzavalo($etel->hozzavalok());
+
+            $rows[$etel::name()] = $this->createHozzavaloSorok($hozzavalokByKategoria)->toArray();
+        }
+
+        return new ShoppingListByFood($this->sorrend(), $rows);
     }
 
     private function createHozzavaloSorok(HozzavalokByKategoria $hozzavalokByKategoria): HozzavaloSorok

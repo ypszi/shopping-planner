@@ -11,6 +11,7 @@ use PeterPecosz\Kajatervezo\Hozzavalo\HozzavaloKategoria;
 use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\Tojas;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 use PeterPecosz\Kajatervezo\ShoppingList\ShoppingList;
+use PeterPecosz\Kajatervezo\ShoppingList\ShoppingListByFood;
 use PeterPecosz\Kajatervezo\Supermarket\HozzavaloToKategoriaMap;
 use PeterPecosz\Kajatervezo\Supermarket\KategoriaMap;
 use PeterPecosz\Kajatervezo\Supermarket\Supermarket;
@@ -114,6 +115,52 @@ class SupermarketTest extends TestCase
                         '',
                         '1.00 db Tojás',
                         '',
+                    ],
+                ]
+            ),
+            $shoppingList
+        );
+    }
+
+    #[Test]
+    public function testToShoppingListByFood(): void
+    {
+        $this->kategoriaMap
+            ->expects(self::exactly(2))
+            ->method('map')
+            ->willReturnOnConsecutiveCalls(
+                HozzavaloKategoria::TEJTERMEK,
+                HozzavaloKategoria::ECET,
+            );
+
+        $this->hozzavaloToKategoriaMap
+            ->expects(self::exactly(2))
+            ->method('map')
+            ->willReturnOnConsecutiveCalls(
+                HozzavaloKategoria::TEJTERMEK,
+                HozzavaloKategoria::ECET,
+            );
+
+        $shoppingList = $this->supermarket->toShoppingListByFood(new Etelek([$this->testFood]));
+
+        $this->assertEquals(
+            new ShoppingListByFood(
+                [
+                    HozzavaloKategoria::ZOLDSEG_GYUMOLCS->value,
+                    HozzavaloKategoria::ECET->value,
+                    HozzavaloKategoria::OLAJ->value,
+                    HozzavaloKategoria::TEJTERMEK->value,
+                    HozzavaloKategoria::TARTOS_TEJTERMEK->value,
+                ],
+                [
+                    $this->testFood::name() => [
+                        [
+                            '',
+                            '1.00 l Ecet',
+                            '',
+                            '1.00 db Tojás',
+                            '',
+                        ],
                     ],
                 ]
             ),

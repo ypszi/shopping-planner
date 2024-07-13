@@ -41,7 +41,9 @@ if (!empty($_POST)) {
         $etelek->add($etel->withAdag($adag));
     }
 
-    $shoppingList = $supermarket->toShoppingList($etelek);
+    $shoppingList        = $supermarket->toShoppingList($etelek);
+    $shoppingListByFood  = $supermarket->toShoppingListByFood($etelek);
+    $totalRowCountByFood = array_sum(array_map(fn(array $rowsOfFood) => count($rowsOfFood), $shoppingListByFood->getRows()));
 }
 
 ?>
@@ -78,6 +80,10 @@ if (!empty($_POST)) {
 
 		span.hozzavalo-done {
 			text-decoration: line-through;
+		}
+
+		.bg-light-orange {
+			--bs-table-bg: #fce5cd;
 		}
     </style>
 </head>
@@ -157,48 +163,71 @@ if (!empty($_POST)) {
             </div>
         </form>
     <?php else: ?>
-        <h3 class="text-success">Bevásárlóközpont:</h3>
-        <p><?= $supermarket::name() ?></p>
+        <div id="bevasarlokozpont">
+            <h3 class="text-success">Bevásárlóközpont:</h3>
+            <p><?= $supermarket::name() ?></p>
+        </div>
 
-        <h3 class="text-success">Ételek (<?= count($etelek->toArray()) ?> db):</h3>
-        <table class="table table-bordered">
-            <thead class="table-dark">
-                <tr>
-                    <th scope="col">Étel</th>
-                    <th scope="col">Recept</th>
-                    <th scope="col">Kommentek</th>
-                </tr>
-            </thead>
-            <tbody class="table-group-divider">
-                <?php foreach ($etelek->toArray() as $etel): ?>
+        <div id="etelek">
+            <h3 class="text-success">Ételek (<?= count($etelek->toArray()) ?> db):</h3>
+            <table class="table table-bordered">
+                <thead class="bg-light-orange">
                     <tr>
-                        <td><?= $etel ?></td>
-                        <td><a href="<?= $etel->receptUrl(); ?>" target="_blank"><?= $etel->receptUrl(); ?></a></td>
-                        <td>
-                            <?php foreach ($etel->comments() as $comment): ?>
-                                <li><?= $comment ?></li>
-                            <?php endforeach; ?>
-                        </td>
+                        <th scope="col">Étel</th>
+                        <th scope="col">Recept</th>
+                        <th scope="col">Kommentek</th>
                     </tr>
-                <?php endforeach; ?>
-            </tbody>
-        </table>
-
-        <h3 class="text-success">Hozzávalók (<?= count($shoppingList->getRows()) ?> sor):</h3>
-        <table class="table table-bordered">
-            <thead class="table-dark">
-                <tr>
-                    <?php foreach ($shoppingList->getHeader() as $header): ?>
-                        <th scope="col"><?= $header ?></th>
-                    <?php endforeach; ?>
-                </tr>
-            </thead>
-            <tbody class="table-group-divider">
-                <?php foreach ($shoppingList->getRows() as $rowId => $row): ?>
-                    <tr>
-                        <?php foreach ($row as $colId => $col): ?>
-                            <?php $cellId = $rowId . '-' . $colId; ?>
+                </thead>
+                <tbody class="table-group-divider">
+                    <?php foreach ($etelek->toArray() as $etel): ?>
+                        <tr>
+                            <td><?= $etel ?></td>
+                            <td><a href="<?= $etel->receptUrl(); ?>" target="_blank"><?= $etel->receptUrl(); ?></a></td>
                             <td>
+                                <?php foreach ($etel->comments() as $comment): ?>
+                                    <li><?= $comment ?></li>
+                                <?php endforeach; ?>
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="form-check form-switch">
+            <input
+                type="checkbox"
+                role="switch"
+                id="hozzavalok-view-switch"
+                class="form-check-input"
+                onchange="
+                    this.checked
+                    ? document.getElementById('hozzavalok').classList.add('visually-hidden')
+                    : document.getElementById('hozzavalok').classList.remove('visually-hidden');
+                    this.checked
+                    ? document.getElementById('hozzavalok-by-food').classList.remove('visually-hidden')
+                    : document.getElementById('hozzavalok-by-food').classList.add('visually-hidden');
+                "
+            >
+            <label for="hozzavalok-view-switch" class="form-check-label">Nézet: Hozzávalók összesítve / Hozzávalók ételek szerint</label>
+        </div>
+
+        <div id="hozzavalok">
+            <h3 class="text-success">Hozzávalók összesítve (<?= count($shoppingList->getRows()) ?> sor):</h3>
+            <table class="table table-bordered">
+                <thead class="bg-light-orange">
+                    <tr>
+                        <?php foreach ($shoppingList->getHeader() as $header): ?>
+                            <th scope="col"><?= $header ?></th>
+                        <?php endforeach; ?>
+                    </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                    <?php foreach ($shoppingList->getRows() as $rowId => $row): ?>
+                        <tr>
+                            <?php foreach ($row as $colId => $col): ?>
+                                <?php $cellId = $rowId . '-' . $colId; ?>
+                                <td>
                                 <span
                                     id="hozzavalo-cell-label-<?= $cellId ?>"
                                     class="form-check-label hozzavalo"
@@ -208,12 +237,51 @@ if (!empty($_POST)) {
                                 >
                                     <?= $col ?>
                                 </span>
-                            </td>
+                                </td>
+                            <?php endforeach; ?>
+                        </tr>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
+        </div>
+
+        <div id="hozzavalok-by-food" class="visually-hidden">
+            <h3 class="text-success">Hozzávalók ételek szerint (<?= $totalRowCountByFood ?> sor):</h3>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col"></th>
+                        <?php foreach ($shoppingListByFood->getHeader() as $header): ?>
+                            <th scope="col" class="bg-light-orange"><?= $header ?></th>
                         <?php endforeach; ?>
                     </tr>
-                <?php endforeach; ?>
-            </tbody>
-        </table>
+                </thead>
+                <tbody class="table-group-divider">
+                    <?php foreach ($shoppingListByFood->getRows() as $foodName => $rows): ?>
+                        <?php foreach ($rows as $rowId => $row): ?>
+                            <?php $isFirstRow = $rowId === 0; ?>
+                            <tr>
+                                <td class="<?= $isFirstRow ? 'bg-light-orange' : '' ?>"><?= $isFirstRow ? $foodName : '' ?></td>
+                                <?php foreach ($row as $colId => $col): ?>
+                                    <?php $cellId = $rowId . '-' . $colId; ?>
+                                    <td>
+                                        <span
+                                            id="hozzavalo-cell-label-<?= $cellId ?>"
+                                            class="form-check-label hozzavalo"
+                                            onclick="this.classList.contains('hozzavalo-done')
+                                                ? this.classList.remove('hozzavalo-done')
+                                                : this.classList.add('hozzavalo-done')"
+                                        >
+                                            <?= $col ?>
+                                        </span>
+                                    </td>
+                                <?php endforeach; ?>
+                            </tr>
+                        <?php endforeach; ?>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
+        </div>
 
         <div class="sticky-bottom">
             <div class="row justify-content-center">
