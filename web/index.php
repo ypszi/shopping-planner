@@ -74,11 +74,11 @@ if (!empty($_POST)) {
 			margin-bottom: 1rem;
 		}
 
-		span.hozzavalo {
+		span.ingredient {
 			cursor: pointer;
 		}
 
-		span.hozzavalo-done {
+		span.ingredient-done {
 			text-decoration: line-through;
 		}
 
@@ -87,7 +87,7 @@ if (!empty($_POST)) {
 		}
     </style>
 </head>
-<body>
+<body onload="ingredientsViewInit()">
 <div class="container-fluid">
     <?php if (empty($_POST)): ?>
         <form action="" method="post" class="row">
@@ -198,21 +198,14 @@ if (!empty($_POST)) {
             <input
                 type="checkbox"
                 role="switch"
-                id="hozzavalok-view-switch"
+                id="ingredients-view-switch"
                 class="form-check-input"
-                onchange="
-                    this.checked
-                    ? document.getElementById('hozzavalok').classList.add('visually-hidden')
-                    : document.getElementById('hozzavalok').classList.remove('visually-hidden');
-                    this.checked
-                    ? document.getElementById('hozzavalok-by-food').classList.remove('visually-hidden')
-                    : document.getElementById('hozzavalok-by-food').classList.add('visually-hidden');
-                "
+                onchange="ingredientsViewToggle(this)"
             >
-            <label for="hozzavalok-view-switch" class="form-check-label">Nézet: Hozzávalók összesítve / Hozzávalók ételek szerint</label>
+            <label for="ingredients-view-switch" class="form-check-label">Nézet: Hozzávalók összesítve / Hozzávalók ételek szerint</label>
         </div>
 
-        <div id="hozzavalok">
+        <div id="ingredients">
             <h3 class="text-success">Hozzávalók összesítve (<?= count($shoppingList->getRows()) ?> sor):</h3>
             <table class="table table-bordered">
                 <thead class="bg-light-orange">
@@ -229,11 +222,11 @@ if (!empty($_POST)) {
                                 <?php $cellId = $rowId . '-' . $colId; ?>
                                 <td>
                                 <span
-                                    id="hozzavalo-cell-label-<?= $cellId ?>"
-                                    class="form-check-label hozzavalo"
-                                    onclick="this.classList.contains('hozzavalo-done')
-                                        ? this.classList.remove('hozzavalo-done')
-                                        : this.classList.add('hozzavalo-done')"
+                                    id="ingredient-cell-label-<?= $cellId ?>"
+                                    class="form-check-label ingredient"
+                                    onclick="this.classList.contains('ingredient-done')
+                                        ? this.classList.remove('ingredient-done')
+                                        : this.classList.add('ingredient-done')"
                                 >
                                     <?= $col ?>
                                 </span>
@@ -245,7 +238,7 @@ if (!empty($_POST)) {
             </table>
         </div>
 
-        <div id="hozzavalok-by-food" class="visually-hidden">
+        <div id="ingredients-by-food" class="visually-hidden">
             <h3 class="text-success">Hozzávalók ételek szerint (<?= $totalRowCountByFood ?> sor):</h3>
             <table class="table table-bordered">
                 <thead>
@@ -266,11 +259,11 @@ if (!empty($_POST)) {
                                     <?php $cellId = $rowId . '-' . $colId; ?>
                                     <td>
                                         <span
-                                            id="hozzavalo-cell-label-<?= $cellId ?>"
-                                            class="form-check-label hozzavalo"
-                                            onclick="this.classList.contains('hozzavalo-done')
-                                                ? this.classList.remove('hozzavalo-done')
-                                                : this.classList.add('hozzavalo-done')"
+                                            id="ingredient-cell-label-<?= $cellId ?>"
+                                            class="form-check-label ingredient"
+                                            onclick="this.classList.contains('ingredient-done')
+                                                ? this.classList.remove('ingredient-done')
+                                                : this.classList.add('ingredient-done')"
                                         >
                                             <?= $col ?>
                                         </span>
@@ -291,5 +284,78 @@ if (!empty($_POST)) {
     <?php endif; ?>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script>
+    const ingredientsViewTypeSummary = 'summary';
+    const ingredientsViewTypeByFood = 'byFood';
+
+    function ingredientsViewInit() {
+        if (!document.getElementById('ingredients-view-switch')) {
+            return;
+        }
+
+        if (getCookie('ingredientsView') === ingredientsViewTypeByFood) {
+            document.getElementById('ingredients-view-switch').checked = true;
+            document.getElementById('ingredients').classList.add('visually-hidden');
+            document.getElementById('ingredients-by-food').classList.remove('visually-hidden');
+            document.cookie = createIngredientsViewCookieString(ingredientsViewTypeByFood);
+
+            return;
+        }
+
+        document.getElementById('ingredients-view-switch').checked = false;
+        document.getElementById('ingredients').classList.remove('visually-hidden');
+        document.getElementById('ingredients-by-food').classList.add('visually-hidden');
+        document.cookie = createIngredientsViewCookieString(ingredientsViewTypeSummary);
+
+        return;
+    }
+
+    function getCookie(cname) {
+        let name = cname + '=';
+        let decodedCookie = decodeURIComponent(document.cookie);
+        let ca = decodedCookie.split(';');
+
+        for (let i = 0; i < ca.length; i++) {
+            let c = ca[i];
+            while (c.charAt(0) === ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) === 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+
+        return '';
+    }
+
+    function ingredientsViewToggle(input) {
+        if (input.checked) {
+            document.getElementById('ingredients').classList.add('visually-hidden');
+            document.getElementById('ingredients-by-food').classList.remove('visually-hidden');
+            document.cookie = createIngredientsViewCookieString(ingredientsViewTypeByFood);
+
+            return;
+        }
+
+        document.getElementById('ingredients').classList.remove('visually-hidden');
+        document.getElementById('ingredients-by-food').classList.add('visually-hidden');
+        document.cookie = createIngredientsViewCookieString(ingredientsViewTypeSummary);
+
+        return;
+    }
+
+    function createIngredientsViewCookieString(viewType) {
+        return 'ingredientsView=' + viewType + ';expires=' + getCookieExpiration() + ';path=/'
+    }
+
+    function getCookieExpiration() {
+        const d = new Date();
+        const oneDayInMs = 24 * 60 * 60 * 1000;
+
+        d.setTime(d.getTime() + oneDayInMs);
+
+        return d.toUTCString();
+    }
+</script>
 </body>
 </html>
