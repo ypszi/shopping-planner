@@ -36,7 +36,7 @@ class TepsisCsirkeZoldseggel extends Etel
             new Brokkoli(1, Mertekegyseg::DB),
             new KaliforniaiPaprikaPiros(1, Mertekegyseg::DB),
             new Krumpli(5, Mertekegyseg::DB),
-            new Cukkini(5, Mertekegyseg::DB),
+            new Cukkini(1, Mertekegyseg::DB),
             new So(1, Mertekegyseg::TK),
             new Bors(2, Mertekegyseg::CSIPET),
             new PirosPaprika(1, Mertekegyseg::TK),

@@ -26,7 +26,7 @@ class FuszeresCsirkecsikok extends Etel
             new Csirkemell(2, Mertekegyseg::DB),
             new Fokhagyma(2, Mertekegyseg::GEREZD),
             new Mustar(1, Mertekegyseg::TK),
-            new Fuszerkomeny(1, Mertekegyseg::KK),
+            new Fuszerkomeny(1, Mertekegyseg::KVK),
             new So(1, Mertekegyseg::TK),
             new Bors(2, Mertekegyseg::CSIPET),
             new OlivaOlaj(2, Mertekegyseg::EK),
