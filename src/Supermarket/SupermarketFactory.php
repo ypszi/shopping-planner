@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Supermarket;
 
+use PeterPecosz\Kajatervezo\Supermarket\AuchanCsomor\AuchanCsomor;
+use PeterPecosz\Kajatervezo\Supermarket\AuchanCsomor\AuchanCsomorHozzavaloToKategoriaMap;
+use PeterPecosz\Kajatervezo\Supermarket\AuchanCsomor\AuchanCsomorKategoriaMap;
 use PeterPecosz\Kajatervezo\Supermarket\AuchanLuxembourg\AuchanLuxembourg;
 use PeterPecosz\Kajatervezo\Supermarket\AuchanLuxembourg\AuchanLuxembourgHozzavaloToKategoriaMap;
 use PeterPecosz\Kajatervezo\Supermarket\AuchanLuxembourg\AuchanLuxembourgKategoriaMap;
@@ -21,6 +24,10 @@ class SupermarketFactory
     public static function create(string $name): Supermarket
     {
         return match ($name) {
+            AuchanCsomor::name() => new AuchanCsomor(
+                new AuchanCsomorKategoriaMap(),
+                new AuchanCsomorHozzavaloToKategoriaMap()
+            ),
             KauflandTrier::name() => new KauflandTrier(
                 new KauflandTrierKategoriaMap(),
                 new KauflandTrierHozzavaloToKategoriaMap()
@@ -46,7 +53,7 @@ class SupermarketFactory
     {
         $supermarketNames = [
             KauflandTrier::name(),
-            AuchanLuxembourg::name(),
+            AuchanCsomor::name(),
             LidlWasserbillig::name(),
             MatchWasserbillig::name(),
         ];

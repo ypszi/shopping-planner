@@ -8,7 +8,7 @@ use PeterPecosz\Kajatervezo\Etel\Etel;
 use PeterPecosz\Kajatervezo\Etel\Etelek;
 use PeterPecosz\Kajatervezo\Etel\Factory\EtelFactory;
 use PeterPecosz\Kajatervezo\ShoppingList\ShoppingList;
-use PeterPecosz\Kajatervezo\Supermarket\KauflandTrier\KauflandTrier;
+use PeterPecosz\Kajatervezo\Supermarket\AuchanCsomor\AuchanCsomor;
 use PeterPecosz\Kajatervezo\Supermarket\Supermarket;
 use PeterPecosz\Kajatervezo\Supermarket\SupermarketFactory;
 use Symfony\Component\Console\Command\Command;
@@ -111,7 +111,7 @@ class PlanShoppingCommand extends Command
                 ?: $this->io->choice(
                 question: 'Hova mész bevásárolni?',
                 choices: $this->availableSupermarkets,
-                default: KauflandTrier::name()
+                default: AuchanCsomor::name()
             )
         );
     }

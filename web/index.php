@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 use PeterPecosz\Kajatervezo\Etel\Etelek;
 use PeterPecosz\Kajatervezo\Etel\Factory\EtelFactory;
-use PeterPecosz\Kajatervezo\Supermarket\KauflandTrier\KauflandTrier;
+use PeterPecosz\Kajatervezo\Supermarket\AuchanCsomor\AuchanCsomor;
 use PeterPecosz\Kajatervezo\Supermarket\SupermarketFactory;
 
 include_once __DIR__ . '/../vendor/autoload.php';
@@ -105,7 +105,7 @@ if (!empty($_POST)) {
                                 value="<?= $availableSupermarket ?>"
                                 name="supermarket"
                                 class="form-check-input"
-                                <?php if ($availableSupermarket === KauflandTrier::name()): ?>checked=checked<?php endif; ?>
+                                <?php if ($availableSupermarket === AuchanCsomor::name()): ?>checked=checked<?php endif; ?>
                             >
                             <label for="<?= $availableSupermarketKey ?>" class="form-check-label">
                                 <?= $availableSupermarket ?>
