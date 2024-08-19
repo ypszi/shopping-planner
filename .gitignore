@@ -1,2 +1,5 @@
 vendor/
 .phpunit.cache/
+
+!var/cache/.gitignore
+var/cache/*
