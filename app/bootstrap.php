@@ -21,7 +21,7 @@ if ($cacheEnabled) {
     ]);
 }
 
-$plannedShopping = $_POST;
+$plannedShopping = $_GET;
 if (!empty($plannedShopping['supermarket'])) {
     $supermarket = SupermarketFactory::create($plannedShopping['supermarket']);
 
