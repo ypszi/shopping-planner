@@ -41,8 +41,8 @@ if (!empty($plannedShopping['supermarket'])) {
         $etelek->add($etel->withAdag($adag));
     }
 
-    $shoppingList        = $supermarket->toShoppingList($etelek);
-    $shoppingListByFood  = $supermarket->toShoppingListByFood($etelek);
+    $shoppingList        = $supermarket->toShoppingList($etelek)->filterEmptyColumns();
+    $shoppingListByFood  = $supermarket->toShoppingListByFood($etelek)->filterEmptyColumns();
     $totalRowCountByFood = array_sum(array_map(fn(array $rowsOfFood) => count($rowsOfFood), $shoppingListByFood->getRows()));
 
     echo $twig->render('planned-shopping.html.twig', [

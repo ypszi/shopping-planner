@@ -37,4 +37,85 @@ class ShoppingListByFood
     {
         return $this->rows;
     }
+
+    public function filterEmptyColumns(): self
+    {
+        $header = $this->filterHeader();
+        $rows   = $this->filterRows();
+
+        return new ShoppingListByFood($header, $rows);
+    }
+
+    /**
+     * @return string[]
+     */
+    private function filterHeader(): array
+    {
+        $emptyColumnIndexesForShoppingListByFood = $this->collectEmptyColumnIndexes();
+        $newHeader                               = [];
+        $onlyEmptyColumnIndexes                  = [];
+
+        foreach ($emptyColumnIndexesForShoppingListByFood as $emptyColumnIndexes) {
+            $tmpEmptyColumnIndexes = $onlyEmptyColumnIndexes;
+
+            foreach ($emptyColumnIndexes as $colIdx => $isEmpty) {
+                $onlyEmptyColumnIndexes[$colIdx] = $isEmpty && ($tmpEmptyColumnIndexes[$colIdx] ?? true);
+            }
+        }
+
+        foreach ($this->header as $colIdx => $colValue) {
+            if (!$onlyEmptyColumnIndexes[$colIdx]) {
+                $newHeader[] = $colValue;
+            }
+        }
+
+        return $newHeader;
+    }
+
+    /**
+     * @return string[][][]
+     */
+    private function filterRows(): array
+    {
+        $emptyColumnIndexesForShoppingListByFood = $this->collectEmptyColumnIndexes();
+        $newRows                                 = [];
+        $onlyEmptyColumnIndexes                  = [];
+
+        foreach ($emptyColumnIndexesForShoppingListByFood as $emptyColumnIndexes) {
+            $tmpEmptyColumnIndexes = $onlyEmptyColumnIndexes;
+
+            foreach ($emptyColumnIndexes as $colIdx => $isEmpty) {
+                $onlyEmptyColumnIndexes[$colIdx] = $isEmpty && ($tmpEmptyColumnIndexes[$colIdx] ?? true);
+            }
+        }
+
+        foreach ($this->rows as $foodName => $rows) {
+            foreach ($rows as $rowIdx => $row) {
+                foreach ($row as $colIdx => $cell) {
+                    if (!$onlyEmptyColumnIndexes[$colIdx]) {
+                        $newRows[$foodName][$rowIdx][] = $cell;
+                    }
+                }
+            }
+        }
+
+        return $newRows;
+    }
+
+    /**
+     * @return array<string, array<int, bool>>
+     */
+    private function collectEmptyColumnIndexes(): array
+    {
+        $emptyColumnIndexesForShoppingListByFood = [];
+
+        foreach ($this->rows as $foodName => $rows) {
+            $firstRow = $rows[0] ?? [];
+            foreach ($firstRow as $colIdx => $cell) {
+                $emptyColumnIndexesForShoppingListByFood[$foodName][$colIdx] = empty($cell);
+            }
+        }
+
+        return $emptyColumnIndexesForShoppingListByFood;
+    }
 }
