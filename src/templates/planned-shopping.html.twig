@@ -8,7 +8,7 @@
         <p>{{ supermarket.name }}</p>
     </div>
 
-    <div id="etelek">
+    <div id="etelek" class="table-responsive">
         <h3 class="text-success">Ételek ({{ etelek.toArray|length }} db):</h3>
         <table class="table table-bordered">
             <thead class="bg-light-orange">
@@ -45,9 +45,9 @@
         <label for="ingredients-view-switch" class="form-check-label">Nézet: Hozzávalók összesítve / Hozzávalók ételek szerint</label>
     </div>
 
-    <div id="ingredients">
+    <div id="ingredients" class="table-responsive">
         <h3 class="text-success">Hozzávalók összesítve ({{ shoppingList.getRows|length }} sor):</h3>
-        <table class="table table-bordered">
+        <table class="table table-bordered table-responsive">
             <thead class="bg-light-orange">
                 <tr>
                     {% for header in shoppingList.getHeader %}
@@ -78,9 +78,9 @@
         </table>
     </div>
 
-    <div id="ingredients-by-food" class="visually-hidden">
+    <div id="ingredients-by-food" class="table-responsive visually-hidden">
         <h3 class="text-success">Hozzávalók ételek szerint ({{ totalRowCountByFood }} sor):</h3>
-        <table class="table table-bordered">
+        <table class="table table-bordered table-responsive">
             <thead>
                 <tr>
                     <th scope="col"></th>
