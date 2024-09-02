@@ -46,4 +46,9 @@ class Csirkemellpaprikas extends Etel
     {
         return 'https://www.mindmegette.hu/csirkemellpaprikas.recept/';
     }
+
+    public function thumbnailUrl(): string
+    {
+        return 'https://www.mindmegette.hu/images/394/Social/lead_Social_csirkemellpaprikas.jpg';
+    }
 }

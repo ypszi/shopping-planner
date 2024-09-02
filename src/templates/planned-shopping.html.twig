@@ -13,6 +13,7 @@
         <table class="table table-bordered">
             <thead class="bg-light-orange">
                 <tr>
+                    <th scope="col">Kép</th>
                     <th scope="col">Étel</th>
                     <th scope="col">Recept</th>
                     <th scope="col">Kommentek</th>
@@ -21,6 +22,13 @@
             <tbody class="table-group-divider">
                 {% for etel in etelek.toArray %}
                     <tr>
+                        <td>
+                            <div class="food-thumbnail col-sm-12 col-md-8 col-lg-6 col-xl-4">
+                                {% if etel.thumbnailUrl %}
+                                <img src="{{ etel.thumbnailUrl }}" alt="{{ etel }}" class="img-fluid img-thumbnail">
+                                {% endif %}
+                            </div>
+                        </td>
                         <td>{{ etel }}</td>
                         <td><a href="{{ etel.receptUrl }}" target="_blank">{{ etel.receptUrl }}</a></td>
                         <td>
@@ -94,7 +102,9 @@
                     {% for rowId, row in rows %}
                         {% set isFirstRow = rowId == 0 %}
                         <tr>
-                            <td class="{% if isFirstRow %}bg-light-orange{% endif %}">{% if isFirstRow %}{{ foodName }}{% endif %}</td>
+                            <td class="{% if isFirstRow %}bg-light-orange{% endif %}">
+                                {% if isFirstRow %}{{ foodName }}{% endif %}
+                            </td>
                             {% for colId, col in row %}
                                 {% set cellId = rowId ~ '-' ~ colId %}
                                 <td>

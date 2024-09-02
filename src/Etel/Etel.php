@@ -35,6 +35,11 @@ abstract class Etel
         return $this->decorateNoSaltyReceptUrl($rawReceptUrl);
     }
 
+    public function thumbnailUrl(): string
+    {
+        return '';
+    }
+
     /**
      * @return Hozzavalo[]
      */

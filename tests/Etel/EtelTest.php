@@ -38,6 +38,11 @@ class EtelTest extends TestCase
             {
                 return 'https://online-recept-konyv.hu/test-food';
             }
+
+            public function thumbnailUrl(): string
+            {
+                return 'https://www.nosalty.hu/thumnails/img_5512.jpg';
+            }
         };
     }
 
@@ -164,6 +169,12 @@ class EtelTest extends TestCase
             ],
             $this->testFood->hozzavalok()
         );
+    }
+
+    #[Test]
+    public function testThumbnailUrl(): void
+    {
+        $this->assertEquals('https://www.nosalty.hu/thumnails/img_5512.jpg', $this->testFood->thumbnailUrl());
     }
 
     #[Test]
