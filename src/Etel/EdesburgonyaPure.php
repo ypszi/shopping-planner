@@ -40,4 +40,9 @@ class EdesburgonyaPure extends Etel
     {
         return 'https://www.mindmegette.hu/edesburgonya-pure.recept/';
     }
+
+    public function thumbnailUrl(): string
+    {
+        return 'https://www.mindmegette.hu/images/398/Social/lead_Social_edesburgonya-pure-recept.jpeg';
+    }
 }
