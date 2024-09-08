@@ -5,8 +5,12 @@ declare(strict_types=1);
 namespace PeterPecosz\Kajatervezo\Etel;
 
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Bors;
+use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\FuszerPaprika;
+use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Majoranna;
+use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Petrezselyem;
 use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\So;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hus\DaraltHus;
+use PeterPecosz\Kajatervezo\Hozzavalo\Olaj\OlivaOlaj;
 use PeterPecosz\Kajatervezo\Hozzavalo\TartosElelmiszer\Zsemlemorzsa;
 use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\Tojas;
 use PeterPecosz\Kajatervezo\Hozzavalo\Zoldseg\Fokhagyma;
@@ -23,15 +27,17 @@ class Fasirt extends Etel
     protected function listHozzavalok(): array
     {
         return [
-            new DaraltHus(1, Mertekegyseg::KG),
-            new Tojas(2, Mertekegyseg::DB),
+            new OlivaOlaj(2, Mertekegyseg::EK),
             new Voroshagyma(1, Mertekegyseg::DB),
-            // 1 fej fokhagyma recept szerint
-            new Fokhagyma(3, Mertekegyseg::GEREZD),
+            new Fokhagyma(2, Mertekegyseg::GEREZD),
+            new DaraltHus(500, Mertekegyseg::G),
+            new Tojas(2, Mertekegyseg::DB),
             new So(1, Mertekegyseg::TK),
             new Bors(1, Mertekegyseg::MK),
-            // annyi zsemlemorzsát adunk hozzá, hogy golyókat tudjunk belőle formálni
-            new Zsemlemorzsa(50, Mertekegyseg::G),
+            new Majoranna(1, Mertekegyseg::TK),
+            new FuszerPaprika(1, Mertekegyseg::TK),
+            new Petrezselyem(1, Mertekegyseg::EK),
+            new Zsemlemorzsa(100, Mertekegyseg::G),
         ];
     }
 
@@ -42,6 +48,11 @@ class Fasirt extends Etel
 
     public function rawReceptUrl(): string
     {
-        return 'https://www.mindmegette.hu/fasirt-sutoben-sutve.recept/';
+        return 'https://www.nosalty.hu/recept/harapnivalo-fasirt';
+    }
+
+    public function thumbnailUrl(): string
+    {
+        return 'https://image-api.nosalty.hu/nosalty/images/recipes/rD/RF/harapnivalo-fasirt.jpeg?w=540&fit=crop&fm=webp&crop=1799%2C1028%2C59%2C31&h=270&s=2e8f1db44c5d4815f6ffa03729601e67';
     }
 }
