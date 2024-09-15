@@ -17,6 +17,7 @@ class Mertekegyseg
     final public const DKG = 'dkg';
     final public const KG = 'kg';
     /* űrtartalom */
+    final public const CSEPP = 'csepp';
     final public const ML = 'ml';
     final public const CL = 'cl';
     final public const DL = 'dl';

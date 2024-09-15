@@ -79,6 +79,7 @@ use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Urtartalom\BogreToMilliliter;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Urtartalom\CentiliterToDeciliter;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Urtartalom\CentiliterToLiter;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Urtartalom\CentiliterToMilliliter;
+use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Urtartalom\CseppToMilliliter;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Urtartalom\CseszeToMilliliter;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Urtartalom\DeciliterToCentiliter;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Urtartalom\DeciliterToLiter;
@@ -87,6 +88,7 @@ use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Urtartalom\LiterToCentiliter;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Urtartalom\LiterToDeciliter;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Urtartalom\LiterToMilliliter;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Urtartalom\MilliliterToCentiliter;
+use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Urtartalom\MilliliterToCsepp;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Urtartalom\MilliliterToDeciliter;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Urtartalom\MilliliterToLiter;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Vorosbab\KonzervToGram as VorosbabKonzervToGram;
@@ -107,6 +109,7 @@ class MertekegysegValtoCollection
             new CentiliterToDeciliter(),
             new CentiliterToLiter(),
             new CentiliterToMilliliter(),
+            new CseppToMilliliter(),
             new CseszeToMilliliter(),
             new DeciliterToLiter(),
             new DeciliterToCentiliter(),
@@ -114,6 +117,7 @@ class MertekegysegValtoCollection
             new LiterToCentiliter(),
             new LiterToDeciliter(),
             new LiterToMilliliter(),
+            new MilliliterToCsepp(),
             new MilliliterToCentiliter(),
             new MilliliterToDeciliter(),
             new MilliliterToLiter(),

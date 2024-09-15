@@ -266,6 +266,16 @@ class MertekegysegAtvaltoTest extends TestCase
                 new NapraforgoOlaj(0, Mertekegyseg::TK),
                 0.2,
             ],
+            'ml to csepp'                => [
+                new NapraforgoOlaj(1, Mertekegyseg::ML),
+                new NapraforgoOlaj(20, Mertekegyseg::CSEPP),
+                20.0,
+            ],
+            'csepp to ml'                => [
+                new NapraforgoOlaj(1, Mertekegyseg::CSEPP),
+                new NapraforgoOlaj(0, Mertekegyseg::ML),
+                0.05,
+            ],
             'mk to ek'                => [
                 new NapraforgoOlaj(1, Mertekegyseg::MK),
                 new NapraforgoOlaj(0, Mertekegyseg::EK),
