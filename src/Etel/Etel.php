@@ -6,25 +6,54 @@ namespace PeterPecosz\Kajatervezo\Etel;
 
 use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
 
-abstract class Etel
+class Etel
 {
+    private ?string $name;
+
+    private int $adag;
+
+    private int $defaultPortion;
+
+    private ?string $receptUrl;
+
+    private ?string $thumbnailUrl;
+
     /** @var Hozzavalo[] */
-    private array $hozzavalok;
+    private array $ingredients;
 
-    protected int $adag;
+    /** @var string[]|null */
+    private ?array $comments;
 
-    public function __construct(?int $adag = null)
-    {
-        $this->adag = $adag ?? static::defaultAdag();
+    public function __construct(
+        string $name,
+        int $defaultPortion,
+        ?int $adag = null,
+        ?string $receptUrl = null,
+        ?string $thumbnailUrl = null,
+        ?array $comments = [],
+        ?array $ingredients = null
+    ) {
+        $this->name           = $name;
+        $this->adag           = $adag ?? $defaultPortion;
+        $this->defaultPortion = $defaultPortion;
+        $this->receptUrl      = $receptUrl;
+        $this->thumbnailUrl   = $thumbnailUrl;
+        $this->comments       = $comments;
 
-        $this->addHozzavalok();
+        $this->addHozzavalok($ingredients);
     }
 
-    abstract public static function name(): string;
+    public function name(): string
+    {
+        return $this->name;
+    }
 
-    abstract public static function defaultAdag(): int;
+    public function defaultPortion(): int
+    {
+        return $this->defaultPortion;
+    }
 
-    public function receptUrl(): string
+    public function receptUrl(): ?string
     {
         $rawReceptUrl = $this->rawReceptUrl();
 
@@ -35,24 +64,30 @@ abstract class Etel
         return $this->decorateNoSaltyReceptUrl($rawReceptUrl);
     }
 
-    public function thumbnailUrl(): string
+    public function thumbnailUrl(): ?string
     {
-        return '';
+        return $this->thumbnailUrl;
     }
 
     /**
      * @return Hozzavalo[]
      */
-    abstract protected function listHozzavalok(): array;
+    protected function listHozzavalok(): array
+    {
+        return $this->ingredients;
+    }
 
-    abstract protected function rawReceptUrl(): string;
+    protected function rawReceptUrl(): ?string
+    {
+        return $this->receptUrl;
+    }
 
     public function withAdag(int $adag): self
     {
         $clone       = clone $this;
         $clone->adag = $adag;
 
-        $clone->addHozzavalok();
+        $clone->addHozzavalok($clone->hozzavalok());
 
         return $clone;
     }
@@ -62,12 +97,12 @@ abstract class Etel
      */
     public function hozzavalok(): array
     {
-        return $this->hozzavalok;
+        return $this->ingredients;
     }
 
     public function comments(): array
     {
-        return [];
+        return $this->comments;
     }
 
     protected function decorateNoSaltyReceptUrl(string $receptUrl): string
@@ -86,16 +121,16 @@ abstract class Etel
 
     public function __toString(): string
     {
-        return sprintf('%s (%d adag)', static::name(), $this->adag);
+        return sprintf('%s (%d adag)', $this->name(), $this->adag);
     }
 
-    private function addHozzavalok(): void
+    private function addHozzavalok(array $hozzavalok): void
     {
-        $this->hozzavalok = [];
+        $this->ingredients = [];
 
-        foreach ($this->listHozzavalok() as $hozzavalo) {
-            $adagMennyiseg      = $hozzavalo->getMennyiseg() / static::defaultAdag() * $this->adag;
-            $this->hozzavalok[] = $hozzavalo->withMennyiseg($adagMennyiseg);
+        foreach ($hozzavalok as $hozzavalo) {
+            $adagMennyiseg       = $hozzavalo->getMennyiseg() / static::defaultPortion() * $this->adag;
+            $this->ingredients[] = $hozzavalo->withMennyiseg($adagMennyiseg);
         }
     }
 

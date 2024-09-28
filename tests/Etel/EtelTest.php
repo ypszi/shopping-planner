@@ -5,7 +5,8 @@ declare(strict_types=1);
 namespace PeterPecosz\Kajatervezo\Tests\Etel;
 
 use PeterPecosz\Kajatervezo\Etel\Etel;
-use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\Tojas;
+use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
+use PeterPecosz\Kajatervezo\Hozzavalo\HozzavaloKategoria;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
@@ -16,40 +17,28 @@ class EtelTest extends TestCase
 
     protected function setUp(): void
     {
-        $this->testFood = new class() extends Etel {
-            public static function name(): string
-            {
-                return 'test food';
-            }
-
-            protected function listHozzavalok(): array
-            {
-                return [
-                    new Tojas(1, Mertekegyseg::DB),
-                ];
-            }
-
-            public static function defaultAdag(): int
-            {
-                return 1;
-            }
-
-            public function rawReceptUrl(): string
-            {
-                return 'https://online-recept-konyv.hu/test-food';
-            }
-
-            public function thumbnailUrl(): string
-            {
-                return 'https://www.nosalty.hu/thumnails/img_5512.jpg';
-            }
-        };
+        $this->testFood = new Etel(
+            name:           'test food',
+            defaultPortion: 1,
+            adag:           null,
+            receptUrl:      'https://online-recept-konyv.hu/test-food',
+            thumbnailUrl:   'https://www.nosalty.hu/thumnails/img_5512.jpg',
+            comments:       null,
+            ingredients:    [
+                                new Hozzavalo(
+                                    name:         'Tojás',
+                                    mennyiseg:    1,
+                                    mertekegyseg: Mertekegyseg::DB,
+                                    kategoria:    HozzavaloKategoria::TEJTERMEK,
+                                ),
+                            ]
+        );
     }
 
     #[Test]
     public function testName(): void
     {
-        $this->assertEquals('test food', $this->testFood::name());
+        $this->assertEquals('test food', $this->testFood->name());
     }
 
     #[Test]
@@ -61,29 +50,22 @@ class EtelTest extends TestCase
     #[Test]
     public function testReceptUrlHasNosalty(): void
     {
-        $sut = new class() extends Etel {
-            public static function name(): string
-            {
-                return 'test food';
-            }
-
-            protected function listHozzavalok(): array
-            {
-                return [
-                    new Tojas(1, Mertekegyseg::DB),
-                ];
-            }
-
-            public static function defaultAdag(): int
-            {
-                return 1;
-            }
-
-            public function rawReceptUrl(): string
-            {
-                return 'https://www.nosalty.hu/recept/test-food';
-            }
-        };
+        $sut = new Etel(
+            name:           'test food',
+            defaultPortion: 1,
+            adag:           null,
+            receptUrl:      'https://www.nosalty.hu/recept/test-food',
+            thumbnailUrl:   'https://www.nosalty.hu/thumnails/img_5512.jpg',
+            comments:       null,
+            ingredients:    [
+                                new Hozzavalo(
+                                    name:         'Tojás',
+                                    mennyiseg:    1,
+                                    mertekegyseg: Mertekegyseg::DB,
+                                    kategoria:    HozzavaloKategoria::TEJTERMEK,
+                                ),
+                            ]
+        );
 
         $this->assertEquals('https://www.nosalty.hu/recept/test-food?adag=1', $sut->receptUrl());
     }
@@ -91,29 +73,22 @@ class EtelTest extends TestCase
     #[Test]
     public function testReceptUrlHasNosaltyHavingQueryParam(): void
     {
-        $sut = new class() extends Etel {
-            public static function name(): string
-            {
-                return 'test food';
-            }
-
-            protected function listHozzavalok(): array
-            {
-                return [
-                    new Tojas(1, Mertekegyseg::DB),
-                ];
-            }
-
-            public static function defaultAdag(): int
-            {
-                return 1;
-            }
-
-            public function rawReceptUrl(): string
-            {
-                return 'https://www.nosalty.hu/recept/test-food?query=test';
-            }
-        };
+        $sut = new Etel(
+            name:           'test food',
+            defaultPortion: 1,
+            adag:           null,
+            receptUrl:      'https://www.nosalty.hu/recept/test-food?query=test',
+            thumbnailUrl:   'https://www.nosalty.hu/thumnails/img_5512.jpg',
+            comments:       null,
+            ingredients:    [
+                                new Hozzavalo(
+                                    name:         'Tojás',
+                                    mennyiseg:    1,
+                                    mertekegyseg: Mertekegyseg::DB,
+                                    kategoria:    HozzavaloKategoria::TEJTERMEK,
+                                ),
+                            ]
+        );
 
         $this->assertEquals('https://www.nosalty.hu/recept/test-food?query=test&adag=1', $sut->receptUrl());
     }
@@ -121,43 +96,54 @@ class EtelTest extends TestCase
     #[Test]
     public function testReceptUrlHasNosaltyHavingAdagQueryParam(): void
     {
-        $sut = new class() extends Etel {
-            public static function name(): string
-            {
-                return 'test food';
-            }
-
-            protected function listHozzavalok(): array
-            {
-                return [
-                    new Tojas(1, Mertekegyseg::DB),
-                ];
-            }
-
-            public static function defaultAdag(): int
-            {
-                return 1;
-            }
-
-            public function rawReceptUrl(): string
-            {
-                return 'https://www.nosalty.hu/recept/test-food?adag=1';
-            }
-        };
+        $sut = new Etel(
+            name:           'test food',
+            defaultPortion: 1,
+            adag:           null,
+            receptUrl:      'https://www.nosalty.hu/recept/test-food?adag=1',
+            thumbnailUrl:   'https://www.nosalty.hu/thumnails/img_5512.jpg',
+            comments:       null,
+            ingredients:    [
+                                new Hozzavalo(
+                                    name:         'Tojás',
+                                    mennyiseg:    1,
+                                    mertekegyseg: Mertekegyseg::DB,
+                                    kategoria:    HozzavaloKategoria::TEJTERMEK,
+                                ),
+                            ]
+        );
 
         $this->assertEquals('https://www.nosalty.hu/recept/test-food?adag=1', $sut->receptUrl());
     }
 
     #[Test]
-    public function testDefaultAdag(): void
+    public function testDefaultPortion(): void
     {
-        $this->assertEquals(1, $this->testFood::defaultAdag());
+        $this->assertEquals(1, $this->testFood->defaultPortion());
     }
 
     #[Test]
     public function testWithAdag(): void
     {
-        $this->assertEquals(new $this->testFood(4), $this->testFood->withAdag(4));
+        $this->assertEquals(
+            new Etel(
+                name:           'test food',
+                defaultPortion: 1,
+                adag:           4,
+                receptUrl:      'https://online-recept-konyv.hu/test-food',
+                thumbnailUrl:   'https://www.nosalty.hu/thumnails/img_5512.jpg',
+                comments:       null,
+                ingredients:    [
+                                    new Hozzavalo(
+                                        name:         'Tojás',
+                                        mennyiseg:    1,
+                                        mertekegyseg: Mertekegyseg::DB,
+                                        kategoria:    HozzavaloKategoria::TEJTERMEK,
+                                    ),
+                                ]
+            ),
+            $this->testFood->withAdag(4)
+        );
     }
 
     #[Test]
@@ -165,7 +151,12 @@ class EtelTest extends TestCase
     {
         $this->assertEquals(
             [
-                new Tojas(1, Mertekegyseg::DB),
+                new Hozzavalo(
+                    name:         'Tojás',
+                    mennyiseg:    1,
+                    mertekegyseg: Mertekegyseg::DB,
+                    kategoria:    HozzavaloKategoria::TEJTERMEK,
+                ),
             ],
             $this->testFood->hozzavalok()
         );

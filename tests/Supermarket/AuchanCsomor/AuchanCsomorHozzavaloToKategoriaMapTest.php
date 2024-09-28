@@ -5,9 +5,8 @@ declare(strict_types=1);
 namespace PeterPecosz\Kajatervezo\Tests\Supermarket\AuchanCsomor;
 
 use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
-use PeterPecosz\Kajatervezo\Hozzavalo\Hus\Csirkemell;
+use PeterPecosz\Kajatervezo\Hozzavalo\HozzavaloKategoria;
 use PeterPecosz\Kajatervezo\Hozzavalo\Kategoria;
-use PeterPecosz\Kajatervezo\Hozzavalo\TartosElelmiszer\Eleszto;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 use PeterPecosz\Kajatervezo\Supermarket\AuchanCsomor\AuchanCsomorHozzavaloToKategoriaMap;
 use PeterPecosz\Kajatervezo\Supermarket\AuchanCsomor\AuchanCsomorKategoria;
@@ -30,12 +29,22 @@ class AuchanCsomorHozzavaloToKategoriaMapTest extends TestCase
     {
         return [
             [
-                new Eleszto(1, Mertekegyseg::G),
+                new Hozzavalo(
+                    name:         'Élesztő',
+                    mennyiseg:    1,
+                    mertekegyseg: Mertekegyseg::G,
+                    kategoria:    HozzavaloKategoria::TARTOS_ELELMISZER,
+                ),
                 AuchanCsomorKategoria::TEJTERMEK,
             ],
             [
-                new Csirkemell(1, Mertekegyseg::KG),
-                (new Csirkemell(1, Mertekegyseg::KG))->kategoria(),
+                new Hozzavalo(
+                    name:         'Csirkemell',
+                    mennyiseg:    1,
+                    mertekegyseg: Mertekegyseg::KG,
+                    kategoria:    HozzavaloKategoria::HUS,
+                ),
+                HozzavaloKategoria::HUS,
             ],
         ];
     }

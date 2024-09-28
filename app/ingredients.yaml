@@ -1,0 +1,343 @@
+# Ázsiai
+Hal szósz:
+  kategoria: Ázsiai
+Rizs tészta:
+  kategoria: Ázsiai
+  mertekegysegPreference: g
+Szójaszósz:
+  kategoria: Ázsiai
+Tamarind szósz:
+  kategoria: Ázsiai
+
+# Bor
+Fehérbor:
+  kategoria: Bor
+Fehérbor (száraz):
+  kategoria: Bor
+Vörösbor:
+  kategoria: Bor
+Vörösbor (száraz):
+  kategoria: Bor
+
+# Cukrász
+Cukor:
+  kategoria: Cukrász
+  mertekegysegPreference: kg
+Kakaópor:
+  kategoria: Cukrász
+Porcukor:
+  kategoria: Cukrász
+Vaníliás cukor:
+  kategoria: Cukrász
+
+# Ecet
+Almaborecet:
+  kategoria: Ecet
+Balzsamecet (fehér):
+  kategoria: Ecet
+Ecet:
+  kategoria: Ecet
+Fehérborecet:
+  kategoria: Ecet
+Rizsecet:
+  kategoria: Ecet
+
+# Felvágott
+Felvágott:
+  kategoria: Felvágott
+Bacon (kockázott):
+  kategoria: Felvágott
+Bacon (szeletelt):
+  kategoria: Felvágott
+Kolbász:
+  kategoria: Felvágott
+Virsli:
+  kategoria: Felvágott
+
+# Fűszer
+Babérlevél:
+  kategoria: Fűszer
+Bazsalikom:
+  kategoria: Fűszer
+Bors:
+  kategoria: Fűszer
+Cayenne bors:
+  kategoria: Fűszer
+Chili:
+  kategoria: Fűszer
+Citrombors:
+  kategoria: Fűszer
+Erőleves kocka:
+  kategoria: Fűszer
+Fűszerkeverék:
+  kategoria: Fűszer
+Fűszerkömény:
+  kategoria: Fűszer
+Fűszer paprika: Piros paprika
+Gulyás krém:
+  kategoria: Fűszer
+Gyömbér por:
+  kategoria: Fűszer
+Húsleves kocka:
+  kategoria: Fűszer
+Kakukkfű:
+  kategoria: Fűszer
+Ketchup:
+  kategoria: Fűszer
+Köménymag:
+  kategoria: Fűszer
+Majonéz:
+  kategoria: Fűszer
+Majoranna:
+  kategoria: Fűszer
+Mogyoró:
+  kategoria: Fűszer
+Mustár:
+  kategoria: Fűszer
+Oregánó:
+  kategoria: Fűszer
+Petrezselyem:
+  kategoria: Fűszer
+Piros paprika:
+  kategoria: Fűszer
+Rozmaring:
+  kategoria: Fűszer
+Só:
+  kategoria: Fűszer
+Szódabikarbóna:
+  kategoria: Fűszer
+Szerecsendió:
+  kategoria: Fűszer
+Tárkony:
+  kategoria: Fűszer
+Zöldfűszer:
+  kategoria: Fűszer
+
+# Hal
+Lazac:
+  kategoria: Hal
+Lazac (füstölt):
+  kategoria: Hal
+
+# Hús
+Csirkemell:
+  kategoria: Hús
+Csirkeszárny:
+  kategoria: Hús
+Darált hús:
+  kategoria: Hús
+Kolozsvári szalonna:
+  kategoria: Hús
+Sertéscomb:
+  kategoria: Hús
+Sertészsír:
+  kategoria: Hús
+  mertekegysegPreference: g
+
+# Mirelit
+Spárga (mirelit):
+  kategoria: Mirelit
+Zöldbab (mirelit):
+  kategoria: Mirelit
+Zöldborsó (mirelit):
+  kategoria: Mirelit
+
+# Olaj
+Étolaj: Napraforgó olaj
+Mogyoró olaj:
+  kategoria: Olaj
+Napraforgó olaj:
+  kategoria: Olaj
+Olíva olaj:
+  kategoria: Olaj
+Szezám olaj:
+  kategoria: Olaj
+
+# Pékárú
+Kenyér:
+  kategoria: Pékárú
+
+# Sajt
+Feta sajt:
+  kategoria: Sajt
+Gouda sajt:
+  kategoria: Sajt
+Mozzarella sajt:
+  kategoria: Sajt
+Mozzarella sajt (reszelt):
+  kategoria: Sajt
+Parmezán sajt:
+  kategoria: Sajt
+Trappista sajt:
+  kategoria: Sajt
+Trappista sajt (füstölt):
+  kategoria: Sajt
+
+# Tartós élelmiszer
+Baracklekvár:
+  kategoria: Tartós élelmiszer
+Bulgur:
+  kategoria: Tartós élelmiszer
+Búzadara:
+  kategoria: Tartós élelmiszer
+Csusza tészta:
+  kategoria: Tartós élelmiszer
+Élesztő:
+  kategoria: Tartós élelmiszer
+Fehérbab (konzerv):
+  kategoria: Tartós élelmiszer
+Finomliszt:
+  kategoria: Tartós élelmiszer
+  mertekegysegPreference: kg
+Fusilli tészta:
+  kategoria: Tartós élelmiszer
+Keményítő:
+  kategoria: Tartós élelmiszer
+Konzerv:
+  kategoria: Tartós élelmiszer
+Kukorica (konzerv):
+  kategoria: Tartós élelmiszer
+Liszt:
+  kategoria: Tartós élelmiszer
+Makaróni tészta:
+  kategoria: Tartós élelmiszer
+Méz:
+  kategoria: Tartós élelmiszer
+Olivabogyó (konzerv):
+  kategoria: Tartós élelmiszer
+Paradicsom (konzerv):
+  kategoria: Tartós élelmiszer
+Paradicsom püré:
+  kategoria: Tartós élelmiszer
+Penne tészta:
+  kategoria: Tartós élelmiszer
+Rizottó rizs:
+  kategoria: Tartós élelmiszer
+Rizs:
+  kategoria: Tartós élelmiszer
+Spagetti tészta:
+  kategoria: Tartós élelmiszer
+Sütőpor:
+  kategoria: Tartós élelmiszer
+Szezámmag:
+  kategoria: Tartós élelmiszer
+Tagliatelle tészta:
+  kategoria: Tartós élelmiszer
+Tonhal (konzerv):
+  kategoria: Tartós élelmiszer
+Vörösbab (konzerv):
+  kategoria: Tartós élelmiszer
+Worcester szósz:
+  kategoria: Tartós élelmiszer
+Zsemlemorzsa:
+  kategoria: Tartós élelmiszer
+
+# Tartós tejtermék
+Főzőtejszín:
+  kategoria: Tartós tejtermék
+Habtejszín:
+  kategoria: Tartós tejtermék
+Tej:
+  kategoria: Tartós tejtermék
+  mertekegysegPreference: l
+Tejszín: Főzőtejszín
+
+# Tejtermék
+Görög joghurt:
+  kategoria: Tejtermék
+Kefír:
+  kategoria: Tejtermék
+Natúr joghurt:
+  kategoria: Tejtermék
+Tejföl:
+  kategoria: Tejtermék
+Tejtermek:
+  kategoria: Tejtermék
+Tojás:
+  kategoria: Tejtermék
+Túró:
+  kategoria: Tejtermék
+Vaj:
+  kategoria: Tejtermék
+
+# Üditő
+Szódavíz:
+  kategoria: Üditő
+
+# Zöldség / Gyümölcs
+Alma:
+  kategoria: Zöldség / Gyümölcs
+Brokkoli:
+  kategoria: Zöldség / Gyümölcs
+Burgonya:
+  kategoria: Zöldség / Gyümölcs
+  mertekegysegPreference: dkg
+Citrom:
+  kategoria: Zöldség / Gyümölcs
+Csemegehagyma:
+  kategoria: Zöldség / Gyümölcs
+Cukkini:
+  kategoria: Zöldség / Gyümölcs
+Dió:
+  kategoria: Zöldség / Gyümölcs
+Édesburgonya:
+  kategoria: Zöldség / Gyümölcs
+Fehérrépa:
+  kategoria: Zöldség / Gyümölcs
+Fokhagyma:
+  kategoria: Zöldség / Gyümölcs
+Gyömbér:
+  kategoria: Zöldség / Gyümölcs
+Hegyes paprika:
+  kategoria: Zöldség / Gyümölcs
+Jégsaláta:
+  kategoria: Zöldség / Gyümölcs
+Kaliforniai paprika:
+  kategoria: Zöldség / Gyümölcs
+Kaliforniai paprika (piros):
+  kategoria: Zöldség / Gyümölcs
+Kaliforniai paprika (sárga):
+  kategoria: Zöldség / Gyümölcs
+Kaliforniai paprika (zöld):
+  kategoria: Zöldség / Gyümölcs
+Káposzta:
+  kategoria: Zöldség / Gyümölcs
+Karalábé:
+  kategoria: Zöldség / Gyümölcs
+Kelkáposzta:
+  kategoria: Zöldség / Gyümölcs
+Kígyóuborka:
+  kategoria: Zöldség / Gyümölcs
+Kínai kel:
+  kategoria: Zöldség / Gyümölcs
+Koktélparadicsom:
+  kategoria: Zöldség / Gyümölcs
+Krumpli: Burgonya
+Lilahagyma:
+  kategoria: Zöldség / Gyümölcs
+Lilakáposzta:
+  kategoria: Zöldség / Gyümölcs
+Lime:
+  kategoria: Zöldség / Gyümölcs
+Pak choi:
+  kategoria: Zöldség / Gyümölcs
+Paprika:
+  kategoria: Zöldség / Gyümölcs
+Paradicsom:
+  kategoria: Zöldség / Gyümölcs
+Póréhagyma:
+  kategoria: Zöldség / Gyümölcs
+Retek:
+  kategoria: Zöldség / Gyümölcs
+Sárgarépa:
+  kategoria: Zöldség / Gyümölcs
+Savanyú káposzta:
+  kategoria: Zöldség / Gyümölcs
+Spárga:
+  kategoria: Zöldség / Gyümölcs
+Vöröshagyma:
+  kategoria: Zöldség / Gyümölcs
+Zeller:
+  kategoria: Zöldség / Gyümölcs
+Zellerszár:
+  kategoria: Zöldség / Gyümölcs

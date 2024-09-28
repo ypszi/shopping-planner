@@ -6,7 +6,8 @@ namespace PeterPecosz\Kajatervezo\Tests\Etel;
 
 use PeterPecosz\Kajatervezo\Etel\Etel;
 use PeterPecosz\Kajatervezo\Etel\Etelek;
-use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\Tojas;
+use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
+use PeterPecosz\Kajatervezo\Hozzavalo\HozzavaloKategoria;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
@@ -17,29 +18,22 @@ class EtelekTest extends TestCase
 
     protected function setUp(): void
     {
-        $this->testFood = new class() extends Etel {
-            public static function name(): string
-            {
-                return 'test food';
-            }
-
-            protected function listHozzavalok(): array
-            {
-                return [
-                    new Tojas(1, Mertekegyseg::DB),
-                ];
-            }
-
-            public static function defaultAdag(): int
-            {
-                return 1;
-            }
-
-            public function rawReceptUrl(): string
-            {
-                return 'https://online-recept-konyv.hu/test-food';
-            }
-        };
+        $this->testFood = new Etel(
+            name:           'test food',
+            defaultPortion: 1,
+            adag:           null,
+            receptUrl:      'https://online-recept-konyv.hu/test-food',
+            thumbnailUrl:   null,
+            comments:       null,
+            ingredients:    [
+                                new Hozzavalo(
+                                    name:         'Tojás',
+                                    mennyiseg:    1,
+                                    mertekegyseg: Mertekegyseg::DB,
+                                    kategoria:    HozzavaloKategoria::TEJTERMEK
+                                ),
+                            ]
+        );
     }
 
     #[Test]

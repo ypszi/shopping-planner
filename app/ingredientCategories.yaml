@@ -1,0 +1,34 @@
+Ázsiai:
+  mertekegysegPreference: ml
+Bor:
+  mertekegysegPreference: l
+Cukrász:
+  mertekegysegPreference: g
+Ecet:
+  mertekegysegPreference: l
+Felvágott:
+  mertekegysegPreference: dkg
+Fűszer:
+  mertekegysegPreference: g
+Hal:
+  mertekegysegPreference: g
+Hús:
+  mertekegysegPreference: kg
+Mirelit:
+  mertekegysegPreference: g
+Olaj:
+  mertekegysegPreference: l
+Pékárú:
+  mertekegysegPreference: kg
+Sajt:
+  mertekegysegPreference: g
+Tartós élelmiszer:
+  mertekegysegPreference: g
+Tartós tejtermék:
+  mertekegysegPreference: ml
+Tejtermék:
+  mertekegysegPreference: g
+Üditő:
+  mertekegysegPreference: l
+Zöldség / Gyümölcs:
+  mertekegysegPreference: db

@@ -4,10 +4,9 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Tests\Supermarket;
 
+use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
 use PeterPecosz\Kajatervezo\Hozzavalo\HozzavaloKategoria;
 use PeterPecosz\Kajatervezo\Hozzavalo\Kategoria;
-use PeterPecosz\Kajatervezo\Hozzavalo\Sajt\FetaSajt;
-use PeterPecosz\Kajatervezo\Hozzavalo\Sajt\TrappistaSajt;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 use PeterPecosz\Kajatervezo\Supermarket\HozzavaloToKategoriaMap;
 use PHPUnit\Framework\Attributes\Test;
@@ -26,7 +25,7 @@ class HozzavaloToKategoriaMapTest extends TestCase
             protected function hozzavaloMap(): array
             {
                 return [
-                    TrappistaSajt::name() => HozzavaloKategoria::FELVAGOTT,
+                    'Trappista sajt' => HozzavaloKategoria::FELVAGOTT,
                 ];
             }
         };
@@ -35,12 +34,12 @@ class HozzavaloToKategoriaMapTest extends TestCase
     #[Test]
     public function testMap(): void
     {
-        $this->assertEquals('Felvágott', $this->sut->map(new TrappistaSajt(1, Mertekegyseg::G))->value());
+        $this->assertEquals('Felvágott', $this->sut->map(new Hozzavalo('Trappista sajt', 1, Mertekegyseg::G, HozzavaloKategoria::SAJT ))->value());
     }
 
     #[Test]
     public function testMapWhenHozzavaloNotFoundInMap(): void
     {
-        $this->assertEquals('Sajt', $this->sut->map(new FetaSajt(1, Mertekegyseg::G))->value());
+        $this->assertEquals('Sajt', $this->sut->map(new Hozzavalo('Feta sajt', 1, Mertekegyseg::G, HozzavaloKategoria::SAJT))->value());
     }
 }

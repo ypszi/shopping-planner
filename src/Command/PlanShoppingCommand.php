@@ -97,7 +97,7 @@ class PlanShoppingCommand extends Command
             $etel = EtelFactory::create($kajaName);
             $adag = (int)$this->io->ask(
                 sprintf('Hány adagot készítesz ebből: "%s"?', $kajaName),
-                (string)$etel::defaultAdag()
+                (string)$etel->defaultPortion()
             );
 
             $this->etelek->add($etel->withAdag($adag));

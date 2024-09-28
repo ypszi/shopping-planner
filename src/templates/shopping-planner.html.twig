@@ -47,7 +47,7 @@
                                 onchange="this.checked ? document.getElementById('portion-{{ availableFoodNameKey }}').disabled = '' : document.getElementById('portion-{{ availableFoodNameKey }}').disabled = 'disabled'"
                         >
                         <label for="{{ availableFoodNameKey }}" class="form-check-label">{{ availableFoodName }}</label>
-                        <output id="portion-output-{{ availableFoodNameKey }}">({{ availableFood.defaultAdag }} Adag)</output>
+                        <output id="portion-output-{{ availableFoodNameKey }}">({{ availableFood.defaultPortion }} Adag)</output>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -55,7 +55,7 @@
                         <input
                                 type="range"
                                 id="portion-{{ availableFoodNameKey }}"
-                                value="{{ availableFood.defaultAdag }}"
+                                value="{{ availableFood.defaultPortion }}"
                                 name="portion-{{ availableFoodNameKey }}"
                                 class="form-range"
                                 min="1"

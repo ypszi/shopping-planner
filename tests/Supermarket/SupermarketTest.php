@@ -6,9 +6,8 @@ namespace PeterPecosz\Kajatervezo\Tests\Supermarket;
 
 use PeterPecosz\Kajatervezo\Etel\Etel;
 use PeterPecosz\Kajatervezo\Etel\Etelek;
-use PeterPecosz\Kajatervezo\Hozzavalo\Ecet\Ecet;
+use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
 use PeterPecosz\Kajatervezo\Hozzavalo\HozzavaloKategoria;
-use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\Tojas;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 use PeterPecosz\Kajatervezo\ShoppingList\ShoppingList;
 use PeterPecosz\Kajatervezo\ShoppingList\ShoppingListByFood;
@@ -31,30 +30,18 @@ class SupermarketTest extends TestCase
 
     protected function setUp(): void
     {
-        $this->testFood = new class() extends Etel {
-            public static function name(): string
-            {
-                return 'test food';
-            }
-
-            protected function listHozzavalok(): array
-            {
-                return [
-                    new Tojas(1, Mertekegyseg::DB),
-                    new Ecet(1, Mertekegyseg::L),
-                ];
-            }
-
-            public static function defaultAdag(): int
-            {
-                return 1;
-            }
-
-            public function rawReceptUrl(): string
-            {
-                return 'https://online-recept-konyv.hu/test-food';
-            }
-        };
+        $this->testFood = new Etel(
+            name:           'test food',
+            defaultPortion: 1,
+            adag:           null,
+            receptUrl:      'https://online-recept-konyv.hu/test-food',
+            thumbnailUrl:   'https://www.nosalty.hu/thumnails/img_5512.jpg',
+            comments:       null,
+            ingredients:    [
+                                new Hozzavalo('Tojás', 1, Mertekegyseg::DB, HozzavaloKategoria::TEJTERMEK),
+                                new Hozzavalo('Ecet', 1, Mertekegyseg::L, HozzavaloKategoria::ECET),
+                            ]
+        );
 
         $this->supermarket = new class(
             $this->kategoriaMap = $this->createMock(KategoriaMap::class),
@@ -153,7 +140,7 @@ class SupermarketTest extends TestCase
                     HozzavaloKategoria::TARTOS_TEJTERMEK->value,
                 ],
                 [
-                    $this->testFood::name() => [
+                    $this->testFood->name() => [
                         [
                             '',
                             '1.00 l Ecet',

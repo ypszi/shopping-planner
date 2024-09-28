@@ -4,13 +4,8 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Tests\Supermarket\KauflandTrier;
 
-use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Ketchup;
-use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Majonez;
-use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Mustar;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
-use PeterPecosz\Kajatervezo\Hozzavalo\Hus\Csirkemell;
 use PeterPecosz\Kajatervezo\Hozzavalo\Kategoria;
-use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\Vaj;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 use PeterPecosz\Kajatervezo\Supermarket\KauflandTrier\KauflandTrierHozzavaloToKategoriaMap;
 use PeterPecosz\Kajatervezo\Supermarket\KauflandTrier\KauflandTrierKategoria;

@@ -5,8 +5,6 @@ declare(strict_types=1);
 namespace PeterPecosz\Kajatervezo\Supermarket\AuchanLuxembourg;
 
 use PeterPecosz\Kajatervezo\Hozzavalo\Kategoria;
-use PeterPecosz\Kajatervezo\Hozzavalo\TartosElelmiszer\TonhalKonzerv;
-use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\Tojas;
 use PeterPecosz\Kajatervezo\Supermarket\HozzavaloToKategoriaMap;
 
 class AuchanLuxembourgHozzavaloToKategoriaMap extends HozzavaloToKategoriaMap
@@ -17,8 +15,8 @@ class AuchanLuxembourgHozzavaloToKategoriaMap extends HozzavaloToKategoriaMap
     protected function hozzavaloMap(): array
     {
         return [
-            Tojas::name()         => AuchanLuxembourgKategoria::TARTOS_TEJTERMEK,
-            TonhalKonzerv::name() => AuchanLuxembourgKategoria::NEMZETKOZI,
+            'Tojás'            => AuchanLuxembourgKategoria::TARTOS_TEJTERMEK,
+            'Tonhal (konzerv)' => AuchanLuxembourgKategoria::NEMZETKOZI,
         ];
     }
 }

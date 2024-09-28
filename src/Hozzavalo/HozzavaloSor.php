@@ -54,7 +54,7 @@ class HozzavaloSor
         }
 
         if (
-            $hozzaadottHozzavalo::name() === $hozzavalo::name()
+            $hozzaadottHozzavalo->name() === $hozzavalo->name()
             && $hozzaadottHozzavalo->getMertekegyseg() === $hozzavalo->getMertekegyseg()
         ) {
             $this->hozzavalokPerKategoria[$hozzavalo->kategoria()->value()] = $hozzaadottHozzavalo->withMennyiseg(
@@ -77,13 +77,13 @@ class HozzavaloSor
             return true;
         }
 
-        return $hozzaadottHozzavalo::name() === $hozzavalo::name()
+        return $hozzaadottHozzavalo->name() === $hozzavalo->name()
                && $hozzaadottHozzavalo->getMertekegyseg() === $hozzavalo->getMertekegyseg();
     }
 
     private function convertToPreference(Hozzavalo $hozzavalo): Hozzavalo
     {
-        $newMertekegyseg = $hozzavalo::mertekegysegPreference() ?? $hozzavalo->getMertekegyseg();
+        $newMertekegyseg = $hozzavalo->mertekegysegPreference() ?? $hozzavalo->getMertekegyseg();
 
         if ($newMertekegyseg === $hozzavalo->getMertekegyseg()) {
             return $hozzavalo;
@@ -128,7 +128,7 @@ class HozzavaloSor
     private function canAddUsingConvert(Hozzavalo $hozzavalo, Hozzavalo $hozzaadottHozzavalo): bool
     {
         if (
-            $hozzaadottHozzavalo::name() === $hozzavalo::name()
+            $hozzaadottHozzavalo->name() === $hozzavalo->name()
             && $hozzaadottHozzavalo->getMertekegyseg() !== $hozzavalo->getMertekegyseg()
         ) {
             return $this->mertekegysegAtvalto->canValt(

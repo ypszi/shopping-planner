@@ -16,17 +16,12 @@ class HozzavaloTest extends TestCase
 
     protected function setUp(): void
     {
-        $this->testHozzavalo = new class(mennyiseg: 50, mertekegyseg: Mertekegyseg::DB) extends Hozzavalo {
-            public function __construct(float $mennyiseg, string $mertekegyseg)
-            {
-                parent::__construct($mennyiseg, $mertekegyseg, HozzavaloKategoria::HUS);
-            }
-
-            public static function name(): string
-            {
-                return 'Teszt Hozzavalo';
-            }
-        };
+        $this->testHozzavalo = new Hozzavalo(
+            name:         'Teszt hozzavalo',
+            mennyiseg:    50,
+            mertekegyseg: Mertekegyseg::DB,
+            kategoria:    HozzavaloKategoria::HUS
+        );
     }
 
     #[Test]

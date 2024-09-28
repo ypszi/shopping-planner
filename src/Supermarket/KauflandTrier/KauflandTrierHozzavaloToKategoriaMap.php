@@ -4,11 +4,7 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Supermarket\KauflandTrier;
 
-use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Ketchup;
-use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Majonez;
-use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\Mustar;
 use PeterPecosz\Kajatervezo\Hozzavalo\Kategoria;
-use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\Vaj;
 use PeterPecosz\Kajatervezo\Supermarket\HozzavaloToKategoriaMap;
 
 class KauflandTrierHozzavaloToKategoriaMap extends HozzavaloToKategoriaMap
@@ -19,10 +15,10 @@ class KauflandTrierHozzavaloToKategoriaMap extends HozzavaloToKategoriaMap
     protected function hozzavaloMap(): array
     {
         return [
-            Ketchup::name() => KauflandTrierKategoria::HUTOS_UTAN,
-            Majonez::name() => KauflandTrierKategoria::HUTOS_UTAN,
-            Mustar::name()  => KauflandTrierKategoria::HUTOS_UTAN,
-            Vaj::name()     => KauflandTrierKategoria::HUTOS_UTAN,
+            'Ketchup' => KauflandTrierKategoria::HUTOS_UTAN,
+            'Majonéz' => KauflandTrierKategoria::HUTOS_UTAN,
+            'Mustár'  => KauflandTrierKategoria::HUTOS_UTAN,
+            'Vaj'     => KauflandTrierKategoria::HUTOS_UTAN,
         ];
     }
 }

@@ -4,36 +4,36 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Mertekegyseg;
 
-class Mertekegyseg
+enum Mertekegyseg: string
 {
-    final public const DB = 'db';
-    final public const CSIPET = 'csipet';
-    final public const GEREZD = 'gerezd';
-    final public const KONZERV = 'konzerv';
+    case DB = 'db';
+    case CSIPET = 'csipet';
+    case GEREZD = 'gerezd';
+    case KONZERV = 'konzerv';
     /* késhegy */
-    final public const KH = 'kh';
+    case KH = 'kh';
     /* tömeg */
-    final public const G = 'g';
-    final public const DKG = 'dkg';
-    final public const KG = 'kg';
+    case G = 'g';
+    case DKG = 'dkg';
+    case KG = 'kg';
     /* űrtartalom */
-    final public const CSEPP = 'csepp';
-    final public const ML = 'ml';
-    final public const CL = 'cl';
-    final public const DL = 'dl';
-    final public const L = 'l';
+    case CSEPP = 'csepp';
+    case ML = 'ml';
+    case CL = 'cl';
+    case DL = 'dl';
+    case L = 'l';
     /* pohár */
-    final public const CSESZE = 'csésze';
-    final public const BOGRE = 'bögre';
+    case CSESZE = 'csésze';
+    case BOGRE = 'bögre';
     /* kanál */
     // Mokkás kanál
-    final public const MK = 'mk';
+    case MK = 'mk';
     // Kis kanál
-    final public const KK = 'kk';
+    case KK = 'kk';
     // Teás kanál
-    final public const TK = 'tk';
+    case TK = 'tk';
     // Kávés kanál
-    final public const KVK = 'kvk';
+    case KVK = 'kvk';
     // Evőkanál
-    final public const EK = 'ek';
+    case EK = 'ek';
 }

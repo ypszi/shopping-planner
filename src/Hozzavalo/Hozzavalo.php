@@ -4,19 +4,32 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Hozzavalo;
 
-abstract class Hozzavalo
+use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
+
+class Hozzavalo
 {
+    private string $name;
+
     private float $mennyiseg;
 
-    private string $mertekegyseg;
+    private Mertekegyseg $mertekegyseg;
 
     private Kategoria $kategoria;
 
-    public function __construct(float $mennyiseg, string $mertekegyseg, Kategoria $kategoria)
-    {
-        $this->mennyiseg    = $mennyiseg;
-        $this->mertekegyseg = $mertekegyseg;
-        $this->kategoria    = $kategoria;
+    private ?Mertekegyseg $mertekegysegPreference;
+
+    public function __construct(
+        string $name,
+        float $mennyiseg,
+        Mertekegyseg $mertekegyseg,
+        Kategoria $kategoria,
+        ?Mertekegyseg $mertekegysegPreference = null
+    ) {
+        $this->name                   = $name;
+        $this->mennyiseg              = $mennyiseg;
+        $this->mertekegyseg           = $mertekegyseg;
+        $this->kategoria              = $kategoria;
+        $this->mertekegysegPreference = $mertekegysegPreference;
     }
 
     public function withMennyiseg(float $mennyiseg): self
@@ -27,7 +40,7 @@ abstract class Hozzavalo
         return $clone;
     }
 
-    public function withMertekegyseg(string $mertekegyseg): self
+    public function withMertekegyseg(Mertekegyseg $mertekegyseg): self
     {
         $clone               = clone $this;
         $clone->mertekegyseg = $mertekegyseg;
@@ -43,16 +56,19 @@ abstract class Hozzavalo
         return $clone;
     }
 
-    abstract public static function name(): string;
+    public function name(): string
+    {
+        return $this->name;
+    }
 
     public function kategoria(): Kategoria
     {
         return $this->kategoria;
     }
 
-    public static function mertekegysegPreference(): ?string
+    public function mertekegysegPreference(): ?Mertekegyseg
     {
-        return null;
+        return $this->mertekegysegPreference;
     }
 
     public function getMennyiseg(): float
@@ -60,13 +76,13 @@ abstract class Hozzavalo
         return $this->mennyiseg;
     }
 
-    public function getMertekegyseg(): string
+    public function getMertekegyseg(): Mertekegyseg
     {
         return $this->mertekegyseg;
     }
 
     public function __toString(): string
     {
-        return sprintf('%.2f %s %s', $this->mennyiseg, $this->mertekegyseg, static::name());
+        return sprintf('%.2f %s %s', $this->mennyiseg, $this->mertekegyseg->value, static::name());
     }
 }

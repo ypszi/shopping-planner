@@ -4,17 +4,8 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Tests\Mertekegyseg\Atvaltas;
 
-use PeterPecosz\Kajatervezo\Hozzavalo\Cukrasz\Cukor;
-use PeterPecosz\Kajatervezo\Hozzavalo\Cukrasz\Porcukor;
-use PeterPecosz\Kajatervezo\Hozzavalo\Fuszer\So;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
-use PeterPecosz\Kajatervezo\Hozzavalo\Hus\Csirkemell;
-use PeterPecosz\Kajatervezo\Hozzavalo\Olaj\NapraforgoOlaj;
-use PeterPecosz\Kajatervezo\Hozzavalo\TartosElelmiszer\Finomliszt;
-use PeterPecosz\Kajatervezo\Hozzavalo\TartosElelmiszer\KukoricaKonzerv;
-use PeterPecosz\Kajatervezo\Hozzavalo\TartosElelmiszer\Liszt;
-use PeterPecosz\Kajatervezo\Hozzavalo\TartosElelmiszer\VorosbabKonzerv;
-use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\Tejfol;
+use PeterPecosz\Kajatervezo\Hozzavalo\HozzavaloKategoria;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Exception\UnknownUnitOfMeasureException;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 use PeterPecosz\Kajatervezo\Mertekegyseg\MertekegysegAtvalto;
@@ -42,20 +33,21 @@ class MertekegysegAtvaltoTest extends TestCase
     {
         return [
             'csirkemell db to dkg'    => [
-                new Csirkemell(1, Mertekegyseg::DB),
-                new Csirkemell(0, Mertekegyseg::DKG),
+                new Hozzavalo('Csirkemell', 1, Mertekegyseg::DB, HozzavaloKategoria::HUS),
+                new Hozzavalo('Csirkemell', 0, Mertekegyseg::DKG, HozzavaloKategoria::HUS),
                 25.0,
             ],
             'csirkemell db to kg'     => [
-                new Csirkemell(1, Mertekegyseg::DB),
-                new Csirkemell(0, Mertekegyseg::KG),
+                new Hozzavalo('Csirkemell', 1, Mertekegyseg::DB, HozzavaloKategoria::HUS),
+                new Hozzavalo('Csirkemell', 0, Mertekegyseg::KG, HozzavaloKategoria::HUS),
                 0.25,
             ],
             'csirkemell dkg to db'    => [
-                new Csirkemell(25, Mertekegyseg::DKG),
-                new Csirkemell(0, Mertekegyseg::DB),
+                new Hozzavalo('Csirkemell', 25, Mertekegyseg::DKG, HozzavaloKategoria::HUS),
+                new Hozzavalo('Csirkemell', 0, Mertekegyseg::DB, HozzavaloKategoria::HUS),
                 1.0,
             ],
+            // TODO: convert to Hozzavalo [peter.pecosz]
             'csirkemell kg to db'     => [
                 new Csirkemell(1, Mertekegyseg::KG),
                 new Csirkemell(0, Mertekegyseg::DB),
@@ -497,8 +489,18 @@ class MertekegysegAtvaltoTest extends TestCase
                 2.0,
             ],
             'So kk to g'              => [
-                new So(1, Mertekegyseg::KK),
-                new So(0, Mertekegyseg::G),
+                new Hozzavalo(
+                    name:         'Só',
+                    mennyiseg:    1,
+                    mertekegyseg: Mertekegyseg::KK,
+                    kategoria:    HozzavaloKategoria::FUSZER,
+                ),
+                new Hozzavalo(
+                    name:         'Só',
+                    mennyiseg:    0,
+                    mertekegyseg: Mertekegyseg::G,
+                    kategoria:    HozzavaloKategoria::FUSZER,
+                ),
                 2.0,
             ],
         ];
@@ -507,8 +509,18 @@ class MertekegysegAtvaltoTest extends TestCase
     #[Test]
     public function testNemValt(): void
     {
-        $hozzavalo           = new Csirkemell(10, 'from');
-        $hozzaadottHozzavalo = new Csirkemell(10, 'to');
+        $hozzavalo           = new Hozzavalo(
+            name:         'Csirkemell',
+            mennyiseg:    10,
+            mertekegyseg: Mertekegyseg::GEREZD,
+            kategoria:    HozzavaloKategoria::HUS,
+        );
+        $hozzaadottHozzavalo = new Hozzavalo(
+            name:         'Csirkemell',
+            mennyiseg:    10,
+            mertekegyseg: Mertekegyseg::TK,
+            kategoria:    HozzavaloKategoria::HUS,
+        );
 
         $this->expectException(UnknownUnitOfMeasureException::class);
         $this->expectExceptionMessage(sprintf('Cannot convert %s to %s', $hozzavalo, $hozzaadottHozzavalo));

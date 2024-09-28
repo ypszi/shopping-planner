@@ -47,7 +47,7 @@ abstract class Supermarket
             $hozzavalokByKategoria = new HozzavalokByKategoria();
             $hozzavalokByKategoria->addMultipleHozzavalo($etel->hozzavalok());
 
-            $rows[$etel::name()] = $this->createHozzavaloSorok($hozzavalokByKategoria)->toArray();
+            $rows[$etel->name()] = $this->createHozzavaloSorok($hozzavalokByKategoria)->toArray();
         }
 
         return new ShoppingListByFood($this->sorrend(), $rows);

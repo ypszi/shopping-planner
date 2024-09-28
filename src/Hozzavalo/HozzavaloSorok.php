@@ -100,7 +100,7 @@ class HozzavaloSorok
     {
         foreach ($hozzavalokByKategoria as &$hozzavalok) {
             usort($hozzavalok, function (Hozzavalo $hozzavalo1, Hozzavalo $hozzavalo2) {
-                return strnatcmp($hozzavalo1->getMertekegyseg(), $hozzavalo2->getMertekegyseg());
+                return strnatcmp($hozzavalo1->getMertekegyseg()->value, $hozzavalo2->getMertekegyseg()->value);
             });
         }
 
@@ -116,7 +116,7 @@ class HozzavaloSorok
     {
         foreach ($hozzavalokByKategoria as &$hozzavalok) {
             usort($hozzavalok, function (Hozzavalo $hozzavalo1, Hozzavalo $hozzavalo2) {
-                return strnatcmp($hozzavalo1::name(), $hozzavalo2::name());
+                return strnatcmp($hozzavalo1->name(), $hozzavalo2->name());
             });
         }
 

@@ -5,10 +5,8 @@ declare(strict_types=1);
 namespace PeterPecosz\Kajatervezo\Tests\Supermarket\AuchanLuxembourg;
 
 use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
-use PeterPecosz\Kajatervezo\Hozzavalo\Hus\Csirkemell;
+use PeterPecosz\Kajatervezo\Hozzavalo\HozzavaloKategoria;
 use PeterPecosz\Kajatervezo\Hozzavalo\Kategoria;
-use PeterPecosz\Kajatervezo\Hozzavalo\TartosElelmiszer\TonhalKonzerv;
-use PeterPecosz\Kajatervezo\Hozzavalo\Tejtermek\Tojas;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 use PeterPecosz\Kajatervezo\Supermarket\AuchanLuxembourg\AuchanLuxembourgHozzavaloToKategoriaMap;
 use PeterPecosz\Kajatervezo\Supermarket\AuchanLuxembourg\AuchanLuxembourgKategoria;
@@ -31,16 +29,31 @@ class AuchanLuxembourgHozzavaloToKategoriaMapTest extends TestCase
     {
         return [
             [
-                new Tojas(1, Mertekegyseg::DB),
+                new Hozzavalo(
+                    name:         'Tojás',
+                    mennyiseg:    1,
+                    mertekegyseg: Mertekegyseg::DB,
+                    kategoria:    HozzavaloKategoria::TEJTERMEK,
+                ),
                 AuchanLuxembourgKategoria::TARTOS_TEJTERMEK,
             ],
             [
-                new TonhalKonzerv(1, Mertekegyseg::G),
+                new Hozzavalo(
+                    name:         'Tonhal (konzerv)',
+                    mennyiseg:    1,
+                    mertekegyseg: Mertekegyseg::G,
+                    kategoria:    HozzavaloKategoria::TARTOS_ELELMISZER,
+                ),
                 AuchanLuxembourgKategoria::NEMZETKOZI,
             ],
             [
-                new Csirkemell(1, Mertekegyseg::KG),
-                (new Csirkemell(1, Mertekegyseg::KG))->kategoria(),
+                new Hozzavalo(
+                    name:         'Csirkemell',
+                    mennyiseg:    1,
+                    mertekegyseg: Mertekegyseg::KG,
+                    kategoria:    HozzavaloKategoria::HUS,
+                ),
+                HozzavaloKategoria::HUS,
             ],
         ];
     }

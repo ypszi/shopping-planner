@@ -11,7 +11,7 @@ abstract class HozzavaloToKategoriaMap
 {
     public function map(Hozzavalo $hozzavalo): Kategoria
     {
-        $mappedKategoria = $this->hozzavaloMap()[$hozzavalo::name()] ?? null;
+        $mappedKategoria = $this->hozzavaloMap()[$hozzavalo->name()] ?? null;
 
         if (!$mappedKategoria) {
             return $hozzavalo->kategoria();

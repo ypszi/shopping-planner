@@ -1,3 +1,19 @@
+{% macro recursiveComments(comment) %}
+    {% if comment is array %}
+        <ul>
+            {% for key, subComment in comment %}
+                {% if key is string %}
+                    <li>{{ key }}</li>
+                {% endif %}
+
+                {{ _self.recursiveComments(subComment) }}
+            {% endfor %}
+        </ul>
+    {% else %}
+        <li>{{ comment }}</li>
+    {% endif %}
+{% endmacro %}
+
 <!doctype html>
 <html lang="en">
 {% include 'head.html.twig' %}
@@ -25,15 +41,16 @@
                         <td>
                             <div class="food-thumbnail col-sm-12 col-md-8 col-lg-6 col-xl-4">
                                 {% if etel.thumbnailUrl %}
-                                <img src="{{ etel.thumbnailUrl }}" alt="{{ etel }}" class="img-fluid img-thumbnail">
+                                    <img src="{{ etel.thumbnailUrl }}" alt="{{ etel }}" class="img-fluid img-thumbnail">
                                 {% endif %}
                             </div>
                         </td>
                         <td>{{ etel }}</td>
                         <td><a href="{{ etel.receptUrl }}" target="_blank">{{ etel.receptUrl }}</a></td>
                         <td>
+                            {% from _self import recursiveComments %}
                             {% for comment in etel.comments %}
-                                <li>{{ comment }}</li>
+                                {{ recursiveComments(comment) }}
                             {% endfor %}
                         </td>
                     </tr>

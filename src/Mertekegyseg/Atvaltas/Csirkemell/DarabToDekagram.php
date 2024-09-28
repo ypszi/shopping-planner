@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Csirkemell;
 
 use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
-use PeterPecosz\Kajatervezo\Hozzavalo\Hus\Csirkemell;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\MertekegysegValto;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 
@@ -13,8 +12,8 @@ class DarabToDekagram extends MertekegysegValto
 {
     public function canValt(Hozzavalo $hozzavalo, Hozzavalo $hozzaadottHozzavalo): bool
     {
-        return $hozzavalo instanceof Csirkemell
-               && $hozzaadottHozzavalo instanceof Csirkemell
+        return $hozzavalo->name() === 'Csirkemell'
+               && $hozzaadottHozzavalo->name() === 'Csirkemell'
                && $hozzavalo->getMertekegyseg() === Mertekegyseg::DB
                && $hozzaadottHozzavalo->getMertekegyseg() === Mertekegyseg::DKG;
     }
