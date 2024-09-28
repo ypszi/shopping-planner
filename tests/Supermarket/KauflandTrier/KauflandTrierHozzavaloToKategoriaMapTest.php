@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace PeterPecosz\Kajatervezo\Tests\Supermarket\KauflandTrier;
 
 use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
+use PeterPecosz\Kajatervezo\Hozzavalo\HozzavaloKategoria;
 use PeterPecosz\Kajatervezo\Hozzavalo\Kategoria;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 use PeterPecosz\Kajatervezo\Supermarket\KauflandTrier\KauflandTrierHozzavaloToKategoriaMap;
@@ -28,24 +29,24 @@ class KauflandTrierHozzavaloToKategoriaMapTest extends TestCase
     {
         return [
             [
-                new Ketchup(1, Mertekegyseg::G),
+                new Hozzavalo('Ketchup', 1, Mertekegyseg::G, HozzavaloKategoria::TARTOS_ELELMISZER),
                 KauflandTrierKategoria::HUTOS_UTAN,
             ],
             [
-                new Majonez(1, Mertekegyseg::L),
+                new Hozzavalo('Majonéz', 1, Mertekegyseg::L, HozzavaloKategoria::TARTOS_ELELMISZER),
                 KauflandTrierKategoria::HUTOS_UTAN,
             ],
             [
-                new Mustar(1, Mertekegyseg::L),
+                new Hozzavalo('Mustár', 1, Mertekegyseg::L, HozzavaloKategoria::TARTOS_ELELMISZER),
                 KauflandTrierKategoria::HUTOS_UTAN,
             ],
             [
-                new Vaj(1, Mertekegyseg::L),
+                new Hozzavalo('Vaj', 1, Mertekegyseg::L, HozzavaloKategoria::TEJTERMEK),
                 KauflandTrierKategoria::HUTOS_UTAN,
             ],
             [
-                new Csirkemell(1, Mertekegyseg::KG),
-                (new Csirkemell(1, Mertekegyseg::KG))->kategoria(),
+                new Hozzavalo('Csirkemell', 1, Mertekegyseg::KG, HozzavaloKategoria::HUS),
+                HozzavaloKategoria::HUS,
             ],
         ];
     }

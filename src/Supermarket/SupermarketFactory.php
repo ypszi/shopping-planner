@@ -18,6 +18,8 @@ use PeterPecosz\Kajatervezo\Supermarket\LidlWasserbillig\LidlWasserbillig;
 use PeterPecosz\Kajatervezo\Supermarket\LidlWasserbillig\LidlWasserbilligKategoriaMap;
 use PeterPecosz\Kajatervezo\Supermarket\MatchWasserbillig\MatchWasserbillig;
 use PeterPecosz\Kajatervezo\Supermarket\MatchWasserbillig\MatchWasserbilligKategoriaMap;
+use PeterPecosz\Kajatervezo\Supermarket\TescoFogarasi\TescoFogarasi;
+use PeterPecosz\Kajatervezo\Supermarket\TescoFogarasi\TescoFogarasiKategoriaMap;
 
 class SupermarketFactory
 {
@@ -27,6 +29,9 @@ class SupermarketFactory
             AuchanCsomor::name() => new AuchanCsomor(
                 new AuchanCsomorKategoriaMap(),
                 new AuchanCsomorHozzavaloToKategoriaMap()
+            ),
+            TescoFogarasi::name() => new TescoFogarasi(
+                new TescoFogarasiKategoriaMap()
             ),
             KauflandTrier::name() => new KauflandTrier(
                 new KauflandTrierKategoriaMap(),

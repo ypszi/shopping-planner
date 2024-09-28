@@ -55,18 +55,6 @@ if (!empty($plannedShopping['supermarket'])) {
     $shoppingListByFood  = $supermarket->toShoppingListByFood($etelek)->filterEmptyColumns();
     $totalRowCountByFood = array_sum(array_map(fn(array $rowsOfFood) => count($rowsOfFood), $shoppingListByFood->getRows()));
 
-//    foreach ($etelek->toArray()[0]->comments() as $comment) {
-//        // TODO: remove [peter.pecosz]
-//        var_dump($comment);
-//        var_dump(is_array($comment));
-//        if (is_array($comment)) {
-//            foreach ($comment as $subComment) {
-//                // TODO: remove [peter.pecosz]
-//                var_dump($subComment);
-//            }
-//        }
-//    }
-//    die;
     echo $twig->render('planned-shopping.html.twig', [
         'httpHost'            => $_SERVER['HTTP_HOST'],
         'supermarket'         => $supermarket,

@@ -58,6 +58,12 @@ use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kanal\TeasKanalToKiskanal;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kanal\TeasKanalToMilliliter;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kanal\TeasKanalToMokkaskanal;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kukorica\KonzervToGram as KukoricaKonzervToGram;
+use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Liszt\BogreToDekagram as LisztBogreToDekagram;
+use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Liszt\BogreToGram as LisztBogreToGram;
+use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Liszt\BogreToKilogram as LisztBogreToKilogram;
+use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Liszt\EvokanalToDekagram as LisztEvokanalToDekagram;
+use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Liszt\EvokanalToGram as LisztEvokanalToGram;
+use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Liszt\EvokanalToKilogram as LisztEvokanalToKiloGram;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Porcukor\EvokanalToDekagram as PorcukorEvokanalToDekagram;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Porcukor\EvokanalToGram as PorcukorEvokanalToGram;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Porcukor\EvokanalToKilogram as PorcukorEvokanalToKiloGram;
@@ -165,6 +171,12 @@ class MertekegysegValtoCollection
             new FinomLisztEvokanalToDekagram(),
             new FinomLisztEvokanalToGram(),
             new FinomLisztEvokanalToKiloGram(),
+            new LisztBogreToDekagram(),
+            new LisztBogreToGram(),
+            new LisztBogreToKilogram(),
+            new LisztEvokanalToDekagram(),
+            new LisztEvokanalToGram(),
+            new LisztEvokanalToKiloGram(),
             new PorcukorEvokanalToDekagram(),
             new PorcukorEvokanalToGram(),
             new PorcukorEvokanalToKiloGram(),
