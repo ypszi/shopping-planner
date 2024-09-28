@@ -56,15 +56,12 @@ class SupermarketFactory
      */
     public static function listAvailableSupermarkets(): array
     {
-        $supermarketNames = [
-            KauflandTrier::name(),
+        return [
             AuchanCsomor::name(),
+            TescoFogarasi::name(),
+            KauflandTrier::name(),
             LidlWasserbillig::name(),
             MatchWasserbillig::name(),
         ];
-
-        sort($supermarketNames);
-
-        return $supermarketNames;
     }
 }
