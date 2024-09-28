@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Supermarket\TescoFogarasi;
 
-use PeterPecosz\Kajatervezo\Supermarket\AuchanCsomor\AuchanCsomorKategoria;
 use PeterPecosz\Kajatervezo\Supermarket\Supermarket;
 
 class TescoFogarasi extends Supermarket
@@ -20,18 +19,22 @@ class TescoFogarasi extends Supermarket
     public static function sorrend(): array
     {
         return [
-            AuchanCsomorKategoria::ZOLDSEG_GYUMOLCS->value,
-            AuchanCsomorKategoria::HAL->value,
-            AuchanCsomorKategoria::PEKARU->value,
-            AuchanCsomorKategoria::MIRELIT->value,
-            AuchanCsomorKategoria::TEJTERMEK->value,
-            AuchanCsomorKategoria::TARTOS_TEJTERMEK->value,
-            AuchanCsomorKategoria::HUS->value,
-            AuchanCsomorKategoria::FELVAGOTT->value,
-            AuchanCsomorKategoria::EDESSEG->value,
-            AuchanCsomorKategoria::UDITO->value,
-            AuchanCsomorKategoria::NEMZETKOZI->value,
-            AuchanCsomorKategoria::SOS_FUSZER->value,
+            TescoFogarasiKategoria::ZOLDSEG_GYUMOLCS->value,
+            TescoFogarasiKategoria::PEKARU->value,
+            TescoFogarasiKategoria::FELVAGOTT->value,
+            TescoFogarasiKategoria::SAJT->value,
+            TescoFogarasiKategoria::TEJTERMEK->value,
+            TescoFogarasiKategoria::HUS->value,
+            TescoFogarasiKategoria::TARTOS_TEJTERMEK->value,
+            TescoFogarasiKategoria::TESZTA_RIZS->value,
+            TescoFogarasiKategoria::MIRELIT->value,
+            TescoFogarasiKategoria::OLAJ_ECET->value,
+            TescoFogarasiKategoria::KONZERV->value,
+            TescoFogarasiKategoria::FUSZER->value,
+            TescoFogarasiKategoria::CUKOR_LISZT_SUTEMENY->value,
+            TescoFogarasiKategoria::MOGYORO_CHIPS_SNACKS->value,
+            TescoFogarasiKategoria::EDESSEG_KEKSZ->value,
+            TescoFogarasiKategoria::UDITO->value,
         ];
     }
 }
