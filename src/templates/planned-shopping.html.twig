@@ -103,7 +103,7 @@
         </table>
     </div>
 
-    <div id="ingredients-by-food" class="table-responsive visually-hidden">
+    <div id="ingredients-by-food" class="table-responsive d-none">
         <h3 class="text-success">Hozzávalók ételek szerint ({{ totalRowCountByFood }} sor):</h3>
         <table class="table table-bordered table-responsive">
             <thead>
@@ -145,7 +145,7 @@
 
     <div class="sticky-bottom">
         <div class="row justify-content-center">
-            <button class="btn btn-secondary col-2" type="button" id="back-btn" onclick="location.href=window.location.origin">BACK</button>
+            <button class="btn btn-secondary col-2" type="button" id="back-btn" onclick="location.href=window.location.origin">HOME</button>
         </div>
     </div>
 </div>
@@ -163,16 +163,16 @@
 
         if (getCookie('ingredientsView') === ingredientsViewTypeByFood) {
             document.getElementById('ingredients-view-switch').checked = true;
-            document.getElementById('ingredients').classList.add('visually-hidden');
-            document.getElementById('ingredients-by-food').classList.remove('visually-hidden');
+            document.getElementById('ingredients').classList.add('d-none');
+            document.getElementById('ingredients-by-food').classList.remove('d-none');
             document.cookie = createIngredientsViewCookieString(ingredientsViewTypeByFood);
 
             return;
         }
 
         document.getElementById('ingredients-view-switch').checked = false;
-        document.getElementById('ingredients').classList.remove('visually-hidden');
-        document.getElementById('ingredients-by-food').classList.add('visually-hidden');
+        document.getElementById('ingredients').classList.remove('d-none');
+        document.getElementById('ingredients-by-food').classList.add('d-none');
         document.cookie = createIngredientsViewCookieString(ingredientsViewTypeSummary);
 
         return;
@@ -180,15 +180,15 @@
 
     function ingredientsViewToggle(input) {
         if (input.checked) {
-            document.getElementById('ingredients').classList.add('visually-hidden');
-            document.getElementById('ingredients-by-food').classList.remove('visually-hidden');
+            document.getElementById('ingredients').classList.add('d-none');
+            document.getElementById('ingredients-by-food').classList.remove('d-none');
             document.cookie = createIngredientsViewCookieString(ingredientsViewTypeByFood);
 
             return;
         }
 
-        document.getElementById('ingredients').classList.remove('visually-hidden');
-        document.getElementById('ingredients-by-food').classList.add('visually-hidden');
+        document.getElementById('ingredients').classList.remove('d-none');
+        document.getElementById('ingredients-by-food').classList.add('d-none');
         document.cookie = createIngredientsViewCookieString(ingredientsViewTypeSummary);
 
         return;
