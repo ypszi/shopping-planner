@@ -1841,6 +1841,35 @@ Tejfölös-sajtos csirkemell:
       mennyiseg: 5
       mertekegyseg: ek
 
+Tepertőkrém:
+  defaultPortion: 3
+  receptUrl: https://www.nosalty.hu/recept/tojasos-tepertokrem
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/3p/vA/tojasos-tepertokrem.jpeg?w=768&fit=crop&fm=webp&crop=968%2C664%2C20%2C&h=350&mark=watermark.png&markpos=bottom-left&markpad=20&markw=&s=14945baf52322a8cefd4c61989b4062f
+  ingredients:
+    - name: Tepertő (sertés)
+      mennyiseg: 200
+      mertekegyseg: g
+    - name: Tojás
+      mennyiseg: 2
+      mertekegyseg: db
+    - name: Vöröshagyma
+      mennyiseg: 0.5
+      mertekegyseg: db
+    - name: Tejföl
+      mennyiseg: 3
+      mertekegyseg: ek
+    - name: Mustár
+      mennyiseg: 1
+      mertekegyseg: ek
+    - name: Só
+      # só ízlés szerint
+      mennyiseg: 1
+      mertekegyseg: csipet
+    - name: Bors
+      # bors ízlés szerint
+      mennyiseg: 1
+      mertekegyseg: csipet
+
 Tepsis Csirke Zöldséggel:
   defaultPortion: 4
   receptUrl: https://www.mindmegette.hu/tepsis-csirke-zoldseggel.recept
