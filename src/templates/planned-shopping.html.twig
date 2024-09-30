@@ -144,8 +144,20 @@
     </div>
 
     <div class="sticky-bottom">
-        <div class="row justify-content-center">
-            <button class="btn btn-secondary col-2" type="button" id="back-btn" onclick="location.href=window.location.origin">HOME</button>
+        <div class="row justify-content-center sticky-bottom-btn-row">
+            <button
+                    class="btn btn-info col-3 text-center"
+                    type="button"
+                    onclick="location.href=window.location.origin + '?{{ {'selectedFoods': etelek.toArray|map((value, key) => value.name)}|url_encode }}'">
+                MODIFY
+            </button>
+            <div class="col-1"></div>
+            <button
+                    class="btn btn-secondary col-3 text-center"
+                    type="button"
+                    onclick="location.href=window.location.origin">
+                DONE
+            </button>
         </div>
     </div>
 </div>

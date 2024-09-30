@@ -78,4 +78,5 @@ echo $twig->render('shopping-planner.html.twig', [
     'defaultSupermarketName' => AuchanCsomor::name(),
     'availableSupermarkets'  => $availableSupermarkets,
     'availableFoods'         => $availableFoods,
+    'selectedFoods'          => $_GET['selectedFoods'] ?? [],
 ]);

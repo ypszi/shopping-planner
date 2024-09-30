@@ -14,10 +14,13 @@ use Symfony\Component\Yaml\Yaml;
 
 class EtelekFactory
 {
+    /** @var array<string, array<string, mixed>> */
     private readonly array $foods;
 
+    /** @var array<string, array<string, string>> */
     private readonly array $ingredients;
 
+    /** @var array<string, array<string, string>> */
     private readonly array $ingredientCategories;
 
     public function __construct(string $foodsPath, string $ingredientsPath, string $ingredientCategoriesPath)
