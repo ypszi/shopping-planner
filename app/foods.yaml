@@ -7,183 +7,131 @@ Alpesi Sajtos Tészta (Älplermagronen):
     - 'opcionális: 1 ek Petrezselyem'
   ingredients:
     - name: Burgonya
-      mennyiseg: 40
-      mertekegyseg: dkg
+      mennyiseg: 40 dkg
     - name: Só
-      mennyiseg: 1
-      mertekegyseg: tk
+      mennyiseg: 1 tk
     - name: Makaróni tészta
-      mennyiseg: 25
-      mertekegyseg: dkg
+      mennyiseg: 25 dkg
     - name: Gouda sajt
-      mennyiseg: 20
-      mertekegyseg: dkg
+      mennyiseg: 20 dkg
     - name: Tej
-      mennyiseg: 1.5
-      mertekegyseg: dl
+      mennyiseg: 1.5 dl
     - name: Tejszín
-      mennyiseg: 1
-      mertekegyseg: dl
+      mennyiseg: 1 dl
     - name: Bors
-      mennyiseg: 1
-      mertekegyseg: csipet
+      mennyiseg: 1 csipet
     - name: Vöröshagyma
-      mennyiseg: 2
-      mertekegyseg: db
+      mennyiseg: 2 db
     - name: Olíva olaj
-      mennyiseg: 2
-      mertekegyseg: ek
+      mennyiseg: 2 ek
     - name: Petrezselyem
-      mennyiseg: 1
-      mertekegyseg: ek
+      mennyiseg: 1 ek
 
 Amerikai káposztasaláta:
   defaultPortion: 8
   receptUrl: https://www.mindmegette.hu/amerikai-kaposztasalata-a-coleslaw-salata.recept/
   ingredients:
     - name: Sárgarépa
-      mennyiseg: 1
-      mertekegyseg: db
+      mennyiseg: 1 db
     - name: Lilakáposzta
-      mennyiseg: 0.5
-      mertekegyseg: db
+      mennyiseg: 0.5 db
     - name: Káposzta
-      mennyiseg: 1
-      mertekegyseg: db
+      mennyiseg: 1 db
     - name: Vöröshagyma
-      mennyiseg: 1
-      mertekegyseg: db
+      mennyiseg: 1 db
     - name: Tejföl
-      mennyiseg: 4
-      mertekegyseg: ek
+      mennyiseg: 4 ek
     - name: Majonéz
-      mennyiseg: 2
-      mertekegyseg: ek
+      mennyiseg: 2 ek
     - name: Mustár
-      mennyiseg: 1
-      mertekegyseg: tk
+      mennyiseg: 1 tk
     - name: Citrom
-      mennyiseg: 1
-      mertekegyseg: db
+      mennyiseg: 1 db
     - name: Só
-      mennyiseg: 2
-      mertekegyseg: csipet
+      mennyiseg: 2 csipet
     - name: Bors
-      mennyiseg: 2
-      mertekegyseg: csipet
+      mennyiseg: 2 csipet
     - name: Cukor
-      mennyiseg: 2
-      mertekegyseg: kvk
+      mennyiseg: 2 kvk
 
 Baconbe göngyölt mozzarellás csirkemell:
   defaultPortion: 4
   receptUrl: https://www.mindmegette.hu/baconbe-gongyolt-mozzarellas-csirkemell.recept/
   ingredients:
     - name: Csirkemell
-      mennyiseg: 50
-      mertekegyseg: dkg
+      mennyiseg: 50 dkg
     - name: Mozzarella sajt
-      mennyiseg: 20
-      mertekegyseg: dkg
+      mennyiseg: 20 dkg
     - name: Bacon (szeletelt)
-      mennyiseg: 20
-      mertekegyseg: dkg
+      mennyiseg: 20 dkg
     - name: Só
-      mennyiseg: 1
-      mertekegyseg: tk
+      mennyiseg: 1 tk
     - name: Bazsalikom
-      mennyiseg: 1
-      mertekegyseg: tk
+      mennyiseg: 1 tk
     - name: Olíva olaj
-      mennyiseg: 3
-      mertekegyseg: ek
+      mennyiseg: 3 ek
 
 Bögrés süti:
   defaultPortion: 2
   receptUrl: https://www.nosalty.hu/recept/bogreben-sult-suti-5-perc-alatt
   ingredients:
     - name: Finomliszt
-      mennyiseg: 4
-      mertekegyseg: ek
+      mennyiseg: 4 ek
     - name: Sütőpor
-      mennyiseg: 1
-      mertekegyseg: kk
+      mennyiseg: 1 kk
     - name: Porcukor
       # 4 ek helyett
-      mennyiseg: 2
-      mertekegyseg: ek
+      mennyiseg: 2 ek
     - name: Kakaópor
-      mennyiseg: 2
-      mertekegyseg: ek
+      mennyiseg: 2 ek
     - name: Tojás
-      mennyiseg: 1
-      mertekegyseg: db
+      mennyiseg: 1 db
     - name: Tej
-      mennyiseg: 3
-      mertekegyseg: ek
+      mennyiseg: 3 ek
     - name: Napraforgó olaj
       # 3 ek helyett
-      mennyiseg: 1
-      mertekegyseg: ek
+      mennyiseg: 1 ek
 
 Bolognai:
   defaultPortion: 4
   receptUrl: https://streetkitchen.hu/tesztapolc/ime-tokeletes-bolognai-spagetti/
   ingredients:
     - name: Olíva olaj
-      mennyiseg: 3
-      mertekegyseg: ek
+      mennyiseg: 3 ek
     - name: Vöröshagyma
-      mennyiseg: 1
-      mertekegyseg: db
+      mennyiseg: 1 db
     - name: Sárgarépa
-      mennyiseg: 0.5
-      mertekegyseg: db
+      mennyiseg: 0.5 db
     - name: Zellerszár
-      mennyiseg: 2
-      mertekegyseg: db
+      mennyiseg: 2 db
     - name: Darált hús
-      mennyiseg: 500
-      mertekegyseg: g
+      mennyiseg: 500 g
     - name: Vörösbor (száraz)
-      mennyiseg: 150
-      mertekegyseg: ml
+      mennyiseg: 150 ml
     - name: Paradicsom püré
-      mennyiseg: 250
-      mertekegyseg: ml
+      mennyiseg: 250 ml
     - name: Só
-      mennyiseg: 1
-      mertekegyseg: ek
+      mennyiseg: 1 ek
     - name: Bors
-      mennyiseg: 1
-      mertekegyseg: mk
+      mennyiseg: 1 mk
     - name: Szerecsendió
-      mennyiseg: 0.5
-      mertekegyseg: mk
+      mennyiseg: 0.5 mk
     - name: Babérlevél
-      mennyiseg: 2
-      mertekegyseg: db
+      mennyiseg: 2 db
     - name: Fokhagyma
-      mennyiseg: 2
-      mertekegyseg: gerezd
+      mennyiseg: 2 gerezd
     - name: Kakukkfű
-      mennyiseg: 1
-      mertekegyseg: csipet
+      mennyiseg: 1 csipet
     - name: Rozmaring
-      mennyiseg: 1
-      mertekegyseg: csipet
+      mennyiseg: 1 csipet
     - name: Worcester szósz
-      mennyiseg: 1
-      mertekegyseg: tk
+      mennyiseg: 1 tk
     - name: Tej
-      mennyiseg: 100
-      mertekegyseg: ml
+      mennyiseg: 100 ml
     - name: Spagetti tészta
-      mennyiseg: 400
-      mertekegyseg: g
+      mennyiseg: 400 g
     - name: Parmezán sajt
-      mennyiseg: 40
-      mertekegyseg: g
+      mennyiseg: 40 g
   comments:
     - 3 dl víz
 
@@ -192,102 +140,73 @@ Bulgur:
   receptUrl: https://eletszepitok.hu/igy-keszul-a-paradicsomos-bulgur-azaz-a-torok-rizs/
   ingredients:
     - name: Bulgur
-      mennyiseg: 30
-      mertekegyseg: dkg
+      mennyiseg: 30 dkg
     - name: Vöröshagyma
-      mennyiseg: 1
-      mertekegyseg: db
+      mennyiseg: 1 db
     - name: Paradicsom
-      mennyiseg: 2
-      mertekegyseg: db
+      mennyiseg: 2 db
     - name: Paprika
-      mennyiseg: 1
-      mertekegyseg: db
+      mennyiseg: 1 db
     - name: Olíva olaj
-      mennyiseg: 2
-      mertekegyseg: ek
+      mennyiseg: 2 ek
     - name: Húsleves kocka
-      mennyiseg: 1
-      mertekegyseg: db
+      mennyiseg: 1 db
     - name: Só
-      mennyiseg: 0.5
-      mertekegyseg: tk
+      mennyiseg: 0.5 tk
     - name: Bors
-      mennyiseg: 1
-      mertekegyseg: csipet
+      mennyiseg: 1 csipet
 
 Bundás csirke:
   defaultPortion: 4
   receptUrl: https://www.nosalty.hu/recept/puha-ropogos-fokhagymas-mezes-csirkemell
   ingredients:
     - name: Fokhagyma
-      mennyiseg: 3
-      mertekegyseg: gerezd
+      mennyiseg: 3 gerezd
     - name: Napraforgó olaj
-      mennyiseg: 2
-      mertekegyseg: dl
+      mennyiseg: 2 dl
     - name: Gyömbér por
-      mennyiseg: 1.5
-      mertekegyseg: tk
+      mennyiseg: 1.5 tk
     - name: Szerecsendió
-      mennyiseg: 1
-      mertekegyseg: tk
+      mennyiseg: 1 tk
     - name: Piros paprika
-      mennyiseg: 1
-      mertekegyseg: tk
+      mennyiseg: 1 tk
     - name: Zöldfűszer
-      mennyiseg: 1
-      mertekegyseg: tk
+      mennyiseg: 1 tk
     - name: Cayenne bors
-      mennyiseg: 0.5
-      mertekegyseg: tk
+      mennyiseg: 0.5 tk
     - name: Olíva olaj
-      mennyiseg: 2
-      mertekegyseg: ek
+      mennyiseg: 2 ek
     - name: Finomliszt
-      mennyiseg: 1
-      mertekegyseg: bögre
+      mennyiseg: 1 bögre
     - name: Méz
-      mennyiseg: 50
-      mertekegyseg: ml
+      mennyiseg: 50 ml
     - name: Szójaszósz
-      mennyiseg: 50
-      mertekegyseg: ml
+      mennyiseg: 50 ml
     - name: Csirkemell
-      mennyiseg: 4
-      mertekegyseg: db
+      mennyiseg: 4 db
     - name: Tojás
-      mennyiseg: 3
-      mertekegyseg: db
+      mennyiseg: 3 db
 
 Carbonara:
   defaultPortion: 2
   receptUrl: https://streetkitchen.hu/tesztapolc/az-eredeti-carbonara/
   ingredients:
     - name: Kolozsvári szalonna
-      mennyiseg: 150
-      mertekegyseg: g
+      mennyiseg: 150 g
     - name: Olíva olaj
-      mennyiseg: 2
-      mertekegyseg: ek
+      mennyiseg: 2 ek
     - name: Spagetti tészta
-      mennyiseg: 250
-      mertekegyseg: g
+      mennyiseg: 250 g
     - name: Tojás
-      mennyiseg: 4
-      mertekegyseg: db
+      mennyiseg: 4 db
     - name: Só
-      mennyiseg: 1
-      mertekegyseg: mk
+      mennyiseg: 1 mk
     - name: Bors
-      mennyiseg: 1
-      mertekegyseg: csipet
+      mennyiseg: 1 csipet
     - name: Parmezán sajt
-      mennyiseg: 80
-      mertekegyseg: g
+      mennyiseg: 80 g
     - name: Szerecsendió
-      mennyiseg: 1
-      mertekegyseg: csipet
+      mennyiseg: 1 csipet
   comments:
     - 150-200 ml tésztafőzővíz
 
@@ -296,67 +215,48 @@ Chilis bab:
   receptUrl: https://www.mindmegette.hu/chilis-bab.recept/
   ingredients:
     - name: Vöröshagyma
-      mennyiseg: 2
-      mertekegyseg: db
+      mennyiseg: 2 db
     - name: Napraforgó olaj
-      mennyiseg: 3
-      mertekegyseg: ek
+      mennyiseg: 3 ek
     - name: Fokhagyma
-      mennyiseg: 4
-      mertekegyseg: gerezd
+      mennyiseg: 4 gerezd
     - name: Piros paprika
-      mennyiseg: 1
-      mertekegyseg: tk
+      mennyiseg: 1 tk
     - name: Darált hús
-      mennyiseg: 50
-      mertekegyseg: dkg
+      mennyiseg: 50 dkg
     - name: Paradicsom püré
-      mennyiseg: 10
-      mertekegyseg: dkg
+      mennyiseg: 10 dkg
     - name: Chili
-      mennyiseg: 1
-      mertekegyseg: tk
+      mennyiseg: 1 tk
     - name: Vörösbab (konzerv)
-      mennyiseg: 2
-      mertekegyseg: konzerv
+      mennyiseg: 2 konzerv
     - name: Kukorica (konzerv)
-      mennyiseg: 1
-      mertekegyseg: konzerv
+      mennyiseg: 1 konzerv
 
 Citromos joghurtos csirkemell görögsalátával:
   defaultPortion: 4
   receptUrl: https://www.mindmegette.hu/citromos-joghurtos-csirkemell-gorogsalataval.recept/
   ingredients:
     - name: Citrom
-      mennyiseg: 1
-      mertekegyseg: db
+      mennyiseg: 1 db
     - name: Jégsaláta
-      mennyiseg: 1
-      mertekegyseg: db
+      mennyiseg: 1 db
     - name: Kígyóuborka
-      mennyiseg: 1
-      mertekegyseg: db
+      mennyiseg: 1 db
     - name: Koktélparadicsom
-      mennyiseg: 40
-      mertekegyseg: dkg
+      mennyiseg: 40 dkg
     - name: Lilahagyma
-      mennyiseg: 1
-      mertekegyseg: db
+      mennyiseg: 1 db
     - name: Olíva olaj
-      mennyiseg: 3
-      mertekegyseg: ek
+      mennyiseg: 3 ek
     - name: Oregánó
-      mennyiseg: 1
-      mertekegyseg: tk
+      mennyiseg: 1 tk
     - name: Csirkemell
-      mennyiseg: 50
-      mertekegyseg: dkg
+      mennyiseg: 50 dkg
     - name: Natúr joghurt
-      mennyiseg: 37.5
-      mertekegyseg: dkg
+      mennyiseg: 37.5 dkg
     - name: Feta sajt
-      mennyiseg: 20
-      mertekegyseg: dkg
+      mennyiseg: 20 dkg
 
 Csirkemellpaprikás:
   defaultPortion: 4
@@ -364,102 +264,73 @@ Csirkemellpaprikás:
   thumbnailUrl: https://www.mindmegette.hu/images/394/Social/lead_Social_csirkemellpaprikas.jpg
   ingredients:
     - name: Vöröshagyma
-      mennyiseg: 1
-      mertekegyseg: db
+      mennyiseg: 1 db
     - name: Fokhagyma
-      mennyiseg: 1
-      mertekegyseg: gerezd
+      mennyiseg: 1 gerezd
     - name: Paradicsom
-      mennyiseg: 1
-      mertekegyseg: db
+      mennyiseg: 1 db
     - name: Piros paprika
-      mennyiseg: 1
-      mertekegyseg: ek
+      mennyiseg: 1 ek
     - name: Fehérbor
-      mennyiseg: 1
-      mertekegyseg: dl
+      mennyiseg: 1 dl
     - name: Paprika
-      mennyiseg: 2
-      mertekegyseg: db
+      mennyiseg: 2 db
     - name: Csirkemell
-      mennyiseg: 1
-      mertekegyseg: kg
+      mennyiseg: 1 kg
     - name: Tejföl
-      mennyiseg: 1
-      mertekegyseg: ek
+      mennyiseg: 1 ek
     - name: Tejszín
-      mennyiseg: 1
-      mertekegyseg: dl
+      mennyiseg: 1 dl
 
 Csirkés spárgás rizottó:
   defaultPortion: 4
   receptUrl: https://femina.hu/recept/csirkes-spargas-rizotto-receptje/
   ingredients:
     - name: Csirkemell
-      mennyiseg: 35
-      mertekegyseg: dkg
+      mennyiseg: 35 dkg
     - name: Rizottó rizs
-      mennyiseg: 25
-      mertekegyseg: dkg
+      mennyiseg: 25 dkg
     - name: Spárga
-      mennyiseg: 8
-      mertekegyseg: db
+      mennyiseg: 8 db
     - name: Fehérbor
-      mennyiseg: 2.5
-      mertekegyseg: dl
+      mennyiseg: 2.5 dl
     - name: Parmezán sajt
-      mennyiseg: 5
-      mertekegyseg: dkg
+      mennyiseg: 5 dkg
     - name: Vöröshagyma
-      mennyiseg: 1
-      mertekegyseg: db
+      mennyiseg: 1 db
     - name: Húsleves kocka
-      mennyiseg: 2
-      mertekegyseg: db
+      mennyiseg: 2 db
     - name: Fokhagyma
-      mennyiseg: 2
-      mertekegyseg: gerezd
+      mennyiseg: 2 gerezd
     - name: Olíva olaj
-      mennyiseg: 3
-      mertekegyseg: ek
+      mennyiseg: 3 ek
     - name: Só
-      mennyiseg: 1
-      mertekegyseg: tk
+      mennyiseg: 1 tk
     - name: Bors
-      mennyiseg: 1
-      mertekegyseg: mk
+      mennyiseg: 1 mk
 
 Csőröge Fánk:
   defaultPortion: 4
   thumbnailUrl: https://www.mindmegette.hu/images/369/Social/lead_Social_klasszikus-csoroge-fank-recept.jpg
   ingredients:
     - name: Liszt
-      mennyiseg: 35
-      mertekegyseg: dkg
+      mennyiseg: 35 dkg
     - name: Vaj
-      mennyiseg: 1
-      mertekegyseg: ek
+      mennyiseg: 1 ek
     - name: Cukor
-      mennyiseg: 1
-      mertekegyseg: ek
+      mennyiseg: 1 ek
     - name: Só
-      mennyiseg: 1
-      mertekegyseg: csipet
+      mennyiseg: 1 csipet
     - name: Tojás
-      mennyiseg: 4
-      mertekegyseg: db
+      mennyiseg: 4 db
     - name: Tejföl
-      mennyiseg: 300
-      mertekegyseg: g
+      mennyiseg: 300 g
     - name: Szódabikarbóna
-      mennyiseg: 1
-      mertekegyseg: kk
+      mennyiseg: 1 kk
     - name: Ecet
-      mennyiseg: 1
-      mertekegyseg: csepp
+      mennyiseg: 1 csepp
     - name: Napraforgó olaj
-      mennyiseg: 2
-      mertekegyseg: dl
+      mennyiseg: 2 dl
   comments:
     - A vajat belemorzsoljuk a lisztbe.
     - Hozzáadjuk a cukrot és a sót.
@@ -475,88 +346,64 @@ Diós-almás sajtsaláta:
   receptUrl: https://www.nosalty.hu/recept/dios-almas-sajtsalata
   ingredients:
     - name: Tejföl
-      mennyiseg: 450
-      mertekegyseg: g
+      mennyiseg: 450 g
     - name: Majonéz
-      mennyiseg: 7
-      mertekegyseg: ek
+      mennyiseg: 7 ek
     - name: Mustár
-      mennyiseg: 1
-      mertekegyseg: ek
+      mennyiseg: 1 ek
     - name: Dió
-      mennyiseg: 100
-      mertekegyseg: g
+      mennyiseg: 100 g
     - name: Trappista sajt
-      mennyiseg: 20
-      mertekegyseg: dkg
+      mennyiseg: 20 dkg
     - name: Alma
-      mennyiseg: 2
-      mertekegyseg: db
+      mennyiseg: 2 db
     - name: Lilahagyma
-      mennyiseg: 1
-      mertekegyseg: db
+      mennyiseg: 1 db
     - name: Cukor
-      mennyiseg: 2
-      mertekegyseg: ek
+      mennyiseg: 2 ek
     - name: Só
-      mennyiseg: 1
-      mertekegyseg: tk
+      mennyiseg: 1 tk
     - name: Bors
-      mennyiseg: 1
-      mertekegyseg: kk
+      mennyiseg: 1 kk
     - name: Ecet
-      mennyiseg: 1
-      mertekegyseg: kk
+      mennyiseg: 1 kk
 
 Édesburgonya püré:
   defaultPortion: 2
   receptUrl: https://www.mindmegette.hu/edesburgonya-pure.recept/
   ingredients:
     - name: Édesburgonya
-      mennyiseg: 30
-      mertekegyseg: dkg
+      mennyiseg: 30 dkg
     - name: Só
-      mennyiseg: 1
-      mertekegyseg: csipet
+      mennyiseg: 1 csipet
     - name: Vaj
-      mennyiseg: 5
-      mertekegyseg: dkg
+      mennyiseg: 5 dkg
     - name: Fokhagyma
-      mennyiseg: 2
-      mertekegyseg: gerezd
+      mennyiseg: 2 gerezd
     - name: Szerecsendió
-      mennyiseg: 1
-      mertekegyseg: kh
+      mennyiseg: 1 kh
     - name: Mozzarella sajt
-      mennyiseg: 5
-      mertekegyseg: dkg
+      mennyiseg: 5 dkg
 
 Fasírt:
   defaultPortion: 4
   receptUrl: https://www.mindmegette.hu/fasirt-sutoben-sutve.recept/
   ingredients:
     - name: Darált hús
-      mennyiseg: 1
-      mertekegyseg: kg
+      mennyiseg: 1 kg
     - name: Tojás
-      mennyiseg: 2
-      mertekegyseg: db
+      mennyiseg: 2 db
     - name: Vöröshagyma
-      mennyiseg: 1
-      mertekegyseg: db
+      mennyiseg: 1 db
     - name: Fokhagyma
       # 1 fej fokhagyma recept szerint
-      mennyiseg: 3
-      mertekegyseg: gerezd
+      mennyiseg: 3 gerezd
     - name: Só
-      mennyiseg: 1
-      mertekegyseg: tk
+      mennyiseg: 1 tk
     - name: Bors
-      mennyiseg: 1
-      mertekegyseg: mk
+      mennyiseg: 1 mk
     - name: Zsemlemorzsa
-      mennyiseg: 50
-      mertekegyseg: g
+      mennyiseg: 50 g
   comments:
     - annyi zsemlemorzsát adunk hozzá, hogy golyókat tudjunk belőle formálni
 
@@ -565,64 +412,46 @@ Fokhagymával és mézzel sült sárgarépa:
   receptUrl: https://sobors.hu/receptek/fokhagymaval-mezzel-sult-sargarepa-recept/
   ingredients:
     - name: Sárgarépa
-      mennyiseg: 5
-      mertekegyseg: db
+      mennyiseg: 5 db
     - name: Fokhagyma
-      mennyiseg: 6
-      mertekegyseg: gerezd
+      mennyiseg: 6 gerezd
     - name: Méz
-      mennyiseg: 3
-      mertekegyseg: ek
+      mennyiseg: 3 ek
     - name: Olíva olaj
-      mennyiseg: 3
-      mertekegyseg: ek
+      mennyiseg: 3 ek
     - name: Só
-      mennyiseg: 1
-      mertekegyseg: tk
+      mennyiseg: 1 tk
     - name: Bors
-      mennyiseg: 1
-      mertekegyseg: csipet
+      mennyiseg: 1 csipet
 
 Frankfurti leves:
   defaultPortion: 8
   receptUrl: https://www.nosalty.hu/recept/frankfurti-leves-egyszeruen
   ingredients:
     - name: Sertészsír
-      mennyiseg: 1
-      mertekegyseg: ek
+      mennyiseg: 1 ek
     - name: Vöröshagyma
-      mennyiseg: 1
-      mertekegyseg: db
+      mennyiseg: 1 db
     - name: Fokhagyma
-      mennyiseg: 2
-      mertekegyseg: gerezd
+      mennyiseg: 2 gerezd
     - name: Fűszer paprika
-      mennyiseg: 1
-      mertekegyseg: ek
+      mennyiseg: 1 ek
     - name: Köménymag
-      mennyiseg: 1
-      mertekegyseg: tk
+      mennyiseg: 1 tk
     - name: Burgonya
-      mennyiseg: 4
-      mertekegyseg: db
+      mennyiseg: 4 db
     - name: Kelkáposzta
-      mennyiseg: 1
-      mertekegyseg: db
+      mennyiseg: 1 db
     - name: Virsli
-      mennyiseg: 10
-      mertekegyseg: dkg
+      mennyiseg: 10 dkg
     - name: Só
-      mennyiseg: 1
-      mertekegyseg: tk
+      mennyiseg: 1 tk
     - name: Bors
-      mennyiseg: 1
-      mertekegyseg: mk
+      mennyiseg: 1 mk
     - name: Tejföl
-      mennyiseg: 175
-      mertekegyseg: g
+      mennyiseg: 175 g
     - name: Finomliszt
-      mennyiseg: 1
-      mertekegyseg: ek
+      mennyiseg: 1 ek
   comments:
     - 2 l víz
 
@@ -631,101 +460,74 @@ Fűszeres csirkecsíkok:
   receptUrl: https://femina.hu/recept/fokhagymas-fuszeres-csirkecsikok/
   ingredients:
     - name: Csirkemell
-      mennyiseg: 2
-      mertekegyseg: db
+      mennyiseg: 2 db
     - name: Fokhagyma
-      mennyiseg: 2
-      mertekegyseg: gerezd
+      mennyiseg: 2 gerezd
     - name: Mustár
-      mennyiseg: 1
-      mertekegyseg: tk
+      mennyiseg: 1 tk
     - name: Fűszerkömény
-      mennyiseg: 1
-      mertekegyseg: kvk
+      mennyiseg: 1 kvk
     - name: Só
-      mennyiseg: 1
-      mertekegyseg: tk
+      mennyiseg: 1 tk
     - name: Bors
-      mennyiseg: 2
-      mertekegyseg: csipet
+      mennyiseg: 2 csipet
     - name: Olíva olaj
-      mennyiseg: 2
-      mertekegyseg: ek
+      mennyiseg: 2 ek
 
 Fűszeres csirkeszárnyak:
   defaultPortion: 4
   receptUrl: https://femina.hu/recept/fuszeres-csirkeszarnyak/
   ingredients:
     - name: Csirkeszárny
-      mennyiseg: 1
-      mertekegyseg: kg
+      mennyiseg: 1 kg
     - name: Napraforgó olaj
-      mennyiseg: 0.5
-      mertekegyseg: dl
+      mennyiseg: 0.5 dl
     - name: Fokhagyma
-      mennyiseg: 3
-      mertekegyseg: gerezd
+      mennyiseg: 3 gerezd
     - name: Piros paprika
-      mennyiseg: 1
-      mertekegyseg: tk
+      mennyiseg: 1 tk
     - name: Citrom
-      mennyiseg: 0.5
-      mertekegyseg: db
+      mennyiseg: 0.5 db
     - name: Só
-      mennyiseg: 1
-      mertekegyseg: tk
+      mennyiseg: 1 tk
     - name: Bors
-      mennyiseg: 1
-      mertekegyseg: mk
+      mennyiseg: 1 mk
     - name: Chili
-      mennyiseg: 1
-      mertekegyseg: mk
+      mennyiseg: 1 mk
     - name: Kakukkfű
-      mennyiseg: 1
-      mertekegyseg: mk
+      mennyiseg: 1 mk
 
 Fűszeres édesburgonya:
   defaultPortion: 4
   receptUrl: https://femina.hu/recept/fuszeres-edesburgonya-receptje/
   ingredients:
     - name: Édesburgonya
-      mennyiseg: 1
-      mertekegyseg: kg
+      mennyiseg: 1 kg
     - name: Olíva olaj
-      mennyiseg: 2
-      mertekegyseg: ek
+      mennyiseg: 2 ek
     - name: Lilahagyma
-      mennyiseg: 1
-      mertekegyseg: db
+      mennyiseg: 1 db
     - name: Rozmaring
       # 1 ág rozmaring
-      mennyiseg: 1
-      mertekegyseg: mk
+      mennyiseg: 1 mk
     - name: Só
-      mennyiseg: 1
-      mertekegyseg: tk
+      mennyiseg: 1 tk
     - name: Bors
-      mennyiseg: 1
-      mertekegyseg: csipet
+      mennyiseg: 1 csipet
 
 Görög bab:
   defaultPortion: 6
   ingredients:
     - name: Vöröshagyma
-      mennyiseg: 4
-      mertekegyseg: db
+      mennyiseg: 4 db
     - name: Sertéscomb
-      mennyiseg: 60
-      mertekegyseg: dkg
+      mennyiseg: 60 dkg
     - name: Zöldbab (mirelit)
-      mennyiseg: 2
-      mertekegyseg: kg
+      mennyiseg: 2 kg
     - name: Piros paprika
-      mennyiseg: 1
-      mertekegyseg: tk
+      mennyiseg: 1 tk
     - name: Paradicsom püré
-      mennyiseg: 3
-      mertekegyseg: tk
+      mennyiseg: 3 tk
   comments:
     - A hagymát apróra vágjuk, a húst felkockázzuk.
     - A hagymát kevés olajon üvegesre pároljuk.
@@ -742,103 +544,73 @@ Görögös húsos palacsinta:
   ingredients:
     # A palacsintához
     - name: Liszt
-      mennyiseg: 20
-      mertekegyseg: dkg
+      mennyiseg: 20 dkg
     - name: Tojás
-      mennyiseg: 2
-      mertekegyseg: db
+      mennyiseg: 2 db
     - name: Szódavíz
-      mennyiseg: 2
-      mertekegyseg: dl
+      mennyiseg: 2 dl
     - name: Tej
-      mennyiseg: 2
-      mertekegyseg: dl
+      mennyiseg: 2 dl
     - name: Só
-      mennyiseg: 2
-      mertekegyseg: csipet
+      mennyiseg: 2 csipet
     - name: Bors
-      mennyiseg: 2
-      mertekegyseg: csipet
+      mennyiseg: 2 csipet
     - name: Kakukkfű
-      mennyiseg: 1
-      mertekegyseg: mk
+      mennyiseg: 1 mk
     # A töltelékhez
     - name: Darált hús
-      mennyiseg: 500
-      mertekegyseg: g
+      mennyiseg: 500 g
     - name: Vöröshagyma
-      mennyiseg: 1
-      mertekegyseg: db
+      mennyiseg: 1 db
     - name: Fokhagyma
-      mennyiseg: 5
-      mertekegyseg: gerezd
+      mennyiseg: 5 gerezd
     - name: Főzőtejszín
-      mennyiseg: 3
-      mertekegyseg: dl
+      mennyiseg: 3 dl
     - name: Mustár
-      mennyiseg: 1
-      mertekegyseg: ek
+      mennyiseg: 1 ek
     - name: Só
-      mennyiseg: 1
-      mertekegyseg: kk
+      mennyiseg: 1 kk
     - name: Bors
-      mennyiseg: 1
-      mertekegyseg: kk
+      mennyiseg: 1 kk
     - name: Kakukkfű
-      mennyiseg: 1
-      mertekegyseg: kk
+      mennyiseg: 1 kk
     - name: Oregánó
-      mennyiseg: 1
-      mertekegyseg: kk
+      mennyiseg: 1 kk
     - name: Majoranna
-      mennyiseg: 1
-      mertekegyseg: kk
+      mennyiseg: 1 kk
     # fűszerkeverék vagy Fűszer paprika
     - name: Fűszerkeverék
-      mennyiseg: 1
-      mertekegyseg: kk
+      mennyiseg: 1 kk
     - name: Rozmaring
-      mennyiseg: 1
-      mertekegyseg: kk
+      mennyiseg: 1 kk
     - name: Cukor
-      mennyiseg: 1
-      mertekegyseg: csipet
+      mennyiseg: 1 csipet
     #  A tetejére
     - name: Tejföl
-      mennyiseg: 175
-      mertekegyseg: g
+      mennyiseg: 175 g
     - name: Mozzarella sajt
-      mennyiseg: 10
-      mertekegyseg: dkg
+      mennyiseg: 10 dkg
     - name: Fokhagyma
-      mennyiseg: 2
-      mertekegyseg: gerezd
+      mennyiseg: 2 gerezd
 
 Görög saláta:
   defaultPortion: 6
   receptUrl: https://www.nosalty.hu/recept/eredeti-gorog-salata
   ingredients:
     - name: Paradicsom
-      mennyiseg: 4
-      mertekegyseg: db
+      mennyiseg: 4 db
     - name: Kígyóuborka
-      mennyiseg: 1
-      mertekegyseg: db
+      mennyiseg: 1 db
     - name: Lilahagyma
-      mennyiseg: 4
-      mertekegyseg: db
+      mennyiseg: 4 db
     - name: Feta sajt
-      mennyiseg: 125
-      mertekegyseg: g
+      mennyiseg: 125 g
     - name: Olíva olaj
-      mennyiseg: 4
-      mertekegyseg: ek
+      mennyiseg: 4 ek
     - name: Citrom
-      mennyiseg: 1
-      mertekegyseg: db
+      mennyiseg: 1 db
     - name: Bazsalikom
-      mennyiseg: 1
-      mertekegyseg: tk
+      mennyiseg: 1 tk
   comments:
     - opcionális: 20 dkg Olívabogyó konzerv
 
@@ -848,127 +620,91 @@ Hortobágyi Palacsinta:
   thumbnailUrl: https://www.mindmegette.hu/images/379/Social/lead_Social_hortobagyi-husos-palacsinta-recept.jpg
   ingredients:
     - name: Vöröshagyma
-      mennyiseg: 1
-      mertekegyseg: db
+      mennyiseg: 1 db
     - name: Fokhagyma
-      mennyiseg: 1
-      mertekegyseg: gerezd
+      mennyiseg: 1 gerezd
     - name: Napraforgó olaj
-      mennyiseg: 1
-      mertekegyseg: ek
+      mennyiseg: 1 ek
     - name: Darált hús
-      mennyiseg: 50
-      mertekegyseg: dkg
+      mennyiseg: 50 dkg
     - name: Paprika
-      mennyiseg: 1
-      mertekegyseg: db
+      mennyiseg: 1 db
     - name: Paradicsom
-      mennyiseg: 1
-      mertekegyseg: db
+      mennyiseg: 1 db
     - name: Só
-      mennyiseg: 1
-      mertekegyseg: mk
+      mennyiseg: 1 mk
     - name: Bors
-      mennyiseg: 0.5
-      mertekegyseg: mk
+      mennyiseg: 0.5 mk
     - name: Piros paprika
-      mennyiseg: 1
-      mertekegyseg: mk
+      mennyiseg: 1 mk
     - name: Tejföl
-      mennyiseg: 400
-      mertekegyseg: g
+      mennyiseg: 400 g
     - name: Finomliszt
-      mennyiseg: 20
-      mertekegyseg: dkg
+      mennyiseg: 20 dkg
     - name: Szódavíz
-      mennyiseg: 2
-      mertekegyseg: dl
+      mennyiseg: 2 dl
     - name: Tej
-      mennyiseg: 2
-      mertekegyseg: dl
+      mennyiseg: 2 dl
     - name: Tojás
-      mennyiseg: 2
-      mertekegyseg: db
+      mennyiseg: 2 db
     - name: Só
-      mennyiseg: 1
-      mertekegyseg: csipet
+      mennyiseg: 1 csipet
 
 Illatos omlós csirkemell:
   defaultPortion: 4
   receptUrl: https://www.nosalty.hu/recept/illatos-omlos-csirkemell
   ingredients:
     - name: Csirkemell
-      mennyiseg: 60
-      mertekegyseg: dkg
+      mennyiseg: 60 dkg
     - name: Tojás
-      mennyiseg: 3
-      mertekegyseg: db
+      mennyiseg: 3 db
     - name: Só
       # só ízlés szerint
-      mennyiseg: 1
-      mertekegyseg: kk
+      mennyiseg: 1 kk
     - name: Bors
       # bors ízlés szerint
-      mennyiseg: 1
-      mertekegyseg: csipet
+      mennyiseg: 1 csipet
     - name: Keményítő
-      mennyiseg: 5
-      mertekegyseg: ek
+      mennyiseg: 5 ek
     - name: Napraforgó olaj
-      mennyiseg: 4
-      mertekegyseg: dl
+      mennyiseg: 4 dl
     # A mártáshoz
     - name: Ketchup
-      mennyiseg: 200
-      mertekegyseg: ml
+      mennyiseg: 200 ml
     - name: Balzsamecet (fehér)
-      mennyiseg: 0.5
-      mertekegyseg: dl
+      mennyiseg: 0.5 dl
     - name: Méz
-      mennyiseg: 0.5
-      mertekegyseg: dl
+      mennyiseg: 0.5 dl
     - name: Szójaszósz
-      mennyiseg: 3
-      mertekegyseg: ek
+      mennyiseg: 3 ek
     - name: Gyömbér
-      mennyiseg: 1
-      mertekegyseg: kk
+      mennyiseg: 1 kk
     - name: Fokhagyma
-      mennyiseg: 1
-      mertekegyseg: gerezd
+      mennyiseg: 1 gerezd
     - name: Vöröshagyma
-      mennyiseg: 1
-      mertekegyseg: db
+      mennyiseg: 1 db
     - name: Só
       # só ízlés szerint
-      mennyiseg: 1
-      mertekegyseg: csipet
+      mennyiseg: 1 csipet
 
 Kefíres csirke:
   defaultPortion: 4
   receptUrl: http://chiliesvanilia.blogspot.com/2016/08/szuperropogos-rantott-csirke-husz-perc.html
   ingredients:
     - name: Piros paprika
-      mennyiseg: 1
-      mertekegyseg: tk
+      mennyiseg: 1 tk
     - name: Fűszerkeverék
-      mennyiseg: 1
-      mertekegyseg: ek
+      mennyiseg: 1 ek
     - name: Napraforgó olaj
-      mennyiseg: 4
-      mertekegyseg: dl
+      mennyiseg: 4 dl
     - name: Liszt
-      mennyiseg: 25
-      mertekegyseg: dkg
+      mennyiseg: 25 dkg
     - name: Sütőpor
-      mennyiseg: 1
-      mertekegyseg: ek
+      mennyiseg: 1 ek
     - name: Csirkemell
-      mennyiseg: 50
-      mertekegyseg: dkg
+      mennyiseg: 50 dkg
     - name: Kefír
-      mennyiseg: 3
-      mertekegyseg: dl
+      mennyiseg: 3 dl
 
 Kínai szezámmagos csirke:
   defaultPortion: 4
@@ -976,70 +712,51 @@ Kínai szezámmagos csirke:
   ingredients:
     # a bundához
     - name: Napraforgó olaj
-      mennyiseg: 1
-      mertekegyseg: ek
+      mennyiseg: 1 ek
     # a sütéshez
     - name: Napraforgó olaj
-      mennyiseg: 3
-      mertekegyseg: dl
+      mennyiseg: 3 dl
     # chili ízlés szerint
     - name: Chili
-      mennyiseg: 1
-      mertekegyseg: mk
+      mennyiseg: 1 mk
     - name: Sütőpor
-      mennyiseg: 1.5
-      mertekegyseg: kk
+      mennyiseg: 1.5 kk
     - name: Keményítő
-      mennyiseg: 3
-      mertekegyseg: ek
+      mennyiseg: 3 ek
     - name: Méz
-      mennyiseg: 2
-      mertekegyseg: tk
+      mennyiseg: 2 tk
     - name: Szezámmag
-      mennyiseg: 3
-      mertekegyseg: ek
+      mennyiseg: 3 ek
     - name: Finomliszt
-      mennyiseg: 6
-      mertekegyseg: ek
+      mennyiseg: 6 ek
     - name: Csirkemell
-      mennyiseg: 1
-      mertekegyseg: db
+      mennyiseg: 1 db
     - name: Tojás
-      mennyiseg: 1
-      mertekegyseg: db
+      mennyiseg: 1 db
     - name: Ketchup
-      mennyiseg: 100
-      mertekegyseg: g
+      mennyiseg: 100 g
 
 Krumpli főzelék fasírttal:
   defaultPortion: 4
   receptUrl: https://www.nosalty.hu/recept/legegyszerubb-krumplifozelek
   ingredients:
     - name: Napraforgó olaj
-      mennyiseg: 2
-      mertekegyseg: ek
+      mennyiseg: 2 ek
     - name: Fűszer paprika
-      mennyiseg: 1
-      mertekegyseg: tk
+      mennyiseg: 1 tk
     - name: Burgonya
-      mennyiseg: 70
-      mertekegyseg: dkg
+      mennyiseg: 70 dkg
     - name: Majoranna
-      mennyiseg: 2
-      mertekegyseg: ek
+      mennyiseg: 2 ek
     - name: Babérlevél
-      mennyiseg: 3
-      mertekegyseg: db
+      mennyiseg: 3 db
     # só ízlés szerint
     - name: Só
-      mennyiseg: 1
-      mertekegyseg: kk
+      mennyiseg: 1 kk
     - name: Tejföl
-      mennyiseg: 2
-      mertekegyseg: dl
+      mennyiseg: 2 dl
     - name: Finomliszt
-      mennyiseg: 1.5
-      mertekegyseg: dkg
+      mennyiseg: 1.5 dkg
     # 4 dl víz (kb.)
     - ref: Fasírt
 
@@ -1048,21 +765,16 @@ Krumplipüré:
   receptUrl: https://www.mindmegette.hu/krumplipure-alaprecept.recept/
   ingredients:
     - name: Krumpli
-      mennyiseg: 1
-      mertekegyseg: kg
+      mennyiseg: 1 kg
     # só ízlés szerint
     - name: Só
-      mennyiseg: 1
-      mertekegyseg: kk
+      mennyiseg: 1 kk
     - name: Tejföl
-      mennyiseg: 1
-      mertekegyseg: dl
+      mennyiseg: 1 dl
     - name: Bors
-      mennyiseg: 1
-      mertekegyseg: csipet
+      mennyiseg: 1 csipet
     - name: Szerecsendió
-      mennyiseg: 1
-      mertekegyseg: csipet
+      mennyiseg: 1 csipet
   comments:
     - 1 dl tejföl vagy 2 dl tej
 
@@ -1071,90 +783,65 @@ Lazac:
   receptUrl: https://www.nosalty.hu/recept/lazac-egyszeruen
   ingredients:
     - name: Lazac
-      mennyiseg: 36
-      mertekegyseg: dkg
+      mennyiseg: 36 dkg
     - name: Só
-      mennyiseg: 2
-      mertekegyseg: csipet
+      mennyiseg: 2 csipet
     - name: Bors
-      mennyiseg: 1
-      mertekegyseg: csipet
+      mennyiseg: 1 csipet
     - name: Rozmaring
-      mennyiseg: 2
-      mertekegyseg: csipet
+      mennyiseg: 2 csipet
     - name: Kakukkfű
-      mennyiseg: 2
-      mertekegyseg: csipet
+      mennyiseg: 2 csipet
     - name: Napraforgó olaj
-      mennyiseg: 2
-      mertekegyseg: ek
+      mennyiseg: 2 ek
     - name: Vaj
-      mennyiseg: 1
-      mertekegyseg: ek
+      mennyiseg: 1 ek
 
 Lazac brokkolival:
   defaultPortion: 4
   receptUrl: https://www.nosalty.hu/recept/lazac-brokkolival
   ingredients:
     - name: Lazac
-      mennyiseg: 40
-      mertekegyseg: dkg
+      mennyiseg: 40 dkg
     - name: Brokkoli
-      mennyiseg: 1
-      mertekegyseg: db
+      mennyiseg: 1 db
     - name: Só
-      mennyiseg: 2
-      mertekegyseg: csipet
+      mennyiseg: 2 csipet
     - name: Bors
-      mennyiseg: 1
-      mertekegyseg: csipet
+      mennyiseg: 1 csipet
     - name: Citrombors
-      mennyiseg: 1
-      mertekegyseg: csipet
+      mennyiseg: 1 csipet
     - name: Olíva olaj
-      mennyiseg: 2
-      mertekegyseg: ek
+      mennyiseg: 2 ek
     - name: Vaj
-      mennyiseg: 1
-      mertekegyseg: tk
+      mennyiseg: 1 tk
     - name: Petrezselyem
-      mennyiseg: 1
-      mertekegyseg: mk
+      mennyiseg: 1 mk
 
 Lazacos tagliatelle:
   defaultPortion: 4
   receptUrl: https://www.nosalty.hu/recept/lazacos-tagliatelle
   ingredients:
     - name: Olíva olaj
-      mennyiseg: 0.5
-      mertekegyseg: dl
+      mennyiseg: 0.5 dl
     - name: Lazac
-      mennyiseg: 250
-      mertekegyseg: g
+      mennyiseg: 250 g
     - name: Fokhagyma
-      mennyiseg: 4
-      mertekegyseg: gerezd
+      mennyiseg: 4 gerezd
     - name: Fehérbor
-      mennyiseg: 1
-      mertekegyseg: dl
+      mennyiseg: 1 dl
     - name: Paradicsom püré
-      mennyiseg: 2
-      mertekegyseg: dl
+      mennyiseg: 2 dl
     - name: Főzőtejszín
-      mennyiseg: 1.5
-      mertekegyseg: dl
+      mennyiseg: 1.5 dl
     - name: Tagliatelle tészta
-      mennyiseg: 0.5
-      mertekegyseg: kg
+      mennyiseg: 0.5 kg
     - name: Só
-      mennyiseg: 1
-      mertekegyseg: tk
+      mennyiseg: 1 tk
     - name: Bors
-      mennyiseg: 1
-      mertekegyseg: tk
+      mennyiseg: 1 tk
     - name: Petrezselyem
-      mennyiseg: 5
-      mertekegyseg: g
+      mennyiseg: 5 g
   comments:
     - A recept ír még 100g füstölt lazacot is, de azt szándékosan nem tartalmazza
     - 1 dl víz
@@ -1165,79 +852,57 @@ Lecsó:
   receptUrl: https://www.mindmegette.hu/lecso.recept/
   ingredients:
     - name: Paradicsom
-      mennyiseg: 40
-      mertekegyseg: dkg
+      mennyiseg: 40 dkg
     - name: Paprika
-      mennyiseg: 80
-      mertekegyseg: dkg
+      mennyiseg: 80 dkg
     - name: Vöröshagyma
-      mennyiseg: 2
-      mertekegyseg: db
+      mennyiseg: 2 db
     - name: Kolozsvári szalonna
-      mennyiseg: 5
-      mertekegyseg: dkg
+      mennyiseg: 5 dkg
     - name: Napraforgó olaj
-      mennyiseg: 2
-      mertekegyseg: ek
+      mennyiseg: 2 ek
     - name: Piros paprika
-      mennyiseg: 1
-      mertekegyseg: ek
+      mennyiseg: 1 ek
     - name: Só
-      mennyiseg: 1
-      mertekegyseg: tk
+      mennyiseg: 1 tk
 
 Mézes-chilis csirkesaláta:
   defaultPortion: 2
   receptUrl: https://www.nosalty.hu/recept/mezes-chilis-csirkesalata
   ingredients:
     - name: Csirkemell
-      mennyiseg: 25
-      mertekegyseg: dkg
+      mennyiseg: 25 dkg
     - name: Kínai kel
-      mennyiseg: 25
-      mertekegyseg: dkg
+      mennyiseg: 25 dkg
     - name: Kaliforniai paprika (piros)
-      mennyiseg: 0.5
-      mertekegyseg: db
+      mennyiseg: 0.5 db
     - name: Sárgarépa
-      mennyiseg: 1
-      mertekegyseg: db
+      mennyiseg: 1 db
     - name: Lilahagyma
-      mennyiseg: 0.3
-      mertekegyseg: db
+      mennyiseg: 0.3 db
     - name: Chili
-      mennyiseg: 0.5
-      mertekegyseg: tk
+      mennyiseg: 0.5 tk
     # só ízlés szerint
     - name: Só
-      mennyiseg: 2
-      mertekegyseg: csipet
+      mennyiseg: 2 csipet
     # bors ízlés szerint
     - name: Bors
-      mennyiseg: 1
-      mertekegyseg: csipet
+      mennyiseg: 1 csipet
     - name: Méz
-      mennyiseg: 1
-      mertekegyseg: ek
+      mennyiseg: 1 ek
     - name: Mogyoró olaj
-      mennyiseg: 1
-      mertekegyseg: ek
+      mennyiseg: 1 ek
     # Az öntethez
     - name: Szezám olaj
-      mennyiseg: 6
-      mertekegyseg: ek
+      mennyiseg: 6 ek
     - name: Rizsecet
-      mennyiseg: 2
-      mertekegyseg: ek
+      mennyiseg: 2 ek
     - name: Só
-      mennyiseg: 2
-      mertekegyseg: csipet
+      mennyiseg: 2 csipet
     - name: Bors
-      mennyiseg: 1
-      mertekegyseg: csipet
+      mennyiseg: 1 csipet
     - name: Fokhagyma
-      mennyiseg: 1
-      mertekegyseg: gerezd
+      mennyiseg: 1 gerezd
   comments:
     - Az öntethez:
       - 6 ek Szezám olaj
@@ -1251,59 +916,43 @@ Mézes-mustáros csirkemell:
   receptUrl: https://www.mindmegette.hu/mezes-mustaros-csirkemell-video.recept/
   ingredients:
     - name: Csirkemell
-      mennyiseg: 50
-      mertekegyseg: dkg
+      mennyiseg: 50 dkg
     - name: Liszt
-      mennyiseg: 3
-      mertekegyseg: ek
+      mennyiseg: 3 ek
     - name: Olíva olaj
-      mennyiseg: 3
-      mertekegyseg: ek
+      mennyiseg: 3 ek
     # 3 dl víz
     - name: Fokhagyma
-      mennyiseg: 3
-      mertekegyseg: gerezd
+      mennyiseg: 3 gerezd
     - name: Só
-      mennyiseg: 1
-      mertekegyseg: kk
+      mennyiseg: 1 kk
     - name: Fűszer paprika
-      mennyiseg: 1
-      mertekegyseg: tk
+      mennyiseg: 1 tk
     - name: Méz
-      mennyiseg: 5
-      mertekegyseg: ek
+      mennyiseg: 5 ek
     - name: Mustár
-      mennyiseg: 5
-      mertekegyseg: ek
+      mennyiseg: 5 ek
 
 Olaszos csirke:
   defaultPortion: 4
   receptUrl: https://www.nosalty.hu/recept/olaszos-csirke-tepsiben
   ingredients:
     - name: Csirkemell
-      mennyiseg: 2
-      mertekegyseg: db
+      mennyiseg: 2 db
     - name: Paradicsom
-      mennyiseg: 0.5
-      mertekegyseg: kg
+      mennyiseg: 0.5 kg
     - name: Trappista sajt
-      mennyiseg: 30
-      mertekegyseg: dkg
+      mennyiseg: 30 dkg
     - name: Oregánó
-      mennyiseg: 4.5
-      mertekegyseg: g
+      mennyiseg: 4.5 g
     - name: Bazsalikom
-      mennyiseg: 2.5
-      mertekegyseg: g
+      mennyiseg: 2.5 g
     - name: Só
-      mennyiseg: 2
-      mertekegyseg: csipet
+      mennyiseg: 2 csipet
     - name: Bors
-      mennyiseg: 1
-      mertekegyseg: csipet
+      mennyiseg: 1 csipet
     - name: Napraforgó olaj
-      mennyiseg: 1
-      mertekegyseg: ek
+      mennyiseg: 1 ek
 
 Pad thai:
   defaultPortion: 2
@@ -1311,165 +960,119 @@ Pad thai:
   thumbnailUrl: https://static.streetkitchen.hu/live/uploads/2019/03/zoli_padthai-ekeszitese-01_kicsi-3-767x915.jpg
   ingredients:
     - name: Vöröshagyma
-      mennyiseg: 1
-      mertekegyseg: db
+      mennyiseg: 1 db
     - name: Fokhagyma
-      mennyiseg: 2
-      mertekegyseg: gerezd
+      mennyiseg: 2 gerezd
     - name: Gyömbér
-      mennyiseg: 1
-      mertekegyseg: db
+      mennyiseg: 1 db
     - name: Chili
-      mennyiseg: 1
-      mertekegyseg: mk
+      mennyiseg: 1 mk
     - name: Csirkemell
-      mennyiseg: 200
-      mertekegyseg: g
+      mennyiseg: 200 g
     - name: Pak choi
-      mennyiseg: 0.5
-      mertekegyseg: db
+      mennyiseg: 0.5 db
     - name: Rizs tészta
-      mennyiseg: 150
-      mertekegyseg: g
+      mennyiseg: 150 g
     - name: Szezám olaj
-      mennyiseg: 2
-      mertekegyseg: ek
+      mennyiseg: 2 ek
     - name: Napraforgó olaj
-      mennyiseg: 5
-      mertekegyseg: ek
+      mennyiseg: 5 ek
     - name: Tojás
-      mennyiseg: 2
-      mertekegyseg: db
+      mennyiseg: 2 db
     - name: Mogyoró
-      mennyiseg: 100
-      mertekegyseg: g
+      mennyiseg: 100 g
     - name: Lime
-      mennyiseg: 0.5
-      mertekegyseg: db
+      mennyiseg: 0.5 db
     # A marinádhoz
     - name: Tamarind szósz
-      mennyiseg: 2
-      mertekegyseg: tk
+      mennyiseg: 2 tk
     - name: Hal szósz
-      mennyiseg: 0.5
-      mertekegyseg: tk
+      mennyiseg: 0.5 tk
     - name: Szezám olaj
-      mennyiseg: 1
-      mertekegyseg: ek
+      mennyiseg: 1 ek
     # 2-3 ek víz
     - name: Cukor
-      mennyiseg: 1
-      mertekegyseg: tk
+      mennyiseg: 1 tk
 
 Palacsinta:
   defaultPortion: 4
   receptUrl: https://www.nosalty.hu/recept/palacsinta-alaprecept
   ingredients:
     - name: Tojás
-      mennyiseg: 3
-      mertekegyseg: db
+      mennyiseg: 3 db
     - name: Cukor
-      mennyiseg: 2
-      mertekegyseg: ek
+      mennyiseg: 2 ek
     - name: Vaníliás cukor
-      mennyiseg: 2
-      mertekegyseg: g
+      mennyiseg: 2 g
     - name: Finomliszt
-      mennyiseg: 240
-      mertekegyseg: g
+      mennyiseg: 240 g
     - name: Tej
-      mennyiseg: 2.5
-      mertekegyseg: dl
+      mennyiseg: 2.5 dl
     - name: Szódavíz
-      mennyiseg: 2.5
-      mertekegyseg: dl
+      mennyiseg: 2.5 dl
     - name: Napraforgó olaj
-      mennyiseg: 0.5
-      mertekegyseg: dl
+      mennyiseg: 0.5 dl
 
 Paprikás krumpli:
   defaultPortion: 4
   receptUrl: https://www.nosalty.hu/recept/paprikas-krumpli-kolbasszal
   ingredients:
     - name: Burgonya
-      mennyiseg: 1
-      mertekegyseg: kg
+      mennyiseg: 1 kg
     - name: Kolbász
-      mennyiseg: 15
-      mertekegyseg: dkg
+      mennyiseg: 15 dkg
     - name: Virsli
-      mennyiseg: 20
-      mertekegyseg: dkg
+      mennyiseg: 20 dkg
     - name: Vöröshagyma
-      mennyiseg: 1
-      mertekegyseg: db
+      mennyiseg: 1 db
     - name: Fokhagyma
-      mennyiseg: 2
-      mertekegyseg: gerezd
+      mennyiseg: 2 gerezd
     - name: Olíva olaj
-      mennyiseg: 4
-      mertekegyseg: ek
+      mennyiseg: 4 ek
     - name: Fűszer paprika
-      mennyiseg: 2
-      mertekegyseg: tk
+      mennyiseg: 2 tk
     - name: Só
-      mennyiseg: 1
-      mertekegyseg: tk
+      mennyiseg: 1 tk
     - name: Bors
-      mennyiseg: 1
-      mertekegyseg: mk
+      mennyiseg: 1 mk
 
 Paradicsomos tészta:
   defaultPortion: 4
   receptUrl: https://www.mindmegette.hu/nagyon-kremes-paradicsomos-teszta-husmentesen.recept/
   ingredients:
     - name: Olíva olaj
-      mennyiseg: 2
-      mertekegyseg: ek
+      mennyiseg: 2 ek
     - name: Vöröshagyma
-      mennyiseg: 1
-      mertekegyseg: db
+      mennyiseg: 1 db
     - name: Fokhagyma
-      mennyiseg: 2
-      mertekegyseg: gerezd
+      mennyiseg: 2 gerezd
     - name: Majoranna
-      mennyiseg: 1
-      mertekegyseg: mk
+      mennyiseg: 1 mk
     - name: Bazsalikom
-      mennyiseg: 1
-      mertekegyseg: mk
+      mennyiseg: 1 mk
     - name: Só
-      mennyiseg: 1
-      mertekegyseg: tk
+      mennyiseg: 1 tk
     - name: Bors
-      mennyiseg: 1
-      mertekegyseg: csipet
+      mennyiseg: 1 csipet
     - name: Főzőtejszín
-      mennyiseg: 2
-      mertekegyseg: dl
+      mennyiseg: 2 dl
     - name: Paradicsom (konzerv)
-      mennyiseg: 45
-      mertekegyseg: dkg
+      mennyiseg: 45 dkg
     - name: Parmezán sajt
-      mennyiseg: 10
-      mertekegyseg: dkg
+      mennyiseg: 10 dkg
     - name: Fusilli tészta
-      mennyiseg: 40
-      mertekegyseg: dkg
+      mennyiseg: 40 dkg
 
 Pizza:
   defaultPortion: 2
   receptUrl: https://www.nosalty.hu/recept/pizzateszta-jamie-oliver-tol
   ingredients:
     - name: Felvágott
-      mennyiseg: 15
-      mertekegyseg: dkg
+      mennyiseg: 15 dkg
     - name: Mozzarella sajt (reszelt)
-      mennyiseg: 150
-      mertekegyseg: g
+      mennyiseg: 150 g
     - name: Ketchup
-      mennyiseg: 50
-      mertekegyseg: g
+      mennyiseg: 50 g
     - ref: Pizzatészta
 
 Pizzatészta:
@@ -1477,171 +1080,127 @@ Pizzatészta:
   receptUrl: https://www.nosalty.hu/recept/pizzateszta-jamie-oliver-tol
   ingredients:
     - name: Finomliszt
-      mennyiseg: 500
-      mertekegyseg: g
+      mennyiseg: 500 g
     - name: Só
-      mennyiseg: 0.5
-      mertekegyseg: ek
+      mennyiseg: 0.5 ek
     - name: Cukor
-      mennyiseg: 0.5
-      mertekegyseg: ek
+      mennyiseg: 0.5 ek
     - name: Olíva olaj
-      mennyiseg: 2
-      mertekegyseg: ek
+      mennyiseg: 2 ek
     - name: Élesztő
-      mennyiseg: 7
-      mertekegyseg: g
+      mennyiseg: 7 g
 
 Póréhagyma leves:
   defaultPortion: 4
   receptUrl: https://www.nosalty.hu/recept/klasszikus-porehagyma-kremleves
   ingredients:
     - name: Póréhagyma
-      mennyiseg: 2
-      mertekegyseg: db
+      mennyiseg: 2 db
     - name: Krumpli
-      mennyiseg: 2
-      mertekegyseg: db
+      mennyiseg: 2 db
     - name: Zellerszár
-      mennyiseg: 1
-      mertekegyseg: db
+      mennyiseg: 1 db
     - name: Húsleves kocka
-      mennyiseg: 1
-      mertekegyseg: db
+      mennyiseg: 1 db
     - name: Vaj
-      mennyiseg: 3
-      mertekegyseg: dkg
+      mennyiseg: 3 dkg
     - name: Habtejszín
-      mennyiseg: 200
-      mertekegyseg: ml
+      mennyiseg: 200 ml
 
 Rakott krumpli:
   defaultPortion: 4
   receptUrl: https://www.mindmegette.hu/rakott-krumpli.recept/
   ingredients:
     - name: Krumpli
-      mennyiseg: 1
-      mertekegyseg: kg
+      mennyiseg: 1 kg
     - name: Tojás
-      mennyiseg: 6
-      mertekegyseg: db
+      mennyiseg: 6 db
     - name: Só
-      mennyiseg: 1
-      mertekegyseg: tk
+      mennyiseg: 1 tk
     - name: Kolbász
-      mennyiseg: 10
-      mertekegyseg: dkg
+      mennyiseg: 10 dkg
     - name: Tejföl
-      mennyiseg: 5
-      mertekegyseg: dl
+      mennyiseg: 5 dl
     - name: Vaj
-      mennyiseg: 2
-      mertekegyseg: tk
+      mennyiseg: 2 tk
     - name: Bacon (kockázott)
-      mennyiseg: 10
-      mertekegyseg: dkg
+      mennyiseg: 10 dkg
 
 Rántotta:
   defaultPortion: 2
   ingredients:
     - name: Kenyér
-      mennyiseg: 10
-      mertekegyseg: dkg
+      mennyiseg: 10 dkg
     - name: Tojás
-      mennyiseg: 6
-      mertekegyseg: db
+      mennyiseg: 6 db
     - name: Só
-      mennyiseg: 1
-      mertekegyseg: tk
+      mennyiseg: 1 tk
     - name: Bors
-      mennyiseg: 1
-      mertekegyseg: csipet
+      mennyiseg: 1 csipet
 
 Reggeli:
   defaultPortion: 4
   ingredients:
     - name: Kenyér
-      mennyiseg: 0.5
-      mertekegyseg: kg
+      mennyiseg: 0.5 kg
     - name: Felvágott
-      mennyiseg: 40
-      mertekegyseg: dkg
+      mennyiseg: 40 dkg
     - name: Gouda sajt
-      mennyiseg: 20
-      mertekegyseg: dkg
+      mennyiseg: 20 dkg
     - name: Tej
-      mennyiseg: 1
-      mertekegyseg: l
+      mennyiseg: 1 l
     - name: Koktélparadicsom
-      mennyiseg: 20
-      mertekegyseg: dkg
+      mennyiseg: 20 dkg
     - name: Kígyóuborka
-      mennyiseg: 1
-      mertekegyseg: db
+      mennyiseg: 1 db
 
 Retkes uborka saláta:
   defaultPortion: 4
   receptUrl: https://natashaskitchen.com/cucumber-radish-salad-recipe/
   ingredients:
     - name: Kígyóuborka
-      mennyiseg: 1
-      mertekegyseg: db
+      mennyiseg: 1 db
     - name: Retek
-      mennyiseg: 20
-      mertekegyseg: db
+      mennyiseg: 20 db
     - name: Csemegehagyma
-      mennyiseg: 20
-      mertekegyseg: db
+      mennyiseg: 20 db
     - name: Tejföl
-      mennyiseg: 250
-      mertekegyseg: ml
+      mennyiseg: 250 ml
     - name: Só
-      mennyiseg: 1
-      mertekegyseg: tk
+      mennyiseg: 1 tk
 
 Rizs:
   defaultPortion: 4
   ingredients:
     - name: Rizs
-      mennyiseg: 200
-      mertekegyseg: g
+      mennyiseg: 200 g
     - name: Só
-      mennyiseg: 1
-      mertekegyseg: kk
+      mennyiseg: 1 kk
     - name: Bors
-      mennyiseg: 1
-      mertekegyseg: csipet
+      mennyiseg: 1 csipet
 
 Rizskoch:
   defaultPortion: 4
   receptUrl: https://streetkitchen.hu/meguszos-sutik/rizskoch-baracklekvarral/
   ingredients:
     - name: Citrom
-      mennyiseg: 0.5
-      mertekegyseg: db
+      mennyiseg: 0.5 db
     - name: Rizs
-      mennyiseg: 250
-      mertekegyseg: g
+      mennyiseg: 250 g
     - name: Vaníliás cukor
-      mennyiseg: 250
-      mertekegyseg: g
+      mennyiseg: 250 g
     - name: Cukor
-      mennyiseg: 130
-      mertekegyseg: g
+      mennyiseg: 130 g
     # porcukor ízlés szerint
     - name: Porcukor
-      mennyiseg: 100
-      mertekegyseg: g
+      mennyiseg: 100 g
     # baracklekvár ízlés szerint
     - name: Baracklekvár
-      mennyiseg: 150
-      mertekegyseg: g
+      mennyiseg: 150 g
     - name: Tojás
-      mennyiseg: 5
-      mertekegyseg: db
+      mennyiseg: 5 db
     - name: Tej
-      mennyiseg: 8
-      mertekegyseg: dl
+      mennyiseg: 8 dl
   comments:
     - porcukor ízlés szerint
     - baracklekvár ízlés szerint
@@ -1651,67 +1210,48 @@ Serpenyős csirkemell:
   receptUrl: https://femina.hu/recept/serpenyos-csirkemell/
   ingredients:
     - name: Csirkemell
-      mennyiseg: 60
-      mertekegyseg: dkg
+      mennyiseg: 60 dkg
     - name: Olíva olaj
-      mennyiseg: 4
-      mertekegyseg: ek
+      mennyiseg: 4 ek
     - name: Fokhagyma
-      mennyiseg: 2
-      mertekegyseg: gerezd
+      mennyiseg: 2 gerezd
     - name: Póréhagyma
-      mennyiseg: 1
-      mertekegyseg: db
+      mennyiseg: 1 db
     - name: Petrezselyem
-      mennyiseg: 1
-      mertekegyseg: tk
+      mennyiseg: 1 tk
     - name: Só
-      mennyiseg: 0.5
-      mertekegyseg: tk
+      mennyiseg: 0.5 tk
     - name: Bors
-      mennyiseg: 0.5
-      mertekegyseg: mk
+      mennyiseg: 0.5 mk
 
 Szerzetesek eledele:
   defaultPortion: 2
   receptUrl: https://streetkitchen.hu/azsiai-etelek/szerzetesek-eledele/
   ingredients:
     - name: Brokkoli
-      mennyiseg: 200
-      mertekegyseg: g
+      mennyiseg: 200 g
     - name: Kínai kel
-      mennyiseg: 100
-      mertekegyseg: g
+      mennyiseg: 100 g
     - name: Sárgarépa
-      mennyiseg: 1
-      mertekegyseg: db
+      mennyiseg: 1 db
     - name: Gyömbér
-      mennyiseg: 1
-      mertekegyseg: db
+      mennyiseg: 1 db
     - name: Fokhagyma
-      mennyiseg: 2
-      mertekegyseg: gerezd
+      mennyiseg: 2 gerezd
     - name: Étolaj
-      mennyiseg: 2
-      mertekegyseg: ek
+      mennyiseg: 2 ek
     - name: Só
-      mennyiseg: 1
-      mertekegyseg: tk
+      mennyiseg: 1 tk
     - name: Szójaszósz
-      mennyiseg: 2
-      mertekegyseg: ek
+      mennyiseg: 2 ek
     - name: Bors
-      mennyiseg: 1
-      mertekegyseg: mk
+      mennyiseg: 1 mk
     - name: Cukor
-      mennyiseg: 1
-      mertekegyseg: mk
+      mennyiseg: 1 mk
     - name: Keményítő
-      mennyiseg: 1
-      mertekegyseg: ek
+      mennyiseg: 1 ek
     - name: Szezám olaj
-      mennyiseg: 2
-      mertekegyseg: tk
+      mennyiseg: 2 tk
 
 Szezámmagos csirke:
   defaultPortion: 4
@@ -1725,154 +1265,111 @@ Sütőben sült sajtos brokkolifasírt:
   thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/D4/QA/sutoben-sult-sajtos-brokkolifasirt.jpeg?w=768&fit=crop&fm=webp&crop=5941%2C3998%2C26%2C1&h=350&mark=watermark.png&markpos=bottom-left&markpad=20&markw=&s=3f4c9781345e405b402c41829839a6d7
   ingredients:
     - name: Brokkoli
-      mennyiseg: 500
-      mertekegyseg: g
+      mennyiseg: 500 g
     - name: Tojás
-      mennyiseg: 1
-      mertekegyseg: db
+      mennyiseg: 1 db
     - name: Vöröshagyma
-      mennyiseg: 1
-      mertekegyseg: db
+      mennyiseg: 1 db
     - name: Fokhagyma
-      mennyiseg: 1
-      mertekegyseg: gerezd
+      mennyiseg: 1 gerezd
     - name: Zsemlemorzsa
-      mennyiseg: 5
-      mertekegyseg: ek
+      mennyiseg: 5 ek
     - name: Sajt
-      mennyiseg: 100
-      mertekegyseg: g
+      mennyiseg: 100 g
     - name: Só
-      mennyiseg: 1
-      mertekegyseg: mk
+      mennyiseg: 1 mk
     - name: Bors
-      mennyiseg: 1
-      mertekegyseg: csipet
+      mennyiseg: 1 csipet
     - name: Napraforgó olaj
-      mennyiseg: 2
-      mertekegyseg: ek
+      mennyiseg: 2 ek
 
 Tárkonyos csirkeraguleves:
   defaultPortion: 4
   receptUrl: https://www.nosalty.hu/recept/tarkonyos-csirkeraguleves-tarkonyos-raguleves-3
   ingredients:
     - name: Csirkemell
-      mennyiseg: 1
-      mertekegyseg: db
+      mennyiseg: 1 db
     - name: Napraforgó olaj
-      mennyiseg: 3
-      mertekegyseg: ek
+      mennyiseg: 3 ek
     - name: Sárgarépa
-      mennyiseg: 3
-      mertekegyseg: db
+      mennyiseg: 3 db
     - name: Fehérrépa
-      mennyiseg: 2
-      mertekegyseg: db
+      mennyiseg: 2 db
     - name: Karalábé
-      mennyiseg: 1
-      mertekegyseg: db
+      mennyiseg: 1 db
     - name: Zeller
-      mennyiseg: 1
-      mertekegyseg: db
+      mennyiseg: 1 db
     - name: Vöröshagyma
-      mennyiseg: 1
-      mertekegyseg: db
+      mennyiseg: 1 db
     - name: Zöldborsó (mirelit)
-      mennyiseg: 30
-      mertekegyseg: dkg
+      mennyiseg: 30 dkg
     - name: Tárkony
-      mennyiseg: 1
-      mertekegyseg: ek
+      mennyiseg: 1 ek
     - name: Főzőtejszín
-      mennyiseg: 3
-      mertekegyseg: dl
+      mennyiseg: 3 dl
     - name: Citrom
-      mennyiseg: 1
-      mertekegyseg: db
+      mennyiseg: 1 db
     - name: Erőleves kocka
-      mennyiseg: 4
-      mertekegyseg: db
+      mennyiseg: 4 db
     - name: Petrezselyem
-      mennyiseg: 3
-      mertekegyseg: ek
+      mennyiseg: 3 ek
 
 Tejbegríz:
   defaultPortion: 2
   receptUrl: https://www.mindmegette.hu/tejbegriz.recept/
   ingredients:
     - name: Tej
-      mennyiseg: 5
-      mertekegyseg: dl
+      mennyiseg: 5 dl
     - name: Cukor
-      mennyiseg: 2
-      mertekegyseg: ek
+      mennyiseg: 2 ek
     - name: Búzadara
-      mennyiseg: 4
-      mertekegyseg: ek
+      mennyiseg: 4 ek
     - name: Só
-      mennyiseg: 1
-      mertekegyseg: csipet
+      mennyiseg: 1 csipet
     - name: Kakaópor
-      mennyiseg: 2
-      mertekegyseg: tk
+      mennyiseg: 2 tk
 
 Tejfölös-Füstölt Sajtos Csirkemell:
   defaultPortion: 4
   receptUrl: https://www.mindmegette.hu/tejfolos-fustolt-sajtos-csirkemell.recept/
   ingredients:
     - name: Csirkemell
-      mennyiseg: 80
-      mertekegyseg: dkg
+      mennyiseg: 80 dkg
     - name: Trappista sajt (füstölt)
-      mennyiseg: 25
-      mertekegyseg: dkg
+      mennyiseg: 25 dkg
     - name: Fokhagyma
-      mennyiseg: 4
-      mertekegyseg: gerezd
+      mennyiseg: 4 gerezd
     - name: Olíva olaj
-      mennyiseg: 1
-      mertekegyseg: ek
+      mennyiseg: 1 ek
     - name: Só
-      mennyiseg: 1
-      mertekegyseg: tk
+      mennyiseg: 1 tk
     - name: Bors
-      mennyiseg: 2
-      mertekegyseg: csipet
+      mennyiseg: 2 csipet
     - name: Tejszín
-      mennyiseg: 2
-      mertekegyseg: dl
+      mennyiseg: 2 dl
     - name: Tejföl
-      mennyiseg: 30
-      mertekegyseg: dkg
+      mennyiseg: 30 dkg
 
 Tejfölös-sajtos csirkemell:
   defaultPortion: 4
   receptUrl: https://www.nosalty.hu/recept/tejfolos-sajtos-csirkemell
   ingredients:
     - name: Csirkemell
-      mennyiseg: 2
-      mertekegyseg: db
+      mennyiseg: 2 db
     - name: Tejföl
-      mennyiseg: 250
-      mertekegyseg: g
+      mennyiseg: 250 g
     - name: Gouda sajt
-      mennyiseg: 30
-      mertekegyseg: dkg
+      mennyiseg: 30 dkg
     - name: Fűszer paprika
-      mennyiseg: 5
-      mertekegyseg: tk
+      mennyiseg: 5 tk
     - name: Só
-      mennyiseg: 0.5
-      mertekegyseg: tk
+      mennyiseg: 0.5 tk
     - name: Bors
-      mennyiseg: 0.5
-      mertekegyseg: mk
+      mennyiseg: 0.5 mk
     - name: Petrezselyem
-      mennyiseg: 1
-      mertekegyseg: tk
+      mennyiseg: 1 tk
     - name: Olíva olaj
-      mennyiseg: 5
-      mertekegyseg: ek
+      mennyiseg: 5 ek
 
 Tepertőkrém:
   defaultPortion: 3
@@ -1880,75 +1377,54 @@ Tepertőkrém:
   thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/3p/vA/tojasos-tepertokrem.jpeg?w=768&fit=crop&fm=webp&crop=968%2C664%2C20%2C&h=350&mark=watermark.png&markpos=bottom-left&markpad=20&markw=&s=14945baf52322a8cefd4c61989b4062f
   ingredients:
     - name: Tepertő (sertés)
-      mennyiseg: 200
-      mertekegyseg: g
+      mennyiseg: 200 g
     - name: Tojás
-      mennyiseg: 2
-      mertekegyseg: db
+      mennyiseg: 2 db
     - name: Vöröshagyma
-      mennyiseg: 0.5
-      mertekegyseg: db
+      mennyiseg: 0.5 db
     - name: Tejföl
-      mennyiseg: 3
-      mertekegyseg: ek
+      mennyiseg: 3 ek
     - name: Mustár
-      mennyiseg: 1
-      mertekegyseg: ek
+      mennyiseg: 1 ek
     - name: Só
       # só ízlés szerint
-      mennyiseg: 1
-      mertekegyseg: csipet
+      mennyiseg: 1 csipet
     - name: Bors
       # bors ízlés szerint
-      mennyiseg: 1
-      mertekegyseg: csipet
+      mennyiseg: 1 csipet
 
 Tepsis Csirke Zöldséggel:
   defaultPortion: 4
   receptUrl: https://www.mindmegette.hu/tepsis-csirke-zoldseggel.recept
   ingredients:
     - name: Csirkemell
-      mennyiseg: 50
-      mertekegyseg: dkg
+      mennyiseg: 50 dkg
     - name: Lilahagyma
-      mennyiseg: 2
-      mertekegyseg: db
+      mennyiseg: 2 db
     - name: Fokhagyma
-      mennyiseg: 5
-      mertekegyseg: gerezd
+      mennyiseg: 5 gerezd
     - name: Sárgarépa
-      mennyiseg: 2
-      mertekegyseg: db
+      mennyiseg: 2 db
     - name: Brokkoli
-      mennyiseg: 1
-      mertekegyseg: db
+      mennyiseg: 1 db
     - name: Kaliforniai paprika (piros)
-      mennyiseg: 1
-      mertekegyseg: db
+      mennyiseg: 1 db
     - name: Krumpli
-      mennyiseg: 5
-      mertekegyseg: db
+      mennyiseg: 5 db
     - name: Cukkini
-      mennyiseg: 1
-      mertekegyseg: db
+      mennyiseg: 1 db
     - name: Só
-      mennyiseg: 1
-      mertekegyseg: tk
+      mennyiseg: 1 tk
     - name: Bors
-      mennyiseg: 2
-      mertekegyseg: csipet
+      mennyiseg: 2 csipet
     - name: Piros paprika
-      mennyiseg: 1
-      mertekegyseg: tk
+      mennyiseg: 1 tk
     - name: Olíva olaj
-      mennyiseg: 2
-      mertekegyseg: tk
+      mennyiseg: 2 tk
     - name: Tejföl
-      mennyiseg: 200
-      mertekegyseg: g
+      mennyiseg: 200 g
     - name: Fokhagyma
-      mennyiseg: 1
-      mertekegyseg: gerezd
+      mennyiseg: 1 gerezd
   comments:
     - Az öntethez:
       - 200 g Tejföl
@@ -1958,158 +1434,115 @@ Tepsis édesburgonya:
   defaultPortion: 4
   ingredients:
     - name: Édesburgonya
-      mennyiseg: 1
-      mertekegyseg: kg
+      mennyiseg: 1 kg
 
 Tepsis Krumpli:
   defaultPortion: 3
   receptUrl: https://www.nosalty.hu/recept/fuszeres-sult-krumpli-szilvus-konyhajabol
   ingredients:
     - name: Burgonya
-      mennyiseg: 1
-      mertekegyseg: kg
+      mennyiseg: 1 kg
     - name: Piros paprika
-      mennyiseg: 1
-      mertekegyseg: tk
+      mennyiseg: 1 tk
     - name: Só
-      mennyiseg: 1
-      mertekegyseg: kvk
+      mennyiseg: 1 kvk
     - name: Bors
-      mennyiseg: 1
-      mertekegyseg: kvk
+      mennyiseg: 1 kvk
     - name: Rozmaring
-      mennyiseg: 1
-      mertekegyseg: mk
+      mennyiseg: 1 mk
     - name: Napraforgó olaj
-      mennyiseg: 1
-      mertekegyseg: dl
+      mennyiseg: 1 dl
 
 Töltött káposzta:
   defaultPortion: 8
   receptUrl: https://www.nosalty.hu/recept/klasszikus-toltott-kaposzta
   ingredients:
     - name: Savanyú káposzta
-      mennyiseg: 1
-      mertekegyseg: kg
+      mennyiseg: 1 kg
     - name: Káposzta
-      mennyiseg: 1
-      mertekegyseg: db
+      mennyiseg: 1 db
     - name: Vöröshagyma
-      mennyiseg: 1
-      mertekegyseg: db
+      mennyiseg: 1 db
     - name: Fokhagyma
-      mennyiseg: 2
-      mertekegyseg: gerezd
+      mennyiseg: 2 gerezd
     - name: Fűszer paprika
-      mennyiseg: 3
-      mertekegyseg: tk
+      mennyiseg: 3 tk
     - name: Fűszerkömény
-      mennyiseg: 1
-      mertekegyseg: tk
+      mennyiseg: 1 tk
     - name: Babérlevél
-      mennyiseg: 5
-      mertekegyseg: db
+      mennyiseg: 5 db
     - name: Rizs
-      mennyiseg: 20
-      mertekegyseg: dkg
+      mennyiseg: 20 dkg
     - name: Finomliszt
-      mennyiseg: 1
-      mertekegyseg: ek
+      mennyiseg: 1 ek
     - name: Darált hús
-      mennyiseg: 50
-      mertekegyseg: dkg
+      mennyiseg: 50 dkg
     - name: Kolozsvári szalonna
-      mennyiseg: 20
-      mertekegyseg: dkg
+      mennyiseg: 20 dkg
     - name: Kolbász
-      mennyiseg: 20
-      mertekegyseg: dkg
+      mennyiseg: 20 dkg
     - name: Sertészsír
-      mennyiseg: 1
-      mertekegyseg: ek
+      mennyiseg: 1 ek
 
 Tonhalas babsaláta:
   defaultPortion: 2
   receptUrl: https://www.nosalty.hu/recept/tonhalas-babsalata-glaser-konyhajabol
   ingredients:
     - name: Citrom
-      mennyiseg: 1
-      mertekegyseg: db
+      mennyiseg: 1 db
     - name: Balzsamecet (fehér)
-      mennyiseg: 1
-      mertekegyseg: ek
+      mennyiseg: 1 ek
     - name: Só
-      mennyiseg: 3
-      mertekegyseg: csipet
+      mennyiseg: 3 csipet
     - name: Bors
-      mennyiseg: 1
-      mertekegyseg: csipet
+      mennyiseg: 1 csipet
     - name: Cukor
-      mennyiseg: 1
-      mertekegyseg: csipet
+      mennyiseg: 1 csipet
     - name: Napraforgó olaj
-      mennyiseg: 2
-      mertekegyseg: ek
+      mennyiseg: 2 ek
     - name: Petrezselyem
-      mennyiseg: 1
-      mertekegyseg: tk
+      mennyiseg: 1 tk
     - name: Fehérbab (konzerv)
-      mennyiseg: 250
-      mertekegyseg: g
+      mennyiseg: 250 g
     - name: Tonhal (konzerv)
-      mennyiseg: 185
-      mertekegyseg: g
+      mennyiseg: 185 g
     - name: Lilahagyma
-      mennyiseg: 1
-      mertekegyseg: db
+      mennyiseg: 1 db
     - name: Koktélparadicsom
-      mennyiseg: 20
-      mertekegyseg: dkg
+      mennyiseg: 20 dkg
 
 Túrós tészta:
   defaultPortion: 4
   receptUrl: https://www.nosalty.hu/recept/turos-teszta-alaprecept
   ingredients:
     - name: Csusza tészta
-      mennyiseg: 500
-      mertekegyseg: g
+      mennyiseg: 500 g
     - name: Só
-      mennyiseg: 1
-      mertekegyseg: csipet
+      mennyiseg: 1 csipet
     - name: Kolozsvári szalonna
-      mennyiseg: 200
-      mertekegyseg: g
+      mennyiseg: 200 g
     - name: Tejföl
-      mennyiseg: 200
-      mertekegyseg: g
+      mennyiseg: 200 g
     - name: Túró
-      mennyiseg: 200
-      mertekegyseg: g
+      mennyiseg: 200 g
 
 Tzatziki:
   defaultPortion: 4
   receptUrl: 'https://akispetretzikis.com/recipe/1485/tzatziki'
   ingredients:
     - name: Görög joghurt
-      mennyiseg: 300
-      mertekegyseg: g
+      mennyiseg: 300 g
     - name: Kígyóuborka
-      mennyiseg: 1
-      mertekegyseg: db
+      mennyiseg: 1 db
     - name: Fokhagyma
-      mennyiseg: 0.3
-      mertekegyseg: gerezd
+      mennyiseg: 0.3 gerezd
     - name: Fehérborecet
-      mennyiseg: 3
-      mertekegyseg: tk
+      mennyiseg: 3 tk
     - name: Olíva olaj
-      mennyiseg: 2
-      mertekegyseg: tk
+      mennyiseg: 2 tk
     - name: Só
-      mennyiseg: 1
-      mertekegyseg: csipet
+      mennyiseg: 1 csipet
     - name: Bors
-      mennyiseg: 1
-      mertekegyseg: csipet
+      mennyiseg: 1 csipet
   comments:
     - 3 tk Fehérborecet vagy 3 tk Almaborecet

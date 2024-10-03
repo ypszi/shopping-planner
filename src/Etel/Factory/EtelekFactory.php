@@ -57,7 +57,7 @@ class EtelekFactory
                     continue;
                 }
 
-                $hozzavalok[] = $this->createIngredient($ingredient);
+                $hozzavalok[] = $this->createIngredient($foodName, $ingredient);
             }
 
             $etel = $this->createFood($foodName, $food, $hozzavalok, $foodPortionsByFoodName);
@@ -87,7 +87,7 @@ class EtelekFactory
                     continue;
                 }
 
-                $hozzavalok[] = $this->createIngredient($ingredient);
+                $hozzavalok[] = $this->createIngredient($foodName, $ingredient);
             }
 
             $availableFoods[] = $this->createFood($foodName, $food, $hozzavalok);
@@ -99,16 +99,16 @@ class EtelekFactory
     /**
      * @param array<string, mixed> $ingredient
      */
-    private function createIngredient(array $ingredient): Hozzavalo
+    private function createIngredient(string $foodName, array $ingredient): Hozzavalo
     {
         $ingredientName = $ingredient['name'];
 
-        if (is_string($ingredientRefName = $this->ingredients[$ingredientName])) {
+        if (is_string($ingredientRefName = $this->ingredients[$ingredientName] ?? null)) {
             $ingredientRef = $this->ingredients[$ingredientRefName] ?? null;
 
             if (!$ingredientRef) {
                 throw new UnknownIngredientException(
-                    sprintf('Ingredient reference not found: "%s"', $ingredientRefName)
+                    sprintf('Ingredient reference not found: "%s" for food: "%s"', $ingredientRefName, $foodName)
                 );
             }
 
@@ -125,17 +125,18 @@ class EtelekFactory
 
         if (!$category) {
             throw new UnknownIngredientException(
-                sprintf('Ingredient not found: "%s"', $ingredientName)
+                sprintf('Ingredient not found: "%s" for food: "%s"', $ingredientName, $foodName)
             );
         }
 
         if ($category !== $defaultIngredient['kategoria']) {
             throw new UnknownIngredientException(
                 sprintf(
-                    'Ingredient category mismatch for "%s": "%s" - "%s"',
+                    'Ingredient category mismatch for "%s": "%s" - "%s" for food: "%s"',
                     $ingredientName,
                     $ingredient['kategoria'],
-                    $defaultIngredient['kategoria']
+                    $defaultIngredient['kategoria'],
+                    $foodName
                 )
             );
         }
@@ -143,9 +144,10 @@ class EtelekFactory
         if ($defaultIngredient && !in_array($defaultIngredient['kategoria'], array_keys($this->ingredientCategories))) {
             throw new UnknownIngredientException(
                 sprintf(
-                    'Ingredient category not found for "%s": "%s"',
+                    'Ingredient category not found for "%s": "%s" for food: "%s"',
                     $ingredientName,
-                    $defaultIngredient['kategoria']
+                    $defaultIngredient['kategoria'],
+                    $foodName
                 )
             );
         }
@@ -153,17 +155,31 @@ class EtelekFactory
         if ($mertekegysegPreference && !$ingredientMertekegysegPreference = Mertekegyseg::tryFrom($mertekegysegPreference)) {
             throw new UnknownIngredientException(
                 sprintf(
-                    'Ingredient measurement not found for "%s": "%s"',
+                    'Ingredient measurement not found for "%s": "%s" for food: "%s"',
                     $ingredientName,
-                    $mertekegysegPreference
+                    $mertekegysegPreference,
+                    $foodName
+                )
+            );
+        }
+
+        [$mennyiseg, $rawMertekegyseg] = explode(' ', $ingredient['mennyiseg']);
+
+        if (!$mertekegyseg = Mertekegyseg::tryFrom($rawMertekegyseg)) {
+            throw new UnknownIngredientException(
+                sprintf(
+                    'Ingredient measurement not found for "%s": "%s" for food: "%s"',
+                    $ingredientName,
+                    $rawMertekegyseg,
+                    $foodName
                 )
             );
         }
 
         return new Hozzavalo(
             $ingredientName,
-            $ingredient['mennyiseg'],
-            Mertekegyseg::from($ingredient['mertekegyseg']),
+            (float)$mennyiseg,
+            $mertekegyseg,
             HozzavaloKategoria::from($category),
             $ingredientMertekegysegPreference ?? null
         );
@@ -177,7 +193,7 @@ class EtelekFactory
         $additionalRawFood    = $this->foods[$refFoodName];
         $additionalHozzavalok = [];
         foreach ($this->foods[$refFoodName]['ingredients'] as $additionalIngredient) {
-            $additionalHozzavalok[] = $this->createIngredient($additionalIngredient);
+            $additionalHozzavalok[] = $this->createIngredient($refFoodName, $additionalIngredient);
         }
 
         return $this->createFood($refFoodName, $additionalRawFood, $additionalHozzavalok, $foodPortionsByFoodName);
