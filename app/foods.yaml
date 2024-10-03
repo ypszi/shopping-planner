@@ -30,6 +30,7 @@ Alpesi Sajtos Tészta (Älplermagronen):
 Amerikai káposztasaláta:
   defaultPortion: 8
   receptUrl: https://www.mindmegette.hu/amerikai-kaposztasalata-a-coleslaw-salata.recept/
+  thumbnailUrl: https://cdn.mindmegette.hu/2024/04/rSDBtJxsYvuJTL482xe9a3yY38ToRUlJj_I-IENPzso/fill/0/0/no/1/aHR0cHM6Ly9jbXNjZG4uYXBwLmNvbnRlbnQucHJpdmF0ZS9jb250ZW50LzdiNmEwMjNmOTJmNTQzYWI4YTNiOWJjZWIzNTI4MmM1.jpg
   ingredients:
     - name: Sárgarépa
       mennyiseg: 1 db
@@ -57,6 +58,7 @@ Amerikai káposztasaláta:
 Baconbe göngyölt mozzarellás csirkemell:
   defaultPortion: 4
   receptUrl: https://www.mindmegette.hu/baconbe-gongyolt-mozzarellas-csirkemell.recept/
+  thumbnailUrl: https://cdn.mindmegette.hu/2024/02/nDCLx0dphVWmaczhrDCZW9lczxSQDcyGA7XEWlWa8P0/fill/0/0/no/1/aHR0cHM6Ly9jbXNjZG4uYXBwLmNvbnRlbnQucHJpdmF0ZS9jb250ZW50L2RhYTc5NzNjNDdlZTRlMWM4YjQzYzE0ZWJhOWI0NGJi.jpg
   ingredients:
     - name: Csirkemell
       mennyiseg: 50 dkg
@@ -74,6 +76,7 @@ Baconbe göngyölt mozzarellás csirkemell:
 Bögrés süti:
   defaultPortion: 2
   receptUrl: https://www.nosalty.hu/recept/bogreben-sult-suti-5-perc-alatt
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/nF/RK/bogreben-sult-suti-5-perc-alatt.jpeg?w=1200&fit=crop&s=ad8e57f9b2fdb53f71c41ecc365e6dcf
   ingredients:
     - name: Finomliszt
       mennyiseg: 4 ek
@@ -95,6 +98,7 @@ Bögrés süti:
 Bolognai:
   defaultPortion: 4
   receptUrl: https://streetkitchen.hu/tesztapolc/ime-tokeletes-bolognai-spagetti/
+  thumbnailUrl: https://i.ytimg.com/vi/sxEblqK71W8/maxresdefault.jpg
   ingredients:
     - name: Olíva olaj
       mennyiseg: 3 ek
@@ -138,6 +142,7 @@ Bolognai:
 Bulgur:
   defaultPortion: 4
   receptUrl: https://eletszepitok.hu/igy-keszul-a-paradicsomos-bulgur-azaz-a-torok-rizs/
+  thumbnailUrl: https://eletszepitok.hu/wp-content/uploads/2018/10/bulgur_torok.jpg
   ingredients:
     - name: Bulgur
       mennyiseg: 30 dkg
@@ -159,6 +164,7 @@ Bulgur:
 Bundás csirke:
   defaultPortion: 4
   receptUrl: https://www.nosalty.hu/recept/puha-ropogos-fokhagymas-mezes-csirkemell
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/UD/24/puha-ropogos-fokhagymas-mezes-csirkemell.jpeg?w=1200&fit=crop&s=7967d740c217a3b17264a15edf1f9084
   ingredients:
     - name: Fokhagyma
       mennyiseg: 3 gerezd
@@ -190,6 +196,7 @@ Bundás csirke:
 Carbonara:
   defaultPortion: 2
   receptUrl: https://streetkitchen.hu/tesztapolc/az-eredeti-carbonara/
+  thumbnailUrl: https://i.ytimg.com/vi/7jPh79AdnRk/maxresdefault.jpg
   ingredients:
     - name: Kolozsvári szalonna
       mennyiseg: 150 g
@@ -213,6 +220,7 @@ Carbonara:
 Chilis bab:
   defaultPortion: 4
   receptUrl: https://www.mindmegette.hu/chilis-bab.recept/
+  thumbnailUrl: https://cdn.mindmegette.hu/2024/04/8ZLDsi6wQQ_g9Lm4PZ98yA9Ga776wyZ01cchCi_3Esk/fill/0/0/no/1/aHR0cHM6Ly9jbXNjZG4uYXBwLmNvbnRlbnQucHJpdmF0ZS9jb250ZW50LzdlZmFjZWU4MjdkMzQzYmJiM2I2OGM2ZTU1N2ZiOGNl.jpg
   ingredients:
     - name: Vöröshagyma
       mennyiseg: 2 db
@@ -236,6 +244,7 @@ Chilis bab:
 Citromos joghurtos csirkemell görögsalátával:
   defaultPortion: 4
   receptUrl: https://www.mindmegette.hu/citromos-joghurtos-csirkemell-gorogsalataval.recept/
+  thumbnailUrl: https://cdn.mindmegette.hu/2024/04/A6ZV9jF59ZMnyDEnf3sOEG1pOOM6Lo9ftqN6c7RcL0k/fill/0/0/no/1/aHR0cHM6Ly9jbXNjZG4uYXBwLmNvbnRlbnQucHJpdmF0ZS9jb250ZW50L2QwYWUzMGQ5ZTk3NDQ5NGFhY2Y4YThjNjU3NjRlYTg2.jpg
   ingredients:
     - name: Citrom
       mennyiseg: 1 db
@@ -285,6 +294,7 @@ Csirkemellpaprikás:
 Csirkés spárgás rizottó:
   defaultPortion: 4
   receptUrl: https://femina.hu/recept/csirkes-spargas-rizotto-receptje/
+  thumbnailUrl: https://kep.index.hu/1/0/3787/37879/378795/37879581_f442388c256f9354a63e3f0c54b4e955_wm.jpg
   ingredients:
     - name: Csirkemell
       mennyiseg: 35 dkg
@@ -344,6 +354,7 @@ Csőröge Fánk:
 Diós-almás sajtsaláta:
   defaultPortion: 6
   receptUrl: https://www.nosalty.hu/recept/dios-almas-sajtsalata
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/Oo/ao/dios-almas-sajtsalata.jpeg?w=1200&fit=crop&s=8b0b0abd408fdced694bdecda4081bc2
   ingredients:
     - name: Tejföl
       mennyiseg: 450 g
@@ -371,6 +382,7 @@ Diós-almás sajtsaláta:
 Édesburgonya püré:
   defaultPortion: 2
   receptUrl: https://www.mindmegette.hu/edesburgonya-pure.recept/
+  thumbnailUrl: https://cdn.mindmegette.hu/2024/04/1nI7JRdG2PoS96kfP4_Ti_r3aOz05vfW_9hHNpEDl38/fill/0/0/no/1/aHR0cHM6Ly9jbXNjZG4uYXBwLmNvbnRlbnQucHJpdmF0ZS9jb250ZW50L2FiYWQ4ODBjMjk1ZjRjNDRhZmY5MTZlNWI0NDEyZTk5.jpg
   ingredients:
     - name: Édesburgonya
       mennyiseg: 30 dkg
@@ -388,6 +400,7 @@ Diós-almás sajtsaláta:
 Fasírt:
   defaultPortion: 4
   receptUrl: https://www.mindmegette.hu/fasirt-sutoben-sutve.recept/
+  thumbnailUrl: https://cdn.mindmegette.hu/2024/04/2pebSjs6kVlM_fg9F9hA_mksyLxej2Z3A0wvJ2PMneM/fill/0/0/no/1/aHR0cHM6Ly9jbXNjZG4uYXBwLmNvbnRlbnQucHJpdmF0ZS9jb250ZW50LzE1OWY1OTIyYzQyYTQ5ZGViZjE2YmY5MjQzNzdjM2Q3.jpg
   ingredients:
     - name: Darált hús
       mennyiseg: 1 kg
@@ -410,6 +423,7 @@ Fasírt:
 Fokhagymával és mézzel sült sárgarépa:
   defaultPortion: 4
   receptUrl: https://sobors.hu/receptek/fokhagymaval-mezzel-sult-sargarepa-recept/
+  thumbnailUrl: https://kep.index.hu/1/0/3803/38031/380316/38031633_2901907_ee48220335904079f2f144f3e28313bf_wm.jpg
   ingredients:
     - name: Sárgarépa
       mennyiseg: 5 db
@@ -427,6 +441,7 @@ Fokhagymával és mézzel sült sárgarépa:
 Frankfurti leves:
   defaultPortion: 8
   receptUrl: https://www.nosalty.hu/recept/frankfurti-leves-egyszeruen
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/RW/tm/frankfurti-leves-egyszeruen.jpeg?w=1200&fit=crop&s=9e87ea8fb9d00b88da1d0b4753768855
   ingredients:
     - name: Sertészsír
       mennyiseg: 1 ek
@@ -458,6 +473,7 @@ Frankfurti leves:
 Fűszeres csirkecsíkok:
   defaultPortion: 4
   receptUrl: https://femina.hu/recept/fokhagymas-fuszeres-csirkecsikok/
+  thumbnailUrl: https://kep.index.hu/1/0/3548/35487/354878/35487883_ed47f0c35dc4eb8f0b824b68e6529671_wm.jpg
   ingredients:
     - name: Csirkemell
       mennyiseg: 2 db
@@ -477,6 +493,7 @@ Fűszeres csirkecsíkok:
 Fűszeres csirkeszárnyak:
   defaultPortion: 4
   receptUrl: https://femina.hu/recept/fuszeres-csirkeszarnyak/
+  thumbnailUrl: https://kep.index.hu/1/0/2642/26425/264254/26425434_dcafd21d1d5b0fa1699f9485235dd5fb_wm.jpg
   ingredients:
     - name: Csirkeszárny
       mennyiseg: 1 kg
@@ -500,6 +517,7 @@ Fűszeres csirkeszárnyak:
 Fűszeres édesburgonya:
   defaultPortion: 4
   receptUrl: https://femina.hu/recept/fuszeres-edesburgonya-receptje/
+  thumbnailUrl: https://kep.index.hu/1/0/2602/26025/260258/26025822_c42d1fa927c4d001eb7ebcb5d261a6d5_wm.jpg
   ingredients:
     - name: Édesburgonya
       mennyiseg: 1 kg
@@ -541,6 +559,7 @@ Görög bab:
 Görögös húsos palacsinta:
   defaultPortion: 4
   receptUrl: https://www.nosalty.hu/recept/gorogos-husos-palacsinta
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/VI/1Y/gorogos-husos-palacsinta.jpeg?w=1200&fit=crop&s=bb4c5ec2cd06e065e5464a5c9707038d
   ingredients:
     # A palacsintához
     - name: Liszt
@@ -596,6 +615,7 @@ Görögös húsos palacsinta:
 Görög saláta:
   defaultPortion: 6
   receptUrl: https://www.nosalty.hu/recept/eredeti-gorog-salata
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/WA/je/eredeti-gorog-salata.jpg?w=1800&fit=crop&s=b7f0075b396fda746482f99cd58bbb19
   ingredients:
     - name: Paradicsom
       mennyiseg: 4 db
@@ -653,6 +673,7 @@ Hortobágyi Palacsinta:
 Illatos omlós csirkemell:
   defaultPortion: 4
   receptUrl: https://www.nosalty.hu/recept/illatos-omlos-csirkemell
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/qq/8I/illatos-omlos-csirkemell.jpeg?w=1200&fit=crop&s=fbecbdcf59b6bb5f255c3b3ae5c200ff
   ingredients:
     - name: Csirkemell
       mennyiseg: 60 dkg
@@ -690,6 +711,7 @@ Illatos omlós csirkemell:
 Kefíres csirke:
   defaultPortion: 4
   receptUrl: http://chiliesvanilia.blogspot.com/2016/08/szuperropogos-rantott-csirke-husz-perc.html
+  thumbnailUrl: https://2.bp.blogspot.com/-q8Yh7g6MRPY/V729YIggnjI/AAAAAAAAEoA/OANODtLMiEYIRvtlfzdGMgJUlDzPZN32wCLcB/s400/mancsrantottcsirkefoto.JPG
   ingredients:
     - name: Piros paprika
       mennyiseg: 1 tk
@@ -709,6 +731,7 @@ Kefíres csirke:
 Kínai szezámmagos csirke:
   defaultPortion: 4
   receptUrl: https://www.nosalty.hu/recept/kinai-szezammagos-csirke
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/nL/34/kinai-szezammagos-csirke.jpeg?w=1200&fit=crop&s=106ec7e8b0ccb1b8f53eea45a6c57452
   ingredients:
     # a bundához
     - name: Napraforgó olaj
@@ -739,6 +762,7 @@ Kínai szezámmagos csirke:
 Krumpli főzelék fasírttal:
   defaultPortion: 4
   receptUrl: https://www.nosalty.hu/recept/legegyszerubb-krumplifozelek
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/y5/Xs/legegyszerubb-krumplifozelek.jpeg?w=1200&fit=crop&s=08a10631834f0bcfd3056d37689d83a0
   ingredients:
     - name: Napraforgó olaj
       mennyiseg: 2 ek
@@ -763,6 +787,7 @@ Krumpli főzelék fasírttal:
 Krumplipüré:
   defaultPortion: 4
   receptUrl: https://www.mindmegette.hu/krumplipure-alaprecept.recept/
+  thumbnailUrl: https://cdn.mindmegette.hu/2024/04/By2nnjV2qj0VrLULcvfGGx_Ll2xNXCbmvpy48T4Izjw/fill/0/0/no/1/aHR0cHM6Ly9jbXNjZG4uYXBwLmNvbnRlbnQucHJpdmF0ZS9jb250ZW50L2FlNjMxZGVjNDQxNjRkYmZhYzAwZTJiZDk1Y2Q2YmEz.jpg
   ingredients:
     - name: Krumpli
       mennyiseg: 1 kg
@@ -781,6 +806,7 @@ Krumplipüré:
 Lazac:
   defaultPortion: 2
   receptUrl: https://www.nosalty.hu/recept/lazac-egyszeruen
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/qD/5K/lazac-egyszeruen.jpeg?w=1200&fit=crop&s=76b3b2e29e1101b015ef9ea052482ee8
   ingredients:
     - name: Lazac
       mennyiseg: 36 dkg
@@ -800,6 +826,7 @@ Lazac:
 Lazac brokkolival:
   defaultPortion: 4
   receptUrl: https://www.nosalty.hu/recept/lazac-brokkolival
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/EG/kn/lazac-brokkolival.jpeg?w=1200&fit=crop&s=b2ad650a6b17b3797d4e08a0b90828e8
   ingredients:
     - name: Lazac
       mennyiseg: 40 dkg
@@ -821,6 +848,7 @@ Lazac brokkolival:
 Lazacos tagliatelle:
   defaultPortion: 4
   receptUrl: https://www.nosalty.hu/recept/lazacos-tagliatelle
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/C2/MY/lazacos-tagliatelle.jpeg?w=1200&fit=crop&s=6841247d80bed94d938f76caa2de2381
   ingredients:
     - name: Olíva olaj
       mennyiseg: 0.5 dl
@@ -850,6 +878,7 @@ Lazacos tagliatelle:
 Lecsó:
   defaultPortion: 4
   receptUrl: https://www.mindmegette.hu/lecso.recept/
+  thumbnailUrl: https://cdn.mindmegette.hu/2024/04/sZlNUcQZxTG-jKW_QLrd67-fQuaBJW9sfw1qKpypsak/fill/0/0/no/1/aHR0cHM6Ly9jbXNjZG4uYXBwLmNvbnRlbnQucHJpdmF0ZS9jb250ZW50L2ZhNjJlNWMyMmNjOTQ4OTU5ODk1NzU1YzlmN2Y2OTg0.jpg
   ingredients:
     - name: Paradicsom
       mennyiseg: 40 dkg
@@ -869,6 +898,7 @@ Lecsó:
 Mézes-chilis csirkesaláta:
   defaultPortion: 2
   receptUrl: https://www.nosalty.hu/recept/mezes-chilis-csirkesalata
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/H7/gM/mezes-chilis-csirkesalata.jpeg?w=1200&fit=crop&s=00b2bfe53a3aff1629023e07c00dc509
   ingredients:
     - name: Csirkemell
       mennyiseg: 25 dkg
@@ -914,6 +944,7 @@ Mézes-chilis csirkesaláta:
 Mézes-mustáros csirkemell:
   defaultPortion: 2
   receptUrl: https://www.mindmegette.hu/mezes-mustaros-csirkemell-video.recept/
+  thumbnailUrl: https://cdn.mindmegette.hu/2024/04/XSqD5GT2X2thuDmoTHc1kOdc5sgKgA3Qv9hQ752TWU8/fill/0/0/no/1/aHR0cHM6Ly9jbXNjZG4uYXBwLmNvbnRlbnQucHJpdmF0ZS9jb250ZW50LzcyMjY1MThmYzk3NDQyMWJiYTY2OTdiZjk0ODYzMmQ4.jpg
   ingredients:
     - name: Csirkemell
       mennyiseg: 50 dkg
@@ -936,6 +967,7 @@ Mézes-mustáros csirkemell:
 Olaszos csirke:
   defaultPortion: 4
   receptUrl: https://www.nosalty.hu/recept/olaszos-csirke-tepsiben
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/VI/8D/olaszos-csirke-tepsiben.jpeg?w=1200&fit=crop&s=c5ff533c5cbaf57f5a43c36d00605b84
   ingredients:
     - name: Csirkemell
       mennyiseg: 2 db
@@ -997,6 +1029,7 @@ Pad thai:
 Palacsinta:
   defaultPortion: 4
   receptUrl: https://www.nosalty.hu/recept/palacsinta-alaprecept
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/GT/vp/palacsinta-alaprecept.jpeg?w=1200&fit=crop&s=5a5382c1777aba4b501cb40d107721f1
   ingredients:
     - name: Tojás
       mennyiseg: 3 db
@@ -1016,6 +1049,7 @@ Palacsinta:
 Paprikás krumpli:
   defaultPortion: 4
   receptUrl: https://www.nosalty.hu/recept/paprikas-krumpli-kolbasszal
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/rn/OB/paprikas-krumpli-kolbasszal.jpeg?w=1200&fit=crop&s=6b71912131b9757a79f8a38177d5e591
   ingredients:
     - name: Burgonya
       mennyiseg: 1 kg
@@ -1039,6 +1073,7 @@ Paprikás krumpli:
 Paradicsomos tészta:
   defaultPortion: 4
   receptUrl: https://www.mindmegette.hu/nagyon-kremes-paradicsomos-teszta-husmentesen.recept/
+  thumbnailUrl: https://cdn.mindmegette.hu/2024/04/bwrGqPu16KlFvS3QnfMkxOunytvowleaUIGEHrKjfhk/fill/0/0/no/1/aHR0cHM6Ly9jbXNjZG4uYXBwLmNvbnRlbnQucHJpdmF0ZS9jb250ZW50LzYxMWM4ZjVjMzQwZTRmYWVhMTE3ZDAyODljNWUyNDYz.jpg
   ingredients:
     - name: Olíva olaj
       mennyiseg: 2 ek
@@ -1066,6 +1101,7 @@ Paradicsomos tészta:
 Pizza:
   defaultPortion: 2
   receptUrl: https://www.nosalty.hu/recept/pizzateszta-jamie-oliver-tol
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/sK/bf/pizzateszta-jamie-oliver-tol.jpg?w=1500&fit=crop&s=d0c6738f24cfa885b4a2bf33247b17b7
   ingredients:
     - name: Felvágott
       mennyiseg: 15 dkg
@@ -1078,6 +1114,7 @@ Pizza:
 Pizzatészta:
   defaultPortion: 2
   receptUrl: https://www.nosalty.hu/recept/pizzateszta-jamie-oliver-tol
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/sK/bf/pizzateszta-jamie-oliver-tol.jpg?w=1500&fit=crop&s=d0c6738f24cfa885b4a2bf33247b17b7
   ingredients:
     - name: Finomliszt
       mennyiseg: 500 g
@@ -1093,6 +1130,7 @@ Pizzatészta:
 Póréhagyma leves:
   defaultPortion: 4
   receptUrl: https://www.nosalty.hu/recept/klasszikus-porehagyma-kremleves
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/1H/6r/klasszikus-porehagyma-kremleves.jpeg?w=1200&fit=crop&s=6a849bb6db0f92f6d1c2ee19f834c156
   ingredients:
     - name: Póréhagyma
       mennyiseg: 2 db
@@ -1110,6 +1148,7 @@ Póréhagyma leves:
 Rakott krumpli:
   defaultPortion: 4
   receptUrl: https://www.mindmegette.hu/rakott-krumpli.recept/
+  thumbnailUrl: https://cdn.mindmegette.hu/2024/04/kry6fSNm0cwOFsgoLEd7FR1JFU0H-TASqfN7ytcecxQ/fill/0/0/no/1/aHR0cHM6Ly9jbXNjZG4uYXBwLmNvbnRlbnQucHJpdmF0ZS9jb250ZW50LzhlYzU1ODljMWIxYzQwMTFhMjAzYjBlNTkzOGIzZjhl.jpg
   ingredients:
     - name: Krumpli
       mennyiseg: 1 kg
@@ -1157,6 +1196,7 @@ Reggeli:
 Retkes uborka saláta:
   defaultPortion: 4
   receptUrl: https://natashaskitchen.com/cucumber-radish-salad-recipe/
+  thumbnailUrl: https://natashaskitchen.com/wp-content/uploads/2018/05/Creamy-Cucumber-Radish-Salad-2.jpg
   ingredients:
     - name: Kígyóuborka
       mennyiseg: 1 db
@@ -1182,6 +1222,7 @@ Rizs:
 Rizskoch:
   defaultPortion: 4
   receptUrl: https://streetkitchen.hu/meguszos-sutik/rizskoch-baracklekvarral/
+  thumbnailUrl: https://static.streetkitchen.hu/live/uploads/2021/04/20210318-32-1618x855.jpg
   ingredients:
     - name: Citrom
       mennyiseg: 0.5 db
@@ -1208,6 +1249,7 @@ Rizskoch:
 Serpenyős csirkemell:
   defaultPortion: 4
   receptUrl: https://femina.hu/recept/serpenyos-csirkemell/
+  thumbnailUrl: https://kep.index.hu/1/0/5849/58498/584986/58498699_9ce0018737da5ef0b6ee9ac078dc8c2b_wm.jpg
   ingredients:
     - name: Csirkemell
       mennyiseg: 60 dkg
@@ -1227,6 +1269,7 @@ Serpenyős csirkemell:
 Szerzetesek eledele:
   defaultPortion: 2
   receptUrl: https://streetkitchen.hu/azsiai-etelek/szerzetesek-eledele/
+  thumbnailUrl: https://i.ytimg.com/vi/Oi55MbeInf4/maxresdefault.jpg
   ingredients:
     - name: Brokkoli
       mennyiseg: 200 g
@@ -1256,13 +1299,14 @@ Szerzetesek eledele:
 Szezámmagos csirke:
   defaultPortion: 4
   receptUrl: https://www.nosalty.hu/recept/kinai-szezammagos-csirke
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/nL/34/kinai-szezammagos-csirke.jpeg?w=1200&fit=crop&s=106ec7e8b0ccb1b8f53eea45a6c57452
   ingredients:
     - ref: Kínai szezámmagos csirke
 
 Sütőben sült sajtos brokkolifasírt:
   defaultPortion: 4
   receptUrl: https://www.nosalty.hu/recept/sutoben-sult-sajtos-brokkolifasirt
-  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/D4/QA/sutoben-sult-sajtos-brokkolifasirt.jpeg?w=768&fit=crop&fm=webp&crop=5941%2C3998%2C26%2C1&h=350&mark=watermark.png&markpos=bottom-left&markpad=20&markw=&s=3f4c9781345e405b402c41829839a6d7
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/D4/QA/sutoben-sult-sajtos-brokkolifasirt.jpeg?w=6000&fit=crop&s=80cdc4e320f94a879e59a33a286bcc8f
   ingredients:
     - name: Brokkoli
       mennyiseg: 500 g
@@ -1286,6 +1330,7 @@ Sütőben sült sajtos brokkolifasírt:
 Tárkonyos csirkeraguleves:
   defaultPortion: 4
   receptUrl: https://www.nosalty.hu/recept/tarkonyos-csirkeraguleves-tarkonyos-raguleves-3
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/sF/Gv/tarkonyos-csirkeraguleves-tarkonyos-raguleves-3.jpeg?w=1200&fit=crop&s=06457ab9e144a673dbc15f7fb72f7119
   ingredients:
     - name: Csirkemell
       mennyiseg: 1 db
@@ -1317,6 +1362,7 @@ Tárkonyos csirkeraguleves:
 Tejbegríz:
   defaultPortion: 2
   receptUrl: https://www.mindmegette.hu/tejbegriz.recept/
+  thumbnailUrl: https://cdn.mindmegette.hu/2024/04/qkA8ecBlrh70fS7yddMVmXOO2UdTF3YVbsoLPsAGg-E/fill/0/0/no/1/aHR0cHM6Ly9jbXNjZG4uYXBwLmNvbnRlbnQucHJpdmF0ZS9jb250ZW50LzhjZTRlYmFkZjU4YzQ1YWNhNjdjMzI0MzlkYzk0NmIy.jpg
   ingredients:
     - name: Tej
       mennyiseg: 5 dl
@@ -1332,6 +1378,7 @@ Tejbegríz:
 Tejfölös-Füstölt Sajtos Csirkemell:
   defaultPortion: 4
   receptUrl: https://www.mindmegette.hu/tejfolos-fustolt-sajtos-csirkemell.recept/
+  thumbnailUrl: https://cdn.mindmegette.hu/2024/04/Jf3lqqKuOS1US-UVH5rDluz4hNz-vRtX-9tNJCO9m6c/fill/0/0/no/1/aHR0cHM6Ly9jbXNjZG4uYXBwLmNvbnRlbnQucHJpdmF0ZS9jb250ZW50LzVjY2UxNTZjYTZmMzQwMTM4NTIwODZiODVjMGFiMGEw.jpg
   ingredients:
     - name: Csirkemell
       mennyiseg: 80 dkg
@@ -1353,6 +1400,7 @@ Tejfölös-Füstölt Sajtos Csirkemell:
 Tejfölös-sajtos csirkemell:
   defaultPortion: 4
   receptUrl: https://www.nosalty.hu/recept/tejfolos-sajtos-csirkemell
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/1Y/tq/tejfolos-sajtos-csirkemell.jpg?w=1800&fit=crop&s=d2998fc6d4ad9b2e70c61bb07d573767
   ingredients:
     - name: Csirkemell
       mennyiseg: 2 db
@@ -1374,7 +1422,7 @@ Tejfölös-sajtos csirkemell:
 Tepertőkrém:
   defaultPortion: 3
   receptUrl: https://www.nosalty.hu/recept/tojasos-tepertokrem
-  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/3p/vA/tojasos-tepertokrem.jpeg?w=768&fit=crop&fm=webp&crop=968%2C664%2C20%2C&h=350&mark=watermark.png&markpos=bottom-left&markpad=20&markw=&s=14945baf52322a8cefd4c61989b4062f
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/3p/vA/tojasos-tepertokrem.jpeg?w=1200&fit=crop&s=bff021be6d19a3ef44e60f10129578ab
   ingredients:
     - name: Tepertő (sertés)
       mennyiseg: 200 g
@@ -1396,6 +1444,7 @@ Tepertőkrém:
 Tepsis Csirke Zöldséggel:
   defaultPortion: 4
   receptUrl: https://www.mindmegette.hu/tepsis-csirke-zoldseggel.recept
+  thumbnailUrl: https://cdn.mindmegette.hu/2024/04/GCOghJALPc_sQkQqJtQq1F-sp3evedVt3s60xgEOlVg/fill/0/0/no/1/aHR0cHM6Ly9jbXNjZG4uYXBwLmNvbnRlbnQucHJpdmF0ZS9jb250ZW50LzY4MjU5Yzg3OGE4YzQzZWQ4NTJhYmE1YWI4MzE0MGVh.jpg
   ingredients:
     - name: Csirkemell
       mennyiseg: 50 dkg
@@ -1439,6 +1488,7 @@ Tepsis édesburgonya:
 Tepsis Krumpli:
   defaultPortion: 3
   receptUrl: https://www.nosalty.hu/recept/fuszeres-sult-krumpli-szilvus-konyhajabol
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/zY/L4/fuszeres-sult-krumpli-szilvus-konyhajabol.jpeg?w=1200&fit=crop&s=972b9c6daa07b5c7992cbafaf3a5992f
   ingredients:
     - name: Burgonya
       mennyiseg: 1 kg
@@ -1456,6 +1506,7 @@ Tepsis Krumpli:
 Töltött káposzta:
   defaultPortion: 8
   receptUrl: https://www.nosalty.hu/recept/klasszikus-toltott-kaposzta
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/qN/ou/klasszikus-toltott-kaposzta.jpeg?w=1340&fit=crop&s=8bba928ac80f99b27fab6f8799558d74
   ingredients:
     - name: Savanyú káposzta
       mennyiseg: 1 kg
@@ -1487,6 +1538,7 @@ Töltött káposzta:
 Tonhalas babsaláta:
   defaultPortion: 2
   receptUrl: https://www.nosalty.hu/recept/tonhalas-babsalata-glaser-konyhajabol
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/hM/BI/tonhalas-babsalata-glaser-konyhajabol.jpeg?w=1200&fit=crop&s=c7341f38d6204630399a72aacf9d815f
   ingredients:
     - name: Citrom
       mennyiseg: 1 db
@@ -1514,6 +1566,7 @@ Tonhalas babsaláta:
 Túrós tészta:
   defaultPortion: 4
   receptUrl: https://www.nosalty.hu/recept/turos-teszta-alaprecept
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/Az/83/turos-teszta-alaprecept.jpeg?w=1500&fit=crop&s=4aaa1d6e85c0fd2b6549ccf86486da32
   ingredients:
     - name: Csusza tészta
       mennyiseg: 500 g
@@ -1528,7 +1581,8 @@ Túrós tészta:
 
 Tzatziki:
   defaultPortion: 4
-  receptUrl: 'https://akispetretzikis.com/recipe/1485/tzatziki'
+  receptUrl: https://akispetretzikis.com/recipe/1485/tzatziki
+  thumbnailUrl: https://akispetretzikis.com/photos/akisrecipes/8303/akis-petretzikis-tzatziki2.jpg
   ingredients:
     - name: Görög joghurt
       mennyiseg: 300 g
