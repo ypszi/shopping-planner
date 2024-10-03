@@ -1719,6 +1719,39 @@ Szezámmagos csirke:
   ingredients:
     - ref: Kínai szezámmagos csirke
 
+Sütőben sült sajtos brokkolifasírt:
+  defaultPortion: 4
+  receptUrl: https://www.nosalty.hu/recept/sutoben-sult-sajtos-brokkolifasirt
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/D4/QA/sutoben-sult-sajtos-brokkolifasirt.jpeg?w=768&fit=crop&fm=webp&crop=5941%2C3998%2C26%2C1&h=350&mark=watermark.png&markpos=bottom-left&markpad=20&markw=&s=3f4c9781345e405b402c41829839a6d7
+  ingredients:
+    - name: Brokkoli
+      mennyiseg: 500
+      mertekegyseg: g
+    - name: Tojás
+      mennyiseg: 1
+      mertekegyseg: db
+    - name: Vöröshagyma
+      mennyiseg: 1
+      mertekegyseg: db
+    - name: Fokhagyma
+      mennyiseg: 1
+      mertekegyseg: gerezd
+    - name: Zsemlemorzsa
+      mennyiseg: 5
+      mertekegyseg: ek
+    - name: Sajt
+      mennyiseg: 100
+      mertekegyseg: g
+    - name: Só
+      mennyiseg: 1
+      mertekegyseg: mk
+    - name: Bors
+      mennyiseg: 1
+      mertekegyseg: csipet
+    - name: Napraforgó olaj
+      mennyiseg: 2
+      mertekegyseg: ek
+
 Tárkonyos csirkeraguleves:
   defaultPortion: 4
   receptUrl: https://www.nosalty.hu/recept/tarkonyos-csirkeraguleves-tarkonyos-raguleves-3
