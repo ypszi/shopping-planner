@@ -538,7 +538,7 @@ Görög bab:
   ingredients:
     - name: Vöröshagyma
       mennyiseg: 4 db
-    - name: Sertéscomb
+    - name: Sertés comb
       mennyiseg: 60 dkg
     - name: Zöldbab (mirelit)
       mennyiseg: 2 kg
@@ -1265,6 +1265,46 @@ Serpenyős csirkemell:
       mennyiseg: 0.5 tk
     - name: Bors
       mennyiseg: 0.5 mk
+
+Sörös tepsis sertés:
+  defaultPortion: 4
+  receptUrl: https://www.youtube.com/watch?v=zB5TtY-EtbQ
+  thumbnailUrl: https://i.ytimg.com/vi/zB5TtY-EtbQ/hqdefault.jpg
+  ingredients:
+    - name: Vöröshagyma
+      mennyiseg: 5 db
+    - name: Napraforgó olaj
+      mennyiseg: 50 ml
+    - name: Sertés comb
+      mennyiseg: 1 kg
+    - name: Só
+      mennyiseg: 10 g
+    - name: Bors
+      mennyiseg: 5 g
+    - name: Fűszer paprika
+      mennyiseg: 5 g
+    - name: Napraforgó olaj
+      mennyiseg: 50 ml
+    - name: Káposzta
+      mennyiseg: 200 g
+    - name: Kígyóuborka
+      mennyiseg: 1 db
+    - name: Napraforgó olaj
+      mennyiseg: 20 ml
+    - name: Só
+      mennyiseg: 5 g
+    - name: Ecet
+      mennyiseg: 10 ml
+    - name: Majonéz
+      mennyiseg: 50 g
+    - name: Sör
+      mennyiseg: 70 ml
+    - name: Bazsalikom
+      mennyiseg: 5 g
+  comments:
+    - Sertés comb vagy Sertés karaj
+    - Tepsi mérete 30 cm x 35 cm
+    - SÜTŐBEN 180 °C/35 percet
 
 Szerzetesek eledele:
   defaultPortion: 2

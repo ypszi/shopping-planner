@@ -128,7 +128,7 @@ Darált hús:
   kategoria: Hús
 Kolozsvári szalonna:
   kategoria: Hús
-Sertéscomb:
+Sertés comb:
   kategoria: Hús
 Sertészsír:
   kategoria: Hús
@@ -265,6 +265,8 @@ Vaj:
   kategoria: Tejtermék
 
 # Üditő
+Sör:
+  kategoria: Üditő
 Szódavíz:
   kategoria: Üditő
 
