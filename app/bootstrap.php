@@ -37,9 +37,11 @@ $etelekFactory = new EtelekFactory(
     __DIR__ . '/ingredientCategories.yaml'
 );
 
-$plannedShopping = $_GET;
-if (!empty($plannedShopping['supermarket'])) {
-    $supermarket = SupermarketFactory::create($plannedShopping['supermarket']);
+if ($_GET['planned'] ?? false) {
+    unset($_GET['planned']);
+
+    $plannedShopping = $_GET;
+    $supermarket     = SupermarketFactory::create($plannedShopping['supermarket']);
 
     $foodPortionsByFoodName = [];
     foreach ($plannedShopping as $key => $value) {
@@ -56,12 +58,12 @@ if (!empty($plannedShopping['supermarket'])) {
     $totalRowCountByFood = array_sum(array_map(fn(array $rowsOfFood) => count($rowsOfFood), $shoppingListByFood->getRows()));
 
     echo $twig->render('planned-shopping.html.twig', [
-        'httpHost'            => $_SERVER['HTTP_HOST'],
         'supermarket'         => $supermarket,
         'etelek'              => $etelek,
         'shoppingList'        => $shoppingList,
         'shoppingListByFood'  => $shoppingListByFood,
         'totalRowCountByFood' => $totalRowCountByFood,
+        'plannedShopping'     => http_build_query($plannedShopping),
     ]);
 
     return;
@@ -72,11 +74,23 @@ $availableSupermarkets = array_combine(
     array_values(SupermarketFactory::listAvailableSupermarkets())
 );
 
-$availableFoods = $etelekFactory->createAvailableFoods();
+$availableFoods     = $etelekFactory->createAvailableFoods();
+$defaultSupermarket = $_GET['supermarket'] ?? AuchanCsomor::name();
+
+unset($_GET['supermarket']);
+
+$foods         = array_filter($_GET, fn(string $key) => str_contains($key, 'food-'), ARRAY_FILTER_USE_KEY);
+$portions      = array_filter($_GET, fn(string $key) => str_contains($key, 'portion-'), ARRAY_FILTER_USE_KEY);
+$selectedFoods = [];
+
+foreach ($foods as $key => $value) {
+    $portionKey            = str_replace('food-', 'portion-', $key);
+    $selectedFoods[$value] = $portions[$portionKey];
+}
 
 echo $twig->render('shopping-planner.html.twig', [
-    'defaultSupermarketName' => AuchanCsomor::name(),
-    'availableSupermarkets'  => $availableSupermarkets,
-    'availableFoods'         => $availableFoods,
-    'selectedFoods'          => $_GET['selectedFoods'] ?? [],
+    'defaultSupermarket'    => $defaultSupermarket,
+    'availableSupermarkets' => $availableSupermarkets,
+    'availableFoods'        => $availableFoods,
+    'selectedFoods'         => $selectedFoods,
 ]);

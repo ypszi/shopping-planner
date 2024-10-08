@@ -18,7 +18,7 @@
                                 value="{{ availableSupermarket }}"
                                 name="supermarket"
                                 class="form-check-input"
-                                {% if availableSupermarket == defaultSupermarketName %}checked=checked{% endif %}
+                                {% if availableSupermarket == defaultSupermarket %}checked=checked{% endif %}
                         >
                         <label for="{{ availableSupermarketKey }}" class="form-check-label">
                             {{ availableSupermarket }}
@@ -35,6 +35,8 @@
             {% for availableFood in availableFoods %}
                 {% set availableFoodName = availableFood.name %}
                 {% set availableFoodNameKey = availableFoodName|replace({' ': '_'}) %}
+                {% set isAvailableFoodSelected = selectedFoods[availableFoodName] is defined %}
+                {% set portion = isAvailableFoodSelected ? selectedFoods[availableFoodName] : availableFood.defaultPortion %}
                 <div class="col-md-8">
                     <div class="form-check form-switch">
                         <input
@@ -44,11 +46,13 @@
                                 value="{{ availableFoodName }}"
                                 name="food-{{ availableFoodNameKey }}"
                                 class="form-check-input"
-                                onchange="this.checked ? document.getElementById('portion-{{ availableFoodNameKey }}').disabled = '' : document.getElementById('portion-{{ availableFoodNameKey }}').disabled = 'disabled'"
-                                {% if availableFoodName in selectedFoods %}checked="checked"{% endif %}
+                                onchange="this.checked
+                                        ? document.getElementById('portion-{{ availableFoodNameKey }}').disabled = ''
+                                        : document.getElementById('portion-{{ availableFoodNameKey }}').disabled = 'disabled'"
+                                {% if isAvailableFoodSelected %}checked="checked"{% endif %}
                         >
                         <label for="{{ availableFoodNameKey }}" class="form-check-label">{{ availableFoodName }}</label>
-                        <output id="portion-output-{{ availableFoodNameKey }}">({{ availableFood.defaultPortion }} Adag)</output>
+                        <output id="portion-output-{{ availableFoodNameKey }}">({{ portion }} Adag)</output>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -56,13 +60,13 @@
                         <input
                                 type="range"
                                 id="portion-{{ availableFoodNameKey }}"
-                                value="{{ availableFood.defaultPortion }}"
+                                value="{{ portion }}"
                                 name="portion-{{ availableFoodNameKey }}"
                                 class="form-range"
                                 min="1"
                                 max="12"
                                 step="1"
-                                {% if availableFoodName not in selectedFoods %}disabled="disabled"{% endif %}
+                                {% if not isAvailableFoodSelected %}disabled="disabled"{% endif %}
                                 oninput="document.getElementById('portion-output-{{ availableFoodNameKey }}').value = '(' + this.value + ' Adag)'"
                         >
                     </div>
@@ -72,7 +76,20 @@
 
         <div class="sticky-bottom">
             <div class="row justify-content-center sticky-bottom-btn-row">
-                <button class="btn btn-primary col-2" type="submit">PLAN</button>
+                <input type="hidden" name="planned" value="1">
+
+                <button
+                        class="btn btn-warning col-3 text-center"
+                        type="button"
+                        onclick="location.href=window.location.origin">
+                    RESET
+                </button>
+                <div class="col-1"></div>
+                <button
+                        class="btn btn-primary col-3 text-center"
+                        type="submit">
+                    PLAN
+                </button>
             </div>
         </div>
     </form>
