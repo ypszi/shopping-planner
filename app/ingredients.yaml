@@ -67,7 +67,11 @@ Chili:
   kategoria: Fűszer
 Citrombors:
   kategoria: Fűszer
+Curry:
+  kategoria: Fűszer
 Erőleves kocka:
+  kategoria: Fűszer
+Fokhagymapor:
   kategoria: Fűszer
 Fűszerkeverék:
   kategoria: Fűszer
@@ -86,6 +90,8 @@ Ketchup:
   kategoria: Fűszer
 Köménymag:
   kategoria: Fűszer
+Kurkuma:
+  kategoria: Fűszer
 Majonéz:
   kategoria: Fűszer
 Majoranna:
@@ -97,6 +103,8 @@ Mustár:
 Oregánó:
   kategoria: Fűszer
 Petrezselyem:
+  kategoria: Fűszer
+Pirított hagyma:
   kategoria: Fűszer
 Piros paprika:
   kategoria: Fűszer
@@ -161,6 +169,8 @@ Kenyér:
   kategoria: Pékárú
 
 # Sajt
+Cheddar sajt (vörös):
+  kategoria: Sajt
 Feta sajt:
   kategoria: Sajt
 Gouda sajt:
@@ -309,6 +319,8 @@ Kaliforniai paprika (zöld):
 Káposzta:
   kategoria: Zöldség / Gyümölcs
 Karalábé:
+  kategoria: Zöldség / Gyümölcs
+Karfiol:
   kategoria: Zöldség / Gyümölcs
 Kelkáposzta:
   kategoria: Zöldség / Gyümölcs

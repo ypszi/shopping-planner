@@ -707,7 +707,54 @@ Illatos omlós csirkemell:
     - name: Só
       # só ízlés szerint
       mennyiseg: 1 csipet
-
+Karfiolsteak:
+  defaultPortion: 2
+  receptUrl: https://streetkitchen.hu/vegetarianus-etelek/fuszeres-karfiolsteak-sajtmartassal-es-ropogos-hagymaval/
+  thumbnailUrl: https://streetkitchen.hu/wp-content/uploads/2020/09/sult-karfiol-steaksoborsf-paprikacurry-sajtszosszal-ropogos-hagymaval_3-scaled.jpg
+  ingredients:
+    - name: Karfiol
+      mennyiseg: 2 db
+    - name: Pirított hagyma
+      mennyiseg: 50 g
+#  A fűszerkeverékhez
+    - name: Piros paprika
+      mennyiseg: 1 tk
+    - name: Curry
+      mennyiseg: 2 tk
+    - name: Bors
+      mennyiseg: 0.5 tk
+    - name: Só
+      mennyiseg: 1 tk
+    - name: Fokhagymapor
+      mennyiseg: 1 tk
+    - name: Napraforgó olaj
+      mennyiseg: 4 ek
+#  A sajtszószhoz
+    - name: Vaj
+      mennyiseg: 50 g
+    - name: Liszt
+      mennyiseg: 40 g
+    - name: Tej
+      mennyiseg: 500 ml
+    - name: Cheddar sajt (vörös)
+      mennyiseg: 150 g
+    - name: Trappista sajt (füstölt)
+      mennyiseg: 50 g
+    - name: Só
+      mennyiseg: 2 csipet
+    - name: Bors
+      mennyiseg: 1 csipet
+    - name: Kurkuma
+      mennyiseg: 0.5 tk
+  comments:
+    - a sajtszószhoz:
+      - 50 g vaj
+      - 40 g liszt
+      - 500 ml tej
+      - 150 g vörös cheddar
+      - 50 g füstölt sajt
+      - só, bors
+      - ½ tk kurkuma
 Kefíres csirke:
   defaultPortion: 4
   receptUrl: http://chiliesvanilia.blogspot.com/2016/08/szuperropogos-rantott-csirke-husz-perc.html
