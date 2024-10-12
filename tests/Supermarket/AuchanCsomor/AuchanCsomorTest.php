@@ -42,10 +42,13 @@ class AuchanCsomorTest extends TestCase
                 'Tartós tejtermék',
                 'Hús',
                 'Felvágott',
-                'Édesség',
+                'Sütemény',
                 'Üditő',
                 'Nemzetközi',
-                'Sós, Fűszer',
+                'Olaj / Ecet',
+                'Fűszer',
+                'Konzerv',
+                'Tészta / Rizs',
             ],
             $this->supermarket::sorrend()
         );

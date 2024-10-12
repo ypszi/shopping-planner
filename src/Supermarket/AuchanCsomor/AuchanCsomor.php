@@ -27,10 +27,13 @@ class AuchanCsomor extends Supermarket
             AuchanCsomorKategoria::TARTOS_TEJTERMEK->value,
             AuchanCsomorKategoria::HUS->value,
             AuchanCsomorKategoria::FELVAGOTT->value,
-            AuchanCsomorKategoria::EDESSEG->value,
+            AuchanCsomorKategoria::SUTEMENY->value,
             AuchanCsomorKategoria::UDITO->value,
             AuchanCsomorKategoria::NEMZETKOZI->value,
-            AuchanCsomorKategoria::SOS_FUSZER->value,
+            AuchanCsomorKategoria::OLAJ_ECET->value,
+            AuchanCsomorKategoria::FUSZER->value,
+            AuchanCsomorKategoria::KONZERV->value,
+            AuchanCsomorKategoria::TESZTA_RIZS->value,
         ];
     }
 }

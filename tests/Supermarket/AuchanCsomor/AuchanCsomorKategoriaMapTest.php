@@ -36,23 +36,23 @@ class AuchanCsomorKategoriaMapTest extends TestCase
             ],
             [
                 HozzavaloKategoria::OLAJ,
-                AuchanCsomorKategoria::SOS_FUSZER,
+                AuchanCsomorKategoria::OLAJ_ECET,
             ],
             [
                 HozzavaloKategoria::ECET,
-                AuchanCsomorKategoria::SOS_FUSZER,
+                AuchanCsomorKategoria::OLAJ_ECET,
             ],
             [
                 HozzavaloKategoria::FUSZER,
-                AuchanCsomorKategoria::SOS_FUSZER,
+                AuchanCsomorKategoria::FUSZER,
             ],
             [
                 HozzavaloKategoria::TARTOS_ELELMISZER,
-                AuchanCsomorKategoria::SOS_FUSZER,
+                AuchanCsomorKategoria::TESZTA_RIZS,
             ],
             [
                 HozzavaloKategoria::CUKRASZ,
-                AuchanCsomorKategoria::EDESSEG,
+                AuchanCsomorKategoria::SUTEMENY,
             ],
             [
                 HozzavaloKategoria::AZSIAI,

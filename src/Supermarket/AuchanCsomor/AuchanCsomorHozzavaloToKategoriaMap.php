@@ -15,7 +15,8 @@ class AuchanCsomorHozzavaloToKategoriaMap extends HozzavaloToKategoriaMap
     protected function hozzavaloMap(): array
     {
         return [
-            'Élesztő' => AuchanCsomorKategoria::TEJTERMEK,
+            'Élesztő'    => AuchanCsomorKategoria::TEJTERMEK,
+            'Finomliszt' => AuchanCsomorKategoria::SUTEMENY,
         ];
     }
 }

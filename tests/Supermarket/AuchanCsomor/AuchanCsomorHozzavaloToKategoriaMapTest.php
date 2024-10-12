@@ -39,6 +39,15 @@ class AuchanCsomorHozzavaloToKategoriaMapTest extends TestCase
             ],
             [
                 new Hozzavalo(
+                    name:         'Finomliszt',
+                    mennyiseg:    1,
+                    mertekegyseg: Mertekegyseg::G,
+                    kategoria:    HozzavaloKategoria::TARTOS_ELELMISZER,
+                ),
+                AuchanCsomorKategoria::SUTEMENY,
+            ],
+            [
+                new Hozzavalo(
                     name:         'Csirkemell',
                     mennyiseg:    1,
                     mertekegyseg: Mertekegyseg::KG,

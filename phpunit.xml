@@ -5,7 +5,11 @@
 		 cacheDirectory=".phpunit.cache"
 		 executionOrder="depends,defects"
 		 beStrictAboutOutputDuringTests="true"
+		 stopOnNotice="true"
+		 stopOnWarning="true"
+		 stopOnFailure="true"
 		 failOnRisky="true"
+		 failOnNotice="true"
 		 failOnWarning="true">
 	<testsuites>
 		<testsuite name="default">

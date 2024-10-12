@@ -16,10 +16,13 @@ enum AuchanCsomorKategoria: string implements Kategoria
     case TARTOS_TEJTERMEK = 'Tartós tejtermék';
     case HUS = 'Hús';
     case FELVAGOTT = 'Felvágott';
-    case EDESSEG = 'Édesség';
+    case SUTEMENY = 'Sütemény';
     case UDITO = 'Üditő';
     case NEMZETKOZI = 'Nemzetközi';
-    case SOS_FUSZER = 'Sós, Fűszer';
+    case OLAJ_ECET = 'Olaj / Ecet';
+    case FUSZER = 'Fűszer';
+    case KONZERV = 'Konzerv';
+    case TESZTA_RIZS = 'Tészta / Rizs';
 
     public function value(): string
     {
