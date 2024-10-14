@@ -1,10 +1,10 @@
 {
-    "name": "peter.pecosz/kajatervezo",
+    "name": "peter.pecosz/shopping-planner",
     "type": "project",
     "license": [
         "proprietary"
     ],
-    "description": "Bevásárlás tervező",
+    "description": "Shopping planner",
     "require": {
         "php": "^8.2",
         "symfony/console": "^7.0",
