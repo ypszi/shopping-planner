@@ -40,7 +40,7 @@ class HozzavalokByKategoria implements IteratorAggregate
 
     private function addHozzavalo(Hozzavalo $hozzavalo): self
     {
-        $this->hozzavalok[$hozzavalo->kategoria()->value()][] = $hozzavalo;
+        $this->hozzavalok[$hozzavalo->kategoria()][] = $hozzavalo;
 
         return $this;
     }

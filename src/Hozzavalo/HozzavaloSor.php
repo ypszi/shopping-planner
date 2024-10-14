@@ -32,10 +32,10 @@ class HozzavaloSor
     public function add(Hozzavalo $hozzavalo): self
     {
         $hozzavalo           = $this->convertToPreference($hozzavalo);
-        $hozzaadottHozzavalo = $this->hozzavalokPerKategoria[$hozzavalo->kategoria()->value()] ?? null;
+        $hozzaadottHozzavalo = $this->hozzavalokPerKategoria[$hozzavalo->kategoria()] ?? null;
 
         if (empty($hozzaadottHozzavalo)) {
-            $this->hozzavalokPerKategoria[$hozzavalo->kategoria()->value()] = $hozzavalo;
+            $this->hozzavalokPerKategoria[$hozzavalo->kategoria()] = $hozzavalo;
 
             return $this;
         }
@@ -46,7 +46,7 @@ class HozzavaloSor
                 $hozzaadottHozzavalo
             );
 
-            $this->hozzavalokPerKategoria[$hozzavalo->kategoria()->value()] = $hozzaadottHozzavalo->withMennyiseg(
+            $this->hozzavalokPerKategoria[$hozzavalo->kategoria()] = $hozzaadottHozzavalo->withMennyiseg(
                 $hozzaadottHozzavalo->getMennyiseg() + $newMennyiseg
             );
 
@@ -57,7 +57,7 @@ class HozzavaloSor
             $hozzaadottHozzavalo->name() === $hozzavalo->name()
             && $hozzaadottHozzavalo->getMertekegyseg() === $hozzavalo->getMertekegyseg()
         ) {
-            $this->hozzavalokPerKategoria[$hozzavalo->kategoria()->value()] = $hozzaadottHozzavalo->withMennyiseg(
+            $this->hozzavalokPerKategoria[$hozzavalo->kategoria()] = $hozzaadottHozzavalo->withMennyiseg(
                 $hozzaadottHozzavalo->getMennyiseg() + $hozzavalo->getMennyiseg()
             );
         }
@@ -67,7 +67,7 @@ class HozzavaloSor
 
     public function canAdd(Hozzavalo $hozzavalo): bool
     {
-        $hozzaadottHozzavalo = $this->hozzavalokPerKategoria[$hozzavalo->kategoria()->value()] ?? null;
+        $hozzaadottHozzavalo = $this->hozzavalokPerKategoria[$hozzavalo->kategoria()] ?? null;
 
         if (empty($hozzaadottHozzavalo)) {
             return true;
@@ -110,12 +110,12 @@ class HozzavaloSor
     public function toArray(Supermarket $supermarket): array
     {
         $sor = [];
-        foreach ($supermarket::sorrend() as $kategoria) {
+        foreach ($supermarket->sorrend() as $kategoria) {
             $hozzavalo = $this->hozzavalokPerKategoria[$kategoria] ?? null;
             $sor[]     = $hozzavalo ? (string)$hozzavalo : '';
         }
 
-        $notFoundCategories = array_diff(array_keys($this->hozzavalokPerKategoria), $supermarket::sorrend());
+        $notFoundCategories = array_diff(array_keys($this->hozzavalokPerKategoria), $supermarket->sorrend());
 
         foreach ($notFoundCategories as $kategoria) {
             $hozzavalo = $this->hozzavalokPerKategoria[$kategoria] ?? null;

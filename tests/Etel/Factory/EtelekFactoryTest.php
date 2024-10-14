@@ -2,18 +2,19 @@
 
 declare(strict_types=1);
 
-namespace Etel\Factory;
+namespace PeterPecosz\Kajatervezo\Tests\Etel\Factory;
 
 use PeterPecosz\Kajatervezo\Etel\Etel;
 use PeterPecosz\Kajatervezo\Etel\Etelek;
 use PeterPecosz\Kajatervezo\Etel\Factory\EtelekFactory;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
-use PeterPecosz\Kajatervezo\Hozzavalo\HozzavaloKategoria;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 use PHPUnit\Framework\TestCase;
 
 class EtelekFactoryTest extends TestCase
 {
+    private EtelekFactory $sut;
+
     protected function setUp(): void
     {
         $this->sut = new EtelekFactory(
@@ -45,70 +46,70 @@ class EtelekFactoryTest extends TestCase
                                                 name:                   'Burgonya',
                                                 mennyiseg:              40,
                                                 mertekegyseg:           Mertekegyseg::DKG,
-                                                kategoria:              HozzavaloKategoria::ZOLDSEG_GYUMOLCS,
+                                                kategoria:              'Zöldség / Gyümölcs',
                                                 mertekegysegPreference: Mertekegyseg::DKG
                                             ),
                                             new Hozzavalo(
                                                 name:                   'Só',
                                                 mennyiseg:              1,
                                                 mertekegyseg:           Mertekegyseg::TK,
-                                                kategoria:              HozzavaloKategoria::FUSZER,
+                                                kategoria:              'Fűszer',
                                                 mertekegysegPreference: Mertekegyseg::G
                                             ),
                                             new Hozzavalo(
                                                 name:                   'Makaróni tészta',
                                                 mennyiseg:              25,
                                                 mertekegyseg:           Mertekegyseg::DKG,
-                                                kategoria:              HozzavaloKategoria::TARTOS_ELELMISZER,
+                                                kategoria:              'Tartós élelmiszer',
                                                 mertekegysegPreference: Mertekegyseg::G
                                             ),
                                             new Hozzavalo(
                                                 name:                   'Gouda sajt',
                                                 mennyiseg:              20,
                                                 mertekegyseg:           Mertekegyseg::DKG,
-                                                kategoria:              HozzavaloKategoria::SAJT,
+                                                kategoria:              'Sajt',
                                                 mertekegysegPreference: Mertekegyseg::G
                                             ),
                                             new Hozzavalo(
                                                 name:                   'Tej',
                                                 mennyiseg:              1.5,
                                                 mertekegyseg:           Mertekegyseg::DL,
-                                                kategoria:              HozzavaloKategoria::TARTOS_TEJTERMEK,
+                                                kategoria:              'Tartós tejtermék',
                                                 mertekegysegPreference: Mertekegyseg::L
                                             ),
                                             new Hozzavalo(
                                                 name:                   'Főzőtejszín',
                                                 mennyiseg:              1,
                                                 mertekegyseg:           Mertekegyseg::DL,
-                                                kategoria:              HozzavaloKategoria::TARTOS_TEJTERMEK,
+                                                kategoria:              'Tartós tejtermék',
                                                 mertekegysegPreference: Mertekegyseg::ML
                                             ),
                                             new Hozzavalo(
                                                 name:                   'Bors',
                                                 mennyiseg:              1,
                                                 mertekegyseg:           Mertekegyseg::CSIPET,
-                                                kategoria:              HozzavaloKategoria::FUSZER,
+                                                kategoria:              'Fűszer',
                                                 mertekegysegPreference: Mertekegyseg::G
                                             ),
                                             new Hozzavalo(
                                                 name:                   'Vöröshagyma',
                                                 mennyiseg:              2,
                                                 mertekegyseg:           Mertekegyseg::DB,
-                                                kategoria:              HozzavaloKategoria::ZOLDSEG_GYUMOLCS,
+                                                kategoria:              'Zöldség / Gyümölcs',
                                                 mertekegysegPreference: Mertekegyseg::DB
                                             ),
                                             new Hozzavalo(
                                                 name:                   'Olíva olaj',
                                                 mennyiseg:              2,
                                                 mertekegyseg:           Mertekegyseg::EK,
-                                                kategoria:              HozzavaloKategoria::OLAJ,
+                                                kategoria:              'Olaj',
                                                 mertekegysegPreference: Mertekegyseg::L
                                             ),
                                             new Hozzavalo(
                                                 name:                   'Petrezselyem',
                                                 mennyiseg:              1,
                                                 mertekegyseg:           Mertekegyseg::EK,
-                                                kategoria:              HozzavaloKategoria::FUSZER,
+                                                kategoria:              'Fűszer',
                                                 mertekegysegPreference: Mertekegyseg::G
                                             ),
                                         ]
@@ -121,6 +122,6 @@ class EtelekFactoryTest extends TestCase
 
     public function testCreateAvailableFoods(): void
     {
-        $this->assertCount(68, $this->sut->createAvailableFoods());
+        $this->assertCount(68, $this->sut->listAvailableFoods());
     }
 }

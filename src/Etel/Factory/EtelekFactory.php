@@ -8,7 +8,6 @@ use PeterPecosz\Kajatervezo\Etel\Etel;
 use PeterPecosz\Kajatervezo\Etel\Etelek;
 use PeterPecosz\Kajatervezo\Etel\Exception\UnknownIngredientException;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
-use PeterPecosz\Kajatervezo\Hozzavalo\HozzavaloKategoria;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 use Symfony\Component\Yaml\Yaml;
 
@@ -71,7 +70,7 @@ class EtelekFactory
     /**
      * @return Etel[]
      */
-    public function createAvailableFoods(): array
+    public function listAvailableFoods(): array
     {
         $availableFoods = [];
 
@@ -180,7 +179,7 @@ class EtelekFactory
             $ingredientName,
             (float)$mennyiseg,
             $mertekegyseg,
-            HozzavaloKategoria::from($category),
+            $category,
             $ingredientMertekegysegPreference ?? null
         );
     }
@@ -188,7 +187,7 @@ class EtelekFactory
     /**
      * @param array<string, int> $foodPortionsByFoodName
      */
-    public function createReferenceFood(string $refFoodName, array $foodPortionsByFoodName = []): Etel
+    private function createReferenceFood(string $refFoodName, array $foodPortionsByFoodName = []): Etel
     {
         $additionalRawFood    = $this->foods[$refFoodName];
         $additionalHozzavalok = [];

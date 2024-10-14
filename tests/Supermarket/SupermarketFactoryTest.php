@@ -4,32 +4,62 @@ declare(strict_types=1);
 
 namespace PeterPecosz\Kajatervezo\Tests\Supermarket;
 
-use PeterPecosz\Kajatervezo\Supermarket\AuchanCsomor\AuchanCsomor;
-use PeterPecosz\Kajatervezo\Supermarket\AuchanLuxembourg\AuchanLuxembourg;
-use PeterPecosz\Kajatervezo\Supermarket\KauflandTrier\KauflandTrier;
-use PeterPecosz\Kajatervezo\Supermarket\LidlWasserbillig\LidlWasserbillig;
-use PeterPecosz\Kajatervezo\Supermarket\MatchWasserbillig\MatchWasserbillig;
+use PeterPecosz\Kajatervezo\Supermarket\Exception\UnknownSupermarketException;
 use PeterPecosz\Kajatervezo\Supermarket\SupermarketFactory;
-use PeterPecosz\Kajatervezo\Supermarket\TescoFogarasi\TescoFogarasi;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 
 class SupermarketFactoryTest extends TestCase
 {
+    private SupermarketFactory $sut;
+
+    protected function setUp(): void
+    {
+        $this->sut = new SupermarketFactory(
+            __DIR__ . '/../../app/supermarkets.yaml'
+        );
+    }
+
     #[Test]
     public function testCreate(): void
     {
-        $this->assertInstanceOf(AuchanCsomor::class, SupermarketFactory::create(AuchanCsomor::name()));
-        $this->assertInstanceOf(TescoFogarasi::class, SupermarketFactory::create(TescoFogarasi::name()));
-        $this->assertInstanceOf(KauflandTrier::class, SupermarketFactory::create(KauflandTrier::name()));
-        $this->assertInstanceOf(AuchanLuxembourg::class, SupermarketFactory::create(AuchanLuxembourg::name()));
-        $this->assertInstanceOf(LidlWasserbillig::class, SupermarketFactory::create(LidlWasserbillig::name()));
-        $this->assertInstanceOf(MatchWasserbillig::class, SupermarketFactory::create(MatchWasserbillig::name()));
+        $supermarket = $this->sut->create('Auchan - Csömör');
+
+        $this->assertEquals('Auchan - Csömör', $supermarket->name());
+        $this->assertEquals(
+            [
+                'Zöldség / Gyümölcs',
+                'Pékárú',
+                'Hal',
+                'Mirelit',
+                'Tejtermék',
+                'Tartós tejtermék',
+                'Hús',
+                'Felvágott',
+                'Sütés / Sütemény',
+                'Üditő',
+                'Nemzetközi',
+                'Olaj / Ecet',
+                'Fűszer',
+                'Konzerv',
+                'Tészta / Rizs',
+            ],
+            $supermarket->sorrend()
+        );
+    }
+
+    #[Test]
+    public function testCreateFailsOnUnknownSupermarket(): void
+    {
+        $this->expectException(UnknownSupermarketException::class);
+        $this->expectExceptionMessage('Unknown supermarket: "Auchan"');
+
+        $this->sut->create('Auchan');
     }
 
     #[Test]
     public function testListAvailableSupermarkets(): void
     {
-        $this->assertCount(5, SupermarketFactory::listAvailableSupermarkets());
+        $this->assertCount(2, $this->sut->listAvailableSupermarkets());
     }
 }

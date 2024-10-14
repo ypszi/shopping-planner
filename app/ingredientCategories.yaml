@@ -1,9 +1,5 @@
-Ázsiai:
-  mertekegysegPreference: ml
 Bor:
   mertekegysegPreference: l
-Cukrász:
-  mertekegysegPreference: g
 Ecet:
   mertekegysegPreference: l
 Felvágott:
@@ -16,11 +12,15 @@ Hús:
   mertekegysegPreference: kg
 Mirelit:
   mertekegysegPreference: g
+Nemzetközi:
+  mertekegysegPreference: ml
 Olaj:
   mertekegysegPreference: l
 Pékárú:
   mertekegysegPreference: kg
 Sajt:
+  mertekegysegPreference: g
+Sütés / Sütemény:
   mertekegysegPreference: g
 Tartós élelmiszer:
   mertekegysegPreference: g

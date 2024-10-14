@@ -55,7 +55,7 @@ class HozzavaloSorok
         foreach ($this->hozzavaloSorok as $hozzavaloSor) {
             if ($hozzavaloSor->canAdd($hozzavalo)) {
                 $hozzavaloSor->add($hozzavalo);
-                $hozzavaloSor->sort($this->supermarket::sorrend());
+                $hozzavaloSor->sort($this->supermarket->sorrend());
 
                 return;
             }
@@ -63,7 +63,7 @@ class HozzavaloSorok
 
         $nextHozzavaloSor = new HozzavaloSor();
         $nextHozzavaloSor->add($hozzavalo);
-        $nextHozzavaloSor->sort($this->supermarket::sorrend());
+        $nextHozzavaloSor->sort($this->supermarket->sorrend());
 
         $this->add($nextHozzavaloSor);
     }

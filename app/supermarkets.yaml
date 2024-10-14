@@ -1,0 +1,51 @@
+Auchan - Csömör:
+  categories:
+    - Zöldség / Gyümölcs
+    - Pékárú
+    - Hal
+    - Mirelit
+    - Tejtermék
+    - Tartós tejtermék
+    - Hús
+    - Felvágott
+    - Sütés / Sütemény
+    - Üditő
+    - Nemzetközi
+    - Olaj / Ecet
+    - Fűszer
+    - Konzerv
+    - Tészta / Rizs
+  categoryMap:
+    Bor: Üditő
+    Olaj: Olaj / Ecet
+    Ecet: Olaj / Ecet
+    Tartós élelmiszer: Tészta / Rizs
+    Sajt: Tejtermék
+  ingredientMap:
+    Élesztő: Tejtermék
+
+Tesco - Fogarasi:
+  categories:
+    - Zöldség / Gyümölcs
+    - Pékárú
+    - Felvágott
+    - Sajt
+    - Tejtermék
+    - Hús
+    - Tartós tejtermék
+    - Tészta / Rizs
+    - Mirelit
+    - Olaj / Ecet
+    - Konzerv
+    - Fűszer
+    - Sütés / Sütemény
+    - Édesség / Keksz
+    - Üditő
+  categoryMap:
+    Bor: Üditő
+    Olaj: Olaj / Ecet
+    Ecet: Olaj / Ecet
+    Tartós élelmiszer: Tészta / Rizs
+    Hal: Mirelit
+    Nemzetközi: Tészta / Rizs
+    Sajt: Tejtermék

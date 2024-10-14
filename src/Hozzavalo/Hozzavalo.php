@@ -14,7 +14,7 @@ class Hozzavalo
 
     private Mertekegyseg $mertekegyseg;
 
-    private Kategoria $kategoria;
+    private string $category;
 
     private ?Mertekegyseg $mertekegysegPreference;
 
@@ -22,13 +22,13 @@ class Hozzavalo
         string $name,
         float $mennyiseg,
         Mertekegyseg $mertekegyseg,
-        Kategoria $kategoria,
+        string $kategoria,
         ?Mertekegyseg $mertekegysegPreference = null
     ) {
         $this->name                   = $name;
         $this->mennyiseg              = $mennyiseg;
         $this->mertekegyseg           = $mertekegyseg;
-        $this->kategoria              = $kategoria;
+        $this->category              = $kategoria;
         $this->mertekegysegPreference = $mertekegysegPreference;
     }
 
@@ -48,10 +48,10 @@ class Hozzavalo
         return $clone;
     }
 
-    public function withKategoria(Kategoria $kategoria): self
+    public function withKategoria(string $kategoria): self
     {
-        $clone            = clone $this;
-        $clone->kategoria = $kategoria;
+        $clone           = clone $this;
+        $clone->category = $kategoria;
 
         return $clone;
     }
@@ -61,9 +61,9 @@ class Hozzavalo
         return $this->name;
     }
 
-    public function kategoria(): Kategoria
+    public function kategoria(): string
     {
-        return $this->kategoria;
+        return $this->category;
     }
 
     public function mertekegysegPreference(): ?Mertekegyseg

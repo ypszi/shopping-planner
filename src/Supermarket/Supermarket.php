@@ -11,24 +11,33 @@ use PeterPecosz\Kajatervezo\Hozzavalo\HozzavaloSorok;
 use PeterPecosz\Kajatervezo\ShoppingList\ShoppingList;
 use PeterPecosz\Kajatervezo\ShoppingList\ShoppingListByFood;
 
-abstract class Supermarket
+class Supermarket
 {
-    private KategoriaMap $kategoriaMap;
+    final public const DEFAULT = 'Auchan - Csömör';
 
-    private ?HozzavaloToKategoriaMap $hozzavaloToKategoriaMap;
-
-    public function __construct(KategoriaMap $kategoriaMap, ?HozzavaloToKategoriaMap $hozzavaloToKategoriaMap = null)
-    {
-        $this->kategoriaMap            = $kategoriaMap;
-        $this->hozzavaloToKategoriaMap = $hozzavaloToKategoriaMap;
+    /**
+     * @param string[] $categories
+     */
+    public function __construct(
+        private readonly string $name,
+        private readonly array $categories,
+        private readonly CategoryMap $categoryMap,
+        private readonly ?IngredientToCategoryMap $ingredientToCategoryMap = null
+    ) {
     }
 
-    abstract public static function name(): string;
+    public function name(): string
+    {
+        return $this->name;
+    }
 
     /**
      * @return string[]
      */
-    abstract public static function sorrend(): array;
+    public function sorrend(): array
+    {
+        return $this->categories;
+    }
 
     public function toShoppingList(Etelek $etelek): ShoppingList
     {
@@ -61,12 +70,12 @@ abstract class Supermarket
             /** @var Hozzavalo $hozzavalo */
             foreach ($hozzavalok as $hozzavalo) {
                 $hozzavalo = $hozzavalo->withKategoria(
-                    $this->kategoriaMap->map($hozzavalo->kategoria())
+                    $this->categoryMap->map($hozzavalo->kategoria())
                 );
 
-                if ($this->hozzavaloToKategoriaMap) {
+                if ($this->ingredientToCategoryMap) {
                     $hozzavalo = $hozzavalo->withKategoria(
-                        $this->hozzavaloToKategoriaMap->map($hozzavalo)
+                        $this->ingredientToCategoryMap->map($hozzavalo)
                     );
                 }
 

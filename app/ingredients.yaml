@@ -1,14 +1,3 @@
-# Ázsiai
-Hal szósz:
-  kategoria: Ázsiai
-Rizs tészta:
-  kategoria: Ázsiai
-  mertekegysegPreference: g
-Szójaszósz:
-  kategoria: Ázsiai
-Tamarind szósz:
-  kategoria: Ázsiai
-
 # Bor
 Fehérbor:
   kategoria: Bor
@@ -18,17 +7,6 @@ Vörösbor:
   kategoria: Bor
 Vörösbor (száraz):
   kategoria: Bor
-
-# Cukrász
-Cukor:
-  kategoria: Cukrász
-  mertekegysegPreference: kg
-Kakaópor:
-  kategoria: Cukrász
-Porcukor:
-  kategoria: Cukrász
-Vaníliás cukor:
-  kategoria: Cukrász
 
 # Ecet
 Almaborecet:
@@ -153,6 +131,17 @@ Zöldbab (mirelit):
 Zöldborsó (mirelit):
   kategoria: Mirelit
 
+# Nemzetközi
+Hal szósz:
+  kategoria: Nemzetközi
+Rizs tészta:
+  kategoria: Nemzetközi
+  mertekegysegPreference: g
+Szójaszósz:
+  kategoria: Nemzetközi
+Tamarind szósz:
+  kategoria: Nemzetközi
+
 # Olaj
 Étolaj: Napraforgó olaj
 Mogyoró olaj:
@@ -188,6 +177,20 @@ Trappista sajt:
 Trappista sajt (füstölt):
   kategoria: Sajt
 
+# Sütés / Sütemény
+Cukor:
+  kategoria: Sütés / Sütemény
+  mertekegysegPreference: kg
+Finomliszt:
+  kategoria: Sütés / Sütemény
+Kakaópor:
+  kategoria: Sütés / Sütemény
+Liszt: Finomliszt
+Porcukor:
+  kategoria: Sütés / Sütemény
+Vaníliás cukor:
+  kategoria: Sütés / Sütemény
+
 # Tartós élelmiszer
 Baracklekvár:
   kategoria: Tartós élelmiszer
@@ -201,8 +204,6 @@ Csusza tészta:
   kategoria: Tartós élelmiszer
 Fehérbab (konzerv):
   kategoria: Tartós élelmiszer
-Finomliszt:
-  kategoria: Tartós élelmiszer
   mertekegysegPreference: kg
 Fusilli tészta:
   kategoria: Tartós élelmiszer
@@ -212,7 +213,6 @@ Konzerv:
   kategoria: Tartós élelmiszer
 Kukorica (konzerv):
   kategoria: Tartós élelmiszer
-Liszt: Finomliszt
 Makaróni tészta:
   kategoria: Tartós élelmiszer
 Méz:

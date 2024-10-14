@@ -7,7 +7,6 @@ namespace PeterPecosz\Kajatervezo\Tests\Etel;
 use PeterPecosz\Kajatervezo\Etel\Etel;
 use PeterPecosz\Kajatervezo\Etel\Etelek;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
-use PeterPecosz\Kajatervezo\Hozzavalo\HozzavaloKategoria;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
@@ -30,7 +29,7 @@ class EtelekTest extends TestCase
                                     name:         'Tojás',
                                     mennyiseg:    1,
                                     mertekegyseg: Mertekegyseg::DB,
-                                    kategoria:    HozzavaloKategoria::TEJTERMEK
+                                    kategoria:    'Tejtermék'
                                 ),
                             ]
         );

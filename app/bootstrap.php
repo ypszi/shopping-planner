@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 use PeterPecosz\Kajatervezo\Etel\Factory\EtelekFactory;
-use PeterPecosz\Kajatervezo\Supermarket\AuchanCsomor\AuchanCsomor;
+use PeterPecosz\Kajatervezo\Supermarket\Supermarket;
 use PeterPecosz\Kajatervezo\Supermarket\SupermarketFactory;
 use Twig\Environment;
 use Twig\Loader\FilesystemLoader;
@@ -31,6 +31,8 @@ if ($cacheEnabled) {
     ]);
 }
 
+$supermarketFactory = new SupermarketFactory(__DIR__ . '/supermarkets.yaml');
+
 $etelekFactory = new EtelekFactory(
     __DIR__ . '/foods.yaml',
     __DIR__ . '/ingredients.yaml',
@@ -40,8 +42,8 @@ $etelekFactory = new EtelekFactory(
 if ($_GET['planned'] ?? false) {
     unset($_GET['planned']);
 
-    $plannedShopping = $_GET;
-    $supermarket     = SupermarketFactory::create($plannedShopping['supermarket']);
+    $plannedShopping    = $_GET;
+    $supermarket        = $supermarketFactory->create($plannedShopping['supermarket']);
 
     $foodPortionsByFoodName = [];
     foreach ($plannedShopping as $key => $value) {
@@ -70,12 +72,12 @@ if ($_GET['planned'] ?? false) {
 }
 
 $availableSupermarkets = array_combine(
-    range(1, count(SupermarketFactory::listAvailableSupermarkets())),
-    array_values(SupermarketFactory::listAvailableSupermarkets())
+    range(1, count($supermarketFactory->listAvailableSupermarkets())),
+    array_values($supermarketFactory->listAvailableSupermarkets())
 );
 
-$availableFoods     = $etelekFactory->createAvailableFoods();
-$defaultSupermarket = $_GET['supermarket'] ?? AuchanCsomor::name();
+$availableFoods     = $etelekFactory->listAvailableFoods();
+$defaultSupermarket = $_GET['supermarket'] ?? Supermarket::DEFAULT;
 
 unset($_GET['supermarket']);
 

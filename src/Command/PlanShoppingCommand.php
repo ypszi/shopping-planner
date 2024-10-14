@@ -6,9 +6,8 @@ namespace PeterPecosz\Kajatervezo\Command;
 
 use PeterPecosz\Kajatervezo\Etel\Etel;
 use PeterPecosz\Kajatervezo\Etel\Etelek;
-use PeterPecosz\Kajatervezo\Etel\Factory\EtelFactory;
+use PeterPecosz\Kajatervezo\Etel\Factory\EtelekFactory;
 use PeterPecosz\Kajatervezo\ShoppingList\ShoppingList;
-use PeterPecosz\Kajatervezo\Supermarket\AuchanCsomor\AuchanCsomor;
 use PeterPecosz\Kajatervezo\Supermarket\Supermarket;
 use PeterPecosz\Kajatervezo\Supermarket\SupermarketFactory;
 use Symfony\Component\Console\Command\Command;
@@ -19,6 +18,10 @@ use Symfony\Component\Console\Style\SymfonyStyle;
 
 class PlanShoppingCommand extends Command
 {
+    private SupermarketFactory $supermarketFactory;
+
+    private EtelekFactory $etelekFactory;
+
     private Supermarket $supermarket;
 
     private Etelek $etelek;
@@ -33,8 +36,17 @@ class PlanShoppingCommand extends Command
 
     protected function configure(): void
     {
-        $this->availableSupermarkets = array_combine(range(1, count(SupermarketFactory::listAvailableSupermarkets())), array_values(SupermarketFactory::listAvailableSupermarkets()));
-        $this->availableFoodNames    = array_combine(range(1, count(EtelFactory::listAvailableEtelek())), array_values(EtelFactory::listAvailableEtelek()));
+        $this->supermarketFactory = new SupermarketFactory(__DIR__ . '/../../app/supermarkets.yaml');
+        $this->etelekFactory      = new EtelekFactory(
+            __DIR__ . '/../../app/foods.yaml',
+            __DIR__ . '/../../app/ingredients.yaml',
+            __DIR__ . '/../../app/ingredientCategories.yaml'
+        );
+
+        $availableFoods              = $this->etelekFactory->listAvailableFoods();
+        $availableSupermarkets       = $this->supermarketFactory->listAvailableSupermarkets();
+        $this->availableSupermarkets = array_combine(range(1, count($availableSupermarkets)), array_values($availableSupermarkets));
+        $this->availableFoodNames    = array_combine(range(1, count($availableFoods)), array_values($availableFoods));
 
         $this
             ->setName('plan:shopping')
@@ -55,7 +67,7 @@ class PlanShoppingCommand extends Command
     protected function interact(InputInterface $input, OutputInterface $output): void
     {
         $supermarketName   = $this->askSupermarketName($input);
-        $this->supermarket = SupermarketFactory::create($supermarketName);
+        $this->supermarket = $this->supermarketFactory->create($supermarketName);
 
         if ($input->getOption('testing')) {
             $this->prepareTestingRunEtelek();
@@ -83,8 +95,8 @@ class PlanShoppingCommand extends Command
 
     private function prepareTestingRunEtelek(): void
     {
-        foreach (EtelFactory::listAvailableEtelek() as $etelName) {
-            $this->etelek->add(EtelFactory::create($etelName));
+        foreach ($this->etelekFactory->listAvailableFoods() as $etelName) {
+            $this->etelek->add($etelName);
         }
     }
 
@@ -93,14 +105,17 @@ class PlanShoppingCommand extends Command
      */
     public function prepareEtelek(array $foodNames): void
     {
-        foreach ($foodNames as $kajaName) {
-            $etel = EtelFactory::create($kajaName);
+        foreach ($this->etelekFactory->listAvailableFoods() as $food) {
+            if (!in_array($food->name(), $foodNames, true)) {
+                continue;
+            }
+
             $adag = (int)$this->io->ask(
-                sprintf('Hány adagot készítesz ebből: "%s"?', $kajaName),
-                (string)$etel->defaultPortion()
+                sprintf('Hány adagot készítesz ebből: "%s"?', $food->name()),
+                (string)$food->defaultPortion()
             );
 
-            $this->etelek->add($etel->withAdag($adag));
+            $this->etelek->add($food->withAdag($adag));
         }
     }
 
@@ -110,8 +125,8 @@ class PlanShoppingCommand extends Command
             $input->getOption('supermarket')
                 ?: $this->io->choice(
                 question: 'Hova mész bevásárolni?',
-                choices: $this->availableSupermarkets,
-                default: AuchanCsomor::name()
+                choices:  $this->availableSupermarkets,
+                default:  Supermarket::DEFAULT
             )
         );
     }
@@ -124,8 +139,8 @@ class PlanShoppingCommand extends Command
         /** @var string[] $foodNames */
         return array_filter(array_map('trim', explode(',', $input->getOption('foods') ?? '')))
             ?: $this->io->choice(
-                question: 'Melyik kajákhoz kell bevásárolni?',
-                choices: $this->availableFoodNames,
+                question:    'Melyik kajákhoz kell bevásárolni?',
+                choices:     $this->availableFoodNames,
                 multiSelect: true
             );
     }
@@ -133,7 +148,7 @@ class PlanShoppingCommand extends Command
     private function renderSupermarket(): void
     {
         $this->io->section('Bevásárlóközpont:');
-        $this->io->text($this->supermarket::name());
+        $this->io->text($this->supermarket->name());
     }
 
     private function renderEtelek(): void

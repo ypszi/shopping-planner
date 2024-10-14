@@ -7,12 +7,11 @@ namespace PeterPecosz\Kajatervezo\Tests\Supermarket;
 use PeterPecosz\Kajatervezo\Etel\Etel;
 use PeterPecosz\Kajatervezo\Etel\Etelek;
 use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
-use PeterPecosz\Kajatervezo\Hozzavalo\HozzavaloKategoria;
 use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
 use PeterPecosz\Kajatervezo\ShoppingList\ShoppingList;
 use PeterPecosz\Kajatervezo\ShoppingList\ShoppingListByFood;
-use PeterPecosz\Kajatervezo\Supermarket\HozzavaloToKategoriaMap;
-use PeterPecosz\Kajatervezo\Supermarket\KategoriaMap;
+use PeterPecosz\Kajatervezo\Supermarket\CategoryMap;
+use PeterPecosz\Kajatervezo\Supermarket\IngredientToCategoryMap;
 use PeterPecosz\Kajatervezo\Supermarket\Supermarket;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\MockObject\MockObject;
@@ -22,9 +21,9 @@ class SupermarketTest extends TestCase
 {
     private Etel $testFood;
 
-    private KategoriaMap&MockObject $kategoriaMap;
+    private CategoryMap&MockObject $categoryMap;
 
-    private HozzavaloToKategoriaMap&MockObject $hozzavaloToKategoriaMap;
+    private IngredientToCategoryMap&MockObject $ingredientToCategoryMap;
 
     private Supermarket $supermarket;
 
@@ -38,50 +37,42 @@ class SupermarketTest extends TestCase
             thumbnailUrl:   'https://www.nosalty.hu/thumnails/img_5512.jpg',
             comments:       null,
             ingredients:    [
-                                new Hozzavalo('Tojás', 1, Mertekegyseg::DB, HozzavaloKategoria::TEJTERMEK),
-                                new Hozzavalo('Ecet', 1, Mertekegyseg::L, HozzavaloKategoria::ECET),
+                                new Hozzavalo('Tojás', 1, Mertekegyseg::DB, 'Tejtermék'),
+                                new Hozzavalo('Ecet', 1, Mertekegyseg::L, 'Ecet'),
                             ]
         );
 
-        $this->supermarket = new class(
-            $this->kategoriaMap = $this->createMock(KategoriaMap::class),
-            $this->hozzavaloToKategoriaMap = $this->createMock(HozzavaloToKategoriaMap::class),
-        ) extends Supermarket {
-            public static function name(): string
-            {
-                return 'test supermarket';
-            }
-
-            public static function sorrend(): array
-            {
-                return [
-                    HozzavaloKategoria::ZOLDSEG_GYUMOLCS->value,
-                    HozzavaloKategoria::ECET->value,
-                    HozzavaloKategoria::OLAJ->value,
-                    HozzavaloKategoria::TEJTERMEK->value,
-                    HozzavaloKategoria::TARTOS_TEJTERMEK->value,
-                ];
-            }
-        };
+        $this->supermarket = new Supermarket(
+            name:                    'test supermarket',
+            categories:              [
+                                         'Zöldség / Gyümölcs',
+                                         'Ecet',
+                                         'Olaj',
+                                         'Tejtermék',
+                                         'Tartós tejtermék',
+                                     ],
+            categoryMap:             $this->categoryMap = $this->createMock(CategoryMap::class),
+            ingredientToCategoryMap: $this->ingredientToCategoryMap = $this->createMock(IngredientToCategoryMap::class),
+        );
     }
 
     #[Test]
     public function testToShoppingList(): void
     {
-        $this->kategoriaMap
+        $this->categoryMap
             ->expects(self::exactly(2))
             ->method('map')
             ->willReturnOnConsecutiveCalls(
-                HozzavaloKategoria::TEJTERMEK,
-                HozzavaloKategoria::ECET,
+                'Tejtermék',
+                'Ecet',
             );
 
-        $this->hozzavaloToKategoriaMap
+        $this->ingredientToCategoryMap
             ->expects(self::exactly(2))
             ->method('map')
             ->willReturnOnConsecutiveCalls(
-                HozzavaloKategoria::TEJTERMEK,
-                HozzavaloKategoria::ECET,
+                'Tejtermék',
+                'Ecet',
             );
 
         $shoppingList = $this->supermarket->toShoppingList(new Etelek([$this->testFood]));
@@ -89,11 +80,11 @@ class SupermarketTest extends TestCase
         $this->assertEquals(
             new ShoppingList(
                 [
-                    HozzavaloKategoria::ZOLDSEG_GYUMOLCS->value,
-                    HozzavaloKategoria::ECET->value,
-                    HozzavaloKategoria::OLAJ->value,
-                    HozzavaloKategoria::TEJTERMEK->value,
-                    HozzavaloKategoria::TARTOS_TEJTERMEK->value,
+                    'Zöldség / Gyümölcs',
+                    'Ecet',
+                    'Olaj',
+                    'Tejtermék',
+                    'Tartós tejtermék',
                 ],
                 [
                     [
@@ -112,20 +103,20 @@ class SupermarketTest extends TestCase
     #[Test]
     public function testToShoppingListByFood(): void
     {
-        $this->kategoriaMap
+        $this->categoryMap
             ->expects(self::exactly(2))
             ->method('map')
             ->willReturnOnConsecutiveCalls(
-                HozzavaloKategoria::TEJTERMEK,
-                HozzavaloKategoria::ECET,
+                'Tejtermék',
+                'Ecet',
             );
 
-        $this->hozzavaloToKategoriaMap
+        $this->ingredientToCategoryMap
             ->expects(self::exactly(2))
             ->method('map')
             ->willReturnOnConsecutiveCalls(
-                HozzavaloKategoria::TEJTERMEK,
-                HozzavaloKategoria::ECET,
+                'Tejtermék',
+                'Ecet',
             );
 
         $shoppingList = $this->supermarket->toShoppingListByFood(new Etelek([$this->testFood]));
@@ -133,11 +124,11 @@ class SupermarketTest extends TestCase
         $this->assertEquals(
             new ShoppingListByFood(
                 [
-                    HozzavaloKategoria::ZOLDSEG_GYUMOLCS->value,
-                    HozzavaloKategoria::ECET->value,
-                    HozzavaloKategoria::OLAJ->value,
-                    HozzavaloKategoria::TEJTERMEK->value,
-                    HozzavaloKategoria::TARTOS_TEJTERMEK->value,
+                    'Zöldség / Gyümölcs',
+                    'Ecet',
+                    'Olaj',
+                    'Tejtermék',
+                    'Tartós tejtermék',
                 ],
                 [
                     $this->testFood->name() => [
