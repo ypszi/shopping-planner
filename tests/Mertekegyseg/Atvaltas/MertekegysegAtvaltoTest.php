@@ -166,6 +166,11 @@ class MertekegysegAtvaltoTest extends TestCase
                 new Hozzavalo('Napraforgó olaj', 3, Mertekegyseg::KK, 'Olaj'),
                 15.0 / 5.0,
             ],
+            'ek to l'                 => [
+                new Hozzavalo('Napraforgó olaj', 1, Mertekegyseg::EK, 'Olaj'),
+                new Hozzavalo('Napraforgó olaj', 0, Mertekegyseg::L, 'Olaj'),
+                0.015,
+            ],
             'ek to ml'                => [
                 new Hozzavalo('Napraforgó olaj', 1, Mertekegyseg::EK, 'Olaj'),
                 new Hozzavalo('Napraforgó olaj', 0, Mertekegyseg::ML, 'Olaj'),
@@ -191,6 +196,11 @@ class MertekegysegAtvaltoTest extends TestCase
                 new Hozzavalo('Napraforgó olaj', 0, Mertekegyseg::KK, 'Olaj'),
                 1.0,
             ],
+            'kvk to l'                => [
+                new Hozzavalo('Napraforgó olaj', 1, Mertekegyseg::KVK, 'Olaj'),
+                new Hozzavalo('Napraforgó olaj', 0, Mertekegyseg::L, 'Olaj'),
+                0.005,
+            ],
             'kvk to ml'               => [
                 new Hozzavalo('Napraforgó olaj', 1, Mertekegyseg::KVK, 'Olaj'),
                 new Hozzavalo('Napraforgó olaj', 0, Mertekegyseg::ML, 'Olaj'),
@@ -215,6 +225,11 @@ class MertekegysegAtvaltoTest extends TestCase
                 new Hozzavalo('Napraforgó olaj', 1, Mertekegyseg::KK, 'Olaj'),
                 new Hozzavalo('Napraforgó olaj', 0, Mertekegyseg::KVK, 'Olaj'),
                 1.0,
+            ],
+            'kk to l'                 => [
+                new Hozzavalo('Napraforgó olaj', 1, Mertekegyseg::KK, 'Olaj'),
+                new Hozzavalo('Napraforgó olaj', 0, Mertekegyseg::L, 'Olaj'),
+                0.005,
             ],
             'kk to ml'                => [
                 new Hozzavalo('Napraforgó olaj', 1, Mertekegyseg::KK, 'Olaj'),
@@ -281,6 +296,11 @@ class MertekegysegAtvaltoTest extends TestCase
                 new Hozzavalo('Napraforgó olaj', 0, Mertekegyseg::KK, 'Olaj'),
                 2.0 / 5.0,
             ],
+            'mk to l'                 => [
+                new Hozzavalo('Napraforgó olaj', 1, Mertekegyseg::MK, 'Olaj'),
+                new Hozzavalo('Napraforgó olaj', 0, Mertekegyseg::L, 'Olaj'),
+                0.002,
+            ],
             'mk to ml'                => [
                 new Hozzavalo('Napraforgó olaj', 1, Mertekegyseg::MK, 'Olaj'),
                 new Hozzavalo('Napraforgó olaj', 0, Mertekegyseg::ML, 'Olaj'),
@@ -310,6 +330,11 @@ class MertekegysegAtvaltoTest extends TestCase
                 new Hozzavalo('Napraforgó olaj', 1, Mertekegyseg::TK, 'Olaj'),
                 new Hozzavalo('Napraforgó olaj', 0.3, Mertekegyseg::KK, 'Olaj'),
                 1.0,
+            ],
+            'tk to l'                 => [
+                new Hozzavalo('Napraforgó olaj', 1, Mertekegyseg::TK, 'Olaj'),
+                new Hozzavalo('Napraforgó olaj', 0, Mertekegyseg::L, 'Olaj'),
+                0.005,
             ],
             'tk to ml'                => [
                 new Hozzavalo('Napraforgó olaj', 1, Mertekegyseg::TK, 'Olaj'),
