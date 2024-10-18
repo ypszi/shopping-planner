@@ -10,6 +10,7 @@ enum Mertekegyseg: string
     case CSIPET = 'csipet';
     case GEREZD = 'gerezd';
     case KONZERV = 'konzerv';
+    case CSOMAG = 'csomag';
     /* késhegy */
     case KH = 'kh';
     /* tömeg */

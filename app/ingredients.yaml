@@ -49,6 +49,10 @@ Curry:
   kategoria: Fűszer
 Erőleves kocka:
   kategoria: Fűszer
+Fahéj:
+  kategoria: Fűszer
+Fehér bors:
+  kategoria: Fűszer
 Fokhagymapor:
   kategoria: Fűszer
 Fűszerkeverék:
@@ -178,12 +182,20 @@ Trappista sajt (füstölt):
   kategoria: Sajt
 
 # Sütés / Sütemény
+Barna cukor:
+  kategoria: Sütés / Sütemény
 Cukor:
   kategoria: Sütés / Sütemény
   mertekegysegPreference: kg
 Finomliszt:
   kategoria: Sütés / Sütemény
+Háztartási keksz (darált):
+  kategoria: Sütés / Sütemény
 Kakaópor:
+  kategoria: Sütés / Sütemény
+Kókuszreszelék:
+  kategoria: Sütés / Sütemény
+Lekvár:
   kategoria: Sütés / Sütemény
 Liszt: Finomliszt
 Porcukor:
@@ -212,6 +224,8 @@ Keményítő:
 Konzerv:
   kategoria: Tartós élelmiszer
 Kukorica (konzerv):
+  kategoria: Tartós élelmiszer
+Leveles tészta:
   kategoria: Tartós élelmiszer
 Makaróni tészta:
   kategoria: Tartós élelmiszer
@@ -352,6 +366,8 @@ Sárgarépa:
 Savanyú káposzta:
   kategoria: Zöldség / Gyümölcs
 Spárga:
+  kategoria: Zöldség / Gyümölcs
+Sütőtök:
   kategoria: Zöldség / Gyümölcs
 Vöröshagyma:
   kategoria: Zöldség / Gyümölcs

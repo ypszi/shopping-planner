@@ -397,6 +397,24 @@ Diós-almás sajtsaláta:
     - name: Mozzarella sajt
       mennyiseg: 5 dkg
 
+Fahéjas almakarika:
+  defaultPortion: 4
+  receptUrl: https://www.nosalty.hu/recept/fahejas-almakarika
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/MK/pY/fahejas-almakarika.jpeg?w=4032&fit=crop&s=b7ae6036af34b3db43d2a68125f869b1
+  ingredients:
+    - name: Leveles tészta
+      mennyiseg: 1 csomag
+    - name: Alma
+      mennyiseg: 2 db
+    - name: Tojás
+      mennyiseg: 1 db
+    - name: Cukor
+      mennyiseg: 0.5 bögre
+    - name: Fahéj
+      mennyiseg: 1 ek
+  comments:
+    - Fahéj ízlés szerint
+
 Fasírt:
   defaultPortion: 4
   receptUrl: https://www.mindmegette.hu/fasirt-sutoben-sutve.recept/
@@ -1011,6 +1029,26 @@ Mézes-mustáros csirkemell:
     - name: Mustár
       mennyiseg: 5 ek
 
+Muffin:
+  defaultPortion: 6
+  receptUrl: https://www.nosalty.hu/recept/legegyszerubb-muffin
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/Zy/Ao/legegyszerubb-muffin.jpg?w=1500&fit=crop&s=9cda1c5bf67410f4c572926c0a5de249
+  ingredients:
+    - name: Finomliszt
+      mennyiseg: 2 bögre
+    - name: Cukor
+      mennyiseg: 1 bögre
+    - name: Tej
+      mennyiseg: 250 ml
+    - name: Napraforgó olaj
+      mennyiseg: 125 ml
+    - name: Tojás
+      mennyiseg: 1 db
+    - name: Sütőpor
+      mennyiseg: 7 g
+  comments:
+    - 1 csomag sütőpor
+
 Olaszos csirke:
   defaultPortion: 4
   receptUrl: https://www.nosalty.hu/recept/olaszos-csirke-tepsiben
@@ -1336,6 +1374,77 @@ Sörös tepsis sertés:
     - Sertés comb vagy Sertés karaj
     - Tepsi mérete 30 cm x 35 cm
     - SÜTŐBEN 180 °C/35 percet
+
+Sütőtökkrémleves egyszerűen:
+  defaultPortion: 4
+  receptUrl: https://www.nosalty.hu/recept/sutotokkremleves-egyszeruen
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/qH/8E/sutotokkremleves-egyszeruen.jpg?w=1500&fit=crop&s=191693a76bf85f42ddc37b061a048557
+  ingredients:
+    - name: Sütőtök
+      mennyiseg: 1 kg
+    - name: Húsleves kocka
+      mennyiseg: 2 db
+    - name: Olíva olaj
+      mennyiseg: 2 ek
+    - name: Vöröshagyma
+      mennyiseg: 1 db
+    - name: Fokhagyma
+      mennyiseg: 1 gerezd
+    - name: Főzőtejszín
+      mennyiseg: 200 ml
+    - name: Só
+      mennyiseg: 2 csipet
+    - name: Fehér bors
+      mennyiseg: 1 csipet
+    - name: Szerecsendió
+      mennyiseg: 1 csipet
+  comments:
+    - 1 l Szárnyas alaplé (1 liter vízben 2 tyúkhúsleves vagy zöldségleves kockát felfőzni)
+    - Só ízlés szerint
+    - Fehér bors ízlés szerint
+    - Szerecsendió ízlés szerint
+
+Sütőtökös golyó:
+  defaultPortion: 4
+  receptUrl: https://www.nosalty.hu/recept/sutotokos-golyo
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/bb/4B/sutotokos-golyo.jpeg?w=1200&fit=crop&s=5608dbe98980d84a01dc4c5b289d73ca
+  ingredients:
+    - name: Sütőtök
+      mennyiseg: 50 dkg
+    - name: Háztartási keksz (darált)
+      mennyiseg: 20 dkg
+    - name: Porcukor
+      mennyiseg: 10 dkg
+    - name: Dió
+      mennyiseg: 15 dkg
+    - name: Lekvár
+      mennyiseg: 1 ek
+    - name: Kókuszreszelék
+      mennyiseg: 5 dkg
+  comments:
+    - Dió (darált)
+
+Sütőtökös muffin:
+  defaultPortion: 4
+  receptUrl: https://www.nosalty.hu/recept/sutotokos-muffin
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/4C/Ix/sutotokos-muffin.jpg?w=1500&fit=crop&s=06b28b7ee2dcc8c903a1f6d2559e1b18
+  ingredients:
+    - name: Sütőtök
+      mennyiseg: 250 g
+    - name: Tojás
+      mennyiseg: 2 db
+    - name: Olíva olaj
+      mennyiseg: 80 ml
+    - name: Finomliszt
+      mennyiseg: 150 g
+    - name: Barna cukor
+      mennyiseg: 150 g
+    - name: Fahéj
+      mennyiseg: 1 kk
+    - name: Sütőpor
+      mennyiseg: 1 csomag
+    - name: Só
+      mennyiseg: 1 csipet
 
 Szerzetesek eledele:
   defaultPortion: 2
