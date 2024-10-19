@@ -118,7 +118,7 @@
                 {% for foodName, rows in shoppingListByFood.getRows %}
                     {% for rowId, row in rows %}
                         {% set isFirstRow = rowId == 0 %}
-                        <tr>
+                        <tr class="{% if isFirstRow %}border-top{% endif %}">
                             <td class="{% if isFirstRow %}bg-light-orange{% endif %}">
                                 {% if isFirstRow %}{{ foodName }}{% endif %}
                             </td>
