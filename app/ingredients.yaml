@@ -214,8 +214,6 @@ Csusza tészta:
   kategoria: Tartós élelmiszer
 Élesztő:
   kategoria: Tartós élelmiszer
-Fehérbab (konzerv):
-  kategoria: Tartós élelmiszer
   mertekegysegPreference: kg
 Fusilli tészta:
   kategoria: Tartós élelmiszer
@@ -223,17 +221,11 @@ Keményítő:
   kategoria: Tartós élelmiszer
 Konzerv:
   kategoria: Tartós élelmiszer
-Kukorica (konzerv):
-  kategoria: Tartós élelmiszer
 Leveles tészta:
   kategoria: Tartós élelmiszer
 Makaróni tészta:
   kategoria: Tartós élelmiszer
 Méz:
-  kategoria: Tartós élelmiszer
-Olivabogyó (konzerv):
-  kategoria: Tartós élelmiszer
-Paradicsom (konzerv):
   kategoria: Tartós élelmiszer
 Paradicsom püré:
   kategoria: Tartós élelmiszer
@@ -251,14 +243,24 @@ Szezámmag:
   kategoria: Tartós élelmiszer
 Tagliatelle tészta:
   kategoria: Tartós élelmiszer
-Tonhal (konzerv):
-  kategoria: Tartós élelmiszer
-Vörösbab (konzerv):
-  kategoria: Tartós élelmiszer
 Worcester szósz:
   kategoria: Tartós élelmiszer
 Zsemlemorzsa:
   kategoria: Tartós élelmiszer
+
+# Konzerv
+Fehérbab (konzerv):
+  kategoria: Konzerv
+Kukorica (konzerv):
+  kategoria: Konzerv
+Olivabogyó (konzerv):
+  kategoria: Konzerv
+Paradicsom (konzerv):
+  kategoria: Konzerv
+Tonhal (konzerv):
+  kategoria: Konzerv
+Vörösbab (konzerv):
+  kategoria: Konzerv
 
 # Tartós tejtermék
 Főzőtejszín:
@@ -368,6 +370,8 @@ Savanyú káposzta:
 Spárga:
   kategoria: Zöldség / Gyümölcs
 Sütőtök:
+  kategoria: Zöldség / Gyümölcs
+Újhagyma:
   kategoria: Zöldség / Gyümölcs
 Vöröshagyma:
   kategoria: Zöldség / Gyümölcs
