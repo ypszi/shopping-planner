@@ -460,6 +460,30 @@ Fasírt:
   comments:
     - annyi zsemlemorzsát adunk hozzá, hogy golyókat tudjunk belőle formálni
 
+Fitness saláta:
+  defaultPortion: 4
+  receptUrl: https://www.nosalty.hu/recept/fitness-salata
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/qL/Lx/fitness-salata.jpeg?w=1200&fit=crop&s=842523c6db72afb027578c9880712fe1
+  ingredients:
+    - name: Jégsaláta
+      mennyiseg: 1 db
+    - name: Paradicsom
+      mennyiseg: 2 db
+    - name: Kígyóuborka
+      mennyiseg: 1 db
+    - name: Kaliforniai paprika (piros)
+      mennyiseg: 1 db
+    - name: Kaliforniai paprika (sárga)
+      mennyiseg: 1 db
+    - name: Kukorica (konzerv)
+      mennyiseg: 150 g
+    - name: Újhagyma
+      mennyiseg: 1 db
+    - name: Natúr joghurt
+      mennyiseg: 2 dl
+    - name: Petrezselyem
+      mennyiseg: 1 ek
+
 Fokhagymával és mézzel sült sárgarépa:
   defaultPortion: 4
   receptUrl: https://sobors.hu/receptek/fokhagymaval-mezzel-sult-sargarepa-recept/

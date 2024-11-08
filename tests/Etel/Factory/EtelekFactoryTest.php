@@ -122,6 +122,6 @@ class EtelekFactoryTest extends TestCase
 
     public function testCreateAvailableFoods(): void
     {
-        $this->assertCount(73, $this->sut->listAvailableFoods());
+        $this->assertCount(74, $this->sut->listAvailableFoods());
     }
 }
