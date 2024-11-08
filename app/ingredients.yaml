@@ -160,6 +160,8 @@ Szezám olaj:
 # Pékárú
 Kenyér:
   kategoria: Pékárú
+Hamburger zsemle:
+  kategoria: Pékárú
 
 # Sajt
 Cheddar sajt (vörös):
@@ -249,7 +251,11 @@ Zsemlemorzsa:
   kategoria: Tartós élelmiszer
 
 # Konzerv
+Csemege uborka (konzerv):
+  kategoria: Konzerv
 Fehérbab (konzerv):
+  kategoria: Konzerv
+Jalapeno (konzerv):
   kategoria: Konzerv
 Kukorica (konzerv):
   kategoria: Konzerv

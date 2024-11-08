@@ -698,6 +698,35 @@ Görög saláta:
   comments:
     - opcionális: 20 dkg Olívabogyó konzerv
 
+Hamburger:
+  defaultPortion: 2
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/5V/cT/big-kahuna-burger.jpeg?w=3000&fit=crop&s=49cf25379565eb5ad667103206693245
+  ingredients:
+    - name: Hamburger zsemle
+      mennyiseg: 2 db
+    - name: Darált hús
+      mennyiseg: 30 dkg
+    - name: Gouda sajt
+      mennyiseg: 5 dkg
+    - name: Paradicsom
+      mennyiseg: 1 db
+    - name: Jégsaláta
+      mennyiseg: 0.5 db
+    - name: Bacon (szeletelt)
+      mennyiseg: 5 dkg
+    - name: Csemege uborka (konzerv)
+      mennyiseg: 10 dkg
+    - name: Jalapeno (konzerv)
+      mennyiseg: 5 dkg
+    - name: Ketchup
+      mennyiseg: 5 dkg
+    - name: Majonéz
+      mennyiseg: 5 dkg
+  comments:
+    - opcionális:
+        - 10 dkg Csemege uborka (konzerv)
+        - 5 dkg Jalapeno (konzerv)
+
 Hortobágyi Palacsinta:
   defaultPortion: 4
   receptUrl: https://www.mindmegette.hu/hortobagyi-husos-palacsinta-ii.recept/
