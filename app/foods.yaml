@@ -676,6 +676,42 @@ Görögös húsos palacsinta:
     - name: Fokhagyma
       mennyiseg: 2 gerezd
 
+Görög joghurtos torta:
+  defaultPortion: 6
+  receptUrl: https://www.recipes-hu.top/2024/11/08/gorog-joghurtos-torta
+  thumbnailUrl: https://www.recipes-hu.top/wp-content/uploads/2024/11/7-2024-11-08T192933.242.png
+  ingredients:
+    - name: Keményítő
+      mennyiseg: 3 ek
+    - name: Tojás
+      mennyiseg: 4 db
+    - name: Só
+      mennyiseg: 1 csipet
+    - name: Cukor
+      mennyiseg: 3 ek
+    - name: Sütőpor
+      mennyiseg: 1 tk
+    - name: Porcukor
+      mennyiseg: 5 g
+    - name: Görög joghurt
+      mennyiseg: 400 g
+  comments:
+    - elkészítési idő::
+      - 20 perc előkészítés
+      - 30-35 perc sütés
+    - elkészítés::
+      - A sütőt előmelegítjük 180°C-ra.
+      - Egy 18 cm átmérőjű tepsit kivajazunk és enyhén lisztezzünk ki.
+      - Egy nagy tálban a tojások sárgáját a cukorral habosra verjük.
+      - Adjuk hozzá a görög joghurtot a tojássárgája és cukor keverékéhez, jól keverjük össze.
+      - A kukoricakeményítőt és a sütőport szitáljuk a tálba a joghurtos keverékkel, keverjük simára.
+      - Egy másik tálban verjük fel a tojásfehérjét egy csipet sóval, amíg lágy csúcsok nem lesznek.
+      - A finoman felvert tojásfehérjét adjuk a joghurtos keverékhez, alulról felfelé haladva keverjük, hogy megőrizzük a tészta könnyedségét.
+      - Öntse a keveréket az előkészített serpenyőbe, és egy spatulával simítsa el.
+      - Süssük a tortát kb 30-35 percig, amíg aranybarna nem lesz, és a közepébe szúrt fogpiszkáló tisztán ki nem jön.
+    - opcionális::
+      - 5 g Porcukor a szóráshoz
+
 Görög saláta:
   defaultPortion: 6
   receptUrl: https://www.nosalty.hu/recept/eredeti-gorog-salata
@@ -723,9 +759,9 @@ Hamburger:
     - name: Majonéz
       mennyiseg: 5 dkg
   comments:
-    - opcionális:
-        - 10 dkg Csemege uborka (konzerv)
-        - 5 dkg Jalapeno (konzerv)
+    - opcionális::
+      - 10 dkg Csemege uborka (konzerv)
+      - 5 dkg Jalapeno (konzerv)
 
 Hortobágyi Palacsinta:
   defaultPortion: 4
