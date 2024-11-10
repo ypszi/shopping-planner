@@ -241,6 +241,32 @@ Chilis bab:
     - name: Kukorica (konzerv)
       mennyiseg: 1 konzerv
 
+Chiliszósz (édes):
+  defaultPortion: 4
+  receptUrl: https://sobors.hu/receptek/edes-chiliszosz-recept/
+  thumbnailUrl: https://kep.index.hu/1/0/5033/50338/503386/50338693_44f06c4e4d1d858aab341946a705807d_wm.jpg
+  ingredients:
+    - name: Chili
+      mennyiseg:  1 tk
+    - name: Rizsecet
+      mennyiseg: 1 ek
+    - name: Szójaszósz
+      mennyiseg:  1 ek
+    - name: Só
+      mennyiseg: 2 csipet
+    - name: Méz
+      mennyiseg: 2 tk
+    - name: Keményítő
+      mennyiseg:  1 ek
+  comments:
+    - 2 dl Víz
+    - 2 ek Víz 1 ek Keményítőhöz
+    - elkészítés::
+      - Keverjük össze a chilit, rizsecetet, szójaszószt, sót, vizet, mézet vagy cukrot
+      - Egy kisebb edénybe - néha kavargatva - forraljuk fel
+      - Egy kis tálkában a keményítőt keverjük csomómentesre a két evőkanál vízzel, majd adjuk a chilis keverékhez
+      - Folyamatosan kevergetve főzzük őket további 1-2 percig, amíg kissé besűrűsödik
+
 Citromos joghurtos csirkemell görögsalátával:
   defaultPortion: 4
   receptUrl: https://www.mindmegette.hu/citromos-joghurtos-csirkemell-gorogsalataval.recept/
@@ -704,7 +730,7 @@ Görög joghurtos torta:
       - Egy 18 cm átmérőjű tepsit kivajazunk és enyhén lisztezzünk ki.
       - Egy nagy tálban a tojások sárgáját a cukorral habosra verjük.
       - Adjuk hozzá a görög joghurtot a tojássárgája és cukor keverékéhez, jól keverjük össze.
-      - A kukoricakeményítőt és a sütőport szitáljuk a tálba a joghurtos keverékkel, keverjük simára.
+      - A keményítőt és a sütőport szitáljuk a tálba a joghurtos keverékkel, keverjük simára.
       - Egy másik tálban verjük fel a tojásfehérjét egy csipet sóval, amíg lágy csúcsok nem lesznek.
       - A finoman felvert tojásfehérjét adjuk a joghurtos keverékhez, alulról felfelé haladva keverjük, hogy megőrizzük a tészta könnyedségét.
       - Öntse a keveréket az előkészített serpenyőbe, és egy spatulával simítsa el.
