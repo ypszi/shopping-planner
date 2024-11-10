@@ -1,11 +1,13 @@
 {% macro recursiveComments(comment) %}
     {% if comment is array %}
+        {% for key in comment|keys %}
+            {% if key is string %}
+                <li>{{ key }}</li>
+            {% endif %}
+        {% endfor %}
+
         <ul>
             {% for key, subComment in comment %}
-                {% if key is string %}
-                    <li>{{ key }}</li>
-                {% endif %}
-
                 {{ _self.recursiveComments(subComment) }}
             {% endfor %}
         </ul>
