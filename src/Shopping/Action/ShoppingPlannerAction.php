@@ -16,25 +16,20 @@ readonly class ShoppingPlannerAction
     public function __construct(
         private SupermarketFactory $supermarketFactory,
         private EtelekFactory $etelekFactory,
-        private Environment $twig,
-        private PlannedShoppingAction $plannedShoppingAction
+        private Environment $twig
     ) {
     }
 
     public function __invoke(ServerRequestInterface $request, ResponseInterface $response): ResponseInterface
     {
-        $queryParams = $request->getQueryParams();
-
-        if ($queryParams['planned'] ?? false) {
-            return $this->plannedShoppingAction->__invoke($request, $response);
-        }
-
         $availableSupermarkets = array_combine(
             range(1, count($this->supermarketFactory->listAvailableSupermarkets())),
             array_values($this->supermarketFactory->listAvailableSupermarkets())
         );
 
-        $availableFoods     = $this->etelekFactory->listAvailableFoods();
+        $availableFoods = $this->etelekFactory->listAvailableFoods();
+
+        $queryParams        = $request->getQueryParams();
         $defaultSupermarket = $queryParams['supermarket'] ?? Supermarket::DEFAULT;
 
         $foods         = array_filter($queryParams, fn(string $key) => str_contains($key, 'food-'), ARRAY_FILTER_USE_KEY);
