@@ -2,97 +2,44 @@
 
 declare(strict_types=1);
 
-use PeterPecosz\Kajatervezo\Etel\Factory\EtelekFactory;
-use PeterPecosz\Kajatervezo\Supermarket\Supermarket;
-use PeterPecosz\Kajatervezo\Supermarket\SupermarketFactory;
-use Twig\Environment;
-use Twig\Loader\FilesystemLoader;
-use Twig\TwigTest;
+use DI\Container;
+use Slim\App;
 
-require_once __DIR__ . '/../vendor/autoload.php';
+try {
+    (static function (): void {
+        require __DIR__ . '/../vendor/autoload.php';
 
-$cacheEnabled = false;
-$loader       = new FilesystemLoader(__DIR__ . '/../src/templates');
-$twig         = new Environment($loader);
-$twig->addTest(
-    new TwigTest('string', static function ($value): bool {
-        return is_string($value);
-    })
-);
-$twig->addTest(
-    new TwigTest('array', static function ($value): bool {
-        return is_array($value);
-    })
-);
+        /** @var Container $container */
+        $container = require __DIR__ . '/container.php';
 
-if ($cacheEnabled) {
-    $twig = new Environment($loader, [
-        'cache' => __DIR__ . '/../var/cache/',
-    ]);
+        /** @var App $app */
+        $app = (require __DIR__ . '/app_bootstrap.php')($container);
+
+        (require __DIR__ . '/routes.php')($app, $container);
+
+        /**
+         * The routing middleware should be added earlier than the ErrorMiddleware
+         * Otherwise exceptions thrown from it will not be handled by the middleware
+         *
+         * see https://www.slimframework.com/docs/v4/middleware/routing.html
+         *
+         * see https://www.slimframework.com/docs/v4/concepts/middleware.html#how-does-middleware-work
+         */
+        $app->addRoutingMiddleware();
+
+        /**
+         * Note: This middleware should be added last. It will not handle any exceptions/errors
+         * for middleware added after it.
+         *
+         * see https://www.slimframework.com/docs/v4/middleware/error-handling.html#usage
+         */
+        (require __DIR__ . '/error_middleware_bootstrap.php')($app, $container);
+
+        unset($container);
+
+        $app->run();
+    })();
+} catch (Throwable $e) {
+    echo 'Bootstrap error occurred: ' . $e->getMessage();
+    exit(255);
 }
-
-$supermarketFactory = new SupermarketFactory(__DIR__ . '/supermarkets.yaml');
-
-$etelekFactory = new EtelekFactory(
-    __DIR__ . '/foods.yaml',
-    __DIR__ . '/ingredients.yaml',
-    __DIR__ . '/ingredientCategories.yaml'
-);
-
-if ($_GET['planned'] ?? false) {
-    unset($_GET['planned']);
-
-    $plannedShopping    = $_GET;
-    $supermarket        = $supermarketFactory->create($plannedShopping['supermarket']);
-
-    $foodPortionsByFoodName = [];
-    foreach ($plannedShopping as $key => $value) {
-        if (str_contains($key, 'food-')) {
-            $foodKey                           = str_replace('food-', '', $key);
-            $foodName                          = str_replace('_', ' ', $foodKey);
-            $foodPortionsByFoodName[$foodName] = (int)$plannedShopping['portion-' . $foodKey];
-        }
-    }
-
-    $etelek              = $etelekFactory->create($foodPortionsByFoodName);
-    $shoppingList        = $supermarket->toShoppingList($etelek)->filterEmptyColumns();
-    $shoppingListByFood  = $supermarket->toShoppingListByFood($etelek)->filterEmptyColumns();
-    $totalRowCountByFood = array_sum(array_map(fn(array $rowsOfFood) => count($rowsOfFood), $shoppingListByFood->getRows()));
-
-    echo $twig->render('planned-shopping.html.twig', [
-        'supermarket'         => $supermarket,
-        'etelek'              => $etelek,
-        'shoppingList'        => $shoppingList,
-        'shoppingListByFood'  => $shoppingListByFood,
-        'totalRowCountByFood' => $totalRowCountByFood,
-        'plannedShopping'     => http_build_query($plannedShopping),
-    ]);
-
-    return;
-}
-
-$availableSupermarkets = array_combine(
-    range(1, count($supermarketFactory->listAvailableSupermarkets())),
-    array_values($supermarketFactory->listAvailableSupermarkets())
-);
-
-$availableFoods     = $etelekFactory->listAvailableFoods();
-$defaultSupermarket = $_GET['supermarket'] ?? Supermarket::DEFAULT;
-
-unset($_GET['supermarket']);
-
-$foods         = array_filter($_GET, fn(string $key) => str_contains($key, 'food-'), ARRAY_FILTER_USE_KEY);
-$portions      = array_filter($_GET, fn(string $key) => str_contains($key, 'portion-'), ARRAY_FILTER_USE_KEY);
-$selectedFoods = [];
-
-foreach ($foods as $key => $value) {
-    $portionKey            = str_replace('food-', 'portion-', $key);
-    $selectedFoods[$value] = $portions[$portionKey];
-}
-
-echo $twig->render('shopping-planner.html.twig', [
-    'defaultSupermarket'    => $defaultSupermarket,
-    'availableSupermarkets' => $availableSupermarkets,
-    'availableFoods'        => $availableFoods,
-    'selectedFoods'         => $selectedFoods,
-]);
