@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-namespace PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Tomeg;
+namespace PeterPecosz\ShoppingPlanner\Mertekegyseg\Atvaltas\Tomeg;
 
-use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
-use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\MertekegysegValto;
-use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
+use PeterPecosz\ShoppingPlanner\Ingredient\Ingredient;
+use PeterPecosz\ShoppingPlanner\Mertekegyseg\Atvaltas\MertekegysegValto;
+use PeterPecosz\ShoppingPlanner\Mertekegyseg\Measure;
 
 class KilogramToGram extends MertekegysegValto
 {
-    public function canValt(Hozzavalo $hozzavalo, Hozzavalo $hozzaadottHozzavalo): bool
+    public function canValt(Ingredient $hozzavalo, Ingredient $hozzaadottHozzavalo): bool
     {
-        return $hozzavalo->getMertekegyseg() === Mertekegyseg::KG
-               && $hozzaadottHozzavalo->getMertekegyseg() === Mertekegyseg::G;
+        return $hozzavalo->measure() === Measure::KG
+               && $hozzaadottHozzavalo->measure() === Measure::G;
     }
 
     protected function getMultiplier(): float

@@ -2,13 +2,15 @@
 
 declare(strict_types=1);
 
-namespace PeterPecosz\Kajatervezo\Tests\ShoppingList;
+namespace PeterPecosz\ShoppingPlanner\Tests\ShoppingList;
 
-use PeterPecosz\Kajatervezo\ShoppingList\ShoppingListByFood;
+use PeterPecosz\ShoppingPlanner\ShoppingList\ShoppingListByFood;
+use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 
 class ShoppingListByFoodTest extends TestCase
 {
+    #[Test]
     public function testFilterEmptyColumnsWhenEveryCellIsFilled(): void
     {
         $sut = new ShoppingListByFood(
@@ -39,6 +41,7 @@ class ShoppingListByFoodTest extends TestCase
         );
     }
 
+    #[Test]
     public function testFilterEmptyColumnsWhenAColumnIsEmpty(): void
     {
         $sut = new ShoppingListByFood(
@@ -69,6 +72,7 @@ class ShoppingListByFoodTest extends TestCase
         );
     }
 
+    #[Test]
     public function testFilterEmptyColumnsWhenOneCellIsEmptyInFirstColumnOfFirstRow(): void
     {
         $sut = new ShoppingListByFood(
@@ -99,6 +103,7 @@ class ShoppingListByFoodTest extends TestCase
         );
     }
 
+    #[Test]
     public function testFilterEmptyColumnsWhenOneCellIsEmptyInLastColumnOfFirstRow(): void
     {
         $sut = new ShoppingListByFood(
@@ -129,6 +134,7 @@ class ShoppingListByFoodTest extends TestCase
         );
     }
 
+    #[Test]
     public function testFilterEmptyColumnsWhenOneCellIsEmptyInFirstColumnOfMiddleRow(): void
     {
         $sut = new ShoppingListByFood(
@@ -159,6 +165,7 @@ class ShoppingListByFoodTest extends TestCase
         );
     }
 
+    #[Test]
     public function testFilterEmptyColumnsWhenOneCellIsEmptyInLastColumnOfMiddleRow(): void
     {
         $sut = new ShoppingListByFood(
@@ -189,6 +196,7 @@ class ShoppingListByFoodTest extends TestCase
         );
     }
 
+    #[Test]
     public function testFilterEmptyColumnsWhenOneCellIsEmptyInFirstColumnOfLastRow(): void
     {
         $sut = new ShoppingListByFood(
@@ -219,6 +227,7 @@ class ShoppingListByFoodTest extends TestCase
         );
     }
 
+    #[Test]
     public function testFilterEmptyColumnsWhenOneCellIsEmptyInLastColumnOfLastRow(): void
     {
         $sut = new ShoppingListByFood(
@@ -249,6 +258,7 @@ class ShoppingListByFoodTest extends TestCase
         );
     }
 
+    #[Test]
     public function testFilterEmptyColumnsWhenAColumnIsEmptyOfFirstFood(): void
     {
         $sut = new ShoppingListByFood(
@@ -299,6 +309,7 @@ class ShoppingListByFoodTest extends TestCase
         );
     }
 
+    #[Test]
     public function testFilterEmptyColumnsWhenAColumnIsEmptyOfFoodInTheMiddle(): void
     {
         $sut = new ShoppingListByFood(
@@ -349,6 +360,7 @@ class ShoppingListByFoodTest extends TestCase
         );
     }
 
+    #[Test]
     public function testFilterEmptyColumnsWhenAColumnIsEmptyOfLastFood(): void
     {
         $sut = new ShoppingListByFood(
@@ -399,6 +411,7 @@ class ShoppingListByFoodTest extends TestCase
         );
     }
 
+    #[Test]
     public function testFilterEmptyColumnsWhenAColumnIsEmptyOfAllFood(): void
     {
         $sut = new ShoppingListByFood(

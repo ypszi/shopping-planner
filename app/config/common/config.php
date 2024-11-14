@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use PeterPecosz\Kajatervezo\Core\Environment;
+use PeterPecosz\ShoppingPlanner\Core\Environment;
 
 return [
     'system.application.environment' => Environment::dev->value,

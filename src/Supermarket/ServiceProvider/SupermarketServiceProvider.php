@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace PeterPecosz\Kajatervezo\Supermarket\ServiceProvider;
+namespace PeterPecosz\ShoppingPlanner\Supermarket\ServiceProvider;
 
-use PeterPecosz\Kajatervezo\Core\ServiceProvider\ServiceDefinitionProviderInterface;
-use PeterPecosz\Kajatervezo\Supermarket\SupermarketFactory;
+use PeterPecosz\ShoppingPlanner\Core\ServiceProvider\ServiceDefinitionProviderInterface;
+use PeterPecosz\ShoppingPlanner\Supermarket\SupermarketFactory;
 
 use function DI\create;
 use function DI\get;

@@ -3,7 +3,7 @@
 declare(strict_types=1);
 
 use DI\Container;
-use PeterPecosz\Kajatervezo\Core\RequestResponseTypedArgs;
+use PeterPecosz\ShoppingPlanner\Core\RequestResponseTypedArgs;
 use Psr\Http\Message\ResponseFactoryInterface;
 use Slim\App;
 use Slim\Factory\AppFactory;

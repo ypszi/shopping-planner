@@ -1,10 +1,4 @@
-# Bevásárlás tervező
+# Shopping planner
 
-1. A hiányzó ételeket vedd fel az `\PeterPecosz\Kajatervezo\Etel` namespace-be
-2. A hiányzó hozzávalókat add hozzá a `\PeterPecosz\Kajatervezo\Hozzavalo` namespace-be
-
-Futtasd a következő command-ot:
-
-```shell
-bin/console plan:shopping
-```
+1. Add missing foods to `[foods.yaml](app/foods.yaml)`
+2. Add missing ingredients to `[ingredients.yaml](app/ingredients.yaml)`

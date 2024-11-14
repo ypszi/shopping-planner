@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-namespace PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Urtartalom;
+namespace PeterPecosz\ShoppingPlanner\Mertekegyseg\Atvaltas\Urtartalom;
 
-use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
-use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\MertekegysegValto;
-use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
+use PeterPecosz\ShoppingPlanner\Ingredient\Ingredient;
+use PeterPecosz\ShoppingPlanner\Mertekegyseg\Atvaltas\MertekegysegValto;
+use PeterPecosz\ShoppingPlanner\Mertekegyseg\Measure;
 
 class DeciliterToLiter extends MertekegysegValto
 {
-    public function canValt(Hozzavalo $hozzavalo, Hozzavalo $hozzaadottHozzavalo): bool
+    public function canValt(Ingredient $hozzavalo, Ingredient $hozzaadottHozzavalo): bool
     {
-        return $hozzavalo->getMertekegyseg() === Mertekegyseg::DL
-               && $hozzaadottHozzavalo->getMertekegyseg() === Mertekegyseg::L;
+        return $hozzavalo->measure() === Measure::DL
+               && $hozzaadottHozzavalo->measure() === Measure::L;
     }
 
     protected function getMultiplier(): float

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace PeterPecosz\Kajatervezo\Core;
+namespace PeterPecosz\ShoppingPlanner\Core;
 
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;

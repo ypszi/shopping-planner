@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace PeterPecosz\Kajatervezo\Tests\Supermarket;
+namespace PeterPecosz\ShoppingPlanner\Tests\Supermarket;
 
-use PeterPecosz\Kajatervezo\Supermarket\CategoryMap;
+use PeterPecosz\ShoppingPlanner\Supermarket\CategoryMap;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 

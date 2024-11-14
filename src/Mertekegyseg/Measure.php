@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace PeterPecosz\Kajatervezo\Mertekegyseg;
+namespace PeterPecosz\ShoppingPlanner\Mertekegyseg;
 
-enum Mertekegyseg: string
+enum Measure: string
 {
     case DB = 'db';
     case CSIPET = 'csipet';

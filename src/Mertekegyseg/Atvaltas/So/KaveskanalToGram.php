@@ -2,20 +2,20 @@
 
 declare(strict_types=1);
 
-namespace PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\So;
+namespace PeterPecosz\ShoppingPlanner\Mertekegyseg\Atvaltas\So;
 
-use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
-use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\MertekegysegValto;
-use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
+use PeterPecosz\ShoppingPlanner\Ingredient\Ingredient;
+use PeterPecosz\ShoppingPlanner\Mertekegyseg\Atvaltas\MertekegysegValto;
+use PeterPecosz\ShoppingPlanner\Mertekegyseg\Measure;
 
 class KaveskanalToGram extends MertekegysegValto
 {
-    public function canValt(Hozzavalo $hozzavalo, Hozzavalo $hozzaadottHozzavalo): bool
+    public function canValt(Ingredient $hozzavalo, Ingredient $hozzaadottHozzavalo): bool
     {
         return $hozzavalo->name() === 'Só'
                && $hozzaadottHozzavalo->name() === 'Só'
-               && $hozzavalo->getMertekegyseg() === Mertekegyseg::KVK
-               && $hozzaadottHozzavalo->getMertekegyseg() === Mertekegyseg::G;
+               && $hozzavalo->measure() === Measure::KVK
+               && $hozzaadottHozzavalo->measure() === Measure::G;
     }
 
     protected function getMultiplier(): float

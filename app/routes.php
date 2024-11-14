@@ -4,8 +4,8 @@
 
 declare(strict_types=1);
 
-use PeterPecosz\Kajatervezo\Shopping\Action\PlannedShoppingAction;
-use PeterPecosz\Kajatervezo\Shopping\Action\ShoppingPlannerAction;
+use PeterPecosz\ShoppingPlanner\Shopping\Action\PlannedShoppingAction;
+use PeterPecosz\ShoppingPlanner\Shopping\Action\ShoppingPlannerAction;
 use Slim\App;
 
 /**

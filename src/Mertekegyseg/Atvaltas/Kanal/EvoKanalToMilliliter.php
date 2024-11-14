@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-namespace PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Kanal;
+namespace PeterPecosz\ShoppingPlanner\Mertekegyseg\Atvaltas\Kanal;
 
-use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
-use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\MertekegysegValto;
-use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
+use PeterPecosz\ShoppingPlanner\Ingredient\Ingredient;
+use PeterPecosz\ShoppingPlanner\Mertekegyseg\Atvaltas\MertekegysegValto;
+use PeterPecosz\ShoppingPlanner\Mertekegyseg\Measure;
 
 class EvoKanalToMilliliter extends MertekegysegValto
 {
-    public function canValt(Hozzavalo $hozzavalo, Hozzavalo $hozzaadottHozzavalo): bool
+    public function canValt(Ingredient $hozzavalo, Ingredient $hozzaadottHozzavalo): bool
     {
-        return $hozzavalo->getMertekegyseg() === Mertekegyseg::EK
-               && $hozzaadottHozzavalo->getMertekegyseg() === Mertekegyseg::ML;
+        return $hozzavalo->measure() === Measure::EK
+               && $hozzaadottHozzavalo->measure() === Measure::ML;
     }
 
     protected function getMultiplier(): float

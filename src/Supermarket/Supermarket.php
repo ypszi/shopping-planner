@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace PeterPecosz\Kajatervezo\Supermarket;
+namespace PeterPecosz\ShoppingPlanner\Supermarket;
 
-use PeterPecosz\Kajatervezo\Etel\Etelek;
-use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
-use PeterPecosz\Kajatervezo\Hozzavalo\HozzavalokByKategoria;
-use PeterPecosz\Kajatervezo\Hozzavalo\HozzavaloSorok;
-use PeterPecosz\Kajatervezo\ShoppingList\ShoppingList;
-use PeterPecosz\Kajatervezo\ShoppingList\ShoppingListByFood;
+use PeterPecosz\ShoppingPlanner\Food\Foods;
+use PeterPecosz\ShoppingPlanner\Ingredient\Ingredient;
+use PeterPecosz\ShoppingPlanner\Ingredient\IngredientRows;
+use PeterPecosz\ShoppingPlanner\Ingredient\IngredientsByCategory;
+use PeterPecosz\ShoppingPlanner\ShoppingList\ShoppingList;
+use PeterPecosz\ShoppingPlanner\ShoppingList\ShoppingListByFood;
 
 class Supermarket
 {
@@ -34,55 +34,55 @@ class Supermarket
     /**
      * @return string[]
      */
-    public function sorrend(): array
+    public function toOrder(): array
     {
         return $this->categories;
     }
 
-    public function toShoppingList(Etelek $etelek): ShoppingList
+    public function toShoppingList(Foods $foods): ShoppingList
     {
-        $hozzavalokByKategoria = new HozzavalokByKategoria();
-        foreach ($etelek as $etel) {
-            $hozzavalokByKategoria->addMultipleHozzavalo($etel->hozzavalok());
+        $ingredientsByCategory = new IngredientsByCategory();
+        foreach ($foods as $food) {
+            $ingredientsByCategory->addMultipleIngredients($food->ingredients());
         }
 
-        return new ShoppingList($this->sorrend(), $this->createHozzavaloSorok($hozzavalokByKategoria)->toArray());
+        return new ShoppingList($this->toOrder(), $this->createIngredientRows($ingredientsByCategory)->toArray());
     }
 
-    public function toShoppingListByFood(Etelek $etelek): ShoppingListByFood
+    public function toShoppingListByFood(Foods $foods): ShoppingListByFood
     {
         $rows = [];
-        foreach ($etelek as $etel) {
-            $hozzavalokByKategoria = new HozzavalokByKategoria();
-            $hozzavalokByKategoria->addMultipleHozzavalo($etel->hozzavalok());
+        foreach ($foods as $food) {
+            $ingredientsByCategory = new IngredientsByCategory();
+            $ingredientsByCategory->addMultipleIngredients($food->ingredients());
 
-            $rows[$etel->name()] = $this->createHozzavaloSorok($hozzavalokByKategoria)->toArray();
+            $rows[$food->name()] = $this->createIngredientRows($ingredientsByCategory)->toArray();
         }
 
-        return new ShoppingListByFood($this->sorrend(), $rows);
+        return new ShoppingListByFood($this->toOrder(), $rows);
     }
 
-    private function createHozzavaloSorok(HozzavalokByKategoria $hozzavalokByKategoria): HozzavaloSorok
+    private function createIngredientRows(IngredientsByCategory $ingredientsByCategory): IngredientRows
     {
-        $hozzavaloSorok = new HozzavaloSorok($this);
+        $ingredientRows = new IngredientRows($this);
 
-        foreach ($hozzavalokByKategoria as $hozzavalok) {
-            /** @var Hozzavalo $hozzavalo */
-            foreach ($hozzavalok as $hozzavalo) {
-                $hozzavalo = $hozzavalo->withKategoria(
-                    $this->categoryMap->map($hozzavalo->kategoria())
+        foreach ($ingredientsByCategory as $ingredients) {
+            /** @var Ingredient $ingredient */
+            foreach ($ingredients as $ingredient) {
+                $ingredient = $ingredient->withCategory(
+                    $this->categoryMap->map($ingredient->category())
                 );
 
                 if ($this->ingredientToCategoryMap) {
-                    $hozzavalo = $hozzavalo->withKategoria(
-                        $this->ingredientToCategoryMap->map($hozzavalo)
+                    $ingredient = $ingredient->withCategory(
+                        $this->ingredientToCategoryMap->map($ingredient)
                     );
                 }
 
-                $hozzavaloSorok->addHozzavalo($hozzavalo);
+                $ingredientRows->addIngredient($ingredient);
             }
         }
 
-        return $hozzavaloSorok->sort();
+        return $ingredientRows->sort();
     }
 }

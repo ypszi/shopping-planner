@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace PeterPecosz\Kajatervezo\Supermarket;
+namespace PeterPecosz\ShoppingPlanner\Supermarket;
 
-use PeterPecosz\Kajatervezo\Supermarket\Exception\UnknownSupermarketException;
+use PeterPecosz\ShoppingPlanner\Supermarket\Exception\UnknownSupermarketException;
 use Symfony\Component\Yaml\Yaml;
 
 class SupermarketFactory

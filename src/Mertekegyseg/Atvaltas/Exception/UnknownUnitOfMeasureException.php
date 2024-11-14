@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Exception;
+namespace PeterPecosz\ShoppingPlanner\Mertekegyseg\Atvaltas\Exception;
 
 use LogicException;
 

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas;
+namespace PeterPecosz\ShoppingPlanner\Mertekegyseg\Atvaltas;
 
-use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
+use PeterPecosz\ShoppingPlanner\Ingredient\Ingredient;
 
 abstract class MertekegysegValto
 {
@@ -13,7 +13,7 @@ abstract class MertekegysegValto
         return $mennyiseg * $this->getMultiplier();
     }
 
-    abstract public function canValt(Hozzavalo $hozzavalo, Hozzavalo $hozzaadottHozzavalo): bool;
+    abstract public function canValt(Ingredient $hozzavalo, Ingredient $hozzaadottHozzavalo): bool;
 
     abstract protected function getMultiplier(): float;
 }

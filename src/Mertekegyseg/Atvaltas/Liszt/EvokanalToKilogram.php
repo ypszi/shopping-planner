@@ -2,20 +2,20 @@
 
 declare(strict_types=1);
 
-namespace PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Liszt;
+namespace PeterPecosz\ShoppingPlanner\Mertekegyseg\Atvaltas\Liszt;
 
-use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
-use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\MertekegysegValto;
-use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
+use PeterPecosz\ShoppingPlanner\Ingredient\Ingredient;
+use PeterPecosz\ShoppingPlanner\Mertekegyseg\Atvaltas\MertekegysegValto;
+use PeterPecosz\ShoppingPlanner\Mertekegyseg\Measure;
 
 class EvokanalToKilogram extends MertekegysegValto
 {
-    public function canValt(Hozzavalo $hozzavalo, Hozzavalo $hozzaadottHozzavalo): bool
+    public function canValt(Ingredient $hozzavalo, Ingredient $hozzaadottHozzavalo): bool
     {
         return $hozzavalo->name() === 'Liszt'
                && $hozzaadottHozzavalo->name() === 'Liszt'
-               && $hozzavalo->getMertekegyseg() === Mertekegyseg::EK
-               && $hozzaadottHozzavalo->getMertekegyseg() === Mertekegyseg::KG;
+               && $hozzavalo->measure() === Measure::EK
+               && $hozzaadottHozzavalo->measure() === Measure::KG;
     }
 
     protected function getMultiplier(): float

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace PeterPecosz\Kajatervezo\Supermarket;
+namespace PeterPecosz\ShoppingPlanner\Supermarket;
 
-use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
+use PeterPecosz\ShoppingPlanner\Ingredient\Ingredient;
 
 class IngredientToCategoryMap
 {
@@ -15,14 +15,14 @@ class IngredientToCategoryMap
     {
     }
 
-    public function map(Hozzavalo $hozzavalo): string
+    public function map(Ingredient $ingredient): string
     {
-        $mappedKategoria = $this->map[$hozzavalo->name()] ?? null;
+        $mappedCategory = $this->map[$ingredient->name()] ?? null;
 
-        if (!$mappedKategoria) {
-            return $hozzavalo->kategoria();
+        if (!$mappedCategory) {
+            return $ingredient->category();
         }
 
-        return $mappedKategoria;
+        return $mappedCategory;
     }
 }

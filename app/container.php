@@ -3,10 +3,11 @@
 declare(strict_types=1);
 
 use DI\ContainerBuilder;
-use PeterPecosz\Kajatervezo\Core\Environment;
-use PeterPecosz\Kajatervezo\Core\ServiceProvider\CoreServiceProvider;
-use PeterPecosz\Kajatervezo\Etel\ServiceProvider\EtelServiceProvider;
-use PeterPecosz\Kajatervezo\Supermarket\ServiceProvider\SupermarketServiceProvider;
+use PeterPecosz\ShoppingPlanner\Core\Environment;
+use PeterPecosz\ShoppingPlanner\Core\ServiceProvider\CoreServiceProvider;
+use PeterPecosz\ShoppingPlanner\Food\ServiceProvider\FoodServiceProvider;
+use PeterPecosz\ShoppingPlanner\Ingredient\ServiceProvider\IngredientServiceProvider;
+use PeterPecosz\ShoppingPlanner\Supermarket\ServiceProvider\SupermarketServiceProvider;
 
 $commonConfig = require __DIR__ . '/config/common/config.php';
 $environment  = Environment::from($commonConfig['system.application.environment']);
@@ -16,7 +17,8 @@ $builder      = new ContainerBuilder();
 $builder->addDefinitions($commonConfig);
 $builder->addDefinitions($config);
 $builder->addDefinitions((new CoreServiceProvider())->getDefinitions());
-$builder->addDefinitions((new EtelServiceProvider())->getDefinitions());
+$builder->addDefinitions((new IngredientServiceProvider())->getDefinitions());
+$builder->addDefinitions((new FoodServiceProvider())->getDefinitions());
 $builder->addDefinitions((new SupermarketServiceProvider())->getDefinitions());
 
 $builder->useAutowiring(true);

@@ -15,13 +15,12 @@
         "php-di/php-di": "^7.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "^11.4",
-        "symfony/console": "^7.1"
+        "phpunit/phpunit": "^11.4"
     },
     "autoload": {
         "psr-4": {
-            "PeterPecosz\\Kajatervezo\\": "src/",
-            "PeterPecosz\\Kajatervezo\\Tests\\": "tests/"
+            "PeterPecosz\\ShoppingPlanner\\": "src/",
+            "PeterPecosz\\ShoppingPlanner\\Tests\\": "tests/"
         }
     },
     "scripts": {

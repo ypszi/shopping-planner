@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace PeterPecosz\Kajatervezo\ShoppingList;
+namespace PeterPecosz\ShoppingPlanner\ShoppingList;
 
 class ShoppingListByFood
 {

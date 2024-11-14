@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace PeterPecosz\Kajatervezo\Tests\Supermarket;
+namespace PeterPecosz\ShoppingPlanner\Tests\Supermarket;
 
-use PeterPecosz\Kajatervezo\Supermarket\Exception\UnknownSupermarketException;
-use PeterPecosz\Kajatervezo\Supermarket\SupermarketFactory;
+use PeterPecosz\ShoppingPlanner\Supermarket\Exception\UnknownSupermarketException;
+use PeterPecosz\ShoppingPlanner\Supermarket\SupermarketFactory;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 
@@ -44,7 +44,7 @@ class SupermarketFactoryTest extends TestCase
                 'Konzerv',
                 'Tészta / Rizs',
             ],
-            $supermarket->sorrend()
+            $supermarket->toOrder()
         );
     }
 

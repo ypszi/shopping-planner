@@ -2,24 +2,24 @@
 
 declare(strict_types=1);
 
-namespace PeterPecosz\Kajatervezo\Tests\Supermarket;
+namespace PeterPecosz\ShoppingPlanner\Tests\Supermarket;
 
-use PeterPecosz\Kajatervezo\Etel\Etel;
-use PeterPecosz\Kajatervezo\Etel\Etelek;
-use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
-use PeterPecosz\Kajatervezo\Mertekegyseg\Mertekegyseg;
-use PeterPecosz\Kajatervezo\ShoppingList\ShoppingList;
-use PeterPecosz\Kajatervezo\ShoppingList\ShoppingListByFood;
-use PeterPecosz\Kajatervezo\Supermarket\CategoryMap;
-use PeterPecosz\Kajatervezo\Supermarket\IngredientToCategoryMap;
-use PeterPecosz\Kajatervezo\Supermarket\Supermarket;
+use PeterPecosz\ShoppingPlanner\Food\Food;
+use PeterPecosz\ShoppingPlanner\Food\Foods;
+use PeterPecosz\ShoppingPlanner\Ingredient\Ingredient;
+use PeterPecosz\ShoppingPlanner\Mertekegyseg\Measure;
+use PeterPecosz\ShoppingPlanner\ShoppingList\ShoppingList;
+use PeterPecosz\ShoppingPlanner\ShoppingList\ShoppingListByFood;
+use PeterPecosz\ShoppingPlanner\Supermarket\CategoryMap;
+use PeterPecosz\ShoppingPlanner\Supermarket\IngredientToCategoryMap;
+use PeterPecosz\ShoppingPlanner\Supermarket\Supermarket;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 
 class SupermarketTest extends TestCase
 {
-    private Etel $testFood;
+    private Food $testFood;
 
     private CategoryMap&MockObject $categoryMap;
 
@@ -29,16 +29,16 @@ class SupermarketTest extends TestCase
 
     protected function setUp(): void
     {
-        $this->testFood = new Etel(
+        $this->testFood = new Food(
             name:           'test food',
             defaultPortion: 1,
-            adag:           null,
-            receptUrl:      'https://online-recept-konyv.hu/test-food',
+            portion:        null,
+            recipeUrl:      'https://online-recept-konyv.hu/test-food',
             thumbnailUrl:   'https://www.nosalty.hu/thumnails/img_5512.jpg',
             comments:       null,
             ingredients:    [
-                                new Hozzavalo('Tojás', 1, Mertekegyseg::DB, 'Tejtermék'),
-                                new Hozzavalo('Ecet', 1, Mertekegyseg::L, 'Ecet'),
+                                new Ingredient('Tojás', 1, Measure::DB, 'Tejtermék'),
+                                new Ingredient('Ecet', 1, Measure::L, 'Ecet'),
                             ]
         );
 
@@ -75,7 +75,7 @@ class SupermarketTest extends TestCase
                 'Ecet',
             );
 
-        $shoppingList = $this->supermarket->toShoppingList(new Etelek([$this->testFood]));
+        $shoppingList = $this->supermarket->toShoppingList(new Foods([$this->testFood]));
 
         $this->assertEquals(
             new ShoppingList(
@@ -119,7 +119,7 @@ class SupermarketTest extends TestCase
                 'Ecet',
             );
 
-        $shoppingList = $this->supermarket->toShoppingListByFood(new Etelek([$this->testFood]));
+        $shoppingList = $this->supermarket->toShoppingListByFood(new Foods([$this->testFood]));
 
         $this->assertEquals(
             new ShoppingListByFood(

@@ -2,13 +2,14 @@
 
 declare(strict_types=1);
 
-namespace PeterPecosz\Kajatervezo\Tests\ShoppingList;
+namespace PeterPecosz\ShoppingPlanner\Tests\ShoppingList;
 
-use PeterPecosz\Kajatervezo\ShoppingList\ShoppingList;
+use PeterPecosz\ShoppingPlanner\ShoppingList\ShoppingList;
 use PHPUnit\Framework\TestCase;
 
 class ShoppingListTest extends TestCase
 {
+    #[Test]
     public function testFilterEmptyColumnsWhenEveryCellIsFilled(): void
     {
         $sut = new ShoppingList(
@@ -35,6 +36,7 @@ class ShoppingListTest extends TestCase
         );
     }
 
+    #[Test]
     public function testFilterEmptyColumnsWhenAColumnIsEmpty(): void
     {
         $sut = new ShoppingList(
@@ -61,6 +63,7 @@ class ShoppingListTest extends TestCase
         );
     }
 
+    #[Test]
     public function testFilterEmptyColumnsWhenOneCellIsEmptyInFirstColumnOfFirstRow(): void
     {
         $sut = new ShoppingList(
@@ -87,6 +90,7 @@ class ShoppingListTest extends TestCase
         );
     }
 
+    #[Test]
     public function testFilterEmptyColumnsWhenOneCellIsEmptyInLastColumnOfFirstRow(): void
     {
         $sut = new ShoppingList(
@@ -113,6 +117,7 @@ class ShoppingListTest extends TestCase
         );
     }
 
+    #[Test]
     public function testFilterEmptyColumnsWhenOneCellIsEmptyInFirstColumnOfMiddleRow(): void
     {
         $sut = new ShoppingList(
@@ -139,6 +144,7 @@ class ShoppingListTest extends TestCase
         );
     }
 
+    #[Test]
     public function testFilterEmptyColumnsWhenOneCellIsEmptyInLastColumnOfMiddleRow(): void
     {
         $sut = new ShoppingList(
@@ -165,6 +171,7 @@ class ShoppingListTest extends TestCase
         );
     }
 
+    #[Test]
     public function testFilterEmptyColumnsWhenOneCellIsEmptyInFirstColumnOfLastRow(): void
     {
         $sut = new ShoppingList(
@@ -191,6 +198,7 @@ class ShoppingListTest extends TestCase
         );
     }
 
+    #[Test]
     public function testFilterEmptyColumnsWhenOneCellIsEmptyInLastColumnOfLastRow(): void
     {
         $sut = new ShoppingList(

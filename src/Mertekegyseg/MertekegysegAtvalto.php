@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace PeterPecosz\Kajatervezo\Mertekegyseg;
+namespace PeterPecosz\ShoppingPlanner\Mertekegyseg;
 
-use PeterPecosz\Kajatervezo\Hozzavalo\Hozzavalo;
-use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\Exception\UnknownUnitOfMeasureException;
-use PeterPecosz\Kajatervezo\Mertekegyseg\Atvaltas\MertekegysegValtoCollection;
+use PeterPecosz\ShoppingPlanner\Ingredient\Ingredient;
+use PeterPecosz\ShoppingPlanner\Mertekegyseg\Atvaltas\Exception\UnknownUnitOfMeasureException;
+use PeterPecosz\ShoppingPlanner\Mertekegyseg\Atvaltas\MertekegysegValtoCollection;
 
 class MertekegysegAtvalto
 {
@@ -17,7 +17,7 @@ class MertekegysegAtvalto
         $this->mertekegysegValtoCollection = new MertekegysegValtoCollection();
     }
 
-    public function canValt(Hozzavalo $hozzavalo, Hozzavalo $hozzaadottHozzavalo): bool
+    public function canValt(Ingredient $hozzavalo, Ingredient $hozzaadottHozzavalo): bool
     {
         try {
             $this->mertekegysegValtoCollection->get($hozzavalo, $hozzaadottHozzavalo);
@@ -28,8 +28,8 @@ class MertekegysegAtvalto
         return true;
     }
 
-    public function valt(Hozzavalo $hozzavalo, Hozzavalo $hozzaadottHozzavalo): float
+    public function valt(Ingredient $hozzavalo, Ingredient $hozzaadottHozzavalo): float
     {
-        return $this->mertekegysegValtoCollection->get($hozzavalo, $hozzaadottHozzavalo)->valt($hozzavalo->getMennyiseg());
+        return $this->mertekegysegValtoCollection->get($hozzavalo, $hozzaadottHozzavalo)->valt($hozzavalo->portion());
     }
 }

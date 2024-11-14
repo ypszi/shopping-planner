@@ -26,8 +26,8 @@
         <p>{{ supermarket.name }}</p>
     </div>
 
-    <div id="etelek" class="table-responsive">
-        <h3 class="text-success">Ételek ({{ etelek.toArray|length }} db):</h3>
+    <div id="foods" class="table-responsive">
+        <h3 class="text-success">Ételek ({{ foods.toArray|length }} db):</h3>
         <table class="table table-bordered">
             <thead class="bg-light-orange">
                 <tr>
@@ -38,20 +38,20 @@
                 </tr>
             </thead>
             <tbody class="table-group-divider">
-                {% for etel in etelek.toArray %}
+                {% for food in foods.toArray %}
                     <tr>
                         <td class="row-thumbnail">
                             <div class="food-thumbnail col-sm-12 col-md-8 col-lg-6 col-xl-4">
-                                {% if etel.thumbnailUrl %}
-                                    <img src="{{ etel.thumbnailUrl }}" alt="{{ etel }}" class="img-fluid img-thumbnail">
+                                {% if food.thumbnailUrl %}
+                                    <img src="{{ food.thumbnailUrl }}" alt="{{ food }}" class="img-fluid img-thumbnail">
                                 {% endif %}
                             </div>
                         </td>
-                        <td>{{ etel }}</td>
-                        <td><a href="{{ etel.receptUrl }}" target="_blank">{{ etel.receptUrl }}</a></td>
+                        <td>{{ food }}</td>
+                        <td><a href="{{ food.recipeUrl }}" target="_blank">{{ food.recipeUrl }}</a></td>
                         <td>
                             {% from _self import recursiveComments %}
-                            {% for comment in etel.comments %}
+                            {% for comment in food.comments %}
                                 {{ recursiveComments(comment) }}
                             {% endfor %}
                         </td>

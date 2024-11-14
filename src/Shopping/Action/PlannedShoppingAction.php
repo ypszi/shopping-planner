@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace PeterPecosz\Kajatervezo\Shopping\Action;
+namespace PeterPecosz\ShoppingPlanner\Shopping\Action;
 
-use PeterPecosz\Kajatervezo\Etel\Factory\EtelekFactory;
-use PeterPecosz\Kajatervezo\Supermarket\SupermarketFactory;
+use PeterPecosz\ShoppingPlanner\Food\Factory\FoodsFactory;
+use PeterPecosz\ShoppingPlanner\Supermarket\SupermarketFactory;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Twig\Environment;
@@ -14,7 +14,7 @@ readonly class PlannedShoppingAction
 {
     public function __construct(
         private SupermarketFactory $supermarketFactory,
-        private EtelekFactory $etelekFactory,
+        private FoodsFactory $foodsFactory,
         private Environment $twig
     ) {
     }
@@ -33,15 +33,15 @@ readonly class PlannedShoppingAction
             }
         }
 
-        $etelek              = $this->etelekFactory->create($foodPortionsByFoodName);
-        $shoppingList        = $supermarket->toShoppingList($etelek)->filterEmptyColumns();
-        $shoppingListByFood  = $supermarket->toShoppingListByFood($etelek)->filterEmptyColumns();
+        $foods               = $this->foodsFactory->create($foodPortionsByFoodName);
+        $shoppingList        = $supermarket->toShoppingList($foods)->filterEmptyColumns();
+        $shoppingListByFood  = $supermarket->toShoppingListByFood($foods)->filterEmptyColumns();
         $totalRowCountByFood = array_sum(array_map(fn(array $rowsOfFood) => count($rowsOfFood), $shoppingListByFood->getRows()));
 
         $response->getBody()->write(
             $this->twig->render('planned-shopping.html.twig', [
                 'supermarket'         => $supermarket,
-                'etelek'              => $etelek,
+                'foods'               => $foods,
                 'shoppingList'        => $shoppingList,
                 'shoppingListByFood'  => $shoppingListByFood,
                 'totalRowCountByFood' => $totalRowCountByFood,
