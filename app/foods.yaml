@@ -1442,6 +1442,8 @@ Retkes uborka saláta:
 
 Rizs:
   defaultPortion: 4
+  receptUrl: https://www.nosalty.hu/recept/tokeletes-parolt-rizs
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/C8/O2/tokeletes-parolt-rizs.jpg?w=6000&fit=crop&s=28b686fb9c740524d5b9953321c8c317
   ingredients:
     - name: Rizs
       mennyiseg: 200 g
