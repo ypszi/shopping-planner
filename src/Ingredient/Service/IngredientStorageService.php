@@ -26,7 +26,7 @@ readonly class IngredientStorageService
     }
 
     /**
-     * @return IngredientForFood[]
+     * @return array<string, IngredientForFood[]>
      */
     public function getIngredientStorage(): array
     {
@@ -38,7 +38,7 @@ readonly class IngredientStorageService
         foreach ($availableIngredients as $availableIngredient) {
             $ingredientForFood = $ingredientForFoods[$availableIngredient->name()] ?? null;
 
-            $storage[] = new IngredientForFood(
+            $storage[$availableIngredient->category()][] = new IngredientForFood(
                 name:              $availableIngredient->name(),
                 category:          $availableIngredient->category(),
                 portion:           $ingredientForFood?->portion() ?? 0,

@@ -162,6 +162,7 @@ Kenyér:
   kategoria: Pékárú
 Hamburger zsemle:
   kategoria: Pékárú
+  mertekegysegPreference: db
 
 # Sajt
 Cheddar sajt (vörös):

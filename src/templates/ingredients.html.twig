@@ -8,54 +8,60 @@
             <legend class="col-form-label col-md-12 pt-0">
                 <span class="display-6">Lássuk mi van otthon...</span>
             </legend>
-            {% for availableIngredient in availableIngredients %}
-                {% set availableIngredientName = availableIngredient.name %}
-                {% set availableIngredientNameKey = availableIngredientName|replace({' ': '_'}) %}
-                <div class="col-md-8">
-                    <div class="form-check form-switch">
-                        <input
-                                type="checkbox"
-                                role="switch"
-                                id="{{ availableIngredientNameKey }}"
-                                value="{{ availableIngredientName }}"
-                                name="ingredient-{{ availableIngredientNameKey }}"
-                                class="form-check-input"
-                                onchange="if (this.checked) {
-                                        document.getElementById('portion-{{ availableIngredientNameKey }}').disabled = '';
-                                        document.getElementById('measure-{{ availableIngredientNameKey }}').disabled = ''
-                                        } else {
-                                        document.getElementById('portion-{{ availableIngredientNameKey }}').disabled = 'disabled';
-                                        document.getElementById('measure-{{ availableIngredientNameKey }}').disabled = 'disabled';
-                                        }"
-                                {% if availableIngredient.portion != 0 %}checked="checked"{% endif %}
-                        >
-                        <label for="{{ availableIngredientNameKey }}" class="form-check-label">{{ availableIngredientName }}</label>
-                        <output id="portion-output-{{ availableIngredientNameKey }}">({{ availableIngredient.ingredientPortion }})</output>
+            {% for ingredientCategory, availableIngredients in ingredientStorage %}
+                <legend class="col-form-label col-md-12 pt-0">
+                    <span class="fs-5">{{ ingredientCategory }}</span>
+                </legend>
+
+                {% for availableIngredient in availableIngredients %}
+                    {% set availableIngredientName = availableIngredient.name %}
+                    {% set availableIngredientNameKey = availableIngredientName|replace({' ': '_'}) %}
+                    <div class="col-md-8">
+                        <div class="form-check form-switch">
+                            <input
+                                    type="checkbox"
+                                    role="switch"
+                                    id="{{ availableIngredientNameKey }}"
+                                    value="{{ availableIngredientName }}"
+                                    name="ingredient-{{ availableIngredientNameKey }}"
+                                    class="form-check-input"
+                                    onchange="if (this.checked) {
+                                            document.getElementById('portion-{{ availableIngredientNameKey }}').disabled = '';
+                                            document.getElementById('measure-{{ availableIngredientNameKey }}').disabled = ''
+                                            } else {
+                                            document.getElementById('portion-{{ availableIngredientNameKey }}').disabled = 'disabled';
+                                            document.getElementById('measure-{{ availableIngredientNameKey }}').disabled = 'disabled';
+                                            }"
+                                    {% if availableIngredient.portion != 0 %}checked="checked"{% endif %}
+                            >
+                            <label for="{{ availableIngredientNameKey }}" class="form-check-label">{{ availableIngredientName }}</label>
+                            <output id="portion-output-{{ availableIngredientNameKey }}">({{ availableIngredient.ingredientPortion }})</output>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="input-group">
-                        <input
-                                type="range"
-                                id="portion-{{ availableIngredientNameKey }}"
-                                value="{{ availableIngredient.portion }}"
-                                name="portion-{{ availableIngredientNameKey }}"
-                                class="form-range"
-                                min="0"
-                                max="1000"
-                                step="10"
-                                oninput="document.getElementById('portion-output-{{ availableIngredientNameKey }}').value = '(' + (Math.round(this.value * 100) / 100) + ' {{ availableIngredient.measurePreference.value }})'"
-                                {% if availableIngredient.portion == 0 %}disabled="disabled"{% endif %}
-                        >
-                        <input
-                                type="hidden"
-                                id="measure-{{ availableIngredientNameKey }}"
-                                value="{{ availableIngredient.measurePreference.value }}"
-                                name="measure-{{ availableIngredientNameKey }}"
-                                {% if availableIngredient.portion == 0 %}disabled="disabled"{% endif %}
-                        >
+                    <div class="col-md-4">
+                        <div class="input-group">
+                            <input
+                                    type="range"
+                                    id="portion-{{ availableIngredientNameKey }}"
+                                    value="{{ availableIngredient.portion }}"
+                                    name="portion-{{ availableIngredientNameKey }}"
+                                    class="form-range"
+                                    min="0"
+                                    max="{{ ingredientMeasureMap[availableIngredient.name].max }}"
+                                    step="{{ ingredientMeasureMap[availableIngredient.name].step }}"
+                                    oninput="document.getElementById('portion-output-{{ availableIngredientNameKey }}').value = '(' + (Math.round(this.value * 100) / 100) + ' {{ availableIngredient.measurePreference.value }})'"
+                                    {% if availableIngredient.portion == 0 %}disabled="disabled"{% endif %}
+                            >
+                            <input
+                                    type="hidden"
+                                    id="measure-{{ availableIngredientNameKey }}"
+                                    value="{{ availableIngredient.measurePreference.value }}"
+                                    name="measure-{{ availableIngredientNameKey }}"
+                                    {% if availableIngredient.portion == 0 %}disabled="disabled"{% endif %}
+                            >
+                        </div>
                     </div>
-                </div>
+                {% endfor %}
             {% endfor %}
         </fieldset>
 

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace PeterPecosz\ShoppingPlanner\Ingredient\Action;
 
+use PeterPecosz\ShoppingPlanner\Ingredient\IngredientMeasureMap;
 use PeterPecosz\ShoppingPlanner\Ingredient\Service\IngredientStorageService;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
@@ -23,7 +24,8 @@ readonly class GetIngredientStorageAction
 
         $response->getBody()->write(
             $this->twig->render('ingredients.html.twig', [
-                'availableIngredients' => $ingredientStorage,
+                'ingredientStorage'    => $ingredientStorage,
+                'ingredientMeasureMap' => new IngredientMeasureMap(),
             ])
         );
 
