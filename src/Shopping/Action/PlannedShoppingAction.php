@@ -21,19 +21,10 @@ readonly class PlannedShoppingAction
 
     public function __invoke(ServerRequestInterface $request, ResponseInterface $response): ResponseInterface
     {
-        $queryParams = $request->getQueryParams();
-        $supermarket = $this->supermarketFactory->create($queryParams['supermarket']);
-
-        $foodPortionsByFoodName = [];
-        foreach ($queryParams as $key => $value) {
-            if (str_contains($key, 'food-')) {
-                $foodKey                           = str_replace('food-', '', $key);
-                $foodName                          = str_replace('_', ' ', $foodKey);
-                $foodPortionsByFoodName[$foodName] = (int)$queryParams['portion-' . $foodKey];
-            }
-        }
-
-        $foods               = $this->foodsFactory->create($foodPortionsByFoodName);
+        $queryParams         = $request->getQueryParams();
+        $portionsByFoodName  = $this->createPortionsByFoodName($request);
+        $foods               = $this->foodsFactory->create($portionsByFoodName);
+        $supermarket         = $this->supermarketFactory->create($queryParams['supermarket']);
         $shoppingList        = $supermarket->toShoppingList($foods)->filterEmptyColumns();
         $shoppingListByFood  = $supermarket->toShoppingListByFood($foods)->filterEmptyColumns();
         $totalRowCountByFood = array_sum(array_map(fn(array $rowsOfFood) => count($rowsOfFood), $shoppingListByFood->getRows()));
@@ -50,5 +41,24 @@ readonly class PlannedShoppingAction
         );
 
         return $response;
+    }
+
+    /**
+     * @return array<string, int>
+     */
+    private function createPortionsByFoodName(ServerRequestInterface $request): array
+    {
+        $queryParams            = $request->getQueryParams();
+        $foodPortionsByFoodName = [];
+
+        foreach ($queryParams as $key => $value) {
+            if (str_contains($key, 'food-')) {
+                $foodKey                           = str_replace('food-', '', $key);
+                $foodName                          = str_replace('_', ' ', $foodKey);
+                $foodPortionsByFoodName[$foodName] = (int)$queryParams['portion-' . $foodKey];
+            }
+        }
+
+        return $foodPortionsByFoodName;
     }
 }

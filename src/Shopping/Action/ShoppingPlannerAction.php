@@ -27,19 +27,10 @@ readonly class ShoppingPlannerAction
             array_values($this->supermarketFactory->listAvailableSupermarkets())
         );
 
-        $availableFoods = $this->availableFoodFactory->listAvailableFoods();
-
         $queryParams        = $request->getQueryParams();
         $defaultSupermarket = $queryParams['supermarket'] ?? Supermarket::DEFAULT;
-
-        $foods         = array_filter($queryParams, fn(string $key) => str_contains($key, 'food-'), ARRAY_FILTER_USE_KEY);
-        $portions      = array_filter($queryParams, fn(string $key) => str_contains($key, 'portion-'), ARRAY_FILTER_USE_KEY);
-        $selectedFoods = [];
-
-        foreach ($foods as $key => $value) {
-            $portionKey            = str_replace('food-', 'portion-', $key);
-            $selectedFoods[$value] = $portions[$portionKey];
-        }
+        $availableFoods     = $this->availableFoodFactory->listAvailableFoods();
+        $selectedFoods      = $this->getSelectedFoods($request);
 
         $response->getBody()->write(
             $this->twig->render('shopping-planner.html.twig', [
@@ -51,5 +42,23 @@ readonly class ShoppingPlannerAction
         );
 
         return $response;
+    }
+
+    /**
+     * @return array<string, int>
+     */
+    private function getSelectedFoods(ServerRequestInterface $request): array
+    {
+        $queryParams   = $request->getQueryParams();
+        $foods         = array_filter($queryParams, fn(string $key) => str_contains($key, 'food-'), ARRAY_FILTER_USE_KEY);
+        $portions      = array_filter($queryParams, fn(string $key) => str_contains($key, 'portion-'), ARRAY_FILTER_USE_KEY);
+        $selectedFoods = [];
+
+        foreach ($foods as $key => $value) {
+            $portionKey            = str_replace('food-', 'portion-', $key);
+            $selectedFoods[$value] = $portions[$portionKey];
+        }
+
+        return $selectedFoods;
     }
 }

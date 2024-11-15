@@ -24,8 +24,6 @@ readonly class FoodsFactory
 
     /**
      * @param array<string, int> $foodPortionsByFoodName
-     *
-     * @return Foods
      */
     public function create(array $foodPortionsByFoodName): Foods
     {
