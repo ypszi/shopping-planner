@@ -2,9 +2,10 @@
 
 declare(strict_types=1);
 
-namespace PeterPecosz\ShoppingPlanner\Ingredient;
+namespace PeterPecosz\ShoppingPlanner\Ingredient\Factory;
 
 use PeterPecosz\ShoppingPlanner\Food\Exception\UnknownIngredientException;
+use PeterPecosz\ShoppingPlanner\Ingredient\Ingredient;
 use PeterPecosz\ShoppingPlanner\Mertekegyseg\Measure;
 use Symfony\Component\Yaml\Yaml;
 
@@ -44,7 +45,7 @@ readonly class IngredientFactory
             );
         }
 
-        return $this->create(
+        return $this->createForFood(
             ingredientName: $ingredientName,
             portion:        (float)$portion,
             measure:        $measure,
@@ -52,12 +53,27 @@ readonly class IngredientFactory
         );
     }
 
-    private function create(
+    /**
+     * @throws UnknownIngredientException
+     */
+    public function createForFood(
         string $ingredientName,
         float $portion,
         Measure $measure,
         string $foodName,
     ): Ingredient {
+        try {
+            return $this->create($ingredientName, $portion, $measure);
+        } catch (UnknownIngredientException $unknownIngredientException) {
+            throw new UnknownIngredientException(sprintf('%s for food: "%s"', $unknownIngredientException->getMessage(), $foodName));
+        }
+    }
+
+    /**
+     * @throws UnknownIngredientException
+     */
+    public function create(string $ingredientName, float $portion, Measure $measure): Ingredient
+    {
         $ingredient = $this->ingredients[$ingredientName] ?? null;
 
         if (!isset($ingredient)) {
@@ -69,7 +85,7 @@ readonly class IngredientFactory
 
             if (!$ingredientRef) {
                 throw new UnknownIngredientException(
-                    sprintf('Ingredient reference not found: "%s" for food: "%s"', $ingredientRefName, $foodName)
+                    sprintf('Ingredient reference not found: "%s"', $ingredientRefName)
                 );
             }
 
@@ -86,18 +102,17 @@ readonly class IngredientFactory
 
         if (!$category) {
             throw new UnknownIngredientException(
-                sprintf('Ingredient not found: "%s" for food: "%s"', $ingredientName, $foodName)
+                sprintf('Ingredient not found: "%s"', $ingredientName)
             );
         }
 
         if ($category !== $defaultIngredient['kategoria']) {
             throw new UnknownIngredientException(
                 sprintf(
-                    'Ingredient category mismatch for "%s": "%s" - "%s" for food: "%s"',
+                    'Ingredient category mismatch for "%s": "%s" - "%s"',
                     $ingredientName,
                     $ingredient['kategoria'],
-                    $defaultIngredient['kategoria'],
-                    $foodName
+                    $defaultIngredient['kategoria']
                 )
             );
         }
@@ -105,10 +120,9 @@ readonly class IngredientFactory
         if ($defaultIngredient && !in_array($defaultIngredient['kategoria'], array_keys($this->ingredientCategories))) {
             throw new UnknownIngredientException(
                 sprintf(
-                    'Ingredient category not found for "%s": "%s" for food: "%s"',
+                    'Ingredient category not found for "%s": "%s"',
                     $ingredientName,
-                    $defaultIngredient['kategoria'],
-                    $foodName
+                    $defaultIngredient['kategoria']
                 )
             );
         }
@@ -116,10 +130,9 @@ readonly class IngredientFactory
         if ($measurePreference && !$ingredientMeasurePreference = Measure::tryFrom($measurePreference)) {
             throw new UnknownIngredientException(
                 sprintf(
-                    'Ingredient measurement not found for "%s": "%s" for food: "%s"',
+                    'Ingredient measurement not found for "%s": "%s"',
                     $ingredientName,
-                    $measurePreference,
-                    $foodName
+                    $measurePreference
                 )
             );
         }

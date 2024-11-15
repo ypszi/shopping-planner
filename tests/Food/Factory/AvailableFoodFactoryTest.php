@@ -6,7 +6,7 @@ namespace PeterPecosz\ShoppingPlanner\Tests\Food\Factory;
 
 use PeterPecosz\ShoppingPlanner\Food\Factory\AvailableFoodFactory;
 use PeterPecosz\ShoppingPlanner\Food\Factory\FoodFactory;
-use PeterPecosz\ShoppingPlanner\Ingredient\IngredientFactory;
+use PeterPecosz\ShoppingPlanner\Ingredient\Factory\IngredientFactory;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;

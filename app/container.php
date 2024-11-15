@@ -9,7 +9,7 @@ use PeterPecosz\ShoppingPlanner\Food\ServiceProvider\FoodServiceProvider;
 use PeterPecosz\ShoppingPlanner\Ingredient\ServiceProvider\IngredientServiceProvider;
 use PeterPecosz\ShoppingPlanner\Supermarket\ServiceProvider\SupermarketServiceProvider;
 
-$commonConfig = require __DIR__ . '/config/common/config.php';
+$commonConfig = array_merge(require __DIR__ . '/config/common/config.php', require __DIR__ . '/config/common/env.php');
 $environment  = Environment::from($commonConfig['system.application.environment']);
 $config       = require __DIR__ . "/config/$environment->value/config.php";
 $builder      = new ContainerBuilder();

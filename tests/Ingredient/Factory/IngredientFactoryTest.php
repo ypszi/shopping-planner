@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Ingredient\Factory;
 
-use PeterPecosz\ShoppingPlanner\Ingredient\IngredientFactory;
+use PeterPecosz\ShoppingPlanner\Ingredient\Factory\IngredientFactory;
 use PeterPecosz\ShoppingPlanner\Mertekegyseg\Measure;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;

@@ -6,7 +6,7 @@ namespace PeterPecosz\ShoppingPlanner\Food\Factory;
 
 use PeterPecosz\ShoppingPlanner\Food\Food;
 use PeterPecosz\ShoppingPlanner\Food\Foods;
-use PeterPecosz\ShoppingPlanner\Ingredient\IngredientFactory;
+use PeterPecosz\ShoppingPlanner\Ingredient\Factory\IngredientFactory;
 use Symfony\Component\Yaml\Yaml;
 
 readonly class FoodsFactory
