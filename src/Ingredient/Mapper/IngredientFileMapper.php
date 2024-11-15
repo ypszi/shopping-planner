@@ -5,12 +5,11 @@ declare(strict_types=1);
 namespace PeterPecosz\ShoppingPlanner\Ingredient\Mapper;
 
 use PeterPecosz\ShoppingPlanner\Ingredient\Factory\IngredientFactory;
-use PeterPecosz\ShoppingPlanner\Ingredient\Ingredient;
+use PeterPecosz\ShoppingPlanner\Ingredient\IngredientForFood;
 use PeterPecosz\ShoppingPlanner\Mertekegyseg\Measure;
 
 readonly class IngredientFileMapper
 {
-
     public function __construct(
         private IngredientFactory $ingredientFactory,
         private string $ingredientStoragePath
@@ -18,7 +17,7 @@ readonly class IngredientFileMapper
     }
 
     /**
-     * @return Ingredient[]
+     * @return array<string, IngredientForFood>
      */
     public function findAll(): array
     {
@@ -26,8 +25,10 @@ readonly class IngredientFileMapper
         $rawIngredients = json_decode($this->readFile(), true) ?: [];
 
         foreach ($rawIngredients as $rawIngredient) {
-            $ingredients[] = $this->ingredientFactory->create(
-                ingredientName: $rawIngredient['name'],
+            $ingredientName = $rawIngredient['name'];
+
+            $ingredients[$ingredientName] = $this->ingredientFactory->createWithPortion(
+                ingredientName: $ingredientName,
                 portion:        $rawIngredient['portion'],
                 measure:        Measure::from($rawIngredient['measure']),
             );
@@ -37,9 +38,9 @@ readonly class IngredientFileMapper
     }
 
     /**
-     * @param Ingredient[] $ingredients
+     * @param IngredientForFood[] $ingredients
      *
-     * @return Ingredient[]
+     * @return IngredientForFood[]
      */
     public function save(array $ingredients): array
     {
@@ -49,7 +50,7 @@ readonly class IngredientFileMapper
             $rawIngredients[$ingredient->name()] = [
                 'name'    => $ingredient->name(),
                 'portion' => $ingredient->portion(),
-                'measure' => $ingredient->measure()->value,
+                'measure' => $ingredient->measure()?->value,
             ];
         }
 

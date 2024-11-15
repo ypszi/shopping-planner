@@ -6,7 +6,7 @@ namespace PeterPecosz\ShoppingPlanner\Tests\Supermarket;
 
 use PeterPecosz\ShoppingPlanner\Food\Food;
 use PeterPecosz\ShoppingPlanner\Food\Foods;
-use PeterPecosz\ShoppingPlanner\Ingredient\Ingredient;
+use PeterPecosz\ShoppingPlanner\Ingredient\IngredientForFood;
 use PeterPecosz\ShoppingPlanner\Mertekegyseg\Measure;
 use PeterPecosz\ShoppingPlanner\ShoppingList\ShoppingList;
 use PeterPecosz\ShoppingPlanner\ShoppingList\ShoppingListByFood;
@@ -37,8 +37,8 @@ class SupermarketTest extends TestCase
             thumbnailUrl:   'https://www.nosalty.hu/thumnails/img_5512.jpg',
             comments:       null,
             ingredients:    [
-                                new Ingredient('Tojás', 1, Measure::DB, 'Tejtermék'),
-                                new Ingredient('Ecet', 1, Measure::L, 'Ecet'),
+                                new IngredientForFood(name: 'Tojás', category: 'Tejtermék', portion: 1, measure: Measure::DB),
+                                new IngredientForFood(name: 'Ecet', category: 'Ecet', portion: 1, measure: Measure::L),
                             ]
         );
 

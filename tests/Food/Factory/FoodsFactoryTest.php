@@ -9,7 +9,7 @@ use PeterPecosz\ShoppingPlanner\Food\Factory\FoodsFactory;
 use PeterPecosz\ShoppingPlanner\Food\Food;
 use PeterPecosz\ShoppingPlanner\Food\Foods;
 use PeterPecosz\ShoppingPlanner\Ingredient\Factory\IngredientFactory;
-use PeterPecosz\ShoppingPlanner\Ingredient\Ingredient;
+use PeterPecosz\ShoppingPlanner\Ingredient\IngredientForFood;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
@@ -38,7 +38,7 @@ class FoodsFactoryTest extends TestCase
     public function testCreate(): void
     {
         $expectedFoodName   = 'Alpesi Sajtos Tészta (Älplermagronen)';
-        $expectedIngredient = $this->createMock(Ingredient::class);
+        $expectedIngredient = $this->createMock(IngredientForFood::class);
         $ingredientCount    = 10;
         $expectedFood       = $this->createMock(Food::class);
 
@@ -113,7 +113,7 @@ class FoodsFactoryTest extends TestCase
     {
         $expectedFoodName    = 'Pizza';
         $expectedRefFoodName = 'Pizzatészta';
-        $expectedIngredient  = $this->createMock(Ingredient::class);
+        $expectedIngredient  = $this->createMock(IngredientForFood::class);
         $ingredientCount     = 8;
         $expectedFood        = $this->createMock(Food::class);
         $expectedRefFood     = $this->createMock(Food::class);

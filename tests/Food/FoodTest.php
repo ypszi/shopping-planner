@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace PeterPecosz\ShoppingPlanner\Tests\Food;
 
 use PeterPecosz\ShoppingPlanner\Food\Food;
-use PeterPecosz\ShoppingPlanner\Ingredient\Ingredient;
+use PeterPecosz\ShoppingPlanner\Ingredient\IngredientForFood;
 use PeterPecosz\ShoppingPlanner\Mertekegyseg\Measure;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
@@ -24,11 +24,11 @@ class FoodTest extends TestCase
             thumbnailUrl:   'https://www.nosalty.hu/thumnails/img_5512.jpg',
             comments:       null,
             ingredients:    [
-                                new Ingredient(
+                                new IngredientForFood(
                                     name:     'Tojás',
+                                    category: 'Tejtermék',
                                     portion:  1,
                                     measure:  Measure::DB,
-                                    category: 'Tejtermék',
                                 ),
                             ]
         );
@@ -57,11 +57,11 @@ class FoodTest extends TestCase
             thumbnailUrl:   'https://www.nosalty.hu/thumnails/img_5512.jpg',
             comments:       null,
             ingredients:    [
-                                new Ingredient(
+                                new IngredientForFood(
                                     name:     'Tojás',
+                                    category: 'Tejtermék',
                                     portion:  1,
                                     measure:  Measure::DB,
-                                    category: 'Tejtermék',
                                 ),
                             ]
         );
@@ -80,11 +80,11 @@ class FoodTest extends TestCase
             thumbnailUrl:   'https://www.nosalty.hu/thumnails/img_5512.jpg',
             comments:       null,
             ingredients:    [
-                                new Ingredient(
+                                new IngredientForFood(
                                     name:     'Tojás',
+                                    category: 'Tejtermék',
                                     portion:  1,
                                     measure:  Measure::DB,
-                                    category: 'Tejtermék',
                                 ),
                             ]
         );
@@ -103,11 +103,11 @@ class FoodTest extends TestCase
             thumbnailUrl:   'https://www.nosalty.hu/thumnails/img_5512.jpg',
             comments:       null,
             ingredients:    [
-                                new Ingredient(
+                                new IngredientForFood(
                                     name:     'Tojás',
+                                    category: 'Tejtermék',
                                     portion:  1,
                                     measure:  Measure::DB,
-                                    category: 'Tejtermék',
                                 ),
                             ]
         );
@@ -133,11 +133,11 @@ class FoodTest extends TestCase
                 thumbnailUrl:   'https://www.nosalty.hu/thumnails/img_5512.jpg',
                 comments:       null,
                 ingredients:    [
-                                    new Ingredient(
+                                    new IngredientForFood(
                                         name:     'Tojás',
+                                        category: 'Tejtermék',
                                         portion:  1,
                                         measure:  Measure::DB,
-                                        category: 'Tejtermék',
                                     ),
                                 ]
             ),
@@ -150,11 +150,11 @@ class FoodTest extends TestCase
     {
         $this->assertEquals(
             [
-                new Ingredient(
+                new IngredientForFood(
                     name:     'Tojás',
+                    category: 'Tejtermék',
                     portion:  1,
                     measure:  Measure::DB,
-                    category: 'Tejtermék',
                 ),
             ],
             $this->testFood->ingredients()

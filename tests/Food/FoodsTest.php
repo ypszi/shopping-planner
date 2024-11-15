@@ -6,7 +6,7 @@ namespace PeterPecosz\ShoppingPlanner\Tests\Food;
 
 use PeterPecosz\ShoppingPlanner\Food\Food;
 use PeterPecosz\ShoppingPlanner\Food\Foods;
-use PeterPecosz\ShoppingPlanner\Ingredient\Ingredient;
+use PeterPecosz\ShoppingPlanner\Ingredient\IngredientForFood;
 use PeterPecosz\ShoppingPlanner\Mertekegyseg\Measure;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
@@ -25,11 +25,11 @@ class FoodsTest extends TestCase
             thumbnailUrl:   null,
             comments:       null,
             ingredients:    [
-                                new Ingredient(
+                                new IngredientForFood(
                                     name:     'Tojás',
+                                    category: 'Tejtermék',
                                     portion:  1,
-                                    measure:  Measure::DB,
-                                    category: 'Tejtermék'
+                                    measure:  Measure::DB
                                 ),
                             ]
         );

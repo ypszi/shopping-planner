@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace PeterPecosz\ShoppingPlanner\Tests\Mertekegyseg\Atvaltas;
 
 use PeterPecosz\ShoppingPlanner\Ingredient\Ingredient;
+use PeterPecosz\ShoppingPlanner\Ingredient\IngredientForFood;
 use PeterPecosz\ShoppingPlanner\Mertekegyseg\Atvaltas\Exception\UnknownUnitOfMeasureException;
 use PeterPecosz\ShoppingPlanner\Mertekegyseg\Measure;
 use PeterPecosz\ShoppingPlanner\Mertekegyseg\MertekegysegAtvalto;
@@ -532,22 +533,22 @@ class MertekegysegAtvaltoTest extends TestCase
     #[Test]
     public function testNemValt(): void
     {
-        $hozzavalo           = new Ingredient(
+        $ingredientForFood           = new IngredientForFood(
             name:     'Csirkemell',
+            category: 'Hús',
             portion:  10,
             measure:  Measure::GEREZD,
-            category: 'Hús',
         );
-        $hozzaadottHozzavalo = new Ingredient(
+        $additionalIngredientForFood = new IngredientForFood(
             name:     'Csirkemell',
+            category: 'Hús',
             portion:  10,
             measure:  Measure::TK,
-            category: 'Hús',
         );
 
         $this->expectException(UnknownUnitOfMeasureException::class);
-        $this->expectExceptionMessage(sprintf('Cannot convert %s to %s', $hozzavalo, $hozzaadottHozzavalo));
+        $this->expectExceptionMessage(sprintf('Cannot convert %s to %s', $ingredientForFood, $additionalIngredientForFood));
 
-        $this->sut->valt($hozzavalo, $hozzaadottHozzavalo);
+        $this->sut->valt($ingredientForFood, $additionalIngredientForFood);
     }
 }

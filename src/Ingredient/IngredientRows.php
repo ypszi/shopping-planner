@@ -100,7 +100,7 @@ class IngredientRows
     {
         foreach ($ingredientsByCategory as &$ingredients) {
             usort($ingredients, function (Ingredient $ingredient1, Ingredient $ingredient2) {
-                return strnatcmp($ingredient1->measure()->value, $ingredient2->measure()->value);
+                return strnatcmp($ingredient1->measure()?->value ?? '', $ingredient2->measure()?->value ?? '');
             });
         }
 

@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace PeterPecosz\ShoppingPlanner\Ingredient\ServiceProvider;
 
 use PeterPecosz\ShoppingPlanner\Core\ServiceProvider\ServiceDefinitionProviderInterface;
+use PeterPecosz\ShoppingPlanner\Ingredient\Factory\AvailableIngredientFactory;
 use PeterPecosz\ShoppingPlanner\Ingredient\Factory\IngredientFactory;
 use PeterPecosz\ShoppingPlanner\Ingredient\Mapper\IngredientFileMapper;
 
@@ -22,6 +23,9 @@ class IngredientServiceProvider implements ServiceDefinitionProviderInterface
                     get('config.ingredients.path'),
                     get('config.ingredientCategories.path')
                 ),
+
+            AvailableIngredientFactory::class => autowire()
+                ->constructorParameter('ingredientsPath', get('config.ingredients.path')),
 
             IngredientFileMapper::class => autowire()
                 ->constructorParameter('ingredientStoragePath', get('config.ingredients_storage.path')),

@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace PeterPecosz\ShoppingPlanner\Tests\Food\Factory;
 
 use PeterPecosz\ShoppingPlanner\Food\Factory\FoodFactory;
-use PeterPecosz\ShoppingPlanner\Ingredient\Ingredient;
+use PeterPecosz\ShoppingPlanner\Ingredient\IngredientForFood;
 use PeterPecosz\ShoppingPlanner\Mertekegyseg\Measure;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
@@ -25,8 +25,8 @@ class FoodFactoryTest extends TestCase
         $food = $this->sut->createFood(
             foodName:    'Bolognai',
             ingredients: [
-                             new Ingredient('meat', 1, Measure::KG, 'meat-category'),
-                             new Ingredient('pasta', 1, Measure::KG, 'pasta-category'),
+                             new IngredientForFood(name: 'meat', category: 'meat-category', portion: 1, measure: Measure::KG),
+                             new IngredientForFood(name: 'pasta', category: 'pasta-category', portion: 1, measure: Measure::KG),
                          ],
             portion:     6
         );
@@ -35,8 +35,8 @@ class FoodFactoryTest extends TestCase
         $this->assertEquals(4, $food->defaultPortion());
         $this->assertEquals(
             [
-                new Ingredient('meat', 1.5, Measure::KG, 'meat-category'),
-                new Ingredient('pasta', 1.5, Measure::KG, 'pasta-category'),
+                new IngredientForFood(name: 'meat', category: 'meat-category', portion: 1.5, measure: Measure::KG),
+                new IngredientForFood(name: 'pasta', category: 'pasta-category', portion: 1.5, measure: Measure::KG),
             ],
             $food->ingredients()
         );
@@ -48,8 +48,8 @@ class FoodFactoryTest extends TestCase
         $food = $this->sut->createFood(
             foodName:    'Bolognai',
             ingredients: [
-                             new Ingredient('meat', 1, Measure::KG, 'meat-category'),
-                             new Ingredient('pasta', 1, Measure::KG, 'pasta-category'),
+                             new IngredientForFood(name: 'meat', category: 'meat-category', portion: 1, measure: Measure::KG),
+                             new IngredientForFood(name: 'pasta', category: 'pasta-category', portion: 1, measure: Measure::KG),
                          ]
         );
 
@@ -57,8 +57,8 @@ class FoodFactoryTest extends TestCase
         $this->assertEquals(4, $food->defaultPortion());
         $this->assertEquals(
             [
-                new Ingredient('meat', 1, Measure::KG, 'meat-category'),
-                new Ingredient('pasta', 1, Measure::KG, 'pasta-category'),
+                new IngredientForFood(name: 'meat', category: 'meat-category', portion: 1, measure: Measure::KG),
+                new IngredientForFood(name: 'pasta', category: 'pasta-category', portion: 1, measure: Measure::KG),
             ],
             $food->ingredients()
         );

@@ -6,6 +6,7 @@ namespace PeterPecosz\ShoppingPlanner\Ingredient\Factory;
 
 use PeterPecosz\ShoppingPlanner\Food\Exception\UnknownIngredientException;
 use PeterPecosz\ShoppingPlanner\Ingredient\Ingredient;
+use PeterPecosz\ShoppingPlanner\Ingredient\IngredientForFood;
 use PeterPecosz\ShoppingPlanner\Mertekegyseg\Measure;
 use Symfony\Component\Yaml\Yaml;
 
@@ -28,7 +29,7 @@ readonly class IngredientFactory
     /**
      * @param array<string, mixed> $ingredient
      */
-    public function forFood(string $foodName, array $ingredient): Ingredient
+    public function forFood(string $foodName, array $ingredient): IngredientForFood
     {
         $ingredientName = $ingredient['name'];
 
@@ -56,14 +57,16 @@ readonly class IngredientFactory
     /**
      * @throws UnknownIngredientException
      */
-    public function createForFood(
+    private function createForFood(
         string $ingredientName,
         float $portion,
         Measure $measure,
         string $foodName,
-    ): Ingredient {
+    ): IngredientForFood {
         try {
-            return $this->create($ingredientName, $portion, $measure);
+            $ingredient = $this->create($ingredientName);
+
+            return new IngredientForFood($ingredient->name(), $ingredient->category(), $portion, $measure, $ingredient->measurePreference());
         } catch (UnknownIngredientException $unknownIngredientException) {
             throw new UnknownIngredientException(sprintf('%s for food: "%s"', $unknownIngredientException->getMessage(), $foodName));
         }
@@ -72,7 +75,20 @@ readonly class IngredientFactory
     /**
      * @throws UnknownIngredientException
      */
-    public function create(string $ingredientName, float $portion, Measure $measure): Ingredient
+    public function createWithPortion(
+        string $ingredientName,
+        float $portion,
+        Measure $measure
+    ): Ingredient {
+        $ingredient = $this->create($ingredientName);
+
+        return new IngredientForFood($ingredient->name(), $ingredient->category(), $portion, $measure, $ingredient->measurePreference());
+    }
+
+    /**
+     * @throws UnknownIngredientException
+     */
+    public function create(string $ingredientName): Ingredient
     {
         $ingredient = $this->ingredients[$ingredientName] ?? null;
 
@@ -139,8 +155,6 @@ readonly class IngredientFactory
 
         return new Ingredient(
             $ingredientName,
-            $portion,
-            $measure,
             $category,
             $ingredientMeasurePreference ?? null
         );

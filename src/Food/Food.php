@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace PeterPecosz\ShoppingPlanner\Food;
 
-use PeterPecosz\ShoppingPlanner\Ingredient\Ingredient;
+use PeterPecosz\ShoppingPlanner\Ingredient\IngredientForFood;
 
 class Food
 {
@@ -18,15 +18,15 @@ class Food
 
     private ?string $thumbnailUrl;
 
-    /** @var Ingredient[] */
+    /** @var IngredientForFood[] */
     private array $ingredients;
 
     /** @var string[]|null */
     private ?array $comments;
 
     /**
-     * @param string[]|null     $comments
-     * @param Ingredient[]|null $ingredients
+     * @param string[]|null            $comments
+     * @param IngredientForFood[]|null $ingredients
      */
     public function __construct(
         string $name,
@@ -89,7 +89,7 @@ class Food
     }
 
     /**
-     * @return Ingredient[]
+     * @return IngredientForFood[]
      */
     public function ingredients(): array
     {
@@ -121,7 +121,7 @@ class Food
     }
 
     /**
-     * @param Ingredient[] $ingredients
+     * @param IngredientForFood[] $ingredients
      */
     private function addIngredients(array $ingredients): void
     {

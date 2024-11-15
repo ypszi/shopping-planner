@@ -18,14 +18,19 @@
                                 role="switch"
                                 id="{{ availableIngredientNameKey }}"
                                 value="{{ availableIngredientName }}"
-                                name="food-{{ availableIngredientNameKey }}"
+                                name="ingredient-{{ availableIngredientNameKey }}"
                                 class="form-check-input"
-                                onchange="this.checked
-                                        ? document.getElementById('portion-{{ availableIngredientNameKey }}').disabled = ''
-                                        : document.getElementById('portion-{{ availableIngredientNameKey }}').disabled = 'disabled'"
+                                onchange="if (this.checked) {
+                                        document.getElementById('portion-{{ availableIngredientNameKey }}').disabled = '';
+                                        document.getElementById('measure-{{ availableIngredientNameKey }}').disabled = ''
+                                        } else {
+                                        document.getElementById('portion-{{ availableIngredientNameKey }}').disabled = 'disabled';
+                                        document.getElementById('measure-{{ availableIngredientNameKey }}').disabled = 'disabled';
+                                        }"
+                                {% if availableIngredient.portion != 0 %}checked="checked"{% endif %}
                         >
                         <label for="{{ availableIngredientNameKey }}" class="form-check-label">{{ availableIngredientName }}</label>
-                        <output id="portion-output-{{ availableIngredientNameKey }}">({{ availableIngredient.portion }} {{ availableIngredient.measure.value }})</output>
+                        <output id="portion-output-{{ availableIngredientNameKey }}">({{ availableIngredient.ingredientPortion }})</output>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -39,8 +44,15 @@
                                 min="0"
                                 max="1000"
                                 step="10"
-                                oninput="document.getElementById('portion-output-{{ availableIngredientNameKey }}').value = '(' + this.value + ' {{ availableIngredient.measure.value }})'"
-                                disabled="disabled"
+                                oninput="document.getElementById('portion-output-{{ availableIngredientNameKey }}').value = '(' + (Math.round(this.value * 100) / 100) + ' {{ availableIngredient.measurePreference.value }})'"
+                                {% if availableIngredient.portion == 0 %}disabled="disabled"{% endif %}
+                        >
+                        <input
+                                type="hidden"
+                                id="measure-{{ availableIngredientNameKey }}"
+                                value="{{ availableIngredient.measurePreference.value }}"
+                                name="measure-{{ availableIngredientNameKey }}"
+                                {% if availableIngredient.portion == 0 %}disabled="disabled"{% endif %}
                         >
                     </div>
                 </div>
@@ -52,7 +64,7 @@
                 <button
                         class="btn btn-warning col-3 text-center"
                         type="button"
-                        onclick="location.href=window.location.origin">
+                        onclick="window.location.href=window.location.origin">
                     HOME
                 </button>
                 <div class="col-1"></div>

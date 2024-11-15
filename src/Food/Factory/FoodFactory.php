@@ -6,7 +6,7 @@ namespace PeterPecosz\ShoppingPlanner\Food\Factory;
 
 use PeterPecosz\ShoppingPlanner\Food\Exception\UnknownFoodException;
 use PeterPecosz\ShoppingPlanner\Food\Food;
-use PeterPecosz\ShoppingPlanner\Ingredient\Ingredient;
+use PeterPecosz\ShoppingPlanner\Ingredient\IngredientForFood;
 use Symfony\Component\Yaml\Yaml;
 
 readonly class FoodFactory
@@ -20,7 +20,7 @@ readonly class FoodFactory
     }
 
     /**
-     * @param Ingredient[] $ingredients
+     * @param IngredientForFood[] $ingredients
      */
     public function createFood(string $foodName, array $ingredients, ?int $portion = null): Food
     {

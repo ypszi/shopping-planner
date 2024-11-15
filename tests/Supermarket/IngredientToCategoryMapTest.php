@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace PeterPecosz\ShoppingPlanner\Tests\Supermarket;
 
-use PeterPecosz\ShoppingPlanner\Ingredient\Ingredient;
+use PeterPecosz\ShoppingPlanner\Ingredient\IngredientForFood;
 use PeterPecosz\ShoppingPlanner\Mertekegyseg\Measure;
 use PeterPecosz\ShoppingPlanner\Supermarket\IngredientToCategoryMap;
 use PHPUnit\Framework\Attributes\Test;
@@ -26,12 +26,12 @@ class IngredientToCategoryMapTest extends TestCase
     #[Test]
     public function testMap(): void
     {
-        $this->assertEquals('Felvágott', $this->sut->map(new Ingredient('Trappista sajt', 1, Measure::G, 'Sajt')));
+        $this->assertEquals('Felvágott', $this->sut->map(new IngredientForFood(name: 'Trappista sajt', category: 'Sajt', portion: 1, measure: Measure::G)));
     }
 
     #[Test]
     public function testMapWhenHozzavaloNotFoundInMap(): void
     {
-        $this->assertEquals('Sajt', $this->sut->map(new Ingredient('Feta sajt', 1, Measure::G, 'Sajt')));
+        $this->assertEquals('Sajt', $this->sut->map(new IngredientForFood(name: 'Feta sajt', category: 'Sajt', portion: 1, measure: Measure::G)));
     }
 }
