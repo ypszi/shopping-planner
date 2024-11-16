@@ -6,11 +6,11 @@
     <form action="/storage/ingredients" method="post" class="row">
         <fieldset class="row mb-2">
             <legend class="col-form-label col-md-12 pt-0">
-                <span class="display-6">Lássuk mi van otthon...</span>
+                <h1 id="top" class="display-6">Lássuk mi van otthon...</h1>
             </legend>
             {% for ingredientCategory, availableIngredients in ingredientStorage %}
                 <legend class="col-form-label col-md-12 pt-0">
-                    <span class="fs-5">{{ ingredientCategory }}</span>
+                    <h1 id="{{ ingredientCategory }}" class="mt-2 fs-5">{{ ingredientCategory }}</h1>
                 </legend>
 
                 {% for availableIngredient in availableIngredients %}
@@ -73,6 +73,14 @@
                         onclick="window.location.href=window.location.origin">
                     HOME
                 </button>
+                <div class="col-1"></div>
+                <div class="col-3">
+                    <a
+                            class="btn btn-info text-center"
+                            href="#top">
+                        TO THE TOP
+                    </a>
+                </div>
                 <div class="col-1"></div>
                 <button
                         class="btn btn-primary col-3 text-center"
