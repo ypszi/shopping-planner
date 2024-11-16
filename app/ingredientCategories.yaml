@@ -66,8 +66,8 @@ Sütés / Sütemény:
 Tartós élelmiszer:
   mertekegysegPreference: g
   storage:
-    max: 3000
-    step: 100
+    max: 2000
+    step: 50
 Tartós tejtermék:
   mertekegysegPreference: ml
   storage:
