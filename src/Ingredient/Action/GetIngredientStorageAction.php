@@ -14,6 +14,7 @@ readonly class GetIngredientStorageAction
 {
     public function __construct(
         private IngredientStorageService $ingredientStorageService,
+        private IngredientMeasureMap $ingredientMeasureMap,
         private Environment $twig
     ) {
     }
@@ -24,8 +25,9 @@ readonly class GetIngredientStorageAction
 
         $response->getBody()->write(
             $this->twig->render('ingredients.html.twig', [
-                'ingredientStorage'    => $ingredientStorage,
-                'ingredientMeasureMap' => new IngredientMeasureMap(),
+                'ingredientStorage'              => $ingredientStorage,
+                'ingredientMeasureMapByName'     => $this->ingredientMeasureMap->mapByName(),
+                'ingredientMeasureMapByCategory' => $this->ingredientMeasureMap->mapByCategory(),
             ])
         );
 

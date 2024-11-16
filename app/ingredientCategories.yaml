@@ -1,36 +1,90 @@
 Bor:
   mertekegysegPreference: l
+  storage:
+    max: 5
+    step: 1
 Ecet:
-  mertekegysegPreference: l
+  mertekegysegPreference: ml
+  storage:
+    max: 500
+    step: 10
 Felvágott:
   mertekegysegPreference: dkg
+  storage:
+    max: 50
+    step: 5
 Fűszer:
   mertekegysegPreference: g
+  storage:
+    max: 200
+    step: 5
 Hal:
   mertekegysegPreference: g
+  storage:
+    max: 500
+    step: 50
 Hús:
   mertekegysegPreference: kg
+  storage:
+    max: 3
+    step: 0.1
 Konzerv:
   mertekegysegPreference: g
+  storage:
+    max: 1000
+    step: 50
 Mirelit:
   mertekegysegPreference: g
+  storage:
+    max: 3000
+    step: 100
 Nemzetközi:
   mertekegysegPreference: ml
+  storage:
+    max: 500
+    step: 50
 Olaj:
   mertekegysegPreference: l
+  storage:
+    max: 5
+    step: 1
 Pékárú:
   mertekegysegPreference: kg
+  storage:
+    max: 3
+    step: 0.1
 Sajt:
   mertekegysegPreference: g
+  storage:
+    max: 1000
+    step: 50
 Sütés / Sütemény:
   mertekegysegPreference: g
+  storage:
+    max: 500
+    step: 10
 Tartós élelmiszer:
   mertekegysegPreference: g
+  storage:
+    max: 3000
+    step: 100
 Tartós tejtermék:
   mertekegysegPreference: ml
+  storage:
+    max: 1000
+    step: 100
 Tejtermék:
   mertekegysegPreference: g
+  storage:
+    max: 500
+    step: 10
 Üditő:
   mertekegysegPreference: l
+  storage:
+    max: 5
+    step: 1
 Zöldség / Gyümölcs:
   mertekegysegPreference: db
+  storage:
+    max: 10
+    step: 1

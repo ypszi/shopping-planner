@@ -4,70 +4,70 @@ declare(strict_types=1);
 
 namespace PeterPecosz\ShoppingPlanner\Ingredient;
 
-use PeterPecosz\ShoppingPlanner\Mertekegyseg\Measure;
+use Symfony\Component\Yaml\Yaml;
 
 final class IngredientMeasureMap
 {
-    /** @var array<string, array{max: int, step: int}> */
-    public array $map;
+    private const DEFAULT_MAX = 100;
+    private const DEFAULT_STEP = 10;
 
-    public function __construct()
-    {
-        foreach (Measure::cases() as $measure) {
-            $this->map[$measure->value] = match ($measure) {
-                Measure::DB => [
-                    'max'  => 30,
-                    'step' => 1,
-                ],
-                Measure::GEREZD => [
-                    'max'  => 50,
-                    'step' => 5,
-                ],
-                Measure::KONZERV,
-                Measure::CSOMAG => [
-                    'max'  => 5,
-                    'step' => 1,
-                ],
-                Measure::DKG => [
-                    'max'  => 50,
-                    'step' => 5,
-                ],
-                Measure::KG => [
-                    'max'  => 5,
-                    'step' => 1,
-                ],
-                Measure::G,
-                Measure::ML => [
-                    'max'  => 10000,
-                    'step' => 100,
-                ],
-                Measure::CL => [
-                    'max'  => 1000,
-                    'step' => 10,
-                ],
-                Measure::DL => [
-                    'max'  => 100,
-                    'step' => 1,
-                ],
-                Measure::L => [
-                    'max'  => 10,
-                    'step' => 1,
-                ],
-                Measure::CSESZE,
-                Measure::BOGRE,
-                Measure::MK,
-                Measure::KK,
-                Measure::TK,
-                Measure::KVK,
-                Measure::EK => [
-                    'max'  => 50,
-                    'step' => 1,
-                ],
-                default => [
-                    'max'  => 20,
-                    'step' => 1,
-                ],
-            };
+    /** @var array<string, array{max: int, step: int}> */
+    private array $mapByName;
+
+    /** @var array<string, array{max: int, step: int}> */
+    private array $mapByCategory;
+
+    /** @var array<string, array<string, string>> */
+    private array $ingredients;
+
+    /** @var array<string, array<string, string>> */
+    private array $ingredientCategories;
+
+    public function __construct(
+        string $ingredientsPath,
+        string $ingredientCategoriesPath
+    ) {
+        $this->ingredients          = Yaml::parseFile($ingredientsPath);
+        $this->ingredientCategories = Yaml::parseFile($ingredientCategoriesPath);
+
+        $this->mapByName = [];
+        foreach ($this->ingredients as $ingredientName => $ingredient) {
+            $storageSetup = $ingredient['storage'] ?? [];
+
+            if (empty($storageSetup)) {
+                continue;
+            }
+
+            $this->mapByName[$ingredientName] = [
+                'max'  => $storageSetup['max'] ?? self::DEFAULT_MAX,
+                'step' => $storageSetup['step'] ?? self::DEFAULT_STEP,
+            ];
         }
+
+        $this->mapByCategory = [];
+        foreach ($this->ingredientCategories as $ingredientCategoryName => $ingredientCategory) {
+            $storageSetup = $ingredientCategory['storage'] ?? [];
+
+            $this->mapByCategory[$ingredientCategoryName] = [
+                'max'  => $storageSetup['max'] ?? self::DEFAULT_MAX,
+                'step' => $storageSetup['step'] ?? self::DEFAULT_STEP,
+            ];
+        }
+    }
+
+    /**
+     * @return array<string, array{max: int, step: int}>
+     */
+    public function mapByName(): array
+    {
+        return $this->mapByName;
+    }
+
+    /**
+     * @return array<string, array{max: int, step: int}>
+     */
+    public function mapByCategory(): array
+    {
+        return $this->mapByCategory;
     }
 }

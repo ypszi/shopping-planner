@@ -47,8 +47,8 @@
                                     name="portion-{{ availableIngredientNameKey }}"
                                     class="form-range"
                                     min="0"
-                                    max="{{ ingredientMeasureMap[availableIngredient.name].max }}"
-                                    step="{{ ingredientMeasureMap[availableIngredient.name].step }}"
+                                    max="{{ ingredientMeasureMapByName[availableIngredient.name].max ?? ingredientMeasureMapByCategory[ingredientCategory].max }}"
+                                    step="{{ ingredientMeasureMapByName[availableIngredient.name].step ?? ingredientMeasureMapByCategory[ingredientCategory].step }}"
                                     oninput="document.getElementById('portion-output-{{ availableIngredientNameKey }}').value = '(' + (Math.round(this.value * 100) / 100) + ' {{ availableIngredient.measurePreference.value }})'"
                                     {% if availableIngredient.portion == 0 %}disabled="disabled"{% endif %}
                             >

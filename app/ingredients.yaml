@@ -94,6 +94,9 @@ Rozmaring:
   kategoria: Fűszer
 Só:
   kategoria: Fűszer
+  storage:
+    max: 2000
+    step: 100
 Szódabikarbóna:
   kategoria: Fűszer
 Szerecsendió:
@@ -190,8 +193,13 @@ Barna cukor:
 Cukor:
   kategoria: Sütés / Sütemény
   mertekegysegPreference: kg
+Élesztő:
+  kategoria: Sütés / Sütemény
 Finomliszt:
   kategoria: Sütés / Sütemény
+  storage:
+    max: 3000
+    step: 100
 Háztartási keksz (darált):
   kategoria: Sütés / Sütemény
 Kakaópor:
@@ -202,6 +210,8 @@ Lekvár:
   kategoria: Sütés / Sütemény
 Liszt: Finomliszt
 Porcukor:
+  kategoria: Sütés / Sütemény
+Sütőpor:
   kategoria: Sütés / Sütemény
 Vaníliás cukor:
   kategoria: Sütés / Sütemény
@@ -215,9 +225,6 @@ Búzadara:
   kategoria: Tartós élelmiszer
 Csusza tészta:
   kategoria: Tartós élelmiszer
-Élesztő:
-  kategoria: Tartós élelmiszer
-  mertekegysegPreference: kg
 Fusilli tészta:
   kategoria: Tartós élelmiszer
 Keményítő:
@@ -239,8 +246,6 @@ Rizottó rizs:
 Rizs:
   kategoria: Tartós élelmiszer
 Spagetti tészta:
-  kategoria: Tartós élelmiszer
-Sütőpor:
   kategoria: Tartós élelmiszer
 Szezámmag:
   kategoria: Tartós élelmiszer
@@ -311,6 +316,9 @@ Brokkoli:
 Burgonya:
   kategoria: Zöldség / Gyümölcs
   mertekegysegPreference: dkg
+  storage:
+    max: 200
+    step: 5
 Citrom:
   kategoria: Zöldség / Gyümölcs
 Csemegehagyma:
