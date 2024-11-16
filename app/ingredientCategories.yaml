@@ -16,8 +16,8 @@ Felvágott:
 Fűszer:
   mertekegysegPreference: g
   storage:
-    max: 200
-    step: 5
+    max: 100
+    step: 1
 Hal:
   mertekegysegPreference: g
   storage:

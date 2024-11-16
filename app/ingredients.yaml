@@ -49,6 +49,10 @@ Curry:
   kategoria: Fűszer
 Erőleves kocka:
   kategoria: Fűszer
+  mertekegysegPreference: db
+  storage:
+    max: 15
+    step: 1
 Fahéj:
   kategoria: Fűszer
 Fehér bors:
@@ -66,22 +70,38 @@ Gyömbér por:
   kategoria: Fűszer
 Húsleves kocka:
   kategoria: Fűszer
+  mertekegysegPreference: db
+  storage:
+    max: 15
+    step: 1
 Kakukkfű:
   kategoria: Fűszer
 Ketchup:
   kategoria: Fűszer
+  storage:
+    max: 500
+    step: 50
 Köménymag:
   kategoria: Fűszer
 Kurkuma:
   kategoria: Fűszer
 Majonéz:
   kategoria: Fűszer
+  storage:
+    max: 300
+    step: 50
 Majoranna:
   kategoria: Fűszer
 Mogyoró:
   kategoria: Fűszer
+  storage:
+    max: 300
+    step: 50
 Mustár:
   kategoria: Fűszer
+  storage:
+    max: 300
+    step: 50
 Oregánó:
   kategoria: Fűszer
 Petrezselyem:
@@ -203,6 +223,9 @@ Cukor:
   mertekegysegPreference: kg
 Élesztő:
   kategoria: Sütés / Sütemény
+  storage:
+    max: 100
+    step: 5
 Finomliszt:
   kategoria: Sütés / Sütemény
   storage:
@@ -221,8 +244,14 @@ Porcukor:
   kategoria: Sütés / Sütemény
 Sütőpor:
   kategoria: Sütés / Sütemény
+  storage:
+    max: 100
+    step: 5
 Vaníliás cukor:
   kategoria: Sütés / Sütemény
+  storage:
+    max: 100
+    step: 5
 
 # Tartós élelmiszer
 Baracklekvár:
