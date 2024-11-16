@@ -36,10 +36,11 @@ readonly class IngredientStorageService
         $storage = [];
 
         foreach ($availableIngredients as $availableIngredient) {
-            $ingredientForFood = $ingredientForFoods[$availableIngredient->name()] ?? null;
+            $ingredientName    = $availableIngredient->name();
+            $ingredientForFood = $ingredientForFoods[$ingredientName] ?? null;
 
-            $storage[$availableIngredient->category()][] = new IngredientForFood(
-                name:              $availableIngredient->name(),
+            $storage[$availableIngredient->category()][$ingredientName] = new IngredientForFood(
+                name:              $ingredientName,
                 category:          $availableIngredient->category(),
                 portion:           $ingredientForFood?->portion() ?? 0,
                 measure:           $ingredientForFood?->measure(),
@@ -47,7 +48,7 @@ readonly class IngredientStorageService
             );
         }
 
-        return $storage;
+        return array_map('array_values', $storage);
     }
 
     /**
