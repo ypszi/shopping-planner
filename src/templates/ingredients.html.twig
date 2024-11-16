@@ -4,6 +4,13 @@
 <body>
 <div class="container-fluid">
     <h1 id="top" class="display-6">Lássuk mi van otthon...</h1>
+    <ul>
+        {% for ingredientCategory, availableIngredients in ingredientStorage %}
+            <li>
+                <a href="#{{ ingredientCategory|url_encode }}">{{ ingredientCategory }}</a>
+            </li>
+        {% endfor %}
+    </ul>
     <form action="/storage/ingredients" method="post">
         {% for ingredientCategory, availableIngredients in ingredientStorage %}
             <h1 id="{{ ingredientCategory|url_encode }}" class="mt-2 fs-3">
