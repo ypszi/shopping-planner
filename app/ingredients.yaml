@@ -282,6 +282,9 @@ Habtejszín:
 Tej:
   kategoria: Tartós tejtermék
   mertekegysegPreference: l
+  storage:
+    max: 10
+    step: 1
 Tejszín: Főzőtejszín
 
 # Tejtermék
@@ -293,10 +296,12 @@ Natúr joghurt:
   kategoria: Tejtermék
 Tejföl:
   kategoria: Tejtermék
-Tejtermek:
-  kategoria: Tejtermék
 Tojás:
   kategoria: Tejtermék
+  mertekegysegPreference: db
+  storage:
+    max: 40
+    step: 1
 Túró:
   kategoria: Tejtermék
 Vaj:
