@@ -1329,6 +1329,17 @@ Paradicsomos tészta:
     - name: Fusilli tészta
       mennyiseg: 40 dkg
 
+Pestos tészta:
+  defaultPortion: 4
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/j3/sc/petrezselyem-pestos-fusilli.jpeg?w=1200&fit=crop&s=05dec19e7137d45e8f2cd859cc3cd11e
+  ingredients:
+    - name: Pesto
+      mennyiseg: 4 tk
+    - name: Parmezán sajt
+      mennyiseg: 20 g
+    - name: Fusilli tészta
+      mennyiseg: 40 dkg
+
 Pizza:
   defaultPortion: 2
   receptUrl: https://www.nosalty.hu/recept/pizzateszta-jamie-oliver-tol
