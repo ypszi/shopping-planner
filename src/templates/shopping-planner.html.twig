@@ -3,11 +3,9 @@
 {% include 'head.html.twig' %}
 <body>
 <div class="container-fluid">
+    <h1 class="display-6">Hova mész bevásárolni?</h1>
     <form action="planned" method="get" class="row">
         <fieldset class="row mb-2">
-            <legend class="col-form-label col-md-12 pt-0">
-                <span class="display-6">Hova mész bevásárolni?</span>
-            </legend>
             {% for availableSupermarket in availableSupermarkets %}
                 {% set availableSupermarketKey = availableSupermarket|replace({' ': '_'}) %}
                 <div class="col-md-12">
@@ -28,15 +26,13 @@
             {% endfor %}
         </fieldset>
 
-        <fieldset class="row mb-2">
-            <legend class="col-form-label col-md-12 pt-0">
-                <span class="display-6">Melyik kajákhoz kell bevásárolni?</span>
-            </legend>
-            {% for availableFood in availableFoods %}
-                {% set availableFoodName = availableFood.name %}
-                {% set availableFoodNameKey = availableFoodName|replace({' ': '_'}) %}
-                {% set isAvailableFoodSelected = selectedFoods[availableFoodName] is defined %}
-                {% set portion = isAvailableFoodSelected ? selectedFoods[availableFoodName] : availableFood.defaultPortion %}
+        <h1 class="display-6">Melyik kajákhoz kell bevásárolni?</h1>
+        {% for availableFood in availableFoods %}
+            {% set availableFoodName = availableFood.name %}
+            {% set availableFoodNameKey = availableFoodName|replace({' ': '_'}) %}
+            {% set isAvailableFoodSelected = selectedFoods[availableFoodName] is defined %}
+            {% set portion = isAvailableFoodSelected ? selectedFoods[availableFoodName] : availableFood.defaultPortion %}
+            <fieldset class="row mb-2">
                 <div class="col-md-8">
                     <div class="form-check form-switch">
                         <input
@@ -71,8 +67,8 @@
                         >
                     </div>
                 </div>
-            {% endfor %}
-        </fieldset>
+            </fieldset>
+        {% endfor %}
 
         <div class="sticky-bottom">
             <div class="row justify-content-center sticky-bottom-btn-row">

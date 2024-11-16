@@ -22,12 +22,12 @@
 <body onload="ingredientsViewInit()">
 <div class="container-fluid">
     <div id="bevasarlokozpont">
-        <h3 class="text-success">Bevásárlóközpont:</h3>
+        <h1 class="display-6 text-success">Bevásárlóközpont:</h1>
         <p>{{ supermarket.name }}</p>
     </div>
 
     <div id="foods" class="table-responsive">
-        <h3 class="text-success">Ételek ({{ foods.toArray|length }} db):</h3>
+        <h1 class="display-6 text-success">Ételek ({{ foods.toArray|length }} db):</h1>
         <table class="table table-bordered">
             <thead class="bg-light-orange">
                 <tr>

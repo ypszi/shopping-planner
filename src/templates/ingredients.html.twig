@@ -3,19 +3,18 @@
 {% include 'head.html.twig' %}
 <body>
 <div class="container-fluid">
-    <form action="/storage/ingredients" method="post" class="row">
-        <fieldset class="row mb-2">
-            <legend class="col-form-label col-md-12 pt-0">
-                <h1 id="top" class="display-6">Lássuk mi van otthon...</h1>
-            </legend>
-            {% for ingredientCategory, availableIngredients in ingredientStorage %}
-                <legend class="col-form-label col-md-12 pt-0">
-                    <h1 id="{{ ingredientCategory }}" class="mt-2 fs-5">{{ ingredientCategory }}</h1>
-                </legend>
+    <h1 id="top" class="display-6">Lássuk mi van otthon...</h1>
+    <form action="/storage/ingredients" method="post">
+        {% for ingredientCategory, availableIngredients in ingredientStorage %}
+            <h1 id="{{ ingredientCategory|url_encode }}" class="mt-2 fs-3">
+                {{ ingredientCategory }}
+                <a class="anchor-link" href="#{{ ingredientCategory|url_encode }}"></a>
+            </h1>
 
-                {% for availableIngredient in availableIngredients %}
-                    {% set availableIngredientName = availableIngredient.name %}
-                    {% set availableIngredientNameKey = availableIngredientName|replace({' ': '_'}) %}
+            {% for availableIngredient in availableIngredients %}
+                {% set availableIngredientName = availableIngredient.name %}
+                {% set availableIngredientNameKey = availableIngredientName|replace({' ': '_'}) %}
+                <fieldset class="row mb-2">
                     <div class="col-md-8">
                         <div class="form-check form-switch">
                             <input
@@ -61,9 +60,9 @@
                             >
                         </div>
                     </div>
-                {% endfor %}
+                </fieldset>
             {% endfor %}
-        </fieldset>
+        {% endfor %}
 
         <div class="sticky-bottom">
             <div class="row justify-content-center sticky-bottom-btn-row">
@@ -74,13 +73,11 @@
                     HOME
                 </button>
                 <div class="col-1"></div>
-                <div class="col-3">
-                    <a
-                            class="btn btn-info text-center"
-                            href="#top">
-                        TO THE TOP
-                    </a>
-                </div>
+                <a
+                        class="btn btn-info col-3 text-center"
+                        href="#top">
+                    TO THE TOP
+                </a>
                 <div class="col-1"></div>
                 <button
                         class="btn btn-primary col-3 text-center"
