@@ -48,6 +48,9 @@
                                 {% if isAvailableFoodSelected %}checked="checked"{% endif %}
                         >
                         <label for="{{ availableFoodNameKey }}" class="form-check-label">{{ availableFoodName }}</label>
+                        {% for tag in availableFood.tags %}
+                            <span class="badge text-bg-info">{{ tag }}</span>
+                        {% endfor %}
                         <output id="portion-output-{{ availableFoodNameKey }}">({{ portion }} Adag)</output>
                     </div>
                 </div>
@@ -72,7 +75,7 @@
 
         <div class="sticky-bottom">
             <div class="row justify-content-center sticky-bottom-btn-row">
-                <a href="/" class="btn btn-warning col-3 text-center" >HOME</a>
+                <a href="/" class="btn btn-warning col-3 text-center">HOME</a>
                 <div class="col-1"></div>
                 <a href="{{ ingredientStorageUrl }}" class="btn btn-info col-3 text-center">STORAGE</a>
                 <div class="col-1"></div>

@@ -1919,6 +1919,11 @@ Tonhalas bulgur saláta:
   defaultPortion: 4
   receptUrl: https://streetkitchen.hu/salata/tonhalas-tabule/
   thumbnailUrl: https://static.streetkitchen.hu/live/uploads/2019/01/tonhalas-tabouleh-kozepes-2.jpg
+  tags:
+    - új
+    - köret
+    - saláta
+    - vacsora
   ingredients:
     - ref: Tonhalas tabulé
 
@@ -1926,6 +1931,11 @@ Tonhalas tabulé:
   defaultPortion: 4
   receptUrl: https://streetkitchen.hu/salata/tonhalas-tabule/
   thumbnailUrl: https://static.streetkitchen.hu/live/uploads/2019/01/tonhalas-tabouleh-kozepes-2.jpg
+  tags:
+    - új
+    - köret
+    - saláta
+    - vacsora
   ingredients:
     - name: Kígyóuborka
       mennyiseg: 2 db

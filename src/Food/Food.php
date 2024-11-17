@@ -24,6 +24,9 @@ class Food
     /** @var string[]|null */
     private ?array $comments;
 
+    /** @var string[]|null */
+    private ?array $tags;
+
     /**
      * @param string[]|null            $comments
      * @param IngredientForFood[]|null $ingredients
@@ -34,6 +37,7 @@ class Food
         ?int $portion = null,
         ?string $recipeUrl = null,
         ?string $thumbnailUrl = null,
+        ?array $tags = [],
         ?array $comments = [],
         ?array $ingredients = null
     ) {
@@ -42,6 +46,7 @@ class Food
         $this->defaultPortion = $defaultPortion;
         $this->recipeUrl      = $recipeUrl;
         $this->thumbnailUrl   = $thumbnailUrl;
+        $this->tags           = $tags;
         $this->comments       = $comments;
 
         $this->addIngredients($ingredients);
@@ -94,6 +99,11 @@ class Food
     public function ingredients(): array
     {
         return $this->ingredients;
+    }
+
+    public function tags(): ?array
+    {
+        return $this->tags;
     }
 
     public function comments(): array
