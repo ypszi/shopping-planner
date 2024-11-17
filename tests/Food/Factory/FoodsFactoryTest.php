@@ -81,7 +81,7 @@ class FoodsFactoryTest extends TestCase
                     ],
                     [
                         $expectedFoodName,
-                        ['name' => 'Olíva olaj', 'mennyiseg' => '2 ek'],
+                        ['name' => 'Olívaolaj', 'mennyiseg' => '2 ek'],
                     ],
                     [
                         $expectedFoodName,
@@ -149,7 +149,7 @@ class FoodsFactoryTest extends TestCase
                     ],
                     [
                         $expectedRefFoodName,
-                        ['name' => 'Olíva olaj', 'mennyiseg' => '2 ek'],
+                        ['name' => 'Olívaolaj', 'mennyiseg' => '2 ek'],
                     ],
                     [
                         $expectedRefFoodName,

@@ -22,7 +22,7 @@ Alpesi Sajtos Tészta (Älplermagronen):
       mennyiseg: 1 csipet
     - name: Vöröshagyma
       mennyiseg: 2 db
-    - name: Olíva olaj
+    - name: Olívaolaj
       mennyiseg: 2 ek
     - name: Petrezselyem
       mennyiseg: 1 ek
@@ -70,7 +70,7 @@ Baconbe göngyölt mozzarellás csirkemell:
       mennyiseg: 1 tk
     - name: Bazsalikom
       mennyiseg: 1 tk
-    - name: Olíva olaj
+    - name: Olívaolaj
       mennyiseg: 3 ek
 
 Bögrés süti:
@@ -100,7 +100,7 @@ Bolognai:
   receptUrl: https://streetkitchen.hu/tesztapolc/ime-tokeletes-bolognai-spagetti/
   thumbnailUrl: https://i.ytimg.com/vi/sxEblqK71W8/maxresdefault.jpg
   ingredients:
-    - name: Olíva olaj
+    - name: Olívaolaj
       mennyiseg: 3 ek
     - name: Vöröshagyma
       mennyiseg: 1 db
@@ -152,7 +152,7 @@ Bulgur:
       mennyiseg: 2 db
     - name: Paprika
       mennyiseg: 1 db
-    - name: Olíva olaj
+    - name: Olívaolaj
       mennyiseg: 2 ek
     - name: Húsleves kocka
       mennyiseg: 1 db
@@ -180,7 +180,7 @@ Bundás csirke:
       mennyiseg: 1 tk
     - name: Cayenne bors
       mennyiseg: 0.5 tk
-    - name: Olíva olaj
+    - name: Olívaolaj
       mennyiseg: 2 ek
     - name: Finomliszt
       mennyiseg: 1 bögre
@@ -200,7 +200,7 @@ Carbonara:
   ingredients:
     - name: Kolozsvári szalonna
       mennyiseg: 150 g
-    - name: Olíva olaj
+    - name: Olívaolaj
       mennyiseg: 2 ek
     - name: Spagetti tészta
       mennyiseg: 250 g
@@ -282,7 +282,7 @@ Citromos joghurtos csirkemell görögsalátával:
       mennyiseg: 40 dkg
     - name: Lilahagyma
       mennyiseg: 1 db
-    - name: Olíva olaj
+    - name: Olívaolaj
       mennyiseg: 3 ek
     - name: Oregánó
       mennyiseg: 1 tk
@@ -402,7 +402,7 @@ Csirkés spárgás rizottó:
       mennyiseg: 2 db
     - name: Fokhagyma
       mennyiseg: 2 gerezd
-    - name: Olíva olaj
+    - name: Olívaolaj
       mennyiseg: 3 ek
     - name: Só
       mennyiseg: 1 tk
@@ -572,7 +572,7 @@ Fokhagymával és mézzel sült sárgarépa:
       mennyiseg: 6 gerezd
     - name: Méz
       mennyiseg: 3 ek
-    - name: Olíva olaj
+    - name: Olívaolaj
       mennyiseg: 3 ek
     - name: Só
       mennyiseg: 1 tk
@@ -628,7 +628,7 @@ Fűszeres csirkecsíkok:
       mennyiseg: 1 tk
     - name: Bors
       mennyiseg: 2 csipet
-    - name: Olíva olaj
+    - name: Olívaolaj
       mennyiseg: 2 ek
 
 Fűszeres csirkeszárnyak:
@@ -662,7 +662,7 @@ Fűszeres édesburgonya:
   ingredients:
     - name: Édesburgonya
       mennyiseg: 1 kg
-    - name: Olíva olaj
+    - name: Olívaolaj
       mennyiseg: 2 ek
     - name: Lilahagyma
       mennyiseg: 1 db
@@ -802,7 +802,7 @@ Görög saláta:
       mennyiseg: 4 db
     - name: Feta sajt
       mennyiseg: 125 g
-    - name: Olíva olaj
+    - name: Olívaolaj
       mennyiseg: 4 ek
     - name: Citrom
       mennyiseg: 1 db
@@ -1091,7 +1091,7 @@ Lazac brokkolival:
       mennyiseg: 1 csipet
     - name: Citrombors
       mennyiseg: 1 csipet
-    - name: Olíva olaj
+    - name: Olívaolaj
       mennyiseg: 2 ek
     - name: Vaj
       mennyiseg: 1 tk
@@ -1103,7 +1103,7 @@ Lazacos tagliatelle:
   receptUrl: https://www.nosalty.hu/recept/lazacos-tagliatelle
   thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/C2/MY/lazacos-tagliatelle.jpeg?w=1200&fit=crop&s=6841247d80bed94d938f76caa2de2381
   ingredients:
-    - name: Olíva olaj
+    - name: Olívaolaj
       mennyiseg: 0.5 dl
     - name: Lazac
       mennyiseg: 250 g
@@ -1158,7 +1158,7 @@ Mexikói avokádósaláta:
   ingredients:
     - name: Avokádó
       mennyiseg: 3 db
-    - name: Olíva olaj
+    - name: Olívaolaj
       mennyiseg: 40 ml
     - name: Lime
       mennyiseg: 1 db
@@ -1237,7 +1237,7 @@ Mézes-mustáros csirkemell:
       mennyiseg: 50 dkg
     - name: Liszt
       mennyiseg: 3 ek
-    - name: Olíva olaj
+    - name: Olívaolaj
       mennyiseg: 3 ek
     # 3 dl víz
     - name: Fokhagyma
@@ -1368,7 +1368,7 @@ Paprikás krumpli:
       mennyiseg: 1 db
     - name: Fokhagyma
       mennyiseg: 2 gerezd
-    - name: Olíva olaj
+    - name: Olívaolaj
       mennyiseg: 4 ek
     - name: Fűszer paprika
       mennyiseg: 2 tk
@@ -1382,7 +1382,7 @@ Paradicsomos tészta:
   receptUrl: https://www.mindmegette.hu/nagyon-kremes-paradicsomos-teszta-husmentesen.recept/
   thumbnailUrl: https://cdn.mindmegette.hu/2024/04/bwrGqPu16KlFvS3QnfMkxOunytvowleaUIGEHrKjfhk/fill/0/0/no/1/aHR0cHM6Ly9jbXNjZG4uYXBwLmNvbnRlbnQucHJpdmF0ZS9jb250ZW50LzYxMWM4ZjVjMzQwZTRmYWVhMTE3ZDAyODljNWUyNDYz.jpg
   ingredients:
-    - name: Olíva olaj
+    - name: Olívaolaj
       mennyiseg: 2 ek
     - name: Vöröshagyma
       mennyiseg: 1 db
@@ -1440,7 +1440,7 @@ Pizzatészta:
       mennyiseg: 0.5 ek
     - name: Cukor
       mennyiseg: 0.5 ek
-    - name: Olíva olaj
+    - name: Olívaolaj
       mennyiseg: 2 ek
     - name: Élesztő
       mennyiseg: 7 g
@@ -1586,7 +1586,7 @@ Serpenyős csirkemell:
   ingredients:
     - name: Csirkemell
       mennyiseg: 60 dkg
-    - name: Olíva olaj
+    - name: Olívaolaj
       mennyiseg: 4 ek
     - name: Fokhagyma
       mennyiseg: 2 gerezd
@@ -1606,7 +1606,7 @@ Sörös tepsis sertés:
   ingredients:
     - name: Vöröshagyma
       mennyiseg: 5 db
-    - name: Olíva olaj
+    - name: Olívaolaj
       mennyiseg: 50 ml
     - name: Sertés comb
       mennyiseg: 1 kg
@@ -1632,7 +1632,7 @@ Sütőtökkrémleves egyszerűen:
       mennyiseg: 1 kg
     - name: Húsleves kocka
       mennyiseg: 2 db
-    - name: Olíva olaj
+    - name: Olívaolaj
       mennyiseg: 2 ek
     - name: Vöröshagyma
       mennyiseg: 1 db
@@ -1681,7 +1681,7 @@ Sütőtökös muffin:
       mennyiseg: 250 g
     - name: Tojás
       mennyiseg: 2 db
-    - name: Olíva olaj
+    - name: Olívaolaj
       mennyiseg: 80 ml
     - name: Finomliszt
       mennyiseg: 150 g
@@ -1814,7 +1814,7 @@ Tejfölös-Füstölt Sajtos Csirkemell:
       mennyiseg: 25 dkg
     - name: Fokhagyma
       mennyiseg: 4 gerezd
-    - name: Olíva olaj
+    - name: Olívaolaj
       mennyiseg: 1 ek
     - name: Só
       mennyiseg: 1 tk
@@ -1844,7 +1844,7 @@ Tejfölös-sajtos csirkemell:
       mennyiseg: 0.5 mk
     - name: Petrezselyem
       mennyiseg: 1 tk
-    - name: Olíva olaj
+    - name: Olívaolaj
       mennyiseg: 5 ek
 
 Tepertőkrém:
@@ -1896,7 +1896,7 @@ Tepsis Csirke Zöldséggel:
       mennyiseg: 2 csipet
     - name: Piros paprika
       mennyiseg: 1 tk
-    - name: Olíva olaj
+    - name: Olívaolaj
       mennyiseg: 2 tk
     - name: Tejföl
       mennyiseg: 200 g
@@ -2061,7 +2061,7 @@ Tzatziki:
       mennyiseg: 0.3 gerezd
     - name: Fehérborecet
       mennyiseg: 3 tk
-    - name: Olíva olaj
+    - name: Olívaolaj
       mennyiseg: 2 tk
     - name: Só
       mennyiseg: 1 csipet
@@ -2092,7 +2092,7 @@ Vitaminsaláta madársalátával:
       mennyiseg: 2 csipet
     - name: Citrom
       mennyiseg: 1 db
-    - name: Olíva olaj
+    - name: Olívaolaj
       mennyiseg: 2 tk
   comments:
     - Pár csepp citromlé
