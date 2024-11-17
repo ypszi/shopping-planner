@@ -72,25 +72,11 @@
 
         <div class="sticky-bottom">
             <div class="row justify-content-center sticky-bottom-btn-row">
-                <button
-                        class="btn btn-warning col-3 text-center"
-                        type="button"
-                        onclick="window.location.href=window.location.origin">
-                    RESET
-                </button>
+                <a href="/" class="btn btn-warning col-3 text-center" >HOME</a>
                 <div class="col-1"></div>
-                <button
-                        class="btn btn-info col-3 text-center"
-                        type="button"
-                        onclick="window.location.href='{{ ingredientStorageUrl }}'">
-                    STORAGE
-                </button>
+                <a href="{{ ingredientStorageUrl }}" class="btn btn-info col-3 text-center">STORAGE</a>
                 <div class="col-1"></div>
-                <button
-                        class="btn btn-primary col-3 text-center"
-                        type="submit">
-                    PLAN
-                </button>
+                <button type="submit" class="btn btn-primary col-3 text-center">PLAN</button>
             </div>
         </div>
     </form>
