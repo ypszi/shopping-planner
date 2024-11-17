@@ -51,11 +51,11 @@ class IngredientFactoryTest extends TestCase
                         ]
         );
 
-        $this->assertEquals('Napraforgó olaj', $ingredient->name());
+        $this->assertEquals('Napraforgóolaj', $ingredient->name());
         $this->assertEquals(1, $ingredient->portion());
         $this->assertEquals('Olaj', $ingredient->category());
         $this->assertEquals(Measure::DL, $ingredient->measure());
         $this->assertEquals(Measure::L, $ingredient->measurePreference());
-        $this->assertEquals('1.00 dl Napraforgó olaj', (string)$ingredient);
+        $this->assertEquals('1.00 dl Napraforgóolaj', (string)$ingredient);
     }
 }

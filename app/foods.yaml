@@ -91,7 +91,7 @@ Bögrés süti:
       mennyiseg: 1 db
     - name: Tej
       mennyiseg: 3 ek
-    - name: Napraforgó olaj
+    - name: Napraforgóolaj
       # 3 ek helyett
       mennyiseg: 1 ek
 
@@ -168,7 +168,7 @@ Bundás csirke:
   ingredients:
     - name: Fokhagyma
       mennyiseg: 3 gerezd
-    - name: Napraforgó olaj
+    - name: Napraforgóolaj
       mennyiseg: 2 dl
     - name: Gyömbér por
       mennyiseg: 1.5 tk
@@ -224,7 +224,7 @@ Chilis bab:
   ingredients:
     - name: Vöröshagyma
       mennyiseg: 2 db
-    - name: Napraforgó olaj
+    - name: Napraforgóolaj
       mennyiseg: 3 ek
     - name: Fokhagyma
       mennyiseg: 4 gerezd
@@ -438,7 +438,7 @@ Csőröge Fánk:
       mennyiseg: 1 kk
     - name: Ecet
       mennyiseg: 1 csepp
-    - name: Napraforgó olaj
+    - name: Napraforgóolaj
       mennyiseg: 2 dl
   comments:
     - A vajat belemorzsoljuk a lisztbe.
@@ -638,7 +638,7 @@ Fűszeres csirkeszárnyak:
   ingredients:
     - name: Csirkeszárny
       mennyiseg: 1 kg
-    - name: Napraforgó olaj
+    - name: Napraforgóolaj
       mennyiseg: 0.5 dl
     - name: Fokhagyma
       mennyiseg: 3 gerezd
@@ -849,7 +849,7 @@ Hortobágyi Palacsinta:
       mennyiseg: 1 db
     - name: Fokhagyma
       mennyiseg: 1 gerezd
-    - name: Napraforgó olaj
+    - name: Napraforgóolaj
       mennyiseg: 1 ek
     - name: Darált hús
       mennyiseg: 50 dkg
@@ -893,7 +893,7 @@ Illatos omlós csirkemell:
       mennyiseg: 1 csipet
     - name: Keményítő
       mennyiseg: 5 ek
-    - name: Napraforgó olaj
+    - name: Napraforgóolaj
       mennyiseg: 4 dl
     # A mártáshoz
     - name: Ketchup
@@ -933,7 +933,7 @@ Karfiolsteak:
       mennyiseg: 1 tk
     - name: Fokhagymapor
       mennyiseg: 1 tk
-    - name: Napraforgó olaj
+    - name: Napraforgóolaj
       mennyiseg: 4 ek
     # A sajtszószhoz
     - name: Vaj
@@ -970,7 +970,7 @@ Kefíres csirke:
       mennyiseg: 1 tk
     - name: Fűszerkeverék
       mennyiseg: 1 ek
-    - name: Napraforgó olaj
+    - name: Napraforgóolaj
       mennyiseg: 4 dl
     - name: Liszt
       mennyiseg: 25 dkg
@@ -987,10 +987,10 @@ Kínai szezámmagos csirke:
   thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/nL/34/kinai-szezammagos-csirke.jpeg?w=1200&fit=crop&s=106ec7e8b0ccb1b8f53eea45a6c57452
   ingredients:
     # a bundához
-    - name: Napraforgó olaj
+    - name: Napraforgóolaj
       mennyiseg: 1 ek
     # a sütéshez
-    - name: Napraforgó olaj
+    - name: Napraforgóolaj
       mennyiseg: 3 dl
     # chili ízlés szerint
     - name: Chili
@@ -1017,7 +1017,7 @@ Krumpli főzelék fasírttal:
   receptUrl: https://www.nosalty.hu/recept/legegyszerubb-krumplifozelek
   thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/y5/Xs/legegyszerubb-krumplifozelek.jpeg?w=1200&fit=crop&s=08a10631834f0bcfd3056d37689d83a0
   ingredients:
-    - name: Napraforgó olaj
+    - name: Napraforgóolaj
       mennyiseg: 2 ek
     - name: Fűszer paprika
       mennyiseg: 1 tk
@@ -1071,7 +1071,7 @@ Lazac:
       mennyiseg: 2 csipet
     - name: Kakukkfű
       mennyiseg: 2 csipet
-    - name: Napraforgó olaj
+    - name: Napraforgóolaj
       mennyiseg: 2 ek
     - name: Vaj
       mennyiseg: 1 ek
@@ -1141,7 +1141,7 @@ Lecsó:
       mennyiseg: 2 db
     - name: Kolozsvári szalonna
       mennyiseg: 5 dkg
-    - name: Napraforgó olaj
+    - name: Napraforgóolaj
       mennyiseg: 2 ek
     - name: Piros paprika
       mennyiseg: 1 ek
@@ -1262,7 +1262,7 @@ Muffin:
       mennyiseg: 1 bögre
     - name: Tej
       mennyiseg: 250 ml
-    - name: Napraforgó olaj
+    - name: Napraforgóolaj
       mennyiseg: 125 ml
     - name: Tojás
       mennyiseg: 1 db
@@ -1290,7 +1290,7 @@ Olaszos csirke:
       mennyiseg: 2 csipet
     - name: Bors
       mennyiseg: 1 csipet
-    - name: Napraforgó olaj
+    - name: Napraforgóolaj
       mennyiseg: 1 ek
 
 Pad thai:
@@ -1314,7 +1314,7 @@ Pad thai:
       mennyiseg: 150 g
     - name: Szezám olaj
       mennyiseg: 2 ek
-    - name: Napraforgó olaj
+    - name: Napraforgóolaj
       mennyiseg: 5 ek
     - name: Tojás
       mennyiseg: 2 db
@@ -1350,7 +1350,7 @@ Palacsinta:
       mennyiseg: 2.5 dl
     - name: Szódavíz
       mennyiseg: 2.5 dl
-    - name: Napraforgó olaj
+    - name: Napraforgóolaj
       mennyiseg: 0.5 dl
 
 Paprikás krumpli:
@@ -1752,7 +1752,7 @@ Sütőben sült sajtos brokkolifasírt:
       mennyiseg: 1 mk
     - name: Bors
       mennyiseg: 1 csipet
-    - name: Napraforgó olaj
+    - name: Napraforgóolaj
       mennyiseg: 2 ek
 
 Tárkonyos csirkeraguleves:
@@ -1762,7 +1762,7 @@ Tárkonyos csirkeraguleves:
   ingredients:
     - name: Csirkemell
       mennyiseg: 1 db
-    - name: Napraforgó olaj
+    - name: Napraforgóolaj
       mennyiseg: 3 ek
     - name: Sárgarépa
       mennyiseg: 3 db
@@ -1928,7 +1928,7 @@ Tepsis Krumpli:
       mennyiseg: 1 kvk
     - name: Rozmaring
       mennyiseg: 1 mk
-    - name: Napraforgó olaj
+    - name: Napraforgóolaj
       mennyiseg: 1 dl
 
 Töltött káposzta:
@@ -1978,7 +1978,7 @@ Tonhalas babsaláta:
       mennyiseg: 1 csipet
     - name: Cukor
       mennyiseg: 1 csipet
-    - name: Napraforgó olaj
+    - name: Napraforgóolaj
       mennyiseg: 2 ek
     - name: Petrezselyem
       mennyiseg: 1 tk
