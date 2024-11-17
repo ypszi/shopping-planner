@@ -1376,16 +1376,29 @@ Póréhagyma leves:
   ingredients:
     - name: Póréhagyma
       mennyiseg: 2 db
-    - name: Krumpli
+    - name: Burgonya
       mennyiseg: 2 db
-    - name: Zellerszár
-      mennyiseg: 1 db
-    - name: Húsleves kocka
-      mennyiseg: 1 db
     - name: Vaj
       mennyiseg: 3 dkg
+    - name: Zellerszár
+      mennyiseg: 1 db
+    - name: Só
+      mennyiseg: 2 tk
+    - name: Bors
+      mennyiseg: 2 csipet
     - name: Habtejszín
       mennyiseg: 200 ml
+    - name: Húsleves kocka
+      mennyiseg: 2 db
+  comments:
+    - 1 l alaplé (1 liter vízben 2 tyúkhúsleves vagy zöldségleves kockát felfőzni)
+    - elkészítés::
+      - A póréhagymát és a zellert karikára vágjuk, a krumplit megpucoljuk és felkockázzuk.
+      - A vajat megolvasztjuk, rádobjuk a póréhagymát, és 2-3 percig kevergetjük. 
+      - Hozzáadjuk a zellert, és újabb 2 percig keverjük. Mehet rá a krumpli, és egy újabb keverés után a meleg alaplé.
+      - Sózzuk, borsozzuk, és lefedve 20 percen át főzzük.
+      - Ha kész, botmixerrel pürésítjük, hozzáadjuk a tejszínt, és még egyet forralunk rajta.
+      - Tetszés szerint tehetünk bele zsemlekockát, levesgyöngyöt, reszelt sajtot, vagy csírákat.
 
 Rakott krumpli:
   defaultPortion: 4
@@ -1558,7 +1571,7 @@ Sütőtökkrémleves egyszerűen:
     - name: Szerecsendió
       mennyiseg: 1 csipet
   comments:
-    - 1 l Szárnyas alaplé (1 liter vízben 2 tyúkhúsleves vagy zöldségleves kockát felfőzni)
+    - 1 l alaplé (1 liter vízben 2 tyúkhúsleves vagy zöldségleves kockát felfőzni)
     - Só ízlés szerint
     - Fehér bors ízlés szerint
     - Szerecsendió ízlés szerint
