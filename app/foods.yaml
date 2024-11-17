@@ -247,17 +247,17 @@ Chiliszósz (édes):
   thumbnailUrl: https://kep.index.hu/1/0/5033/50338/503386/50338693_44f06c4e4d1d858aab341946a705807d_wm.jpg
   ingredients:
     - name: Chili
-      mennyiseg:  1 tk
+      mennyiseg: 1 tk
     - name: Rizsecet
       mennyiseg: 1 ek
     - name: Szójaszósz
-      mennyiseg:  1 ek
+      mennyiseg: 1 ek
     - name: Só
       mennyiseg: 2 csipet
     - name: Méz
       mennyiseg: 2 tk
     - name: Keményítő
-      mennyiseg:  1 ek
+      mennyiseg: 1 ek
   comments:
     - 2 dl Víz
     - 2 ek Víz 1 ek Keményítőhöz
@@ -317,25 +317,25 @@ Csirkemellpaprikás:
     - name: Tejszín
       mennyiseg: 1 dl
   comments:
-    - Előkészítjük az alapanyagokat:
+    - Előkészítjük az alapanyagokat::
       - a vöröshagymát meghámozzuk, apróra kockázzuk;
       - a csirkemellet nagyjából kétcentis kockákra vágjuk;
       - a paprikát és a paradicsomot megmossuk,
       - a paprikát felszeleteljük, majd félcentis darabokra vágjuk (így nem lesz darabos a szaft),
       - a paradicsomot apróra kockázzuk;
       - végül a fokhagymagerezdeket meghámozzuk, apróra vágjuk.'
-    - Egy serpenyőben közepes lángon zsiradékot hevítünk:
-      - erre rakjuk a vöröshagymát, 
-      - enyhén sózzuk, hogy könnyebben kiengedje a nedvességét. 
+    - Egy serpenyőben közepes lángon zsiradékot hevítünk::
+      - erre rakjuk a vöröshagymát,
+      - enyhén sózzuk, hogy könnyebben kiengedje a nedvességét.
       - Ha kissé üveges, hozzáadjuk a csirkemellkockákat, együtt pirítjuk tovább, közben ízesítjük sóval, borssal.
-    - Ha kifehéredtek a húsok:
+    - Ha kifehéredtek a húsok::
       - hozzáadjuk a fokhagymát, tovább pároljuk pár percig,
-      - majd felöntjük a fehérborral. Ha az alkohol elpárolgott, 
-      - hozzáadjuk a paprikát, elkeverjük, 
-      - majd megszórjuk a pirospaprikával, ezt is alaposan elkeverjük. 
-      - Következik a paradicsom, végül felöntjük egy kevés vízzel, 
+      - majd felöntjük a fehérborral. Ha az alkohol elpárolgott,
+      - hozzáadjuk a paprikát, elkeverjük,
+      - majd megszórjuk a pirospaprikával, ezt is alaposan elkeverjük.
+      - Következik a paradicsom, végül felöntjük egy kevés vízzel,
       - majd lefedve, alacsony hőmérsékleten nagyjából fél óra alatt készre pároljuk.
-    - Ha a hús megpuhult és a szaft is kissé besűrűsödött:
+    - Ha a hús megpuhult és a szaft is kissé besűrűsödött::
       - hozzáöntjük a tejszínt,
       - majd belekanalazzuk a tejfölt, elkeverjük, és még egyet forralunk rajta.
 
@@ -410,12 +410,12 @@ Csirkés spárgás rizottó:
       mennyiseg: 1 mk
   comments:
     - elkészítés::
-      - A spárgát tisztítsd meg, a fás részét törd le, és vágd 2-5 centis darabokra. 
-      - A csirkemelleket sózd, borsozd, és három-négy percig süsd olajon, majd add hozzá a spárgát, és párold puhára. 
-      - A húst és a spárgát vedd ki a zsiradékból, dobd rá az aprított vöröshagymát, és kezdd dinsztelni. 
-      - Kicsit később tedd hozzá a zúzott fokhagymát, majd egy-két perccel később add hozzá a rizst, és közepes lángon kevergesd két-három percig. 
-      - Öntsd hozzá a bort, majd amikor a rizs szinte teljesen magába szívta, részletekben adagold hozzá a meleg húslevest. 
-      - Főzd a rizst 15-20 percig. 
+      - A spárgát tisztítsd meg, a fás részét törd le, és vágd 2-5 centis darabokra.
+      - A csirkemelleket sózd, borsozd, és három-négy percig süsd olajon, majd add hozzá a spárgát, és párold puhára.
+      - A húst és a spárgát vedd ki a zsiradékból, dobd rá az aprított vöröshagymát, és kezdd dinsztelni.
+      - Kicsit később tedd hozzá a zúzott fokhagymát, majd egy-két perccel később add hozzá a rizst, és közepes lángon kevergesd két-három percig.
+      - Öntsd hozzá a bort, majd amikor a rizs szinte teljesen magába szívta, részletekben adagold hozzá a meleg húslevest.
+      - Főzd a rizst 15-20 percig.
       - Amikor a rizs kellőképpen puha, tedd rá a spárgát, a csirkét, süsd össze két-három perc alatt.
 
 Csőröge Fánk:
@@ -922,7 +922,7 @@ Karfiolsteak:
       mennyiseg: 2 db
     - name: Pirított hagyma
       mennyiseg: 50 g
-#  A fűszerkeverékhez
+    # A fűszerkeverékhez
     - name: Piros paprika
       mennyiseg: 1 tk
     - name: Curry
@@ -935,7 +935,7 @@ Karfiolsteak:
       mennyiseg: 1 tk
     - name: Napraforgó olaj
       mennyiseg: 4 ek
-#  A sajtszószhoz
+    # A sajtszószhoz
     - name: Vaj
       mennyiseg: 50 g
     - name: Liszt
@@ -1436,7 +1436,7 @@ Póréhagyma leves:
     - 1 l alaplé (1 liter vízben 2 tyúkhúsleves vagy zöldségleves kockát felfőzni)
     - elkészítés::
       - A póréhagymát és a zellert karikára vágjuk, a krumplit megpucoljuk és felkockázzuk.
-      - A vajat megolvasztjuk, rádobjuk a póréhagymát, és 2-3 percig kevergetjük. 
+      - A vajat megolvasztjuk, rádobjuk a póréhagymát, és 2-3 percig kevergetjük.
       - Hozzáadjuk a zellert, és újabb 2 percig keverjük. Mehet rá a krumpli, és egy újabb keverés után a meleg alaplé.
       - Sózzuk, borsozzuk, és lefedve 20 percen át főzzük.
       - Ha kész, botmixerrel pürésítjük, hozzáadjuk a tejszínt, és még egyet forralunk rajta.
@@ -2035,3 +2035,32 @@ Tzatziki:
       mennyiseg: 1 csipet
   comments:
     - 3 tk Fehérborecet vagy 3 tk Almaborecet
+
+Vitaminsaláta madársalátával:
+  defaultPortion: 2
+  receptUrl: https://cookpad.com/hu/receptek/16208810-vitaminsalata-borsoruggyel-es-madarsalataval
+  thumbnailUrl: https://img-global.cpcdn.com/recipes/d8fa61d010e06be2/640x640sq70/photo.jpg
+  tags:
+    - új
+    - saláta
+  ingredients:
+    - name: Madársaláta
+      mennyiseg: 40 g
+    - name: Retek
+      mennyiseg: 5 db
+    - name: Zöldhagyma
+      mennyiseg: 1 db
+    - name: Natúr joghurt
+      mennyiseg: 1 dl
+    - name: Cukor
+      mennyiseg: 0.5 tk
+    - name: Só
+      mennyiseg: 2 csipet
+    - name: Citrom
+      mennyiseg: 1 db
+    - name: Olíva olaj
+      mennyiseg: 2 tk
+  comments:
+    - Pár csepp citromlé
+    - opcionális::
+      - 1/2 tk Méz vagy Cukor
