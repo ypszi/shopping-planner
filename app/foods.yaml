@@ -339,6 +339,48 @@ Csirkemellpaprikás:
       - hozzáöntjük a tejszínt,
       - majd belekanalazzuk a tejfölt, elkeverjük, és még egyet forralunk rajta.
 
+Csirkemell rizstésztasalátával:
+  defaultPortion: 4
+  receptUrl: https://cookpad.com/hu/receptek/23903638-csirkemell-rizstesztasalataval
+  thumbnailUrl: https://img-global.cpcdn.com/recipes/9d2a35dd6aa4ed11/640x640sq70/photo.jpg
+  tags:
+    - új
+    - ebéd
+    - vacsora
+  ingredients:
+    - name: Csirkemell
+      mennyiseg: 400 g
+    - name: Szójaszósz
+      mennyiseg: 2 ek
+    - name: Szezám olaj
+      mennyiseg: 1 ek
+    - name: Bors
+      mennyiseg: 2 csipet
+    - name: Rizs tészta
+      mennyiseg: 300 g
+    - name: Szójaszósz
+      mennyiseg: 7 ek
+    - name: Szezám olaj
+      mennyiseg: 1 ek
+    - name: Lime
+      mennyiseg: 1 db
+    - name: Fokhagyma
+      mennyiseg: 1 gerezd
+    - name: Sárgarépa
+      mennyiseg: 1 db
+    - name: Gyömbér
+      mennyiseg: 1 db
+    - name: Káposzta
+      mennyiseg: 1 db
+    - name: Kaliforniai paprika (piros)
+      mennyiseg: 1 db
+    - name: Újhagyma
+      mennyiseg: 2 db
+    - name: Petrezselyem
+      mennyiseg: 1 tk
+    - name: Szezámmag
+      mennyiseg: 1 ek
+
 Csirkés spárgás rizottó:
   defaultPortion: 4
   receptUrl: https://femina.hu/recept/csirkes-spargas-rizotto-receptje/

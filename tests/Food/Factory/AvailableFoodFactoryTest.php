@@ -34,6 +34,6 @@ class AvailableFoodFactoryTest extends TestCase
     #[Test]
     public function testListAvailableFoods(): void
     {
-        $this->assertCount(80, $this->sut->listAvailableFoods());
+        $this->assertCount(81, $this->sut->listAvailableFoods());
     }
 }
