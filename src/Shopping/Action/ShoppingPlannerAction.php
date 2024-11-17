@@ -4,13 +4,13 @@ declare(strict_types=1);
 
 namespace PeterPecosz\ShoppingPlanner\Shopping\Action;
 
+use PeterPecosz\ShoppingPlanner\Core\Url\UrlBuilder;
 use PeterPecosz\ShoppingPlanner\Food\Factory\AvailableFoodFactory;
 use PeterPecosz\ShoppingPlanner\Ingredient\Action\GetIngredientStorageAction;
 use PeterPecosz\ShoppingPlanner\Supermarket\Supermarket;
 use PeterPecosz\ShoppingPlanner\Supermarket\SupermarketFactory;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
-use Slim\Routing\RouteContext;
 use Twig\Environment;
 
 readonly class ShoppingPlannerAction
@@ -18,6 +18,7 @@ readonly class ShoppingPlannerAction
     public function __construct(
         private SupermarketFactory $supermarketFactory,
         private AvailableFoodFactory $availableFoodFactory,
+        private UrlBuilder $urlBuilder,
         private Environment $twig
     ) {
     }
@@ -40,7 +41,7 @@ readonly class ShoppingPlannerAction
                 'availableSupermarkets' => $availableSupermarkets,
                 'availableFoods'        => $availableFoods,
                 'selectedFoods'         => $selectedFoods,
-                'ingredientStorageUrl'  => RouteContext::fromRequest($request)->getRouteParser()->fullUrlFor($request->getUri(), GetIngredientStorageAction::class),
+                'ingredientStorageUrl'  => $this->urlBuilder->buildFor($request, GetIngredientStorageAction::class),
             ])
         );
 
