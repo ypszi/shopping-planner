@@ -254,6 +254,8 @@ Vaníliás cukor:
     step: 5
 
 # Tartós élelmiszer
+Agávé szirup:
+  kategoria: Tartós élelmiszer
 Baracklekvár:
   kategoria: Tartós élelmiszer
 Bulgur:
@@ -352,6 +354,8 @@ Szódavíz:
 
 # Zöldség / Gyümölcs
 Alma:
+  kategoria: Zöldség / Gyümölcs
+Avokádó:
   kategoria: Zöldség / Gyümölcs
 Brokkoli:
   kategoria: Zöldség / Gyümölcs

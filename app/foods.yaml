@@ -1148,6 +1148,40 @@ Lecsó:
     - name: Só
       mennyiseg: 1 tk
 
+Mexikói avokádósaláta:
+  defaultPortion: 4
+  receptUrl: https://www.nosalty.hu/recept/avokadosalata
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/qV/2l/avokadosalata.jpeg?w=3000&fit=crop&s=f5d6341cacd77c0bd224732f93f9eec2
+  tags:
+    - új
+    - saláta
+  ingredients:
+    - name: Avokádó
+      mennyiseg: 3 db
+    - name: Olíva olaj
+      mennyiseg: 40 ml
+    - name: Lime
+      mennyiseg: 1 db
+    - name: Agávé szirup
+      mennyiseg: 25 ml
+    - name: Petrezselyem
+      mennyiseg: 1 tk
+    - name: Bors
+      mennyiseg: 1 csipet
+    - name: Só
+      mennyiseg: 2 csipet
+    - name: Kígyóuborka
+      mennyiseg: 1 db
+    - name: Kaliforniai paprika (zöld)
+      mennyiseg: 2 db
+    - name: Jalapeno (konzerv)
+      mennyiseg: 3 dkg
+    - name: Lilahagyma
+      mennyiseg: 1 db
+  comments:
+    - opcionális::
+      - 3 dkg Jalapeno (konzerv)
+
 Mézes-chilis csirkesaláta:
   defaultPortion: 2
   receptUrl: https://www.nosalty.hu/recept/mezes-chilis-csirkesalata
