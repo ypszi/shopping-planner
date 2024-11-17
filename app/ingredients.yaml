@@ -81,6 +81,8 @@ Ketchup:
   storage:
     max: 500
     step: 50
+Koriander:
+  kategoria: Fűszer
 Köménymag:
   kategoria: Fűszer
 Kurkuma:
@@ -256,6 +258,10 @@ Vaníliás cukor:
 # Tartós élelmiszer
 Agávé szirup:
   kategoria: Tartós élelmiszer
+  mertekegysegPreference: ml
+  storage:
+    max: 400
+    step: 50
 Baracklekvár:
   kategoria: Tartós élelmiszer
 Bulgur:
@@ -296,6 +302,8 @@ Zsemlemorzsa:
   kategoria: Tartós élelmiszer
 
 # Konzerv
+Ananász (konzerv):
+  kategoria: Konzerv
 Csemege uborka (konzerv):
   kategoria: Konzerv
 Fehérbab (konzerv):
@@ -318,6 +326,12 @@ Főzőtejszín:
   kategoria: Tartós tejtermék
 Habtejszín:
   kategoria: Tartós tejtermék
+Kókusztej:
+  kategoria: Tartós tejtermék
+  mertekegysegPreference: l
+  storage:
+    max: 5
+    step: 1
 Tej:
   kategoria: Tartós tejtermék
   mertekegysegPreference: l
@@ -354,6 +368,8 @@ Szódavíz:
 
 # Zöldség / Gyümölcs
 Alma:
+  kategoria: Zöldség / Gyümölcs
+Ananász:
   kategoria: Zöldség / Gyümölcs
 Avokádó:
   kategoria: Zöldség / Gyümölcs
@@ -416,6 +432,10 @@ Lime:
   kategoria: Zöldség / Gyümölcs
 Madársaláta:
   kategoria: Zöldség / Gyümölcs
+  mertekegysegPreference: dkg
+  storage:
+    max: 300
+    step: 50
 Pak choi:
   kategoria: Zöldség / Gyümölcs
 Paprika:

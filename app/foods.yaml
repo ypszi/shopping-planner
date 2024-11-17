@@ -55,6 +55,43 @@ Amerikai káposztasaláta:
     - name: Cukor
       mennyiseg: 2 kvk
 
+Ananászos csirke:
+  defaultPortion: 4
+  receptUrl: https://nlc.hu/gasztro/20191026/gyors-vacsora-gyujtemeny/
+  thumbnailUrl: https://nlc.p3k.hu/data/cikk/19/188747/5.jpg
+  tags:
+    - új
+    - ebéd
+  ingredients:
+    - name: Csirkemell
+      mennyiseg: 60 dkg
+    - name: Ananász
+      mennyiseg: 1 db
+    - name: Vöröshagyma
+      mennyiseg: 1 db
+    - name: Citrom
+      mennyiseg: 1 db
+    - name: Húsleves kocka
+      mennyiseg: 0.25 db
+    - name: Kókusztej
+      mennyiseg: 1 dl
+    - name: Curry
+      mennyiseg: 1 ek
+    - name: Koriander
+      mennyiseg: 1 csipet
+    - name: Napraforgóolaj
+      mennyiseg: 3 ek
+    - name: Só
+      mennyiseg: 1 csipet
+  comments:
+    - 1 dl Húsleves
+    - elkészítés::
+      - Mossuk meg, és kockázzuk fel a csirkemellet. 
+      - Forrósítsunk fel 3 evőkanál olajat, enyhén pirítsuk meg benne az apróra vágott hagymát és a curry port. 
+      - Adjuk hozzá a felkockázott húst, pirítsuk meg, majd öntsük rá a húslevest és a kókusztejet, sózzuk, ha szükséges (a leves sósságától függ). 
+      - Főzzük, míg a csirke megpuhul, ekkor adjuk hozzá a megpucolt, felkockázott ananászt. 
+      - Néhány percig főzzük, majd tálaláskor szórjunk rá friss korianderleveleket, és kínáljunk mellé köretnek jázminrizst.
+
 Baconbe göngyölt mozzarellás csirkemell:
   defaultPortion: 4
   receptUrl: https://www.mindmegette.hu/baconbe-gongyolt-mozzarellas-csirkemell.recept/
