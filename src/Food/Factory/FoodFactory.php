@@ -12,7 +12,7 @@ use Symfony\Component\Yaml\Yaml;
 
 readonly class FoodFactory
 {
-    private const FOOD_TAGS_ALLOWED = 6;
+    private const FOOD_TAG_COUNT_ALLOWED = 4;
 
     /** @var array<string, array<string, mixed>> */
     private array $foods;
@@ -36,11 +36,11 @@ readonly class FoodFactory
 
         $tags = $food['tags'] ?? [];
 
-        if (count($tags) > self::FOOD_TAGS_ALLOWED) {
+        if (count($tags) > self::FOOD_TAG_COUNT_ALLOWED) {
             throw new InvalidFoodException(
                 sprintf(
                     'Food has more tags than allowed (%d): "%s"',
-                    self::FOOD_TAGS_ALLOWED,
+                    self::FOOD_TAG_COUNT_ALLOWED,
                     $foodName
                 )
             );
