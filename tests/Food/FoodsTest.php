@@ -23,7 +23,7 @@ class FoodsTest extends TestCase
             portion:        null,
             recipeUrl:      'https://online-recept-konyv.hu/test-food',
             thumbnailUrl:   null,
-            comments:       null,
+            comments:       [],
             ingredients:    [
                                 new IngredientForFood(
                                     name:     'Tojás',

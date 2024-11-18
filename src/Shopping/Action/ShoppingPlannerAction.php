@@ -7,6 +7,7 @@ namespace PeterPecosz\ShoppingPlanner\Shopping\Action;
 use PeterPecosz\ShoppingPlanner\Core\Url\UrlBuilder;
 use PeterPecosz\ShoppingPlanner\Food\Factory\AvailableFoodFactory;
 use PeterPecosz\ShoppingPlanner\Ingredient\Action\GetIngredientStorageAction;
+use PeterPecosz\ShoppingPlanner\Shopping\Input\FoodFilterInput;
 use PeterPecosz\ShoppingPlanner\Supermarket\Supermarket;
 use PeterPecosz\ShoppingPlanner\Supermarket\SupermarketFactory;
 use Psr\Http\Message\ResponseInterface;
@@ -32,7 +33,8 @@ readonly class ShoppingPlannerAction
 
         $queryParams        = $request->getQueryParams();
         $defaultSupermarket = $queryParams['supermarket'] ?? Supermarket::DEFAULT;
-        $availableFoods     = $this->availableFoodFactory->listAvailableFoods();
+        $tagsCriteria       = $queryParams['tags'] ?? null;
+        $availableFoods     = $this->availableFoodFactory->listAvailableFoods(new FoodFilterInput($tagsCriteria));
         $selectedFoods      = $this->getSelectedFoods($request);
 
         $response->getBody()->write(

@@ -21,15 +21,15 @@ class Food
     /** @var IngredientForFood[] */
     private array $ingredients;
 
-    /** @var string[]|null */
-    private ?array $comments;
+    /** @var string[] */
+    private array $comments;
 
-    /** @var string[]|null */
-    private ?array $tags;
+    /** @var string[] */
+    private array $tags;
 
     /**
-     * @param string[]|null            $comments
-     * @param IngredientForFood[]|null $ingredients
+     * @param string[]            $comments
+     * @param IngredientForFood[] $ingredients
      */
     public function __construct(
         string $name,
@@ -37,9 +37,9 @@ class Food
         ?int $portion = null,
         ?string $recipeUrl = null,
         ?string $thumbnailUrl = null,
-        ?array $tags = [],
-        ?array $comments = [],
-        ?array $ingredients = null
+        array $tags = [],
+        array $comments = [],
+        array $ingredients = []
     ) {
         $this->name           = $name;
         $this->portion        = $portion ?? $defaultPortion;
@@ -101,7 +101,7 @@ class Food
         return $this->ingredients;
     }
 
-    public function tags(): ?array
+    public function tags(): array
     {
         return $this->tags;
     }

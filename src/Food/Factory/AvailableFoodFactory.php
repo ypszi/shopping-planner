@@ -6,6 +6,7 @@ namespace PeterPecosz\ShoppingPlanner\Food\Factory;
 
 use PeterPecosz\ShoppingPlanner\Food\Food;
 use PeterPecosz\ShoppingPlanner\Ingredient\Factory\IngredientFactory;
+use PeterPecosz\ShoppingPlanner\Shopping\Input\FoodFilterInput;
 use Symfony\Component\Yaml\Yaml;
 
 readonly class AvailableFoodFactory
@@ -24,7 +25,7 @@ readonly class AvailableFoodFactory
     /**
      * @return Food[]
      */
-    public function listAvailableFoods(): array
+    public function listAvailableFoods(FoodFilterInput $filterInput): array
     {
         $availableFoods = [];
 
@@ -46,7 +47,7 @@ readonly class AvailableFoodFactory
             $availableFoods[] = $this->foodFactory->createFood(foodName: $foodName, ingredients: $ingredients);
         }
 
-        return $availableFoods;
+        return $this->sortFoods($this->filterFoods($filterInput, $availableFoods));
     }
 
     private function createReferenceFood(string $refFoodName): Food
@@ -63,5 +64,41 @@ readonly class AvailableFoodFactory
             foodName:    $refFoodName,
             ingredients: $ingredients
         );
+    }
+
+    /**
+     * @param Food[] $foods
+     *
+     * @return Food[]
+     */
+    private function filterFoods(FoodFilterInput $filterInput, array $foods): array
+    {
+        if ($filterInput->tags() === null) {
+            return $foods;
+        }
+
+        $filteredFoods = [];
+        foreach ($filterInput->tags() as $tag) {
+            $filteredFoods += array_filter(
+                $foods,
+                fn(Food $food) => in_array($tag, $food->tags(), true)
+            );
+        }
+
+        return array_values($filteredFoods);
+    }
+
+    /**
+     * @param Food[] $foods
+     *
+     * @return Food[]
+     */
+    private function sortFoods(array $foods): array
+    {
+        usort($foods, function (Food $food1, Food $food2) {
+            return strnatcmp($food1->name(), $food2->name());
+        });
+
+        return array_values($foods);
     }
 }

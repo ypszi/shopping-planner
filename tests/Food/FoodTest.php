@@ -22,7 +22,7 @@ class FoodTest extends TestCase
             portion:        null,
             recipeUrl:      'https://online-recept-konyv.hu/test-food',
             thumbnailUrl:   'https://www.nosalty.hu/thumnails/img_5512.jpg',
-            comments:       null,
+            comments:       [],
             ingredients:    [
                                 new IngredientForFood(
                                     name:     'Tojás',
@@ -55,7 +55,7 @@ class FoodTest extends TestCase
             portion:        null,
             recipeUrl:      'https://www.nosalty.hu/recept/test-food',
             thumbnailUrl:   'https://www.nosalty.hu/thumnails/img_5512.jpg',
-            comments:       null,
+            comments:       [],
             ingredients:    [
                                 new IngredientForFood(
                                     name:     'Tojás',
@@ -78,7 +78,7 @@ class FoodTest extends TestCase
             portion:        null,
             recipeUrl:      'https://www.nosalty.hu/recept/test-food?query=test',
             thumbnailUrl:   'https://www.nosalty.hu/thumnails/img_5512.jpg',
-            comments:       null,
+            comments:       [],
             ingredients:    [
                                 new IngredientForFood(
                                     name:     'Tojás',
@@ -101,7 +101,7 @@ class FoodTest extends TestCase
             portion:        null,
             recipeUrl:      'https://www.nosalty.hu/recept/test-food?adag=1',
             thumbnailUrl:   'https://www.nosalty.hu/thumnails/img_5512.jpg',
-            comments:       null,
+            comments:       [],
             ingredients:    [
                                 new IngredientForFood(
                                     name:     'Tojás',
@@ -131,7 +131,7 @@ class FoodTest extends TestCase
                 portion:        4,
                 recipeUrl:      'https://online-recept-konyv.hu/test-food',
                 thumbnailUrl:   'https://www.nosalty.hu/thumnails/img_5512.jpg',
-                comments:       null,
+                comments:       [],
                 ingredients:    [
                                     new IngredientForFood(
                                         name:     'Tojás',

@@ -35,7 +35,7 @@ class SupermarketTest extends TestCase
             portion:        null,
             recipeUrl:      'https://online-recept-konyv.hu/test-food',
             thumbnailUrl:   'https://www.nosalty.hu/thumnails/img_5512.jpg',
-            comments:       null,
+            comments:       [],
             ingredients:    [
                                 new IngredientForFood(name: 'Tojás', category: 'Tejtermék', portion: 1, measure: Measure::DB),
                                 new IngredientForFood(name: 'Ecet', category: 'Ecet', portion: 1, measure: Measure::L),
