@@ -391,7 +391,7 @@ Csirkemell rizstésztasalátával:
       mennyiseg: 400 g
     - name: Szójaszósz
       mennyiseg: 2 ek
-    - name: Szezám olaj
+    - name: Szezámolaj
       mennyiseg: 1 ek
     - name: Bors
       mennyiseg: 2 csipet
@@ -399,7 +399,7 @@ Csirkemell rizstésztasalátával:
       mennyiseg: 300 g
     - name: Szójaszósz
       mennyiseg: 7 ek
-    - name: Szezám olaj
+    - name: Szezámolaj
       mennyiseg: 1 ek
     - name: Lime
       mennyiseg: 1 db
@@ -1249,7 +1249,7 @@ Mézes-chilis csirkesaláta:
     - name: Mogyoró olaj
       mennyiseg: 1 ek
     # Az öntethez
-    - name: Szezám olaj
+    - name: Szezámolaj
       mennyiseg: 6 ek
     - name: Rizsecet
       mennyiseg: 2 ek
@@ -1261,7 +1261,7 @@ Mézes-chilis csirkesaláta:
       mennyiseg: 1 gerezd
   comments:
     - Az öntethez:
-      - 6 ek Szezám olaj
+      - 6 ek Szezámolaj
       - 2 ek Rizsecet
       - 2 csipet Só
       - 1 csipet Bors
@@ -1351,7 +1351,7 @@ Pad thai:
       mennyiseg: 0.5 db
     - name: Rizs tészta
       mennyiseg: 150 g
-    - name: Szezám olaj
+    - name: Szezámolaj
       mennyiseg: 2 ek
     - name: Napraforgóolaj
       mennyiseg: 5 ek
@@ -1365,12 +1365,32 @@ Pad thai:
     - name: Tamarind szósz
       mennyiseg: 2 tk
     - name: Hal szósz
-      mennyiseg: 0.5 tk
-    - name: Szezám olaj
+      mennyiseg: 5 csepp
+    - name: Szezámolaj
       mennyiseg: 1 ek
     # 2-3 ek víz
-    - name: Cukor
+    - name: Barna cukor
       mennyiseg: 1 tk
+  comments:
+    - A marinádhoz::
+      - 2 tk Tamarind szósz
+      - 4 - 5 csepp Hal szósz
+      - 1 ek Szezámolaj
+      - 2 - 3 ek Víz
+      - 1 tk Barna cukor
+    - elkészítés::
+      - A rizstésztát fél órára hideg vízbe áztatjuk
+      - Sós vízben 3-4 perc alatt készre főzzük, majd leszűrjük. 
+      - A marinád hozzávalóit egy tálban összekeverjük és belerakjuk a kis darabokra vágott csirkemellet. 
+      - Egy magas falú serpenyőben 3 evőkanál olajon, magas lángon elkezdjük pirítani az apróra vágott vöröshagymát. 
+      - Ezután beledobjuk az apróra vágott fokhagymát, reszelt gyömbért és a felkarikázott chilit. 
+      - 2 perc pirítás után a marinádból kiszedett csirkemellet is a serpenyőbe dobjuk. Magas lángon pár percig pirítjuk.
+      - Ezután hozzáadjuk a durva darabokra vágott pak choi-t. 
+      - Beleöntjük a tésztát, ráöntjük a marinádot és 2 evőkanál olajat. 
+      - Alaposan összekeverjük és az edény egyik felébe toljuk a tésztát. 
+      - A szabad felére beleütjük a tojásokat, sózzuk, borsozzuk és jól elkeverjük az egészet. 
+      - Beledobjuk a mungóbabcsírát, meglocsoljuk pár csepp szezámolajjal és fél lime levével. 
+      - Aprított korianderrel és mogyoróval megszórva tálaljuk.
 
 Palacsinta:
   defaultPortion: 4
@@ -1760,7 +1780,7 @@ Szerzetesek eledele:
       mennyiseg: 1 mk
     - name: Keményítő
       mennyiseg: 1 ek
-    - name: Szezám olaj
+    - name: Szezámolaj
       mennyiseg: 2 tk
 
 Szezámmagos csirke:
