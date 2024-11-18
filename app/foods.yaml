@@ -386,6 +386,7 @@ Csirkemell rizstésztasalátával:
     - új
     - ebéd
     - vacsora
+    - suli
   ingredients:
     - name: Csirkemell
       mennyiseg: 400 g
@@ -580,6 +581,8 @@ Fitness saláta:
   defaultPortion: 4
   receptUrl: https://www.nosalty.hu/recept/fitness-salata
   thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/qL/Lx/fitness-salata.jpeg?w=1200&fit=crop&s=842523c6db72afb027578c9880712fe1
+  tags:
+    - saláta
   ingredients:
     - name: Jégsaláta
       mennyiseg: 1 db
@@ -1225,6 +1228,10 @@ Mézes-chilis csirkesaláta:
   defaultPortion: 2
   receptUrl: https://www.nosalty.hu/recept/mezes-chilis-csirkesalata
   thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/H7/gM/mezes-chilis-csirkesalata.jpeg?w=1200&fit=crop&s=00b2bfe53a3aff1629023e07c00dc509
+  tags:
+    - ebéd
+    - vacsora
+    - suli
   ingredients:
     - name: Csirkemell
       mennyiseg: 25 dkg

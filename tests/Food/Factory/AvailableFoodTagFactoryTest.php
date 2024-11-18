@@ -31,6 +31,7 @@ class AvailableFoodTagFactoryTest extends TestCase
                 'ebéd',
                 'köret',
                 'saláta',
+                'suli',
                 'vacsora',
                 'új',
             ],

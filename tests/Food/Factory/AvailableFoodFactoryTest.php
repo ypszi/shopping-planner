@@ -8,6 +8,7 @@ use PeterPecosz\ShoppingPlanner\Food\Factory\AvailableFoodFactory;
 use PeterPecosz\ShoppingPlanner\Food\Factory\FoodFactory;
 use PeterPecosz\ShoppingPlanner\Ingredient\Factory\IngredientFactory;
 use PeterPecosz\ShoppingPlanner\Shopping\Input\FoodFilterInput;
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 
@@ -33,50 +34,34 @@ class AvailableFoodFactoryTest extends TestCase
     }
 
     #[Test]
-    public function testListAvailableFoodsFilteredForTags(): void
+    #[DataProvider('foodTagDataProvider')]
+    public function testListAvailableFoodsFilteredForTags(array $tags, int $expectedCount): void
     {
         $this->assertCount(
-            0,
-            $this->sut->listAvailableFoods(new FoodFilterInput(tags: ['reggeli'])),
-            'Expectation failed for tag: "reggeli"'
+            $expectedCount,
+            $this->sut->listAvailableFoods(new FoodFilterInput(tags: $tags)),
+            sprintf('Expectation failed for tags: "%s"', json_encode($tags))
         );
+    }
 
-        $this->assertCount(
-            2,
-            $this->sut->listAvailableFoods(new FoodFilterInput(tags: ['ebéd'])),
-            'Expectation failed for tag: "ebéd"'
-        );
-
-        $this->assertCount(
-            3,
-            $this->sut->listAvailableFoods(new FoodFilterInput(tags: ['vacsora'])),
-            'Expectation failed for tag: "vacsora"'
-        );
-
-        $this->assertCount(
-            2,
-            $this->sut->listAvailableFoods(new FoodFilterInput(tags: ['köret'])),
-            'Expectation failed for tag: "köret"'
-        );
-
-        $this->assertCount(
-            5,
-            $this->sut->listAvailableFoods(new FoodFilterInput(tags: ['saláta'])),
-            'Expectation failed for tag: "saláta"'
-        );
-
-        $this->assertCount(
-            6,
-            $this->sut->listAvailableFoods(new FoodFilterInput(tags: ['új'])),
-            'Expectation failed for tag: "új"'
-        );
+    public static function foodTagDataProvider(): array
+    {
+        return [
+            'reggeli' => ['tags' => ['reggeli'], 'expectedCount' => 0],
+            'ebéd'    => ['tags' => ['ebéd'], 'expectedCount' => 3],
+            'vacsora' => ['tags' => ['vacsora'], 'expectedCount' => 4],
+            'köret'   => ['tags' => ['köret'], 'expectedCount' => 2],
+            'saláta'  => ['tags' => ['saláta'], 'expectedCount' => 6],
+            'új'      => ['tags' => ['új'], 'expectedCount' => 6],
+            'suli'    => ['tags' => ['suli'], 'expectedCount' => 2],
+        ];
     }
 
     #[Test]
     public function testListAvailableFoodsFilteredForMultipleTags(): void
     {
         $this->assertCount(
-            4,
+            5,
             $this->sut->listAvailableFoods(new FoodFilterInput(tags: ['reggeli', 'ebéd', 'vacsora'])),
             'Expectation failed for tags: "reggeli, ebéd, vacsora"'
         );
