@@ -6,6 +6,7 @@ namespace PeterPecosz\ShoppingPlanner\Food\ServiceProvider;
 
 use PeterPecosz\ShoppingPlanner\Core\ServiceProvider\ServiceDefinitionProviderInterface;
 use PeterPecosz\ShoppingPlanner\Food\Factory\AvailableFoodFactory;
+use PeterPecosz\ShoppingPlanner\Food\Factory\AvailableFoodTagFactory;
 use PeterPecosz\ShoppingPlanner\Food\Factory\FoodFactory;
 use PeterPecosz\ShoppingPlanner\Food\Factory\FoodsFactory;
 
@@ -22,6 +23,9 @@ class FoodServiceProvider implements ServiceDefinitionProviderInterface
                 ->constructor(get('config.foods.path')),
 
             AvailableFoodFactory::class => autowire()
+                ->constructorParameter('foodsPath', get('config.foods.path')),
+
+            AvailableFoodTagFactory::class => autowire()
                 ->constructorParameter('foodsPath', get('config.foods.path')),
 
             FoodsFactory::class => autowire()

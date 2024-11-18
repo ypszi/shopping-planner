@@ -6,6 +6,7 @@ namespace PeterPecosz\ShoppingPlanner\Shopping\Action;
 
 use PeterPecosz\ShoppingPlanner\Core\Url\UrlBuilder;
 use PeterPecosz\ShoppingPlanner\Food\Factory\AvailableFoodFactory;
+use PeterPecosz\ShoppingPlanner\Food\Factory\AvailableFoodTagFactory;
 use PeterPecosz\ShoppingPlanner\Ingredient\Action\GetIngredientStorageAction;
 use PeterPecosz\ShoppingPlanner\Shopping\Input\FoodFilterInput;
 use PeterPecosz\ShoppingPlanner\Supermarket\Supermarket;
@@ -19,6 +20,7 @@ readonly class ShoppingPlannerAction
     public function __construct(
         private SupermarketFactory $supermarketFactory,
         private AvailableFoodFactory $availableFoodFactory,
+        private AvailableFoodTagFactory $availableFoodTagFactory,
         private UrlBuilder $urlBuilder,
         private Environment $twig
     ) {
@@ -35,6 +37,7 @@ readonly class ShoppingPlannerAction
         $defaultSupermarket = $queryParams['supermarket'] ?? Supermarket::DEFAULT;
         $tagsCriteria       = $queryParams['tags'] ?? null;
         $availableFoods     = $this->availableFoodFactory->listAvailableFoods(new FoodFilterInput($tagsCriteria));
+        $availableFoodTags  = $this->availableFoodTagFactory->listAvailableFoodTags();
         $selectedFoods      = $this->getSelectedFoods($request);
 
         $response->getBody()->write(
@@ -42,6 +45,7 @@ readonly class ShoppingPlannerAction
                 'defaultSupermarket'    => $defaultSupermarket,
                 'availableSupermarkets' => $availableSupermarkets,
                 'availableFoods'        => $availableFoods,
+                'availableFoodTags'     => $availableFoodTags,
                 'selectedFoods'         => $selectedFoods,
                 'ingredientStorageUrl'  => $this->urlBuilder->buildFor($request, GetIngredientStorageAction::class),
             ])

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Ingredient\Factory;
+namespace PeterPecosz\ShoppingPlanner\Tests\Ingredient\Factory;
 
 use PeterPecosz\ShoppingPlanner\Ingredient\Factory\IngredientFactory;
 use PeterPecosz\ShoppingPlanner\Mertekegyseg\Measure;
