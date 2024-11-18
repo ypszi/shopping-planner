@@ -47,6 +47,7 @@ readonly class ShoppingPlannerAction
                 'availableFoods'        => $availableFoods,
                 'availableFoodTags'     => $availableFoodTags,
                 'selectedFoods'         => $selectedFoods,
+                'selectedFoodTags'      => $tagsCriteria ?? [],
                 'ingredientStorageUrl'  => $this->urlBuilder->buildFor($request, GetIngredientStorageAction::class),
             ])
         );
