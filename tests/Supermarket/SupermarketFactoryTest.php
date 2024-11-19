@@ -60,6 +60,13 @@ class SupermarketFactoryTest extends TestCase
     #[Test]
     public function testListAvailableSupermarkets(): void
     {
-        $this->assertCount(2, $this->sut->listAvailableSupermarkets());
+        $this->assertEquals(
+            [
+                'Auchan - Csömör',
+                'Lidl - Kistarcsa',
+                'Tesco - Fogarasi',
+            ],
+            $this->sut->listAvailableSupermarkets()
+        );
     }
 }

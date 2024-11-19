@@ -24,6 +24,34 @@ Auchan - Csömör:
   ingredientMap:
     Élesztő: Tejtermék
 
+Lidl - Kistarcsa:
+  categories:
+    - Zöldség / Gyümölcs
+    - Konzerv
+    - Fűszer
+    - Tojás
+    - Pékárú
+    - Hús
+    - Felvágott
+    - Margarin / Vaj
+    - Sajt
+    - Tejtermék
+    - Bor
+    - Tészta / Rizs
+    - Sütés / Sütemény
+    - Olaj / Ecet
+    - Tartós tejtermék
+    - Mirelit
+    - Üditő
+  categoryMap:
+    Olaj: Olaj / Ecet
+    Ecet: Olaj / Ecet
+    Tartós élelmiszer: Tészta / Rizs
+    Hal: Hús
+  ingredientMap:
+    Tojás: Tojás
+    Vaj: Margarin / Vaj
+
 Tesco - Fogarasi:
   categories:
     - Zöldség / Gyümölcs
