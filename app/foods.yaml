@@ -94,6 +94,35 @@ Ananászos csirke:
       - Főzzük, míg a csirke megpuhul, ekkor adjuk hozzá a megpucolt, felkockázott ananászt. 
       - Néhány percig főzzük, majd tálaláskor szórjunk rá friss korianderleveleket, és kínáljunk mellé köretnek jázminrizst.
 
+Aranygaluska:
+  defaultPortion: 6
+  receptUrl: https://www.nosalty.hu/recept/pihekonnyu-aranygaluska
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/gM/Qo/pihekonnyu-aranygaluska.jpeg?w=1200&fit=crop&s=d92ebf466e37d71ad697a0849ecde683
+  tags:
+    - új
+    - desszert
+  ingredients:
+    - name: Finomliszt
+      mennyiseg: 60 dkg
+    - name: Tej
+      mennyiseg: 3.5 dl
+    - name: Élesztő
+      mennyiseg: 2 dkg
+    - name: Tojás
+      mennyiseg: 2 db
+    - name: Cukor
+      mennyiseg: 1 ek
+    - name: Vaj
+      mennyiseg: 8 dkg
+    - name: Dió
+      mennyiseg: 30 dkg
+    - name: Cukor
+      mennyiseg: 10 dkg
+    - name: Vaj
+      mennyiseg: 10 dkg
+  comments:
+    - 30 dkg Dió (darált)
+
 Avokádós tonhalsaláta madársalátával:
   defaultPortion: 4
   receptUrl: https://www.nosalty.hu/recept/avokados-tonhalsalata-madarsalataval
@@ -2385,6 +2414,30 @@ Tzatziki:
       mennyiseg: 1 csipet
   comments:
     - 3 tk Fehérborecet vagy 3 tk Almaborecet
+
+Vaníliasodó:
+  defaultPortion: 4
+  receptUrl: https://www.nosalty.hu/recept/vaniliasodo-2-aranygaluskahoz
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/hG/WA/vaniliasodo-2-aranygaluskahoz.jpeg?w=1200&fit=crop&s=756cf641b44bc4bda9d3347b78a95d1f
+  tags:
+    - új
+    - desszert
+  ingredients:
+    - name: Tej
+      mennyiseg: 1 l
+    - name: Tojás
+      mennyiseg: 4 db
+    - name: Cukor
+      mennyiseg: 10 dkg
+    - name: Finomliszt
+      mennyiseg: 2 ek
+    - name: Vaníliás cukor
+      mennyiseg: 16 g
+    - name: Vaj
+      mennyiseg: 2 dkg
+  comments:
+    - 4 db Tojás sárgája
+    - 2 csomag Vaníliás cukor
 
 Vitaminsaláta madársalátával:
   defaultPortion: 2
