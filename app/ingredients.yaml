@@ -96,11 +96,6 @@ Majonéz:
     step: 50
 Majoranna:
   kategoria: Fűszer
-Mogyoró:
-  kategoria: Fűszer
-  storage:
-    max: 300
-    step: 50
 Mustár:
   kategoria: Fűszer
   storage:
@@ -157,6 +152,14 @@ Sertészsír:
 Tepertő (sertés):
   kategoria: Hús
   mertekegysegPreference: g
+
+# Magvak
+Dió:
+  kategoria: Magvak
+Mogyoró:
+  kategoria: Magvak
+  storage:
+    max: 300
 
 # Mirelit
 Spárga (mirelit):
@@ -395,8 +398,6 @@ Citrom:
 Csemegehagyma:
   kategoria: Zöldség / Gyümölcs
 Cukkini:
-  kategoria: Zöldség / Gyümölcs
-Dió:
   kategoria: Zöldség / Gyümölcs
 Édesburgonya:
   kategoria: Zöldség / Gyümölcs

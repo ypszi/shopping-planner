@@ -33,6 +33,11 @@ Konzerv:
   storage:
     max: 1000
     step: 50
+Magvak:
+  mertekegysegPreference: g
+  storage:
+    max: 1000
+    step: 10
 Mirelit:
   mertekegysegPreference: g
   storage:

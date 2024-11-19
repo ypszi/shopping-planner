@@ -40,6 +40,7 @@ class SupermarketFactoryTest extends TestCase
                 'Üditő',
                 'Nemzetközi',
                 'Olaj / Ecet',
+                'Magvak',
                 'Fűszer',
                 'Konzerv',
                 'Tészta / Rizs',

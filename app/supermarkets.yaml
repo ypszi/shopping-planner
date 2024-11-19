@@ -12,6 +12,7 @@ Auchan - Csömör:
     - Üditő
     - Nemzetközi
     - Olaj / Ecet
+    - Magvak
     - Fűszer
     - Konzerv
     - Tészta / Rizs
@@ -26,6 +27,7 @@ Auchan - Csömör:
 
 Lidl - Kistarcsa:
   categories:
+    - Magvak
     - Zöldség / Gyümölcs
     - Konzerv
     - Fűszer
@@ -67,7 +69,7 @@ Tesco - Fogarasi:
     - Konzerv
     - Fűszer
     - Sütés / Sütemény
-    - Édesség / Keksz
+    - Magvak
     - Üditő
   categoryMap:
     Bor: Üditő
