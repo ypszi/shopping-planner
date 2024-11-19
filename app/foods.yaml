@@ -405,7 +405,7 @@ Csirke gratin olaszosan:
     - name: Kakukkfű
       mennyiseg: 1 csipet
     - name: Só
-      mennyiseg: 1 csipet
+      mennyiseg: 0.5 tk
     - name: Bors
       mennyiseg: 1 csipet
     - name: Tej
@@ -533,6 +533,33 @@ Csőröge Fánk:
     - A kipihent tésztát kinyújtjuk és rombusz alakúra vágjuk.
     - A rombuszra vágott tésztát formázzuk és olajban hirtelen kisütjük.
 
+Cukkini darált hússal töltve:
+  defaultPortion: 2
+  receptUrl: https://www.mindmegette.hu/recept/cukkini-daralt-hussal-toltve
+  thumbnailUrl: https://cdn.mindmegette.hu/2024/04/CPNzrQ9OGg5zZBJ7EOMmSbkBzZu7c5pjpGj19EeJBMY/fill/0/0/no/1/aHR0cHM6Ly9jbXNjZG4uYXBwLmNvbnRlbnQucHJpdmF0ZS9jb250ZW50LzVlMmZlMTg4N2JjZDRhZDVhOTQ5YTk2ZjE3NDI0ODMw.jpg
+  tags:
+    - új
+    - ebéd
+    - vacsora
+  ingredients:
+    - name: Cukkini
+      mennyiseg: 2 db
+    - name: Só
+      mennyiseg: 1 tk
+    - name: Olívaolaj
+      mennyiseg: 1 ek
+    - name: Vöröshagyma
+      mennyiseg: 1 db
+    - name: Darált hús
+      mennyiseg: 40 dkg
+    - name: Bors
+      mennyiseg: 2 csipet
+    - name: Fűszer paprika
+      mennyiseg: 1 tk
+    - name: Tejföl
+      mennyiseg: 300 g
+    - name: Gouda sajt
+      mennyiseg: 30 dkg
 
 Diós-almás sajtsaláta:
   defaultPortion: 6
