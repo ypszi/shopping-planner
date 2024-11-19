@@ -2319,6 +2319,35 @@ Tonhalas tabulé:
     - name: Bulgur
       mennyiseg: 150 g
 
+Túrógombóc:
+  defaultPortion: 4
+  receptUrl: https://www.nosalty.hu/recept/turogomboc-3
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/Rj/xk/turogomboc-3.jpg?w=1400&fit=crop&s=ee701aedb5a25890ed35ed647f9051b6
+  tags:
+    - új
+    - ebéd
+    - desszert
+    - suli
+  ingredients:
+    - name: Túró
+      mennyiseg: 50 dkg
+    - name: Tojás
+      mennyiseg: 2 db
+    - name: Búzadara
+      mennyiseg: 5 ek
+    - name: Só
+      mennyiseg: 1 csipet
+    - name: Cukor
+      mennyiseg: 1 ek
+    - name: Zsemlemorzsa
+      mennyiseg: 20 dkg
+    - name: Napraforgóolaj
+      mennyiseg: 2.5 ek
+    - name: Tejföl
+      mennyiseg: 175 g
+    - name: Porcukor
+      mennyiseg: 4 ek
+
 Túrós tészta:
   defaultPortion: 4
   receptUrl: https://www.nosalty.hu/recept/turos-teszta-alaprecept

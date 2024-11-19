@@ -28,6 +28,7 @@ class AvailableFoodTagFactoryTest extends TestCase
     {
         $this->assertEquals(
             [
+                'desszert',
                 'ebéd',
                 'köret',
                 'saláta',
