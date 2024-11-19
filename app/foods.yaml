@@ -94,6 +94,42 @@ Ananászos csirke:
       - Főzzük, míg a csirke megpuhul, ekkor adjuk hozzá a megpucolt, felkockázott ananászt. 
       - Néhány percig főzzük, majd tálaláskor szórjunk rá friss korianderleveleket, és kínáljunk mellé köretnek jázminrizst.
 
+Avokádós tonhalsaláta madársalátával:
+  defaultPortion: 4
+  receptUrl: https://www.nosalty.hu/recept/avokados-tonhalsalata-madarsalataval
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/H1/dD/avokados-tonhalsalata-madarsalataval.jpeg?w=1200&fit=crop&s=6cb29895abee904f2177ecc38b231a10
+  tags:
+    - új
+    - vacsora
+    - saláta
+  ingredients:
+    - name: Tojás
+      mennyiseg: 4 db
+    - name: Lime
+      mennyiseg: 1 db
+    - name: Só
+      mennyiseg: 0.5 tk
+    - name: Bors
+      mennyiseg: 1 csipet
+    - name: Cukor
+      mennyiseg: 1 csipet
+    - name: Napraforgóolaj
+      mennyiseg: 3 ek
+    - name: Tonhal (konzerv)
+      mennyiseg: 280 g
+    - name: Madársaláta
+      mennyiseg: 120 g
+    - name: Jégsaláta
+      mennyiseg: 0.5 db
+    - name: Paradicsom
+      mennyiseg: 4 db
+    - name: Avokádó
+      mennyiseg: 2 db
+    - name: Lilahagyma
+      mennyiseg: 1 db
+  comments:
+    - 4 ek Limelé
+
 Baconbe göngyölt mozzarellás csirkemell:
   defaultPortion: 4
   receptUrl: https://www.mindmegette.hu/baconbe-gongyolt-mozzarellas-csirkemell.recept/
