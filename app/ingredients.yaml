@@ -393,6 +393,10 @@ Dió:
   kategoria: Zöldség / Gyümölcs
 Édesburgonya:
   kategoria: Zöldség / Gyümölcs
+  mertekegysegPreference: dkg
+  storage:
+    max: 200
+    step: 5
 Fehérrépa:
   kategoria: Zöldség / Gyümölcs
 Fokhagyma:
