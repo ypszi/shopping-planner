@@ -1424,6 +1424,49 @@ Muffin:
   comments:
     - 1 csomag sütőpor
 
+Nyári saláta surimivel:
+  defaultPortion: 4
+  receptUrl: https://www.mindmegette.hu/recept/nyari-salata-surimivel
+  thumbnailUrl: https://cdn.mindmegette.hu/2024/04/sUXA7BE0lzq_ZFli7ZipXmW4up3AyQuHVDl7eh6ZNAc/fill/0/0/no/1/aHR0cHM6Ly9jbXNjZG4uYXBwLmNvbnRlbnQucHJpdmF0ZS9jb250ZW50LzQzODYwN2RmMjkxNTQwYWM5NjI4YmMyY2ZkYzgxMGVj.jpg
+  tags:
+    - új
+    - vacsora
+    - saláta
+  ingredients:
+    - name: Petrezselyem
+      mennyiseg: 1 tk
+    - name: Kígyóuborka
+      mennyiseg: 1 db
+    - name: Koktélparadicsom
+      mennyiseg: 20 db
+    - name: Avokádó
+      mennyiseg: 1 db
+    - name: Kukorica (konzerv)
+      mennyiseg: 200 g
+    - name: Lilahagyma
+      mennyiseg: 1 db
+    - name: Surimi
+      mennyiseg: 100 g
+    - name: Olívaolaj
+      mennyiseg: 1 dl
+    - name: Fokhagyma
+      mennyiseg: 1 gerezd
+    - name: Citrom
+      mennyiseg: 0.5 db
+    - name: Só
+      mennyiseg: 0.5 tk
+    - name: Bors
+      mennyiseg: 1 csipet
+  comments:
+    - elkészítés::
+      - A surimis nyári saláta elkészítéséhez a felaprított petrezselymet beleszórjuk egy tálba. 
+      - Hozzáadjuk a kockára vágott uborkát, a félbevágott paradicsomokat és a megpucolt és feldarabolt avokádót.
+      - A kukoricát a zöldségekhez adjuk, majd megszórjuk az apróra vágott lila hagymával. 
+      - Ezután beletesszük a karikára vágott surimirudakat.
+      - Elkészítjük az öntetet:: 
+        - összekeverjük az olívaolajat a zúzott fokhagymával és a citrom kifacsart levével. 
+      - Meglocsoljuk a salátát az öntettel, megsózzuk, megborsozzuk, és alaposan összekeverjük.
+
 Olaszos csirke:
   defaultPortion: 4
   receptUrl: https://www.nosalty.hu/recept/olaszos-csirke-tepsiben
