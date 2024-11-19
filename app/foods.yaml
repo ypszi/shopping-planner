@@ -1432,6 +1432,7 @@ Nyári saláta surimivel:
     - új
     - vacsora
     - saláta
+    - suli
   ingredients:
     - name: Petrezselyem
       mennyiseg: 1 tk
@@ -2363,6 +2364,7 @@ Vitaminsaláta madársalátával:
   tags:
     - új
     - saláta
+    - suli
   ingredients:
     - name: Madársaláta
       mennyiseg: 40 g
