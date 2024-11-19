@@ -1645,6 +1645,38 @@ Rizskoch:
     - porcukor ízlés szerint
     - baracklekvár ízlés szerint
 
+Sárgarépás kínai kel saláta:
+  defaultPortion: 2
+  receptUrl: https://www.nosalty.hu/recept/sargarepas-kinaikel-salata
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/xS/34/sargarepas-kinaikel-salata.jpeg?w=1200&fit=crop&s=5628952f81603c890ba36aeb1f30f44a
+  tags:
+    - saláta
+  ingredients:
+    - name: Kínai kel
+      mennyiseg: 200 g
+    - name: Sárgarépa
+      mennyiseg: 200 g
+    - name: Alma
+      mennyiseg: 1 db
+    - name: Natúr joghurt
+      mennyiseg: 100 g
+    - name: Citrom
+      mennyiseg: 0.5 db
+    - name: Só
+      mennyiseg: 1 csipet
+    - name: Bors
+      mennyiseg: 1 csipet
+    - name: Cukor
+      mennyiseg: 1 csipet
+    - name: Metélőhagyma
+      mennyiseg: 5 db
+  comments:
+    - 0.5 csokor Metélőhagyma
+    - elkészítés::
+      - A kínai kelt vékony csíkokra vágjuk. A sárgarépát megpucoljuk, mossuk, durvára reszeljük. Az almát durvára reszeljük. Az egészet egy edénybe tesszük.
+      - Az öntethez a joghurtot elkeverjük a citromlével. Sóval, borssal, cukorral ízesítjük, majd hozzákeverjük vékony gyűrűkre vágott metélőhagymát.
+      - Az öntetet a salátához adjuk, és összekavarjuk.
+
 Serpenyős csirkemell:
   defaultPortion: 4
   receptUrl: https://femina.hu/recept/serpenyos-csirkemell/
