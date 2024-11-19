@@ -378,6 +378,50 @@ Csirkemellpaprikás:
       - hozzáöntjük a tejszínt,
       - majd belekanalazzuk a tejfölt, elkeverjük, és még egyet forralunk rajta.
 
+Csirke gratin olaszosan:
+  defaultPortion: 2
+  receptUrl: https://www.nosalty.hu/recept/csirke-gratin-olaszosan
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/uO/DY/csirke-gratin-olaszosan.jpeg?w=1200&fit=crop&s=595fdaa3dfc54fbfafda4ba77aa2bfb1
+  tags:
+    - új
+    - ebéd
+  ingredients:
+    - name: Burgonya
+      mennyiseg: 300 g
+    - name: Csirkemell
+      mennyiseg: 300 g
+    - name: Kaliforniai paprika (piros)
+      mennyiseg: 1 db
+    - name: Olívaolaj
+      mennyiseg: 1 ek
+    - name: Fűszer paprika
+      mennyiseg: 1 tk
+    - name: Bazsalikom
+      mennyiseg: 1 csipet
+    - name: Oregánó
+      mennyiseg: 1 csipet
+    - name: Majoranna
+      mennyiseg: 1 csipet
+    - name: Kakukkfű
+      mennyiseg: 1 csipet
+    - name: Só
+      mennyiseg: 1 csipet
+    - name: Bors
+      mennyiseg: 1 csipet
+    - name: Tej
+      mennyiseg: 75 ml
+    - name: Habtejszín
+      mennyiseg: 75 ml
+    - name: Tojás
+      mennyiseg: 2 db
+    - name: Parmezán sajt
+      mennyiseg: 30 g
+    - name: Bazsalikom levél
+      mennyiseg: 6 db
+  comments:
+    - 1 tk Olasz fűszerkeverék:
+      - '1 csipet: Bazsalikom, Oregánó, Majoranna, Kakukkfű'
+
 Csirkemell rizstésztasalátával:
   defaultPortion: 4
   receptUrl: https://cookpad.com/hu/receptek/23903638-csirkemell-rizstesztasalataval
