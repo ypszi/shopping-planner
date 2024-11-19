@@ -361,6 +361,9 @@ Túró:
   kategoria: Tejtermék
 Vaj:
   kategoria: Tejtermék
+  storage:
+    max: 1000
+    step: 50
 
 # Üditő
 Sör:
