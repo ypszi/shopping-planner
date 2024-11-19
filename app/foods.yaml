@@ -1665,6 +1665,44 @@ Serpenyős csirkemell:
     - name: Bors
       mennyiseg: 0.5 mk
 
+Sertéspörkölt:
+  defaultPortion: 2
+  receptUrl: https://www.nosalty.hu/recept/sertesporkolt
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/PT/QQ/sertesporkolt.jpeg?w=1340&fit=crop&s=fcecb3b4596d6d5ada3fd068ebc0879a
+  tags:
+    - ebéd
+  ingredients:
+    - name: Sertés lapocka
+      mennyiseg: 25 dkg
+    - name: Paprika
+      mennyiseg: 2 db
+    - name: Paradicsom
+      mennyiseg: 2 db
+    - name: Vöröshagyma
+      mennyiseg: 1 db
+    - name: Fokhagyma
+      mennyiseg: 2 gerezd fokhagyma
+    - name: Sertészsír
+      mennyiseg: 1 ek sertészsír
+    - name: Fűszerkömény
+      mennyiseg: 1 tk
+    - name: Babérlevél
+      mennyiseg: 2 db
+    - name: Fűszer paprika
+      mennyiseg: 1 ek
+    - name: Bors
+      mennyiseg: 1 csipet
+    - name: Só
+      mennyiseg: 0.5 tk
+  comments:
+    - 5 dl Víz
+    - elkészítés::
+      - Egy magas falú edényben olvasszuk meg a zsírt, majd szórjuk bele a kockára vágott húst, amit sózzunk és borsozzunk, ízlésünknek megfelelően. Plusz az őrölt köményt se felejtsük el hozzáadni.
+      - Amikor a hús kifehéredett, öntsük hozzá a kockára vágott hagymát is, és kis idő múlva a zúzott fokhagymát is. Majd rövid ideig pároljuk őket együtt.
+      - A paradicsomot és a paprikát vágjuk apró kockákra, és egymás után hozzáönthetjük a húshoz. Közepes lángon hagyjuk, hogy levet eresszen az egész, ezután pedig öntsük fel a vízzel. Kicsit híg lesz az állaga, de mire a hús megpuhul, a víz is elfő!
+      - A babérlevelet dobjuk a pörkölthöz, majd a fűszerpaprikát is szórjuk bele. Azért jobb a főzés vége felé hozzáadni a pörkölthöz a paprikát, mert intenzívebb marad az íze így, mintha már az elején rászórtuk volna.
+      - Lassú tűzön addig főzzük a pörköltet, míg a hús megpuhul, aztán nincs más dolgunk mint tálalni, lehetőleg galuskával és savanyúsággal!
+
 Sörös tepsis sertés:
   defaultPortion: 4
   receptUrl: https://www.youtube.com/watch?v=zB5TtY-EtbQ
