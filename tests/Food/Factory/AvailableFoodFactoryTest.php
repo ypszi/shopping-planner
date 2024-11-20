@@ -47,13 +47,14 @@ class AvailableFoodFactoryTest extends TestCase
     public static function foodTagDataProvider(): array
     {
         return [
-            'reggeli'  => ['tags' => ['reggeli'], 'expectedCount' => 0],
-            'ebéd'     => ['tags' => ['ebéd'], 'expectedCount' => 7],
-            'vacsora'  => ['tags' => ['vacsora'], 'expectedCount' => 7],
-            'köret'    => ['tags' => ['köret'], 'expectedCount' => 2],
-            'saláta'   => ['tags' => ['saláta'], 'expectedCount' => 9],
-            'desszert' => ['tags' => ['desszert'], 'expectedCount' => 3],
-            'új'       => ['tags' => ['új'], 'expectedCount' => 13],
+            'reggeli'  => ['tags' => ['reggeli'], 'expectedCount' => 3],
+            'ebéd'     => ['tags' => ['ebéd'], 'expectedCount' => 53],
+            'vacsora'  => ['tags' => ['vacsora'], 'expectedCount' => 25],
+            'köret'    => ['tags' => ['köret'], 'expectedCount' => 10],
+            'leves'    => ['tags' => ['leves'], 'expectedCount' => 4],
+            'saláta'   => ['tags' => ['saláta'], 'expectedCount' => 13],
+            'desszert' => ['tags' => ['desszert'], 'expectedCount' => 13],
+            'új'       => ['tags' => ['új'], 'expectedCount' => 14],
             'suli'     => ['tags' => ['suli'], 'expectedCount' => 5],
         ];
     }
@@ -62,7 +63,7 @@ class AvailableFoodFactoryTest extends TestCase
     public function testListAvailableFoodsFilteredForMultipleTags(): void
     {
         $this->assertCount(
-            11,
+            60,
             $this->sut->listAvailableFoods(new FoodFilterInput(tags: ['reggeli', 'ebéd', 'vacsora'])),
             'Expectation failed for tags: "reggeli, ebéd, vacsora"'
         );

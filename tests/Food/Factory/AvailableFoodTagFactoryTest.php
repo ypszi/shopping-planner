@@ -31,6 +31,8 @@ class AvailableFoodTagFactoryTest extends TestCase
                 'desszert',
                 'ebéd',
                 'köret',
+                'leves',
+                'reggeli',
                 'saláta',
                 'suli',
                 'vacsora',
