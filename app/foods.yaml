@@ -1523,26 +1523,30 @@ Mézes-mustáros csirkemell:
       mennyiseg: 5 ek
 
 Muffin:
-  defaultPortion: 6
-  receptUrl: https://www.nosalty.hu/recept/legegyszerubb-muffin
-  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/Zy/Ao/legegyszerubb-muffin.jpg?w=1500&fit=crop&s=9cda1c5bf67410f4c572926c0a5de249
+  defaultPortion: 12
+  receptUrl: https://www.nosalty.hu/recept/egyszeru-muffin-alaprecept
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/FK/E4/egyszeru-muffin-alaprecept.jpeg?w=3000&fit=crop&s=ec0e81a6b32c611cdfcbdaaf13fe3a54
   tags:
     - desszert
   ingredients:
-    - name: Finomliszt
-      mennyiseg: 2 bögre
-    - name: Cukor
-      mennyiseg: 1 bögre
-    - name: Tej
-      mennyiseg: 250 ml
-    - name: Napraforgóolaj
-      mennyiseg: 125 ml
     - name: Tojás
-      mennyiseg: 1 db
+      mennyiseg: 2 db
+    - name: Cukor
+      mennyiseg: 100 g
+    - name: Vaj
+      mennyiseg: 120 g
+    - name: Tej
+      mennyiseg: 175 ml
+    - name: Finomliszt
+      mennyiseg: 250 g
+    - name: Vaníliás cukor
+      mennyiseg: 8 g
     - name: Sütőpor
-      mennyiseg: 7 g
+      mennyiseg: 2 tk
+    - name: Só
+      mennyiseg: 1 csipet
   comments:
-    - 1 csomag sütőpor
+    - 1 csomag Vaníliás cukor
 
 Nyári saláta surimivel:
   defaultPortion: 4
