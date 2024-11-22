@@ -229,9 +229,14 @@ Trappista sajt (füstölt):
 # Sütés / Sütemény
 Barna cukor:
   kategoria: Sütés / Sütemény
+  storage:
+    max: 3000
+    step: 100
 Cukor:
   kategoria: Sütés / Sütemény
-  mertekegysegPreference: kg
+  storage:
+    max: 3000
+    step: 100
 Élesztő:
   kategoria: Sütés / Sütemény
   storage:
