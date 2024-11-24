@@ -31,13 +31,7 @@
                                     value="{{ availableIngredientName }}"
                                     name="ingredient-{{ availableIngredientNameKey }}"
                                     class="form-check-input"
-                                    onchange="if (this.checked) {
-                                            document.getElementById('portion-{{ availableIngredientNameKey }}').disabled = '';
-                                            document.getElementById('measure-{{ availableIngredientNameKey }}').disabled = ''
-                                            } else {
-                                            document.getElementById('portion-{{ availableIngredientNameKey }}').disabled = 'disabled';
-                                            document.getElementById('measure-{{ availableIngredientNameKey }}').disabled = 'disabled';
-                                            }"
+                                    onchange="ingredientToggle(this, '{{ availableIngredientNameKey }}')"
                                     {% if availableIngredient.portion != 0 %}checked="checked"{% endif %}
                             >
                             <label for="{{ availableIngredientNameKey }}" class="form-check-label">{{ availableIngredientName }}</label>
@@ -55,7 +49,7 @@
                                     min="0"
                                     max="{{ ingredientMeasureMapByName[availableIngredient.name].max ?? ingredientMeasureMapByCategory[ingredientCategory].max }}"
                                     step="{{ ingredientMeasureMapByName[availableIngredient.name].step ?? ingredientMeasureMapByCategory[ingredientCategory].step }}"
-                                    oninput="document.getElementById('portion-output-{{ availableIngredientNameKey }}').value = '(' + (Math.round(this.value * 100) / 100) + ' {{ availableIngredient.measurePreference.value }})'"
+                                    oninput="ingredientValueChange(this, '{{ availableIngredientNameKey }}', '{{ availableIngredient.measurePreference.value }}')"
                                     {% if availableIngredient.portion == 0 %}disabled="disabled"{% endif %}
                             >
                             <input
@@ -85,6 +79,23 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <script>
     {% include 'dark-theme.js.twig' %}
+
+    function ingredientToggle(elem, availableIngredientNameKey) {
+        if (elem.checked) {
+            document.getElementById('portion-' + availableIngredientNameKey).disabled = '';
+            document.getElementById('measure-' + availableIngredientNameKey).disabled = ''
+        }
+        else {
+            document.getElementById('portion-' + availableIngredientNameKey).disabled = 'disabled';
+            document.getElementById('measure-' + availableIngredientNameKey).disabled = 'disabled';
+        }
+    }
+
+    function ingredientValueChange(elem, availableIngredientNameKey, measureUnit) {
+        document
+            .getElementById('portion-output-' + availableIngredientNameKey)
+            .value = '(' + (Math.round(elem.value * 100) / 100) + ' ' + measureUnit + ')'
+    }
 </script>
 </body>
 </html>
