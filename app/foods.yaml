@@ -2008,6 +2008,35 @@ Serpenyős csirkemell:
     - name: Bors
       mennyiseg: 0.5 mk
 
+Serpenyős tojásos krumpli:
+  defaultPortion: 4
+  receptUrl: https://cookpad.com/hu/receptek/16549980-serpenyos-krumpli
+  thumbnailUrl: https://img-global.cpcdn.com/recipes/637bc47b24660625/1200x630cq70/photo.jpg
+  tags:
+    - új
+    - ebéd
+  ingredients:
+    - name: Bacon (szeletelt)
+      mennyiseg: 200 g
+    - name: Étolaj
+      mennyiseg: 1 ek
+    - name: Zöldhagyma
+      mennyiseg: 2 db
+    - name: Karaj (szeletelt)
+      mennyiseg: 100 g
+    - name: Tejszín
+      mennyiseg: 1 dl
+    - name: Krumpli
+      mennyiseg: 1 kg
+    - name: Tojás
+      mennyiseg: 7 db
+    - name: Bors
+      mennyiseg: 1 mk
+    - name: Só
+      mennyiseg: 1 tk
+    - name: Petrezselyem
+      mennyiseg: 1 ek
+
 Serpenyős zöldséges darált hús:
   defaultPortion: 4
   receptUrl: https://cookpad.com/hu/receptek/22547786-daralt-husos-serpenyos-egytaletel
