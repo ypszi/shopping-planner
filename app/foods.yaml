@@ -2008,6 +2008,33 @@ Serpenyős csirkemell:
     - name: Bors
       mennyiseg: 0.5 mk
 
+Serpenyős fűszeres tejszínes pulykamell:
+  defaultPortion: 3
+  receptUrl: https://cookpad.com/hu/receptek/16605114-serpenyos-fuszeres-tejszines-pulykamell
+  thumbnailUrl: https://img-global.cpcdn.com/recipes/7f5c9824df57cd5b/1200x630cq70/photo.jpg
+  tags:
+    - új
+    - ebéd
+  ingredients:
+    - name: Pulykamell
+      mennyiseg: 400 g
+    - name: Tárkony
+      mennyiseg: 1 ek
+    - name: BBQ fűszerkeverék
+      mennyiseg: 1 tk
+    - name: Piros paprika
+      mennyiseg: 1 mk
+    - name: Cayenne bors
+      mennyiseg: 1 mk
+    - name: Olívaolaj
+      mennyiseg: 2 ek
+    - name: Mustár
+      mennyiseg: 1 tk
+    - name: Főzőtejszín
+      mennyiseg: 2 dl
+  comments:
+    - 2 dl Víz
+
 Serpenyős tojásos krumpli:
   defaultPortion: 4
   receptUrl: https://cookpad.com/hu/receptek/16549980-serpenyos-krumpli
