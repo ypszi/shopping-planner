@@ -30,7 +30,7 @@
                                     id="{{ availableIngredientNameKey }}"
                                     value="{{ availableIngredientName }}"
                                     name="ingredient-{{ availableIngredientNameKey }}"
-                                    class="form-check-input"
+                                    class="form-check-input ingredient-toggle"
                                     onchange="ingredientToggle(this, '{{ availableIngredientNameKey }}')"
                                     {% if availableIngredient.portion != 0 %}checked="checked"{% endif %}
                             >
@@ -45,12 +45,13 @@
                                     id="portion-{{ availableIngredientNameKey }}"
                                     value="{{ availableIngredient.portion }}"
                                     name="portion-{{ availableIngredientNameKey }}"
-                                    class="form-range"
+                                    class="form-range ingredient-portion"
                                     min="0"
                                     max="{{ ingredientMeasureMapByName[availableIngredient.name].max ?? ingredientMeasureMapByCategory[ingredientCategory].max }}"
                                     step="{{ ingredientMeasureMapByName[availableIngredient.name].step ?? ingredientMeasureMapByCategory[ingredientCategory].step }}"
                                     oninput="ingredientValueChange(this, '{{ availableIngredientNameKey }}', '{{ availableIngredient.measurePreference.value }}')"
                                     {% if availableIngredient.portion == 0 %}disabled="disabled"{% endif %}
+                                    data-default-value="{{ availableIngredient.portion }}"
                             >
                             <input
                                     type="hidden"
@@ -79,6 +80,27 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <script>
     {% include 'dark-theme.js.twig' %}
+
+    const beforeUnloadHandler = (event) => {
+        // Recommended
+        event.preventDefault();
+
+        // Included for legacy support, e.g. Chrome/Edge < 119
+        event.returnValue = true;
+    };
+
+    // TODO: create listener for each ingredient-toggle to remove this listener when disabled [peter.pecosz]
+    // Array.from(document.getElementsByClassName('ingredient-portion')).forEach((elem) => {
+    //     elem.addEventListener('input', (event) => {
+    //         console.log(event.currentTarget.disabled);
+    //
+    //         if (event.target.value !== event.currentTarget.dataset.defaultValue) {
+    //             window.addEventListener('beforeunload', beforeUnloadHandler);
+    //         } else {
+    //             window.removeEventListener('beforeunload', beforeUnloadHandler);
+    //         }
+    //     });
+    // });
 
     function ingredientToggle(elem, availableIngredientNameKey) {
         if (elem.checked) {

@@ -2385,12 +2385,26 @@ Tepsis Csirke Zöldséggel:
       - 1 gerezd Fokhagyma
 
 Tepsis édesburgonya:
-  defaultPortion: 4
+  defaultPortion: 2
+  receptUrl: https://sobors.hu/receptek/sutoben-sult-edesburgonya-recept/
+  thumbnailUrl: https://kep.index.hu/1/0/5405/54059/540593/54059345_04bc166a72c6e1ed92df0739b869c614_wm.jpg
   tags:
     - köret
   ingredients:
     - name: Édesburgonya
-      mennyiseg: 1 kg
+      mennyiseg: 500 g
+    - name: Keményítő
+      mennyiseg: 2 ek
+    - name: Só
+      mennyiseg: 0.5 tk
+    - name: Piros paprika
+      mennyiseg: 1 tk
+    - name: Rozmaring
+      mennyiseg: 0.5 tk
+    - name: Fokhagyma granulátum
+      mennyiseg: 0.5 tk
+    - name: Olívaolaj
+      mennyiseg: 3 ek
 
 Tepsis Krumpli:
   defaultPortion: 3
@@ -2481,7 +2495,6 @@ Tonhalas bulgur saláta:
   receptUrl: https://streetkitchen.hu/salata/tonhalas-tabule/
   thumbnailUrl: https://static.streetkitchen.hu/live/uploads/2019/01/tonhalas-tabouleh-kozepes-2.jpg
   tags:
-    - új
     - köret
     - saláta
     - vacsora
@@ -2493,7 +2506,6 @@ Tonhalas tabulé:
   receptUrl: https://streetkitchen.hu/salata/tonhalas-tabule/
   thumbnailUrl: https://static.streetkitchen.hu/live/uploads/2019/01/tonhalas-tabouleh-kozepes-2.jpg
   tags:
-    - új
     - köret
     - saláta
     - vacsora
