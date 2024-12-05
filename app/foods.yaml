@@ -2008,6 +2008,42 @@ Serpenyős csirkemell:
     - name: Bors
       mennyiseg: 0.5 mk
 
+Serpenyős zöldséges darált hús:
+  defaultPortion: 4
+  receptUrl: https://cookpad.com/hu/receptek/22547786-daralt-husos-serpenyos-egytaletel
+  thumbnailUrl: https://img-global.cpcdn.com/recipes/6a2d33698ef99cc1/1200x630cq70/photo.jpg
+  tags:
+    - új
+    - ebéd
+    - vacsora
+  ingredients:
+    - name: Darált hús
+      mennyiseg: 500 g
+    - name: Étolaj
+      mennyiseg: 3 ek
+    - name: Vöröshagyma
+      mennyiseg: 1 db
+    - name: Karfiol
+      mennyiseg: 200 g
+    - name: Brokkoli
+      mennyiseg: 200 g
+    - name: Sárgarépa
+      mennyiseg: 2 db
+    - name: Burgonya
+      mennyiseg: 200 g
+    - name: Édesburgonya
+      mennyiseg: 200 g
+    - name: Babérlevél
+      mennyiseg: 3 db
+    - name: Petrezselyem
+      mennyiseg: 1 ek
+    - name: Só
+      mennyiseg: 1 tk
+    - name: Bors
+      mennyiseg: 1 csipet
+    - name: Majoranna
+      mennyiseg: 1 csipet
+
 Sertéspörkölt:
   defaultPortion: 2
   receptUrl: https://www.nosalty.hu/recept/sertesporkolt
