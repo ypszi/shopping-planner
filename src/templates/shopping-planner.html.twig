@@ -31,7 +31,7 @@
         <div class="col-md-12">
                 <span
                         class="btn badge text-bg-secondary"
-                        onclick="window.location.href=window.location.origin">Reset</span>
+                        onclick="resetTags()">Reset</span>
             {% for tag in availableFoodTags %}
                 <span
                         class="btn badge {% if tag in selectedFoodTags %}text-bg-warning{% else %}text-bg-info{% endif %}"
@@ -100,6 +100,15 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <script>
     {% include 'dark-theme.js.twig' %}
+
+    function resetTags() {
+        const url = new URL(window.location.href);
+
+        url.searchParams.delete('tags[]');
+        window.location.href = url.toString();
+
+        return;
+    }
 
     function filterForTag(elem, selectedTags) {
         const url = new URL(window.location.href);
