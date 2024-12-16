@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 {% include 'head.html.twig' %}
-<body>
+<body onload="ingredientsInit()">
 <div class="container-fluid">
     <h1 id="top" class="display-6">Lássuk mi van otthon...</h1>
     <ul>
@@ -27,14 +27,14 @@
                             <input
                                     type="checkbox"
                                     role="switch"
-                                    id="{{ availableIngredientNameKey }}"
+                                    id="ingredient-{{ availableIngredientNameKey }}"
                                     value="{{ availableIngredientName }}"
                                     name="ingredient-{{ availableIngredientNameKey }}"
                                     class="form-check-input ingredient-toggle"
                                     onchange="ingredientToggle(this, '{{ availableIngredientNameKey }}')"
                                     {% if availableIngredient.portion != 0 %}checked="checked"{% endif %}
                             >
-                            <label for="{{ availableIngredientNameKey }}" class="form-check-label">{{ availableIngredientName }}</label>
+                            <label for="ingredient-{{ availableIngredientNameKey }}" class="form-check-label">{{ availableIngredientName }}</label>
                             <output id="portion-output-{{ availableIngredientNameKey }}">({{ availableIngredient.ingredientPortion }})</output>
                         </div>
                     </div>
@@ -49,7 +49,7 @@
                                     min="0"
                                     max="{{ ingredientMeasureMapByName[availableIngredient.name].max ?? ingredientMeasureMapByCategory[ingredientCategory].max }}"
                                     step="{{ ingredientMeasureMapByName[availableIngredient.name].step ?? ingredientMeasureMapByCategory[ingredientCategory].step }}"
-                                    oninput="ingredientValueChange(this, '{{ availableIngredientNameKey }}', '{{ availableIngredient.measurePreference.value }}')"
+                                    oninput="ingredientPortionChange(this, '{{ availableIngredientNameKey }}', '{{ availableIngredient.measurePreference.value }}')"
                                     {% if availableIngredient.portion == 0 %}disabled="disabled"{% endif %}
                                     data-default-value="{{ availableIngredient.portion }}"
                             >
@@ -66,6 +66,15 @@
             {% endfor %}
         {% endfor %}
 
+        <div class="mb-2">
+            <div class="row col-md-12">
+                <span id="changeset"></span>
+            </div>
+            <div class="row col-md-12">
+                <span id="original-values"></span>
+            </div>
+        </div>
+
         <div class="sticky-bottom">
             <div class="row justify-content-center sticky-bottom-btn-row">
                 <a href="/" class="btn btn-warning col-3 text-center" title="HOME">🏠</a>
@@ -81,7 +90,29 @@
 <script>
     {% include 'dark-theme.js.twig' %}
 
+    let initValues = {};
+    let changes = {};
+
+    function ingredientsInit() {
+        Array.from(document.getElementsByClassName('ingredient-toggle')).forEach((elem) => {
+            initValues[elem.id] = elem.checked;
+        });
+        Array.from(document.getElementsByClassName('ingredient-portion')).forEach((elem) => {
+            if (!elem.attributes.disabled) {
+                initValues[elem.id] = elem.value;
+            }
+        });
+    }
+
     const beforeUnloadHandler = (event) => {
+        let originalValues = {};
+        Object.keys(changes).forEach((key) => {
+            originalValues[key] = initValues[key];
+        });
+
+        document.getElementById('changeset').innerHTML = 'Changes: ' + JSON.stringify(changes);
+        document.getElementById('original-values').innerHTML = 'Original Values: ' + JSON.stringify(originalValues);
+
         // Recommended
         event.preventDefault();
 
@@ -89,20 +120,21 @@
         event.returnValue = true;
     };
 
-    // TODO: create listener for each ingredient-toggle to remove this listener when disabled [peter.pecosz]
-    // Array.from(document.getElementsByClassName('ingredient-portion')).forEach((elem) => {
-    //     elem.addEventListener('input', (event) => {
-    //         console.log(event.currentTarget.disabled);
-    //
-    //         if (event.target.value !== event.currentTarget.dataset.defaultValue) {
-    //             window.addEventListener('beforeunload', beforeUnloadHandler);
-    //         } else {
-    //             window.removeEventListener('beforeunload', beforeUnloadHandler);
-    //         }
-    //     });
-    // });
+    document.querySelectorAll('button[type=submit]').forEach((button) => {
+        button.addEventListener('click', () => {
+            window.removeEventListener('beforeunload', beforeUnloadHandler);
+        });
+    });
 
     function ingredientToggle(elem, availableIngredientNameKey) {
+        const changeKey = 'ingredient-' + availableIngredientNameKey;
+        changes[changeKey] = elem.checked;
+
+        if (initValues[changeKey] === elem.checked) {
+            delete changes[changeKey];
+            delete changes['portion-' + availableIngredientNameKey];
+        }
+
         if (elem.checked) {
             document.getElementById('portion-' + availableIngredientNameKey).disabled = '';
             document.getElementById('measure-' + availableIngredientNameKey).disabled = ''
@@ -111,12 +143,33 @@
             document.getElementById('portion-' + availableIngredientNameKey).disabled = 'disabled';
             document.getElementById('measure-' + availableIngredientNameKey).disabled = 'disabled';
         }
+
+        if (Object.keys(changes).length !== 0) {
+            window.addEventListener('beforeunload', beforeUnloadHandler);
+        }
+        else {
+            window.removeEventListener('beforeunload', beforeUnloadHandler);
+        }
     }
 
-    function ingredientValueChange(elem, availableIngredientNameKey, measureUnit) {
+    function ingredientPortionChange(elem, availableIngredientNameKey, measureUnit) {
         document
             .getElementById('portion-output-' + availableIngredientNameKey)
-            .value = '(' + (Math.round(elem.value * 100) / 100) + ' ' + measureUnit + ')'
+            .value = '(' + (Math.round(elem.value * 100) / 100) + ' ' + measureUnit + ')';
+
+        const changeKey = 'portion-' + availableIngredientNameKey;
+        changes[changeKey] = elem.value;
+
+        if (initValues[changeKey] === elem.value) {
+            delete changes[changeKey];
+        }
+
+        if (Object.keys(changes).length !== 0) {
+            window.addEventListener('beforeunload', beforeUnloadHandler);
+        }
+        else {
+            window.removeEventListener('beforeunload', beforeUnloadHandler);
+        }
     }
 </script>
 </body>

@@ -58,7 +58,7 @@
                                 onchange="foodSwitchChange(this, '{{ availableFoodNameKey }}')"
                                 {% if isAvailableFoodSelected %}checked="checked"{% endif %}
                         >
-                        <label for="{{ availableFoodNameKey }}" class="form-check-label">{{ availableFoodName }}</label>
+                        <label for="food-{{ availableFoodNameKey }}" class="form-check-label">{{ availableFoodName }}</label>
                         {% for tag in availableFood.tags %}
                             <span class="badge text-bg-info">{{ tag }}</span>
                         {% endfor %}
