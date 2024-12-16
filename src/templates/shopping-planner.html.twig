@@ -51,13 +51,11 @@
                         <input
                                 type="checkbox"
                                 role="switch"
-                                id="{{ availableFoodNameKey }}"
+                                id="food-{{ availableFoodNameKey }}"
                                 value="{{ availableFoodName }}"
                                 name="food-{{ availableFoodNameKey }}"
                                 class="form-check-input"
-                                onchange="this.checked
-                                        ? document.getElementById('portion-{{ availableFoodNameKey }}').disabled = ''
-                                        : document.getElementById('portion-{{ availableFoodNameKey }}').disabled = 'disabled'"
+                                onchange="foodSwitchChange(this, '{{ availableFoodNameKey }}')"
                                 {% if isAvailableFoodSelected %}checked="checked"{% endif %}
                         >
                         <label for="{{ availableFoodNameKey }}" class="form-check-label">{{ availableFoodName }}</label>
@@ -79,7 +77,9 @@
                                 max="12"
                                 step="1"
                                 {% if not isAvailableFoodSelected %}disabled="disabled"{% endif %}
-                                oninput="document.getElementById('portion-output-{{ availableFoodNameKey }}').value = '(' + this.value + ' Adag)'"
+                                oninput="foodPortionChange(this, '{{ availableFoodNameKey }}')"
+                                onmouseup="foodPortionMouseUp(this, '{{ availableFoodNameKey }}')"
+                                ontouchend="foodPortionMouseUp(this, '{{ availableFoodNameKey }}')"
                         >
                     </div>
                 </div>
@@ -128,6 +128,64 @@
         url.searchParams.append('tags[]', tags);
 
         window.location.href = url.toString();
+    }
+
+    function foodSwitchChange(elem, availableFoodNameKey) {
+        const food = elem.value;
+        const portion = document.getElementById('portion-' + availableFoodNameKey).value;
+        const url = new URL(window.location.href);
+
+        if (elem.checked) {
+            url.searchParams.append('food-' + availableFoodNameKey, food);
+            url.searchParams.append('portion-' + availableFoodNameKey, portion);
+
+            document.getElementById('portion-' + availableFoodNameKey).disabled = '';
+        }
+        else {
+            url.searchParams.delete('food-' + availableFoodNameKey, food);
+            url.searchParams.delete('portion-' + availableFoodNameKey, portion);
+
+            document.getElementById('portion-' + availableFoodNameKey).disabled = 'disabled';
+        }
+
+        window.location.href = url.toString();
+    }
+
+    function foodPortionChange(elem, availableFoodNameKey) {
+        const portion = elem.value;
+
+        document.getElementById('portion-output-' + availableFoodNameKey).value = '(' + portion + ' Adag)';
+    }
+
+    function foodPortionMouseUp(elem, availableFoodNameKey) {
+        const food = document.getElementById('food-' + availableFoodNameKey).value;
+        const portion = elem.value;
+        const url = new URL(window.location.href);
+        let update = false;
+
+        update = update || updateUrlSearchParams('food-' + availableFoodNameKey, food, url);
+        update = update || updateUrlSearchParams('portion-' + availableFoodNameKey, portion, url);
+
+        if (update) {
+            window.location.href = url.toString();
+        }
+    }
+
+    function updateUrlSearchParams(name, value, url) {
+        const searchParam = url.searchParams.get(name);
+
+        if (searchParam && searchParam === value) {
+            return false;
+        }
+
+        if (searchParam) {
+            url.searchParams.set(name, value);
+        }
+        else {
+            url.searchParams.append(name, value);
+        }
+
+        return true;
     }
 </script>
 </body>
