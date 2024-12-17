@@ -1310,6 +1310,30 @@ Krumplipüré:
   comments:
     - 1 dl tejföl vagy 2 dl tej
 
+Kukoricasaláta:
+  defaultPortion: 2
+  receptUrl: https://www.nosalty.hu/recept/kukoricasalata-fahej-konyhajabol
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/bb/Ap/kukoricasalata-fahej-konyhajabol.jpeg?w=1200&fit=crop&s=f6e3083bda88ce8c9955d313e8dc0500
+  tags:
+    - saláta
+  ingredients:
+    - name: Kukorica (konzerv)
+      mennyiseg: 140 g
+    - name: Vöröshagyma
+      mennyiseg: 1 db
+    - name: Petrezselyem
+      mennyiseg: 1 tk
+    - name: Majonéz
+      mennyiseg: 2 ek
+    - name: Tejföl
+      mennyiseg: 175 g
+    - name: Só
+      mennyiseg: 1 csipet
+    - name: Cukor
+      mennyiseg: 0.5 tk
+    - name: Bors
+      mennyiseg: 0.5 csipet
+
 Lazac:
   defaultPortion: 2
   receptUrl: https://www.nosalty.hu/recept/lazac-egyszeruen
