@@ -1520,6 +1520,46 @@ Mézes-chilis csirkesaláta:
       - 1 csipet Bors
       - 1 gerezd Fokhagyma
 
+Mézeskalács:
+  defaultPortion: 6
+  receptUrl: https://www.nosalty.hu/recept/karacsonyi-rogton-puha-mezeskalacs
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/ey/IB/karacsonyi-rogton-puha-mezeskalacs.jpg?w=1500&fit=crop&s=95a56b361a6074d7d70b18f399d663f7
+  tags:
+    - desszert
+  ingredients:
+#    - tészta
+    - name: Finomliszt
+      mennyiseg: 1 kg
+    - name: Porcukor
+      mennyiseg: 30 dkg
+    - name: Szódabikarbóna
+      mennyiseg: 3 tk
+    - name: Mézeskalács fűszerkeverék
+      mennyiseg: 14 g
+    - name: Margarin
+      mennyiseg: 30 dkg
+    - name: Méz
+      mennyiseg: 250 ml
+    - name: Tojás
+      mennyiseg: 3 db
+#    - máz
+    - name: Tojás
+      mennyiseg: 2 db
+    - name: Porcukor
+      mennyiseg: 30 dkg
+  comments:
+    - tészta::
+      - 1 kg finomliszt
+      - 30 dkg porcukor
+      - 3 teáskanál szódabikarbóna
+      - 14 g mézeskalács fűszerkeverék (1 tasak)
+      - 30 dkg margarin
+      - 250 ml méz
+      - 3 db tojás
+    - máz::
+      - 2 db tojásfehérje
+      - 30 dkg porcukor
+
 Mézes-mustáros csirkemell:
   defaultPortion: 2
   receptUrl: https://www.mindmegette.hu/mezes-mustaros-csirkemell-video.recept/

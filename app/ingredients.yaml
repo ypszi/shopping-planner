@@ -101,6 +101,8 @@ Majonéz:
     step: 50
 Majoranna:
   kategoria: Fűszer
+Mézeskalács fűszerkeverék:
+  kategoria: Fűszer
 Mustár:
   kategoria: Fűszer
   storage:
@@ -366,6 +368,7 @@ Görög joghurt:
   kategoria: Tejtermék
 Kefír:
   kategoria: Tejtermék
+Margarin: Vaj
 Natúr joghurt:
   kategoria: Tejtermék
 Tejföl:
