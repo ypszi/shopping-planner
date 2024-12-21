@@ -30,6 +30,7 @@ class AvailableFoodTagFactoryTest extends TestCase
             [
                 'desszert',
                 'ebéd',
+                'ital',
                 'köret',
                 'leves',
                 'reggeli',

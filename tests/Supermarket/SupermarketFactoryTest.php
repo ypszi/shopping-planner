@@ -37,6 +37,7 @@ class SupermarketFactoryTest extends TestCase
                 'Hús',
                 'Felvágott',
                 'Sütés / Sütemény',
+                'Bor',
                 'Üditő',
                 'Nemzetközi',
                 'Olaj / Ecet',

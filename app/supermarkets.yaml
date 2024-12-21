@@ -9,6 +9,7 @@ Auchan - Csömör:
     - Hús
     - Felvágott
     - Sütés / Sütemény
+    - Bor
     - Üditő
     - Nemzetközi
     - Olaj / Ecet
@@ -17,7 +18,6 @@ Auchan - Csömör:
     - Konzerv
     - Tészta / Rizs
   categoryMap:
-    Bor: Üditő
     Olaj: Olaj / Ecet
     Ecet: Olaj / Ecet
     Tartós élelmiszer: Tészta / Rizs

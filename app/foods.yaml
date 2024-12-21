@@ -797,6 +797,28 @@ Fokhagymával és mézzel sült sárgarépa:
     - name: Bors
       mennyiseg: 1 csipet
 
+Forralt bor (gyümölcsös-fűszeres):
+  defaultPortion: 4
+  receptUrl: https://www.nosalty.hu/recept/forralt-bor-fuszer-narancs-alma
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/dN/Sz/forralt-bor-fuszer-narancs-alma.jpg?w=3000&fit=crop&s=35d7ff2b296f30db4eb7b136c74efe0e
+  tags:
+    - ital
+  ingredients:
+    - name: Narancslé
+      mennyiseg: 2 dl
+    - name: Fahéjrúd
+      mennyiseg: 2 db
+    - name: Csillagánizs
+      mennyiseg: 3 db
+    - name: Szegfűszeg
+      mennyiseg: 8 db
+    - name: Vörösbor
+      mennyiseg: 7 dl
+    - name: Alma
+      mennyiseg: 1 db
+    - name: Narancs
+      mennyiseg: 1 db
+
 Frankfurti leves:
   defaultPortion: 8
   receptUrl: https://www.nosalty.hu/recept/frankfurti-leves-egyszeruen

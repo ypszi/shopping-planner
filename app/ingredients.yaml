@@ -51,6 +51,8 @@ Chili:
   kategoria: Fűszer
 Citrombors:
   kategoria: Fűszer
+Csillagánizs:
+  kategoria: Fűszer
 Curry:
   kategoria: Fűszer
 Erőleves kocka:
@@ -61,6 +63,9 @@ Erőleves kocka:
     step: 1
 Fahéj:
   kategoria: Fűszer
+Fahéj (egész):
+  kategoria: Fűszer
+Fahéjrúd: Fahéj (egész)
 Fehér bors:
   kategoria: Fűszer
 Fokhagymapor:
@@ -124,6 +129,8 @@ Só:
     max: 2000
     step: 100
 Szódabikarbóna:
+  kategoria: Fűszer
+Szegfűszeg:
   kategoria: Fűszer
 Szerecsendió:
   kategoria: Fűszer
@@ -391,6 +398,8 @@ Vaj:
     step: 50
 
 # Üditő
+Narancslé:
+  kategoria: Üditő
 Sör:
   kategoria: Üditő
 Szódavíz:
@@ -469,6 +478,8 @@ Madársaláta:
     max: 300
     step: 50
 Metélőhagyma:
+  kategoria: Zöldség / Gyümölcs
+Narancs:
   kategoria: Zöldség / Gyümölcs
 Pak choi:
   kategoria: Zöldség / Gyümölcs
