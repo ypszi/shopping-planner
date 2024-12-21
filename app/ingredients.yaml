@@ -29,9 +29,12 @@ Bacon (szeletelt):
   kategoria: Felvágott
 Karaj (szeletelt):
   kategoria: Felvágott
+Kenyérszalonna: Zsírszalonna
 Kolbász:
   kategoria: Felvágott
 Virsli:
+  kategoria: Felvágott
+Zsírszalonna:
   kategoria: Felvágott
 
 # Fűszer
@@ -322,6 +325,7 @@ Rizs:
   kategoria: Tartós élelmiszer
 Spagetti tészta:
   kategoria: Tartós élelmiszer
+Sűrített paradicsom: Paradicsom püré
 Szezámmag:
   kategoria: Tartós élelmiszer
 Tagliatelle tészta:
@@ -449,6 +453,8 @@ Kaliforniai paprika (piros):
 Kaliforniai paprika (sárga):
   kategoria: Zöldség / Gyümölcs
 Kaliforniai paprika (zöld):
+  kategoria: Zöldség / Gyümölcs
+Kápia paprika:
   kategoria: Zöldség / Gyümölcs
 Káposzta:
   kategoria: Zöldség / Gyümölcs

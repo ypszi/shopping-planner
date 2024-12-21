@@ -2604,7 +2604,7 @@ Tepsis Krumpli:
     - name: Napraforgóolaj
       mennyiseg: 1 dl
 
-Töltött káposzta:
+Töltött káposzta (klasszikus):
   defaultPortion: 8
   receptUrl: https://www.nosalty.hu/recept/klasszikus-toltott-kaposzta
   thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/qN/ou/klasszikus-toltott-kaposzta.jpeg?w=1340&fit=crop&s=8bba928ac80f99b27fab6f8799558d74
@@ -2637,6 +2637,87 @@ Töltött káposzta:
       mennyiseg: 20 dkg
     - name: Sertészsír
       mennyiseg: 1 ek
+    - name: Paradicsom püré
+      mennyiseg: 400 ml
+
+Töltött káposzta (saját):
+  defaultPortion: 8
+  receptUrl: https://www.nosalty.hu/recept/szabolcsi-toltott-kaposzta-paradicsomos
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/Jr/HK/szabolcsi-toltott-kaposzta-paradicsomos.jpg?w=4000&fit=crop&s=5a904fda1bf258e274ef28602d92916f
+  tags:
+    - ebéd
+  ingredients:
+    - name: Káposzta
+      mennyiseg: 1 db
+    - name: Sertészsír
+      mennyiseg: 1 ek
+    - name: Vöröshagyma
+      mennyiseg: 3 db
+    - name: Fokhagyma
+      mennyiseg: 4 gerezd
+    - name: Kolbász
+      mennyiseg: 20 dkg
+    - name: Só
+      mennyiseg: 2 tk
+    - name: Bors
+      mennyiseg: 3 csipet
+    - name: Fűszerkömény
+      mennyiseg: 2 tk
+    - name: Piros paprika
+      mennyiseg: 1 ek
+    - name: Darált hús
+      mennyiseg: 800 g
+    - name: Rizs
+      mennyiseg: 150 g
+    - name: Napraforgóolaj
+      mennyiseg: 2 ek
+    - name: Sűrített paradicsom
+      mennyiseg: 200 g
+    - name: Kolozsvári szalonna
+      mennyiseg: 350 g
+  comments:
+    - 2 recept keveréke::
+      - https://www.nosalty.hu/recept/szabolcsi-toltott-kaposzta-paradicsomos
+      - https://www.nosalty.hu/recept/klasszikus-toltott-kaposzta
+
+Töltött káposzta (szabolcsi):
+  defaultPortion: 8
+  receptUrl: https://www.nosalty.hu/recept/szabolcsi-toltott-kaposzta-paradicsomos
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/Jr/HK/szabolcsi-toltott-kaposzta-paradicsomos.jpg?w=4000&fit=crop&s=5a904fda1bf258e274ef28602d92916f
+  tags:
+    - ebéd
+  ingredients:
+    - name: Káposzta
+      mennyiseg: 1 db
+    - name: Kenyérszalonna
+      mennyiseg: 150 g
+    - name: Vöröshagyma
+      mennyiseg: 3 db
+    - name: Fokhagyma
+      mennyiseg: 4 gerezd
+    - name: Kápia paprika
+      mennyiseg: 3 db
+    - name: Só
+      mennyiseg: 2 tk
+    - name: Bors
+      mennyiseg: 3 csipet
+    - name: Fűszerkömény
+      mennyiseg: 2 tk
+    - name: Piros paprika
+      mennyiseg: 1 ek
+    - name: Darált hús
+      mennyiseg: 800 g
+    - name: Rizs
+      mennyiseg: 150 g
+    - name: Napraforgóolaj
+      mennyiseg: 2 ek
+    - name: Sűrített paradicsom
+      mennyiseg: 200 g
+    - name: Kolozsvári szalonna
+      mennyiseg: 350 g
+  comments:
+    - ez a recept nem ír savanyú káposztát
+    - 1.5 l víz
 
 Tonhalas babsaláta:
   defaultPortion: 2
