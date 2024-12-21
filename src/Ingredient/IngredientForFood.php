@@ -51,13 +51,31 @@ class IngredientForFood extends Ingredient
         return $this->measure;
     }
 
-    public function ingredientPortion(): string
-    {
-        return trim(sprintf('%.2f %s', $this->portion, $this->measure?->value ?? $this->measurePreference()->value));
-    }
-
     public function __toString(): string
     {
         return trim(sprintf('%s %s', $this->ingredientPortion(), static::name()));
+    }
+
+    private function ingredientPortion(): string
+    {
+        $measure = $this->measure?->value ?? $this->measurePreference()->value;
+
+        if ($this->portion == (int)$this->portion) {
+            return sprintf('%d %s', $this->portion, $measure);
+        }
+
+        return sprintf(
+            '%s %s',
+            $this->humanReadablePrecision($this->portion),
+            $measure
+        );
+    }
+
+    private function humanReadablePrecision(float $number): string
+    {
+        return rtrim(
+            sprintf('%.2f', round($number, 2)),
+            '0'
+        );
     }
 }

@@ -89,9 +89,9 @@ class SupermarketTest extends TestCase
                 [
                     [
                         '',
-                        '1.00 l Ecet',
+                        '1 l Ecet',
                         '',
-                        '1.00 db Tojás',
+                        '1 db Tojás',
                         '',
                     ],
                 ]
@@ -134,9 +134,9 @@ class SupermarketTest extends TestCase
                     $this->testFood->name() => [
                         [
                             '',
-                            '1.00 l Ecet',
+                            '1 l Ecet',
                             '',
-                            '1.00 db Tojás',
+                            '1 db Tojás',
                             '',
                         ],
                     ],

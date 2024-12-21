@@ -111,6 +111,11 @@ class Food
         return $this->comments;
     }
 
+    public function __toString(): string
+    {
+        return sprintf('%s (%d adag)', $this->name(), $this->portion);
+    }
+
     protected function decorateNoSaltyRecipeUrl(string $recipeUrl): string
     {
         $urlParts = parse_url($recipeUrl);
@@ -123,11 +128,6 @@ class Food
         }
 
         return $recipeUrl;
-    }
-
-    public function __toString(): string
-    {
-        return sprintf('%s (%d adag)', $this->name(), $this->portion);
     }
 
     /**

@@ -37,7 +37,7 @@ class IngredientFactoryTest extends TestCase
         $this->assertEquals('Fűszer', $ingredient->category());
         $this->assertEquals(Measure::DKG, $ingredient->measure());
         $this->assertEquals(Measure::G, $ingredient->measurePreference());
-        $this->assertEquals('4.00 dkg Bors', (string)$ingredient);
+        $this->assertEquals('4 dkg Bors', (string)$ingredient);
     }
 
     #[Test]
@@ -56,6 +56,6 @@ class IngredientFactoryTest extends TestCase
         $this->assertEquals('Olaj', $ingredient->category());
         $this->assertEquals(Measure::DL, $ingredient->measure());
         $this->assertEquals(Measure::L, $ingredient->measurePreference());
-        $this->assertEquals('1.00 dl Napraforgóolaj', (string)$ingredient);
+        $this->assertEquals('1 dl Napraforgóolaj', (string)$ingredient);
     }
 }
