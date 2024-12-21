@@ -51,12 +51,7 @@ class IngredientForFood extends Ingredient
         return $this->measure;
     }
 
-    public function __toString(): string
-    {
-        return trim(sprintf('%s %s', $this->ingredientPortion(), static::name()));
-    }
-
-    private function ingredientPortion(): string
+    public function ingredientPortion(): string
     {
         $measure = $this->measure?->value ?? $this->measurePreference()->value;
 
@@ -69,6 +64,11 @@ class IngredientForFood extends Ingredient
             $this->humanReadablePrecision($this->portion),
             $measure
         );
+    }
+
+    public function __toString(): string
+    {
+        return trim(sprintf('%s %s', $this->ingredientPortion(), static::name()));
     }
 
     private function humanReadablePrecision(float $number): string
