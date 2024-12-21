@@ -148,7 +148,7 @@
             document.getElementById('portion-' + availableFoodNameKey).disabled = 'disabled';
         }
 
-        window.location.href = url.toString();
+        window.history.pushState(null, '', url.toString());
     }
 
     function foodPortionChange(elem, availableFoodNameKey) {
@@ -167,7 +167,7 @@
         update = update || updateUrlSearchParams('portion-' + availableFoodNameKey, portion, url);
 
         if (update) {
-            window.location.href = url.toString();
+            window.history.pushState(null, '', url.toString());
         }
     }
 
