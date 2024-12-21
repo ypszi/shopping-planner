@@ -373,6 +373,9 @@ Natúr joghurt:
   kategoria: Tejtermék
 Tejföl:
   kategoria: Tejtermék
+  storage:
+    max: 1500
+    step: 25
 Tojás:
   kategoria: Tejtermék
   mertekegysegPreference: db
