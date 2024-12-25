@@ -36,20 +36,24 @@ readonly class ShoppingPlannerAction
         $queryParams        = $request->getQueryParams();
         $defaultSupermarket = $queryParams['supermarket'] ?? Supermarket::DEFAULT;
         $tagsCriteria       = $queryParams['tags'] ?? null;
-        $availableFoods     = $this->availableFoodFactory->listAvailableFoods(new FoodFilterInput($tagsCriteria));
+        $foodFilterInput    = new FoodFilterInput($tagsCriteria);
+        $availableFoods     = $this->availableFoodFactory->listAvailableFoods($foodFilterInput);
         $availableFoodTags  = $this->availableFoodTagFactory->listAvailableFoodTags();
         $selectedFoods      = $this->getSelectedFoods($request);
 
         $response->getBody()->write(
-            $this->twig->render('shopping-planner.html.twig', [
-                'defaultSupermarket'    => $defaultSupermarket,
-                'availableSupermarkets' => $availableSupermarkets,
-                'availableFoods'        => $availableFoods,
-                'availableFoodTags'     => $availableFoodTags,
-                'selectedFoods'         => $selectedFoods,
-                'selectedFoodTags'      => $tagsCriteria ?? [],
-                'ingredientStorageUrl'  => $this->urlBuilder->buildFor($request, GetIngredientStorageAction::class),
-            ])
+            $this->twig->render(
+                'shopping-planner.html.twig',
+                [
+                    'defaultSupermarket'    => $defaultSupermarket,
+                    'availableSupermarkets' => $availableSupermarkets,
+                    'availableFoods'        => $availableFoods,
+                    'availableFoodTags'     => $availableFoodTags,
+                    'selectedFoods'         => $selectedFoods,
+                    'selectedFoodTags'      => $foodFilterInput->tags() ?? [],
+                    'ingredientStorageUrl'  => $this->urlBuilder->buildFor($request, GetIngredientStorageAction::class),
+                ]
+            )
         );
 
         return $response;
