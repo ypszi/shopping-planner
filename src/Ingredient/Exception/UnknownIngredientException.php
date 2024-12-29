@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace PeterPecosz\ShoppingPlanner\Food\Exception;
+namespace PeterPecosz\ShoppingPlanner\Ingredient\Exception;
 
 use DomainException;
 

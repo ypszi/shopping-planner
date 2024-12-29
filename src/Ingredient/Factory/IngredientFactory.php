@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace PeterPecosz\ShoppingPlanner\Ingredient\Factory;
 
-use PeterPecosz\ShoppingPlanner\Food\Exception\UnknownIngredientException;
+use PeterPecosz\ShoppingPlanner\Ingredient\Exception\UnknownIngredientException;
 use PeterPecosz\ShoppingPlanner\Ingredient\Ingredient;
 use PeterPecosz\ShoppingPlanner\Ingredient\IngredientForFood;
 use PeterPecosz\ShoppingPlanner\Mertekegyseg\Measure;
