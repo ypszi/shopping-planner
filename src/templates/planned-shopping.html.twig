@@ -268,21 +268,22 @@
     </div>
 
     <div id="drug-summary" class="table-responsive">
-        <h3 class="text-success">Drogéria ({{ drugShoppingList.rows|length }} sor):</h3>
-        <table class="table table-bordered table-responsive">
-            <thead class="bg-light-orange">
-                <tr>
-                    {% for header in drugShoppingList.header %}
-                        <th scope="col">{{ header }}</th>
-                    {% endfor %}
-                </tr>
-            </thead>
-            <tbody class="table-group-divider">
-                {% for rowId, row in drugShoppingList.rows %}
+        {% if drugShoppingList.rows|length > 0 %}
+            <h3 class="text-success">Drogéria ({{ drugShoppingList.rows|length }} sor):</h3>
+            <table class="table table-bordered table-responsive">
+                <thead class="bg-light-orange">
                     <tr>
-                        {% for colId, col in row %}
-                            {% set cellId = rowId ~ '-' ~ colId %}
-                            <td>
+                        {% for header in drugShoppingList.header %}
+                            <th scope="col">{{ header }}</th>
+                        {% endfor %}
+                    </tr>
+                </thead>
+                <tbody class="table-group-divider">
+                    {% for rowId, row in drugShoppingList.rows %}
+                        <tr>
+                            {% for colId, col in row %}
+                                {% set cellId = rowId ~ '-' ~ colId %}
+                                <td>
                                 <span
                                         id="drug-cell-label-{{ cellId }}"
                                         class="form-check-label ingredient"
@@ -292,12 +293,13 @@
                                 >
                                     {{ col }}
                                 </span>
-                            </td>
-                        {% endfor %}
-                    </tr>
-                {% endfor %}
-            </tbody>
-        </table>
+                                </td>
+                            {% endfor %}
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% endif %}
     </div>
 
     <div class="sticky-bottom">
