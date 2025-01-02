@@ -55,7 +55,7 @@ class ShoppingList
         $newHeader                         = [];
 
         foreach ($this->header as $colIdx => $colValue) {
-            if (!$emptyColumnIndexesForShoppingList[$colIdx]) {
+            if (!($emptyColumnIndexesForShoppingList[$colIdx] ?? null)) {
                 $newHeader[] = $colValue;
             }
         }
@@ -73,7 +73,7 @@ class ShoppingList
 
         foreach ($this->rows as $rowIdx => $row) {
             foreach ($row as $colIdx => $cell) {
-                if (!$emptyColumnIndexesForShoppingList[$colIdx]) {
+                if (!($emptyColumnIndexesForShoppingList[$colIdx] ?? null)) {
                     $newRows[$rowIdx][] = $cell;
                 }
             }

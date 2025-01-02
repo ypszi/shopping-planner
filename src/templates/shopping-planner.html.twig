@@ -29,9 +29,10 @@
         <h1 class="display-6">Melyik kajákhoz kell bevásárolni?</h1>
 
         <div class="col-md-12">
-                <div
-                        class="btn badge text-bg-secondary"
-                        onclick="resetTags()">Reset</div>
+            <div
+                    class="btn badge text-bg-secondary"
+                    onclick="resetTags()">Reset
+            </div>
             {% for tag in availableFoodTags %}
                 <div
                         class="btn badge {% if tag in selectedFoodTags %}text-bg-warning{% else %}text-bg-info{% endif %}"
@@ -80,9 +81,56 @@
                                 max="12"
                                 step="1"
                                 {% if not isAvailableFoodSelected %}disabled="disabled"{% endif %}
-                                oninput="foodPortionChange(this, '{{ availableFoodNameKey }}')"
-                                onmouseup="foodPortionMouseUp(this, '{{ availableFoodNameKey }}')"
+                                oninput="portionChange(this, '{{ availableFoodNameKey }}', 'Adag')"
+                                onmouseup="portionMouseUp(this, '{{ availableFoodNameKey }}')"
                                 ontouchend="foodPortionMouseUp(this, '{{ availableFoodNameKey }}')"
+                        >
+                    </div>
+                </div>
+            </fieldset>
+        {% endfor %}
+
+        <h1 class="display-6">Drogéria</h1>
+        <hr class="border">
+
+        {% for availableDrug in availableDrugs %}
+            {% set availableDrugName = availableDrug.name %}
+            {% set availableDrugNameKey = availableDrugName|replace({' ': '_'}) %}
+            {% set isAvailableDrugSelected = selectedDrugs[availableDrugName] is defined %}
+            {% set portion = isAvailableDrugSelected ? selectedDrugs[availableDrugName] : 0 %}
+
+            <fieldset class="row mb-2">
+                <div class="col-md-8">
+                    <div class="form-check form-switch">
+                        <input
+                                type="checkbox"
+                                role="switch"
+                                id="drug-{{ availableDrugNameKey }}"
+                                value="{{ availableDrugName }}"
+                                name="drug-{{ availableDrugNameKey }}"
+                                class="form-check-input"
+                                onchange="drugSwitchChange(this, '{{ availableDrugNameKey }}')"
+                                {% if isAvailableDrugSelected %}checked="checked"{% endif %}
+                        >
+                        <label for="drug-{{ availableDrugNameKey }}" class="form-check-label">{{ availableDrugName }}</label>
+                        <output id="portion-output-{{ availableDrugNameKey }}">({{ portion }} {{ availableDrug.measurePreference.value }})</output>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="input-group">
+                        <input
+                                type="range"
+                                id="portion-{{ availableDrugNameKey }}"
+                                value="{{ portion }}"
+                                name="portion-{{ availableDrugNameKey }}"
+                                class="form-range"
+                                min="0"
+                                max="{{ availableDrug.category.storageMax }}"
+                                step="{{ availableDrug.category.storageStep }}"
+                                {% if not isAvailableDrugSelected %}disabled="disabled"{% endif %}
+                                oninput="portionChange(this, '{{ availableDrugNameKey }}', '{{ availableDrug.measurePreference.value }}')"
+                                onmouseup="portionMouseUp(this, '{{ availableDrugNameKey }}')"
+                                ontouchend="portionMouseUp(this, '{{ availableDrugNameKey }}')"
                         >
                     </div>
                 </div>
@@ -154,19 +202,55 @@
         window.history.pushState(null, '', url.toString());
     }
 
-    function foodPortionChange(elem, availableFoodNameKey) {
-        const portion = elem.value;
+    function drugSwitchChange(elem, availableDrugNameKey) {
+        const drug = elem.value;
+        const portion = document.getElementById('portion-' + availableDrugNameKey).value;
+        const url = new URL(window.location.href);
 
-        document.getElementById('portion-output-' + availableFoodNameKey).value = '(' + portion + ' Adag)';
+        if (elem.checked) {
+            url.searchParams.append('drug-' + availableDrugNameKey, drug);
+            url.searchParams.append('portion-' + availableDrugNameKey, portion);
+
+            document.getElementById('portion-' + availableDrugNameKey).disabled = '';
+        }
+        else {
+            url.searchParams.delete('drug-' + availableDrugNameKey, drug);
+            url.searchParams.delete('portion-' + availableDrugNameKey, portion);
+
+            document.getElementById('portion-' + availableDrugNameKey).disabled = 'disabled';
+        }
+
+        window.history.pushState(null, '', url.toString());
     }
 
-    function foodPortionMouseUp(elem, availableFoodNameKey) {
-        const food = document.getElementById('food-' + availableFoodNameKey).value;
+    function portionChange(elem, availableFoodNameKey, measure) {
+        const portion = elem.value;
+
+        document.getElementById('portion-output-' + availableFoodNameKey).value = '(' + portion + ' ' + measure + ')';
+    }
+
+    function portionMouseUp(elem, availableFoodNameKey) {
+        const foodElem = document.getElementById('food-' + availableFoodNameKey);
+        const drugElem = document.getElementById('drug-' + availableFoodNameKey);
+
+        if (foodElem) {
+            const food = foodElem.value;
+        }
+
+        if (drugElem) {
+            const drug = drugElem.value;
+        }
+
         const portion = elem.value;
         const url = new URL(window.location.href);
         let update = false;
 
-        update = update || updateUrlSearchParams('food-' + availableFoodNameKey, food, url);
+        if (foodElem) {
+            update = update || updateUrlSearchParams('food-' + availableFoodNameKey, food, url);
+        }
+        if (drugElem) {
+            update = update || updateUrlSearchParams('drug-' + availableFoodNameKey, drug, url);
+        }
         update = update || updateUrlSearchParams('portion-' + availableFoodNameKey, portion, url);
 
         if (update) {

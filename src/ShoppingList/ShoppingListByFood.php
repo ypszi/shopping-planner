@@ -64,7 +64,7 @@ class ShoppingListByFood
         }
 
         foreach ($this->header as $colIdx => $colValue) {
-            if (!$onlyEmptyColumnIndexes[$colIdx]) {
+            if (!($onlyEmptyColumnIndexes[$colIdx] ?? null)) {
                 $newHeader[] = $colValue;
             }
         }
@@ -92,7 +92,7 @@ class ShoppingListByFood
         foreach ($this->rows as $foodName => $rows) {
             foreach ($rows as $rowIdx => $row) {
                 foreach ($row as $colIdx => $cell) {
-                    if (!$onlyEmptyColumnIndexes[$colIdx]) {
+                    if (!($onlyEmptyColumnIndexes[$colIdx] ?? null)) {
                         $newRows[$foodName][$rowIdx][] = $cell;
                     }
                 }

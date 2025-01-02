@@ -1,0 +1,17 @@
+Cica kaja:
+  mertekegysegPreference: db
+  storage:
+    max: 25
+    step: 1
+
+Tisztítószer:
+  mertekegysegPreference: l
+  storage:
+    max: 5
+    step: 1
+
+Tisztálkodás:
+  mertekegysegPreference: ml
+  storage:
+    max: 500
+    step: 100

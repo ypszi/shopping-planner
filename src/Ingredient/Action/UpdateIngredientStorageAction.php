@@ -22,6 +22,8 @@ readonly class UpdateIngredientStorageAction
 
     public function __invoke(ServerRequestInterface $request, ResponseInterface $response): ResponseInterface
     {
+        $ingredients = [];
+
         foreach ($this->getSelectedIngredients($request) as $selectedIngredientName => $selectedIngredient) {
             $ingredients[] = $this->ingredientFactory->createWithPortion(
                 ingredientName: $selectedIngredientName,

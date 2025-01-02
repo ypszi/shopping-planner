@@ -79,7 +79,7 @@ readonly class IngredientFactory
         string $ingredientName,
         float $portion,
         Measure $measure
-    ): Ingredient {
+    ): IngredientForFood {
         $ingredient = $this->create($ingredientName);
 
         return new IngredientForFood($ingredient->name(), $ingredient->category(), $portion, $measure, $ingredient->measurePreference());
@@ -133,7 +133,7 @@ readonly class IngredientFactory
             );
         }
 
-        if ($defaultIngredient && !in_array($defaultIngredient['kategoria'], array_keys($this->ingredientCategories))) {
+        if ($defaultIngredient && !isset($this->ingredientCategories[$defaultIngredient['kategoria']])) {
             throw new UnknownIngredientException(
                 sprintf(
                     'Ingredient category not found for "%s": "%s"',

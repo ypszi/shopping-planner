@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace PeterPecosz\ShoppingPlanner\Shopping\Action;
 
 use PeterPecosz\ShoppingPlanner\Core\Url\UrlBuilder;
+use PeterPecosz\ShoppingPlanner\Drug\Factory\AvailableDrugFactory;
 use PeterPecosz\ShoppingPlanner\Food\Factory\AvailableFoodFactory;
 use PeterPecosz\ShoppingPlanner\Food\Factory\AvailableFoodTagFactory;
 use PeterPecosz\ShoppingPlanner\Ingredient\Action\GetIngredientStorageAction;
@@ -21,6 +22,7 @@ readonly class ShoppingPlannerAction
         private SupermarketFactory $supermarketFactory,
         private AvailableFoodFactory $availableFoodFactory,
         private AvailableFoodTagFactory $availableFoodTagFactory,
+        private AvailableDrugFactory $availableDrugFactory,
         private UrlBuilder $urlBuilder,
         private Environment $twig
     ) {
@@ -39,7 +41,9 @@ readonly class ShoppingPlannerAction
         $foodFilterInput    = new FoodFilterInput($tagsCriteria);
         $availableFoods     = $this->availableFoodFactory->listAvailableFoods($foodFilterInput);
         $availableFoodTags  = $this->availableFoodTagFactory->listAvailableFoodTags();
+        $availableDrugs     = $this->availableDrugFactory->listAvailableDrugs();
         $selectedFoods      = $this->getSelectedFoods($request);
+        $selectedDrugs      = $this->getSelectedDrugs($request);
 
         $response->getBody()->write(
             $this->twig->render(
@@ -51,6 +55,8 @@ readonly class ShoppingPlannerAction
                     'availableFoodTags'     => $availableFoodTags,
                     'selectedFoods'         => $selectedFoods,
                     'selectedFoodTags'      => $foodFilterInput->tags() ?? [],
+                    'availableDrugs'        => $availableDrugs,
+                    'selectedDrugs'         => $selectedDrugs,
                     'ingredientStorageUrl'  => $this->urlBuilder->buildFor($request, GetIngredientStorageAction::class),
                 ]
             )
@@ -75,5 +81,23 @@ readonly class ShoppingPlannerAction
         }
 
         return $selectedFoods;
+    }
+
+    /**
+     * @return array<string, int>
+     */
+    private function getSelectedDrugs(ServerRequestInterface $request): array
+    {
+        $queryParams   = $request->getQueryParams();
+        $drugs         = array_filter($queryParams, fn(string $key) => str_contains($key, 'drug-'), ARRAY_FILTER_USE_KEY);
+        $portions      = array_filter($queryParams, fn(string $key) => str_contains($key, 'portion-'), ARRAY_FILTER_USE_KEY);
+        $selectedDrugs = [];
+
+        foreach ($drugs as $key => $value) {
+            $portionKey            = str_replace('drug-', 'portion-', $key);
+            $selectedDrugs[$value] = $portions[$portionKey];
+        }
+
+        return $selectedDrugs;
     }
 }
