@@ -1458,6 +1458,39 @@ Lecsó:
     - name: Só
       mennyiseg: 1 tk
 
+Mediterrán bulgursaláta:
+  defaultPortion: 6
+  receptUrl: https://www.nosalty.hu/recept/mediterran-bulgursalata
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/qs/ws/mediterran-bulgursalata.jpeg?w=1200&fit=crop&s=1fcabade3c09e72e53770bc141b0ae3c
+  tags:
+    - saláta
+  ingredients:
+    - name: Bulgur
+      mennyiseg: 200 g
+    # 4 dl víz
+    - name: Só
+      mennyiseg: 1 tk
+    - name: Kígyóuborka
+      mennyiseg: 1 db
+    - name: Kaliforniai paprika (piros)
+      mennyiseg: 1 db
+    - name: Lilahagyma
+      mennyiseg: 1 db
+    - name: Csicseriborsó (konzerv)
+      mennyiseg: 240 g
+    - name: Petrezselyem
+      mennyiseg: 1 tk
+    - name: Olívaolaj
+      mennyiseg: 1 dl
+    - name: Fokhagyma
+      mennyiseg: 2 gerezd
+    - name: Só
+      mennyiseg: 2 csipet
+    - name: Bors
+      mennyiseg: 1 csipet
+    - name: Citrom
+      mennyiseg: 0.5 db
+
 Mexikói avokádósaláta:
   defaultPortion: 4
   receptUrl: https://www.nosalty.hu/recept/avokadosalata
