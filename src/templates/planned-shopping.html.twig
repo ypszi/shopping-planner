@@ -19,7 +19,7 @@
 <!doctype html>
 <html lang="en">
 {% include 'head.html.twig' %}
-<body onload="ingredientsViewInit()">
+<body onload="ingredientsViewInit();">
 <div class="container-fluid">
     <div id="bevasarlokozpont">
         <h1 class="display-6 text-success">Bevásárlóközpont:</h1>
@@ -61,18 +61,67 @@
         </table>
     </div>
 
-    <div class="form-check form-switch">
+    <hr class="border">
+    <h3>Nézet</h3>
+    <div class="navbar d-inline-block form-check-inline">
         <input
-                type="checkbox"
-                role="switch"
-                id="ingredients-view-switch"
-                class="form-check-input"
+                type="radio"
+                name="view-switch"
+                id="ingredients-view-type-summary"
+                class="btn-check"
+                autocomplete="off"
+                value="summary"
                 onchange="ingredientsViewToggle(this)"
         >
-        <label for="ingredients-view-switch" class="form-check-label">Nézet: Hozzávalók összesítve / Hozzávalók ételek szerint</label>
+        <label for="ingredients-view-type-summary" class="btn btn-outline-info">
+            Hozzávalók összesítve
+        </label>
     </div>
+    <div class="navbar d-inline-block form-check-inline">
+        <input
+                type="radio"
+                name="view-switch"
+                id="ingredients-view-type-by-food"
+                class="btn-check"
+                autocomplete="off"
+                value="byFood"
+                onchange="ingredientsViewToggle(this)"
+        >
+        <label for="ingredients-view-type-by-food" class="btn btn-outline-info">
+            Hozzávalók ételek szerint
+        </label>
+    </div>
+    <div class="navbar d-inline-block form-check-inline">
+        <input
+                type="radio"
+                name="view-switch"
+                id="ingredients-view-type-unfiltered-summary"
+                class="btn-check"
+                autocomplete="off"
+                value="summaryUnfiltered"
+                onchange="ingredientsViewToggle(this)"
+        >
+        <label for="ingredients-view-type-unfiltered-summary" class="btn btn-outline-info">
+            Összes oszlop, hozzávalók összesítve
+        </label>
+    </div>
+    <div class="navbar d-inline-block form-check-inline">
+        <input
+                type="radio"
+                name="view-switch"
+                id="ingredients-view-type-unfiltered-by-food"
+                class="btn-check"
+                autocomplete="off"
+                value="byFoodUnfiltered"
+                onchange="ingredientsViewToggle(this)"
+        >
+        <label for="ingredients-view-type-unfiltered-by-food" class="btn btn-outline-info">
+            Összes oszlop, hozzávalók ételek szerint
+        </label>
+    </div>
+    <hr class="border">
 
-    <div id="ingredients" class="table-responsive">
+    <div id="ingredients-summary" class="table-responsive shopping-list">
         <h3 class="text-success">Hozzávalók összesítve ({{ shoppingList.getRows|length }} sor):</h3>
         <table class="table table-bordered table-responsive">
             <thead class="bg-light-orange">
@@ -105,7 +154,7 @@
         </table>
     </div>
 
-    <div id="ingredients-by-food" class="table-responsive d-none">
+    <div id="ingredients-by-food" class="table-responsive shopping-list">
         <h3 class="text-success">Hozzávalók ételek szerint ({{ totalRowCountByFood }} sor):</h3>
         <table class="table table-bordered table-responsive">
             <thead>
@@ -118,6 +167,79 @@
             </thead>
             <tbody class="table-group-divider">
                 {% for foodName, rows in shoppingListByFood.getRows %}
+                    {% for rowId, row in rows %}
+                        {% set isFirstRow = rowId == 0 %}
+                        <tr class="{% if isFirstRow %}border-top{% endif %}">
+                            <td class="{% if isFirstRow %}bg-light-orange{% endif %}">
+                                {% if isFirstRow %}{{ foodName }}{% endif %}
+                            </td>
+                            {% for colId, col in row %}
+                                {% set cellId = rowId ~ '-' ~ colId %}
+                                <td>
+                                        <span
+                                                id="ingredient-cell-label-{{ cellId }}"
+                                                class="form-check-label ingredient"
+                                                onclick="this.classList.contains('ingredient-done')
+                                                ? this.classList.remove('ingredient-done')
+                                                : this.classList.add('ingredient-done')"
+                                        >
+                                            {{ col }}
+                                        </span>
+                                </td>
+                            {% endfor %}
+                        </tr>
+                    {% endfor %}
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <div id="unfiltered-ingredients-summary" class="table-responsive shopping-list">
+        <h3 class="text-success">Hozzávalók összesítve ({{ unfilteredShoppingList.getRows|length }} sor):</h3>
+        <table class="table table-bordered table-responsive">
+            <thead class="bg-light-orange">
+                <tr>
+                    {% for header in unfilteredShoppingList.getHeader %}
+                        <th scope="col">{{ header }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody class="table-group-divider">
+                {% for rowId, row in unfilteredShoppingList.getRows %}
+                    <tr>
+                        {% for colId, col in row %}
+                            {% set cellId = rowId ~ '-' ~ colId %}
+                            <td>
+                                <span
+                                        id="ingredient-cell-label-{{ cellId }}"
+                                        class="form-check-label ingredient"
+                                        onclick="this.classList.contains('ingredient-done')
+                                        ? this.classList.remove('ingredient-done')
+                                        : this.classList.add('ingredient-done')"
+                                >
+                                    {{ col }}
+                                </span>
+                            </td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <div id="unfiltered-ingredients-by-food" class="table-responsive shopping-list">
+        <h3 class="text-success">Hozzávalók ételek szerint ({{ totalRowCountByFood }} sor):</h3>
+        <table class="table table-bordered table-responsive">
+            <thead>
+                <tr>
+                    <th scope="col"></th>
+                    {% for header in unfilteredShoppingListByFood.getHeader %}
+                        <th scope="col" class="bg-light-orange">{{ header }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody class="table-group-divider">
+                {% for foodName, rows in unfilteredShoppingListByFood.getRows %}
                     {% for rowId, row in rows %}
                         {% set isFirstRow = rowId == 0 %}
                         <tr class="{% if isFirstRow %}border-top{% endif %}">
@@ -161,41 +283,66 @@
 
     const ingredientsViewTypeSummary = 'summary';
     const ingredientsViewTypeByFood = 'byFood';
+    const ingredientsViewTypeUnfilteredSummary = 'summaryUnfiltered';
+    const ingredientsViewTypeUnfilteredByFood = 'byFoodUnfiltered';
 
     function ingredientsViewInit() {
-        if (!document.getElementById('ingredients-view-switch')) {
+        const viewSwitches = document.getElementsByName('view-switch');
+        const shoppingLists = document.getElementsByClassName('shopping-list');
+
+        if (!viewSwitches || !shoppingLists) {
             return;
         }
 
-        if (getCookie('ingredientsView') === ingredientsViewTypeByFood) {
-            document.getElementById('ingredients-view-switch').checked = true;
-            document.getElementById('ingredients').classList.add('d-none');
-            document.getElementById('ingredients-by-food').classList.remove('d-none');
-            document.cookie = createIngredientsViewCookieString(ingredientsViewTypeByFood);
+        viewSwitches.forEach((viewSwitch) => {
+            viewSwitch.checked = false;
+        });
 
-            return;
+        Array.from(shoppingLists).forEach((shoppingList) => {
+            shoppingList.classList.add('d-none');
+        });
+
+        const ingredientsViewType = getCookie('ingredientsView');
+
+        switch (ingredientsViewType) {
+            case ingredientsViewTypeUnfilteredSummary:
+                document.getElementById('ingredients-view-type-unfiltered-summary').checked = true;
+                document.getElementById('unfiltered-ingredients-summary').classList.remove('d-none');
+                document.cookie = createIngredientsViewCookieString(ingredientsViewTypeUnfilteredSummary);
+
+                break;
+            case ingredientsViewTypeUnfilteredByFood:
+                document.getElementById('ingredients-view-type-unfiltered-by-food').checked = true;
+                document.getElementById('unfiltered-ingredients-by-food').classList.remove('d-none');
+                document.cookie = createIngredientsViewCookieString(ingredientsViewTypeUnfilteredByFood);
+
+                break;
+            case ingredientsViewTypeByFood:
+                document.getElementById('ingredients-view-type-by-food').checked = true;
+                document.getElementById('ingredients-by-food').classList.remove('d-none');
+                document.cookie = createIngredientsViewCookieString(ingredientsViewTypeByFood);
+
+                break;
+            case ingredientsViewTypeSummary:
+            default:
+                document.getElementById('ingredients-view-type-summary').checked = true;
+                document.getElementById('ingredients-summary').classList.remove('d-none');
+                document.cookie = createIngredientsViewCookieString(ingredientsViewTypeSummary);
+
+                break;
         }
-
-        document.getElementById('ingredients-view-switch').checked = false;
-        document.getElementById('ingredients').classList.remove('d-none');
-        document.getElementById('ingredients-by-food').classList.add('d-none');
-        document.cookie = createIngredientsViewCookieString(ingredientsViewTypeSummary);
 
         return;
     }
 
     function ingredientsViewToggle(input) {
         if (input.checked) {
-            document.getElementById('ingredients').classList.add('d-none');
-            document.getElementById('ingredients-by-food').classList.remove('d-none');
-            document.cookie = createIngredientsViewCookieString(ingredientsViewTypeByFood);
+            document.cookie = createIngredientsViewCookieString(input.value);
+
+            ingredientsViewInit();
 
             return;
         }
-
-        document.getElementById('ingredients').classList.remove('d-none');
-        document.getElementById('ingredients-by-food').classList.add('d-none');
-        document.cookie = createIngredientsViewCookieString(ingredientsViewTypeSummary);
 
         return;
     }

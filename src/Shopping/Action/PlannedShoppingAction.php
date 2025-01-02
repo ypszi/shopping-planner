@@ -24,24 +24,31 @@ readonly class PlannedShoppingAction
 
     public function __invoke(ServerRequestInterface $request, ResponseInterface $response): ResponseInterface
     {
-        $queryParams         = $request->getQueryParams();
-        $portionsByFoodName  = $this->createPortionsByFoodName($request);
-        $foods               = $this->foodsFactory->create($portionsByFoodName);
-        $supermarket         = $this->supermarketFactory->create($queryParams['supermarket']);
-        $shoppingList        = $supermarket->toShoppingList($foods)->filterEmptyColumns();
-        $shoppingListByFood  = $supermarket->toShoppingListByFood($foods)->filterEmptyColumns();
-        $totalRowCountByFood = array_sum(array_map(fn(array $rowsOfFood) => count($rowsOfFood), $shoppingListByFood->getRows()));
+        $queryParams                  = $request->getQueryParams();
+        $portionsByFoodName           = $this->createPortionsByFoodName($request);
+        $foods                        = $this->foodsFactory->create($portionsByFoodName);
+        $supermarket                  = $this->supermarketFactory->create($queryParams['supermarket']);
+        $unfilteredShoppingList       = $supermarket->toShoppingList($foods);
+        $shoppingList                 = $unfilteredShoppingList->filterEmptyColumns();
+        $unfilteredShoppingListByFood = $supermarket->toShoppingListByFood($foods);
+        $shoppingListByFood           = $unfilteredShoppingListByFood->filterEmptyColumns();
+        $totalRowCountByFood          = array_sum(array_map(fn(array $rowsOfFood) => count($rowsOfFood), $unfilteredShoppingListByFood->getRows()));
 
         $response->getBody()->write(
-            $this->twig->render('planned-shopping.html.twig', [
-                'supermarket'          => $supermarket,
-                'foods'                => $foods,
-                'shoppingList'         => $shoppingList,
-                'shoppingListByFood'   => $shoppingListByFood,
-                'totalRowCountByFood'  => $totalRowCountByFood,
-                'plannedShopping'      => http_build_query($queryParams),
-                'ingredientStorageUrl' => $this->urlBuilder->buildFor($request, GetIngredientStorageAction::class),
-            ])
+            $this->twig->render(
+                'planned-shopping.html.twig',
+                [
+                    'supermarket'                  => $supermarket,
+                    'foods'                        => $foods,
+                    'unfilteredShoppingList'       => $unfilteredShoppingList,
+                    'shoppingList'                 => $shoppingList,
+                    'unfilteredShoppingListByFood' => $unfilteredShoppingListByFood,
+                    'shoppingListByFood'           => $shoppingListByFood,
+                    'totalRowCountByFood'          => $totalRowCountByFood,
+                    'plannedShopping'              => http_build_query($queryParams),
+                    'ingredientStorageUrl'         => $this->urlBuilder->buildFor($request, GetIngredientStorageAction::class),
+                ]
+            )
         );
 
         return $response;
