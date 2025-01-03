@@ -1,6 +1,29 @@
 <!doctype html>
 <html lang="en">
 {% include 'head.html.twig' %}
+<style>
+	.hover-img .hover-container {
+		position: relative;
+	}
+
+	.hover-img .hover-container span {
+		position: absolute;
+		display: none;
+		z-index: 99;
+	}
+
+	.hover-img .hover-container:hover span {
+		display: block;
+	}
+
+	.hover-img .hover-container span img {
+		width: 15rem;
+	}
+
+	.hover-img .hover-container span img:hover {
+		display: none;
+	}
+</style>
 <body>
 <div class="container-fluid">
     <h1 class="display-6">Hova mész bevásárolni?</h1>
@@ -50,8 +73,8 @@
             {% set isAvailableFoodSelected = selectedFoods[availableFoodName] is defined %}
             {% set portion = isAvailableFoodSelected ? selectedFoods[availableFoodName] : availableFood.defaultPortion %}
             <fieldset class="row mb-2">
-                <div class="col-md-8">
-                    <div class="form-check form-switch">
+                <div class="col-md-6">
+                    <div class="form-check form-switch hover-img">
                         <input
                                 type="checkbox"
                                 role="switch"
@@ -62,12 +85,22 @@
                                 onchange="foodSwitchChange(this, '{{ availableFoodNameKey }}')"
                                 {% if isAvailableFoodSelected %}checked="checked"{% endif %}
                         >
-                        <label for="food-{{ availableFoodNameKey }}" class="form-check-label">{{ availableFoodName }}</label>
-                        {% for tag in availableFood.tags %}
-                            <span class="badge text-bg-info">{{ tag }}</span>
-                        {% endfor %}
-                        <output id="portion-output-{{ availableFoodNameKey }}">({{ portion }} Adag)</output>
+                        <div class="hover-container">
+                            <label for="food-{{ availableFoodNameKey }}" class="form-check-label">{{ availableFoodName }}</label>
+
+                            <span>
+                                {% if availableFood.thumbnailUrl %}
+                                    <img src="{{ availableFood.thumbnailUrl }}" alt="{{ availableFoodName }}" class="img-fluid img-thumbnail">
+                                {% endif %}
+                            </span>
+                        </div>
                     </div>
+                </div>
+                <div class="col-md-2">
+                    {% for tag in availableFood.tags %}
+                        <span class="badge text-bg-info">{{ tag }}</span>
+                    {% endfor %}
+                    <output id="portion-output-{{ availableFoodNameKey }}">({{ portion }} Adag)</output>
                 </div>
                 <div class="col-md-4">
                     <div class="input-group">
