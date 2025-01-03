@@ -1,18 +1,18 @@
-{% macro recursiveComments(comment) %}
-    {% if comment is array %}
-        {% for key in comment|keys %}
+{% macro recursiveLists(listItem) %}
+    {% if listItem is array %}
+        {% for key in listItem|keys %}
             {% if key is string %}
-                <li>{{ key }}</li>
+                <li class="clickable" onclick="done(this);">{{ key }}</li>
             {% endif %}
         {% endfor %}
 
         <ul>
-            {% for key, subComment in comment %}
-                {{ _self.recursiveComments(subComment) }}
+            {% for key, subComment in listItem %}
+                {{ _self.recursiveLists(subComment) }}
             {% endfor %}
         </ul>
     {% else %}
-        <li>{{ comment }}</li>
+        <li class="clickable" onclick="done(this);">{{ listItem }}</li>
     {% endif %}
 {% endmacro %}
 
@@ -51,16 +51,20 @@
                         <td>{{ food }}</td>
                         <td><a href="{{ food.recipeUrl }}" target="_blank">{{ food.recipeDomain }}</a></td>
                         <td>
-                            {% from _self import recursiveComments %}
-                            {% for cookingStep in food.cookingSteps %}
-                                {{ recursiveComments(cookingStep) }}
-                            {% endfor %}
+                            <ol>
+                                {% from _self import recursiveLists %}
+                                {% for cookingStep in food.cookingSteps %}
+                                    {{ recursiveLists(cookingStep, true) }}
+                                {% endfor %}
+                            </ol>
                         </td>
                         <td class="row-comment">
-                            {% from _self import recursiveComments %}
-                            {% for comment in food.comments %}
-                                {{ recursiveComments(comment) }}
-                            {% endfor %}
+                            <ul>
+                                {% from _self import recursiveLists %}
+                                {% for comment in food.comments %}
+                                    {{ recursiveLists(comment) }}
+                                {% endfor %}
+                            </ul>
                         </td>
                     </tr>
                 {% endfor %}
@@ -146,10 +150,8 @@
                             <td>
                                 <span
                                         id="ingredient-cell-label-{{ cellId }}"
-                                        class="form-check-label ingredient"
-                                        onclick="this.classList.contains('ingredient-done')
-                                        ? this.classList.remove('ingredient-done')
-                                        : this.classList.add('ingredient-done')"
+                                        class="form-check-label clickable"
+                                        onclick="done(this);"
                                 >
                                     {{ col }}
                                 </span>
@@ -185,10 +187,8 @@
                                 <td>
                                         <span
                                                 id="ingredient-cell-label-{{ cellId }}"
-                                                class="form-check-label ingredient"
-                                                onclick="this.classList.contains('ingredient-done')
-                                                ? this.classList.remove('ingredient-done')
-                                                : this.classList.add('ingredient-done')"
+                                                class="form-check-label clickable"
+                                                onclick="done(this);"
                                         >
                                             {{ col }}
                                         </span>
@@ -219,10 +219,8 @@
                             <td>
                                 <span
                                         id="ingredient-cell-label-{{ cellId }}"
-                                        class="form-check-label ingredient"
-                                        onclick="this.classList.contains('ingredient-done')
-                                        ? this.classList.remove('ingredient-done')
-                                        : this.classList.add('ingredient-done')"
+                                        class="form-check-label clickable"
+                                        onclick="done(this);"
                                 >
                                     {{ col }}
                                 </span>
@@ -258,10 +256,8 @@
                                 <td>
                                         <span
                                                 id="ingredient-cell-label-{{ cellId }}"
-                                                class="form-check-label ingredient"
-                                                onclick="this.classList.contains('ingredient-done')
-                                                ? this.classList.remove('ingredient-done')
-                                                : this.classList.add('ingredient-done')"
+                                                class="form-check-label clickable"
+                                                onclick="done(this);"
                                         >
                                             {{ col }}
                                         </span>
@@ -293,10 +289,8 @@
                                 <td>
                                 <span
                                         id="drug-cell-label-{{ cellId }}"
-                                        class="form-check-label ingredient"
-                                        onclick="this.classList.contains('ingredient-done')
-                                        ? this.classList.remove('ingredient-done')
-                                        : this.classList.add('ingredient-done')"
+                                        class="form-check-label clickable"
+                                        onclick="done(this);"
                                 >
                                     {{ col }}
                                 </span>
@@ -387,6 +381,16 @@
         }
 
         return;
+    }
+
+    function done(elem) {
+        if (elem.classList.contains('done')) {
+            elem.classList.remove('done');
+
+            return;
+        }
+
+        elem.classList.add('done');
     }
 
     {% include 'cookie-handler.scripts.js.twig' %}
