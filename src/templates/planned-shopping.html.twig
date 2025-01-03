@@ -34,6 +34,7 @@
                     <th scope="col">Kép</th>
                     <th scope="col">Étel</th>
                     <th scope="col">Recept</th>
+                    <th scope="col">Elkészítés</th>
                     <th scope="col">Kommentek</th>
                 </tr>
             </thead>
@@ -50,6 +51,12 @@
                         <td>{{ food }}</td>
                         <td><a href="{{ food.recipeUrl }}" target="_blank">{{ food.recipeDomain }}</a></td>
                         <td>
+                            {% from _self import recursiveComments %}
+                            {% for cookingStep in food.cookingSteps %}
+                                {{ recursiveComments(cookingStep) }}
+                            {% endfor %}
+                        </td>
+                        <td class="row-comment">
                             {% from _self import recursiveComments %}
                             {% for comment in food.comments %}
                                 {{ recursiveComments(comment) }}

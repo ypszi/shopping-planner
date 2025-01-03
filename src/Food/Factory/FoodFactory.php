@@ -54,6 +54,7 @@ readonly class FoodFactory
             thumbnailUrl:   $food['thumbnailUrl'] ?? null,
             tags:           $tags,
             comments:       $food['comments'] ?? [],
+            cookingSteps:   $food['cookingSteps'] ?? [],
             ingredients:    $ingredients
         );
     }

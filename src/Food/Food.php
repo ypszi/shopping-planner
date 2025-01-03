@@ -8,46 +8,24 @@ use PeterPecosz\ShoppingPlanner\Ingredient\IngredientForFood;
 
 class Food
 {
-    private ?string $name;
-
-    private int $portion;
-
-    private int $defaultPortion;
-
-    private ?string $recipeUrl;
-
-    private ?string $thumbnailUrl;
-
-    /** @var IngredientForFood[] */
-    private array $ingredients;
-
-    /** @var string[] */
-    private array $comments;
-
-    /** @var string[] */
-    private array $tags;
-
     /**
+     * @param string[]            $tags
      * @param string[]            $comments
+     * @param string[]            $cookingSteps
      * @param IngredientForFood[] $ingredients
      */
     public function __construct(
-        string $name,
-        int $defaultPortion,
-        ?int $portion = null,
-        ?string $recipeUrl = null,
-        ?string $thumbnailUrl = null,
-        array $tags = [],
-        array $comments = [],
-        array $ingredients = []
+        private readonly string $name,
+        private readonly int $defaultPortion,
+        private ?int $portion = null,
+        private readonly ?string $recipeUrl = null,
+        private readonly ?string $thumbnailUrl = null,
+        private readonly array $tags = [],
+        private readonly array $comments = [],
+        private readonly array $cookingSteps = [],
+        private array $ingredients = []
     ) {
-        $this->name           = $name;
-        $this->portion        = $portion ?? $defaultPortion;
-        $this->defaultPortion = $defaultPortion;
-        $this->recipeUrl      = $recipeUrl;
-        $this->thumbnailUrl   = $thumbnailUrl;
-        $this->tags           = $tags;
-        $this->comments       = $comments;
+        $this->portion = $portion ?? $defaultPortion;
 
         $this->addIngredients($ingredients);
     }
@@ -112,14 +90,28 @@ class Food
         return $this->ingredients;
     }
 
+    /**
+     * @return string[]
+     */
     public function tags(): array
     {
         return $this->tags;
     }
 
+    /**
+     * @return string[]
+     */
     public function comments(): array
     {
         return $this->comments;
+    }
+
+    /**
+     * @return string[]
+     */
+    public function cookingSteps(): array
+    {
+        return $this->cookingSteps;
     }
 
     public function __toString(): string
