@@ -62,6 +62,17 @@ class Food
         return $this->defaultPortion;
     }
 
+    public function recipeDomain(): string
+    {
+        $rawRecipeUrl = $this->rawRecipeUrl();
+
+        if (empty($rawRecipeUrl)) {
+            return $rawRecipeUrl;
+        }
+
+        return $this->extractHost($rawRecipeUrl);
+    }
+
     public function recipeUrl(): ?string
     {
         $rawRecipeUrl = $this->rawRecipeUrl();
@@ -116,11 +127,11 @@ class Food
         return sprintf('%s (%d adag)', $this->name(), $this->portion);
     }
 
-    protected function decorateNoSaltyRecipeUrl(string $recipeUrl): string
+    private function decorateNoSaltyRecipeUrl(string $recipeUrl): string
     {
-        $urlParts = parse_url($recipeUrl);
+        $host = $this->extractHost($recipeUrl);
 
-        if (str_contains($urlParts['host'], 'nosalty.hu')) {
+        if (str_contains($host, 'nosalty.hu')) {
             $baseUri     = $this->removeQueryString($recipeUrl);
             $queryString = $this->replaceAdagQueryString($recipeUrl);
 
@@ -128,6 +139,13 @@ class Food
         }
 
         return $recipeUrl;
+    }
+
+    private function extractHost(string $recipeUrl): string
+    {
+        $urlParts = parse_url($recipeUrl);
+
+        return $urlParts['host'] ?? '';
     }
 
     /**

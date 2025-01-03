@@ -48,7 +48,7 @@
                             </div>
                         </td>
                         <td>{{ food }}</td>
-                        <td><a href="{{ food.recipeUrl }}" target="_blank">{{ food.recipeUrl }}</a></td>
+                        <td><a href="{{ food.recipeUrl }}" target="_blank">{{ food.recipeDomain }}</a></td>
                         <td>
                             {% from _self import recursiveComments %}
                             {% for comment in food.comments %}
