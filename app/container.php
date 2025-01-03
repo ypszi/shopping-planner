@@ -8,6 +8,7 @@ use PeterPecosz\ShoppingPlanner\Core\ServiceProvider\CoreServiceProvider;
 use PeterPecosz\ShoppingPlanner\Drug\ServiceProvider\DrugServiceProvider;
 use PeterPecosz\ShoppingPlanner\Food\ServiceProvider\FoodServiceProvider;
 use PeterPecosz\ShoppingPlanner\Ingredient\ServiceProvider\IngredientServiceProvider;
+use PeterPecosz\ShoppingPlanner\Measure\ServiceProvider\MeasureServiceProvider;
 use PeterPecosz\ShoppingPlanner\Supermarket\ServiceProvider\SupermarketServiceProvider;
 
 $commonConfig = array_merge(require __DIR__ . '/config/common/config.php', require __DIR__ . '/config/common/env.php');
@@ -21,6 +22,7 @@ $builder->addDefinitions((new CoreServiceProvider())->getDefinitions());
 $builder->addDefinitions((new IngredientServiceProvider())->getDefinitions());
 $builder->addDefinitions((new FoodServiceProvider())->getDefinitions());
 $builder->addDefinitions((new SupermarketServiceProvider())->getDefinitions());
+$builder->addDefinitions((new MeasureServiceProvider())->getDefinitions());
 $builder->addDefinitions((new DrugServiceProvider())->getDefinitions());
 
 $builder->useAutowiring(true);

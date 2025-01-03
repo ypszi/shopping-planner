@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace PeterPecosz\ShoppingPlanner\Ingredient;
 
-use PeterPecosz\ShoppingPlanner\Mertekegyseg\Measure;
+use PeterPecosz\ShoppingPlanner\Measure\Measure;
 
 class IngredientForFood extends Ingredient
 {

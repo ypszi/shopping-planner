@@ -8,7 +8,7 @@ use PeterPecosz\ShoppingPlanner\Drug\Drug;
 use PeterPecosz\ShoppingPlanner\Drug\DrugCategory;
 use PeterPecosz\ShoppingPlanner\Drug\DrugForShopping;
 use PeterPecosz\ShoppingPlanner\Drug\Exception\UnknownDrugException;
-use PeterPecosz\ShoppingPlanner\Mertekegyseg\Measure;
+use PeterPecosz\ShoppingPlanner\Measure\Measure;
 use Symfony\Component\Yaml\Yaml;
 
 readonly class DrugFactory

@@ -6,7 +6,7 @@ namespace PeterPecosz\ShoppingPlanner\Tests\Food\Factory;
 
 use PeterPecosz\ShoppingPlanner\Food\Factory\FoodFactory;
 use PeterPecosz\ShoppingPlanner\Ingredient\IngredientForFood;
-use PeterPecosz\ShoppingPlanner\Mertekegyseg\Measure;
+use PeterPecosz\ShoppingPlanner\Measure\Measure;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 

@@ -7,7 +7,7 @@ namespace PeterPecosz\ShoppingPlanner\Supermarket\ServiceProvider;
 use PeterPecosz\ShoppingPlanner\Core\ServiceProvider\ServiceDefinitionProviderInterface;
 use PeterPecosz\ShoppingPlanner\Supermarket\SupermarketFactory;
 
-use function DI\create;
+use function DI\autowire;
 use function DI\get;
 
 class SupermarketServiceProvider implements ServiceDefinitionProviderInterface
@@ -15,8 +15,8 @@ class SupermarketServiceProvider implements ServiceDefinitionProviderInterface
     public function getDefinitions(): array
     {
         return [
-            SupermarketFactory::class => create()
-                ->constructor(get('config.supermarket.path')),
+            SupermarketFactory::class => autowire()
+                ->constructorParameter('supermarketsPath', get('config.supermarket.path')),
         ];
     }
 }

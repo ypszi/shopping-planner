@@ -7,7 +7,7 @@ namespace PeterPecosz\ShoppingPlanner\Ingredient\Action;
 use Fig\Http\Message\StatusCodeInterface;
 use PeterPecosz\ShoppingPlanner\Ingredient\Factory\IngredientFactory;
 use PeterPecosz\ShoppingPlanner\Ingredient\Mapper\IngredientFileMapper;
-use PeterPecosz\ShoppingPlanner\Mertekegyseg\Measure;
+use PeterPecosz\ShoppingPlanner\Measure\Measure;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Slim\Routing\RouteContext;

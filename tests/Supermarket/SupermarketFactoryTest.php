@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace PeterPecosz\ShoppingPlanner\Tests\Supermarket;
 
+use PeterPecosz\ShoppingPlanner\Measure\MeasureConverter;
 use PeterPecosz\ShoppingPlanner\Supermarket\Exception\UnknownSupermarketException;
 use PeterPecosz\ShoppingPlanner\Supermarket\SupermarketFactory;
 use PHPUnit\Framework\Attributes\Test;
@@ -16,7 +17,8 @@ class SupermarketFactoryTest extends TestCase
     protected function setUp(): void
     {
         $this->sut = new SupermarketFactory(
-            __DIR__ . '/../../app/supermarkets.yaml'
+            __DIR__ . '/../../app/supermarkets.yaml',
+            $this->createMock(MeasureConverter::class)
         );
     }
 

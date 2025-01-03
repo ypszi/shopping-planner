@@ -4,18 +4,18 @@ declare(strict_types=1);
 
 namespace PeterPecosz\ShoppingPlanner\Ingredient;
 
+use PeterPecosz\ShoppingPlanner\Measure\MeasureConverter;
 use PeterPecosz\ShoppingPlanner\Supermarket\Supermarket;
 
 class IngredientRows
 {
-    private Supermarket $supermarket;
-
     /** @var IngredientRow[] */
     private array $ingredientRows;
 
-    public function __construct(Supermarket $supermarket)
-    {
-        $this->supermarket    = $supermarket;
+    public function __construct(
+        private readonly Supermarket $supermarket,
+        private readonly MeasureConverter $mertekegysegAtvalto
+    ) {
         $this->ingredientRows = [];
     }
 
@@ -37,7 +37,7 @@ class IngredientRows
     public function sort(): self
     {
         $sortedIngredients = $this->sortIngredients();
-        $ingredientRows    = new self($this->supermarket);
+        $ingredientRows    = new self($this->supermarket, $this->mertekegysegAtvalto);
 
         foreach ($sortedIngredients as $ingredients) {
             foreach ($ingredients as $ingredient) {
@@ -50,7 +50,7 @@ class IngredientRows
         return $this;
     }
 
-    public function addIngredient(Ingredient $ingredient): void
+    public function addIngredient(IngredientForFood $ingredient): void
     {
         foreach ($this->ingredientRows as $ingredientRow) {
             if ($ingredientRow->canAdd($ingredient)) {
@@ -61,7 +61,7 @@ class IngredientRows
             }
         }
 
-        $nextIngredientRow = new IngredientRow();
+        $nextIngredientRow = new IngredientRow($this->mertekegysegAtvalto);
         $nextIngredientRow->add($ingredient);
         $nextIngredientRow->sort($this->supermarket->toOrder());
 
@@ -69,7 +69,7 @@ class IngredientRows
     }
 
     /**
-     * @return array<string, Ingredient[]>
+     * @return array<string, IngredientForFood[]>
      */
     private function sortIngredients(): array
     {
@@ -77,7 +77,7 @@ class IngredientRows
     }
 
     /**
-     * @return array<string, Ingredient[]>
+     * @return array<string, IngredientForFood[]>
      */
     private function groupHozzavalokByKategoria(): array
     {
@@ -92,32 +92,38 @@ class IngredientRows
     }
 
     /**
-     * @param array<string, Ingredient[]> $ingredientsByCategory
+     * @param array<string, IngredientForFood[]> $ingredientsByCategory
      *
-     * @return array<string, Ingredient[]>
+     * @return array<string, IngredientForFood[]>
      */
     private function sortByMertekegyseg(array $ingredientsByCategory): array
     {
         foreach ($ingredientsByCategory as &$ingredients) {
-            usort($ingredients, function (Ingredient $ingredient1, Ingredient $ingredient2) {
-                return strnatcmp($ingredient1->measure()?->value ?? '', $ingredient2->measure()?->value ?? '');
-            });
+            usort(
+                $ingredients,
+                function (IngredientForFood $ingredient1, IngredientForFood $ingredient2) {
+                    return strnatcmp($ingredient1->measure()?->value ?? '', $ingredient2->measure()?->value ?? '');
+                }
+            );
         }
 
         return $ingredientsByCategory;
     }
 
     /**
-     * @param array<string, Ingredient[]> $ingredientsByCategory
+     * @param array<string, IngredientForFood[]> $ingredientsByCategory
      *
-     * @return array<string, Ingredient[]>
+     * @return array<string, IngredientForFood[]>
      */
     private function sortByName(array $ingredientsByCategory): array
     {
         foreach ($ingredientsByCategory as &$ingredients) {
-            usort($ingredients, function (Ingredient $ingredient1, Ingredient $ingredient2) {
-                return strnatcmp($ingredient1->name(), $ingredient2->name());
-            });
+            usort(
+                $ingredients,
+                function (IngredientForFood $ingredient1, IngredientForFood $ingredient2) {
+                    return strnatcmp($ingredient1->name(), $ingredient2->name());
+                }
+            );
         }
 
         return $ingredientsByCategory;

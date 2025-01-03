@@ -4,32 +4,29 @@ declare(strict_types=1);
 
 namespace PeterPecosz\ShoppingPlanner\Ingredient;
 
-use PeterPecosz\ShoppingPlanner\Mertekegyseg\Atvaltas\Exception\UnknownUnitOfMeasureException;
-use PeterPecosz\ShoppingPlanner\Mertekegyseg\MertekegysegAtvalto;
+use PeterPecosz\ShoppingPlanner\Measure\Conversion\Exception\UnknownUnitOfMeasureException;
+use PeterPecosz\ShoppingPlanner\Measure\MeasureConverter;
 use PeterPecosz\ShoppingPlanner\Supermarket\Supermarket;
 
 class IngredientRow
 {
-    private MertekegysegAtvalto $mertekegysegAtvalto;
-
-    /** @var array<string, Ingredient> */
+    /** @var array<string, IngredientForFood> */
     private array $ingredientsByCategory;
 
-    public function __construct()
+    public function __construct(private readonly MeasureConverter $mertekegysegAtvalto)
     {
-        $this->mertekegysegAtvalto   = new MertekegysegAtvalto();
         $this->ingredientsByCategory = [];
     }
 
     /**
-     * @return array<string, Ingredient>
+     * @return array<string, IngredientForFood>
      */
     public function getIngredientsByCategory(): array
     {
         return $this->ingredientsByCategory;
     }
 
-    public function add(Ingredient $ingredient): self
+    public function add(IngredientForFood $ingredient): self
     {
         $ingredient      = $this->convertToPreference($ingredient);
         $addedIngredient = $this->ingredientsByCategory[$ingredient->category()] ?? null;
@@ -41,13 +38,10 @@ class IngredientRow
         }
 
         if ($this->canAddUsingConvert($ingredient, $addedIngredient)) {
-            $newPortion = $this->mertekegysegAtvalto->valt(
-                $ingredient,
-                $addedIngredient
-            );
+            $newIngredient = $this->mertekegysegAtvalto->convert($ingredient, $addedIngredient);
 
-            $this->ingredientsByCategory[$ingredient->category()] = $addedIngredient->withPortion(
-                $addedIngredient->portion() + $newPortion
+            $this->ingredientsByCategory[$ingredient->category()] = $newIngredient->withPortion(
+                $newIngredient->portion() + $addedIngredient->portion()
             );
 
             return $this;
@@ -65,7 +59,7 @@ class IngredientRow
         return $this;
     }
 
-    public function canAdd(Ingredient $ingredient): bool
+    public function canAdd(IngredientForFood $ingredient): bool
     {
         $addedIngredient = $this->ingredientsByCategory[$ingredient->category()] ?? null;
 
@@ -81,27 +75,20 @@ class IngredientRow
                && $addedIngredient->measure() === $ingredient->measure();
     }
 
-    private function convertToPreference(Ingredient $ingredient): Ingredient
+    private function convertToPreference(IngredientForFood $ingredient): IngredientForFood
     {
-        $newMertekegyseg = $ingredient->measurePreference() ?? $ingredient->measure();
+        $newMeasure = $ingredient->measurePreference() ?? $ingredient->measure();
 
-        if ($newMertekegyseg === $ingredient->measure()) {
+        if ($newMeasure === $ingredient->measure()) {
             return $ingredient;
         }
 
         try {
-            $newMennyiseg = $this->mertekegysegAtvalto->valt(
-                $ingredient,
-                $ingredient->withMeasure($newMertekegyseg)
-            );
+            $ingredient = $this->mertekegysegAtvalto->convert($ingredient, $ingredient->withMeasure($newMeasure));
         } catch (UnknownUnitOfMeasureException) {
-            $newMennyiseg    = $ingredient->portion();
-            $newMertekegyseg = $ingredient->measure();
         }
 
-        return $ingredient
-            ->withPortion($newMennyiseg)
-            ->withMeasure($newMertekegyseg);
+        return $ingredient;
     }
 
     /**
@@ -125,13 +112,13 @@ class IngredientRow
         return $sor;
     }
 
-    private function canAddUsingConvert(Ingredient $ingredient, Ingredient $addedIngredient): bool
+    private function canAddUsingConvert(IngredientForFood $ingredient, IngredientForFood $addedIngredient): bool
     {
         if (
             $addedIngredient->name() === $ingredient->name()
             && $addedIngredient->measure() !== $ingredient->measure()
         ) {
-            return $this->mertekegysegAtvalto->canValt(
+            return $this->mertekegysegAtvalto->canConvert(
                 $ingredient,
                 $addedIngredient
             );

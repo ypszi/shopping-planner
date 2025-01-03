@@ -7,7 +7,8 @@ namespace PeterPecosz\ShoppingPlanner\Tests\Supermarket;
 use PeterPecosz\ShoppingPlanner\Food\Food;
 use PeterPecosz\ShoppingPlanner\Food\Foods;
 use PeterPecosz\ShoppingPlanner\Ingredient\IngredientForFood;
-use PeterPecosz\ShoppingPlanner\Mertekegyseg\Measure;
+use PeterPecosz\ShoppingPlanner\Measure\Measure;
+use PeterPecosz\ShoppingPlanner\Measure\MeasureConverter;
 use PeterPecosz\ShoppingPlanner\ShoppingList\ShoppingList;
 use PeterPecosz\ShoppingPlanner\ShoppingList\ShoppingListByFood;
 use PeterPecosz\ShoppingPlanner\Supermarket\CategoryMap;
@@ -52,6 +53,7 @@ class SupermarketTest extends TestCase
                                          'Tartós tejtermék',
                                      ],
             categoryMap:             $this->categoryMap = $this->createMock(CategoryMap::class),
+            mertekegysegAtvalto:     $this->mertekegysegAtvalto = $this->createMock(MeasureConverter::class),
             ingredientToCategoryMap: $this->ingredientToCategoryMap = $this->createMock(IngredientToCategoryMap::class),
         );
     }

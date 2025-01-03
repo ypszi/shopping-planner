@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace PeterPecosz\ShoppingPlanner\Tests\Ingredient\Factory;
 
 use PeterPecosz\ShoppingPlanner\Ingredient\Factory\IngredientFactory;
-use PeterPecosz\ShoppingPlanner\Mertekegyseg\Measure;
+use PeterPecosz\ShoppingPlanner\Measure\Measure;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 

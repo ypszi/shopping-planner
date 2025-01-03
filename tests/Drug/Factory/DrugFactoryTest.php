@@ -6,7 +6,7 @@ namespace PeterPecosz\ShoppingPlanner\Tests\Drug\Factory;
 
 use PeterPecosz\ShoppingPlanner\Drug\DrugCategory;
 use PeterPecosz\ShoppingPlanner\Drug\Factory\DrugFactory;
-use PeterPecosz\ShoppingPlanner\Mertekegyseg\Measure;
+use PeterPecosz\ShoppingPlanner\Measure\Measure;
 use PHPUnit\Framework\TestCase;
 
 class DrugFactoryTest extends TestCase

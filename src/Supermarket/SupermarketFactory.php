@@ -4,15 +4,16 @@ declare(strict_types=1);
 
 namespace PeterPecosz\ShoppingPlanner\Supermarket;
 
+use PeterPecosz\ShoppingPlanner\Measure\MeasureConverter;
 use PeterPecosz\ShoppingPlanner\Supermarket\Exception\UnknownSupermarketException;
 use Symfony\Component\Yaml\Yaml;
 
-class SupermarketFactory
+readonly class SupermarketFactory
 {
     /** @var array<string, string[]> */
-    private readonly array $supermarkets;
+    private array $supermarkets;
 
-    public function __construct(string $supermarketsPath)
+    public function __construct(string $supermarketsPath, private MeasureConverter $mertekegysegAtvalto)
     {
         $this->supermarkets = Yaml::parseFile($supermarketsPath);
     }
@@ -29,6 +30,7 @@ class SupermarketFactory
             $name,
             $rawSupermarket['categories'],
             new CategoryMap($rawSupermarket['categoryMap']),
+            $this->mertekegysegAtvalto,
             new IngredientToCategoryMap($rawSupermarket['ingredientMap'] ?? [])
         );
     }

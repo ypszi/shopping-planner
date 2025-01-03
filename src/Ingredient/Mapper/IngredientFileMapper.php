@@ -6,7 +6,7 @@ namespace PeterPecosz\ShoppingPlanner\Ingredient\Mapper;
 
 use PeterPecosz\ShoppingPlanner\Ingredient\Factory\IngredientFactory;
 use PeterPecosz\ShoppingPlanner\Ingredient\IngredientForFood;
-use PeterPecosz\ShoppingPlanner\Mertekegyseg\Measure;
+use PeterPecosz\ShoppingPlanner\Measure\Measure;
 
 readonly class IngredientFileMapper
 {

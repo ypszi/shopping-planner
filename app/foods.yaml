@@ -2532,6 +2532,38 @@ Tejfölös-sajtos csirkemell:
     - name: Olívaolaj
       mennyiseg: 5 ek
 
+Tejszínes-parmezános csirkemell:
+  defaultPortion: 4
+  receptUrl: https://sobors.hu/receptek/tejszines-parmezanos-csirkemell-recept/
+  thumbnailUrl: https://kep.cdn.index.hu/1/0/4642/46429/464292/46429218_3540192_24dc55f3fc6d4b5eb061de753559d855_wm.jpg
+  tags:
+    - ebéd
+  ingredients:
+    - name: Csirkemell
+      mennyiseg: 2 db
+    - name: Só
+      mennyiseg: 2 csipet
+    - name: Bors
+      mennyiseg: 1 csipet
+    - name: Fokhagymapor
+      mennyiseg: 1 tk
+    - name: Olívaolaj
+      mennyiseg: 1 ek
+    - name: Vaj
+      mennyiseg: 1 ek
+    - name: Fokhagyma
+      mennyiseg: 3 gerezd
+    - name: Liszt
+      mennyiseg: 1 ek
+    - name: Alaplé
+      mennyiseg: 1.2 dl
+    - name: Tejszín
+      mennyiseg: 2.5 dl
+    - name: Parmezán sajt
+      mennyiseg: 5 dkg
+    - name: Petrezselyem
+      mennyiseg: 1 tk
+
 Tepertőkrém:
   defaultPortion: 3
   receptUrl: https://www.nosalty.hu/recept/tojasos-tepertokrem

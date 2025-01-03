@@ -7,7 +7,7 @@ namespace PeterPecosz\ShoppingPlanner\Ingredient\Factory;
 use PeterPecosz\ShoppingPlanner\Ingredient\Exception\UnknownIngredientException;
 use PeterPecosz\ShoppingPlanner\Ingredient\Ingredient;
 use PeterPecosz\ShoppingPlanner\Ingredient\IngredientForFood;
-use PeterPecosz\ShoppingPlanner\Mertekegyseg\Measure;
+use PeterPecosz\ShoppingPlanner\Measure\Measure;
 use Symfony\Component\Yaml\Yaml;
 
 readonly class IngredientFactory

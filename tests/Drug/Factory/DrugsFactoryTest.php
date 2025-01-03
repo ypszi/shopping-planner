@@ -8,7 +8,7 @@ use PeterPecosz\ShoppingPlanner\Drug\DrugCategory;
 use PeterPecosz\ShoppingPlanner\Drug\DrugForShopping;
 use PeterPecosz\ShoppingPlanner\Drug\Factory\DrugFactory;
 use PeterPecosz\ShoppingPlanner\Drug\Factory\DrugsFactory;
-use PeterPecosz\ShoppingPlanner\Mertekegyseg\Measure;
+use PeterPecosz\ShoppingPlanner\Measure\Measure;
 use PHPUnit\Framework\TestCase;
 
 class DrugsFactoryTest extends TestCase

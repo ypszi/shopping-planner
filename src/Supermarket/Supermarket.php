@@ -8,6 +8,7 @@ use PeterPecosz\ShoppingPlanner\Food\Foods;
 use PeterPecosz\ShoppingPlanner\Ingredient\Ingredient;
 use PeterPecosz\ShoppingPlanner\Ingredient\IngredientRows;
 use PeterPecosz\ShoppingPlanner\Ingredient\IngredientsByCategory;
+use PeterPecosz\ShoppingPlanner\Measure\MeasureConverter;
 use PeterPecosz\ShoppingPlanner\ShoppingList\ShoppingList;
 use PeterPecosz\ShoppingPlanner\ShoppingList\ShoppingListByFood;
 
@@ -22,6 +23,7 @@ class Supermarket
         private readonly string $name,
         private readonly array $categories,
         private readonly CategoryMap $categoryMap,
+        private readonly MeasureConverter $mertekegysegAtvalto,
         private readonly ?IngredientToCategoryMap $ingredientToCategoryMap = null
     ) {
     }
@@ -64,7 +66,7 @@ class Supermarket
 
     private function createIngredientRows(IngredientsByCategory $ingredientsByCategory): IngredientRows
     {
-        $ingredientRows = new IngredientRows($this);
+        $ingredientRows = new IngredientRows($this, $this->mertekegysegAtvalto);
 
         foreach ($ingredientsByCategory as $ingredients) {
             /** @var Ingredient $ingredient */
