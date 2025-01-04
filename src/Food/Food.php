@@ -40,7 +40,7 @@ class Food
         return $this->defaultPortion;
     }
 
-    public function recipeDomain(): string
+    public function recipeDomain(): ?string
     {
         $rawRecipeUrl = $this->rawRecipeUrl();
 
