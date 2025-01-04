@@ -1879,7 +1879,7 @@ Paradicsomos tészta:
       mennyiseg: 40 dkg
 
 Pestos tészta:
-  defaultPortion: 4
+  defaultPortion: 2
   thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/j3/sc/petrezselyem-pestos-fusilli.jpeg?w=1200&fit=crop&s=05dec19e7137d45e8f2cd859cc3cd11e
   tags:
     - ebéd
@@ -1889,7 +1889,7 @@ Pestos tészta:
     - name: Parmezán sajt
       mennyiseg: 20 g
     - name: Fusilli tészta
-      mennyiseg: 40 dkg
+      mennyiseg: 25 dkg
 
 Pizza:
   defaultPortion: 2
