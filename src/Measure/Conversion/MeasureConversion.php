@@ -8,12 +8,12 @@ use PeterPecosz\ShoppingPlanner\Ingredient\IngredientForFood;
 
 abstract class MeasureConversion
 {
+    abstract public function canConvert(IngredientForFood $ingredient, IngredientForFood $addedIngredient): bool;
+
     public function convert(IngredientForFood $ingredient, IngredientForFood $addedIngredient): IngredientForFood
     {
         return $addedIngredient->withPortion($ingredient->portion() * $this->getMultiplier());
     }
-
-    abstract public function canConvert(IngredientForFood $ingredient, IngredientForFood $addedIngredient): bool;
 
     abstract protected function getMultiplier(): float;
 }

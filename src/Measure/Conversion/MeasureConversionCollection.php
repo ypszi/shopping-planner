@@ -27,6 +27,6 @@ readonly class MeasureConversionCollection
             }
         }
 
-        throw new UnknownUnitOfMeasureException(sprintf('Cannot convert %s to %s', $ingredient, $addedIngredient));
+        throw new UnknownUnitOfMeasureException(sprintf('Cannot convert "%s" to "%s"', $ingredient, $addedIngredient));
     }
 }

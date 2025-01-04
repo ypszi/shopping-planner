@@ -14,10 +14,10 @@ readonly class MeasureConverter
     {
     }
 
-    public function canConvert(IngredientForFood $hozzavalo, IngredientForFood $hozzaadottHozzavalo): bool
+    public function canConvert(IngredientForFood $ingredient, IngredientForFood $addedIngredient): bool
     {
         try {
-            $this->measureConversionCollection->get($hozzavalo, $hozzaadottHozzavalo);
+            $this->measureConversionCollection->get($ingredient, $addedIngredient);
         } catch (UnknownUnitOfMeasureException) {
             return false;
         }

@@ -79,8 +79,8 @@ Ananászos csirke:
       mennyiseg: 1 db
     - name: Vöröshagyma
       mennyiseg: 1 db
-    - name: Húsleves kocka
-      mennyiseg: 0.25 db
+    - name: Alaplé
+      mennyiseg: 1 dl
     - name: Kókusztej
       mennyiseg: 1 dl
     - name: Curry
@@ -272,8 +272,8 @@ Bulgur:
       mennyiseg: 1 db
     - name: Olívaolaj
       mennyiseg: 2 ek
-    - name: Húsleves kocka
-      mennyiseg: 1 db
+    - name: Alaplé
+      mennyiseg: 5 dl
     - name: Só
       mennyiseg: 0.5 tk
     - name: Bors
@@ -577,8 +577,8 @@ Csirkés spárgás rizottó:
       mennyiseg: 5 dkg
     - name: Vöröshagyma
       mennyiseg: 1 db
-    - name: Húsleves kocka
-      mennyiseg: 2 db
+    - name: Alaplé
+      mennyiseg: 15 dl
     - name: Fokhagyma
       mennyiseg: 2 gerezd
     - name: Olívaolaj
@@ -1945,8 +1945,8 @@ Póréhagyma leves:
       mennyiseg: 2 csipet
     - name: Habtejszín
       mennyiseg: 200 ml
-    - name: Húsleves kocka
-      mennyiseg: 2 db
+    - name: Alaplé
+      mennyiseg: 10 dl
   cookingSteps:
       - A póréhagymát és a zellert karikára vágjuk, a krumplit megpucoljuk és felkockázzuk.
       - A vajat megolvasztjuk, rádobjuk a póréhagymát, és 2-3 percig kevergetjük.
@@ -2295,8 +2295,8 @@ Sütőtökkrémleves egyszerűen:
   ingredients:
     - name: Sütőtök
       mennyiseg: 1 kg
-    - name: Húsleves kocka
-      mennyiseg: 2 db
+    - name: Alaplé
+      mennyiseg: 10 dl
     - name: Olívaolaj
       mennyiseg: 2 ek
     - name: Vöröshagyma

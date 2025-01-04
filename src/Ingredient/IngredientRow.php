@@ -118,10 +118,7 @@ class IngredientRow
             $addedIngredient->name() === $ingredient->name()
             && $addedIngredient->measure() !== $ingredient->measure()
         ) {
-            return $this->mertekegysegAtvalto->canConvert(
-                $ingredient,
-                $addedIngredient
-            );
+            return $this->mertekegysegAtvalto->canConvert($ingredient, $addedIngredient);
         }
 
         return false;

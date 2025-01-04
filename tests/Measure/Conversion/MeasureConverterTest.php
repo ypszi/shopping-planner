@@ -756,7 +756,7 @@ class MeasureConverterTest extends TestCase
         );
 
         $this->expectException(UnknownUnitOfMeasureException::class);
-        $this->expectExceptionMessage(sprintf('Cannot convert %s to %s', $ingredientForFood, $additionalIngredientForFood));
+        $this->expectExceptionMessage(sprintf('Cannot convert "%s" to "%s"', $ingredientForFood, $additionalIngredientForFood));
 
         $this->sut->convert($ingredientForFood, $additionalIngredientForFood);
     }
