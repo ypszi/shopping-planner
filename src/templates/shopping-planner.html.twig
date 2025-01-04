@@ -74,7 +74,7 @@
             {% set isAvailableFoodSelected = selectedFoods[availableFoodName] is defined %}
             {% set portion = isAvailableFoodSelected ? selectedFoods[availableFoodName] : availableFood.defaultPortion %}
             <fieldset class="row mb-2">
-                <div class="col-md-6">
+                <div class="col-md-5">
                     <div class="form-check form-switch hover-img">
                         <input
                                 type="checkbox"
@@ -97,7 +97,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-3">
                     {% for tag in availableFood.tags %}
                         <span class="badge text-bg-info">{{ tag }}</span>
                     {% endfor %}
