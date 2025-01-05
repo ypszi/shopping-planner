@@ -1,0 +1,16 @@
+function updateUrlSearchParams(name, value, url) {
+    const searchParam = url.searchParams.get(name);
+
+    if (searchParam && searchParam === value) {
+        return false;
+    }
+
+    if (searchParam) {
+        url.searchParams.set(name, value);
+    }
+    else {
+        url.searchParams.append(name, value);
+    }
+
+    return true;
+}

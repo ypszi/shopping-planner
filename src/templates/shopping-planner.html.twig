@@ -117,7 +117,7 @@
                                 {% if not isAvailableFoodSelected %}disabled="disabled"{% endif %}
                                 oninput="portionChange(this, '{{ availableFoodNameKey }}', 'Adag')"
                                 onmouseup="portionMouseUp(this, '{{ availableFoodNameKey }}')"
-                                ontouchend="foodPortionMouseUp(this, '{{ availableFoodNameKey }}')"
+                                ontouchend="portionMouseUp(this, '{{ availableFoodNameKey }}')"
                         >
                     </div>
                 </div>
@@ -185,6 +185,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <script>
     {% include 'dark-theme.js.twig' %}
+    {% include 'helper.js.twig' %}
 
     function resetTags() {
         const url = new URL(window.location.href);
@@ -290,23 +291,6 @@
         if (update) {
             window.history.pushState(null, '', url.toString());
         }
-    }
-
-    function updateUrlSearchParams(name, value, url) {
-        const searchParam = url.searchParams.get(name);
-
-        if (searchParam && searchParam === value) {
-            return false;
-        }
-
-        if (searchParam) {
-            url.searchParams.set(name, value);
-        }
-        else {
-            url.searchParams.append(name, value);
-        }
-
-        return true;
     }
 </script>
 </body>

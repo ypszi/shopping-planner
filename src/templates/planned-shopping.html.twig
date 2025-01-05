@@ -40,6 +40,8 @@
             </thead>
             <tbody class="table-group-divider">
                 {% for food in foods.toArray %}
+                    {% set foodNameKey = food.name|replace({' ': '_'}) %}
+
                     <tr>
                         <td class="row-thumbnail">
                             <div class="food-thumbnail col-sm-12 col-md-8 col-lg-6 col-xl-4">
@@ -48,7 +50,25 @@
                                 {% endif %}
                             </div>
                         </td>
-                        <td>{{ food }}</td>
+                        <td>
+                            {{ food.name }} <output id="portion-output-{{ foodNameKey }}">({{ food.portion }} Adag)</output>
+
+                            <div class="input-group">
+                                <input
+                                        type="range"
+                                        id="portion-{{ foodNameKey }}"
+                                        value="{{ food.portion }}"
+                                        name="portion-{{ foodNameKey }}"
+                                        class="form-range"
+                                        min="1"
+                                        max="12"
+                                        step="1"
+                                        oninput="portionChange(this, '{{ foodNameKey }}', 'Adag')"
+                                        onmouseup="portionMouseUp(this, '{{ foodNameKey }}')"
+                                        ontouchend="portionMouseUp(this, '{{ foodNameKey }}')"
+                                >
+                            </div>
+                        </td>
                         <td><a href="{{ food.recipeUrl }}" target="_blank">{{ food.recipeDomain }}</a></td>
                         <td>
                             <ol>
@@ -316,6 +336,26 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <script>
     {% include 'dark-theme.js.twig' %}
+    {% include 'helper.js.twig' %}
+
+    function portionChange(elem, foodNameKey, measure) {
+        const portion = elem.value;
+
+        document.getElementById('portion-output-' + foodNameKey).value = '(' + portion + ' ' + measure + ')';
+    }
+
+    function portionMouseUp(elem, foodNameKey) {
+        const portion = elem.value;
+        const url = new URL(window.location.href);
+        let update = false;
+
+        update = update || updateUrlSearchParams('portion-' + foodNameKey, portion, url);
+
+        if (update) {
+            window.history.pushState(null, '', url.toString());
+            window.location.reload();
+        }
+    }
 
     const ingredientsViewTypeSummary = 'summary';
     const ingredientsViewTypeByFood = 'byFood';
