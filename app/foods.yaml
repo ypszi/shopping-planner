@@ -1246,7 +1246,7 @@ Kefíres csirke:
     - name: Napraforgóolaj
       mennyiseg: 4 dl
     - name: Liszt
-      mennyiseg: 25 dkg
+      mennyiseg: 20 dkg
     - name: Sütőpor
       mennyiseg: 1 ek
     - name: Só
@@ -1257,6 +1257,8 @@ Kefíres csirke:
       mennyiseg: 1.5 tk
     - name: Kefír
       mennyiseg: 3 dl
+  comments:
+    - szeletelt csirkemellből nem érdemes készíteni, mert túl puha a bunda, és könnyen leszakad a csirkéről
   cookingSteps:
     - A csirkemellet konyhai papírtörlővel alaposan leitatjuk (de nem kell megmosni!), majd éles késsel, srégen haladva, vékony szeletekre vágjuk. Egy fél csirkemellből kb. 12 szelet jön ki, a két vége nyilváb inkább kisebb falat lesz. Alaposan sózzuk, borsozzuk.
     - Előkészítünk három tálat. Az egyikbe beleszórjuk a lisztet, hozzákeverjük a sütőport, a pirospaprikát, fűszerkeveréket, valamint sót.
