@@ -1249,10 +1249,23 @@ Kefíres csirke:
       mennyiseg: 25 dkg
     - name: Sütőpor
       mennyiseg: 1 ek
+    - name: Só
+      mennyiseg: 0.5 tk
     - name: Csirkemell
       mennyiseg: 50 dkg
+    - name: Só
+      mennyiseg: 1.5 tk
     - name: Kefír
       mennyiseg: 3 dl
+  cookingSteps:
+    - A csirkemellet konyhai papírtörlővel alaposan leitatjuk (de nem kell megmosni!), majd éles késsel, srégen haladva, vékony szeletekre vágjuk. Egy fél csirkemellből kb. 12 szelet jön ki, a két vége nyilváb inkább kisebb falat lesz. Alaposan sózzuk, borsozzuk.
+    - Előkészítünk három tálat. Az egyikbe beleszórjuk a lisztet, hozzákeverjük a sütőport, a pirospaprikát, fűszerkeveréket, valamint sót.
+    - A fűszeres liszt egyharmadát az első tálba szórjuk. A másodikba öntjük a kaukázusi kefírt. A harmadikban marad a liszt kétharmada.
+    - Egy nagy serpenyőben elkezdjük hevíteni az olajat, közben bundázunk...
+    - A megsózott csirkemelleket (az összeset egyszerre) az első tálba tesszük. Lazán összeforgatjuk a liszttel, hogy minden darabot vékonyan bevonjon. Mosogatáskímélő alternatíva lehet, ha uzsonnázótasakban forgatjuk össze.
+    - A belisztezett húsdarabokat áttesszük a kefírbe, lazán összeforgatjuk (az első tálban megmaradt fűszeres lisztet átszórjuk a harmadik tálban levő liszthez).
+    - A kefíres tálból a csirkedarabokat egy villa, vagy húsfogó segítségével áttesszük a harmadik tálba, és összeforgatjuk a nagyobb adag liszttel. Ragacsos, nyúlós, galuskaszerű massza fogja bevonni a húst, ilyennek kell lennie, ettől lesz extra ropogós.
+    - Egyesével a forró olajba tesszük a masszával bevont hússzeleteket, serpenyő méretétől függően, kb. 10-12 fér el egyszerre. (A második adag közben maradhat a bundás tálban). Mindkét oldalán kb. négy percig sütjük, amíg aranyszínűre, ropogósra sül. Konyhai papírtörlővel fedett tányéron leitatjuk róla a felesleges olajat. A sütést megismételjük a második adag hússal.
 
 Kínai szezámmagos csirke:
   defaultPortion: 4
