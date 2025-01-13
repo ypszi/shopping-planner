@@ -32,11 +32,11 @@ class SupermarketFactoryTest extends TestCase
             [
                 'Zöldség / Gyümölcs',
                 'Pékárú',
-                'Hal',
                 'Mirelit',
-                'Tejtermék',
                 'Tartós tejtermék',
+                'Hal',
                 'Hús',
+                'Tejtermék',
                 'Felvágott',
                 'Sütés / Sütemény',
                 'Bor',
