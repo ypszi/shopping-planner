@@ -926,6 +926,38 @@ Fűszeres édesburgonya:
     - name: Bors
       mennyiseg: 1 csipet
 
+Gofri:
+  defaultPortion: 12
+  receptUrl: https://streetkitchen.hu/meguszos-kajak/sutoporos-gofri/
+  thumbnailUrl: https://streetkitchen.hu/wp-content/uploads/2019/02/skmag-2023nyar-0724-scaled.jpg
+  tags:
+    - desszert
+  ingredients:
+    - name: Sütőpor
+      mennyiseg: 1 csomag
+    - name: Finomliszt
+      mennyiseg: 400 g
+    - name: Só
+      mennyiseg: 1 csipet
+    - name: Kristálycukor
+      mennyiseg: 120 g
+    - name: Vaj
+      mennyiseg: 100 g
+    - name: Vaníliás cukor
+      mennyiseg: 12 g
+    - name: Tojás
+      mennyiseg: 3 db
+    - name: Tej
+      mennyiseg: 500 ml
+    - name: Étolaj
+      mennyiseg: 1 ek
+  cookingSteps:
+    - A sütőporos gofri recept elkészítését a gofri tészta bekeverésével kezdjük.
+    - Ehhez először a sütőport, a lisztet és a sót összekeverjük.
+    - A cukrot egy tálban kikeverjük a vajjal, hozzáadjuk a vaníliás cukrot, a tojásokat, majd mehet bele a tej és a sütőporos liszt is.
+    - Csomómentesre keverjük a tésztát.
+    - 1-1 nagyobb evőkanállal teszünk belőle a felmelegített, enyhén kiolajozott gofrisütő mélyedéseibe, és pár perc alatt aranybarnára sütjük a gofrikat, majd rácson hagyjuk kihűlni.
+
 Görög bab:
   defaultPortion: 6
   tags:
