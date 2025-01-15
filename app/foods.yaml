@@ -1617,8 +1617,15 @@ Mézes-chilis csirkesaláta:
       mennyiseg: 1 csipet
     - name: Fokhagyma
       mennyiseg: 1 gerezd
+  cookingSteps:
+    - A csirkemellet félbevágjuk és vékonyan felcsíkozzuk, majd fűszerezzük sóval, borssal, chilivel és picit állni hagyjuk.
+    - Közben a kínai kelt feldaraboljuk, a paprikát felcsíkozzuk, a hagymát felszeleteljük, a répát gyufaszálra vágjuk.
+    - Az öntetet a hozzávalókkal alaposan elkeverjük.
+    - A csirkét egy felforrósíott serpenyőben a mogyoróolajon kb. 8 perc alatt megsütjük
+    - Az utolsó percben a mézet rácsorgatjuk, összehevítjük.
+    - A feldarabolt zöldségeket egy keverőtálban összekeverjük az öntettel, tányérokra szedjük, a tetejére halmozzuk a csirkét, tálaljuk.
   comments:
-    - Az öntethez:
+    - Az öntethez (2 adag):
       - 6 ek Szezámolaj
       - 2 ek Rizsecet
       - 2 csipet Só
@@ -1690,6 +1697,13 @@ Mézes-mustáros csirkemell:
       mennyiseg: 5 ek
     - name: Mustár
       mennyiseg: 5 ek
+  cookingSteps:
+    - A csirkemellet csíkokra vágjuk. Megforgatjuk őket a lisztben.
+    - Egy kevés olívaolajon fehéredésig pirítjuk a csirkemellcsíkokat.
+    - Felöntjük a vízzel, majd hozzáadjuk a zúzott fokhagymát, a sót és a fűszerpaprikát.
+    - Kb. 20 percig főzzük, amíg a hús megpuhul.
+    - Ha a hús már puha, hozzáadjuk a mézet és a mustárt, alaposan összekeverjük, és pár percig még főzzük.
+    - Friss petrezselyemmel megszórjuk, párolt rizzsel tálaljuk.
 
 Muffin:
   defaultPortion: 12
