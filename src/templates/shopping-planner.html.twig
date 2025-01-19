@@ -67,12 +67,25 @@
             {% endfor %}
         </div>
         <hr class="border">
+        {% set firstInitial = availableFoods[0].name|slice(0, 1) %}
+        <h1 id="initial-{{ firstInitial }}" class="display-6">
+            <a href="#initial-{{ firstInitial|url_encode }}">{{ firstInitial }}</a>
+        </h1>
 
         {% for availableFood in availableFoods %}
             {% set availableFoodName = availableFood.name %}
             {% set availableFoodNameKey = availableFoodName|replace({' ': '_'}) %}
             {% set isAvailableFoodSelected = selectedFoods[availableFoodName] is defined %}
             {% set portion = isAvailableFoodSelected ? selectedFoods[availableFoodName] : availableFood.defaultPortion %}
+            {% set currentInitial = availableFoodName|slice(0, 1) %}
+
+            {% if currentInitial != firstInitial %}
+                <h1 id="initial-{{ currentInitial }}" class="display-6">
+                    <a href="#initial-{{ currentInitial|url_encode }}">{{ currentInitial }}</a>
+                </h1>
+            {% endif %}
+            {% set firstInitial = currentInitial %}
+
             <fieldset class="row mb-2">
                 <div class="col-md-5">
                     <div class="form-check form-switch hover-img">
