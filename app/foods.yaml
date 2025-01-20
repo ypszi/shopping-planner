@@ -2103,6 +2103,10 @@ Retkes uborka saláta:
       mennyiseg: 250 ml
     - name: Só
       mennyiseg: 1 tk
+  cookingSteps:
+    - Szeleteljük fel az uborkát, a retket és a csemegehagymát.
+    - Egy közepes tálban összekeverjük össze.
+    - A tejfölbe keverjünk sót ízlés szerint, és keverjük a zöldségekhez.
 
 Rizs:
   defaultPortion: 4
