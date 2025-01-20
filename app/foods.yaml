@@ -785,6 +785,11 @@ Fitness saláta:
       mennyiseg: 2 dl
     - name: Petrezselyem
       mennyiseg: 1 ek
+  cookingSteps:
+    - Nagyon jól megmossuk a zöldségeket, és egészen apró kockákra daraboljuk. A friss zöldfűszereket finomra vágjuk.
+    - A joghurtot, ha szükséges, egy pici vízzel hígítjuk, és a zöldfűszerek felét belekeverjük.
+    - A zöldségeket összekeverjük, és meglocsoljuk a joghurtos öntettel.
+    - A megmaradt kaporral és petrezselyemmel megszórjuk a salátát.
 
 Fokhagymával és mézzel sült sárgarépa:
   defaultPortion: 4
