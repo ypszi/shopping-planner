@@ -1,8 +1,14 @@
-Dezodor:
+Dezodor (férfi):
+  kategoria: Tisztálkodás
+
+Dezodor (női):
   kategoria: Tisztálkodás
 
 DM cica kaja:
   kategoria: Cica kaja
+
+Folyékony szappan:
+  kategoria: Tisztálkodás
 
 Mosószer:
   kategoria: Tisztítószer
@@ -12,3 +18,9 @@ Mosószer:
 
 Papírtörlő:
   kategoria: Tisztítószer
+
+Tusfürdő (férfi):
+  kategoria: Tisztálkodás
+
+Tusfürdő (női):
+  kategoria: Tisztálkodás

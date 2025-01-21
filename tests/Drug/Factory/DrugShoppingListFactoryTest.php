@@ -31,7 +31,7 @@ class DrugShoppingListFactoryTest extends TestCase
 
     public function testCreate(): void
     {
-        $drugs = $this->sut->create(['Mosószer' => 4, 'Dezodor' => 1, 'Öblítő' => 2]);
+        $drugs = $this->sut->create(['Mosószer' => 4, 'Dezodor (férfi)' => 1, 'Dezodor (női)' => 1, 'Öblítő' => 2, 'Papírtörlő' => 1]);
 
         $this->assertEquals(
             [
@@ -42,7 +42,7 @@ class DrugShoppingListFactoryTest extends TestCase
                 'rows'   => [
                     [
                         new DrugForShopping(
-                            'Dezodor',
+                            'Dezodor (férfi)',
                             new DrugCategory('Tisztálkodás', 500, 100),
                             1,
                             null,
@@ -57,11 +57,27 @@ class DrugShoppingListFactoryTest extends TestCase
                         ),
                     ],
                     [
-                        '',
+                        new DrugForShopping(
+                            'Dezodor (női)',
+                            new DrugCategory('Tisztálkodás', 500, 100),
+                            1,
+                            null,
+                            Measure::ML
+                        ),
                         new DrugForShopping(
                             'Öblítő',
                             new DrugCategory('Tisztítószer', 5, 1),
                             2,
+                            null,
+                            Measure::L
+                        ),
+                    ],
+                    [
+                        '',
+                        new DrugForShopping(
+                            'Papírtörlő',
+                            new DrugCategory('Tisztítószer', 5, 1),
+                            1,
                             null,
                             Measure::L
                         ),
