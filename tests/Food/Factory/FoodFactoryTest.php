@@ -5,18 +5,25 @@ declare(strict_types=1);
 namespace PeterPecosz\ShoppingPlanner\Tests\Food\Factory;
 
 use PeterPecosz\ShoppingPlanner\Food\Factory\FoodFactory;
+use PeterPecosz\ShoppingPlanner\Food\Factory\ThumbnailFactory;
 use PeterPecosz\ShoppingPlanner\Ingredient\IngredientForFood;
 use PeterPecosz\ShoppingPlanner\Measure\Measure;
 use PHPUnit\Framework\Attributes\Test;
+use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 
 class FoodFactoryTest extends TestCase
 {
+    private ThumbnailFactory&MockObject $thumbnailFactory;
+
     private FoodFactory $sut;
 
     protected function setUp(): void
     {
-        $this->sut = new FoodFactory(__DIR__ . '/../../../app/foods.yaml');
+        $this->sut = new FoodFactory(
+            __DIR__ . '/../../../app/foods.yaml',
+            $this->thumbnailFactory = $this->createMock(ThumbnailFactory::class)
+        );
     }
 
     #[Test]

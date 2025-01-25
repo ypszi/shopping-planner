@@ -6,6 +6,7 @@ namespace PeterPecosz\ShoppingPlanner\Tests\Food\Factory;
 
 use PeterPecosz\ShoppingPlanner\Food\Factory\AvailableFoodTagFactory;
 use PeterPecosz\ShoppingPlanner\Food\Factory\FoodFactory;
+use PeterPecosz\ShoppingPlanner\Food\Factory\ThumbnailFactory;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 
@@ -18,7 +19,7 @@ class AvailableFoodTagFactoryTest extends TestCase
     protected function setUp(): void
     {
         $this->sut = new AvailableFoodTagFactory(
-            foodFactory: new FoodFactory(self::FOODS_PATH),
+            foodFactory: new FoodFactory(self::FOODS_PATH, $this->createMock(ThumbnailFactory::class)),
             foodsPath:   self::FOODS_PATH
         );
     }

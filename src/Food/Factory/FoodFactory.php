@@ -17,8 +17,10 @@ readonly class FoodFactory
     /** @var array<string, array<string, mixed>> */
     private array $foods;
 
-    public function __construct(string $foodsPath)
-    {
+    public function __construct(
+        string $foodsPath,
+        private ThumbnailFactory $thumbnailFactory,
+    ) {
         $this->foods = Yaml::parseFile($foodsPath);
     }
 
@@ -46,12 +48,18 @@ readonly class FoodFactory
             );
         }
 
+        $thumbnail = $food['thumbnailUrl'] ?? null;
+
+        if ($thumbnail) {
+            $thumbnail = $this->thumbnailFactory->create($foodName, $thumbnail);
+        }
+
         return new Food(
             name:           $foodName,
             defaultPortion: $food['defaultPortion'],
             portion:        $portion,
             recipeUrl:      $food['receptUrl'] ?? null,
-            thumbnailUrl:   $food['thumbnailUrl'] ?? null,
+            thumbnailUrl:   $thumbnail,
             tags:           $tags,
             comments:       $food['comments'] ?? [],
             cookingSteps:   $food['cookingSteps'] ?? [],
