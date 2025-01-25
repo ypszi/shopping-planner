@@ -11,4 +11,7 @@ return [
     'twig.parameters' => [
         'cache' => __DIR__ . '/../../../var/cache/twig/',
     ],
+
+    'config.foods.thumbnail_cache.path' => __DIR__ . '/../../../../foods/thumbnails/',
+    'config.foods.thumbnail_asset.path' => 'foods/thumbnails/',
 ];

@@ -9,4 +9,7 @@ return [
     'cache.container_cache.is_enabled' => false,
 
     'twig.parameters' => [],
+
+    'config.foods.thumbnail_cache.path' => __DIR__ . '/../../../web/foods/thumbnails/',
+    'config.foods.thumbnail_asset.path' => 'foods/thumbnails/',
 ];
