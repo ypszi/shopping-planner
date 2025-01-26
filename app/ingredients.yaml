@@ -182,6 +182,8 @@ Mogyoró:
   kategoria: Magvak
   storage:
     max: 300
+Szezámmag:
+  kategoria: Magvak
 
 # Mirelit
 Spárga (mirelit):
@@ -330,8 +332,6 @@ Rizs:
 Spagetti tészta:
   kategoria: Tartós élelmiszer
 Sűrített paradicsom: Paradicsom püré
-Szezámmag:
-  kategoria: Tartós élelmiszer
 Tagliatelle tészta:
   kategoria: Tartós élelmiszer
 Worcester szósz:
