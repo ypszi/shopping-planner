@@ -9,6 +9,10 @@ DM cica kaja:
 
 Folyékony szappan:
   kategoria: Tisztálkodás
+  mertekegysegPreference: ml
+  storage:
+    max: 500
+    step: 100
 
 Mosószer:
   kategoria: Tisztítószer
@@ -17,6 +21,7 @@ Mosószer:
   kategoria: Tisztítószer
 
 Papírtörlő:
+  mertekegysegPreference: db
   kategoria: Tisztítószer
 
 Tusfürdő (férfi):

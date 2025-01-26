@@ -31,7 +31,15 @@ class DrugShoppingListFactoryTest extends TestCase
 
     public function testCreate(): void
     {
-        $drugs = $this->sut->create(['Mosószer' => 4, 'Dezodor (férfi)' => 1, 'Dezodor (női)' => 1, 'Öblítő' => 2, 'Papírtörlő' => 1]);
+        $drugs = $this->sut->create(
+            [
+                'Mosószer'          => 4,
+                'Dezodor (férfi)'   => 1,
+                'Folyékony szappan' => 200,
+                'Öblítő'            => 2,
+                'Papírtörlő'        => 1,
+            ]
+        );
 
         $this->assertEquals(
             [
@@ -43,10 +51,10 @@ class DrugShoppingListFactoryTest extends TestCase
                     [
                         new DrugForShopping(
                             'Dezodor (férfi)',
-                            new DrugCategory('Tisztálkodás', 500, 100),
+                            new DrugCategory('Tisztálkodás', 5, 1),
                             1,
                             null,
-                            Measure::ML
+                            Measure::DB
                         ),
                         new DrugForShopping(
                             'Mosószer',
@@ -58,9 +66,9 @@ class DrugShoppingListFactoryTest extends TestCase
                     ],
                     [
                         new DrugForShopping(
-                            'Dezodor (női)',
+                            'Folyékony szappan',
                             new DrugCategory('Tisztálkodás', 500, 100),
-                            1,
+                            200,
                             null,
                             Measure::ML
                         ),
@@ -79,7 +87,7 @@ class DrugShoppingListFactoryTest extends TestCase
                             new DrugCategory('Tisztítószer', 5, 1),
                             1,
                             null,
-                            Measure::L
+                            Measure::DB
                         ),
                     ],
                 ],

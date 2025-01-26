@@ -116,19 +116,15 @@ readonly class DrugFactory
             );
         }
 
-        $drugCategory         = $this->drugCategories[$category] ?? null;
-        $storageSetup         = $drugCategory['storage'] ?? [];
-        $mapByName[$drugName] = [
-            'max'  => $storageSetup['max'] ?? self::DEFAULT_MAX,
-            'step' => $storageSetup['step'] ?? self::DEFAULT_STEP,
-        ];
+        $drugCategory = $this->drugCategories[$category] ?? null;
+        $storageSetup = $drugCategory['storage'] ?? [];
 
         return new Drug(
             name:              $drugName,
             category:          new DrugCategory(
-                                   name: $category,
-                                   storageMax: $storageSetup['max'] ?? self::DEFAULT_MAX,
-                                   storageStep:  $storageSetup['step'] ?? self::DEFAULT_STEP
+                                   name:        $category,
+                                   storageMax:  $drug['storage']['max'] ?? $storageSetup['max'] ?? self::DEFAULT_MAX,
+                                   storageStep: $drug['storage']['step'] ?? $storageSetup['step'] ?? self::DEFAULT_STEP
                                ),
             measurePreference: $drugMeasurePreference ?? null
         );

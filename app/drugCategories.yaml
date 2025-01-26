@@ -11,7 +11,7 @@ Tisztítószer:
     step: 1
 
 Tisztálkodás:
-  mertekegysegPreference: ml
+  mertekegysegPreference: db
   storage:
-    max: 500
-    step: 100
+    max: 5
+    step: 1
