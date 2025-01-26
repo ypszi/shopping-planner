@@ -333,6 +333,21 @@ Bundás csirke:
       mennyiseg: 4 db
     - name: Tojás
       mennyiseg: 3 db
+  cookingSteps:
+    - Egy mélytányérban a liszthez keverjük az összes fűszert.
+    - Egy másik mélytányérban felverjük a tojást a vízzel.
+    - A csirkemellet egy nagyon éles késsel szeletekre vágjuk, kissé kilapogatjuk a szeleteket, finoman klopfolni is lehet, majd besózzuk őket.
+    - Az előkészített csirkeszeleteket beleforgatjuk a lisztbe, majd a tojásba, majd megint a lisztbe, a lisztbe jól belenyomkodva.
+    - Közepesen forró olajban aranybarnára sütjük a szeleteket, csak egyszer fordítva rajtuk, kb. 5-5 perc mindegyik oldalon.
+    - Míg sülnek, egy kis lábosban összemelegítjük a szószt, nagyon lassú tűzön kb. 5-10 percig forralgatva (vigyázat, habzik az elején, ki ne fusson).
+    - A kész csirkeszeletekről az olajat egy törlőpapíron leitatjuk, és egyenként megmártjuk őket a szószban (aki nem nagyon kedveli az édes-pikánsat, külön is lehet a szószt tálalni).
+  comments:
+    - A mártáshoz::
+      - olívaolaj
+      - fokhagyma
+      - méz
+      - szójaszósz
+      - bors
 
 Carbonara:
   defaultPortion: 2
