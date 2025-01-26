@@ -10,6 +10,7 @@ use PeterPecosz\ShoppingPlanner\Core\ServiceProvider\ServiceDefinitionProviderIn
 use PeterPecosz\ShoppingPlanner\Food\Factory\AvailableFoodFactory;
 use PeterPecosz\ShoppingPlanner\Food\Factory\AvailableFoodTagFactory;
 use PeterPecosz\ShoppingPlanner\Food\Factory\FoodFactory;
+use PeterPecosz\ShoppingPlanner\Food\Factory\FoodsFactory;
 use PeterPecosz\ShoppingPlanner\Food\Factory\ThumbnailFactory;
 
 use function DI\autowire;
@@ -22,6 +23,9 @@ class FoodServiceProvider implements ServiceDefinitionProviderInterface
     {
         return [
             FoodFactory::class => autowire()
+                ->constructorParameter('foodsPath', get('config.foods.path')),
+
+            FoodsFactory::class => autowire()
                 ->constructorParameter('foodsPath', get('config.foods.path')),
 
             AvailableFoodFactory::class => autowire()
