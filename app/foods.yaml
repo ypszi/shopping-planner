@@ -595,10 +595,19 @@ Csirkemell rizstésztasalátával:
       mennyiseg: 1 db
     - name: Újhagyma
       mennyiseg: 2 db
-    - name: Petrezselyem
+    - name: Koriander
       mennyiseg: 1 tk
     - name: Szezámmag
       mennyiseg: 1 ek
+  cookingSteps:
+    - A répát, a paprikát és a káposztát nagyon vékony csíkokra, az újhagymát szeletekre vágjuk.
+    - A csirkemellet 3 cm-es kockára vágjuk, majd összekeverjük a szójaszósszal, a szezámolajjal, borsozzuk és hagyjuk állni legalább 1 órát. (De akár egy egész éjszakát is pihenhet a hűtőben.)
+    - A rizstésztát a csomag leírása alapján elkészítjük, majd azonnal átmossuk hideg vízzel és lehűtjük.
+    - Jöhet rá a szezámolaj, majd összekeverjük.
+    - A répát, a paprikát, a káposztát és az újhagymát hozzáadjuk a tésztához.
+    - A lime héját belereszeljük a szójaszószba, belefacsarjuk a levét, belenyomjuk a fokhagymát, belekeverjük a finomra reszelt gyömbért.
+    - A szójaszószos mixet ráöntjük a tésztára és a zöldségekre, megszórjuk a szezámmagokkal, frissen aprított korianderrel és alaposan össszekeverjük.
+    - A csirkemellet pár perc alatt készre pirítjuk a kókuszolajon, és a tésztasalátával fogyasztjuk.
 
 Csirkés spárgás rizottó:
   defaultPortion: 4
