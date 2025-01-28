@@ -200,6 +200,37 @@
     {% include 'dark-theme.js.twig' %}
     {% include 'helper.js.twig' %}
 
+    document.body.addEventListener(
+        'keyup',
+        (event) => {
+            if (event.defaultPrevented) {
+                return;
+            }
+
+            const validAccentKeys = [
+                'Ö',
+                'Ü',
+                'Ó',
+                'Ő',
+                'Ú',
+                'É',
+                'Á',
+                'Ű',
+            ];
+
+            if ((event.keyCode < 65 || event.keyCode > 90) && !validAccentKeys.includes(event.key)) {
+                return;
+            }
+
+            const url = new URL(window.location.href);
+
+            window.location = '#initial-' + event.key.toUpperCase();
+
+            event.preventDefault();
+        },
+        true
+    );
+
     function resetTags() {
         const url = new URL(window.location.href);
 
