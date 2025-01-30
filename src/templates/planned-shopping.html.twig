@@ -51,7 +51,8 @@
                             </div>
                         </td>
                         <td>
-                            {{ food.name }} <output id="portion-output-{{ foodNameKey }}">({{ food.portion }} Adag)</output>
+                            {{ food.name }}
+                            <output id="portion-output-{{ foodNameKey }}">({{ food.portion }} Adag)</output>
 
                             <div class="input-group">
                                 <input
@@ -154,7 +155,8 @@
 
     <div id="ingredients-summary" class="table-responsive shopping-list">
         <h3 class="text-success">Hozzávalók összesítve ({{ shoppingList.getRows|length }} sor):</h3>
-        <table class="table table-bordered table-responsive">
+        <button id="ingredients-summary-btn" class="btn btn-outline-success emoji-clipboard mb-2" onclick="copyTable('ingredients-summary-btn', 'ingredients-summary-table');"></button>
+        <table id="ingredients-summary-table" class="table table-bordered table-responsive">
             <thead class="bg-light-orange">
                 <tr>
                     {% for header in shoppingList.getHeader %}
@@ -185,7 +187,8 @@
 
     <div id="ingredients-by-food" class="table-responsive shopping-list">
         <h3 class="text-success">Hozzávalók ételek szerint ({{ totalRowCountByFood }} sor):</h3>
-        <table class="table table-bordered table-responsive">
+        <button id="ingredients-by-food-btn" class="btn btn-outline-success emoji-clipboard mb-2" onclick="copyTable('ingredients-by-food-btn', 'ingredients-by-food-table');"></button>
+        <table id="ingredients-by-food-table" class="table table-bordered table-responsive">
             <thead>
                 <tr>
                     <th scope="col">&#128722;</th>
@@ -223,7 +226,8 @@
 
     <div id="unfiltered-ingredients-summary" class="table-responsive shopping-list">
         <h3 class="text-success">Hozzávalók összesítve ({{ unfilteredShoppingList.getRows|length }} sor):</h3>
-        <table class="table table-bordered table-responsive">
+        <button id="unfiltered-ingredients-summary-btn" class="btn btn-outline-success emoji-clipboard mb-2" onclick="copyTable('unfiltered-ingredients-summary-btn', 'unfiltered-ingredients-summary-table');"></button>
+        <table id="unfiltered-ingredients-summary-table" class="table table-bordered table-responsive">
             <thead class="bg-light-orange">
                 <tr>
                     {% for header in unfilteredShoppingList.getHeader %}
@@ -254,7 +258,8 @@
 
     <div id="unfiltered-ingredients-by-food" class="table-responsive shopping-list">
         <h3 class="text-success">Hozzávalók ételek szerint ({{ totalRowCountByFood }} sor):</h3>
-        <table class="table table-bordered table-responsive">
+        <button id="unfiltered-ingredients-by-food-btn" class="btn btn-outline-success emoji-clipboard mb-2" onclick="copyTable('unfiltered-ingredients-by-food-btn', 'unfiltered-ingredients-by-food-table');"></button>
+        <table id="unfiltered-ingredients-by-food-table" class="table table-bordered table-responsive">
             <thead>
                 <tr>
                     <th scope="col">&#128722;</th>
@@ -431,6 +436,51 @@
         }
 
         elem.classList.add('done');
+    }
+
+    function copyTable(btnElementId, tableElementId) {
+        const btn = document.getElementById(btnElementId);
+        const table = document.getElementById(tableElementId);
+
+        if (!window.isSecureContext) {
+            console.warn('Writing to clipboard is not allowed when not in secure context');
+
+            return;
+        }
+
+        if (table.tagName !== 'TABLE') {
+            throw new Error('Selected element is not a table to copy');
+        }
+
+        let content = '';
+        table.querySelector('tbody').querySelectorAll('tr').forEach(
+            (row) => {
+                row.querySelectorAll('td').forEach(
+                    (cell) => {
+                        const span = cell.querySelector('span');
+
+                        if (!span) {
+                            content += cell.innerHTML.trim() + '\t';
+
+                            return;
+                        }
+
+                        content += span.innerHTML.trim() + '\t'
+                    }
+                );
+                content += '\n';
+            }
+        );
+
+        navigator.clipboard.writeText(content);
+
+        btn.classList.add('emoji-checkmark');
+        btn.classList.remove('emoji-clipboard');
+
+        setTimeout(() => {
+            btn.classList.remove('emoji-checkmark');
+            btn.classList.add('emoji-clipboard');
+        }, 500);
     }
 
     {% include 'cookie-handler.scripts.js.twig' %}
