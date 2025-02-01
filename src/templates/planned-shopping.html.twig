@@ -191,7 +191,7 @@
         <table id="ingredients-by-food-table" class="table table-bordered table-responsive">
             <thead>
                 <tr>
-                    <th scope="col">&#128722;</th>
+                    <th scope="col"><i class="emoji emoji-shopping-cart"></i></th>
                     {% for header in shoppingListByFood.getHeader %}
                         <th scope="col" class="bg-light-orange">{{ header }}</th>
                     {% endfor %}
@@ -262,7 +262,7 @@
         <table id="unfiltered-ingredients-by-food-table" class="table table-bordered table-responsive">
             <thead>
                 <tr>
-                    <th scope="col">&#128722;</th>
+                    <th scope="col"><i class="emoji emoji-shopping-cart"></i></th>
                     {% for header in unfilteredShoppingListByFood.getHeader %}
                         <th scope="col" class="bg-light-orange">{{ header }}</th>
                     {% endfor %}
@@ -330,11 +330,17 @@
 
     <div class="sticky-bottom">
         <div class="row justify-content-center sticky-bottom-btn-row">
-            <a href="/?{{ plannedShopping }}" class="btn btn-warning col-3 text-center" title="MODIFY">&#11013;</a>
+            <a href="/?{{ plannedShopping }}" class="btn btn-warning col-3 text-center" title="MODIFY">
+                <i class="emoji emoji-arrow-left"></i>
+            </a>
             <div class="col-1"></div>
-            <a href="{{ ingredientStorageUrl }}" class="btn btn-info col-3 text-center" title="STORAGE">&#128230;</a>
+            <a href="{{ ingredientStorageUrl }}" class="btn btn-info col-3 text-center" title="STORAGE">
+                <i class="emoji emoji-box"></i>
+            </a>
             <div class="col-1"></div>
-            <a href="/" class="btn btn-secondary col-3 text-center" title="HOME">&#127968;</a>
+            <a href="/" class="btn btn-secondary col-3 text-center" title="HOME">
+                <i class="emoji emoji-home"></i>
+            </a>
         </div>
     </div>
 </div>

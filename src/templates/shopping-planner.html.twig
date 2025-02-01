@@ -101,7 +101,7 @@
                         >
                         <label for="food-{{ availableFoodNameKey }}" class="form-check-label">{{ availableFoodName }}</label>
                         <div class="hover-container">
-                            <i class="emoji">&#128444;</i>
+                            <i class="emoji emoji-thumbnail"></i>
                             <span>
                                 {% if availableFood.thumbnailUrl %}
                                     <img src="{{ availableFood.thumbnailUrl }}" alt="{{ availableFoodName }}" class="img-fluid img-thumbnail">
@@ -186,11 +186,17 @@
 
         <div class="sticky-bottom">
             <div class="row justify-content-center sticky-bottom-btn-row">
-                <a href="/" class="btn btn-warning col-3 text-center" title="HOME">&#127968;</a>
+                <a href="/" class="btn btn-warning col-3 text-center" title="HOME">
+                    <i class="emoji emoji-home"></i>
+                </a>
                 <div class="col-1"></div>
-                <a href="{{ ingredientStorageUrl }}" class="btn btn-info col-3 text-center" title="STORAGE">&#128230;</a>
+                <a href="{{ ingredientStorageUrl }}" class="btn btn-info col-3 text-center" title="STORAGE">
+                    <i class="emoji emoji-box"></i>
+                </a>
                 <div class="col-1"></div>
-                <button type="submit" class="btn btn-primary col-3 text-center" title="PLAN">&#9989;</button>
+                <button type="submit" class="btn btn-primary col-3 text-center" title="PLAN">
+                    <i class="emoji emoji-checkmark"></i>
+                </button>
             </div>
         </div>
     </form>
