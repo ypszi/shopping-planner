@@ -1012,6 +1012,47 @@ Gofri:
     - Csomómentesre keverjük a tésztát.
     - 1-1 nagyobb evőkanállal teszünk belőle a felmelegített, enyhén kiolajozott gofrisütő mélyedéseibe, és pár perc alatt aranybarnára sütjük a gofrikat, majd rácson hagyjuk kihűlni.
 
+Gouda sajtos pogácsa:
+  defaultPortion: 4
+  receptUrl: https://sobors.hu/receptek/gouda-sajtos-pogacsa-recept/
+  thumbnailUrl: https://kep.cdn.indexvas.hu/1/0/4271/42712/427122/42712222_10fa9ab4f52bffbc3e4f22ec0479852d_wm.jpg
+  tags:
+    - desszert
+    - új
+  ingredients:
+    - name: Gouda sajt
+      mennyiseg: 15 dkg
+    - name: Tojás
+      mennyiseg: 2 db
+    - name: Tejföl
+      mennyiseg: 10 dkg
+    - name: Vaj
+      mennyiseg: 25 dkg
+    - name: Élesztő
+      mennyiseg: 1 csomag
+    - name: Finomliszt
+      mennyiseg: 25 dkg
+    - name: Só
+      mennyiseg: 1 tk
+    - name: Tojás
+      mennyiseg: 1 db
+    - name: Gouda sajt
+      mennyiseg: 8 dkg
+  cookingSteps:
+    - A sajt szélét vágjuk le, azt nem fogjuk használni, a többi részét reszeljük le.
+    - A reszelt sajthoz adjuk hozzá a tojássárgáját, tejfölt és a puha vajat, az egészet keverjük össze.
+    - A masszához forgassuk hozzá az élesztőt.
+    - A lisztet a sóval keverjük egybe, utána adjuk hozzá a vajas masszához és alaposan dolgozzuk egybe.
+    - A lágy masszát nyomkodjuk tálba, fedjük le fóliával, és egy éjszakára tegyük hűtőbe.
+    - A pihent tésztát enyhén lisztezett felületen nyújtsuk 1-2 centi vastagra, majd szúrjuk ki pogácsaszaggatóval.
+    - A pogácsákat sorakoztassuk sütőpapírral bélelt tepsire, a tetejüket kenjük meg felvert tojással, szórjunk rájuk sajtot.
+    - 30 percig pihentessük, utána toljuk 180 fokosra előmelegített sütőbe 15-18 percre, míg szép aranybarnára sül.
+  comments:
+    - A pogácsába csak a tojássárgája kell
+    - Tetejére:
+      - Tojás
+      - Gouda sajt
+
 Görög bab:
   defaultPortion: 6
   tags:
