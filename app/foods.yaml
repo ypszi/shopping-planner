@@ -1436,6 +1436,30 @@ Krumplipüré:
   comments:
     - 1 dl tejföl vagy 2 dl tej
 
+Krumplipüré (póréhagymás):
+  defaultPortion: 4
+  receptUrl: https://katakonyha.blogspot.com/2015/10/porehagymas-tort-burgonya.html
+  thumbnailUrl: https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgHWKUEb0S56N3hI9quS0Dhma5e_XZyiMqtbi5yQuyJet_gAV8cvk_6c2kgmSucvEs9qrq-EYpYv9AVfdEyaIpStc7agvNIVgiqHKu_oKHHz7xah2i9uM14G5aGBXWsSJrKaT9aJ_gWwW0/s320/Porehagymas+tort+burgonya+kicsi.JPG
+  tags:
+    - köret
+  ingredients:
+    - name: Burgonya
+      mennyiseg: 40 dkg
+    - name: Póréhagyma
+      mennyiseg: 10 dkg
+    - name: Só
+      mennyiseg: 1 kk
+    - name: Bors
+      mennyiseg: 1 csipet
+    - name: Vaj
+      mennyiseg: 2 ek
+    - name: Tejföl
+      mennyiseg: 1 dl
+  cookingSteps:
+    - A burgonyát megtisztítjuk, kis kockákra vágjuk, sós vízben megfőzzük.
+    - Közben a vajon a félbe-, majd csíkokra vágott pórét kevés sóval megszórva, takaréklángon megpuhítjuk.
+    - A leszűrt burgonyát hozzáadjuk, és néhány perc alatt az egészet összemelegítjük, közben borssal ízesítjük.
+
 Kukoricasaláta:
   defaultPortion: 2
   receptUrl: https://www.nosalty.hu/recept/kukoricasalata-fahej-konyhajabol
