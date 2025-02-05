@@ -265,6 +265,8 @@ Bolognai:
       mennyiseg: 1 csipet
     - name: Worcester szósz
       mennyiseg: 1 tk
+    - name: Víz
+      mennyiseg: 3 dl
     - name: Tej
       mennyiseg: 100 ml
     - name: Spagetti tészta
@@ -280,8 +282,6 @@ Bolognai:
     - Felöntjük a vízzel, és alacsony lángon egy órán át rotyogtatjuk.
     - Titkos hozzávalóként beleöntjük a tejet, és még 10 percig főzzük.
     - Tökéletes, al dentére főtt tésztán tálaljuk, reszelt parmezánnal!
-  comments:
-    - 3 dl víz
 
 Bulgur:
   defaultPortion: 4
@@ -435,13 +435,16 @@ Chiliszósz (édes):
       mennyiseg: 2 tk
     - name: Keményítő
       mennyiseg: 1 ek
+    - name: Víz
+      mennyiseg: 2 dl
+    - name: Víz
+      mennyiseg: 2 ek
   cookingSteps:
       - Keverjük össze a chilit, rizsecetet, szójaszószt, sót, vizet, mézet vagy cukrot
       - Egy kisebb edénybe - néha kavargatva - forraljuk fel
       - Egy kis tálkában a keményítőt keverjük csomómentesre a két evőkanál vízzel, majd adjuk a chilis keverékhez
       - Folyamatosan kevergetve főzzük őket további 1-2 percig, amíg kissé besűrűsödik
   comments:
-    - 2 dl Víz
     - 2 ek Víz 1 ek Keményítőhöz
 
 Citromos joghurtos csirkemell görögsalátával:
@@ -926,8 +929,8 @@ Frankfurti leves:
       mennyiseg: 175 g
     - name: Finomliszt
       mennyiseg: 1 ek
-  comments:
-    - 2 l víz
+    - name: Víz
+      mennyiseg: 2 l
 
 Fűszeres csirkecsíkok:
   defaultPortion: 4
@@ -1611,6 +1614,8 @@ Lazacos tagliatelle:
       mennyiseg: 2 dl
     - name: Főzőtejszín
       mennyiseg: 1.5 dl
+    - name: Víz
+      mennyiseg: 1 dl
     - name: Tagliatelle tészta
       mennyiseg: 0.5 kg
     - name: Só
@@ -1628,7 +1633,6 @@ Lazacos tagliatelle:
     - A tésztával összekeverjük.
   comments:
     - A recept ír még 100g füstölt lazacot is, de azt szándékosan nem tartalmazza
-    - 1 dl víz
     - 0.5 csokor petrezselyem
 
 Lecsó:
@@ -1981,7 +1985,8 @@ Pad thai:
       mennyiseg: 5 csepp
     - name: Szezámolaj
       mennyiseg: 1 ek
-    # 2-3 ek víz
+    - name: Víz
+      mennyiseg: 2 ek
     - name: Barna cukor
       mennyiseg: 1 tk
   cookingSteps:
@@ -1999,11 +2004,11 @@ Pad thai:
     - Aprított korianderrel és mogyoróval megszórva tálaljuk.
   comments:
     - A marinádhoz::
-      - 2 tk Tamarind szósz
-      - 4 - 5 csepp Hal szósz
-      - 1 ek Szezámolaj
-      - 2 - 3 ek Víz
-    - 1 tk Barna cukor
+      - Tamarind szósz
+      - Hal szósz
+      - Szezámolaj
+      - Víz
+    - Barna cukor
 
 Palacsinta:
   defaultPortion: 4
@@ -2363,8 +2368,8 @@ Serpenyős fűszeres tejszínes pulykamell:
       mennyiseg: 1 tk
     - name: Főzőtejszín
       mennyiseg: 2 dl
-  comments:
-    - 2 dl Víz
+    - name: Víz
+      mennyiseg: 2 dl
 
 Serpenyős tojásos krumpli:
   defaultPortion: 4
@@ -2449,7 +2454,9 @@ Sertéspörkölt:
     - name: Fokhagyma
       mennyiseg: 2 gerezd fokhagyma
     - name: Sertészsír
-      mennyiseg: 1 ek sertészsír
+      mennyiseg: 1 ek
+    - name: Víz
+      mennyiseg: 5 dl
     - name: Fűszerkömény
       mennyiseg: 1 tk
     - name: Babérlevél
@@ -2460,8 +2467,6 @@ Sertéspörkölt:
       mennyiseg: 1 csipet
     - name: Só
       mennyiseg: 0.5 tk
-  comments:
-    - 5 dl Víz
   cookingSteps:
       - Egy magas falú edényben olvasszuk meg a zsírt, majd szórjuk bele a kockára vágott húst, amit sózzunk és borsozzunk, ízlésünknek megfelelően. Plusz az őrölt köményt se felejtsük el hozzáadni.
       - Amikor a hús kifehéredett, öntsük hozzá a kockára vágott hagymát is, és kis idő múlva a zúzott fokhagymát is. Majd rövid ideig pároljuk őket együtt.
@@ -3004,9 +3009,10 @@ Töltött káposzta (szabolcsi):
       mennyiseg: 200 g
     - name: Kolozsvári szalonna
       mennyiseg: 350 g
+    - name: Víz
+      mennyiseg: 1.5 l
   comments:
     - ez a recept nem ír savanyú káposztát
-    - 1.5 l víz
 
 Tonhalas babsaláta:
   defaultPortion: 2

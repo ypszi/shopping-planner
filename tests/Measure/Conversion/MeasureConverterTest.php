@@ -28,6 +28,7 @@ use PeterPecosz\ShoppingPlanner\Measure\Conversion\FinomLiszt\BogreToKilogram as
 use PeterPecosz\ShoppingPlanner\Measure\Conversion\FinomLiszt\EvokanalToDekagram as FinomLisztEvokanalToDekagram;
 use PeterPecosz\ShoppingPlanner\Measure\Conversion\FinomLiszt\EvokanalToGram as FinomLisztEvokanalToGram;
 use PeterPecosz\ShoppingPlanner\Measure\Conversion\FinomLiszt\EvokanalToKilogram as FinomLisztEvokanalToKiloGram;
+use PeterPecosz\ShoppingPlanner\Measure\Conversion\Kanal\DeciliterToEvoKanal;
 use PeterPecosz\ShoppingPlanner\Measure\Conversion\Kanal\EvoKanalToDeciliter;
 use PeterPecosz\ShoppingPlanner\Measure\Conversion\Kanal\EvoKanalToKavesKanal;
 use PeterPecosz\ShoppingPlanner\Measure\Conversion\Kanal\EvoKanalToKisKanal;
@@ -139,6 +140,7 @@ class MeasureConverterTest extends TestCase
                     new CentiliterToMilliliter(),
                     new CseppToMilliliter(),
                     new CseszeToMilliliter(),
+                    new DeciliterToEvoKanal(),
                     new DeciliterToLiter(),
                     new DeciliterToCentiliter(),
                     new DeciliterToMilliliter(),
@@ -246,492 +248,497 @@ class MeasureConverterTest extends TestCase
                 new IngredientForFood(name: 'Alaplé', category: 'Fűszer', portion: 0, measure: Measure::DB),
                 new IngredientForFood(name: 'Húsleves kocka', category: 'Fűszer', portion: 1, measure: Measure::DB, measurePreference: Measure::DB),
             ],
-            'alaplé liter to húsleves kocka db' => [
+            'alaplé liter to húsleves kocka db'     => [
                 new IngredientForFood(name: 'Alaplé', category: 'Fűszer', portion: 1, measure: Measure::L),
                 new IngredientForFood(name: 'Alaplé', category: 'Fűszer', portion: 0, measure: Measure::DB),
                 new IngredientForFood(name: 'Húsleves kocka', category: 'Fűszer', portion: 2, measure: Measure::DB, measurePreference: Measure::DB),
             ],
-            'csirkemell db to dkg'              => [
+            'csirkemell db to dkg'                  => [
                 new IngredientForFood(name: 'Csirkemell', category: 'Hús', portion: 1, measure: Measure::DB),
                 new IngredientForFood(name: 'Csirkemell', category: 'Hús', portion: 0, measure: Measure::DKG),
                 new IngredientForFood(name: 'Csirkemell', category: 'Hús', portion: 25.0, measure: Measure::DKG),
             ],
-            'csirkemell db to kg'               => [
+            'csirkemell db to kg'                   => [
                 new IngredientForFood(name: 'Csirkemell', category: 'Hús', portion: 1, measure: Measure::DB),
                 new IngredientForFood(name: 'Csirkemell', category: 'Hús', portion: 0, measure: Measure::KG),
                 new IngredientForFood(name: 'Csirkemell', category: 'Hús', portion: 0.25, measure: Measure::KG),
             ],
-            'csirkemell dkg to db'              => [
+            'csirkemell dkg to db'                  => [
                 new IngredientForFood(name: 'Csirkemell', category: 'Hús', portion: 25, measure: Measure::DKG),
                 new IngredientForFood(name: 'Csirkemell', category: 'Hús', portion: 0, measure: Measure::DB),
                 new IngredientForFood(name: 'Csirkemell', category: 'Hús', portion: 1.0, measure: Measure::DB),
             ],
-            'csirkemell kg to db'               => [
+            'csirkemell kg to db'                   => [
                 new IngredientForFood(name: 'Csirkemell', category: 'Hús', portion: 1, measure: Measure::KG),
                 new IngredientForFood(name: 'Csirkemell', category: 'Hús', portion: 0, measure: Measure::DB),
                 new IngredientForFood(name: 'Csirkemell', category: 'Hús', portion: 4.0, measure: Measure::DB),
             ],
-            'bogre to ml'                       => [
+            'bogre to ml'                           => [
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 1, measure: Measure::BOGRE),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 0, measure: Measure::ML),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 250.0, measure: Measure::ML),
             ],
-            'cl to dl'                          => [
+            'cl to dl'                              => [
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 1, measure: Measure::CL),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 0, measure: Measure::DL),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 0.1, measure: Measure::DL),
             ],
-            'cl to l'                           => [
+            'cl to l'                               => [
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 1, measure: Measure::CL),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 0, measure: Measure::L),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 0.01, measure: Measure::L),
             ],
-            'cl to ml'                          => [
+            'cl to ml'                              => [
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 1, measure: Measure::CL),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 0, measure: Measure::ML),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 10.0, measure: Measure::ML),
             ],
-            'csesze to ml'                      => [
+            'csesze to ml'                          => [
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 1, measure: Measure::CSESZE),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 0, measure: Measure::ML),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 250.0, measure: Measure::ML),
             ],
-            'dl to l'                           => [
+            'dl to l'                               => [
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 1, measure: Measure::DL),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 0, measure: Measure::L),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 0.1, measure: Measure::L),
             ],
-            'dl to cl'                          => [
+            'dl to cl'                              => [
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 1, measure: Measure::DL),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 0, measure: Measure::CL),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 10.0, measure: Measure::CL),
             ],
-            'dl to ml'                          => [
+            'dl to ml'                              => [
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 1, measure: Measure::DL),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 0, measure: Measure::ML),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 100.0, measure: Measure::ML),
             ],
-            'l to cl'                           => [
+            'l to cl'                               => [
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 1, measure: Measure::L),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 0, measure: Measure::CL),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 100.0, measure: Measure::CL),
             ],
-            'l to dl'                           => [
+            'l to dl'                               => [
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 1, measure: Measure::L),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 0, measure: Measure::DL),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 10.0, measure: Measure::DL),
             ],
-            'l to ml'                           => [
+            'l to ml'                               => [
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 1, measure: Measure::L),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 0, measure: Measure::ML),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 1000.0, measure: Measure::ML),
             ],
-            'ml to cl'                          => [
+            'ml to cl'                              => [
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 1, measure: Measure::ML),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 0, measure: Measure::CL),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 0.1, measure: Measure::CL),
             ],
-            'ml to dl'                          => [
+            'ml to dl'                              => [
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 1, measure: Measure::ML),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 0, measure: Measure::DL),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 0.01, measure: Measure::DL),
             ],
-            'ml to l'                           => [
+            'ml to l'                               => [
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 1, measure: Measure::ML),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 0, measure: Measure::L),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 0.001, measure: Measure::L),
             ],
-            'dkg to g'                          => [
+            'dkg to g'                              => [
                 new IngredientForFood(name: 'Csirkemell', category: 'Hús', portion: 1, measure: Measure::DKG),
                 new IngredientForFood(name: 'Csirkemell', category: 'Hús', portion: 0, measure: Measure::G),
                 new IngredientForFood(name: 'Csirkemell', category: 'Hús', portion: 10.0, measure: Measure::G),
             ],
-            'dkg to kg'                         => [
+            'dkg to kg'                             => [
                 new IngredientForFood(name: 'Csirkemell', category: 'Hús', portion: 1, measure: Measure::DKG),
                 new IngredientForFood(name: 'Csirkemell', category: 'Hús', portion: 0, measure: Measure::KG),
                 new IngredientForFood(name: 'Csirkemell', category: 'Hús', portion: 0.01, measure: Measure::KG),
             ],
-            'g to dkg'                          => [
+            'g to dkg'                              => [
                 new IngredientForFood(name: 'Csirkemell', category: 'Hús', portion: 1, measure: Measure::G),
                 new IngredientForFood(name: 'Csirkemell', category: 'Hús', portion: 0, measure: Measure::DKG),
                 new IngredientForFood(name: 'Csirkemell', category: 'Hús', portion: 0.1, measure: Measure::DKG),
             ],
-            'g to kg'                           => [
+            'g to kg'                               => [
                 new IngredientForFood(name: 'Csirkemell', category: 'Hús', portion: 1, measure: Measure::G),
                 new IngredientForFood(name: 'Csirkemell', category: 'Hús', portion: 0, measure: Measure::KG),
                 new IngredientForFood(name: 'Csirkemell', category: 'Hús', portion: 0.001, measure: Measure::KG),
             ],
-            'kg to dkg'                         => [
+            'kg to dkg'                             => [
                 new IngredientForFood(name: 'Csirkemell', category: 'Hús', portion: 1, measure: Measure::KG),
                 new IngredientForFood(name: 'Csirkemell', category: 'Hús', portion: 0, measure: Measure::DKG),
                 new IngredientForFood(name: 'Csirkemell', category: 'Hús', portion: 100.0, measure: Measure::DKG),
             ],
-            'kg to g'                           => [
+            'kg to g'                               => [
                 new IngredientForFood(name: 'Csirkemell', category: 'Hús', portion: 1, measure: Measure::KG),
                 new IngredientForFood(name: 'Csirkemell', category: 'Hús', portion: 0, measure: Measure::G),
                 new IngredientForFood(name: 'Csirkemell', category: 'Hús', portion: 1000.0, measure: Measure::G),
             ],
-            'ek to dl'                          => [
+            'dl to ek'                              => [
+                new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 1, measure: Measure::DL),
+                new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 0, measure: Measure::EK),
+                new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 1 / 0.15, measure: Measure::EK),
+            ],
+            'ek to dl'                              => [
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 1, measure: Measure::EK),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 0, measure: Measure::DL),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 0.15, measure: Measure::DL),
             ],
-            'ek to kvk'                         => [
+            'ek to kvk'                             => [
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 1, measure: Measure::EK),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 3, measure: Measure::KVK),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 15.0 / 5.0, measure: Measure::KVK),
             ],
-            'ek to kk'                          => [
+            'ek to kk'                              => [
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 1, measure: Measure::EK),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 3, measure: Measure::KK),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 15.0 / 5.0, measure: Measure::KK),
             ],
-            'ek to l'                           => [
+            'ek to l'                               => [
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 1, measure: Measure::EK),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 0, measure: Measure::L),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 0.015, measure: Measure::L),
             ],
-            'ek to ml'                          => [
+            'ek to ml'                              => [
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 1, measure: Measure::EK),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 0, measure: Measure::ML),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 15.0, measure: Measure::ML),
             ],
-            'ek to mk'                          => [
+            'ek to mk'                              => [
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 1, measure: Measure::EK),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 0, measure: Measure::MK),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 15.0 / 2.0, measure: Measure::MK),
             ],
-            'ek to tk'                          => [
+            'ek to tk'                              => [
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 1, measure: Measure::EK),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 3, measure: Measure::TK),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 15.0 / 5.0, measure: Measure::TK),
             ],
-            'kvk to ek'                         => [
+            'kvk to ek'                             => [
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 1, measure: Measure::KVK),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 0, measure: Measure::EK),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 5.0 / 15.0, measure: Measure::EK),
             ],
-            'kvk to kk'                         => [
+            'kvk to kk'                             => [
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 1, measure: Measure::KVK),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 0, measure: Measure::KK),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 1.0, measure: Measure::KK),
             ],
-            'kvk to l'                          => [
+            'kvk to l'                              => [
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 1, measure: Measure::KVK),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 0, measure: Measure::L),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 0.005, measure: Measure::L),
             ],
-            'kvk to ml'                         => [
+            'kvk to ml'                             => [
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 1, measure: Measure::KVK),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 0, measure: Measure::ML),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 5.0, measure: Measure::ML),
             ],
-            'kvk to mk'                         => [
+            'kvk to mk'                             => [
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 1, measure: Measure::KVK),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 0, measure: Measure::MK),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 5.0 / 2.0, measure: Measure::MK),
             ],
-            'kvk to tk'                         => [
+            'kvk to tk'                             => [
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 1, measure: Measure::KVK),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 3, measure: Measure::TK),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 1.0, measure: Measure::TK),
             ],
-            'kk to ek'                          => [
+            'kk to ek'                              => [
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 1, measure: Measure::KK),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 0, measure: Measure::EK),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 5.0 / 15.0, measure: Measure::EK),
             ],
-            'kk to kvk'                         => [
+            'kk to kvk'                             => [
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 1, measure: Measure::KK),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 0, measure: Measure::KVK),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 1.0, measure: Measure::KVK),
             ],
-            'kk to l'                           => [
+            'kk to l'                               => [
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 1, measure: Measure::KK),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 0, measure: Measure::L),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 0.005, measure: Measure::L),
             ],
-            'kk to ml'                          => [
+            'kk to ml'                              => [
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 1, measure: Measure::KK),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 0, measure: Measure::ML),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 5.0, measure: Measure::ML),
             ],
-            'kk to mk'                          => [
+            'kk to mk'                              => [
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 1, measure: Measure::KK),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 0, measure: Measure::MK),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 5.0 / 2.0, measure: Measure::MK),
             ],
-            'kk to tk'                          => [
+            'kk to tk'                              => [
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 1, measure: Measure::KK),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 0, measure: Measure::TK),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 1.0, measure: Measure::TK),
             ],
-            'ml to ek'                          => [
+            'ml to ek'                              => [
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 1, measure: Measure::ML),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 0, measure: Measure::EK),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 1 / 15.0, measure: Measure::EK),
             ],
-            'ml to kvk'                         => [
+            'ml to kvk'                             => [
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 1, measure: Measure::ML),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 0, measure: Measure::KVK),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 0.2, measure: Measure::KVK),
             ],
-            'ml to kk'                          => [
+            'ml to kk'                              => [
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 1, measure: Measure::ML),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 0, measure: Measure::KK),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 0.2, measure: Measure::KK),
             ],
-            'ml to mk'                          => [
+            'ml to mk'                              => [
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 1, measure: Measure::ML),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 0, measure: Measure::MK),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 0.5, measure: Measure::MK),
             ],
-            'ml to tk'                          => [
+            'ml to tk'                              => [
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 1, measure: Measure::ML),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 0, measure: Measure::TK),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 0.2, measure: Measure::TK),
             ],
-            'ml to csepp'                       => [
+            'ml to csepp'                           => [
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 1, measure: Measure::ML),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 20, measure: Measure::CSEPP),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 20.0, measure: Measure::CSEPP),
             ],
-            'csepp to ml'                       => [
+            'csepp to ml'                           => [
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 1, measure: Measure::CSEPP),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 0, measure: Measure::ML),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 0.05, measure: Measure::ML),
             ],
-            'mk to ek'                          => [
+            'mk to ek'                              => [
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 1, measure: Measure::MK),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 0, measure: Measure::EK),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 2.0 / 15.0, measure: Measure::EK),
             ],
-            'mk to kvk'                         => [
+            'mk to kvk'                             => [
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 1, measure: Measure::MK),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 0, measure: Measure::KVK),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 2.0 / 5.0, measure: Measure::KVK),
             ],
-            'mk to kk'                          => [
+            'mk to kk'                              => [
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 1, measure: Measure::MK),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 0, measure: Measure::KK),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 2.0 / 5.0, measure: Measure::KK),
             ],
-            'mk to l'                           => [
+            'mk to l'                               => [
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 1, measure: Measure::MK),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 0, measure: Measure::L),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 0.002, measure: Measure::L),
             ],
-            'mk to ml'                          => [
+            'mk to ml'                              => [
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 1, measure: Measure::MK),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 0, measure: Measure::ML),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 2.0, measure: Measure::ML),
             ],
-            'mk to tk'                          => [
+            'mk to tk'                              => [
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 1, measure: Measure::MK),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 0, measure: Measure::TK),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 2.0 / 5.0, measure: Measure::TK),
             ],
-            'tk to dl'                          => [
+            'tk to dl'                              => [
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 1, measure: Measure::TK),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 0, measure: Measure::DL),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 0.05, measure: Measure::DL),
             ],
-            'tk to ek'                          => [
+            'tk to ek'                              => [
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 1, measure: Measure::TK),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 0.3, measure: Measure::EK),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 5.0 / 15.0, measure: Measure::EK),
             ],
-            'tk to kvk'                         => [
+            'tk to kvk'                             => [
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 1, measure: Measure::TK),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 0.3, measure: Measure::KVK),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 1.0, measure: Measure::KVK),
             ],
-            'tk to kk'                          => [
+            'tk to kk'                              => [
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 1, measure: Measure::TK),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 0.3, measure: Measure::KK),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 1.0, measure: Measure::KK),
             ],
-            'tk to l'                           => [
+            'tk to l'                               => [
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 1, measure: Measure::TK),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 0, measure: Measure::L),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 0.005, measure: Measure::L),
             ],
-            'tk to ml'                          => [
+            'tk to ml'                              => [
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 1, measure: Measure::TK),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 0, measure: Measure::ML),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 5.0, measure: Measure::ML),
             ],
-            'tk to mk'                          => [
+            'tk to mk'                              => [
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 1, measure: Measure::TK),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 0.3, measure: Measure::MK),
                 new IngredientForFood(name: 'Napraforgóolaj', category: 'Olaj', portion: 5.0 / 2.0, measure: Measure::MK),
             ],
-            'finomliszt bogre to dkg'           => [
+            'finomliszt bogre to dkg'               => [
                 new IngredientForFood(name: 'Finomliszt', category: 'Sütés / Sütemény', portion: 1, measure: Measure::BOGRE),
                 new IngredientForFood(name: 'Finomliszt', category: 'Sütés / Sütemény', portion: 0, measure: Measure::DKG),
                 new IngredientForFood(name: 'Finomliszt', category: 'Sütés / Sütemény', portion: 15.0, measure: Measure::DKG),
             ],
-            'finomliszt bogre to g'             => [
+            'finomliszt bogre to g'                 => [
                 new IngredientForFood(name: 'Finomliszt', category: 'Sütés / Sütemény', portion: 1, measure: Measure::BOGRE),
                 new IngredientForFood(name: 'Finomliszt', category: 'Sütés / Sütemény', portion: 0, measure: Measure::G),
                 new IngredientForFood(name: 'Finomliszt', category: 'Sütés / Sütemény', portion: 150.0, measure: Measure::G),
             ],
-            'finomliszt bogre to kg'            => [
+            'finomliszt bogre to kg'                => [
                 new IngredientForFood(name: 'Finomliszt', category: 'Sütés / Sütemény', portion: 1, measure: Measure::BOGRE),
                 new IngredientForFood(name: 'Finomliszt', category: 'Sütés / Sütemény', portion: 0, measure: Measure::KG),
                 new IngredientForFood(name: 'Finomliszt', category: 'Sütés / Sütemény', portion: 0.15, measure: Measure::KG),
             ],
-            'finomliszt ek to dkg'              => [
+            'finomliszt ek to dkg'                  => [
                 new IngredientForFood(name: 'Finomliszt', category: 'Sütés / Sütemény', portion: 1, measure: Measure::EK),
                 new IngredientForFood(name: 'Finomliszt', category: 'Sütés / Sütemény', portion: 0, measure: Measure::DKG),
                 new IngredientForFood(name: 'Finomliszt', category: 'Sütés / Sütemény', portion: 2.0, measure: Measure::DKG),
             ],
-            'finomliszt ek to g'                => [
+            'finomliszt ek to g'                    => [
                 new IngredientForFood(name: 'Finomliszt', category: 'Sütés / Sütemény', portion: 1, measure: Measure::EK),
                 new IngredientForFood(name: 'Finomliszt', category: 'Sütés / Sütemény', portion: 0, measure: Measure::G),
                 new IngredientForFood(name: 'Finomliszt', category: 'Sütés / Sütemény', portion: 20.0, measure: Measure::G),
             ],
-            'finomliszt ek to kg'               => [
+            'finomliszt ek to kg'                   => [
                 new IngredientForFood(name: 'Finomliszt', category: 'Sütés / Sütemény', portion: 1, measure: Measure::EK),
                 new IngredientForFood(name: 'Finomliszt', category: 'Sütés / Sütemény', portion: 0, measure: Measure::KG),
                 new IngredientForFood(name: 'Finomliszt', category: 'Sütés / Sütemény', portion: 0.02, measure: Measure::KG),
             ],
-            'liszt bogre to dkg'                => [
+            'liszt bogre to dkg'                    => [
                 new IngredientForFood(name: 'Liszt', category: 'Sütés / Sütemény', portion: 1, measure: Measure::BOGRE),
                 new IngredientForFood(name: 'Liszt', category: 'Sütés / Sütemény', portion: 0, measure: Measure::DKG),
                 new IngredientForFood(name: 'Liszt', category: 'Sütés / Sütemény', portion: 15.0, measure: Measure::DKG),
             ],
-            'liszt bogre to g'                  => [
+            'liszt bogre to g'                      => [
                 new IngredientForFood(name: 'Liszt', category: 'Sütés / Sütemény', portion: 1, measure: Measure::BOGRE),
                 new IngredientForFood(name: 'Liszt', category: 'Sütés / Sütemény', portion: 0, measure: Measure::G),
                 new IngredientForFood(name: 'Liszt', category: 'Sütés / Sütemény', portion: 150.0, measure: Measure::G),
             ],
-            'liszt bogre to kg'                 => [
+            'liszt bogre to kg'                     => [
                 new IngredientForFood(name: 'Liszt', category: 'Sütés / Sütemény', portion: 1, measure: Measure::BOGRE),
                 new IngredientForFood(name: 'Liszt', category: 'Sütés / Sütemény', portion: 0, measure: Measure::KG),
                 new IngredientForFood(name: 'Liszt', category: 'Sütés / Sütemény', portion: 0.15, measure: Measure::KG),
             ],
-            'liszt ek to dkg'                   => [
+            'liszt ek to dkg'                       => [
                 new IngredientForFood(name: 'Liszt', category: 'Sütés / Sütemény', portion: 1, measure: Measure::EK),
                 new IngredientForFood(name: 'Liszt', category: 'Sütés / Sütemény', portion: 0, measure: Measure::DKG),
                 new IngredientForFood(name: 'Liszt', category: 'Sütés / Sütemény', portion: 2.0, measure: Measure::DKG),
             ],
-            'liszt ek to g'                     => [
+            'liszt ek to g'                         => [
                 new IngredientForFood(name: 'Liszt', category: 'Sütés / Sütemény', portion: 1, measure: Measure::EK),
                 new IngredientForFood(name: 'Liszt', category: 'Sütés / Sütemény', portion: 0, measure: Measure::G),
                 new IngredientForFood(name: 'Liszt', category: 'Sütés / Sütemény', portion: 20.0, measure: Measure::G),
             ],
-            'liszt ek to kg'                    => [
+            'liszt ek to kg'                        => [
                 new IngredientForFood(name: 'Liszt', category: 'Sütés / Sütemény', portion: 1, measure: Measure::EK),
                 new IngredientForFood(name: 'Liszt', category: 'Sütés / Sütemény', portion: 0, measure: Measure::KG),
                 new IngredientForFood(name: 'Liszt', category: 'Sütés / Sütemény', portion: 0.02, measure: Measure::KG),
             ],
-            'porcukor ek to dkg'                => [
+            'porcukor ek to dkg'                    => [
                 new IngredientForFood(name: 'Porcukor', category: 'Sütés / Sütemény', portion: 1, measure: Measure::EK),
                 new IngredientForFood(name: 'Porcukor', category: 'Sütés / Sütemény', portion: 0, measure: Measure::DKG),
                 new IngredientForFood(name: 'Porcukor', category: 'Sütés / Sütemény', portion: 2.0, measure: Measure::DKG),
             ],
-            'porcukor ek to g'                  => [
+            'porcukor ek to g'                      => [
                 new IngredientForFood(name: 'Porcukor', category: 'Sütés / Sütemény', portion: 1, measure: Measure::EK),
                 new IngredientForFood(name: 'Porcukor', category: 'Sütés / Sütemény', portion: 0, measure: Measure::G),
                 new IngredientForFood(name: 'Porcukor', category: 'Sütés / Sütemény', portion: 20.0, measure: Measure::G),
             ],
-            'porcukor ek to kg'                 => [
+            'porcukor ek to kg'                     => [
                 new IngredientForFood(name: 'Porcukor', category: 'Sütés / Sütemény', portion: 1, measure: Measure::EK),
                 new IngredientForFood(name: 'Porcukor', category: 'Sütés / Sütemény', portion: 0, measure: Measure::KG),
                 new IngredientForFood(name: 'Porcukor', category: 'Sütés / Sütemény', portion: 0.02, measure: Measure::KG),
             ],
-            'cukor ek to dkg'                   => [
+            'cukor ek to dkg'                       => [
                 new IngredientForFood(name: 'Cukor', category: 'Sütés / Sütemény', portion: 1, measure: Measure::EK),
                 new IngredientForFood(name: 'Cukor', category: 'Sütés / Sütemény', portion: 0, measure: Measure::DKG),
                 new IngredientForFood(name: 'Cukor', category: 'Sütés / Sütemény', portion: 2.0, measure: Measure::DKG),
             ],
-            'cukor ek to g'                     => [
+            'cukor ek to g'                         => [
                 new IngredientForFood(name: 'Cukor', category: 'Sütés / Sütemény', portion: 1, measure: Measure::EK),
                 new IngredientForFood(name: 'Cukor', category: 'Sütés / Sütemény', portion: 0, measure: Measure::G),
                 new IngredientForFood(name: 'Cukor', category: 'Sütés / Sütemény', portion: 20.0, measure: Measure::G),
             ],
-            'cukor ek to kg'                    => [
+            'cukor ek to kg'                        => [
                 new IngredientForFood(name: 'Cukor', category: 'Sütés / Sütemény', portion: 1, measure: Measure::EK),
                 new IngredientForFood(name: 'Cukor', category: 'Sütés / Sütemény', portion: 0, measure: Measure::KG),
                 new IngredientForFood(name: 'Cukor', category: 'Sütés / Sütemény', portion: 0.02, measure: Measure::KG),
             ],
-            'cukor mk to dkg'                   => [
+            'cukor mk to dkg'                       => [
                 new IngredientForFood(name: 'Cukor', category: 'Sütés / Sütemény', portion: 1, measure: Measure::MK),
                 new IngredientForFood(name: 'Cukor', category: 'Sütés / Sütemény', portion: 0, measure: Measure::DKG),
                 new IngredientForFood(name: 'Cukor', category: 'Sütés / Sütemény', portion: 0.2, measure: Measure::DKG),
             ],
-            'cukor mk to g'                     => [
+            'cukor mk to g'                         => [
                 new IngredientForFood(name: 'Cukor', category: 'Sütés / Sütemény', portion: 1, measure: Measure::MK),
                 new IngredientForFood(name: 'Cukor', category: 'Sütés / Sütemény', portion: 0, measure: Measure::G),
                 new IngredientForFood(name: 'Cukor', category: 'Sütés / Sütemény', portion: 2.0, measure: Measure::G),
             ],
-            'cukor mk to kg'                    => [
+            'cukor mk to kg'                        => [
                 new IngredientForFood(name: 'Cukor', category: 'Sütés / Sütemény', portion: 1, measure: Measure::MK),
                 new IngredientForFood(name: 'Cukor', category: 'Sütés / Sütemény', portion: 0, measure: Measure::KG),
                 new IngredientForFood(name: 'Cukor', category: 'Sütés / Sütemény', portion: 0.002, measure: Measure::KG),
             ],
-            'cukor tk to dkg'                   => [
+            'cukor tk to dkg'                       => [
                 new IngredientForFood(name: 'Cukor', category: 'Sütés / Sütemény', portion: 1, measure: Measure::TK),
                 new IngredientForFood(name: 'Cukor', category: 'Sütés / Sütemény', portion: 0, measure: Measure::DKG),
                 new IngredientForFood(name: 'Cukor', category: 'Sütés / Sütemény', portion: 0.6, measure: Measure::DKG),
             ],
-            'cukor tk to g'                     => [
+            'cukor tk to g'                         => [
                 new IngredientForFood(name: 'Cukor', category: 'Sütés / Sütemény', portion: 1, measure: Measure::TK),
                 new IngredientForFood(name: 'Cukor', category: 'Sütés / Sütemény', portion: 0, measure: Measure::G),
                 new IngredientForFood(name: 'Cukor', category: 'Sütés / Sütemény', portion: 6.0, measure: Measure::G),
             ],
-            'cukor tk to kg'                    => [
+            'cukor tk to kg'                        => [
                 new IngredientForFood(name: 'Cukor', category: 'Sütés / Sütemény', portion: 1, measure: Measure::TK),
                 new IngredientForFood(name: 'Cukor', category: 'Sütés / Sütemény', portion: 0, measure: Measure::KG),
                 new IngredientForFood(name: 'Cukor', category: 'Sütés / Sütemény', portion: 0.006, measure: Measure::KG),
             ],
-            'kukorica konzerv to g'             => [
+            'kukorica konzerv to g'                 => [
                 new IngredientForFood(name: 'Kukorica (konzerv)', category: 'Tartós élelmiszer', portion: 1, measure: Measure::KONZERV),
                 new IngredientForFood(name: 'Kukorica (konzerv)', category: 'Tartós élelmiszer', portion: 0, measure: Measure::G),
                 new IngredientForFood(name: 'Kukorica (konzerv)', category: 'Tartós élelmiszer', portion: 140.0, measure: Measure::G),
             ],
-            'vorosbab konzerv to g'             => [
+            'vorosbab konzerv to g'                 => [
                 new IngredientForFood(name: 'Vörösbab (konzerv)', category: 'Tartós élelmiszer', portion: 1, measure: Measure::KONZERV),
                 new IngredientForFood(name: 'Vörösbab (konzerv)', category: 'Tartós élelmiszer', portion: 0, measure: Measure::G),
                 new IngredientForFood(name: 'Vörösbab (konzerv)', category: 'Tartós élelmiszer', portion: 250.0, measure: Measure::G),
             ],
-            'tejfol ml to g'                    => [
+            'tejfol ml to g'                        => [
                 new IngredientForFood(name: 'Tejföl', category: 'Tejtermék', portion: 1, measure: Measure::ML),
                 new IngredientForFood(name: 'Tejföl', category: 'Tejtermék', portion: 0, measure: Measure::G),
                 new IngredientForFood(name: 'Tejföl', category: 'Tejtermék', portion: 0.1, measure: Measure::G),
             ],
-            'tejfol cl to g'                    => [
+            'tejfol cl to g'                        => [
                 new IngredientForFood(name: 'Tejföl', category: 'Tejtermék', portion: 1, measure: Measure::CL),
                 new IngredientForFood(name: 'Tejföl', category: 'Tejtermék', portion: 0, measure: Measure::G),
                 new IngredientForFood(name: 'Tejföl', category: 'Tejtermék', portion: 1.0, measure: Measure::G),
             ],
-            'tejfol dl to g'                    => [
+            'tejfol dl to g'                        => [
                 new IngredientForFood(name: 'Tejföl', category: 'Tejtermék', portion: 1, measure: Measure::DL),
                 new IngredientForFood(name: 'Tejföl', category: 'Tejtermék', portion: 0, measure: Measure::G),
                 new IngredientForFood(name: 'Tejföl', category: 'Tejtermék', portion: 10.0, measure: Measure::G),
             ],
-            'So csipet to g'                    => [
+            'So csipet to g'                        => [
                 new IngredientForFood(name: 'Só', category: 'Fűszer', portion: 1, measure: Measure::CSIPET),
                 new IngredientForFood(name: 'Só', category: 'Fűszer', portion: 0, measure: Measure::G),
                 new IngredientForFood(name: 'Só', category: 'Fűszer', portion: 0.5, measure: Measure::G),
             ],
-            'So ek to g'                        => [
+            'So ek to g'                            => [
                 new IngredientForFood(name: 'Só', category: 'Fűszer', portion: 1, measure: Measure::EK),
                 new IngredientForFood(name: 'Só', category: 'Fűszer', portion: 0, measure: Measure::G),
                 new IngredientForFood(name: 'Só', category: 'Fűszer', portion: 20.0, measure: Measure::G),
             ],
-            'So tk to g'                        => [
+            'So tk to g'                            => [
                 new IngredientForFood(name: 'Só', category: 'Fűszer', portion: 1, measure: Measure::TK),
                 new IngredientForFood(name: 'Só', category: 'Fűszer', portion: 0, measure: Measure::G),
                 new IngredientForFood(name: 'Só', category: 'Fűszer', portion: 8.0, measure: Measure::G),
             ],
-            'So kvk to g'                       => [
+            'So kvk to g'                           => [
                 new IngredientForFood(name: 'Só', category: 'Fűszer', portion: 1, measure: Measure::KVK),
                 new IngredientForFood(name: 'Só', category: 'Fűszer', portion: 0, measure: Measure::G),
                 new IngredientForFood(name: 'Só', category: 'Fűszer', portion: 2.0, measure: Measure::G),
             ],
-            'So kk to g'                        => [
+            'So kk to g'                            => [
                 new IngredientForFood(name: 'Só', category: 'Fűszer', portion: 1, measure: Measure::KK),
                 new IngredientForFood(name: 'Só', category: 'Fűszer', portion: 0, measure: Measure::G),
                 new IngredientForFood(name: 'Só', category: 'Fűszer', portion: 2.0, measure: Measure::G),

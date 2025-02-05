@@ -26,6 +26,7 @@ use PeterPecosz\ShoppingPlanner\Measure\Conversion\FinomLiszt\BogreToKilogram as
 use PeterPecosz\ShoppingPlanner\Measure\Conversion\FinomLiszt\EvokanalToDekagram as FinomLisztEvokanalToDekagram;
 use PeterPecosz\ShoppingPlanner\Measure\Conversion\FinomLiszt\EvokanalToGram as FinomLisztEvokanalToGram;
 use PeterPecosz\ShoppingPlanner\Measure\Conversion\FinomLiszt\EvokanalToKilogram as FinomLisztEvokanalToKiloGram;
+use PeterPecosz\ShoppingPlanner\Measure\Conversion\Kanal\DeciliterToEvoKanal;
 use PeterPecosz\ShoppingPlanner\Measure\Conversion\Kanal\EvoKanalToDeciliter;
 use PeterPecosz\ShoppingPlanner\Measure\Conversion\Kanal\EvoKanalToKavesKanal;
 use PeterPecosz\ShoppingPlanner\Measure\Conversion\Kanal\EvoKanalToKisKanal;
@@ -129,6 +130,7 @@ class MeasureServiceProvider implements ServiceDefinitionProviderInterface
                         create(CentiliterToMilliliter::class),
                         create(CseppToMilliliter::class),
                         create(CseszeToMilliliter::class),
+                        create(DeciliterToEvoKanal::class),
                         create(DeciliterToLiter::class),
                         create(DeciliterToCentiliter::class),
                         create(DeciliterToMilliliter::class),

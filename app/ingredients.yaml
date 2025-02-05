@@ -414,6 +414,9 @@ Sör:
   kategoria: Üditő
 Szódavíz:
   kategoria: Üditő
+Víz:
+  kategoria: Üditő
+  mertekegysegPreference: dl
 
 # Zöldség / Gyümölcs
 Alma:
