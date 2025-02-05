@@ -271,6 +271,15 @@ Bolognai:
       mennyiseg: 400 g
     - name: Parmezán sajt
       mennyiseg: 40 g
+  cookingSteps:
+    - Az olajon üvegesre pároljuk az apróra vágott vöröshagymát,
+    - "majd hozzádobjuk a lereszelt sárgarépát és angol zellert és együtt pirítjuk őket: ez a soffritto."
+    - Amikor már kicsit oda is kapott, hozzáadjuk a darált húst, “fehéredésig” pirítjuk,
+    - majd a vörösbor és a passzírozott paradicsom következik.
+    - Fűszerezzük ízlés szerint sóval, borssal, szerecsendióval, hozzáadjuk a babérlevelet, a zúzott fokhagymát, a kakukkfüvet és a rozmaringot, és opcionálisan kevés Worcester-szószt is.
+    - Felöntjük a vízzel, és alacsony lángon egy órán át rotyogtatjuk.
+    - Titkos hozzávalóként beleöntjük a tejet, és még 10 percig főzzük.
+    - Tökéletes, al dentére főtt tésztán tálaljuk, reszelt parmezánnal!
   comments:
     - 3 dl víz
 
@@ -552,6 +561,16 @@ Csirke gratin olaszosan:
       mennyiseg: 30 g
     - name: Bazsalikom levél
       mennyiseg: 6 db
+  cookingSteps:
+    - A burgonyát meghámozzuk, hosszában és széltében elfelezzük, mossuk. Sós vízben körülbelül 15-20 percig főzzük.
+    - A paprikát megtisztítjuk, mossuk, körülbelül 3 cm-es kockákra vágjuk.
+    - A húst megmossuk, szárazra itatjuk, körülbelül 4 cm-es kockákra vágjuk.
+    - Az olajat egy serpenyőben felhevítjük, rászórjuk a húst körülbelül 5 perc alatt aranybarnára pirítjuk,
+    - hozzáadjuk a paprika kockákat, és további 2-3 percig pirítjuk.
+    - Sóval, borssal, paprikával és a fűszerkeverékkel ízesítjük.
+    - A burgonyát leszűrjük, a paprikás-hússal elkeverjük, és egy tűzálló tálba öntjük.
+    - A tejet elkeverjük a tejszínnel, tojásokkal és a reszelt sajttal. Sózzuk, borsozzuk, és a húsos keverékre öntjük.
+    - Betoljuk a 200 fokra előmelegített sütőbe, és körülbelül 30 perc alatt megsütjük. Bazsalikom levelekkel megszórva tálaljuk.
   comments:
     - 1 tk Olasz fűszerkeverék:
       - '1 csipet: Bazsalikom, Oregánó, Majoranna, Kakukkfű'
@@ -2586,6 +2605,17 @@ Szerzetesek eledele:
       mennyiseg: 1 ek
     - name: Szezámolaj
       mennyiseg: 2 tk
+  cookingSteps:
+    - Egy fazékban vizet forralunk, majd először a brokkolit rakjuk bele, és 1 percig előfőzzük.
+    - Ezt követően hozzászórjuk a répát és a kínai kelt is, majd további 2 percig főzzük.
+    - Ezután leszűrjük a zöldségeket, és jéghideg vízbe tesszük felhasználásig, hogy ne veszítsenek a színükből.
+    - Egy wokban olajat melegítünk, amin előpirítjuk a gyömbért és a fokhagymát.
+    - Rárakjuk a fafülgombát és a csiperkegombát, fél percig pirítjuk,
+    - majd belerakjuk az előfőzött, lecsepegtetett zöldségeket.
+    - Sóval, szójaszósszal, fekete borssal és cukorral fűszerezzük, majd jól összekeverjük.
+    - A keményítőt felhígítjuk egy kevés vízzel, és beleöntjük.
+    - Mielőtt levesszük a tűzről, meglocsoljuk egy kis szezámolajjal.
+    - A kész ételt főtt rizzsel tálalhatjuk.
 
 Szezámmagos csirke:
   defaultPortion: 4
