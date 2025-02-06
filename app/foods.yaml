@@ -1657,6 +1657,35 @@ Lecsó:
     - name: Só
       mennyiseg: 1 tk
 
+Marokkói sárgarépa-saláta:
+  defaultPortion: 4
+  receptUrl: https://www.nosalty.hu/recept/marokkoi-sargarepa-salata
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/sP/B7/marokkoi-sargarepa-salata.jpeg?w=1340&fit=crop&s=ca6434007dfe0362094c7114234435b6
+  tags:
+    - saláta
+  ingredients:
+    - name: Sárgarépa
+      mennyiseg: 2 db
+    - name: Csicseriborsó (konzerv)
+      mennyiseg: 440 g
+    - name: Lilahagyma
+      mennyiseg: 1 db
+    - name: Koriander
+      mennyiseg: 2 tk
+    - name: Narancs
+      mennyiseg: 1 db
+    - name: Római kömény
+      mennyiseg: 1 tk
+    - name: Olívaolaj
+      mennyiseg: 2 ek
+    - name: Só
+      mennyiseg: 2 csipet
+  cookingSteps:
+    - A sárgarépákat megpucoljuk, és nagy lyukú reszelőn lereszeljük. Majd egy keverőtálba szórjuk.
+    - Hozzáadjuk a leszűrt csicseriborsót, a vékonyra szelt lila hagymát, az apróra vágott friss koriandert, és meglocsoljuk egy narancsból kinyert lével.
+    - Megszórjuk az előzőleg egy picit megpirított római köménnyel, megsózzuk, és jól meglocsoljuk olívaolajjal.
+    - Nincs más dolgunk, mint jól összekeverni az egészet, és fogyaszthatjuk is!
+
 Mediterrán bulgursaláta:
   defaultPortion: 6
   receptUrl: https://www.nosalty.hu/recept/mediterran-bulgursalata
