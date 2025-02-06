@@ -1659,6 +1659,7 @@ Marokkói sárgarépa-saláta:
   thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/sP/B7/marokkoi-sargarepa-salata.jpeg?w=1340&fit=crop&s=ca6434007dfe0362094c7114234435b6
   tags:
     - saláta
+    - új
   ingredients:
     - name: Sárgarépa
       mennyiseg: 2 db
@@ -1885,6 +1886,7 @@ Mozzarellás-pesztós csirkesaláta:
   thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/95/mH/mozzarellas-pesztos-csirkesalata.jpeg?w=1200&fit=crop&s=029a42d7e8b77d9e6ce6ef26635e1ede
   tags:
     - saláta
+    - új
   ingredients:
     - name: Csirkemell
       mennyiseg: 40 dkg
