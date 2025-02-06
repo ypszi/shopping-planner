@@ -1854,6 +1854,35 @@ Mézes-mustáros csirkemell:
     - Ha a hús már puha, hozzáadjuk a mézet és a mustárt, alaposan összekeverjük, és pár percig még főzzük.
     - Friss petrezselyemmel megszórjuk, párolt rizzsel tálaljuk.
 
+Mozzarellás-pesztós csirkesaláta:
+  defaultPortion: 2
+  receptUrl: https://www.nosalty.hu/recept/mozzarellas-pesztos-csirkesalata
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/95/mH/mozzarellas-pesztos-csirkesalata.jpeg?w=1200&fit=crop&s=029a42d7e8b77d9e6ce6ef26635e1ede
+  tags:
+    - saláta
+  ingredients:
+    - name: Csirkemell
+      mennyiseg: 40 dkg
+    - name: Jégsaláta
+      mennyiseg: 25 dkg
+    - name: Mozzarella sajt (mini)
+      mennyiseg: 15 dkg
+    - name: Pesto
+      mennyiseg: 2 ek
+    - name: Olívaolaj
+      mennyiseg: 5 ek
+    - name: Só
+      mennyiseg: 2 csipet
+    - name: Bors
+      mennyiseg: 1 csipet
+  cookingSteps:
+    - A csirkemellet vágjuk kb 2x2 cm-es darabokra, majd sózzuk, borsozzuk, hagyjuk kicsit állni egy tányéron.
+    - A salátát tépkedjük (ha előkészített, akkor öntsük) egy tál aljába.
+    - Egy kis tálkában keverjük el a pestot az olívaolajjal, majd locsoljuk a salátára és forgassuk össze.
+    - A csirkemelldarabokat pirítsuk meg egy serpenyőben, majd ha kész, a kisült zsiradékkal együtt öntsük a salátára.
+    - Adjuk hozzá a mozzarellagolyókat, és kicsit forgassuk össze a hozzávalókat.
+    - Rögtön tálalhatjuk, frissen a legfinomabb!
+
 Muffin:
   defaultPortion: 12
   receptUrl: https://www.nosalty.hu/recept/egyszeru-muffin-alaprecept
