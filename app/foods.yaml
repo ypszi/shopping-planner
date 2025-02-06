@@ -1303,10 +1303,8 @@ Illatos omlós csirkemell:
     - name: Tojás
       mennyiseg: 3 db
     - name: Só
-      # só ízlés szerint
       mennyiseg: 1 kk
     - name: Bors
-      # bors ízlés szerint
       mennyiseg: 1 csipet
     - name: Keményítő
       mennyiseg: 5 ek
@@ -1328,7 +1326,6 @@ Illatos omlós csirkemell:
     - name: Vöröshagyma
       mennyiseg: 1 db
     - name: Só
-      # só ízlés szerint
       mennyiseg: 1 csipet
 Karfiolsteak:
   defaultPortion: 2
@@ -1468,14 +1465,14 @@ Krumpli főzelék fasírttal:
       mennyiseg: 2 ek
     - name: Babérlevél
       mennyiseg: 3 db
-    # só ízlés szerint
     - name: Só
       mennyiseg: 1 kk
     - name: Tejföl
       mennyiseg: 2 dl
     - name: Finomliszt
       mennyiseg: 1.5 dkg
-    # 4 dl víz (kb.)
+    - name: Víz
+      mennyiseg: 4 dl
     - ref: Fasírt
 
 Krumplipüré:
@@ -1487,7 +1484,6 @@ Krumplipüré:
   ingredients:
     - name: Krumpli
       mennyiseg: 1 kg
-    # só ízlés szerint
     - name: Só
       mennyiseg: 1 kk
     - name: Tejföl
@@ -1695,7 +1691,8 @@ Mediterrán bulgursaláta:
   ingredients:
     - name: Bulgur
       mennyiseg: 200 g
-    # 4 dl víz
+    - name: Víz
+      mennyiseg: 4 dl
     - name: Só
       mennyiseg: 1 tk
     - name: Kígyóuborka
@@ -1774,10 +1771,8 @@ Mézes-chilis csirkesaláta:
       mennyiseg: 0.3 db
     - name: Chili
       mennyiseg: 0.5 tk
-    # só ízlés szerint
     - name: Só
       mennyiseg: 2 csipet
-    # bors ízlés szerint
     - name: Bors
       mennyiseg: 1 csipet
     - name: Méz
@@ -1864,7 +1859,8 @@ Mézes-mustáros csirkemell:
       mennyiseg: 3 ek
     - name: Olívaolaj
       mennyiseg: 3 ek
-    # 3 dl víz
+    - name: Víz
+      mennyiseg: 3 dl
     - name: Fokhagyma
       mennyiseg: 3 gerezd
     - name: Só
@@ -2867,10 +2863,8 @@ Tepertőkrém:
     - name: Mustár
       mennyiseg: 1 ek
     - name: Só
-      # só ízlés szerint
       mennyiseg: 1 csipet
     - name: Bors
-      # bors ízlés szerint
       mennyiseg: 1 csipet
 
 Tepsis Csirke Zöldséggel:
