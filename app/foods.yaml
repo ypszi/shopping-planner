@@ -668,6 +668,42 @@ Csirkés spárgás rizottó:
       - Főzd a rizst 15-20 percig.
       - Amikor a rizs kellőképpen puha, tedd rá a spárgát, a csirkét, süsd össze két-három perc alatt.
 
+Csirkesaláta:
+  defaultPortion: 3
+  receptUrl: https://www.nosalty.hu/recept/csirkesalata-3
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/hL/4w/csirkesalata-3.jpeg?w=1200&fit=crop&s=035178eca300aae12c627c51e692d229
+  tags:
+    - saláta
+    - új
+  ingredients:
+    - name: Jégsaláta
+      mennyiseg: 1 db
+    - name: Paradicsom
+      mennyiseg: 3 db
+    - name: Kígyóuborka
+      mennyiseg: 1 db
+    - name: Csirkemell
+      mennyiseg: 40 dkg
+    - name: Szárnyas fűszerkeverék
+      mennyiseg: 2 tk
+    - name: Vöröshagyma
+      mennyiseg: 1 db
+    - name: Fokhagyma
+      mennyiseg: 1 gerezd
+    - name: Kenyér
+      mennyiseg: 3 db
+    - name: Sajt
+      mennyiseg: 20 dkg
+    - name: Natúr joghurt
+      mennyiseg: 100 ml
+  cookingSteps:
+    - Megmossuk, majd apróra vágjuk a salátát, a paradicsomot, a kígyóuborkát, a hagymát. Beletesszük egy nagy tálba.
+    - A csirkemellet apró kockákra vágjuk, megfűszerezzük szárnyas fűszerrel, majd kis lángon aranybarnára sütjük és hozzáadjuk a zöldségekhez.
+    - A kenyérszeleteket megpirítjuk, és jól bedörzsöljük őket fokhagymával. Kockákra vágjuk, majd hozzáadjuk a többihez.
+    - Reszelt sajttal megszórjuk (én füstölt sajttal csináltam, szerintem úgy a legjobb), majd megöntözzük cézár salátaöntettel, jól összekeverjük az egészet.
+  comments:
+    - Natúr joghurt / Salátaöntet
+
 Csőröge Fánk:
   defaultPortion: 4
   thumbnailUrl: https://www.mindmegette.hu/images/369/Social/lead_Social_klasszikus-csoroge-fank-recept.jpg

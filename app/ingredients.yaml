@@ -136,6 +136,8 @@ Só:
   storage:
     max: 2000
     step: 100
+Szárnyas fűszerkeverék:
+  kategoria: Fűszer
 Szódabikarbóna:
   kategoria: Fűszer
 Szegfűszeg:
