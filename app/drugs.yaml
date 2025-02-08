@@ -7,6 +7,10 @@ Dezodor (női):
 DM cica kaja:
   kategoria: Cica kaja
 
+Fogkrém:
+  kategoria: Tisztálkodás
+  mertekegysegPreference: db
+
 Folyékony szappan:
   kategoria: Tisztálkodás
   mertekegysegPreference: ml
