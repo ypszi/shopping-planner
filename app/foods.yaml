@@ -763,6 +763,13 @@ Cukkini darált hússal töltve:
       mennyiseg: 300 g
     - name: Gouda sajt
       mennyiseg: 30 dkg
+  cookingSteps:
+    - A cukkinit megmossuk, majd hosszában félbevágjuk. Kivájjuk a közepét, kis csónakokat készítünk. A csónakokat besózzuk, és elkészítjük a tölteléket.
+    - Az olajon megdinszteljük az apróra vágott hagymát.
+    - Rátesszük a darált húst, sózzuk, borsozzuk. Amikor levet ereszt, rátesszük az őrölt paprikát.
+    - Felöntjük egy kevés vízzel, és szaftosra főzzük kb. 20 perc alatt, közben néhányszor megkeverjük.
+    - A csónakokat megtöltjük a töltelékkel, megkenjük a tejföllel, sütőpapírral bélelt tepsibe tesszük, majd fóliával lefedjük, és betesszük a 180 fokra előmelegített sütőbe. 10 percig lefedve sütjük.
+    - Ezután a fóliát levesszük, rátesszük a reszelt sajtot, majd visszatoljuk a sütőbe, amíg a sajt megpirul, ez kb. 10-15 perc, majd tálaljuk.
 
 Diós-almás sajtsaláta:
   defaultPortion: 6
@@ -1326,6 +1333,21 @@ Hortobágyi Palacsinta:
       mennyiseg: 2 db
     - name: Só
       mennyiseg: 1 csipet
+  cookingSteps:
+    - A hortobágyi húsos palacsinta töltelékéhez a megtisztított, apróra vágott vöröshagymát és fokhagymát megdinszteljük az olajon.
+    - Hozzáadjuk a darált húst, a felkarikázott paprikát, a felszeletelt paradicsomot.
+    - Sózzuk, borsozzuk és a húst fehéredésig pirítjuk.
+    - A tűzről lehúzva az edényt, hozzákeverjük az őrölt paprikát is.
+    - Felöntjük annyi vízzel, hogy ellepje, majd visszatesszük a tűzre, és addig főzzük, amíg a hús megpuhul. Ügyeljünk, hogy jó bő szaftja maradjon.
+    - Amikor a hús megpuhult, szűrőlapáttal tányérra szedjük.
+    - A szafthoz hozzákeverjük a tejfölt, és összeforraljuk. Ha nagyon híg a leve, akkor a tejfölhöz 1-2 evőkanál lisztet is belekeverünk.
+    - A palacsintákhoz a lisztet összekeverjük a szódavízzel, a tejjel, a tojással és egy csipet sóval.
+    - Addig keverjük, amíg csomómentes tésztát kapunk.
+    - Egy serpenyőt felforrósítunk, kevés olajjal megkenjük, majd közepes lángon kisütjük a palacsintákat.
+    - A kiszedett húst apróra vágjuk, és annyi szaftot adjunk hozzá, hogy krémes állagot kapjunk. A többi szaftot félretesszük.
+    - A húsmasszát a palacsintákba töltjük. A palacsinta szemben levő két oldalát behajtjuk, majd alulról jó szorosan feltekerjük.
+    - A palacsintákat hőálló tálba tesszük, tálalás előtt sütőben vagy mikróban felmelegítjük.
+    - A tejfölös szaftot is megmelegítjük, és közvetlenül tálalás előtt meglocsoljuk vele a palacsintákat.
 
 Illatos omlós csirkemell:
   defaultPortion: 4
