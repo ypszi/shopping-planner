@@ -53,18 +53,30 @@
         <h1 class="display-6">Melyik kajákhoz kell bevásárolni?</h1>
 
         <div class="col-md-12">
+            <div id="foodCount" class="badge text-bg-success">{{ availableFoods|length }}</div>
             <div
                     class="btn badge text-bg-secondary"
                     onclick="resetTags()">Reset
             </div>
+            {% set selectedFoodTags = request.queryParams.tags ?? [] %}
             {% for tag in availableFoodTags %}
                 <div
-                        class="btn badge {% if tag in selectedFoodTags %}text-bg-warning{% else %}text-bg-info{% endif %}"
+                        class="btn badge {% if tag in selectedFoodTags %}text-bg-warning{% endif %} text-bg-info"
                         data-value="{{ tag }}"
                         onclick="filterForTag(this, {{ selectedFoodTags|json_encode }})">
                     {{ tag }}
                 </div>
             {% endfor %}
+            <div
+                    class="btn badge {% if request.queryParams.operator == 'OR' %}text-bg-warning{% endif %} text-bg-info filter-operator"
+                    onclick="selectFilterOperator(this, 'OR')">
+                OR
+            </div>
+            <div
+                    class="btn badge {% if request.queryParams.operator == 'AND' %}text-bg-warning{% endif %} text-bg-info filter-operator"
+                    onclick="selectFilterOperator(this, 'AND')">
+                AND
+            </div>
         </div>
         <hr class="border">
         {% set firstInitial = availableFoods[0].name|slice(0, 1) %}
@@ -262,6 +274,28 @@
         tags.push(selectedTag);
 
         url.searchParams.append('tags[]', tags);
+
+        window.location.href = url.toString();
+    }
+
+    function selectFilterOperator(element, operator) {
+        const url = new URL(window.location.href);
+
+        if (element.classList.contains('text-bg-warning')) {
+            url.searchParams.delete('operator');
+
+            window.location.href = url.toString();
+
+            return;
+        }
+
+        Array.from(document.getElementsByClassName('filter-operator')).forEach((operatorElem) => {
+            operatorElem.classList.remove('text-bg-warning');
+        });
+
+        element.classList.add('text-bg-warning');
+
+        url.searchParams.set('operator', operator);
 
         window.location.href = url.toString();
     }

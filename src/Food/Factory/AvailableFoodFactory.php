@@ -7,6 +7,7 @@ namespace PeterPecosz\ShoppingPlanner\Food\Factory;
 use PeterPecosz\ShoppingPlanner\Food\Food;
 use PeterPecosz\ShoppingPlanner\Ingredient\Factory\IngredientFactory;
 use PeterPecosz\ShoppingPlanner\Shopping\Input\FoodFilterInput;
+use PeterPecosz\ShoppingPlanner\Shopping\Input\Operator;
 use Symfony\Component\Yaml\Yaml;
 
 readonly class AvailableFoodFactory
@@ -75,6 +76,13 @@ readonly class AvailableFoodFactory
     {
         if ($filterInput->tags() === null) {
             return $foods;
+        }
+
+        if ($filterInput->operator() === Operator::AND) {
+            return array_filter(
+                $foods,
+                fn(Food $food) => array_intersect($filterInput->tags(), $food->tags()) === $filterInput->tags()
+            );
         }
 
         $filteredFoods = [];

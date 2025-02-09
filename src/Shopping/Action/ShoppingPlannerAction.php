@@ -10,6 +10,7 @@ use PeterPecosz\ShoppingPlanner\Food\Factory\AvailableFoodFactory;
 use PeterPecosz\ShoppingPlanner\Food\Factory\AvailableFoodTagFactory;
 use PeterPecosz\ShoppingPlanner\Ingredient\Action\GetIngredientStorageAction;
 use PeterPecosz\ShoppingPlanner\Shopping\Input\FoodFilterInput;
+use PeterPecosz\ShoppingPlanner\Shopping\Input\Operator;
 use PeterPecosz\ShoppingPlanner\Supermarket\Supermarket;
 use PeterPecosz\ShoppingPlanner\Supermarket\SupermarketFactory;
 use Psr\Http\Message\ResponseInterface;
@@ -38,7 +39,8 @@ readonly class ShoppingPlannerAction
         $queryParams        = $request->getQueryParams();
         $defaultSupermarket = $queryParams['supermarket'] ?? Supermarket::DEFAULT;
         $tagsCriteria       = $queryParams['tags'] ?? null;
-        $foodFilterInput    = new FoodFilterInput($tagsCriteria);
+        $tagsOperator       = $queryParams['operator'] ?? Operator::OR->value;
+        $foodFilterInput    = new FoodFilterInput($tagsCriteria, Operator::tryFrom($tagsOperator));
         $availableFoods     = $this->availableFoodFactory->listAvailableFoods($foodFilterInput);
         $availableFoodTags  = $this->availableFoodTagFactory->listAvailableFoodTags();
         $availableDrugs     = $this->availableDrugFactory->listAvailableDrugs();
@@ -49,12 +51,12 @@ readonly class ShoppingPlannerAction
             $this->twig->render(
                 'shopping-planner.html.twig',
                 [
+                    'request'               => $request,
                     'defaultSupermarket'    => $defaultSupermarket,
                     'availableSupermarkets' => $availableSupermarkets,
                     'availableFoods'        => $availableFoods,
                     'availableFoodTags'     => $availableFoodTags,
                     'selectedFoods'         => $selectedFoods,
-                    'selectedFoodTags'      => $foodFilterInput->tags() ?? [],
                     'availableDrugs'        => $availableDrugs,
                     'selectedDrugs'         => $selectedDrugs,
                     'ingredientStorageUrl'  => $this->urlBuilder->buildFor($request, GetIngredientStorageAction::class),
