@@ -41,19 +41,23 @@ readonly class FoodsFactory
             foreach ($food['ingredients'] as $ingredient) {
                 if (isset($ingredient['ref'])) {
                     $refFoodName    = $ingredient['ref'];
-                    $additionalFood = $this->createReferenceFood($refFoodName, $portion);
-                    $ingredients     = array_merge($ingredients, $additionalFood->ingredients());
+                    $additionalFood = $this->createReferenceFood($refFoodName);
+                    $ingredients    = array_merge($ingredients, $additionalFood->ingredients());
 
                     continue;
                 }
 
                 $ingredients[] = $this->ingredientFactory->forFood(
-                    foodName:   $foodName,
-                    ingredient: $ingredient
+                    foodName  : $foodName,
+                    ingredient: $ingredient,
                 );
             }
 
-            $etel = $this->foodFactory->createFood($foodName, $ingredients, $portion);
+            $etel = $this->foodFactory->createFood(
+                foodName   : $foodName,
+                ingredients: $ingredients,
+                portion    : $portion
+            );
 
             $foods->add($etel);
         }
@@ -61,20 +65,19 @@ readonly class FoodsFactory
         return $foods;
     }
 
-    private function createReferenceFood(string $refFoodName, ?int $portion = null): Food
+    private function createReferenceFood(string $refFoodName): Food
     {
         $ingredients = [];
         foreach ($this->foods[$refFoodName]['ingredients'] as $ingredient) {
             $ingredients[] = $this->ingredientFactory->forFood(
-                foodName:   $refFoodName,
+                foodName  : $refFoodName,
                 ingredient: $ingredient
             );
         }
 
         return $this->foodFactory->createFood(
-            foodName:    $refFoodName,
-            ingredients: $ingredients,
-            portion:     $portion
+            foodName   : $refFoodName,
+            ingredients: $ingredients
         );
     }
 }

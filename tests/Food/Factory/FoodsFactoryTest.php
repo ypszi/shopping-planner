@@ -163,19 +163,19 @@ class FoodsFactoryTest extends TestCase
             ->expects(self::exactly(2))
             ->method('createFood')
             ->willReturnCallback(
-                fn(string $foodName, array $ingredients, int $portion) => match ([$foodName, $ingredients, $portion]) {
+                fn(string $foodName, array $ingredients, ?int $portion) => match ([$foodName, $ingredients, $portion]) {
                     [
                         $expectedFoodName,
                         array_fill(0, 3, $expectedIngredient),
-                        8
-                    ] => $expectedFood,
+                        8,
+                    ]       => $expectedFood,
                     [
                         $expectedRefFoodName,
                         array_fill(0, 5, $expectedIngredient),
-                        8
-                    ] => $expectedRefFood,
+                        null,
+                    ]       => $expectedRefFood,
                     default => $this->fail(sprintf('Unexpected food: "%s", ingredients: "%s" or portion: "%s"', $foodName, json_encode($ingredients), $portion))
-                }
+                },
             );;
 
         $food = $this->sut->create([$expectedFoodName => 8]);
