@@ -203,7 +203,7 @@
                         {% set isFirstRow = rowId == 0 %}
                         <tr class="{% if isFirstRow %}border-top{% endif %}">
                             <td class="{% if isFirstRow %}bg-light-orange{% endif %}">
-                                {% if isFirstRow %}{{ foodName }}{% endif %}
+                                {% if isFirstRow %}{{ foodName }} ({{ portionsByFoodName[foodName] }}){% endif %}
                             </td>
                             {% for colId, col in row %}
                                 {% set cellId = rowId ~ '-' ~ colId %}
@@ -274,7 +274,7 @@
                         {% set isFirstRow = rowId == 0 %}
                         <tr class="{% if isFirstRow %}border-top{% endif %}">
                             <td class="{% if isFirstRow %}bg-light-orange{% endif %}">
-                                {% if isFirstRow %}{{ foodName }}{% endif %}
+                                {% if isFirstRow %}{{ foodName }} ({{ portionsByFoodName[foodName] }}){% endif %}
                             </td>
                             {% for colId, col in row %}
                                 {% set cellId = rowId ~ '-' ~ colId %}

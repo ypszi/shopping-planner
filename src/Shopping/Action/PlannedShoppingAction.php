@@ -43,6 +43,7 @@ readonly class PlannedShoppingAction
                 'planned-shopping.html.twig',
                 [
                     'supermarket'                  => $supermarket,
+                    'portionsByFoodName'           => $portionsByFoodName,
                     'foods'                        => $foods,
                     'unfilteredShoppingList'       => $unfilteredShoppingList,
                     'shoppingList'                 => $shoppingList,
@@ -52,7 +53,7 @@ readonly class PlannedShoppingAction
                     'totalRowCountByFood'          => $totalRowCountByFood,
                     'plannedShopping'              => http_build_query($queryParams),
                     'ingredientStorageUrl'         => $this->urlBuilder->buildFor($request, GetIngredientStorageAction::class),
-                ]
+                ],
             )
         );
 
