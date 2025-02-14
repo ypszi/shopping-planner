@@ -2375,33 +2375,38 @@ Rizs:
       mennyiseg: 1 csipet
 
 Rizskoch:
-  defaultPortion: 4
+  defaultPortion: 1
   receptUrl: https://streetkitchen.hu/meguszos-sutik/rizskoch-baracklekvarral/
   thumbnailUrl: https://static.streetkitchen.hu/live/uploads/2021/04/20210318-32-1618x855.jpg
   tags:
     - desszert
   ingredients:
-    - name: Citrom
-      mennyiseg: 0.5 db
     - name: Rizs
       mennyiseg: 250 g
-    - name: Vaníliás cukor
-      mennyiseg: 250 g
-    - name: Cukor
-      mennyiseg: 130 g
-    # porcukor ízlés szerint
-    - name: Porcukor
-      mennyiseg: 100 g
-    # baracklekvár ízlés szerint
-    - name: Baracklekvár
-      mennyiseg: 150 g
-    - name: Tojás
-      mennyiseg: 5 db
     - name: Tej
       mennyiseg: 8 dl
+    - name: Víz
+      mennyiseg: 4 dl
+    - name: Vaníliás cukor
+      mennyiseg: 20 g
+    - name: Tojás
+      mennyiseg: 5 db
+    - name: Só
+      mennyiseg: 1 csipet
+    - name: Cukor
+      mennyiseg: 130 g
+    - name: Citrom
+      mennyiseg: 0.5 db
+  cookingSteps:
+    - Először a rizst, a tejet, a vizet és a vaníliás cukrot egy lábasba tesszük,
+    - és közepes hőfokon, néhány percenként kevergetve tejberizst főzünk, amit utána kihűtünk.
+    - A tojásokat kettéválasztjuk, és a fehérjét egy csipet sóval kemény habbá verjük.
+    - A sárgáját fehéredésig habosítjuk a cukorral, belereszeljük a citromhéjat, majd belekeverjük a tejberizst, és egy spatulával beleforgatjuk a tojásfehérjehabot is.
+    - Sütőpapírral bélelt tepsibe öntjük, és 180 fokos sütőben 40 perc alatt megsütjük. Porcukorral és lekvárral tálaljuk.
   comments:
-    - porcukor ízlés szerint
-    - baracklekvár ízlés szerint
+    - tálaláshoz::
+      - porcukor ízlés szerint
+      - baracklekvár ízlés szerint
 
 Sárgarépás kínai kel saláta:
   defaultPortion: 2
