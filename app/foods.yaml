@@ -2229,6 +2229,17 @@ Pizza:
     - name: Ketchup
       mennyiseg: 50 g
     - ref: Pizzatészta
+  cookingSteps:
+    - A langyos vizet elkeverjük a cukorral, élesztővel, olíva olajjal, és hagyjuk pár percig állni.
+    - Ezalatt a lisztet közvetlenül a gyúródeszkára szitáljuk, hozzáadjuk a sót, kissé összekeverjük vele, és egy mélyedést alakítunk ki a közepén.
+    - Az élesztős vizet adagokban a mélyedésbe öntjük, és egy villával körkörös mozdulatokkal dolgozzuk bele a lisztet.
+    - Ha némileg már összeállt így a tészta, akkor folytassuk lisztezett kézzel, és nagyon alaposan gyúrjuk, míg szép homogén tésztát kapunk.
+    - Egy lisztezett tálba tesszük, tetejét is kissé meglisztezzük, nedves konyharuhával letakarjuk, és hagyjuk, míg kb. a duplájára megkel (1-1,5 óra).
+    - Ekkor kiborítjuk a lisztezettdeszkára, és átgyúrjuk újból kissé, hogy kijöjjön a levegő belőle.
+    - Egyenlő részekre osztjuk, és aszerint, hogy mit szeretnénk, tovább dolgozunk vele.
+    - Kinyújtjuk kb. fél cm vastagra, pizzasütőlemezre, vagy egy sütőlemezre tesszük (minél vékonyabb legyen!) és hagyjuk így 10- 15 percet nyugton.
+    - Utána pizzaszósszal megkenjük, tetszőleges feltétet pakolunk rá.
+    - Majd a lehető legnagyobb hőfokon (ami csak elérhető a sütőnkben) előmelegített sütőben, kb. 10 perc alatt megsütjük.
 
 Pizzatészta:
   defaultPortion: 2
@@ -2247,6 +2258,17 @@ Pizzatészta:
       mennyiseg: 2 ek
     - name: Élesztő
       mennyiseg: 7 g
+  cookingSteps:
+    - A langyos vizet elkeverjük a cukorral, élesztővel, olíva olajjal, és hagyjuk pár percig állni.
+    - Ezalatt a lisztet közvetlenül a gyúródeszkára szitáljuk, hozzáadjuk a sót, kissé összekeverjük vele, és egy mélyedést alakítunk ki a közepén.
+    - Az élesztős vizet adagokban a mélyedésbe öntjük, és egy villával körkörös mozdulatokkal dolgozzuk bele a lisztet.
+    - Ha némileg már összeállt így a tészta, akkor folytassuk lisztezett kézzel, és nagyon alaposan gyúrjuk, míg szép homogén tésztát kapunk.
+    - Egy lisztezett tálba tesszük, tetejét is kissé meglisztezzük, nedves konyharuhával letakarjuk, és hagyjuk, míg kb. a duplájára megkel (1-1,5 óra).
+    - Ekkor kiborítjuk a lisztezettdeszkára, és átgyúrjuk újból kissé, hogy kijöjjön a levegő belőle.
+    - Egyenlő részekre osztjuk, és aszerint, hogy mit szeretnénk, tovább dolgozunk vele.
+    - Kinyújtjuk kb. fél cm vastagra, pizzasütőlemezre, vagy egy sütőlemezre tesszük (minél vékonyabb legyen!) és hagyjuk így 10- 15 percet nyugton.
+    - Utána pizzaszósszal megkenjük, tetszőleges feltétet pakolunk rá.
+    - Majd a lehető legnagyobb hőfokon (ami csak elérhető a sütőnkben) előmelegített sütőben, kb. 10 perc alatt megsütjük.
 
 Póréhagyma leves:
   defaultPortion: 4
