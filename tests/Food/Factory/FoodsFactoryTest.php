@@ -114,7 +114,7 @@ class FoodsFactoryTest extends TestCase
         $expectedFoodName    = 'Pizza';
         $expectedRefFoodName = 'Pizzatészta';
         $expectedIngredient  = $this->createMock(IngredientForFood::class);
-        $ingredientCount     = 8;
+        $ingredientCount     = 9;
         $expectedFood        = $this->createMock(Food::class);
         $expectedRefFood     = $this->createMock(Food::class);
 
@@ -153,6 +153,10 @@ class FoodsFactoryTest extends TestCase
                     ],
                     [
                         $expectedRefFoodName,
+                        ['name' => 'Víz', 'mennyiseg' => '325 ml'],
+                    ],
+                    [
+                        $expectedRefFoodName,
                         ['name' => 'Élesztő', 'mennyiseg' => '7 g'],
                     ] => $expectedIngredient,
                     default => $this->fail(sprintf('Unexpected food: "%s" or ingredient: "%s"', $foodName, json_encode($ingredient)))
@@ -171,7 +175,7 @@ class FoodsFactoryTest extends TestCase
                     ]       => $expectedFood,
                     [
                         $expectedRefFoodName,
-                        array_fill(0, 5, $expectedIngredient),
+                        array_fill(0, 6, $expectedIngredient),
                         null,
                     ]       => $expectedRefFood,
                     default => $this->fail(sprintf('Unexpected food: "%s", ingredients: "%s" or portion: "%s"', $foodName, json_encode($ingredients), $portion))
