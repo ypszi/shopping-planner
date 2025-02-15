@@ -2256,6 +2256,8 @@ Pizzatészta:
       mennyiseg: 0.5 ek
     - name: Olívaolaj
       mennyiseg: 2 ek
+    - name: Víz
+      mennyiseg: 325 ml
     - name: Élesztő
       mennyiseg: 7 g
   cookingSteps:
