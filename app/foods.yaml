@@ -927,6 +927,12 @@ Fokhagymával és mézzel sült sárgarépa:
       mennyiseg: 1 tk
     - name: Bors
       mennyiseg: 1 csipet
+  cookingSteps:
+    - A répát vágjuk néhány centis csíkokra, tegyük egy tálba, sózzuk, borsozzuk és locsoljuk meg olajjal, majd forgassuk össze.
+    - Melegítsük elő a sütőt 180 fokra.
+    - Fektessük a répákat sütőpapírral bélelt tepsire, süssük 20 percig.
+    - Közben a mézet keverjük össze az apróra vágott fokhagymával.
+    - Vegyük ki a tepsit, locsoljuk meg a mézes-fokhagymás keverékkel a répákat, majd süssük még 10-15 percet.
 
 Forralt bor (gyümölcsös-fűszeres):
   defaultPortion: 4
