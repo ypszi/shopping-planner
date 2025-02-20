@@ -114,7 +114,7 @@ class FoodsFactoryTest extends TestCase
         $expectedFoodName    = 'Pizza';
         $expectedRefFoodName = 'Pizzatészta';
         $expectedIngredient  = $this->createMock(IngredientForFood::class);
-        $ingredientCount     = 9;
+        $ingredientCount     = 10;
         $expectedFood        = $this->createMock(Food::class);
         $expectedRefFood     = $this->createMock(Food::class);
 
@@ -123,6 +123,10 @@ class FoodsFactoryTest extends TestCase
             ->method('forFood')
             ->willReturnCallback(
                 fn(string $foodName, array $ingredient) => match ([$foodName, $ingredient]) {
+                    [
+                        $expectedFoodName,
+                        ['name' => 'Paradicsom püré', 'mennyiseg' => '100 g'],
+                    ],
                     [
                         $expectedFoodName,
                         ['name' => 'Felvágott', 'mennyiseg' => '15 dkg'],
@@ -170,7 +174,7 @@ class FoodsFactoryTest extends TestCase
                 fn(string $foodName, array $ingredients, ?int $portion) => match ([$foodName, $ingredients, $portion]) {
                     [
                         $expectedFoodName,
-                        array_fill(0, 3, $expectedIngredient),
+                        array_fill(0, 4, $expectedIngredient),
                         8,
                     ]       => $expectedFood,
                     [
