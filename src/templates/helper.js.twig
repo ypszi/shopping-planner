@@ -14,3 +14,15 @@ function updateUrlSearchParams(name, value, url) {
 
     return true;
 }
+
+function deleteUrlSearchParams(name, url) {
+    const searchParam = url.searchParams.get(name);
+
+    if (!searchParam) {
+        return false;
+    }
+
+    url.searchParams.delete(name);
+
+    return true;
+}

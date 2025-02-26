@@ -61,7 +61,7 @@
                                         value="{{ food.portion }}"
                                         name="portion-{{ foodNameKey }}"
                                         class="form-range"
-                                        min="1"
+                                        min="0"
                                         max="12"
                                         step="1"
                                         oninput="portionChange(this, '{{ foodNameKey }}', 'Adag')"
@@ -360,7 +360,12 @@
         const url = new URL(window.location.href);
         let update = false;
 
-        update = update || updateUrlSearchParams('portion-' + foodNameKey, portion, url);
+        if (portion < 1) {
+            update = update || deleteUrlSearchParams('food-' + foodNameKey, url);
+            update = update || deleteUrlSearchParams('portion-' + foodNameKey, url);
+        } else {
+            update = update || updateUrlSearchParams('portion-' + foodNameKey, portion, url);
+        }
 
         if (update) {
             window.history.pushState(null, '', url.toString());
