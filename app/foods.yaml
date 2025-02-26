@@ -3183,9 +3183,10 @@ Tonhalas babsaláta:
   thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/hM/BI/tonhalas-babsalata-glaser-konyhajabol.jpeg?w=1200&fit=crop&s=c7341f38d6204630399a72aacf9d815f
   tags:
     - vacsora
+    - saláta
   ingredients:
     - name: Citrom
-      mennyiseg: 1 db
+      mennyiseg: 0.5 db
     - name: Balzsamecet (fehér)
       mennyiseg: 1 ek
     - name: Só
