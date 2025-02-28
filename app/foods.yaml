@@ -2217,6 +2217,27 @@ Paradicsomos tészta:
     - name: Fusilli tészta
       mennyiseg: 40 dkg
 
+Párolt zöldbab:
+  defaultPortion: 2
+  receptUrl: https://www.nosalty.hu/recept/parolt-ceruzabab
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/pt/UO/parolt-ceruzabab.jpeg?w=1200&fit=crop&s=466bf1296e2d27cf3382362118ffd93c
+  tags:
+    - köret
+  ingredients:
+    - name: Zöldbab (mirelit)
+      mennyiseg: 180 g
+    - name: Vaj
+      mennyiseg: 0.5 ek
+    - name: Só
+      mennyiseg: 0.5 tk
+    - name: Bors
+      mennyiseg: 0.5 tk
+  cookingSteps:
+    - A babok száras végét levágjuk, alaposan megmossuk, lecsepegtetjük, konyhai papírtörlővel szárítjuk
+    - Egy serpenyőben a vajat megolvasztjuk
+    - Beletesszük az egész babokat, sózzuk, frissen őrölt borsot hintünk rá
+    - Néhány perc alatt pároljuk (nem kell teljesen puhára párolni, inkább roppanós legyen)
+
 Pestos tészta:
   defaultPortion: 2
   thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/j3/sc/petrezselyem-pestos-fusilli.jpeg?w=1200&fit=crop&s=05dec19e7137d45e8f2cd859cc3cd11e
