@@ -2666,6 +2666,52 @@ Sörös tepsis sertés:
     - Tepsi mérete 30 cm x 35 cm
     - SÜTŐBEN 180 °C/35 percet
 
+Sült zeller hasábok:
+  defaultPortion: 4
+  receptUrl: https://www.nosalty.hu/recept/sult-zeller-hasabburgonya-helyett
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/nR/n1/sult-zeller-hasabburgonya-helyett.jpg?w=1500&fit=crop&s=c1fbd8c29c4d98a9361f471e53d63def
+  tags:
+    - köret
+  ingredients:
+    - name: Fűszer paprika
+      mennyiseg: 1.5 ek
+    - name: Cayenne bors
+      mennyiseg: 1 tk
+    - name: Fekete bors
+      mennyiseg: 2 tk
+    - name: Fokhagymapor
+      mennyiseg: 1 ek
+    - name: Só
+      mennyiseg: 1 ek
+    - name: Oregánó
+      mennyiseg: 1 tk
+    - name: Kakukkfű
+      mennyiseg: 1 tk
+    - name: Zeller
+      mennyiseg: 75 dkg
+    - name: Olívaolaj
+      mennyiseg: 2 ek
+    - name: Só
+      mennyiseg: 2 tk
+  cookingSteps:
+    - A fűszereket összekeverjük, kis üvegcsébe töltve hűvös, naptól és párától védett helyre tesszük. Hat hónapig használhatjuk húsok és zöldségek ízesítésére.
+    - A zellert megpucoljuk, megmossuk, kisujjnyi hasábokra vágjuk.
+    - Sütőlemezre rakjuk, meglocsoljuk olajjal, ráhintünk egy evőkanálnyi fűszerkeveréket. Alaposan összeforgatjuk, hogy mindenhol egyenletes legyen az olajos fűszer.
+    - Forró sütőbe tolva megsütjük. Tálaláskor ízlés szerint sózzuk.
+  comments:
+    - zellerhez:
+      - Zeller
+      - Olívaolaj
+      - Só
+    - fűszerkeverékhez:
+      - Fűszerpaprika
+      - Cayenne paprika
+      - Fekete bors
+      - Fokhagymapor
+      - Só
+      - Oregánó
+      - Kakukkfű
+
 Sütőtökkrémleves egyszerűen:
   defaultPortion: 4
   receptUrl: https://www.nosalty.hu/recept/sutotokkremleves-egyszeruen

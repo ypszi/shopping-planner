@@ -49,8 +49,7 @@ Bazsalikom levél:
   kategoria: Fűszer
 BBQ fűszerkeverék:
   kategoria: Fűszer
-Bors:
-  kategoria: Fűszer
+Bors: Fekete bors
 Cayenne bors:
   kategoria: Fűszer
 Chili:
@@ -72,6 +71,8 @@ Fahéj:
 Fahéj (egész):
   kategoria: Fűszer
 Fahéjrúd: Fahéj (egész)
+Fekete bors:
+  kategoria: Fűszer
 Fehér bors:
   kategoria: Fűszer
 Fokhagymapor:

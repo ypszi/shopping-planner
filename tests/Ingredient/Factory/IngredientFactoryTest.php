@@ -32,12 +32,12 @@ class IngredientFactoryTest extends TestCase
                         ]
         );
 
-        $this->assertEquals('Bors', $ingredient->name());
+        $this->assertEquals('Fekete bors', $ingredient->name());
         $this->assertEquals(4, $ingredient->portion());
         $this->assertEquals('Fűszer', $ingredient->category());
         $this->assertEquals(Measure::DKG, $ingredient->measure());
         $this->assertEquals(Measure::G, $ingredient->measurePreference());
-        $this->assertEquals('4 dkg Bors', (string)$ingredient);
+        $this->assertEquals('4 dkg Fekete bors', (string)$ingredient);
     }
 
     #[Test]
