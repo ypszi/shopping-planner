@@ -2223,6 +2223,7 @@ Párolt zöldbab:
   thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/pt/UO/parolt-ceruzabab.jpeg?w=1200&fit=crop&s=466bf1296e2d27cf3382362118ffd93c
   tags:
     - köret
+    - új
   ingredients:
     - name: Zöldbab (mirelit)
       mennyiseg: 180 g
@@ -2693,6 +2694,7 @@ Sült zeller hasábok:
   thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/nR/n1/sult-zeller-hasabburgonya-helyett.jpg?w=1500&fit=crop&s=c1fbd8c29c4d98a9361f471e53d63def
   tags:
     - köret
+    - új
   ingredients:
     - name: Fűszer paprika
       mennyiseg: 1.5 ek
@@ -3390,6 +3392,29 @@ Tzatziki:
       mennyiseg: 1 csipet
   comments:
     - 3 tk Fehérborecet vagy 3 tk Almaborecet
+
+Vajas kukoricás csicseriborsó:
+  defaultPortion: 3
+  receptUrl: https://www.nosalty.hu/recept/vajas-kukoricas-csicseri
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/dk/8D/vajas-kukoricas-csicseri.jpeg?w=1200&fit=crop&s=be4c65b1bc32c67b8911d2d41fe4394f
+  tags:
+    - új
+    - köret
+  ingredients:
+    - name: Kukorica (konzerv)
+      mennyiseg: 200 g
+    - name: Csicseriborsó (konzerv)
+      mennyiseg: 150 g
+    - name: Vaj
+      mennyiseg: 1 ek
+    - name: Petrezselyem
+      mennyiseg: 1 ek
+    - name: Só
+      mennyiseg: 1 csipet
+  cookingSteps:
+    - A vajat felolvasztjuk, és megpároljuk benne a kukoricát, csipet sót szórunk rá.
+    - Rákanalazzuk a csicserikonzervet, és egy kicsit összemelegítjük.
+    - Aprított petrezselyemmel ízesítjük.
 
 Vaníliasodó:
   defaultPortion: 4
