@@ -180,6 +180,10 @@ Tepertő (sertés):
   kategoria: Hús
   mertekegysegPreference: g
 
+# Kávé
+Kávé:
+  kategoria: Kávé
+
 # Magvak
 Dió:
   kategoria: Magvak
@@ -242,6 +246,8 @@ Feta sajt:
   kategoria: Sajt
 Gouda sajt:
   kategoria: Sajt
+Mascarpone:
+  kategoria: Sajt
 Mozzarella sajt:
   kategoria: Sajt
 Mozzarella sajt (reszelt):
@@ -258,6 +264,8 @@ Trappista sajt (füstölt):
   kategoria: Sajt
 
 # Sütés / Sütemény
+Babapiskóta:
+  kategoria: Sütés / Sütemény
 Barna cukor:
   kategoria: Sütés / Sütemény
   storage:
@@ -291,6 +299,8 @@ Liszt: Finomliszt
 Mazsola:
   kategoria: Sütés / Sütemény
 Porcukor:
+  kategoria: Sütés / Sütemény
+Rum aroma:
   kategoria: Sütés / Sütemény
 Sütőpor:
   kategoria: Sütés / Sütemény

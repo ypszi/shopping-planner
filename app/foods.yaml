@@ -3130,6 +3130,36 @@ Tepsis Krumpli:
     - name: Napraforgóolaj
       mennyiseg: 1 dl
 
+Tiramisu:
+  defaultPortion: 12
+  receptUrl: https://www.mindmegette.hu/recept/tiramisu-egyszeruen
+  thumbnailUrl: https://cdn.mindmegette.hu/2024/04/8RR11fTgOS1QqCaxc_x00gMYx4or7kqGRFjwSSvoQOQ/fill/0/0/no/1/aHR0cHM6Ly9jbXNjZG4uYXBwLmNvbnRlbnQucHJpdmF0ZS9jb250ZW50LzNhMzBmMzYwYmJmNTRlNDM4ODYzOTRjNWU1ZTU0ZDg0.webp
+  tags:
+    - desszert
+  ingredients:
+    - name: Mascarpone
+      mennyiseg: 25 dkg
+    - name: Porcukor
+      mennyiseg: 3 dkg
+    - name: Tojás
+      mennyiseg: 3 db
+    - name: Kávé
+      mennyiseg: 2 dl
+    - name: Rum aroma
+      mennyiseg: 0.5 tk
+    - name: Babapiskóta
+      mennyiseg: 36 db
+    - name: Kakaópor
+      mennyiseg: 20 g
+  cookingSteps:
+    - A tiramisu elkészítéséhez a mascarponét egy nagy keverőtálba tesszük, hozzáadjuk a porcukrot és a tojások sárgáját.
+    - A fehérjéket robotgéppel kemény habbá verjük, és laza mozdulatokkal a mascarponéhez keverjük.
+    - Egy mélytányérba töltjük a kávét, és belekeverjük az alkoholt.
+    - Majd a babapiskótákat gyors mozdulatokkal megforgatjuk benne, vigyázva, hogy ne ázzanak el.
+    - Egy kb. 6 cm falmagasságú tálban szorosan egymás mellé tesszük a megmártott piskóták felét.
+    - Rákenjük a krém felét, majd beterítjük egy újabb réteg kávéba áztatott babapiskótával, és rátesszük a maradék krémet.
+    - Egy éjszakára a hűtőszekrénybe tesszük, hogy összeérjenek az ízek. Tálalás előtt megszórjuk kakaóporral.
+
 Töltött káposzta (klasszikus):
   defaultPortion: 8
   receptUrl: https://www.nosalty.hu/recept/klasszikus-toltott-kaposzta

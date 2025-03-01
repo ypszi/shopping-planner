@@ -16,6 +16,7 @@ readonly class ThumbnailFactory
     private const MIME_TYPE_EXTENSION_MAP = [
         'image/jpeg' => 'jpg',
         'image/png'  => 'png',
+        'image/webp' => 'webp',
     ];
 
     public function __construct(

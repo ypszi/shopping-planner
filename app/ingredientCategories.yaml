@@ -28,6 +28,11 @@ Hús:
   storage:
     max: 300
     step: 10
+Kávé:
+  mertekegysegPreference: g
+  storage:
+    max: 1000
+    step: 50
 Konzerv:
   mertekegysegPreference: g
   storage:

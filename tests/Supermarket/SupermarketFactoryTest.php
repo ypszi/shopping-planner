@@ -42,6 +42,7 @@ class SupermarketFactoryTest extends TestCase
                 'Bor',
                 'Üditő',
                 'Nemzetközi',
+                'Kávé',
                 'Olaj / Ecet',
                 'Magvak',
                 'Fűszer',
