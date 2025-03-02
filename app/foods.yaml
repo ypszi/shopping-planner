@@ -203,6 +203,10 @@ Baconbe göngyölt mozzarellás csirkemell:
       mennyiseg: 1 tk
     - name: Olívaolaj
       mennyiseg: 3 ek
+  cookingSteps:
+    - A megmosott és szárazra törölt húst szeletekre vágjuk, kiklopfoljuk, majd megsózzuk, megborsozzuk.
+    - A csirkemellszeleteket a kiterített baconre fektetjük, megszórjuk bazsalikommal és mindegyikre teszünk egy darabka sajtot, ezután a baconnel együtt mindet feltekerjük.
+    - A göngyölegeket olívaolajjal megkent, tűzálló tálba tesszük, és 165 fokra előmelegített sütőben kb. 30-40 perc alatt pirosra sütjük.
 
 Bögrés süti:
   defaultPortion: 2
