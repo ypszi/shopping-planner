@@ -1315,6 +1315,35 @@ Hamburger:
       - 10 dkg Csemege uborka (konzerv)
       - 5 dkg Jalapeno (konzerv)
 
+Hollandi mártás:
+  defaultPortion: 4
+  receptUrl: https://www.mindmegette.hu/recept/hollandi-martas
+  thumbnailUrl: https://cdn.mindmegette.hu/2024/04/t-33QhKl_atLs33gwC2yMyIVh5OvMSDCMv-sWTLR3PQ/fill/0/0/no/1/aHR0cHM6Ly9jbXNjZG4uYXBwLmNvbnRlbnQucHJpdmF0ZS9jb250ZW50LzgyYjViY2EwZjZhMjQ2MGNhOThhODhjMmJjOTQ4YzQx.webp
+  tags:
+    - új
+    - köret
+  ingredients:
+    - name: Vaj
+      mennyiseg: 20 dkg
+    - name: Tojás
+      mennyiseg: 3 db
+    - name: Só
+      mennyiseg: 1 csipet
+    - name: Cayenne bors
+      mennyiseg: 0.25 tk
+    - name: Citrom
+      mennyiseg: 0.5 db
+    - name: Fehérborecet
+      mennyiseg: 1 tk
+  cookingSteps:
+    - A hollandi mártás elkészítéséhez a vajat egy nyeles forralóban melegíteni kezdjük, ügyelve arra, hogy 50 foknál ne hevítsük tovább. A melegítés közben keletkező habot teaszűrő vagy kanál segítségével eltávolítjuk a tetejéről. Ha felolvadt, félretesszük.
+    - A tojássárgájákat egy nagy csipet sóval keverőtálba tesszük, és vízgőz fölött folyamatosan keverve (ügyelve, hogy ne süssük meg a tojást!), időnként akár leemelve a gőzről, sűrűsíteni kezdjük. 60-65 fokon kell tartanunk az emulziót!
+    - Ha már krémesedik, vékony sugárban beleöntjük a vajat. Közben folyamatosan keverjük, és ha már szép fényes, sűrű állagú a mártás, hozzáadjuk a Cayenne-borsot, a citromlevet és az ecetet. Folyamatosan keverjük, és körülbelül 1 perc után elkészül. (Akkor jó, ha nagyjából kétszeresére nő a térfogata, légies és könnyű az állaga.) Miután levettük a vízgőzről, utána is keverjük még, hogy ne essen szét a mártás.
+    - Frissen érdemes fogyasztani. A spárga elképzelhetetlen nélküle, halakhoz kifejezetten ajánlott, de több mártás alapját is képezi.
+  comments:
+    - csak a Tojás sárgája kell
+    - csak a Citrom leve kell
+
 Hortobágyi Palacsinta:
   defaultPortion: 4
   receptUrl: https://www.mindmegette.hu/hortobagyi-husos-palacsinta-ii.recept/
@@ -1642,6 +1671,12 @@ Lazac:
       mennyiseg: 2 ek
     - name: Vaj
       mennyiseg: 1 ek
+  cookingSteps:
+    - A lazacfilék egyik felét csak sózzuk. A másik felét is megszórjuk sóval, és a többi fűszerrel is, ízlés szerint.
+    - A serpenyőben az olajat felhevítjük, majd a lazac fűszeresebb felével beletesszük.
+    - Kb. 4 percig sütjük.
+    - Megfordítjuk, majd egy diónyi vajat mellédobva, kb. 2 percig sütjük.
+    - Melegen tálaljuk.
 
 Lazac brokkolival:
   defaultPortion: 4
