@@ -8,13 +8,14 @@ Auchan - Csömör:
     - Hús
     - Tejtermék
     - Felvágott
-    - Sütés / Sütemény
     - Bor
     - Üditő
-    - Nemzetközi
+    - Keksz / Műzli
     - Kávé
-    - Olaj / Ecet
+    - Sütés / Sütemény
     - Magvak
+    - Nemzetközi
+    - Olaj / Ecet
     - Fűszer
     - Konzerv
     - Tészta / Rizs
@@ -24,7 +25,9 @@ Auchan - Csömör:
     Tartós élelmiszer: Tészta / Rizs
     Sajt: Tejtermék
   ingredientMap:
+    Babapiskóta: Keksz / Műzli
     Élesztő: Tejtermék
+    Háztartási keksz (darált): Keksz / Műzli
     Tonhal (konzerv): Hal
 
 Lidl - Kistarcsa:
