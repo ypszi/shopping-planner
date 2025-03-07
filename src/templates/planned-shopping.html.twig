@@ -3,6 +3,8 @@
         {% for key in listItem|keys %}
             {% if key is string %}
                 <li class="clickable" onclick="done(this);">{{ key }}</li>
+            {% elseif key is url %}
+                <li><a href="{{ key }}" target="_blank">{{ key }}</a></li>
             {% endif %}
         {% endfor %}
 
@@ -12,7 +14,11 @@
             {% endfor %}
         </ul>
     {% else %}
-        <li class="clickable" onclick="done(this);">{{ listItem }}</li>
+        {% if listItem is url %}
+            <li><a href="{{ listItem }}" target="_blank">{{ listItem }}</a></li>
+        {% else %}
+            <li class="clickable" onclick="done(this);">{{ listItem }}</li>
+        {% endif %}
     {% endif %}
 {% endmacro %}
 
@@ -363,7 +369,8 @@
         if (portion < 1) {
             update = update || deleteUrlSearchParams('food-' + foodNameKey, url);
             update = update || deleteUrlSearchParams('portion-' + foodNameKey, url);
-        } else {
+        }
+        else {
             update = update || updateUrlSearchParams('portion-' + foodNameKey, portion, url);
         }
 

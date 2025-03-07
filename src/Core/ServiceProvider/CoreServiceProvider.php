@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace PeterPecosz\ShoppingPlanner\Core\ServiceProvider;
 
+use PeterPecosz\ShoppingPlanner\Core\Url\Url;
 use Psr\Http\Message\ResponseFactoryInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Message\StreamFactoryInterface;
@@ -56,6 +57,11 @@ class CoreServiceProvider implements ServiceDefinitionProviderInterface
                     'addTest',
                     create(TwigTest::class)
                         ->constructor('array', 'is_array')
+                )
+                ->method(
+                    'addTest',
+                    create(TwigTest::class)
+                        ->constructor('url', [Url::class, 'isUrl'])
                 ),
         ];
     }
