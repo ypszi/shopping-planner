@@ -420,6 +420,9 @@ Tojás:
   storage:
     max: 40
     step: 1
+Tojásfehérje:
+  kategoria: Tejtermék
+  mertekegysegPreference: db
 Túró:
   kategoria: Tejtermék
 Vaj:

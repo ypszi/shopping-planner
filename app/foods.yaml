@@ -2292,6 +2292,29 @@ Pestos tészta:
     - name: Fusilli tészta
       mennyiseg: 25 dkg
 
+Piskóta tojásfehérjéből:
+  defaultPortion: 2
+  receptUrl: https://www.nosalty.hu/recept/kimaradt-tojasfeherjebol-keszult-feher-piskota
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/zM/0X/kimaradt-tojasfeherjebol-keszult-feher-piskota.jpeg?w=1200&fit=crop&s=b72176880ca78228d3fbeb712abd9ef5
+  tags:
+    - desszert
+    - új
+  ingredients:
+    - name: Tojásfehérje
+      mennyiseg: 1 db
+    - name: Cukor
+      mennyiseg: 2 dkg
+    - name: Finomliszt
+      mennyiseg: 3 dkg
+    - name: Vaj
+      mennyiseg: 2 dkg
+  cookingSteps:
+    - A tojásfehérjéket habnak felverjük, hozzáadjuk a cukrot, amivel fényesre verjük.
+    - Beleszitáljuk a a lisztet, és végül a langyosra olvasztott vajjal elkeverjük.
+    - Ízesíthetjük vaníliás cukorral vagy reszelt citromhéjjal. Bármilyen krémmel megtölthetjük.
+    - Egy kivajazott, lisztezett kisebb formába tesszük, és 175 fokon 20 perc alatt megsütjük.
+    - Amikor kihűlt, szeletekre vágjuk.
+
 Pizza:
   defaultPortion: 2
   receptUrl: https://www.nosalty.hu/recept/pizzateszta-jamie-oliver-tol
