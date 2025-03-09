@@ -27,6 +27,8 @@ Bacon (kockázott):
   kategoria: Felvágott
 Bacon (szeletelt):
   kategoria: Felvágott
+Főtt sonka (szeletelt):
+  kategoria: Felvágott
 Karaj (szeletelt):
   kategoria: Felvágott
 Kenyérszalonna: Zsírszalonna
@@ -452,6 +454,7 @@ Burgonya:
   storage:
     max: 200
     step: 5
+Cikória: Endívia
 Citrom:
   kategoria: Zöldség / Gyümölcs
 Citromlé:
@@ -466,6 +469,8 @@ Cukkini:
   storage:
     max: 200
     step: 5
+Endívia:
+  kategoria: Zöldség / Gyümölcs
 Fehérrépa:
   kategoria: Zöldség / Gyümölcs
 Fokhagyma:

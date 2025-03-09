@@ -2701,6 +2701,29 @@ Sertéspörkölt:
       - A babérlevelet dobjuk a pörkölthöz, majd a fűszerpaprikát is szórjuk bele. Azért jobb a főzés vége felé hozzáadni a pörkölthöz a paprikát, mert intenzívebb marad az íze így, mintha már az elején rászórtuk volna.
       - Lassú tűzön addig főzzük a pörköltet, míg a hús megpuhul, aztán nincs más dolgunk mint tálalni, lehetőleg galuskával és savanyúsággal!
 
+Sonkába tekert cikória:
+  defaultPortion: 2
+  receptUrl: https://www.nosalty.hu/recept/sonkaba-tekert-cikoria-gorgonzolaszoszban
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/Wt/cR/sonkaba-tekert-cikoria-gorgonzolaszoszban.jpeg?w=1200&fit=crop&s=26517156d49faa4d9ec6e34eeefa5d00
+  tags:
+    - ebéd
+    - vacsora
+    - új
+  ingredients:
+    - name: Cikória
+      mennyiseg: 2 db
+    - name: Főtt sonka (szeletelt)
+      mennyiseg: 8 dkg
+    - name: Vaj
+      mennyiseg: 1 ek
+  comments:
+    - recept gorgozola szósszal készíti, hollandi mártással is működik
+  cookingSteps:
+    - A cikóriát leöblítjük, kettévágjuk, a keserű torzsáját ék alakban kivágjuk.
+    - Sós, forrásban lévő vízben 3 percig puhítjuk. Tányérra szedjük, kihűtjük.
+    - A cikóriát betekerjük a sonkaszeletekbe, elrendezzük őket (pl.) jénaiban, és ha van, leöntjük a szósszal.
+    - Tetejükre vajdarabkákat szórunk, 200 fokon 25 perc alatt aranysárgára sütjük.
+
 Sörös tepsis sertés:
   defaultPortion: 4
   receptUrl: https://www.youtube.com/watch?v=zB5TtY-EtbQ
