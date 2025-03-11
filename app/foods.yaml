@@ -1042,6 +1042,14 @@ Fűszeres csirkeszárnyak:
       mennyiseg: 1 mk
     - name: Kakukkfű
       mennyiseg: 1 mk
+  cookingSteps:
+    - A szárnyakat mosd meg, tisztítsd meg, a hegyüket vágd le.
+    - Keverd össze az olívaolajat a sóval, a borssal, a pirospaprikával, a zúzott fokhagymával, és rakd hozzá a citrom levét.
+    - Dörzsöld be vele jól a szárnyakat, és pihentesd a hűtőben legalább egy-két órán át.
+    - Pácolás után rakd át a húst kevés zsiradékkal kikent tepsibe, és tedd bele a szárnyakat.
+    - Szórd meg ízlés szerint chilivel, kakukkfűvel.
+    - Tedd forró sütőbe, és 180 fokon süsd meg körülbelül 45 perc alatt.
+    - Közben forgasd át a szárnyakat. Ha szép pirosak, ropogósak, kiveheted a sütőből.
 
 Fűszeres édesburgonya:
   defaultPortion: 4
@@ -3224,6 +3232,12 @@ Tepsis Krumpli:
       mennyiseg: 1 mk
     - name: Napraforgóolaj
       mennyiseg: 1 dl
+  cookingSteps:
+    - A burgonyát meghámozzuk, felvágjuk hasábokra.
+    - Sütőpapírral bélelt tepsibe tesszük.
+    - Rászórjuk a sót, borsot, rozmaringot és paprikát.
+    - Ráöntjük az olajat, és jól összekeverjük, hogy a fűszerek mindenhol érjék.
+    - Előmelegített sütőben 180 fokon sütjük, amíg ropogós nem lesz a külseje. Közben 2-3-szor forgassuk át.
 
 Tiramisu:
   defaultPortion: 12
