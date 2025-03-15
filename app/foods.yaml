@@ -2906,6 +2906,79 @@ Sütőtökös muffin:
     - name: Só
       mennyiseg: 1 csipet
 
+Sütőben sült sajtos brokkolifasírt:
+  defaultPortion: 4
+  receptUrl: https://www.nosalty.hu/recept/sutoben-sult-sajtos-brokkolifasirt
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/D4/QA/sutoben-sult-sajtos-brokkolifasirt.jpeg?w=6000&fit=crop&s=80cdc4e320f94a879e59a33a286bcc8f
+  tags:
+    - ebéd
+    - vacsora
+  ingredients:
+    - name: Brokkoli
+      mennyiseg: 500 g
+    - name: Tojás
+      mennyiseg: 1 db
+    - name: Vöröshagyma
+      mennyiseg: 1 db
+    - name: Fokhagyma
+      mennyiseg: 1 gerezd
+    - name: Zsemlemorzsa
+      mennyiseg: 5 ek
+    - name: Sajt
+      mennyiseg: 100 g
+    - name: Só
+      mennyiseg: 1 mk
+    - name: Bors
+      mennyiseg: 1 csipet
+    - name: Napraforgóolaj
+      mennyiseg: 2 ek
+  cookingSteps:
+    - A brokkolit megmossuk, rózsáira szedjük és lobogó, sós vízben puhára főzzük.
+    - Ha megfőtt, hagyjuk hűlni.
+    - Amíg hűl a brokkoli, az apróra vágott hagymát és a fokhagymát dinszteljük le egy kevés olajon.
+    - A kihűlt brokkolit krumplitörővel nyomkodjuk szét és adjuk hozzá a többi alapanyagot is.
+    - Melegítsük elő a sütőt 190 C fokra.
+    - Ízlés szerint fűszerezzük, és a masszából formázzunk gombócokat, amiket enyhén lapítsunk ki a tenyerünkkel. 1 – 1,5 cm nyugodtan lehet a vastagságuk.
+    - Sütőpapírral bélelt tepsire helyezzük őket.
+    - 15 percig süssük, az egyik oldalát utána fordítsuk meg és ismét 15 percet süssük a másik oldalát is. Jó étvágyat!
+
+Székelykáposzta:
+  defaultPortion: 6
+  receptUrl: https://www.nosalty.hu/recept/legegyszerubb-szekelykaposzta
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/Yn/zF/legegyszerubb-szekelykaposzta.jpeg?w=1200&fit=crop&s=694dc33776621f6f291118eff26da5e2
+  tags:
+    - ebéd
+  ingredients:
+    - name: Sertészsír
+      mennyiseg: 1.5 ek
+    - name: Vöröshagyma
+      mennyiseg: 2 db
+    - name: Sertés comb
+      mennyiseg: 1 kg
+    - name: Fűszer paprika
+      mennyiseg: 1.5 ek
+    - name: Só
+      mennyiseg: 2 tk
+    - name: Bors
+      mennyiseg: 4 csipet
+    - name: Víz
+      mennyiseg: 3 dl
+    - name: Babérlevél
+      mennyiseg: 2 db
+    - name: Savanyú káposzta
+      mennyiseg: 1.2 kg
+    - name: Tejföl
+      mennyiseg: 150 g
+  cookingSteps:
+    - Egy nagyobb fazékban felolvasztjuk a sertészsírt, majd rádobjuk a finomra vágott hagymát, és üvegesre pároljuk
+    - Hozzáadjuk a kockára vágott sertéshúst, fehéredésig keverjük
+    - Megszórjuk paprikával, párszor megkeverjük, sózzuk, borsozzuk, felöntjük másfél deci vízzel, hozzáadjuk a babérlevelet, átkeverjük
+    - Közepes lángon, lefedve egy órán át főzzük
+    - Ha letelt, hozzáadjuk az átmosott káposztát
+    - Felöntjük még másfél deci vízzel, elkeverjük
+    - Lefedve újabb 45 percig főzzük (attól függően, hogy mennyire szeretnénk szétfőzni a káposztát, ez egy nem túl harsanós, de nem is pépes változat).
+    - Ha kész, tejföllel, friss kenyérrel tálaljuk
+
 Szerzetesek eledele:
   defaultPortion: 2
   receptUrl: https://streetkitchen.hu/azsiai-etelek/szerzetesek-eledele/
@@ -2958,42 +3031,6 @@ Szezámmagos csirke:
     - ebéd
   ingredients:
     - ref: Kínai szezámmagos csirke
-
-Sütőben sült sajtos brokkolifasírt:
-  defaultPortion: 4
-  receptUrl: https://www.nosalty.hu/recept/sutoben-sult-sajtos-brokkolifasirt
-  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/D4/QA/sutoben-sult-sajtos-brokkolifasirt.jpeg?w=6000&fit=crop&s=80cdc4e320f94a879e59a33a286bcc8f
-  tags:
-    - ebéd
-    - vacsora
-  ingredients:
-    - name: Brokkoli
-      mennyiseg: 500 g
-    - name: Tojás
-      mennyiseg: 1 db
-    - name: Vöröshagyma
-      mennyiseg: 1 db
-    - name: Fokhagyma
-      mennyiseg: 1 gerezd
-    - name: Zsemlemorzsa
-      mennyiseg: 5 ek
-    - name: Sajt
-      mennyiseg: 100 g
-    - name: Só
-      mennyiseg: 1 mk
-    - name: Bors
-      mennyiseg: 1 csipet
-    - name: Napraforgóolaj
-      mennyiseg: 2 ek
-  cookingSteps:
-    - A brokkolit megmossuk, rózsáira szedjük és lobogó, sós vízben puhára főzzük.
-    - Ha megfőtt, hagyjuk hűlni.
-    - Amíg hűl a brokkoli, az apróra vágott hagymát és a fokhagymát dinszteljük le egy kevés olajon.
-    - A kihűlt brokkolit krumplitörővel nyomkodjuk szét és adjuk hozzá a többi alapanyagot is.
-    - Melegítsük elő a sütőt 190 C fokra.
-    - Ízlés szerint fűszerezzük, és a masszából formázzunk gombócokat, amiket enyhén lapítsunk ki a tenyerünkkel. 1 – 1,5 cm nyugodtan lehet a vastagságuk.
-    - Sütőpapírral bélelt tepsire helyezzük őket.
-    - 15 percig süssük, az egyik oldalát utána fordítsuk meg és ismét 15 percet süssük a másik oldalát is. Jó étvágyat!
 
 Tárkonyos csirkeraguleves:
   defaultPortion: 4
