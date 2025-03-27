@@ -1016,6 +1016,13 @@ Fűszeres csirkecsíkok:
       mennyiseg: 2 csipet
     - name: Olívaolaj
       mennyiseg: 2 ek
+  cookingSteps:
+    - A csirkemellet mosd meg, törölgesd szárazra, majd vágd vékony csíkokra, és sózd be.
+    - Az olajat keverd össze a mustárral, a zúzott fokhagymával, a köménnyel és a borssal, majd kend be vele a hússzeleteket.
+    - Letakarva pihentesd a hűtőben egy-két órát.
+    - Egy serpenyőben hevíts olajat, rakd bele a csirkecsíkokat, és süsd aranybarnára.
+    - Közben forgasd, hogy szépen piruljanak.
+    - Szedd papírtörlőre, és csepegtesd le.
 
 Fűszeres csirkeszárnyak:
   defaultPortion: 4
