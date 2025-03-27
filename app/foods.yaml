@@ -2234,6 +2234,14 @@ Paprikás krumpli:
       mennyiseg: 1 tk
     - name: Bors
       mennyiseg: 1 mk
+  cookingSteps:
+    - A megtisztított krumplit felkockázzuk, és a hagymát is apróra felvágjuk. A kolbászt felkarikázzuk.
+    - Az olajat megforrósítjuk, beletesszük a hagymát, üvegesre pároljuk, majd levesszük a tűzről.
+    - Hozzátesszük a pirospaprikát, elkeverjük
+    - Beledobjuk a krumplit, a kolbászkarikákat, az apróra kockázott fokhagymát
+    - Pici vizet öntünk alá, és visszatesszük a tűzre.
+    - Jól átforgatjuk, megsózzuk, megborsozzuk, és annyi forró vizet öntünk rá, hogy épp ellepje.
+    - Lefedjük, és puhára főzzük.
 
 Paradicsomos tészta:
   defaultPortion: 4
@@ -2628,6 +2636,12 @@ Serpenyős fűszeres tejszínes pulykamell:
       mennyiseg: 2 dl
     - name: Víz
       mennyiseg: 2 dl
+  cookingSteps:
+    - A húst tisztítom és darabolom. Serpenyőben kevés olajon pirítom, közben BBQ fűszerkeverékkel szórom.
+    - Meghintem édes őrölt paprikával és felöntöm vízzel, megszórom szárított tárkonnyal.
+    - Fedő alatt puhára főzöm. Többször átforgatom.
+    - A puha húst tejszínnel összerottyantom, mustárt, csípős paprikát is hozzáadom.
+    - Szaftos, puha illatos hús a végeredmény.
 
 Serpenyős tojásos krumpli:
   defaultPortion: 4
@@ -3183,9 +3197,17 @@ Tepertőkrém:
     - name: Mustár
       mennyiseg: 1 ek
     - name: Só
-      mennyiseg: 1 csipet
+      mennyiseg: 2 csipet
     - name: Bors
       mennyiseg: 1 csipet
+  cookingSteps:
+    - A tojást 10-12 perc alatt megfőzzük.
+    - A tepertőt turmixban vagy botmixerrel pépesítjük. (Nem baj, ha maradnak benne kisebb, ropogós darabok. Sőt.)
+    - Tálba tesszük a tepertőt, hozzáadjuk a nagyon finomra aprított vöröshagymát és a mustárt.
+    - A főtt tojásokat picire kockázzuk, ez is mehet a tálba.
+    - Sóval, borssal ízesítjük.
+    - Villa segítségével alaposan összedolgozzuk a hozzávalókat.
+    - A végén tejföllel lágyítjuk a pástétomot.
 
 Tepsis Csirke Zöldséggel:
   defaultPortion: 4
