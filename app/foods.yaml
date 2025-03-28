@@ -82,8 +82,8 @@ Ananászos csirke:
   ingredients:
     - name: Csirkemell
       mennyiseg: 60 dkg
-    - name: Ananász
-      mennyiseg: 1 db
+    - name: Ananász (konzerv)
+      mennyiseg: 600 g
     - name: Vöröshagyma
       mennyiseg: 1 db
     - name: Alaplé
@@ -1317,6 +1317,8 @@ Hamburger:
       mennyiseg: 0.5 db
     - name: Bacon (szeletelt)
       mennyiseg: 5 dkg
+    - name: Pirított hagyma
+      mennyiseg: 20 g
     - name: Csemege uborka (konzerv)
       mennyiseg: 10 dkg
     - name: Jalapeno (konzerv)
