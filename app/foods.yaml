@@ -2244,13 +2244,16 @@ Paprikás krumpli:
     - name: Bors
       mennyiseg: 1 mk
   cookingSteps:
-    - A megtisztított krumplit felkockázzuk, és a hagymát is apróra felvágjuk. A kolbászt felkarikázzuk.
+    - A megtisztított krumplit felkarikázzuk vagy felkockázzuk, a hagymát apróra felvágjuk, virslit felkarikázzuk.
+    - A kolbászt leforrázzuk, lehúzzuk a bőrét, felkarikázzuk. A forrázó vizet tartsuk meg, később rá önthetjük a krumplira.
     - Az olajat megforrósítjuk, beletesszük a hagymát, üvegesre pároljuk, majd levesszük a tűzről.
-    - Hozzátesszük a pirospaprikát, elkeverjük
-    - Beledobjuk a krumplit, a kolbászkarikákat, az apróra kockázott fokhagymát
-    - Pici vizet öntünk alá, és visszatesszük a tűzre.
+    - Hozzátesszük a pirospaprikát, elkeverjük.
+    - Beledobjuk a krumplit, majd a zúzott fokhagymát.
+    - Pici vizet öntünk alá (kolbász forrázó víz), és visszatesszük a tűzre.
     - Jól átforgatjuk, megsózzuk, megborsozzuk, és annyi forró vizet öntünk rá, hogy épp ellepje.
-    - Lefedjük, és puhára főzzük.
+    - Mikor forrni kezd, tegyük hozzá a kolbászkarikákat.
+    - Lefedjük, és közepes lángon főzzük.
+    - Mikor már majdnem puha a krumpli beletesszük a virsli karikákat is.
 
 Paradicsomos tészta:
   defaultPortion: 4
