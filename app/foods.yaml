@@ -3091,6 +3091,16 @@ Tárkonyos csirkeraguleves:
       mennyiseg: 4 db
     - name: Petrezselyem
       mennyiseg: 3 ek
+  cookingSteps:
+    - A csirkemellfilét apró kockákra vágjuk.
+    - Egy jó nagy lábosban felhevítjük az olajat, rádobjuk a húst és fehéredésig pirítjuk.
+    - A zöldségeket felkockázzuk és a húshoz adjuk.
+    - Hozzáadjuk a tárkonyt, az erőleveskockákat és a szárított petrezselymet, majd felöntjük vízzel.
+    - Forrás után, fedő alatt, takaréklángon addig főzzük, míg minden megpuhul.
+    - Amikor már majdnem puha a többi zöldség, akkor adjuk hozzá a zöldborsót a leveshez.
+    - Egy kis tálba öntjük a tejszínt, és rámerünk 3-4 merőkanál levest, simára keverjük és a leveshez adjuk.
+    - Jól megkavarjuk az egészet és még egy kis tárkonyt morzsolunk bele.
+    - Amikor újra forr, belecsavarjuk a citrom levét.
 
 Tejbegríz:
   defaultPortion: 2
@@ -3133,6 +3143,14 @@ Tejfölös-füstölt sajtos csirkemell:
       mennyiseg: 2 dl
     - name: Tejföl
       mennyiseg: 30 dkg
+  cookingSteps:
+    - A csirkemellet szeleteljük, a sajtot lereszeljük, a fokhagymagerezdeket fokhagymanyomón átnyomjuk.
+    - Egy tepsibe csorgatjuk az olívaolajat, majd meghintjük sóval és borssal.
+    - A tepsibe fektetjük a csirkemellszeleteket, és megsózzuk, megborsozzuk. A sütőt előmelegítjük 195 fokra.
+    - Egy keverőtálba öntjük a tejszínt, hozzáadjuk a tejfölt, egy kevés sóval és a fokhagymával ízesítjük, beleszórjuk a reszelt sajt egyharmadát, és alaposan összekeverjük az egészet.
+    - A hússzeletekre öntjük a tejfölös-sajtos keveréket, egyenletesen elsimítjuk, majd megszórjuk a maradék reszelt sajttal.
+    - Az előmelegített sütőbe toljuk, és nagyjából 30-35 perc alatt pirosra sütjük.
+    - Az elkészült tejfölös-füstölt sajtos csirkét tálalhatjuk salátával, rizzsel vagy burgonyával.
 
 Tejfölös-sajtos csirkemell:
   defaultPortion: 4
