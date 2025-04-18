@@ -1298,6 +1298,45 @@ Görög saláta:
   comments:
     - opcionális: 20 dkg Olívabogyó konzerv
 
+Habos almás:
+  defaultPortion: 6
+  receptUrl: https://streetkitchen.hu/green-kitchen/szezon/almas-sutik/habos-almas/
+  thumbnailUrl: https://static.streetkitchen.hu/live/uploads/2024/04/habos-almas-1618x855.jpg
+  tags:
+    - desszert
+  ingredients:
+    - name: Alma
+      mennyiseg: 2 kg
+    - name: Fahéj
+      mennyiseg: 1 ek
+    - name: Cukor
+      mennyiseg: 200 g
+    - name: Só
+      mennyiseg: 1 csipet
+    - name: Tojás
+      mennyiseg: 4 db
+    - name: Vaj
+      mennyiseg: 220 g
+    - name: Cukor
+      mennyiseg: 120 g
+    - name: Liszt
+      mennyiseg: 300 g
+    - name: Sütőpor
+      mennyiseg: 7 g
+    - name: Tej
+      mennyiseg: 110 ml
+    - name: Cukor
+      mennyiseg: 180 g
+  cookingSteps:
+    - A habos almás első lépéseként az almákat meghámozzuk, lereszeljük, majd elkeverjük a fahéjjal, a cukorral és egy csipet sóval.
+    - Hagyjuk, hogy kicsit kiengedje a levét, majd egy konyharuhába borítjuk és kifacsarjuk, de nem teljesen, hagyunk benne egy kis nedvességet.
+    - A tésztához kihabosítjuk a tojássárgájákat a vajjal és a cukorral, majd beleszitáljuk a lisztet és a sütőport, végül beleöntjük a tejet, majd csomómentesre keverjük.
+    - A masszából 2-3 evőkanálnyit félreteszünk, a többit pedig egy 25 x 28 cm-es tepsibe kanalazzuk és spatulával elsimítjuk.
+    - A tésztán egyenletesen szétterítjük a reszelt almát, és 180 fokra előmelegített sütőben 25-30 percig sütjük.
+    - A tojáshabhoz a fehérjéket kihabosítjuk a cukorral, majd az elősütött almás süti tetejére kenjük, rálocsoljuk rusztikusan a maradék nyers tésztát, és visszadobjuk a sütőbe további 5 percre.
+    - Ezt követően visszavesszük a hőmérsékletet 150 fokra, és így sütjük még további 15 percig.
+    - Sütés után minimum 60 percig hűlni hagyjuk, majd kockákra vágjuk és tálalhatjuk is.
+
 Hamburger:
   defaultPortion: 2
   thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/5V/cT/big-kahuna-burger.jpeg?w=3000&fit=crop&s=49cf25379565eb5ad667103206693245
@@ -1880,6 +1919,45 @@ Mexikói avokádósaláta:
   comments:
     - opcionális::
       - 3 dkg Jalapeno (konzerv)
+
+Mexikói tonhalsaláta:
+  defaultPortion: 4
+  receptUrl: https://streetkitchen.hu/instant/konzervek-befottek/mexikoi-tonhalsalata/
+  thumbnailUrl: https://static.streetkitchen.hu/live/uploads/2021/10/tonhalas-mexikoi-paradicsomos-salata-3-egyedi-1618x855.jpg
+  tags:
+    - saláta
+  ingredients:
+    - name: Tonhal (konzerv)
+      mennyiseg: 180 g
+    - name: Vörösbab (konzerv)
+      mennyiseg: 280 g
+    - name: Kukorica (konzerv)
+      mennyiseg: 280 g
+    - name: Kaliforniai paprika (piros)
+      mennyiseg: 0.5 db
+    - name: Só
+      mennyiseg: 2 csipet
+    - name: Bors
+      mennyiseg: 1 csipet
+    - name: Olívaolaj
+      mennyiseg: 10 ml
+    - name: Citromlé
+      mennyiseg: 1 mk
+    - name: Cukor
+      mennyiseg: 0.5 mk
+    - name: Ecet
+      mennyiseg: 0.25 mk
+    - name: Ecet
+      mennyiseg: 0.25 mk
+    - name: Petrezselyem
+      mennyiseg: 1 tk
+  cookingSteps:
+    - A tonhalkonzervet lecsepegtetjük, és egy nagyobb tálba rakjuk.
+    - A vörösbabot és a kukoricát egy szűrőbe öntjük, átmossuk, lecsepegtetjük, és a tonhalhoz rakjuk.
+    - A kaliforniai paprikát kukoricaszem méretűre vágjuk, és ez is mehet a babos keverékhez.
+    - Sózzuk, borsozzuk a salátát, majd hozzáadjuk az olívaolajat, a citromlevet, a cukrot és ecetet.
+    - A petrezselymet apróra vágjuk, és ezt is a salátához adjuk.
+    - Az egészet összekeverjük, és akár azonnal is ehetjük, de még jobb, ha 2-3 órát a hűtőben pihentetjük, mert úgy jobban összeérnek az ízek.
 
 Mézes-chilis csirkesaláta:
   defaultPortion: 2
@@ -3057,6 +3135,48 @@ Szezámmagos csirke:
     - ebéd
   ingredients:
     - ref: Kínai szezámmagos csirke
+
+Szőlős-sajtos focaccia:
+  defaultPortion: 8
+  receptUrl: https://www.nosalty.hu/recept/szolos-sajtos-focaccia
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/bB/L1/szolos-sajtos-focaccia.jpeg?w=1200&fit=crop&s=380c0d0f2c0900f58dbacc3bb63403a0
+  tags:
+    - desszert
+  ingredients:
+    - name: Finomliszt
+      mennyiseg: 50 dkg
+    - name: Cukor
+      mennyiseg: 1 ek
+    - name: Élesztő
+      mennyiseg: 7 g
+    - name: Só
+      mennyiseg: 2 csipet
+    - name: Vaj
+      mennyiseg: 50 g
+    - name: Tej
+      mennyiseg: 2.5 dl
+    - name: Sajt
+      mennyiseg: 100 g
+    - name: Olívaolaj
+      mennyiseg: 3 ek
+    - name: Szőlő
+      mennyiseg: 15 dkg
+    - name: Pisztácia
+      mennyiseg: 75 g
+    - name: Rozmaring
+      mennyiseg: 2 tk
+    - name: Bors
+      mennyiseg: 1 csipet
+  cookingSteps:
+    - A lisztet, a cukrot, a sót és az instant élesztőt egy nagy tálba kimérjük.
+    - Hozzáadjuk a felkockázott vajat, és összemorzsoljuk.
+    - A tejet hozzáöntjük, és belereszeljük a sajtot is.
+    - Határozott mozdulatokkal közepesen lágy tésztát gyúrunk belőle, amit aztán hagyunk a duplájára kelni.
+    - A megkelt tésztát egy pindurit átgyúrjuk, majd kinyújtjuk, és sütőpapírral bélelt gáztepsire fektetjük.
+    - Ujjaink hegyével alaposan benyomogatjuk - így nyeri el jellegzetes alakját a tészta.
+    - Meglocsoljuk olívaolajjal, majd egy ecset segítségével egyenletesen bekenjük a tészta felületét.
+    - A tetejét félbevágott szőlőszemekkel, rozmaringlevelekkel, frissen őrölt fekete borssal és pisztáciával díszítjük.
+    - 190°C-ra előmelegített sütőben nagyjából fél óra alatt aranybarnára sütjük.
 
 Tárkonyos csirkeraguleves:
   defaultPortion: 4

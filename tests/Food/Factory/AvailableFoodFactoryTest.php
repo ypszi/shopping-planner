@@ -31,7 +31,7 @@ class AvailableFoodFactoryTest extends TestCase
     #[Test]
     public function testListAvailableFoods(): void
     {
-        $this->assertCount(117, $this->sut->listAvailableFoods(new FoodFilterInput()));
+        $this->assertCount(120, $this->sut->listAvailableFoods(new FoodFilterInput()));
     }
 
     #[Test]
@@ -53,8 +53,8 @@ class AvailableFoodFactoryTest extends TestCase
             'vacsora'  => ['tags' => ['vacsora'], 'expectedCount' => 27],
             'köret'    => ['tags' => ['köret'], 'expectedCount' => 15],
             'leves'    => ['tags' => ['leves'], 'expectedCount' => 4],
-            'saláta'   => ['tags' => ['saláta'], 'expectedCount' => 19],
-            'desszert' => ['tags' => ['desszert'], 'expectedCount' => 18],
+            'saláta'   => ['tags' => ['saláta'], 'expectedCount' => 20],
+            'desszert' => ['tags' => ['desszert'], 'expectedCount' => 20],
             'új'       => ['tags' => ['új'], 'expectedCount' => 20],
             'suli'     => ['tags' => ['suli'], 'expectedCount' => 5],
             'ital'     => ['tags' => ['ital'], 'expectedCount' => 1],
