@@ -3178,6 +3178,34 @@ Szőlős-sajtos focaccia:
     - A tetejét félbevágott szőlőszemekkel, rozmaringlevelekkel, frissen őrölt fekete borssal és pisztáciával díszítjük.
     - 190°C-ra előmelegített sütőben nagyjából fél óra alatt aranybarnára sütjük.
 
+Szőlős Waldorf-saláta:
+  defaultPortion: 4
+  receptUrl: https://streetkitchen.hu/salata/szolos-waldorf-salata/
+  thumbnailUrl: https://static.streetkitchen.hu/live/uploads/2023/09/szolos-waldorf-salata-2-1618x855.jpg
+  tags:
+    - saláta
+  ingredients:
+    - name: Szőlő (piros)
+      mennyiseg: 200 g
+    - name: Szőlő (fehér)
+      mennyiseg: 200 g
+    - name: Dió
+      mennyiseg: 100 g
+    - name: Zellerszár
+      mennyiseg: 3 db
+    - name: Görög joghurt
+      mennyiseg: 200 g
+    - name: Majonéz
+      mennyiseg: 100 g
+    - name: Citromlé
+      mennyiseg: 0.5 db
+    - name: Só
+      mennyiseg: 1 csipet
+  cookingSteps:
+    - A szőlős Waldorf-saláta első lépésként a szőlőszemeket, ha túl nagyok, elfelezzük, majd egy tálba tesszük. (A tálaláshoz kb. 6 szemet rakjunk félre.)
+    - Hozzáadjuk a durvára tört dió kb. 80%-át, a vékony szeletekre vágott szárzellert, a joghurtot, a majonézt és a citrom levét, sózzuk, és az egészet összeforgatjuk.
+    - Tálalásnál a tetejére tesszük a megmaradt diót és szőlőt, majd megszórjuk frissen aprított petrezselyemmel és durvára őrölt borssal.
+
 Tárkonyos csirkeraguleves:
   defaultPortion: 4
   receptUrl: https://www.nosalty.hu/recept/tarkonyos-csirkeraguleves-tarkonyos-raguleves-3

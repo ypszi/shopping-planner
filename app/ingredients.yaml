@@ -546,7 +546,10 @@ Spárga:
   kategoria: Zöldség / Gyümölcs
 Sütőtök:
   kategoria: Zöldség / Gyümölcs
-Szőlő:
+Szőlő: Szőlő (fehér)
+Szőlő (fehér):
+  kategoria: Zöldség / Gyümölcs
+Szőlő (piros):
   kategoria: Zöldség / Gyümölcs
 Újhagyma: Csemegehagyma
 Vöröshagyma:
