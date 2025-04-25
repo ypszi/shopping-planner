@@ -1376,7 +1376,6 @@ Hollandi mártás:
   receptUrl: https://www.mindmegette.hu/recept/hollandi-martas
   thumbnailUrl: https://cdn.mindmegette.hu/2024/04/t-33QhKl_atLs33gwC2yMyIVh5OvMSDCMv-sWTLR3PQ/fill/0/0/no/1/aHR0cHM6Ly9jbXNjZG4uYXBwLmNvbnRlbnQucHJpdmF0ZS9jb250ZW50LzgyYjViY2EwZjZhMjQ2MGNhOThhODhjMmJjOTQ4YzQx.webp
   tags:
-    - új
     - köret
   ingredients:
     - name: Vaj
@@ -1828,7 +1827,6 @@ Marokkói sárgarépa-saláta:
   thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/sP/B7/marokkoi-sargarepa-salata.jpeg?w=1340&fit=crop&s=ca6434007dfe0362094c7114234435b6
   tags:
     - saláta
-    - új
   ingredients:
     - name: Sárgarépa
       mennyiseg: 2 db
@@ -2404,7 +2402,6 @@ Piskóta tojásfehérjéből:
   thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/zM/0X/kimaradt-tojasfeherjebol-keszult-feher-piskota.jpeg?w=1200&fit=crop&s=b72176880ca78228d3fbeb712abd9ef5
   tags:
     - desszert
-    - új
   ingredients:
     - name: Tojásfehérje
       mennyiseg: 1 db
@@ -2705,7 +2702,6 @@ Serpenyős fűszeres tejszínes pulykamell:
   receptUrl: https://cookpad.com/hu/receptek/16605114-serpenyos-fuszeres-tejszines-pulykamell
   thumbnailUrl: https://img-global.cpcdn.com/recipes/7f5c9824df57cd5b/1200x630cq70/photo.jpg
   tags:
-    - új
     - ebéd
   ingredients:
     - name: Pulykamell

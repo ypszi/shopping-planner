@@ -55,7 +55,7 @@ class AvailableFoodFactoryTest extends TestCase
             'leves'    => ['tags' => ['leves'], 'expectedCount' => 4],
             'saláta'   => ['tags' => ['saláta'], 'expectedCount' => 21],
             'desszert' => ['tags' => ['desszert'], 'expectedCount' => 20],
-            'új'       => ['tags' => ['új'], 'expectedCount' => 20],
+            'új'       => ['tags' => ['új'], 'expectedCount' => 16],
             'suli'     => ['tags' => ['suli'], 'expectedCount' => 5],
             'ital'     => ['tags' => ['ital'], 'expectedCount' => 1],
         ];
