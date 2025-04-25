@@ -804,6 +804,11 @@ Diós-almás sajtsaláta:
       mennyiseg: 1 kk
     - name: Ecet
       mennyiseg: 1 kk
+  cookingSteps:
+    - A lilahagymát félbevágjuk, vékonyan felszeleteljük.
+    - Tálba tesszük, majd hozzáadjuk a diót, a sajtot és az almát.
+    - Egy másik tálba összekeverjük a tejfölt, a majonézt, a mustárt, a cukrot, a sót, a borsot és az ecetet.
+    - Az elkészült szószba belekeverjük a másik tál tartalmát, és 1 órát lefedve hűtőszekrényben állni hagyjuk.
 
 Édesburgonya püré:
   defaultPortion: 2
@@ -2307,6 +2312,10 @@ Palacsinta:
       mennyiseg: 2.5 dl
     - name: Napraforgóolaj
       mennyiseg: 0.5 dl
+  cookingSteps:
+    - Egy tálba ütjük a tojásokat, majd a cukrokkal együtt kikeverjük.
+    - Folyamatos keverés mellett hozzáadjuk a tojásos keverékhez a lisztet, majd a tejet és a szódát, végül az olajat, és csomómentesre keverjük.
+    - Egy serpenyőt vagy palacsintasütőt egy ecsettel vékonyan megkenünk olajjal, majd megsütjük a palacsintákat.
 
 Paprikás krumpli:
   defaultPortion: 4
@@ -2741,6 +2750,16 @@ Serpenyős csirkemell:
       mennyiseg: 0.5 tk
     - name: Bors
       mennyiseg: 0.5 mk
+  cookingSteps:
+    - A csirkemellet mosd meg, és vágd körülbelül 2x2 centis kockákra.
+    - Az olívaolajat keverd össze a sóval, borssal, majd forgasd meg benne a húst.
+    - A póréhagymát aprítsd fel.
+    - Egy serpenyőben hevíts olajat, és hirtelen, rövid ideig pirítsd meg benne a hagymát, majd dobd rá a csirkemellet.
+    - A húst fehéredésig kevergesd, és nyomd hozzá a fokhagymát.
+    - Önts alá kevés vizet, fedd le 10-15 percre, és párold kis lángon.
+    - Ha már puha, vedd le róla a fedőt, és pirítsd meg.
+    - Akkor az igazi, ha belül finom omlós, kívül pedig szép piros, ropogós.
+    - Szórd meg apróra vágott petrezselyemmel.
 
 Serpenyős fűszeres tejszínes pulykamell:
   defaultPortion: 3
