@@ -1489,6 +1489,7 @@ Illatos omlós csirkemell:
       mennyiseg: 1 db
     - name: Só
       mennyiseg: 1 csipet
+
 Karfiolsteak:
   defaultPortion: 2
   receptUrl: https://streetkitchen.hu/vegetarianus-etelek/fuszeres-karfiolsteak-sajtmartassal-es-ropogos-hagymaval/
@@ -1499,9 +1500,6 @@ Karfiolsteak:
   ingredients:
     - name: Karfiol
       mennyiseg: 2 db
-    - name: Pirított hagyma
-      mennyiseg: 50 g
-    # A fűszerkeverékhez
     - name: Piros paprika
       mennyiseg: 1 tk
     - name: Curry
@@ -1514,32 +1512,48 @@ Karfiolsteak:
       mennyiseg: 1 tk
     - name: Napraforgóolaj
       mennyiseg: 4 ek
-    # A sajtszószhoz
-    - name: Vaj
+  cookingSteps:
+    - A fűszeres karfiolsteak esetében érdemes a fűszerkeverék hozzávalóinak összekeverésével kezdeni.
+    - A karfiolból 3-4 cm vastagságú steakeket vágunk.
+    - Alaposan, de óvatosan bekenjük a fűszerrel, majd egy sütőpapírral bélelt tepsire tesszük, és 200 fokra előmelegített sütőbe helyezzük 30-40 percre.
+
+Karfiolsteak sajtszósszal:
+  defaultPortion: 2
+  receptUrl: https://streetkitchen.hu/vegetarianus-etelek/fuszeres-karfiolsteak-sajtmartassal-es-ropogos-hagymaval/
+  thumbnailUrl: https://streetkitchen.hu/wp-content/uploads/2020/09/sult-karfiol-steaksoborsf-paprikacurry-sajtszosszal-ropogos-hagymaval_3-scaled.jpg
+  tags:
+    - ebéd
+    - vacsora
+  ingredients:
+    - name: Karfiol
+      mennyiseg: 2 db
+    - name: Pirított hagyma
       mennyiseg: 50 g
-    - name: Liszt
-      mennyiseg: 40 g
-    - name: Tej
-      mennyiseg: 500 ml
-    - name: Cheddar sajt (vörös)
-      mennyiseg: 150 g
-    - name: Trappista sajt (füstölt)
-      mennyiseg: 50 g
-    - name: Só
-      mennyiseg: 2 csipet
+    - name: Piros paprika
+      mennyiseg: 1 tk
+    - name: Curry
+      mennyiseg: 2 tk
     - name: Bors
-      mennyiseg: 1 csipet
-    - name: Kurkuma
       mennyiseg: 0.5 tk
-  comments:
-    - a sajtszószhoz:
-      - 50 g vaj
-      - 40 g liszt
-      - 500 ml tej
-      - 150 g vörös cheddar
-      - 50 g füstölt sajt
-      - só, bors
-      - ½ tk kurkuma
+    - name: Só
+      mennyiseg: 1 tk
+    - name: Fokhagymapor
+      mennyiseg: 1 tk
+    - name: Napraforgóolaj
+      mennyiseg: 4 ek
+    - ref: Sajtszósz
+  cookingSteps:
+    - A fűszeres karfiolsteak esetében érdemes a fűszerkeverék hozzávalóinak összekeverésével kezdeni.
+    - A karfiolból 3-4 cm vastagságú steakeket vágunk.
+    - Alaposan, de óvatosan bekenjük a fűszerrel, majd egy sütőpapírral bélelt tepsire tesszük, és 200 fokra előmelegített sütőbe helyezzük 30-40 percre.
+    - A sajtmártáshoz a vajat felolvasztjuk,
+    - megszórjuk a liszttel,
+    - habzásig pirítjuk kb. 3-5 percig,
+    - majd folyamatos keverés mellett felöntjük a tejjel, és addig bugyogtatjuk, amíg be nem sűrűsödött (kb. 3-4 perc).
+    - Lehúzzuk a tűzről, és amíg még forró, belekeverjük mindkét reszelt sajtot.
+    - Ízlés szerint sózzuk, borsozzuk, hozzáadjuk a kurkumát.
+    - A karfiolra öntünk a sajtszószból, majd megszórjuk kevés pirított hagymával, és tálaljuk.
+
 Kefíres csirke:
   defaultPortion: 4
   receptUrl: http://chiliesvanilia.blogspot.com/2016/08/szuperropogos-rantott-csirke-husz-perc.html
@@ -2641,6 +2655,37 @@ Rizskoch:
     - tálaláshoz::
       - porcukor ízlés szerint
       - baracklekvár ízlés szerint
+
+Sajtszósz:
+  defaultPortion: 4
+  receptUrl: https://streetkitchen.hu/vegetarianus-etelek/fuszeres-karfiolsteak-sajtmartassal-es-ropogos-hagymaval/
+  thumbnailUrl: https://streetkitchen.hu/wp-content/uploads/2020/09/sult-karfiol-steaksoborsf-paprikacurry-sajtszosszal-ropogos-hagymaval_3-scaled.jpg
+  tags:
+    - köret
+  ingredients:
+    - name: Vaj
+      mennyiseg: 50 g
+    - name: Liszt
+      mennyiseg: 40 g
+    - name: Tej
+      mennyiseg: 500 ml
+    - name: Cheddar sajt (vörös)
+      mennyiseg: 150 g
+    - name: Trappista sajt (füstölt)
+      mennyiseg: 50 g
+    - name: Só
+      mennyiseg: 2 csipet
+    - name: Bors
+      mennyiseg: 1 csipet
+    - name: Kurkuma
+      mennyiseg: 0.5 tk
+  cookingSteps:
+    - A vajat felolvasztjuk,
+    - megszórjuk a liszttel,
+    - habzásig pirítjuk kb. 3-5 percig,
+    - majd folyamatos keverés mellett felöntjük a tejjel, és addig bugyogtatjuk, amíg be nem sűrűsödött (kb. 3-4 perc).
+    - Lehúzzuk a tűzről, és amíg még forró, belekeverjük mindkét reszelt sajtot.
+    - Ízlés szerint sózzuk, borsozzuk, hozzáadjuk a kurkumát.
 
 Sárgarépás kínai kel saláta:
   defaultPortion: 2
