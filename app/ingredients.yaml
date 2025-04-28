@@ -242,9 +242,14 @@ Kenyér:
 Hamburger zsemle:
   kategoria: Pékárú
   mertekegysegPreference: db
+Tortilla lap:
+  kategoria: Pékárú
+  mertekegysegPreference: db
 
 # Sajt
 Cheddar sajt (vörös):
+  kategoria: Sajt
+Cheddar sajt (reszelt):
   kategoria: Sajt
 Feta sajt:
   kategoria: Sajt

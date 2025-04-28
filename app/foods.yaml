@@ -2419,6 +2419,50 @@ Pestos tészta:
     - name: Fusilli tészta
       mennyiseg: 25 dkg
 
+Pirított csirkés quesadilla:
+  defaultPortion: 4
+  receptUrl: https://www.nosalty.hu/recept/piritott-csirke-quesadilla-texmex-mexikoi-tortilla-avokado-salsa-tejfol
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/A7/Bc/piritott-csirke-quesadilla-texmex-mexikoi-tortilla-avokado-salsa-tejfol.jpg?w=6000&fit=crop&s=c5fc988be0e5e0cd667484a499f664b3
+  tags:
+    - ebéd
+    - vacsora
+    - új
+  ingredients:
+    - name: Csirkemell
+      mennyiseg: 200 g
+    - name: Lilahagyma
+      mennyiseg: 1 db
+    - name: Kaliforniai paprika (piros)
+      mennyiseg: 1 db
+    - name: Jalapeno (konzerv)
+      mennyiseg: 20 g
+    - name: Cayenne bors
+      mennyiseg: 1 tk
+    - name: Fűszer paprika
+      mennyiseg: 1 ek
+    - name: Fokhagymapor
+      mennyiseg: 1 ek
+    - name: Római kömény
+      mennyiseg: 1 tk
+    - name: Só
+      mennyiseg: 0.5 tk
+    - name: Bors
+      mennyiseg: 1 csipet
+    - name: Olívaolaj
+      mennyiseg: 3 ek
+    - name: Tortilla lap
+      mennyiseg: 4 db
+    - name: Cheddar sajt (reszelt)
+      mennyiseg: 100 g
+  cookingSteps:
+    - A csirkemelleket nagyon apróra vágjuk, majd olívaolajon elkezdjük lepirítani, a fűszerekkel együtt.
+    - Ezt követően hozzáadjuk a szintén apróra vágott lilahagymát, a kaliforniai paprikát és a jalapenót.
+    - Az egészet jól összepirítjuk, majd félretesszük.
+    - Egy másik serpenyőben szárazon elkezdünk melegíteni egy tortillalapot.
+    - Megszórjuk bőségesen sajttal, erre jöhet a csirkés keverék, majd még egy adag sajt.
+    - Egy másik tortillalappal zárjuk az egészet, majd pár perc után megfordítjuk, és a másik oldalát is megpirítjuk a quesadillának.
+    - Tálalás előtt hagyjuk egy picit hűlni, majd vágjuk negyedekre, és tálaljuk avokádókrémmel, salsával és tejföllel, ráadásként pedig friss korianderrel is megszórhatjuk az egészet.
+
 Piskóta tojásfehérjéből:
   defaultPortion: 2
   receptUrl: https://www.nosalty.hu/recept/kimaradt-tojasfeherjebol-keszult-feher-piskota
