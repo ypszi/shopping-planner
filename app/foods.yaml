@@ -3610,6 +3610,31 @@ Tiramisu:
     - Rákenjük a krém felét, majd beterítjük egy újabb réteg kávéba áztatott babapiskótával, és rátesszük a maradék krémet.
     - Egy éjszakára a hűtőszekrénybe tesszük, hogy összeérjenek az ízek. Tálalás előtt megszórjuk kakaóporral.
 
+Tortilla lap:
+  defaultPortion: 10
+  receptUrl: https://streetkitchen.hu/alapkeszitmenyek/tortilla-lap-recept/
+  thumbnailUrl: https://streetkitchen.hu/wp-content/uploads/2025/01/tortilla-lap-recept-uj-1618x855.png
+  tags:
+    - köret
+  ingredients:
+    - name: Finomliszt
+      mennyiseg: 400 g
+    - name: Só
+      mennyiseg: 5 g
+    - name: Sütőpor
+      mennyiseg: 5 g
+    - name: Olívaolaj
+      mennyiseg: 60 ml
+    - name: Víz
+      mennyiseg: 240 ml
+  cookingSteps:
+    - A tortillalap elkészítéséhez először a lisztet, a sót, a sütőport, az olívaolajat és a vizet egy keverőtálba tesszük, alaposan összegyúrjuk.
+    - A tésztából 10 db közel azonos méretű golyót formázunk.
+    - A tésztagolyókat lisztezett felületen elkezdjük kinyújtani: előbb a kezünkkel kicsit kilapítjuk, aztán jöhet a sodrófa.
+    - Minden nyújtás után elforgatjuk 90 fokkal a tortillát, hogy megtartsuk a kör alakját. Egészen addig nyújtjuk, míg egy papírvékony tortillalapot kapunk.
+    - Száraz, forró serpenyőbe dobjuk a tortillalapot, majd amikor elkezd felhólyagosodni, a kezünket vízbe mártjuk és egy kevés vízzel megspricceljük a tetejét.
+    - Ezután megfordítjuk és a másik oldalát is megsütjük.
+
 Töltött káposzta (klasszikus):
   defaultPortion: 8
   receptUrl: https://www.nosalty.hu/recept/klasszikus-toltott-kaposzta
