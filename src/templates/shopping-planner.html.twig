@@ -112,14 +112,14 @@
                                 {% if isAvailableFoodSelected %}checked="checked"{% endif %}
                         >
                         <label for="food-{{ availableFoodNameKey }}" class="form-check-label">{{ availableFoodName }}</label>
-                        <div class="hover-container">
-                            <i class="emoji emoji-thumbnail"></i>
-                            <span>
-                                {% if availableFood.thumbnailUrl %}
+                        {% if availableFood.thumbnailUrl %}
+                            <div class="hover-container">
+                                <i class="emoji emoji-thumbnail"></i>
+                                <span>
                                     <img src="{{ availableFood.thumbnailUrl }}" alt="{{ availableFoodName }}" class="img-fluid img-thumbnail">
-                                {% endif %}
-                            </span>
-                        </div>
+                                </span>
+                            </div>
+                        {% endif %}
                     </div>
                 </div>
                 <div class="col-md-3">
