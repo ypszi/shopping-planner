@@ -18,6 +18,9 @@ Folyékony szappan:
     max: 500
     step: 100
 
+Mosogatószer:
+  kategoria: Tisztítószer
+
 Mosószer:
   kategoria: Tisztítószer
 
