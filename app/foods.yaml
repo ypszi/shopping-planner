@@ -3580,6 +3580,62 @@ Tepsis Krumpli:
     - Ráöntjük az olajat, és jól összekeverjük, hogy a fűszerek mindenhol érjék.
     - Előmelegített sütőben 180 fokon sütjük, amíg ropogós nem lesz a külseje. Közben 2-3-szor forgassuk át.
 
+Teriyaki szószos csirke:
+  defaultPortion: 2
+  receptUrl: https://www.nosalty.hu/recept/teriyaki-szoszos-csirke
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/LN/cJ/teriyaki-szoszos-csirke.jpeg?w=1200&fit=crop&s=46ad86da3ce8ee8c3873010e8503b71e
+  tags:
+    - ebéd
+    - vacsora
+  ingredients:
+    - name: Szaké
+      mennyiseg: 20 ml
+    - name: Mirin
+      mennyiseg: 20 ml
+    - name: Szójaszósz
+      mennyiseg: 2 ek
+    - name: Cukor
+      mennyiseg: 1 tk
+    - name: Gyömbér por
+      mennyiseg: 1 csipet
+    - name: Szezámmag
+      mennyiseg: 1 ek
+    - name: Bors
+      mennyiseg: 1 csipet
+  cookingSteps:
+    - A csirkecombokat mossuk meg, szárítsuk le papírtörlővel, filézzük ki. (Aki nem szereti a bőrét, leszedheti.)
+    - Tegyünk egy serpenyőbe olajat, és közepes lángon, bőrös felével lefelé kezdjük el sütni a csirkét. Süssük, amíg aranybarna nem lesz, majd jöhet a másik oldala.
+    - Adjunk hozzá egy evőkanál szakét, és lefedve pároljuk kb. 5 percig.
+    - "Közben készítsük el a teriyaki szószt: keverjük össze a mirint, szójaszószt és a szakét."
+    - Szedjük le a fedőt, és papírtörlővel itassuk fel a kisült zsírt és folyadékokat.
+    - Öntsük a csirke mellé a teriyaki szószt, és nagy lángon süssük, amíg be nem sűrűsödik a szószunk. Közben fordítsuk meg a combokat néhányszor, hogy bejárja őket a mártás. Vigyázzunk, hogy a mirin magas cukortartalma miatt oda ne égjen.
+    - Találaljuk rizzsel.
+
+Teriyaki szósz:
+  defaultPortion: 2
+  receptUrl: https://www.nosalty.hu/recept/teriyaki-szoszos-csirke
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/LN/cJ/teriyaki-szoszos-csirke.jpeg?w=1200&fit=crop&s=46ad86da3ce8ee8c3873010e8503b71e
+  tags:
+    - köret
+  ingredients:
+    - name: Szaké
+      mennyiseg: 20 ml
+    - name: Mirin
+      mennyiseg: 20 ml
+    - name: Szójaszósz
+      mennyiseg: 2 ek
+    - name: Cukor
+      mennyiseg: 1 tk
+    - name: Gyömbér por
+      mennyiseg: 1 csipet
+    - name: Szezámmag
+      mennyiseg: 1 ek
+    - name: Bors
+      mennyiseg: 1 csipet
+  cookingSteps:
+    - Keverjük össze a mirint, szójaszószt és a szakét
+    - Keverjük bele a cukrot, gyömbérport, szezámmagot, borsot
+
 Tiramisu:
   defaultPortion: 12
   receptUrl: https://www.mindmegette.hu/recept/tiramisu-egyszeruen
