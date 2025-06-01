@@ -1376,6 +1376,33 @@ Hamburger:
       - 10 dkg Csemege uborka (konzerv)
       - 5 dkg Jalapeno (konzerv)
 
+Hawaii csirkemell:
+  defaultPortion: 4
+  receptUrl: https://www.nosalty.hu/recept/egyszeru-hawaii-csirkemell
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/Dz/YF/egyszeru-hawaii-csirkemell.jpeg?w=1200&fit=crop&s=944aa630576639dbc382dbc9bdd1754f
+  tags:
+    - ebéd
+    - vacsora
+  ingredients:
+    - name: Csirkemell
+      mennyiseg: 40 dkg
+    - name: Olívaolaj
+      mennyiseg: 3 ek
+    - name: Só
+      mennyiseg: 2 csipet
+    - name: Bors
+      mennyiseg: 1 csipet
+    - name: Trappista sajt
+      mennyiseg: 5 dkg
+    - name: Ananász (konzerv)
+      mennyiseg: 15 dkg
+  cookingSteps:
+    - A csirkemellet sózzuk, borsozzuk.
+    - Az olívaolajat felhevítjük, és pár perc alatt átpirítjuk benne a csirkemellet.
+    - Kivesszük, a maradék olívaolajat egy tűzálló edénybe öntjük, és rátesszük a csirkemelleket.
+    - Ráteszünk 1-1 karika ananászt, és megszórjuk a sajtot.
+    - 180 fokra előmelegített sütőbe toljuk, és 10-15 perc alatt aranyszínűre sütjük.
+
 Hollandi mártás:
   defaultPortion: 4
   receptUrl: https://www.mindmegette.hu/recept/hollandi-martas
