@@ -78,20 +78,46 @@
                         </td>
                         <td><a href="{{ food.recipeUrl }}" target="_blank">{{ food.recipeDomain }}</a></td>
                         <td>
-                            <ol>
-                                {% from _self import recursiveLists %}
-                                {% for cookingStep in food.cookingSteps %}
-                                    {{ recursiveLists(cookingStep, true) }}
-                                {% endfor %}
-                            </ol>
+                            {% if food.cookingSteps|length > 0 %}
+                                <div class="gap-1">
+                                    <i class="emoji emoji-arrow-down"
+                                       data-bs-toggle="collapse"
+                                       data-bs-target="#cookingSteps-{{ foodNameKey }}"
+                                       aria-expanded="false"
+                                       aria-controls="cookingSteps"
+                                       onclick="toggleCollapse(this);"
+                                    ></i>
+                                </div>
+                                <div class="collapse" id="cookingSteps-{{ foodNameKey }}">
+                                    <ol>
+                                        {% from _self import recursiveLists %}
+                                        {% for cookingStep in food.cookingSteps %}
+                                            {{ recursiveLists(cookingStep, true) }}
+                                        {% endfor %}
+                                    </ol>
+                                </div>
+                            {% endif %}
                         </td>
                         <td class="row-comment">
-                            <ul>
-                                {% from _self import recursiveLists %}
-                                {% for comment in food.comments %}
-                                    {{ recursiveLists(comment) }}
-                                {% endfor %}
-                            </ul>
+                            {% if food.comments|length > 1 %}
+                                <div class="gap-1">
+                                    <i class="emoji emoji-arrow-down"
+                                       data-bs-toggle="collapse"
+                                       data-bs-target="#comments-{{ foodNameKey }}"
+                                       aria-expanded="false"
+                                       aria-controls="comments"
+                                       onclick="toggleCollapse(this);"
+                                    ></i>
+                                </div>
+                                <div class="collapse" id="comments-{{ foodNameKey }}">
+                                    <ul>
+                                        {% from _self import recursiveLists %}
+                                        {% for comment in food.comments %}
+                                            {{ recursiveLists(comment) }}
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            {% endif %}
                         </td>
                     </tr>
                 {% endfor %}
@@ -354,6 +380,18 @@
 <script>
     {% include 'dark-theme.js.twig' %}
     {% include 'helper.js.twig' %}
+
+    function toggleCollapse(elem) {
+        const isClosed = elem.classList.contains('emoji-arrow-down');
+        if (isClosed) {
+            elem.classList.add('emoji-arrow-up');
+            elem.classList.remove('emoji-arrow-down');
+        }
+        else {
+            elem.classList.add('emoji-arrow-down');
+            elem.classList.remove('emoji-arrow-up');
+        }
+    }
 
     function portionChange(elem, foodNameKey, measure) {
         const portion = elem.value;
