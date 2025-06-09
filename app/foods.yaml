@@ -3981,6 +3981,31 @@ Tzatziki:
   comments:
     - 3 tk Fehérborecet vagy 3 tk Almaborecet
 
+Uborkasaláta:
+  defaultPortion: 6
+  receptUrl: https://www.nosalty.hu/recept/isteni-uborkasalata
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/06/RU/isteni-uborkasalata.jpg?w=1800&fit=crop&s=968b180668ce74332c2204484d40a794
+  tags:
+    - köret
+    - saláta
+  ingredients:
+    - name: Kígyóuborka
+      mennyiseg: 2 db
+    - name: Fokhagyma
+      mennyiseg: 2 gerezd
+    - name: Ecet
+      mennyiseg: 1 ek
+    - name: Só
+      mennyiseg: 2 csipet
+    - name: Cukor
+      mennyiseg: 1 ek
+  cookingSteps:
+    - Az uborkákat meghámozzuk (a héjával keserűbb lenne), és egy szeletővel a tálba szeleteljük.
+    - Megsózzuk, jól átkeverjük, és hagyjuk állni pár percet. Szinte azonnal levet ereszt.
+    - Meglocsoljuk az ecettel, rászórjuk a cukrot, rápasszírozzuk vagy reszeljük a fokhagymát, és alaposan átkeverjük.
+    - A hűtőbe tesszük, és tálalásig ott tartjuk. Minél többször keverjük át, annál jobban átjárják az ízek.
+    - Díszítésként egy nagyon pici pirospaprikával megszórhatjuk.
+
 Vajas kukoricás csicseriborsó:
   defaultPortion: 3
   receptUrl: https://www.nosalty.hu/recept/vajas-kukoricas-csicseri
