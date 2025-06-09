@@ -505,7 +505,7 @@ Csirkemellpaprikás:
       mennyiseg: 1 ek
     - name: Tejszín
       mennyiseg: 1 dl
-  comments:
+  cookingSteps:
     - Előkészítjük az alapanyagokat::
       - a vöröshagymát meghámozzuk, apróra kockázzuk;
       - a csirkemellet nagyjából kétcentis kockákra vágjuk;
