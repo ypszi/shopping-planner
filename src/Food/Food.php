@@ -22,7 +22,7 @@ class Food
         private readonly ?string $thumbnailUrl = null,
         private readonly array $tags = [],
         private readonly array $comments = [],
-        private readonly array $cookingSteps = [],
+        private array $cookingSteps = [],
         private array $ingredients = []
     ) {
         $this->portion = $portion ?? $defaultPortion;
@@ -117,6 +117,17 @@ class Food
     public function cookingSteps(): array
     {
         return $this->cookingSteps;
+    }
+
+    /**
+     * @param string[] $cookingSteps
+     */
+    public function withCookingSteps(array $cookingSteps): self
+    {
+        $clone               = clone $this;
+        $clone->cookingSteps = $cookingSteps;
+
+        return $clone;
     }
 
     public function __toString(): string

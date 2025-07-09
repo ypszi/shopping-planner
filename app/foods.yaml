@@ -278,13 +278,13 @@ Bolognai:
     - name: Parmezán sajt
       mennyiseg: 40 g
   cookingSteps:
-    - Az olajon üvegesre pároljuk az apróra vágott vöröshagymát,
-    - "majd hozzádobjuk a lereszelt sárgarépát és angol zellert és együtt pirítjuk őket: ez a soffritto."
-    - Amikor már kicsit oda is kapott, hozzáadjuk a darált húst, “fehéredésig” pirítjuk,
-    - majd a vörösbor és a passzírozott paradicsom következik.
-    - Fűszerezzük ízlés szerint sóval, borssal, szerecsendióval, hozzáadjuk a babérlevelet, a zúzott fokhagymát, a kakukkfüvet és a rozmaringot, és opcionálisan kevés Worcester-szószt is.
-    - Felöntjük a vízzel, és alacsony lángon egy órán át rotyogtatjuk.
-    - Titkos hozzávalóként beleöntjük a tejet, és még 10 percig főzzük.
+    - "{{Olívaolaj}} olajon üvegesre pároljuk az apróra vágott {{Vöröshagyma}} vöröshagymát,"
+    - "majd hozzádobjuk a lereszelt {{Sárgarépa}} sárgarépát és {{Zellerszár}} angol zellert és együtt pirítjuk őket: ez a soffritto."
+    - "Amikor már kicsit oda is kapott, hozzáadjuk a(z) {{Darált hús}} darált húst, “fehéredésig” pirítjuk,"
+    - "majd a {{Vörösbor (száraz)}} vörösbor és a {{Paradicsom püré}} passzírozott paradicsom következik."
+    - "Fűszerezzük ízlés szerint {{só}} sóval, {{bors}} borssal, {{szerecsendió}} szerecsendióval, hozzáadjuk a(z) {{babérlevél}} babérlevelet, a(z) {{fokhagyma}} zúzott fokhagymát, a(z) {{kakukkfű}} kakukkfüvet és a(z) {{rozmaring}} rozmaringot, és opcionálisan {{Worcester szósz}} Worcester-szószt is."
+    - "Felöntjük {{víz}} vízzel, és alacsony lángon egy órán át rotyogtatjuk."
+    - "Titkos hozzávalóként beleöntjük a {{tej}} tejet, és még 10 percig főzzük."
     - Tökéletes, al dentére főtt tésztán tálaljuk, reszelt parmezánnal!
 
 Bulgur:

@@ -17,12 +17,13 @@ class IngredientForFood extends Ingredient
         string $category,
         float $portion,
         ?Measure $measure,
-        ?Measure $measurePreference = null
+        ?Measure $measurePreference = null,
+        ?Ingredient $reference = null
     ) {
         $this->portion = $portion;
         $this->measure = $measure;
 
-        parent::__construct($name, $category, $measurePreference);
+        parent::__construct($name, $category, $measurePreference, $reference);
     }
 
     public function withPortion(float $portion): self

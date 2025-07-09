@@ -44,7 +44,8 @@ readonly class IngredientStorageService
                 category:          $availableIngredient->category(),
                 portion:           $ingredientForFood?->portion() ?? 0,
                 measure:           $ingredientForFood?->measure(),
-                measurePreference: $availableIngredient->measurePreference()
+                measurePreference: $availableIngredient->measurePreference(),
+                reference:         $availableIngredient->reference()
             );
         }
 

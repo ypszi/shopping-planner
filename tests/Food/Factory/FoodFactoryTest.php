@@ -4,8 +4,10 @@ declare(strict_types=1);
 
 namespace PeterPecosz\ShoppingPlanner\Tests\Food\Factory;
 
+use PeterPecosz\ShoppingPlanner\Food\CookingSteps\CookingStepsProcessor;
 use PeterPecosz\ShoppingPlanner\Food\Factory\FoodFactory;
 use PeterPecosz\ShoppingPlanner\Food\Factory\ThumbnailFactory;
+use PeterPecosz\ShoppingPlanner\Food\Food;
 use PeterPecosz\ShoppingPlanner\Ingredient\IngredientForFood;
 use PeterPecosz\ShoppingPlanner\Measure\Measure;
 use PHPUnit\Framework\Attributes\Test;
@@ -22,20 +24,26 @@ class FoodFactoryTest extends TestCase
     {
         $this->sut = new FoodFactory(
             __DIR__ . '/../../../app/foods.yaml',
-            $this->thumbnailFactory = $this->createMock(ThumbnailFactory::class)
+            $this->thumbnailFactory = $this->createMock(ThumbnailFactory::class),
+            $cookingStepsProcessor = $this->createMock(CookingStepsProcessor::class)
         );
+
+        $cookingStepsProcessor
+            ->expects(self::any())
+            ->method('process')
+            ->willReturnCallback(fn(Food $value) => $value);
     }
 
     #[Test]
     public function testCreateFood(): void
     {
         $food = $this->sut->createFood(
-            foodName:    'Bolognai',
+            foodName   : 'Bolognai',
             ingredients: [
-                             new IngredientForFood(name: 'meat', category: 'meat-category', portion: 1, measure: Measure::KG),
-                             new IngredientForFood(name: 'pasta', category: 'pasta-category', portion: 1, measure: Measure::KG),
-                         ],
-            portion:     6
+                new IngredientForFood(name: 'meat', category: 'meat-category', portion: 1, measure: Measure::KG),
+                new IngredientForFood(name: 'pasta', category: 'pasta-category', portion: 1, measure: Measure::KG),
+            ],
+            portion    : 6
         );
 
         $this->assertEquals('Bolognai', $food->name());
@@ -53,11 +61,11 @@ class FoodFactoryTest extends TestCase
     public function testCreateFoodWithoutPortion(): void
     {
         $food = $this->sut->createFood(
-            foodName:    'Bolognai',
+            foodName   : 'Bolognai',
             ingredients: [
-                             new IngredientForFood(name: 'meat', category: 'meat-category', portion: 1, measure: Measure::KG),
-                             new IngredientForFood(name: 'pasta', category: 'pasta-category', portion: 1, measure: Measure::KG),
-                         ]
+                new IngredientForFood(name: 'meat', category: 'meat-category', portion: 1, measure: Measure::KG),
+                new IngredientForFood(name: 'pasta', category: 'pasta-category', portion: 1, measure: Measure::KG),
+            ]
         );
 
         $this->assertEquals('Bolognai', $food->name());

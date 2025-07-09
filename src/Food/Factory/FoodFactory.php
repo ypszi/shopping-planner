@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace PeterPecosz\ShoppingPlanner\Food\Factory;
 
+use PeterPecosz\ShoppingPlanner\Food\CookingSteps\CookingStepsProcessor;
 use PeterPecosz\ShoppingPlanner\Food\Exception\InvalidFoodException;
 use PeterPecosz\ShoppingPlanner\Food\Exception\UnknownFoodException;
 use PeterPecosz\ShoppingPlanner\Food\Food;
@@ -20,6 +21,7 @@ readonly class FoodFactory
     public function __construct(
         string $foodsPath,
         private ThumbnailFactory $thumbnailFactory,
+        private CookingStepsProcessor $cookingStepsProcessor,
     ) {
         $this->foods = Yaml::parseFile($foodsPath);
     }
@@ -29,14 +31,14 @@ readonly class FoodFactory
      */
     public function createFood(string $foodName, array $ingredients, ?int $portion = null): Food
     {
-        /** @var array<string, mixed> $food */
-        $food = $this->foods[$foodName] ?? null;
+        /** @var array<string, mixed> $rawFood */
+        $rawFood = $this->foods[$foodName] ?? null;
 
-        if (!isset($food)) {
+        if (!isset($rawFood)) {
             throw new UnknownFoodException(sprintf('Food was not found: "%s"', $foodName));
         }
 
-        $tags = $food['tags'] ?? [];
+        $tags = $rawFood['tags'] ?? [];
 
         if (count($tags) > self::FOOD_TAG_COUNT_ALLOWED) {
             throw new InvalidFoodException(
@@ -48,22 +50,24 @@ readonly class FoodFactory
             );
         }
 
-        $thumbnail = $food['thumbnailUrl'] ?? null;
+        $thumbnail = $rawFood['thumbnailUrl'] ?? null;
 
         if ($thumbnail) {
             $thumbnail = $this->thumbnailFactory->create($foodName, $thumbnail);
         }
 
-        return new Food(
-            name:           $foodName,
-            defaultPortion: $food['defaultPortion'],
-            portion:        $portion,
-            recipeUrl:      $food['receptUrl'] ?? null,
-            thumbnailUrl:   $thumbnail,
-            tags:           $tags,
-            comments:       $food['comments'] ?? [],
-            cookingSteps:   $food['cookingSteps'] ?? [],
-            ingredients:    $ingredients
+        $food = new Food(
+            name          : $foodName,
+            defaultPortion: $rawFood['defaultPortion'],
+            portion       : $portion,
+            recipeUrl     : $rawFood['receptUrl'] ?? null,
+            thumbnailUrl  : $thumbnail,
+            tags          : $tags,
+            comments      : $rawFood['comments'] ?? [],
+            cookingSteps  : $rawFood['cookingSteps'] ?? [],
+            ingredients   : $ingredients
         );
+
+        return $this->cookingStepsProcessor->process($food);
     }
 }

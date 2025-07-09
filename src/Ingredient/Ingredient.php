@@ -14,14 +14,18 @@ class Ingredient
 
     private ?Measure $measurePreference;
 
+    private ?Ingredient $reference;
+
     public function __construct(
         string $name,
         string $category,
-        ?Measure $measurePreference = null
+        ?Measure $measurePreference = null,
+        ?Ingredient $reference = null
     ) {
         $this->name              = $name;
         $this->category          = $category;
         $this->measurePreference = $measurePreference;
+        $this->reference         = $reference;
     }
 
     public function name(): string
@@ -45,6 +49,11 @@ class Ingredient
     public function measurePreference(): ?Measure
     {
         return $this->measurePreference;
+    }
+
+    public function reference(): ?Ingredient
+    {
+        return $this->reference;
     }
 
     public function __toString(): string

@@ -48,9 +48,9 @@ readonly class IngredientFactory
 
         return $this->createForFood(
             ingredientName: $ingredientName,
-            portion:        (float)$portion,
-            measure:        $measure,
-            foodName:       $foodName
+            portion       : (float)$portion,
+            measure       : $measure,
+            foodName      : $foodName
         );
     }
 
@@ -66,7 +66,14 @@ readonly class IngredientFactory
         try {
             $ingredient = $this->create($ingredientName);
 
-            return new IngredientForFood($ingredient->name(), $ingredient->category(), $portion, $measure, $ingredient->measurePreference());
+            return new IngredientForFood(
+                $ingredient->name(),
+                $ingredient->category(),
+                $portion,
+                $measure,
+                $ingredient->measurePreference(),
+                $ingredient->reference()
+            );
         } catch (UnknownIngredientException $unknownIngredientException) {
             throw new UnknownIngredientException(sprintf('%s for food: "%s"', $unknownIngredientException->getMessage(), $foodName));
         }
@@ -82,7 +89,14 @@ readonly class IngredientFactory
     ): IngredientForFood {
         $ingredient = $this->create($ingredientName);
 
-        return new IngredientForFood($ingredient->name(), $ingredient->category(), $portion, $measure, $ingredient->measurePreference());
+        return new IngredientForFood(
+            $ingredient->name(),
+            $ingredient->category(),
+            $portion,
+            $measure,
+            $ingredient->measurePreference(),
+            $ingredient->reference()
+        );
     }
 
     /**
@@ -90,58 +104,112 @@ readonly class IngredientFactory
      */
     public function create(string $ingredientName): Ingredient
     {
-        $ingredient = $this->ingredients[$ingredientName] ?? null;
+        $rawIngredient = $this->ingredients[$ingredientName] ?? null;
 
-        if (!isset($ingredient)) {
+        if (!isset($rawIngredient)) {
             throw new UnknownIngredientException(sprintf('Ingredient was not found: "%s"', $ingredientName));
         }
 
         if (is_string($ingredientRefName = $this->ingredients[$ingredientName] ?? null)) {
-            $ingredientRef = $this->ingredients[$ingredientRefName] ?? null;
+            $rawIngredientRef = $this->ingredients[$ingredientRefName] ?? null;
 
-            if (!$ingredientRef) {
+            if (!$rawIngredientRef) {
                 throw new UnknownIngredientException(
                     sprintf('Ingredient reference not found: "%s"', $ingredientRefName)
                 );
             }
 
-            $ingredientName = $ingredientRefName;
-            $ingredient     = $ingredientRef;
+            $ingredientReference = $this->createIngredient(
+                ingredientName   : $ingredientName,
+                rawIngredient    : $rawIngredientRef,
+                ingredientRefName: $ingredientRefName
+            );
+
+            return $this->createIngredient(
+                ingredientName     : $ingredientRefName,
+                rawIngredient      : $rawIngredientRef,
+                ingredientReference: $ingredientReference
+            );
         }
 
-        $defaultIngredient = $this->ingredients[$ingredientName] ?? [];
-        $category          = $ingredient['kategoria'] ?? $defaultIngredient['kategoria'] ?? null;
-        $measurePreference = $ingredient['mertekegysegPreference']
-                             ?? $defaultIngredient['mertekegysegPreference']
-                                ?? $this->ingredientCategories[$category]['mertekegysegPreference']
-                                   ?? null;
+        return $this->createIngredient(
+            $ingredientName,
+            $rawIngredient
+        );
+    }
 
+    /**
+     * @param array<string, string> $rawIngredient
+     */
+    private function createIngredient(
+        string $ingredientName,
+        array $rawIngredient,
+        ?string $ingredientRefName = null,
+        ?Ingredient $ingredientReference = null
+    ): Ingredient {
+        $originalIngredient   = $this->ingredients[$ingredientRefName ?? $ingredientName] ?? [];
+        $category             = $rawIngredient['kategoria'] ?? $originalIngredient['kategoria'] ?? null;
+        $rawMeasurePreference = $rawIngredient['mertekegysegPreference']
+                                ?? $originalIngredient['mertekegysegPreference']
+                                   ?? $this->ingredientCategories[$category]['mertekegysegPreference']
+                                      ?? null;
+
+        $this->validateIngredientCategory(
+            $ingredientName,
+            $category,
+            $rawIngredient['kategoria'],
+            $originalIngredient['kategoria']
+        );
+
+        $measurePreference = $this->createMeasurePreference($ingredientName, $rawMeasurePreference);
+
+        return new Ingredient(
+            $ingredientName,
+            $category,
+            $measurePreference ?? null,
+            $ingredientReference
+        );
+    }
+
+    private function validateIngredientCategory(
+        string $ingredientName,
+        ?string $category,
+        string $rawIngredientCategory,
+        ?string $defaultIngredientCategory,
+    ): void {
         if (!$category) {
             throw new UnknownIngredientException(
                 sprintf('Ingredient not found: "%s"', $ingredientName)
             );
         }
 
-        if ($category !== $defaultIngredient['kategoria']) {
+        if ($category !== $defaultIngredientCategory) {
             throw new UnknownIngredientException(
                 sprintf(
                     'Ingredient category mismatch for "%s": "%s" - "%s"',
                     $ingredientName,
-                    $ingredient['kategoria'],
-                    $defaultIngredient['kategoria']
+                    $rawIngredientCategory,
+                    $defaultIngredientCategory
                 )
             );
         }
 
-        if ($defaultIngredient && !isset($this->ingredientCategories[$defaultIngredient['kategoria']])) {
+        if (!isset($this->ingredientCategories[$defaultIngredientCategory])) {
             throw new UnknownIngredientException(
                 sprintf(
                     'Ingredient category not found for "%s": "%s"',
                     $ingredientName,
-                    $defaultIngredient['kategoria']
+                    $defaultIngredientCategory
                 )
             );
         }
+    }
+
+    private function createMeasurePreference(
+        string $ingredientName,
+        ?string $measurePreference = null
+    ): ?Measure {
+        $ingredientMeasurePreference = null;
 
         if ($measurePreference && !$ingredientMeasurePreference = Measure::tryFrom($measurePreference)) {
             throw new UnknownIngredientException(
@@ -153,10 +221,6 @@ readonly class IngredientFactory
             );
         }
 
-        return new Ingredient(
-            $ingredientName,
-            $category,
-            $ingredientMeasurePreference ?? null
-        );
+        return $ingredientMeasurePreference;
     }
 }
