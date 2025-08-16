@@ -31,7 +31,7 @@ class CookingStepsProcessorTest extends TestCase
             defaultPortion: 4,
             cookingSteps  : [
                 'cut {{onion}} onions',
-                'peal {{avocado}} avocado',
+                'peal {{ avocado }} avocado',
                 'pour {{wine (dry)}} wine',
                 'cook',
                 'serve',

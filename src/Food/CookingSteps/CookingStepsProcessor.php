@@ -88,7 +88,7 @@ class CookingStepsProcessor
 
     private function placeholder(string $name): string
     {
-        return sprintf('/\{\{%s\}\}/i', $this->escapeSpecialChars($name));
+        return sprintf('/\{\{\s?%s\s?\}\}/i', $this->escapeSpecialChars($name));
     }
 
     private function escapeSpecialChars(string $string): string
