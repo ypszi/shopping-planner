@@ -149,6 +149,7 @@ class CookingStepsProcessorTest extends TestCase
     #[Test]
     public function testDoesNotReplacesVariablesRecusively(): void
     {
+        // TODO: add recursive [peter.pecosz]
         $originalFood = new Food(
             name          : 'test food',
             defaultPortion: 4,

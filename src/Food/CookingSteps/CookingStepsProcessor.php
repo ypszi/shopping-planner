@@ -15,6 +15,7 @@ class CookingStepsProcessor
 
         foreach ($food->cookingSteps() as $cookingStep) {
             if (!is_string($cookingStep)) {
+                // TODO: add recursive [peter.pecosz]
                 $cookingSteps[] = $cookingStep;
 
                 continue;
@@ -36,15 +37,19 @@ class CookingStepsProcessor
         return array_values(
             array_filter(
                 $food->ingredients(),
-                fn(IngredientForFood $ingredientForFood) => str_contains(
-                                                                strtolower($cookingStep),
-                                                                strtolower($ingredientForFood->name())
-                                                            )
-                                                            || ($ingredientForFood->reference()
-                                                                && str_contains(
-                                                                    strtolower($cookingStep),
-                                                                    strtolower($ingredientForFood->reference()->name())
-                                                                ))
+                fn(
+                    IngredientForFood $ingredientForFood
+                ) => str_contains(
+                         strtolower($cookingStep),
+                         strtolower($ingredientForFood->name())
+                     )
+                     || (
+                         $ingredientForFood->reference()
+                         && str_contains(
+                             strtolower($cookingStep),
+                             strtolower($ingredientForFood->reference()->name())
+                         )
+                     )
             )
         );
     }
@@ -59,6 +64,7 @@ class CookingStepsProcessor
     {
         $newCookingStep = $cookingStep;
 
+        // TODO: improve [peter.pecosz]
         foreach ($relevantIngredients as $relevantIngredient) {
             $newCookingStep = preg_replace(
                 pattern    : $this->placeholder($relevantIngredient->name()),
