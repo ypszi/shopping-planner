@@ -3480,6 +3480,46 @@ Tejfölös-sajtos csirkemell:
     - name: Olívaolaj
       mennyiseg: 5 ek
 
+Tejszínes-baconos cukkinispagetti:
+  defaultPortion: 4
+  receptUrl: https://egy.hu/gasztro/dietas-szaftos-zsenialis-cukkinispagetti-108036
+  thumbnailUrl: https://kep.cdn.index.hu/1/0/4642/46429/464292/46429218_3540192_24dc55f3fc6d4b5eb061de753559d855_wm.jpg
+  tags:
+    - ebéd
+    - vacsora
+  ingredients:
+    - name: Cukkini
+      mennyiseg: 4 db
+    - name: Bacon (kockázott)
+      mennyiseg: 10 dkg
+    - name: Fokhagyma
+      mennyiseg: 2 gerezd
+    - name: Petrezselyem
+      mennyiseg: 1 tk
+    - name: Koktélparadicsom
+      mennyiseg: 3 db
+    - name: Tejszín
+      mennyiseg: 2 dl
+    - name: Só
+      mennyiseg: 1 tk
+    - name: Bors
+      mennyiseg: 2 csipet
+    - name: Bazsalikom
+      mennyiseg: 1 tk
+    - name: Parmezán sajt
+      mennyiseg: 5 dkg
+  cookingSteps:
+    - A cukkiniket zöldségspagetti-készítővel hosszú, vékony csíkokra vágjuk.
+    - Egy lábasban sós vizet forralunk, és a felcsíkozott zöldséget 2,5-3 percig blansírozzuk benne.
+    - Közben a szalonnát felkockázzuk és a zsírját egy serpenyőben kiolvasztjuk.
+    - Ezután rádobjuk a felaprított {{ Fokhagyma }} fokhagymát,
+    - "{{ Petrezselyem }} petrezselymet,"
+    - "{{ Bazsalikom }} bazsalikomot."
+    - Felöntjük a tejszínnel,
+    - majd sóval és borssal fűszerezzük.
+    - A cukkinispagettit alaposan lecsepegtetjük, és még forrón, óvatosan a tejszínes mártásba rakjuk.
+    - Egyet forralunk rajta, és végül reszelt parmezánnal tálaljuk.
+
 Tejszínes-parmezános csirkemell:
   defaultPortion: 4
   receptUrl: https://sobors.hu/receptek/tejszines-parmezanos-csirkemell-recept/
