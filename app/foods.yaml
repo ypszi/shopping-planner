@@ -770,6 +770,43 @@ Cukkinispagetti:
     - Ha megpirul, tedd hozzá a cukkinit, és párold négy-öt percig. Ennyi idő elég ahhoz, hogy a zöldség megpuhuljon, de ne essen össze.
     - A végén keverd hozzá a bazsalikomot, a borsot és a parmezánt.
 
+Cukkinitócsni:
+  defaultPortion: 6
+  receptUrl: https://streetkitchen.hu/vegetarianus-etelek/cukkinitocsni-a-legkiralyabb-koret/
+  thumbnailUrl: https://streetkitchen.hu/wp-content/uploads/2019/02/cukkinitocsni-kozepes.jpg
+  tags:
+    - ebéd
+    - vacsora
+    - köret
+  ingredients:
+    - name: Cukkini
+      mennyiseg: 300 g
+    - name: Só
+      mennyiseg: 1 tk
+    - name: Bors
+      mennyiseg: 2 csipet
+    - name: Liszt
+      mennyiseg: 30 g
+    - name: Fokhagyma
+      mennyiseg: 1 gerezd
+    - name: Cheddar sajt (reszelt)
+      mennyiseg: 50 g
+    - name: Tojás
+      mennyiseg: 1 db
+  cookingSteps:
+    - A cukkinit megmossuk, levágjuk a két végét és lereszeljük.
+    - Összekeverjük {{ Só }} sóval és 15 percre félrerakjuk.
+    - Pihentetés után kinyomkodjuk belőle a felesleges nedvességet
+    - összekeverjük a többi hozzávalóval::
+      - "{{ Bors }} Bors,"
+      - "{{ Liszt }} Liszt,"
+      - "{{ Fokhagyma }} Fokhagyma,"
+      - "{{ Cheddar sajt (reszelt) }} Cheddar sajt (reszelt),"
+      - "{{ Tojás }} Tojás"
+    - Forró serpenyőbe kevés olajat öntünk és egy nagyobb evőkanálnyi masszát mérünk bele.
+    - Picit ellapítjuk, korong alakúra, pár percig sütjük az egyik oldalát,
+    - majd egy lapáttal alányúlva megfordítjuk és megsütjük a másik oldalát is
+
 Cukkini darált hússal töltve:
   defaultPortion: 2
   receptUrl: https://www.mindmegette.hu/recept/cukkini-daralt-hussal-toltve
@@ -1181,7 +1218,7 @@ Gouda sajtos pogácsa:
     - 30 percig pihentessük, utána toljuk 180 fokosra előmelegített sütőbe 15-18 percre, míg szép aranybarnára sül.
   comments:
     - A pogácsába csak a tojássárgája kell
-    - Tetejére:
+    - Tetejére::
       - Tojás
       - Gouda sajt
 
