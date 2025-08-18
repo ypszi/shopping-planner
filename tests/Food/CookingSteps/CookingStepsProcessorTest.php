@@ -147,9 +147,8 @@ class CookingStepsProcessorTest extends TestCase
     }
 
     #[Test]
-    public function testDoesNotReplacesVariablesRecusively(): void
+    public function testReplacesVariablesRecusively(): void
     {
-        // TODO: add recursive [peter.pecosz]
         $originalFood = new Food(
             name          : 'test food',
             defaultPortion: 4,
@@ -173,7 +172,46 @@ class CookingStepsProcessorTest extends TestCase
             [
                 'cut 4 db onions',
                 [
-                    'peal {{avocado}} avocado',
+                    'peal 1 db avocado',
+                ],
+                'cook',
+                'serve',
+            ],
+            $food->cookingSteps()
+        );
+    }
+
+    #[Test]
+    public function testReplacesVariablesRecusivelyHavingListOfSubSteps(): void
+    {
+        $originalFood = new Food(
+            name          : 'test food',
+            defaultPortion: 4,
+            cookingSteps  : [
+                'cut {{onion}} onions',
+                [
+                    'next step::' => [
+                        'peal {{avocado}} avocado',
+                    ],
+                ],
+                'cook',
+                'serve',
+            ],
+            ingredients   : [
+                new IngredientForFood('onion', 'vegetable', 4, Measure::DB),
+                new IngredientForFood('avocado', 'fruit', 1, Measure::DB),
+            ]
+        );
+
+        $food = $this->sut->process($originalFood);
+
+        $this->assertEquals(
+            [
+                'cut 4 db onions',
+                [
+                    'next step::' => [
+                        'peal 1 db avocado',
+                    ],
                 ],
                 'cook',
                 'serve',

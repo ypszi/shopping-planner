@@ -1,25 +1,27 @@
-{% macro recursiveLists(listItem) %}
-    {% if listItem is array %}
-        {% for key in listItem|keys %}
-            {% if key is string %}
-                <li class="clickable" onclick="done(this);">{{ key }}</li>
-            {% elseif key is url %}
-                <li><a href="{{ key }}" target="_blank">{{ key }}</a></li>
+{% macro recursiveLists(list, isOrdered) %}
+    <{% if isOrdered %}o{% else %}u{% endif %}l>
+        {% for listItem in list %}
+            {% if listItem is array %}
+                {% for key in listItem|keys %}
+                    {% if key is string %}
+                        <li class="clickable" onclick="done(this);">{{ key }}</li>
+                    {% elseif key is url %}
+                        <li><a href="{{ key }}" target="_blank">{{ key }}</a></li>
+                    {% endif %}
+                {% endfor %}
+
+                {% for key, subComment in listItem %}
+                    {{ _self.recursiveLists(subComment, isOrdered) }}
+                {% endfor %}
+            {% else %}
+                {% if listItem is url %}
+                    <li><a href="{{ listItem }}" target="_blank">{{ listItem }}</a></li>
+                {% else %}
+                    <li class="clickable" onclick="done(this);">{{ listItem }}</li>
+                {% endif %}
             {% endif %}
         {% endfor %}
-
-        <ul>
-            {% for key, subComment in listItem %}
-                {{ _self.recursiveLists(subComment) }}
-            {% endfor %}
-        </ul>
-    {% else %}
-        {% if listItem is url %}
-            <li><a href="{{ listItem }}" target="_blank">{{ listItem }}</a></li>
-        {% else %}
-            <li class="clickable" onclick="done(this);">{{ listItem }}</li>
-        {% endif %}
-    {% endif %}
+    </{% if isOrdered %}o{% else %}u{% endif %}l>
 {% endmacro %}
 
 <!doctype html>
@@ -89,12 +91,8 @@
                                     ></i>
                                 </div>
                                 <div class="collapse" id="cookingSteps-{{ foodNameKey }}">
-                                    <ol>
-                                        {% from _self import recursiveLists %}
-                                        {% for cookingStep in food.cookingSteps %}
-                                            {{ recursiveLists(cookingStep, true) }}
-                                        {% endfor %}
-                                    </ol>
+                                    {% from _self import recursiveLists %}
+                                    {{ recursiveLists(food.cookingSteps, true) }}
                                 </div>
                             {% endif %}
                         </td>
@@ -110,12 +108,8 @@
                                     ></i>
                                 </div>
                                 <div class="collapse" id="comments-{{ foodNameKey }}">
-                                    <ul>
-                                        {% from _self import recursiveLists %}
-                                        {% for comment in food.comments %}
-                                            {{ recursiveLists(comment) }}
-                                        {% endfor %}
-                                    </ul>
+                                    {% from _self import recursiveLists %}
+                                    {{ recursiveLists(food.comments, false) }}
                                 </div>
                             {% endif %}
                         </td>

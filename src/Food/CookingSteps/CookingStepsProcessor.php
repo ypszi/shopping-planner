@@ -11,22 +11,37 @@ class CookingStepsProcessor
 {
     public function process(Food $food): Food
     {
+        $cookingSteps = $this->processCookingSteps($food, $food->cookingSteps());
+
+        return $food->withCookingSteps($cookingSteps);
+    }
+
+    /**
+     * @param array<string|string[]> $rawCookingSteps
+     *
+     * @return string[]
+     */
+    private function processCookingSteps(Food $food, array $rawCookingSteps): array
+    {
         $cookingSteps = [];
 
-        foreach ($food->cookingSteps() as $cookingStep) {
-            if (!is_string($cookingStep)) {
-                // TODO: add recursive [peter.pecosz]
-                $cookingSteps[] = $cookingStep;
+        foreach ($rawCookingSteps as $rawKey => $rawCookingStep) {
+            if (is_array($rawCookingSteps = $rawCookingStep)) {
+                $subSteps = $this->processCookingSteps($food, $rawCookingSteps);
+
+                foreach ($subSteps as $key => $subStep) {
+                    $cookingSteps[$rawKey][$key] = $subStep;
+                }
 
                 continue;
             }
 
-            $relevantIngredients = $this->findRelevantIngredients($cookingStep, $food);
+            $relevantIngredients = $this->findRelevantIngredients($rawCookingStep, $food);
 
-            $cookingSteps[] = $this->replaceTemplateVariables($cookingStep, $relevantIngredients);
+            $cookingSteps[$rawKey] = $this->replaceTemplateVariables($rawCookingStep, $relevantIngredients);
         }
 
-        return $food->withCookingSteps($cookingSteps);
+        return $cookingSteps;
     }
 
     /**
