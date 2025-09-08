@@ -2075,6 +2075,7 @@ Mézes-chilis csirkesaláta:
   tags:
     - ebéd
     - vacsora
+    - saláta
     - suli
   ingredients:
     - name: Csirkemell
@@ -2109,19 +2110,17 @@ Mézes-chilis csirkesaláta:
     - name: Fokhagyma
       mennyiseg: 1 gerezd
   cookingSteps:
-    - A csirkemellet félbevágjuk és vékonyan felcsíkozzuk, majd fűszerezzük sóval, borssal, chilivel és picit állni hagyjuk.
-    - Közben a kínai kelt feldaraboljuk, a paprikát felcsíkozzuk, a hagymát felszeleteljük, a répát gyufaszálra vágjuk.
-    - Az öntetet a hozzávalókkal alaposan elkeverjük.
-    - A csirkét egy felforrósíott serpenyőben a mogyoróolajon kb. 8 perc alatt megsütjük
-    - Az utolsó percben a mézet rácsorgatjuk, összehevítjük.
+    - A {{ Csirkemell }} csirkemellet félbevágjuk és vékonyan felcsíkozzuk, majd fűszerezzük {{ Só }} sóval, {{ Bors }} borssal, {{ Chili }} chilivel és picit állni hagyjuk.
+    - Közben a {{ Kínai kel }} kínai kelt feldaraboljuk, a {{ Kaliforniai paprika (piros) }} paprikát felcsíkozzuk, a {{ Lilahagyma }} hagymát felszeleteljük, a {{ Sárgarépa }} répát gyufaszálra vágjuk.
+    - Az öntetet a hozzávalókkal alaposan elkeverjük:
+      - "{{ Szezámolaj }} Szezámolaj"
+      - "{{ Rizsecet }} Rizsecet"
+      - "{{ Só }} Só"
+      - "{{ Bors }} Bors"
+      - "{{ Fokhagyma }} Fokhagyma"
+    - A csirkét egy felforrósíott serpenyőben a {{ Mogyoró olaj }} mogyoróolajon kb. 8 perc alatt megsütjük
+    - Az utolsó percben a {{ Méz }} mézet rácsorgatjuk, összehevítjük.
     - A feldarabolt zöldségeket egy keverőtálban összekeverjük az öntettel, tányérokra szedjük, a tetejére halmozzuk a csirkét, tálaljuk.
-  comments:
-    - Az öntethez (2 adag):
-      - 6 ek Szezámolaj
-      - 2 ek Rizsecet
-      - 2 csipet Só
-      - 1 csipet Bors
-      - 1 gerezd Fokhagyma
 
 Mézeskalács:
   defaultPortion: 6
