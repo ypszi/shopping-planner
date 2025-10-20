@@ -2,52 +2,54 @@
 
 declare(strict_types=1);
 
-namespace PeterPecosz\ShoppingPlanner\Food\CookingSteps;
+namespace PeterPecosz\ShoppingPlanner\Food;
 
-use PeterPecosz\ShoppingPlanner\Food\Food;
 use PeterPecosz\ShoppingPlanner\Ingredient\IngredientForFood;
 
-class CookingStepsProcessor
+class TemplatingProcessor
 {
-    public function process(Food $food): Food
+    /**
+     * @param array<string|string[]> $data
+     *
+     * @return array<string|string[]>
+     */
+    public function process(Food $food, array $data): array
     {
-        $cookingSteps = $this->processCookingSteps($food, $food->cookingSteps());
-
-        return $food->withCookingSteps($cookingSteps);
+        return $this->processTemplate($food, $data);
     }
 
     /**
-     * @param array<string|string[]> $rawCookingSteps
+     * @param array<string|string[]> $rawData
      *
      * @return string[]
      */
-    private function processCookingSteps(Food $food, array $rawCookingSteps): array
+    private function processTemplate(Food $food, array $rawData): array
     {
-        $cookingSteps = [];
+        $processedData = [];
 
-        foreach ($rawCookingSteps as $rawKey => $rawCookingStep) {
-            if (is_array($rawCookingSteps = $rawCookingStep)) {
-                $subSteps = $this->processCookingSteps($food, $rawCookingSteps);
+        foreach ($rawData as $rawKey => $rawItem) {
+            if (is_array($rawItem)) {
+                $subItems = $this->processTemplate($food, $rawItem);
 
-                foreach ($subSteps as $key => $subStep) {
-                    $cookingSteps[$rawKey][$key] = $subStep;
+                foreach ($subItems as $key => $subItem) {
+                    $processedData[$rawKey][$key] = $subItem;
                 }
 
                 continue;
             }
 
-            $relevantIngredients = $this->findRelevantIngredients($rawCookingStep, $food);
+            $relevantIngredients = $this->findRelevantIngredients($rawItem, $food);
 
-            $cookingSteps[$rawKey] = $this->replaceTemplateVariables($rawCookingStep, $relevantIngredients);
+            $processedData[$rawKey] = $this->replaceTemplateVariables($rawItem, $relevantIngredients);
         }
 
-        return $cookingSteps;
+        return $processedData;
     }
 
     /**
      * @return array<IngredientForFood>
      */
-    private function findRelevantIngredients(string $cookingStep, Food $food): array
+    private function findRelevantIngredients(string $text, Food $food): array
     {
         return array_values(
             array_filter(
@@ -55,13 +57,13 @@ class CookingStepsProcessor
                 fn(
                     IngredientForFood $ingredientForFood
                 ) => str_contains(
-                         strtolower($cookingStep),
+                         strtolower($text),
                          strtolower($ingredientForFood->name())
                      )
                      || (
                          $ingredientForFood->reference()
                          && str_contains(
-                             strtolower($cookingStep),
+                             strtolower($text),
                              strtolower($ingredientForFood->reference()->name())
                          )
                      )
@@ -70,35 +72,33 @@ class CookingStepsProcessor
     }
 
     /**
-     * @param string                   $cookingStep
      * @param array<IngredientForFood> $relevantIngredients
      *
      * @return string
      */
-    private function replaceTemplateVariables(string $cookingStep, array $relevantIngredients): string
+    private function replaceTemplateVariables(string $text, array $relevantIngredients): string
     {
-        $newCookingStep = $cookingStep;
+        $newText = $text;
 
-        // TODO: improve [peter.pecosz]
         foreach ($relevantIngredients as $relevantIngredient) {
-            $newCookingStep = preg_replace(
+            $newText = preg_replace(
                 pattern    : $this->placeholder($relevantIngredient->name()),
                 replacement: $relevantIngredient->ingredientPortion(),
-                subject    : $newCookingStep
+                subject    : $newText
             );
 
             if (!$relevantIngredient->reference()) {
                 continue;
             }
 
-            $newCookingStep = preg_replace(
+            $newText = preg_replace(
                 pattern    : $this->placeholder($relevantIngredient->reference()->name()),
                 replacement: $relevantIngredient->ingredientPortion(),
-                subject    : $newCookingStep
+                subject    : $newText
             );
         }
 
-        return $newCookingStep;
+        return $newText;
     }
 
     private function placeholder(string $name): string

@@ -2,31 +2,31 @@
 
 declare(strict_types=1);
 
-namespace Food\CookingSteps;
+namespace Food;
 
-use PeterPecosz\ShoppingPlanner\Food\CookingSteps\CookingStepsProcessor;
 use PeterPecosz\ShoppingPlanner\Food\Food;
+use PeterPecosz\ShoppingPlanner\Food\TemplatingProcessor;
 use PeterPecosz\ShoppingPlanner\Ingredient\Ingredient;
 use PeterPecosz\ShoppingPlanner\Ingredient\IngredientForFood;
 use PeterPecosz\ShoppingPlanner\Measure\Measure;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 
-class CookingStepsProcessorTest extends TestCase
+class TemplatingProcessorTest extends TestCase
 {
-    private CookingStepsProcessor $sut;
+    private TemplatingProcessor $sut;
 
     protected function setUp(): void
     {
         parent::setUp();
 
-        $this->sut = new CookingStepsProcessor();
+        $this->sut = new TemplatingProcessor();
     }
 
     #[Test]
     public function testReplacesVariables(): void
     {
-        $originalFood = new Food(
+        $food = new Food(
             name          : 'test food',
             defaultPortion: 4,
             cookingSteps  : [
@@ -43,7 +43,15 @@ class CookingStepsProcessorTest extends TestCase
             ]
         );
 
-        $food = $this->sut->process($originalFood);
+        $data = [
+            'cut {{onion}} onions',
+            'peal {{ avocado }} avocado',
+            'pour {{wine (dry)}} wine',
+            'cook',
+            'serve',
+        ];
+
+        $result = $this->sut->process($food, $data);
 
         $this->assertEquals(
             [
@@ -53,14 +61,14 @@ class CookingStepsProcessorTest extends TestCase
                 'cook',
                 'serve',
             ],
-            $food->cookingSteps()
+            $result
         );
     }
 
     #[Test]
     public function testReplacesMultipleVariablesWithinOneStep(): void
     {
-        $originalFood = new Food(
+        $food = new Food(
             name          : 'test food',
             defaultPortion: 4,
             cookingSteps  : [
@@ -76,7 +84,13 @@ class CookingStepsProcessorTest extends TestCase
             ]
         );
 
-        $food = $this->sut->process($originalFood);
+        $data = [
+            'pour {{beer}} beer and {{water}} water',
+            'cook',
+            'serve',
+        ];
+
+        $result = $this->sut->process($food, $data);
 
         $this->assertEquals(
             [
@@ -84,14 +98,14 @@ class CookingStepsProcessorTest extends TestCase
                 'cook',
                 'serve',
             ],
-            $food->cookingSteps()
+            $result
         );
     }
 
     #[Test]
     public function testReplacesVariablesRegardlessCasing(): void
     {
-        $originalFood = new Food(
+        $food = new Food(
             name          : 'test food',
             defaultPortion: 4,
             cookingSteps  : [
@@ -108,7 +122,15 @@ class CookingStepsProcessorTest extends TestCase
             ]
         );
 
-        $food = $this->sut->process($originalFood);
+        $data = [
+            'cut {{onion}} onions',
+            'peal {{Avocado}} avocado',
+            'add {{Beer}} beer',
+            'cook',
+            'serve',
+        ];
+
+        $result = $this->sut->process($food, $data);
 
         $this->assertEquals(
             [
@@ -118,14 +140,14 @@ class CookingStepsProcessorTest extends TestCase
                 'cook',
                 'serve',
             ],
-            $food->cookingSteps()
+            $result
         );
     }
 
     #[Test]
     public function testReplacesVariablesOfReferences(): void
     {
-        $originalFood = new Food(
+        $food = new Food(
             name          : 'test food',
             defaultPortion: 4,
             cookingSteps  : [
@@ -136,20 +158,24 @@ class CookingStepsProcessorTest extends TestCase
             ]
         );
 
-        $food = $this->sut->process($originalFood);
+        $data = [
+            'Fűszerezzük {{bors}} borssal',
+        ];
+
+        $result = $this->sut->process($food, $data);
 
         $this->assertEquals(
             [
                 'Fűszerezzük 3 ek borssal',
             ],
-            $food->cookingSteps()
+            $result
         );
     }
 
     #[Test]
     public function testReplacesVariablesRecusively(): void
     {
-        $originalFood = new Food(
+        $food = new Food(
             name          : 'test food',
             defaultPortion: 4,
             cookingSteps  : [
@@ -166,7 +192,16 @@ class CookingStepsProcessorTest extends TestCase
             ]
         );
 
-        $food = $this->sut->process($originalFood);
+        $data = [
+            'cut {{onion}} onions',
+            [
+                'peal {{avocado}} avocado',
+            ],
+            'cook',
+            'serve',
+        ];
+
+        $result = $this->sut->process($food, $data);
 
         $this->assertEquals(
             [
@@ -177,14 +212,14 @@ class CookingStepsProcessorTest extends TestCase
                 'cook',
                 'serve',
             ],
-            $food->cookingSteps()
+            $result
         );
     }
 
     #[Test]
     public function testReplacesVariablesRecusivelyHavingListOfSubSteps(): void
     {
-        $originalFood = new Food(
+        $food = new Food(
             name          : 'test food',
             defaultPortion: 4,
             cookingSteps  : [
@@ -203,7 +238,18 @@ class CookingStepsProcessorTest extends TestCase
             ]
         );
 
-        $food = $this->sut->process($originalFood);
+        $data = [
+            'cut {{onion}} onions',
+            [
+                'next step::' => [
+                    'peal {{avocado}} avocado',
+                ],
+            ],
+            'cook',
+            'serve',
+        ];
+
+        $result = $this->sut->process($food, $data);
 
         $this->assertEquals(
             [
@@ -216,7 +262,7 @@ class CookingStepsProcessorTest extends TestCase
                 'cook',
                 'serve',
             ],
-            $food->cookingSteps()
+            $result
         );
     }
 }

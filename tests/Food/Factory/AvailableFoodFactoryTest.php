@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace PeterPecosz\ShoppingPlanner\Tests\Food\Factory;
 
-use PeterPecosz\ShoppingPlanner\Food\CookingSteps\CookingStepsProcessor;
 use PeterPecosz\ShoppingPlanner\Food\Factory\AvailableFoodFactory;
 use PeterPecosz\ShoppingPlanner\Food\Factory\FoodFactory;
 use PeterPecosz\ShoppingPlanner\Food\Factory\ThumbnailFactory;
 use PeterPecosz\ShoppingPlanner\Food\Food;
+use PeterPecosz\ShoppingPlanner\Food\TemplatingProcessor;
 use PeterPecosz\ShoppingPlanner\Ingredient\Factory\IngredientFactory;
 use PeterPecosz\ShoppingPlanner\Shopping\Input\FoodFilterInput;
 use PHPUnit\Framework\Attributes\DataProvider;
@@ -27,16 +27,16 @@ class AvailableFoodFactoryTest extends TestCase
             foodFactory      : new FoodFactory(
                 self::FOODS_PATH,
                 $this->createMock(ThumbnailFactory::class),
-                $cookingStepsProcessor = $this->createMock(CookingStepsProcessor::class)
+                $templatingProcessor = $this->createMock(TemplatingProcessor::class),
             ),
             ingredientFactory: $this->createMock(IngredientFactory::class),
             foodsPath        : self::FOODS_PATH
         );
 
-        $cookingStepsProcessor
+        $templatingProcessor
             ->expects(self::any())
             ->method('process')
-            ->willReturnCallback(fn (Food $value) => $value);
+            ->willReturnCallback(fn(Food $value, array $data) => []);
     }
 
     #[Test]

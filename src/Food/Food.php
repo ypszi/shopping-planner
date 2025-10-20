@@ -21,7 +21,7 @@ class Food
         private readonly ?string $recipeUrl = null,
         private readonly ?string $thumbnailUrl = null,
         private readonly array $tags = [],
-        private readonly array $comments = [],
+        private array $comments = [],
         private array $cookingSteps = [],
         private array $ingredients = []
     ) {
@@ -109,6 +109,17 @@ class Food
     public function comments(): array
     {
         return $this->comments;
+    }
+
+    /**
+     * @param string[] $comments
+     */
+    public function withComments(array $comments): self
+    {
+        $clone           = clone $this;
+        $clone->comments = $comments;
+
+        return $clone;
     }
 
     /**

@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace PeterPecosz\ShoppingPlanner\Tests\Food\Factory;
 
-use PeterPecosz\ShoppingPlanner\Food\CookingSteps\CookingStepsProcessor;
 use PeterPecosz\ShoppingPlanner\Food\Factory\FoodFactory;
 use PeterPecosz\ShoppingPlanner\Food\Factory\ThumbnailFactory;
 use PeterPecosz\ShoppingPlanner\Food\Food;
+use PeterPecosz\ShoppingPlanner\Food\TemplatingProcessor;
 use PeterPecosz\ShoppingPlanner\Ingredient\IngredientForFood;
 use PeterPecosz\ShoppingPlanner\Measure\Measure;
 use PHPUnit\Framework\Attributes\Test;
@@ -25,13 +25,13 @@ class FoodFactoryTest extends TestCase
         $this->sut = new FoodFactory(
             __DIR__ . '/../../../app/foods.yaml',
             $this->thumbnailFactory = $this->createMock(ThumbnailFactory::class),
-            $cookingStepsProcessor = $this->createMock(CookingStepsProcessor::class)
+            $templatingProcessor = $this->createMock(TemplatingProcessor::class),
         );
 
-        $cookingStepsProcessor
+        $templatingProcessor
             ->expects(self::any())
             ->method('process')
-            ->willReturnCallback(fn(Food $value) => $value);
+            ->willReturnCallback(fn(Food $value, array $data) => []);
     }
 
     #[Test]

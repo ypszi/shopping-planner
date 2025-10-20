@@ -4,10 +4,10 @@ declare(strict_types=1);
 
 namespace PeterPecosz\ShoppingPlanner\Food\Factory;
 
-use PeterPecosz\ShoppingPlanner\Food\CookingSteps\CookingStepsProcessor;
 use PeterPecosz\ShoppingPlanner\Food\Exception\InvalidFoodException;
 use PeterPecosz\ShoppingPlanner\Food\Exception\UnknownFoodException;
 use PeterPecosz\ShoppingPlanner\Food\Food;
+use PeterPecosz\ShoppingPlanner\Food\TemplatingProcessor;
 use PeterPecosz\ShoppingPlanner\Ingredient\IngredientForFood;
 use Symfony\Component\Yaml\Yaml;
 
@@ -21,7 +21,7 @@ readonly class FoodFactory
     public function __construct(
         string $foodsPath,
         private ThumbnailFactory $thumbnailFactory,
-        private CookingStepsProcessor $cookingStepsProcessor,
+        private TemplatingProcessor $templatingProcessor,
     ) {
         $this->foods = Yaml::parseFile($foodsPath);
     }
@@ -68,6 +68,8 @@ readonly class FoodFactory
             ingredients   : $ingredients
         );
 
-        return $this->cookingStepsProcessor->process($food);
+        return $food
+            ->withComments($this->templatingProcessor->process($food, $rawFood['comments'] ?? []))
+            ->withCookingSteps($this->templatingProcessor->process($food, $rawFood['cookingSteps'] ?? []));
     }
 }
