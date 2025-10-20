@@ -519,6 +519,8 @@ Kínai kel:
   kategoria: Zöldség / Gyümölcs
 Koktélparadicsom:
   kategoria: Zöldség / Gyümölcs
+Körte:
+  kategoria: Zöldség / Gyümölcs
 Krumpli: Burgonya
 Lilahagyma:
   kategoria: Zöldség / Gyümölcs
@@ -527,6 +529,12 @@ Lilakáposzta:
 Lime:
   kategoria: Zöldség / Gyümölcs
 Madársaláta:
+  kategoria: Zöldség / Gyümölcs
+  mertekegysegPreference: dkg
+  storage:
+    max: 300
+    step: 50
+Rukkola:
   kategoria: Zöldség / Gyümölcs
   mertekegysegPreference: dkg
   storage:

@@ -1721,6 +1721,61 @@ Kínai szezámmagos csirke:
     - name: Ketchup
       mennyiseg: 100 g
 
+Körtés-parmezános saláta:
+  defaultPortion: 2
+  receptUrl: https://streetkitchen.hu/receptek/kortes-parmezanos-salata
+  thumbnailUrl: https://production.streetkitchen-cdn.com/kortes-teli-salata-scaled-qJFQIB.webp
+  tags:
+    - köret
+    - saláta
+  ingredients:
+    - name: Napraforgóolaj
+      mennyiseg: 2 ek
+    # A salátához
+    - name: Körte
+      mennyiseg: 1 db
+    - name: Madársaláta
+      mennyiseg: 50 g
+    - name: Rukkola
+      mennyiseg: 50 g
+    - name: Parmezán sajt
+      mennyiseg: 20 g
+    - name: Dió
+      mennyiseg: 2 ek
+    # Az öntethez
+    - name: Olívaolaj
+      mennyiseg: 35 ml
+    - name: Balzsamecet (fehér)
+      mennyiseg: 10 ml
+    - name: Mustár
+      mennyiseg: 1 tk
+    - name: Méz
+      mennyiseg: 1 ek
+    - name: Só
+      mennyiseg: 1 csipet
+    - name: Bors
+      mennyiseg: 1 csipet
+    - name: Citromlé
+      mennyiseg: 3 csepp
+  comments:
+    - Az öntethez::
+      - "{{ Olívaolaj }} Olívaolaj"
+      - "{{ Balzsamecet (fehér) }} Balzsamecet"
+      - "{{ Mustár }} Mustár"
+      - "{{ Méz }} Méz"
+      - "{{ Só }} Só"
+      - "{{ Bors }} Bors"
+      - "{{ Citromlé }} Citromlé"
+  cookingSteps:
+    - A körtét kicsumázzuk, és vékonyabb szeletekre vágjuk.
+    - A madársalátát és a rukkolát egy tálba dobjuk.
+    - A parmezánt zöldséghámozóval felszeleteljük.
+    - A diót pedig egy száraz serpenyőben, pár perc alatt megpirítjuk.
+    - A parmezán és a dió nagy része mehet is a salátához, a díszítéshez mindkettőből egy keveset félrerakunk.
+    - Az öntet hozzávalóit egy kis üvegben alaposan összerázzuk, és tálalás előtt a salátára öntjük.
+    - Összeforgatjuk a salátát, hogy mindenhol bevonja az öntet.
+    - Tálakba szedjük, és a félrerakott parmezánnal és dióval megszórva tálaljuk.
+
 Krumpli főzelék fasírttal:
   defaultPortion: 4
   receptUrl: https://www.nosalty.hu/recept/legegyszerubb-krumplifozelek
