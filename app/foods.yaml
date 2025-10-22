@@ -1150,6 +1150,41 @@ Fűszeres édesburgonya:
     - name: Bors
       mennyiseg: 1 csipet
 
+Fűszeres édesburgonya-gratin:
+  defaultPortion: 4
+  receptUrl: https://sobors.hu/receptek/fuszeres-edesburgonya-gratin-recept/
+  thumbnailUrl: https://kep.cdn.index.hu/1/0/6456/64568/645689/64568919_4774143_feaee24580b8f0aab98481683453c631_wm.jpg
+  tags:
+    - köret
+  ingredients:
+    - name: Édesburgonya
+      mennyiseg: 80 dkg
+    - name: Só
+      mennyiseg: 3 csipet
+    - name: Bors
+      mennyiseg: 1 csipet
+    - name: Kakukkfű
+      mennyiseg: 1 tk
+    - name: Rozmaring
+      mennyiseg: 1 tk
+    - name: Fokhagyma
+      mennyiseg: 1 gerezd
+    - name: Szerecsendió
+      mennyiseg: 1 kh
+    - name: Vaj
+      mennyiseg: 1 ek
+    - name: Sajt
+      mennyiseg: 20 dkg
+    - name: Főzőtejszín
+      mennyiseg: 4 dl
+  cookingSteps:
+    - A(z) {{ Édesburgonya }} édesburgonyát tisztítsuk meg, majd hajszálvékonyan szeleteljük fel.
+    - Ezután forgassuk egybe a(z) {{ Só }} sóval, {{ Bors }} borssal, {{ Kakukkfű }} kakukkfűvel, {{ Rozmaring }} rozmaringgal, {{ Fokhagyma }} fokhagymával és {{ Szerecsendió }} szerecsendióval.
+    - Vegyünk elő egy tepsit, kenjük ki kevés vajjal.
+    - Ezután a krumpliszeleteket rétegezve rakjuk a tepsire úgy, hogy a rétegek közé reszelt sajtot szórunk.
+    - A tepsibe helyezett krumpli tetejét zárjuk reszelt sajttal, és öntsük rá a(z) {{ Tejszín }} tejszínt.
+    - Ezután toljuk 180 fokosra előmelegített sütőbe, és 35-45 perc alatt süssük készre.
+
 Gofri:
   defaultPortion: 12
   receptUrl: https://streetkitchen.hu/meguszos-kajak/sutoporos-gofri/
