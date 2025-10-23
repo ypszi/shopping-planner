@@ -2630,13 +2630,13 @@ Pirított csirkés quesadilla:
     - name: Jalapeno (konzerv)
       mennyiseg: 20 g
     - name: Cayenne bors
-      mennyiseg: 1 tk
+      mennyiseg: 0.5 tk
     - name: Fűszer paprika
       mennyiseg: 1 ek
     - name: Fokhagymapor
-      mennyiseg: 1 ek
-    - name: Római kömény
       mennyiseg: 1 tk
+    - name: Római kömény
+      mennyiseg: 0.5 tk
     - name: Só
       mennyiseg: 0.5 tk
     - name: Bors
@@ -2646,10 +2646,20 @@ Pirított csirkés quesadilla:
     - name: Tortilla lap
       mennyiseg: 4 db
     - name: Cheddar sajt (reszelt)
-      mennyiseg: 100 g
+      mennyiseg: 200 g
+    - name: Kukorica (konzerv)
+      mennyiseg: 2 ek
   cookingSteps:
-    - A csirkemelleket nagyon apróra vágjuk, majd olívaolajon elkezdjük lepirítani, a fűszerekkel együtt.
-    - Ezt követően hozzáadjuk a szintén apróra vágott lilahagymát, a kaliforniai paprikát és a jalapenót.
+    - Apróra vágunk {{ Lilahagyma }} lilahagymát, és {{ Kaliforniai paprika (piros) }} kaliforniai paprikát
+    - "{{ Csirkemell }} csirkemellet nagyon apróra vágunk, majd {{ Olívaolaj }} olívaolajon elkezdjük lepirítani"
+    - Hozzáadjuk a fűszereket::
+      - "{{ Cayenne bors }} Cayenne bors"
+      - "{{ Fűszer paprika }} Fűszer paprika"
+      - "{{ Fokhagymapor }} Fokhagymapor"
+      - "{{ Római kömény }} Római kömény"
+      - "{{ Só }} Só"
+      - "{{ Bors }} Bors"
+    - Ezt követően hozzáadjuk a szintén apróra vágott lilahagymát, a kaliforniai paprikát (és a jalapenót).
     - Az egészet jól összepirítjuk, majd félretesszük.
     - Egy másik serpenyőben szárazon elkezdünk melegíteni egy tortillalapot.
     - Megszórjuk bőségesen sajttal, erre jöhet a csirkés keverék, majd még egy adag sajt.
