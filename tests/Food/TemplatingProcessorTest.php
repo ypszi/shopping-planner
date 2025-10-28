@@ -29,7 +29,7 @@ class TemplatingProcessorTest extends TestCase
         $food = new Food(
             name          : 'test food',
             defaultPortion: 4,
-            cookingSteps  : [
+            cookingSteps  : $cookingSteps = [
                 'cut {{onion}} onions',
                 'peal {{ avocado }} avocado',
                 'pour {{wine (dry)}} wine',
@@ -43,15 +43,7 @@ class TemplatingProcessorTest extends TestCase
             ]
         );
 
-        $data = [
-            'cut {{onion}} onions',
-            'peal {{ avocado }} avocado',
-            'pour {{wine (dry)}} wine',
-            'cook',
-            'serve',
-        ];
-
-        $result = $this->sut->process($food, $data);
+        $result = $this->sut->process($food, $cookingSteps);
 
         $this->assertEquals(
             [
@@ -71,7 +63,7 @@ class TemplatingProcessorTest extends TestCase
         $food = new Food(
             name          : 'test food',
             defaultPortion: 4,
-            cookingSteps  : [
+            cookingSteps  : $cookingSteps = [
                 'pour {{beer}} beer and {{water}} water',
                 'cook',
                 'serve',
@@ -84,13 +76,7 @@ class TemplatingProcessorTest extends TestCase
             ]
         );
 
-        $data = [
-            'pour {{beer}} beer and {{water}} water',
-            'cook',
-            'serve',
-        ];
-
-        $result = $this->sut->process($food, $data);
+        $result = $this->sut->process($food, $cookingSteps);
 
         $this->assertEquals(
             [
@@ -108,7 +94,7 @@ class TemplatingProcessorTest extends TestCase
         $food = new Food(
             name          : 'test food',
             defaultPortion: 4,
-            cookingSteps  : [
+            cookingSteps  : $cookingSteps = [
                 'cut {{onion}} onions',
                 'peal {{Avocado}} avocado',
                 'add {{Beer}} beer',
@@ -122,15 +108,7 @@ class TemplatingProcessorTest extends TestCase
             ]
         );
 
-        $data = [
-            'cut {{onion}} onions',
-            'peal {{Avocado}} avocado',
-            'add {{Beer}} beer',
-            'cook',
-            'serve',
-        ];
-
-        $result = $this->sut->process($food, $data);
+        $result = $this->sut->process($food, $cookingSteps);
 
         $this->assertEquals(
             [
@@ -150,7 +128,7 @@ class TemplatingProcessorTest extends TestCase
         $food = new Food(
             name          : 'test food',
             defaultPortion: 4,
-            cookingSteps  : [
+            cookingSteps  : $cookingSteps = [
                 'Fűszerezzük {{bors}} borssal',
             ],
             ingredients   : [
@@ -158,11 +136,7 @@ class TemplatingProcessorTest extends TestCase
             ]
         );
 
-        $data = [
-            'Fűszerezzük {{bors}} borssal',
-        ];
-
-        $result = $this->sut->process($food, $data);
+        $result = $this->sut->process($food, $cookingSteps);
 
         $this->assertEquals(
             [
@@ -178,7 +152,7 @@ class TemplatingProcessorTest extends TestCase
         $food = new Food(
             name          : 'test food',
             defaultPortion: 4,
-            cookingSteps  : [
+            cookingSteps  : $cookingSteps = [
                 'cut {{onion}} onions',
                 [
                     'peal {{avocado}} avocado',
@@ -192,16 +166,7 @@ class TemplatingProcessorTest extends TestCase
             ]
         );
 
-        $data = [
-            'cut {{onion}} onions',
-            [
-                'peal {{avocado}} avocado',
-            ],
-            'cook',
-            'serve',
-        ];
-
-        $result = $this->sut->process($food, $data);
+        $result = $this->sut->process($food, $cookingSteps);
 
         $this->assertEquals(
             [
@@ -222,7 +187,7 @@ class TemplatingProcessorTest extends TestCase
         $food = new Food(
             name          : 'test food',
             defaultPortion: 4,
-            cookingSteps  : [
+            cookingSteps  : $cookingSteps = [
                 'cut {{onion}} onions',
                 [
                     'next step::' => [
@@ -238,24 +203,52 @@ class TemplatingProcessorTest extends TestCase
             ]
         );
 
-        $data = [
-            'cut {{onion}} onions',
-            [
-                'next step::' => [
-                    'peal {{avocado}} avocado',
-                ],
-            ],
-            'cook',
-            'serve',
-        ];
-
-        $result = $this->sut->process($food, $data);
+        $result = $this->sut->process($food, $cookingSteps);
 
         $this->assertEquals(
             [
                 'cut 4 db onions',
                 [
                     'next step::' => [
+                        'peal 1 db avocado',
+                    ],
+                ],
+                'cook',
+                'serve',
+            ],
+            $result
+        );
+    }
+
+    #[Test]
+    public function testReplacesVariablesInKeys(): void
+    {
+        $food = new Food(
+            name          : 'test food',
+            defaultPortion: 4,
+            cookingSteps  : $cookingSteps = [
+                'cut {{onion}} onions',
+                [
+                    'grab {{avocado}} avocado::' => [
+                        'peal {{avocado}} avocado',
+                    ],
+                ],
+                'cook',
+                'serve',
+            ],
+            ingredients   : [
+                new IngredientForFood('onion', 'vegetable', 4, Measure::DB),
+                new IngredientForFood('avocado', 'fruit', 1, Measure::DB),
+            ]
+        );
+
+        $result = $this->sut->process($food, $cookingSteps);
+
+        $this->assertEquals(
+            [
+                'cut 4 db onions',
+                [
+                    'grab 1 db avocado::' => [
                         'peal 1 db avocado',
                     ],
                 ],

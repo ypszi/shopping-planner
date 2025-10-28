@@ -29,18 +29,27 @@ class TemplatingProcessor
 
         foreach ($rawData as $rawKey => $rawItem) {
             if (is_array($rawItem)) {
-                $subItems = $this->processTemplate($food, $rawItem);
+                $subItems     = $this->processTemplate($food, $rawItem);
+                $processedKey = $rawKey;
+
+                if (is_string($rawKey)) {
+                    $processedKey = $this->replaceTemplateVariables(
+                        $rawKey,
+                        $this->findRelevantIngredients($rawKey, $food)
+                    );
+                }
 
                 foreach ($subItems as $key => $subItem) {
-                    $processedData[$rawKey][$key] = $subItem;
+                    $processedData[$processedKey][$key] = $subItem;
                 }
 
                 continue;
             }
 
-            $relevantIngredients = $this->findRelevantIngredients($rawItem, $food);
-
-            $processedData[$rawKey] = $this->replaceTemplateVariables($rawItem, $relevantIngredients);
+            $processedData[$rawKey] = $this->replaceTemplateVariables(
+                $rawItem,
+                $this->findRelevantIngredients($rawItem, $food)
+            );
         }
 
         return $processedData;

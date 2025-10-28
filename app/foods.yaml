@@ -2409,6 +2409,63 @@ Olaszos csirke:
     - name: Napraforgóolaj
       mennyiseg: 1 ek
 
+Onigiri (おにぎり) - Tonhalas:
+  defaultPortion: 6
+  receptUrl: https://www.kurashiru.com/recipes/44164862-38d0-4754-b76f-4f4297534039
+  thumbnailUrl: https://video.kurashiru.com/production/videos/44164862-38d0-4754-b76f-4f4297534039/compressed_thumbnail_square_large.jpg
+  tags:
+    - reggeli
+    - vacsora
+  ingredients:
+    - name: Nori lap
+      mennyiseg: 3 db
+    - name: Szezámmag
+      mennyiseg: 2 tk
+    - name: Lenmag
+      mennyiseg: 2 tk
+    # Rizs
+    - name: Rizs
+      mennyiseg: 400 g
+    - name: Víz
+      mennyiseg: 8 dl
+    - name: Mirin
+      mennyiseg: 2 ek
+    - name: Szaké (főző)
+      mennyiseg: 2 ek
+    - name: Só
+      mennyiseg: 1 tk
+    # Töltelék
+    - name: Tonhal (konzerv)
+      mennyiseg: 100 g
+    - name: Majonéz
+      mennyiseg: 2 ek
+    - name: Szójaszósz
+      mennyiseg: 2 tk
+  cookingSteps:
+    - Moss meg {{ Rizs }} rizst, kb 4-szer öblítsd
+    - Tedd a rizst {{ Víz }} vízzel egy lábasba, és óvatosan keverd össze a hozzávalókkal::
+      - "{{ Mirin }} Mirin"
+      - "{{ Szaké (főző) }} Szaké"
+      - "{{ Só }} Só"
+    - Főzd a megmosott rizst alacsony lángon kb 15 percig
+    - Miközben fő a rizs, keverd össze a töltelék hozzávalóit::
+      - "{{ Tonhal (konzerv) }} Tonhal (konzerv)"
+      - "{{ Majonéz }} Majonéz"
+      - "{{ Szójaszósz }} Szójaszósz"
+    - Keverj össze {{ Szezámmag }} Szezámmagot és {{ Lenmag }} Lenmagot
+    - Terítsd ki a rizst és szórd meg a magkeverékkel
+    - Kicsit hűlni hagyjuk a rizst, addig vágd félbe (kb 10x15 cm nagyságúra) a Nori lapokat
+    - Rakd össze az onigirit::
+      - Teríts ki egy Nori lapot
+      - Vegyél kézbe egy fél marék rizst
+      - Tegyél rá a kb 2 tk tölteléket
+      - Tegyél rá még egy fél marék rizst
+      - Gyúrj belőle golyót, majd igazítsd ki a háromszög formáját
+      - Terítsd a Nori lapra, hogy a háromszög csücskei kilógjanak
+      - Hajtogasd körbe a Nori lapot a rizs háromszögön
+  comments:
+    - "{{ Nori lap }} kb 20x25 cm Nori lap"
+
 Pad thai:
   defaultPortion: 2
   receptUrl: https://streetkitchen.hu/tesztapolc/az-igazi-pad-thai/

@@ -189,6 +189,8 @@ Kávé:
 # Magvak
 Dió:
   kategoria: Magvak
+Lenmag:
+  kategoria: Magvak
 Mogyoró:
   kategoria: Magvak
   storage:
@@ -213,6 +215,10 @@ Rizs tészta:
   kategoria: Nemzetközi
   mertekegysegPreference: g
 Mirin:
+  kategoria: Nemzetközi
+Nori lap:
+  kategoria: Nemzetközi
+Szaké (főző):
   kategoria: Nemzetközi
 Szaké:
   kategoria: Nemzetközi
