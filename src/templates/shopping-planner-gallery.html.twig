@@ -2,27 +2,36 @@
 <html lang="en">
 {% include 'head.html.twig' %}
 <style>
-	.hover-img .hover-container {
-		position: relative;
-		display: contents;
+	.card-thumbnail {
+		width: 70%;
+		max-width: 200px;
 	}
 
-	.hover-img .hover-container span {
-		position: absolute;
-		display: none;
-		z-index: 99;
+	.card-placeholder {
+		width: 70%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: #f8f9fa;
+		border-radius: 0.25rem;
 	}
 
-	.hover-img .hover-container:hover span {
-		display: block;
+	.card-placeholder-food {
+		height: 150px;
 	}
 
-	.hover-img .hover-container span img {
-		width: 15rem;
+	.card-placeholder-drug {
+		height: 100px;
 	}
 
-	.hover-img .hover-container span img:hover {
-		display: none;
+	.card-placeholder-icon {
+		font-size: 3rem;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		.card-placeholder {
+			background-color: #2c2c2c;
+		}
 	}
 </style>
 <body>
@@ -55,8 +64,8 @@
         <div class="mb-3">
             <div class="d-flex flex-wrap align-items-center gap-2">
                 <div id="foodCount" class="badge text-bg-success fs-6">{{ availableFoods|length }} Foods</div>
-                <a href="/gallery?{{ request.queryString }}" class="btn btn-sm btn-outline-secondary" title="Switch to Gallery View">
-                    <i class="emoji emoji-thumbnail"></i>
+                <a href="/?{{ request.queryString }}" class="btn btn-sm btn-outline-secondary" title="Switch to List View">
+                    <i class="emoji emoji-clipboard"></i>
                 </a>
 
                 {% set selectedFoodTags = request.queryParams.tags ?? [] %}
@@ -101,118 +110,130 @@
         <h1 id="initial-{{ firstInitial }}" class="display-6">
             <a href="#initial-{{ firstInitial|url_encode }}">{{ firstInitial }}</a>
         </h1>
+        <div class="row g-3">
+            {% for availableFood in availableFoods %}
+                {% set availableFoodName = availableFood.name %}
+                {% set availableFoodNameKey = availableFoodName|replace({' ': '_'}) %}
+                {% set isAvailableFoodSelected = selectedFoods[availableFoodName] is defined %}
+                {% set portion = isAvailableFoodSelected ? selectedFoods[availableFoodName] : availableFood.defaultPortion %}
+                {% set currentInitial = availableFoodName|slice(0, 1) %}
 
-        {% for availableFood in availableFoods %}
-            {% set availableFoodName = availableFood.name %}
-            {% set availableFoodNameKey = availableFoodName|replace({' ': '_'}) %}
-            {% set isAvailableFoodSelected = selectedFoods[availableFoodName] is defined %}
-            {% set portion = isAvailableFoodSelected ? selectedFoods[availableFoodName] : availableFood.defaultPortion %}
-            {% set currentInitial = availableFoodName|slice(0, 1) %}
+                {% if currentInitial != firstInitial %}
+                    <div class="col-12">
+                        <h1 id="initial-{{ currentInitial }}" class="display-6">
+                            <a href="#initial-{{ currentInitial|url_encode }}">{{ currentInitial }}</a>
+                        </h1>
+                    </div>
+                {% endif %}
+                {% set firstInitial = currentInitial %}
 
-            {% if currentInitial != firstInitial %}
-                <h1 id="initial-{{ currentInitial }}" class="display-6">
-                    <a href="#initial-{{ currentInitial|url_encode }}">{{ currentInitial }}</a>
-                </h1>
-            {% endif %}
-            {% set firstInitial = currentInitial %}
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card h-100 {% if isAvailableFoodSelected %}border-primary border-2{% endif %}">
+                        <div class="card-body d-flex flex-column align-items-center p-3">
+                            {% if availableFood.thumbnailUrl %}
+                                <img src="{{ availableFood.thumbnailUrl }}" alt="{{ availableFoodName }}" class="img-fluid img-thumbnail mb-3 card-thumbnail">
+                            {% else %}
+                                <div class="mb-3 card-placeholder card-placeholder-food">
+                                    <i class="emoji emoji-thumbnail card-placeholder-icon"></i>
+                                </div>
+                            {% endif %}
 
-            <fieldset class="row mb-2">
-                <div class="col-md-5">
-                    <div class="form-check form-switch hover-img">
-                        <input
-                                type="checkbox"
-                                role="switch"
-                                id="food-{{ availableFoodNameKey }}"
-                                value="{{ availableFoodName }}"
-                                name="food-{{ availableFoodNameKey }}"
-                                class="form-check-input"
-                                onchange="foodSwitchChange(this, '{{ availableFoodNameKey }}')"
-                                {% if isAvailableFoodSelected %}checked="checked"{% endif %}
-                        >
-                        <label for="food-{{ availableFoodNameKey }}" class="form-check-label">{{ availableFoodName }}</label>
-                        {% if availableFood.thumbnailUrl %}
-                            <div class="hover-container">
-                                <i class="emoji emoji-thumbnail"></i>
-                                <span>
-                                    <img src="{{ availableFood.thumbnailUrl }}" alt="{{ availableFoodName }}" class="img-fluid img-thumbnail">
-                                </span>
+                            <div class="form-check form-switch mb-2 text-center">
+                                <input
+                                        type="checkbox"
+                                        role="switch"
+                                        id="food-{{ availableFoodNameKey }}"
+                                        value="{{ availableFoodName }}"
+                                        name="food-{{ availableFoodNameKey }}"
+                                        class="form-check-input"
+                                        onchange="foodSwitchChange(this, '{{ availableFoodNameKey }}')"
+                                        {% if isAvailableFoodSelected %}checked="checked"{% endif %}
+                                >
+                                <label for="food-{{ availableFoodNameKey }}" class="form-check-label">{{ availableFoodName }}</label>
                             </div>
-                        {% endif %}
+
+                            <div class="mb-2 text-center">
+                                {% for tag in availableFood.tags %}
+                                    <span class="badge text-bg-info">{{ tag }}</span>
+                                {% endfor %}
+                            </div>
+
+                            <div class="w-100 mt-auto">
+                                <output id="portion-output-{{ availableFoodNameKey }}" class="d-block text-center mb-2">({{ portion }} Adag)</output>
+                                <input
+                                        type="range"
+                                        id="portion-{{ availableFoodNameKey }}"
+                                        value="{{ portion }}"
+                                        name="portion-{{ availableFoodNameKey }}"
+                                        class="form-range"
+                                        min="1"
+                                        max="12"
+                                        step="1"
+                                        {% if not isAvailableFoodSelected %}disabled="disabled"{% endif %}
+                                        oninput="portionChange(this, '{{ availableFoodNameKey }}', 'Adag')"
+                                        onmouseup="portionMouseUp(this, '{{ availableFoodNameKey }}')"
+                                        ontouchend="portionMouseUp(this, '{{ availableFoodNameKey }}')"
+                                >
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-3">
-                    {% for tag in availableFood.tags %}
-                        <span class="badge text-bg-info">{{ tag }}</span>
-                    {% endfor %}
-                    <output id="portion-output-{{ availableFoodNameKey }}">({{ portion }} Adag)</output>
-                </div>
-                <div class="col-md-4">
-                    <div class="input-group">
-                        <input
-                                type="range"
-                                id="portion-{{ availableFoodNameKey }}"
-                                value="{{ portion }}"
-                                name="portion-{{ availableFoodNameKey }}"
-                                class="form-range"
-                                min="1"
-                                max="12"
-                                step="1"
-                                {% if not isAvailableFoodSelected %}disabled="disabled"{% endif %}
-                                oninput="portionChange(this, '{{ availableFoodNameKey }}', 'Adag')"
-                                onmouseup="portionMouseUp(this, '{{ availableFoodNameKey }}')"
-                                ontouchend="portionMouseUp(this, '{{ availableFoodNameKey }}')"
-                        >
-                    </div>
-                </div>
-            </fieldset>
-        {% endfor %}
+            {% endfor %}
+        </div>
 
         <h1 class="display-6">Drogéria</h1>
         <hr class="border">
 
-        {% for availableDrug in availableDrugs %}
-            {% set availableDrugName = availableDrug.name %}
-            {% set availableDrugNameKey = availableDrugName|replace({' ': '_'}) %}
-            {% set isAvailableDrugSelected = selectedDrugs[availableDrugName] is defined %}
-            {% set portion = isAvailableDrugSelected ? selectedDrugs[availableDrugName] : 0 %}
+        <div class="row g-3">
+            {% for availableDrug in availableDrugs %}
+                {% set availableDrugName = availableDrug.name %}
+                {% set availableDrugNameKey = availableDrugName|replace({' ': '_'}) %}
+                {% set isAvailableDrugSelected = selectedDrugs[availableDrugName] is defined %}
+                {% set portion = isAvailableDrugSelected ? selectedDrugs[availableDrugName] : 0 %}
 
-            <fieldset class="row mb-2">
-                <div class="col-md-8">
-                    <div class="form-check form-switch">
-                        <input
-                                type="checkbox"
-                                role="switch"
-                                id="drug-{{ availableDrugNameKey }}"
-                                value="{{ availableDrugName }}"
-                                name="drug-{{ availableDrugNameKey }}"
-                                class="form-check-input"
-                                onchange="drugSwitchChange(this, '{{ availableDrugNameKey }}')"
-                                {% if isAvailableDrugSelected %}checked="checked"{% endif %}
-                        >
-                        <label for="drug-{{ availableDrugNameKey }}" class="form-check-label">{{ availableDrugName }}</label>
-                        <output id="portion-output-{{ availableDrugNameKey }}">({{ portion }} {{ availableDrug.measurePreference.value }})</output>
+                <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="card h-100 {% if isAvailableDrugSelected %}border-primary border-2{% endif %}">
+                        <div class="card-body d-flex flex-column align-items-center p-3">
+                            <div class="mb-3 card-placeholder card-placeholder-drug">
+                                <i class="emoji emoji-box card-placeholder-icon"></i>
+                            </div>
+
+                            <div class="form-check form-switch mb-2 text-center">
+                                <input
+                                        type="checkbox"
+                                        role="switch"
+                                        id="drug-{{ availableDrugNameKey }}"
+                                        value="{{ availableDrugName }}"
+                                        name="drug-{{ availableDrugNameKey }}"
+                                        class="form-check-input"
+                                        onchange="drugSwitchChange(this, '{{ availableDrugNameKey }}')"
+                                        {% if isAvailableDrugSelected %}checked="checked"{% endif %}
+                                >
+                                <label for="drug-{{ availableDrugNameKey }}" class="form-check-label">{{ availableDrugName }}</label>
+                            </div>
+
+                            <div class="w-100 mt-auto">
+                                <output id="portion-output-{{ availableDrugNameKey }}" class="d-block text-center mb-2">({{ portion }} {{ availableDrug.measurePreference.value }})</output>
+                                <input
+                                        type="range"
+                                        id="portion-{{ availableDrugNameKey }}"
+                                        value="{{ portion }}"
+                                        name="portion-{{ availableDrugNameKey }}"
+                                        class="form-range"
+                                        min="0"
+                                        max="{{ availableDrug.category.storageMax }}"
+                                        step="{{ availableDrug.category.storageStep }}"
+                                        {% if not isAvailableDrugSelected %}disabled="disabled"{% endif %}
+                                        oninput="portionChange(this, '{{ availableDrugNameKey }}', '{{ availableDrug.measurePreference.value }}')"
+                                        onmouseup="portionMouseUp(this, '{{ availableDrugNameKey }}')"
+                                        ontouchend="portionMouseUp(this, '{{ availableDrugNameKey }}')"
+                                >
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="input-group">
-                        <input
-                                type="range"
-                                id="portion-{{ availableDrugNameKey }}"
-                                value="{{ portion }}"
-                                name="portion-{{ availableDrugNameKey }}"
-                                class="form-range"
-                                min="0"
-                                max="{{ availableDrug.category.storageMax }}"
-                                step="{{ availableDrug.category.storageStep }}"
-                                {% if not isAvailableDrugSelected %}disabled="disabled"{% endif %}
-                                oninput="portionChange(this, '{{ availableDrugNameKey }}', '{{ availableDrug.measurePreference.value }}')"
-                                onmouseup="portionMouseUp(this, '{{ availableDrugNameKey }}')"
-                                ontouchend="portionMouseUp(this, '{{ availableDrugNameKey }}')"
-                        >
-                    </div>
-                </div>
-            </fieldset>
-        {% endfor %}
+            {% endfor %}
+        </div>
 
         <div class="sticky-bottom">
             <div class="row justify-content-center sticky-bottom-btn-row">

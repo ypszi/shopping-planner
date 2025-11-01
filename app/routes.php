@@ -8,6 +8,7 @@ use PeterPecosz\ShoppingPlanner\Ingredient\Action\GetIngredientStorageAction;
 use PeterPecosz\ShoppingPlanner\Ingredient\Action\UpdateIngredientStorageAction;
 use PeterPecosz\ShoppingPlanner\Shopping\Action\PlannedShoppingAction;
 use PeterPecosz\ShoppingPlanner\Shopping\Action\ShoppingPlannerAction;
+use PeterPecosz\ShoppingPlanner\Shopping\Action\ShoppingPlannerGalleryAction;
 use Slim\App;
 
 /**
@@ -19,10 +20,17 @@ use Slim\App;
 return function (App $app): void {
     $app->get('/', ShoppingPlannerAction::class)
         ->setName(ShoppingPlannerAction::class);
+
+    $app->get('/gallery', ShoppingPlannerGalleryAction::class)
+        ->setName(ShoppingPlannerGalleryAction::class);
+
     $app->get('/planned', PlannedShoppingAction::class)
         ->setName(PlannedShoppingAction::class);
+
     $app->get('/storage/ingredients', GetIngredientStorageAction::class)
         ->setName(GetIngredientStorageAction::class);
+
     $app->post('/storage/ingredients', UpdateIngredientStorageAction::class)
         ->setName(UpdateIngredientStorageAction::class);
+
 };

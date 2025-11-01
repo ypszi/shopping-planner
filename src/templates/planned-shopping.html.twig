@@ -27,7 +27,7 @@
 <!doctype html>
 <html lang="en">
 {% include 'head.html.twig' %}
-<body onload="ingredientsViewInit();">
+<body>
 <div class="container-fluid">
     <div id="bevasarlokozpont">
         <h1 class="display-6 text-success">Bevásárlóközpont:</h1>
@@ -375,6 +375,8 @@
     {% include 'dark-theme.js.twig' %}
     {% include 'helper.js.twig' %}
 
+    document.addEventListener('DOMContentLoaded', ingredientsViewInit);
+
     function toggleCollapse(elem) {
         const isClosed = elem.classList.contains('emoji-arrow-down');
         if (isClosed) {
@@ -399,11 +401,11 @@
         let update = false;
 
         if (portion < 1) {
-            update = update || deleteUrlSearchParams('food-' + foodNameKey, url);
-            update = update || deleteUrlSearchParams('portion-' + foodNameKey, url);
+            update = deleteUrlSearchParams('food-' + foodNameKey, url) || update;
+            update = deleteUrlSearchParams('portion-' + foodNameKey, url) || update;
         }
         else {
-            update = update || updateUrlSearchParams('portion-' + foodNameKey, portion, url);
+            update = updateUrlSearchParams('portion-' + foodNameKey, portion, url) || update;
         }
 
         if (update) {
@@ -535,3 +537,5 @@
 
     {% include 'cookie-handler.scripts.js.twig' %}
 </script>
+</body>
+</html>

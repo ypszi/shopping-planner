@@ -1406,7 +1406,7 @@ Görög saláta:
 Habos almás:
   defaultPortion: 6
   receptUrl: https://streetkitchen.hu/green-kitchen/szezon/almas-sutik/habos-almas/
-  thumbnailUrl: https://static.streetkitchen.hu/live/uploads/2024/04/habos-almas-1618x855.jpg
+  thumbnailUrl: https://production.streetkitchen-cdn.com/habos-almas-scaled-NM75ze.webp
   tags:
     - desszert
   ingredients:
