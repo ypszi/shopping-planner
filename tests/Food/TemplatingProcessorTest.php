@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Food;
+namespace PeterPecosz\ShoppingPlanner\Tests\Food;
 
 use PeterPecosz\ShoppingPlanner\Food\Food;
 use PeterPecosz\ShoppingPlanner\Food\TemplatingProcessor;

@@ -5,3 +5,5 @@ vendor/
 var/cache/*
 
 web/foods/*
+
+.env

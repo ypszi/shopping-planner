@@ -4,10 +4,16 @@ declare(strict_types=1);
 
 use DI\Container;
 use Slim\App;
+use Symfony\Component\Dotenv\Dotenv;
 
 try {
     (static function (): void {
         require __DIR__ . '/../vendor/autoload.php';
+
+        $dotenv = new Dotenv();
+        $dotenv
+            ->usePutenv()
+            ->load(__DIR__ . '/../.env');
 
         /** @var Container $container */
         $container = require __DIR__ . '/container.php';

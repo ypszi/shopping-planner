@@ -11,9 +11,10 @@ use PeterPecosz\ShoppingPlanner\Ingredient\ServiceProvider\IngredientServiceProv
 use PeterPecosz\ShoppingPlanner\Measure\ServiceProvider\MeasureServiceProvider;
 use PeterPecosz\ShoppingPlanner\Supermarket\ServiceProvider\SupermarketServiceProvider;
 
-$commonConfig = array_merge(require __DIR__ . '/config/common/config.php', require __DIR__ . '/config/common/env.php');
-$environment  = Environment::from($commonConfig['system.application.environment']);
-$config       = require __DIR__ . "/config/$environment->value/config.php";
+$env          = getenv('APP_ENV') ?: $_ENV['APP_ENV'] ?? Environment::prod->value;
+$environment  = Environment::from($env);
+$commonConfig = require __DIR__ . '/config/common/config.php';
+$config       = require __DIR__ . '/config/' . $environment->value . '/config.php';
 $builder      = new ContainerBuilder();
 
 $builder->addDefinitions($commonConfig);
