@@ -1212,8 +1212,8 @@ Gofri:
       mennyiseg: 1 ek
   cookingSteps:
     - A sütőporos gofri recept elkészítését a gofri tészta bekeverésével kezdjük.
-    - Ehhez először a sütőport, a lisztet és a sót összekeverjük.
-    - A cukrot egy tálban kikeverjük a vajjal, hozzáadjuk a vaníliás cukrot, a tojásokat, majd mehet bele a tej és a sütőporos liszt is.
+    - Ehhez először {{ Sütőpor }} sütőport, a {{ Finomliszt }} lisztet és a {{ Só }} sót összekeverjük.
+    - "{{ Kristálycukor }} cukrot és {{ Vaníliás cukor }} vaníliás cukrot egy tálban kikeverünk {{ Vaj }} vajjal, hozzá keverünk {{ Tojás }} tojást, majd mehet bele {{ Tej }} tej és a sütőporos liszt is."
     - Csomómentesre keverjük a tésztát.
     - 1-1 nagyobb evőkanállal teszünk belőle a felmelegített, enyhén kiolajozott gofrisütő mélyedéseibe, és pár perc alatt aranybarnára sütjük a gofrikat, majd rácson hagyjuk kihűlni.
 
