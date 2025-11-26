@@ -11,6 +11,7 @@ use Psr\Http\Message\StreamFactoryInterface;
 use Slim\Factory\AppFactory;
 use Slim\Factory\Psr17\SlimPsr17Factory;
 use Slim\Psr7\Factory\StreamFactory;
+use Symfony\Component\ExpressionLanguage\ExpressionLanguage;
 use Twig\Environment;
 use Twig\Loader\FilesystemLoader;
 use Twig\TwigTest;
@@ -63,6 +64,8 @@ class CoreServiceProvider implements ServiceDefinitionProviderInterface
                     create(TwigTest::class)
                         ->constructor('url', [Url::class, 'isUrl'])
                 ),
+
+            ExpressionLanguage::class => create(),
         ];
     }
 }

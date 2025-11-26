@@ -12,6 +12,7 @@ use PeterPecosz\ShoppingPlanner\Food\Factory\AvailableFoodTagFactory;
 use PeterPecosz\ShoppingPlanner\Food\Factory\FoodFactory;
 use PeterPecosz\ShoppingPlanner\Food\Factory\FoodsFactory;
 use PeterPecosz\ShoppingPlanner\Food\Factory\ThumbnailFactory;
+use PeterPecosz\ShoppingPlanner\Food\TemplatingProcessor;
 
 use function DI\autowire;
 use function DI\create;
@@ -46,6 +47,8 @@ class FoodServiceProvider implements ServiceDefinitionProviderInterface
                 )
                 ->constructorParameter('thumbnailWebPath', get('config.foods.thumbnail_asset.path'))
                 ->constructorParameter('thumbnailCachePath', get('config.foods.thumbnail_cache.path')),
+
+            TemplatingProcessor::class => autowire(),
         ];
     }
 }

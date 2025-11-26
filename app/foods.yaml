@@ -592,18 +592,14 @@ Csirkemell rizstésztasalátával:
   ingredients:
     - name: Csirkemell
       mennyiseg: 400 g
-    - name: Szójaszósz
-      mennyiseg: 2 ek
-    - name: Szezámolaj
-      mennyiseg: 1 ek
     - name: Bors
       mennyiseg: 2 csipet
     - name: Rizs tészta
       mennyiseg: 300 g
     - name: Szójaszósz
-      mennyiseg: 7 ek
+      mennyiseg: 8 ek
     - name: Szezámolaj
-      mennyiseg: 1 ek
+      mennyiseg: 2 ek
     - name: Lime
       mennyiseg: 1 db
     - name: Fokhagyma
@@ -611,7 +607,7 @@ Csirkemell rizstésztasalátával:
     - name: Sárgarépa
       mennyiseg: 1 db
     - name: Gyömbér
-      mennyiseg: 1 db
+      mennyiseg: 1 ek
     - name: Káposzta
       mennyiseg: 1 db
     - name: Kaliforniai paprika (piros)
@@ -623,12 +619,12 @@ Csirkemell rizstésztasalátával:
     - name: Szezámmag
       mennyiseg: 1 ek
   cookingSteps:
-    - A répát, a paprikát és a káposztát nagyon vékony csíkokra, az újhagymát szeletekre vágjuk.
-    - A csirkemellet 3 cm-es kockára vágjuk, majd összekeverjük a szójaszósszal, a szezámolajjal, borsozzuk és hagyjuk állni legalább 1 órát. (De akár egy egész éjszakát is pihenhet a hűtőben.)
-    - A rizstésztát a csomag leírása alapján elkészítjük, majd azonnal átmossuk hideg vízzel és lehűtjük.
-    - Jöhet rá a szezámolaj, majd összekeverjük.
+    - "{{ Sárgarépa }} répát, {{ Kaliforniai paprika (piros) }} paprikát és {{ Káposzta }} káposztát nagyon vékony csíkokra, {{ Újhagyma }} újhagymát szeletekre vágjuk."
+    - "{{ Csirkemell }} csirkemellet 3 cm-es kockára vágjuk, majd összekeverjük {{ Szójaszósz * 0.75 }} szójaszósszal, {{ Szezámolaj / 2 }} szezámolajjal, {{ Bors }} borssal és hagyjuk állni legalább 1 órát. (De akár egy egész éjszakát is pihenhet a hűtőben.)"
+    - "{{ Rizs tészta }} rizstésztát a csomag leírása alapján elkészítjük, majd azonnal átmossuk hideg vízzel és lehűtjük."
+    - Jöhet rá még {{ Szezámolaj / 2 }} szezámolaj, majd összekeverjük.
     - A répát, a paprikát, a káposztát és az újhagymát hozzáadjuk a tésztához.
-    - A lime héját belereszeljük a szójaszószba, belefacsarjuk a levét, belenyomjuk a fokhagymát, belekeverjük a finomra reszelt gyömbért.
+    - "{{ Lime }} lime héját belereszeljük {{ Szójaszósz * 0.25 }} szójaszószba, belefacsarjuk a levét, belenyomunk {{ Fokhagyma }} fokhagymát, belekeverünk {{ Gyömbér }} finomra reszelt gyömbért."
     - A szójaszószos mixet ráöntjük a tésztára és a zöldségekre, megszórjuk a szezámmagokkal, frissen aprított korianderrel és alaposan össszekeverjük.
     - A csirkemellet pár perc alatt készre pirítjuk a kókuszolajon, és a tésztasalátával fogyasztjuk.
 

@@ -5,9 +5,15 @@ declare(strict_types=1);
 namespace PeterPecosz\ShoppingPlanner\Food;
 
 use PeterPecosz\ShoppingPlanner\Ingredient\IngredientForFood;
+use Symfony\Component\ExpressionLanguage\ExpressionLanguage;
+use Throwable;
 
 class TemplatingProcessor
 {
+    public function __construct(private readonly ExpressionLanguage $expressionLanguage)
+    {
+    }
+
     /**
      * @param array<string|string[]> $data
      *
@@ -90,33 +96,68 @@ class TemplatingProcessor
         $newText = $text;
 
         foreach ($relevantIngredients as $relevantIngredient) {
-            $newText = preg_replace(
-                pattern    : $this->placeholder($relevantIngredient->name()),
-                replacement: $relevantIngredient->ingredientPortion(),
-                subject    : $newText
+            $newText = preg_replace_callback(
+                pattern : $this->placeholderWithOptionalMath($relevantIngredient->name()),
+                callback: $this->createReplacementCallback($relevantIngredient),
+                subject : $newText
             );
 
             if (!$relevantIngredient->reference()) {
                 continue;
             }
 
-            $newText = preg_replace(
-                pattern    : $this->placeholder($relevantIngredient->reference()->name()),
-                replacement: $relevantIngredient->ingredientPortion(),
-                subject    : $newText
+            $newText = preg_replace_callback(
+                pattern : $this->placeholderWithOptionalMath($relevantIngredient->reference()->name()),
+                callback: $this->createReplacementCallback($relevantIngredient),
+                subject : $newText
             );
         }
 
         return $newText;
     }
 
-    private function placeholder(string $name): string
+    private function placeholderWithOptionalMath(string $name): string
     {
-        return sprintf('/\{\{\s?%s\s?\}\}/i', $this->escapeSpecialChars($name));
+        return sprintf(
+            '/\{\{\s?(?<ingredirent>%s)\s?(?<expression>(?<operand>[+\-\/*])\s?(?<operator>\d+\.?\d*))?\s?\}\}/i',
+            $this->escapeSpecialChars($name)
+        );
     }
 
     private function escapeSpecialChars(string $string): string
     {
         return rtrim(preg_replace('/(?!\w)/', '\\', $string), '\\');
+    }
+
+    private function createReplacementCallback(IngredientForFood $ingredient): callable
+    {
+        return function ($matches) use ($ingredient) {
+            /** @var array{ingredient: string, expression: string, operand: string, operator: string} $matches */
+
+            $capturedExpression = $matches['expression'] ?? null;
+
+            if (!$capturedExpression) {
+                return $ingredient->ingredientPortion();
+            }
+
+            $expression = 'portion ' . trim((string)$capturedExpression);
+
+            $originalPortion    = $ingredient->portion();
+            $newPortion         = $this->evaluateMathExpression($originalPortion, $expression);
+            $adjustedIngredient = $ingredient->withPortion($newPortion);
+
+            return $adjustedIngredient->ingredientPortion();
+        };
+    }
+
+    private function evaluateMathExpression(float $portion, string $expression): float
+    {
+        try {
+            $result = $this->expressionLanguage->evaluate($expression, ['portion' => $portion]);
+
+            return (float)$result;
+        } catch (Throwable) {
+            return $portion;
+        }
     }
 }
