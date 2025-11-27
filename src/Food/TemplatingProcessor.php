@@ -5,11 +5,14 @@ declare(strict_types=1);
 namespace PeterPecosz\ShoppingPlanner\Food;
 
 use PeterPecosz\ShoppingPlanner\Ingredient\IngredientForFood;
+use RuntimeException;
 use Symfony\Component\ExpressionLanguage\ExpressionLanguage;
-use Throwable;
 
 class TemplatingProcessor
 {
+    /** @var array<string, float[]> */
+    private array $processedIngredients = [];
+
     public function __construct(private readonly ExpressionLanguage $expressionLanguage)
     {
     }
@@ -21,7 +24,36 @@ class TemplatingProcessor
      */
     public function process(Food $food, array $data): array
     {
-        return $this->processTemplate($food, $data);
+        $this->processedIngredients = [];
+        $result                     = $this->processTemplate($food, $data);
+
+        $totalByIngredients = array_map(
+            fn(array $portions) => array_sum($portions),
+            $this->processedIngredients
+        );
+
+        foreach ($food->ingredients() as $ingredient) {
+            if (!isset($totalByIngredients[$ingredient->name()])) {
+                // ingredient was not found in template
+
+                continue;
+            }
+
+            $remainder = fmod($totalByIngredients[$ingredient->name()], $ingredient->portion());
+
+            if ($remainder) {
+                throw new RuntimeException(
+                    sprintf(
+                        'Total does not add up for: "%s"; expected "%.2f", got "%.2f"',
+                        $ingredient->name(),
+                        $ingredient->portion(),
+                        $totalByIngredients[$ingredient->name()],
+                    )
+                );
+            }
+        }
+
+        return $result;
     }
 
     /**
@@ -137,6 +169,8 @@ class TemplatingProcessor
             $capturedExpression = $matches['expression'] ?? null;
 
             if (!$capturedExpression) {
+                $this->processedIngredients[$ingredient->name()][] = $ingredient->portion();
+
                 return $ingredient->ingredientPortion();
             }
 
@@ -146,18 +180,14 @@ class TemplatingProcessor
             $newPortion         = $this->evaluateMathExpression($originalPortion, $expression);
             $adjustedIngredient = $ingredient->withPortion($newPortion);
 
+            $this->processedIngredients[$ingredient->name()][] = $adjustedIngredient->portion();
+
             return $adjustedIngredient->ingredientPortion();
         };
     }
 
     private function evaluateMathExpression(float $portion, string $expression): float
     {
-        try {
-            $result = $this->expressionLanguage->evaluate($expression, ['portion' => $portion]);
-
-            return (float)$result;
-        } catch (Throwable) {
-            return $portion;
-        }
+        return (float)$this->expressionLanguage->evaluate($expression, ['portion' => $portion]);
     }
 }

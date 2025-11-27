@@ -11,6 +11,7 @@ use PeterPecosz\ShoppingPlanner\Ingredient\IngredientForFood;
 use PeterPecosz\ShoppingPlanner\Measure\Measure;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
+use RuntimeException;
 use Symfony\Component\ExpressionLanguage\ExpressionLanguage;
 
 class TemplatingProcessorTest extends TestCase
@@ -270,6 +271,44 @@ class TemplatingProcessorTest extends TestCase
                 'cut {{onion / 2}} onions',
                 'peal {{ avocado * 0.5 }} avocado',
                 'pour {{wine (dry) + 1}} wine',
+                'cut {{onion - 2}} more onions',
+                'peal {{ avocado * 0.5 }} more avocado',
+                'cook',
+                'serve',
+            ],
+            ingredients   : [
+                new IngredientForFood('onion', 'vegetable', 4, Measure::DB),
+                new IngredientForFood('avocado', 'fruit', 1, Measure::DB),
+                new IngredientForFood('wine (dry)', 'drink', 1, Measure::DL),
+            ]
+        );
+
+        $result = $this->sut->process($food, $cookingSteps);
+
+        $this->assertEquals(
+            [
+                'cut 2 db onions',
+                'peal 0.5 db avocado',
+                'pour 2 dl wine',
+                'cut 2 db more onions',
+                'peal 0.5 db more avocado',
+                'cook',
+                'serve',
+            ],
+            $result
+        );
+    }
+
+    #[Test]
+    public function testMathFailsInVariablesWhenTotalDoesNotAddUp(): void
+    {
+        $food = new Food(
+            name          : 'test food',
+            defaultPortion: 4,
+            cookingSteps  : $cookingSteps = [
+                'cut {{onion / 2}} onions',
+                'peal {{ avocado * 0.5 }} avocado',
+                'pour {{wine (dry) + 1}} wine',
                 'cut {{onion - 3}} more onions',
                 'peal {{ avocado * 0.5 }} more avocado',
                 'cook',
@@ -281,6 +320,9 @@ class TemplatingProcessorTest extends TestCase
                 new IngredientForFood('wine (dry)', 'drink', 1, Measure::DL),
             ]
         );
+
+        $this->expectException(RuntimeException::class);
+        $this->expectExceptionMessage('Total does not add up for: "onion"; expected "4.00", got "3.00"');
 
         $result = $this->sut->process($food, $cookingSteps);
 
