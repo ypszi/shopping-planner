@@ -2666,6 +2666,42 @@ Pestos tészta:
     - name: Fusilli tészta
       mennyiseg: 25 dkg
 
+Pihe-puha sajtos pogácsa:
+  defaultPortion: 6
+  receptUrl: https://www.nosalty.hu/recept/pihe-puha-pogacsa-sajtos-pogacsa-11
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/sY/gb/pihe-puha-pogacsa-sajtos-pogacsa-11.jpg?w=1800&fit=crop&s=874bfcbaa094cbf86c454a19261ab468
+  tags:
+    - desszert
+  ingredients:
+    - name: Finomliszt
+      mennyiseg: 60 dkg
+    - name: Tojás
+      mennyiseg: 3 db
+    - name: Tejföl
+      mennyiseg: 175 g
+    - name: Margarin
+      mennyiseg: 25 dkg
+    - name: Só
+      mennyiseg: 4 tk
+    - name: Cukor
+      mennyiseg: 1 tk
+    - name: Élesztő
+      mennyiseg: 5 dkg
+    - name: Sajt (reszelt)
+      mennyiseg: 5 dkg
+    - name: Tojásfehérje
+      mennyiseg: 1 db
+  cookingSteps:
+    - A lisztet egy nagy tálba öntjük, hozzáadjuk a cukrot, a sót és a tojásokat.
+    - A margarint és a tejfölt a mikróban szobahőmérsékletűre melegítjük, és a tejfölbe belekeverjük az élesztőt.
+    - Majd mindent hozzáadunk a liszthez. Átgyúrjuk, és hagyjuk kelni kb. 1-2 órát.
+    - Pihenés után párszor hajtogatva kinyújtjuk kb. 2 ujjnyi vastagra, és kiszaggatjuk.
+    - Tetejét megkenjük tojással, és sajtot szórunk rá.
+    - 220 fokra Előmelegített sütőben kb. 15 perc alatt megsütjük.
+  comments:
+    - "Sütés hőfoka: 220 °C"
+    - "Sütés módja: alul-felül sütés"
+
 Pirított csirkés quesadilla:
   defaultPortion: 4
   receptUrl: https://www.nosalty.hu/recept/piritott-csirke-quesadilla-texmex-mexikoi-tortilla-avokado-salsa-tejfol
@@ -2964,6 +3000,47 @@ Rizskoch:
     - tálaláshoz::
       - porcukor ízlés szerint
       - baracklekvár ízlés szerint
+
+Rukkolás lencsesaláta fetasajttal:
+  defaultPortion: 2
+  receptUrl: https://www.nosalty.hu/recept/rukkolas-lencsesalata-fetasajttal
+  thumbnailUrl: https://image-api.nosalty.hu/nosalty/images/recipes/PH/UB/rukkolas-lencsesalata-fetasajttal.jpeg?w=1200&fit=crop&s=95d5ed521903e3793687742d8cc7b3c4
+  tags:
+    - saláta
+  ingredients:
+    - name: Rukkola
+      mennyiseg: 100 g
+    - name: Lencse
+      mennyiseg: 100 g
+    - name: Feta sajt
+      mennyiseg: 75 g
+    - name: Víz
+      mennyiseg: 1 l
+    - name: Babérlevél
+      mennyiseg: 3 db
+    - name: Petrezselyem
+      mennyiseg: 2 ek
+    - name: Vöröshagyma
+      mennyiseg: 1 db
+    - name: Napraforgóolaj
+      mennyiseg: 3 ek
+    - name: Olívaolaj
+      mennyiseg: 4 ek
+    - name: Só
+      mennyiseg: 0.5 tk
+    - name: Bors
+      mennyiseg: 2 csipet
+  cookingSteps:
+    - A lencsét egy éjszakára vízbe áztatjuk.
+    - A hagymát apróra vágjuk, a petrezselyemzöldet felaprítjuk, a rukkolát megmossuk, majd lecsepegtetjük.
+    - Elkészítjük a lencsét. Ehhez a hagymát üvegesre páruljuk az olajon, majd hozzáadjuk a lencsét és felöntjük a vízzel.
+    - Beletesszük a babérleveleket, a petrezselyemzöldet, sózzuk, borsozzuk.
+    - Lassú tűzön puhára főzzük, ez kb. 20-30 perc.
+    - Amíg a lencse fő, egy tálban összeforgatjuk a ruccolát olívaolajjal. Fokozatosan adjuk hozzá, mert lehet, hogy a fenti mennyiség sok lesz.
+    - Amikor a lencse megfőtt, lecsöpögtetjük és összkeverjük a salátával.
+    - Végül rámorzsoljuk a fetasajtot.
+  comments:
+    - 4 szál Petrezselyem
 
 Sajtszósz:
   defaultPortion: 4
@@ -4176,6 +4253,13 @@ Tonhalas tabulé:
       mennyiseg: 2 db
     - name: Bulgur
       mennyiseg: 150 g
+  cookingSteps:
+    - "{{ Bulgur }} bulgurt felöntünk dupla mennyiségű forró vízzel és pár perc alatt megfőzzük."
+    - "{{ Kígyóuborka }} kígyóuborkát kicsi kockákra vágjuk."
+    - "{{ Koktélparadicsom }} koktélparadicsom belső magos részét kivágjuk, a húsát pedig az uborkának megfelelő méretű kockákra vágjuk."
+    - "{{ Lilahagyma }} hagymát is felkockázzuk, a {{ Petrezselyem }} petrezselymet apróra vágjuk."
+    - Mindent összekeverünk egy nagy tálban, a citrom reszelt héjával és kifacsart levével, borssal és a morzsolt {{ Tonhal (konzerv) }} tonhallal.
+    - A készre főtt bulgurt is a tálba keverjük és jól behűtve magában vagy köretként fogyasztjuk.
 
 Túrógombóc:
   defaultPortion: 4
