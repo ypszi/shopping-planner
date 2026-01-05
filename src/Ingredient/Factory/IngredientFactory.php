@@ -33,14 +33,14 @@ readonly class IngredientFactory
     {
         $ingredientName = $ingredient['name'];
 
-        [$portion, $rawMertekegyseg] = explode(' ', $ingredient['mennyiseg']);
+        [$portion, $rawPortion] = explode(' ', $ingredient['portion']);
 
-        if (!$measure = Measure::tryFrom($rawMertekegyseg)) {
+        if (!$measure = Measure::tryFrom($rawPortion)) {
             throw new UnknownIngredientException(
                 sprintf(
                     'Ingredient measurement not found for "%s": "%s" for food: "%s"',
                     $ingredientName,
-                    $rawMertekegyseg,
+                    $rawPortion,
                     $foodName
                 )
             );

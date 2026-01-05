@@ -6,25 +6,25 @@ Alpesi Sajtos Tészta (Älplermagronen):
     - ebéd
   ingredients:
     - name: Burgonya
-      mennyiseg: 40 dkg
+      portion: 40 dkg
     - name: Só
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Makaróni tészta
-      mennyiseg: 25 dkg
+      portion: 25 dkg
     - name: Gouda sajt
-      mennyiseg: 20 dkg
+      portion: 20 dkg
     - name: Tej
-      mennyiseg: 1.5 dl
+      portion: 1.5 dl
     - name: Tejszín
-      mennyiseg: 1 dl
+      portion: 1 dl
     - name: Bors
-      mennyiseg: 1 csipet
+      portion: 1 csipet
     - name: Vöröshagyma
-      mennyiseg: 2 db
+      portion: 2 db
     - name: Olívaolaj
-      mennyiseg: 2 ek
+      portion: 2 ek
     - name: Petrezselyem
-      mennyiseg: 1 ek
+      portion: 1 ek
   cookingSteps:
     - A burgonyát meghámozzuk, majd apró darabokra vágjuk, és forrásban lévő sós vízben 7 percig főzzük.
     - Hozzáadjuk a tésztát, és további kb. 8 perc alatt készre főzzük.
@@ -45,27 +45,27 @@ Amerikai káposztasaláta:
     - saláta
   ingredients:
     - name: Sárgarépa
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Lilakáposzta
-      mennyiseg: 0.5 db
+      portion: 0.5 db
     - name: Káposzta
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Vöröshagyma
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Tejföl
-      mennyiseg: 4 ek
+      portion: 4 ek
     - name: Majonéz
-      mennyiseg: 2 ek
+      portion: 2 ek
     - name: Mustár
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Citromlé
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Só
-      mennyiseg: 2 csipet
+      portion: 2 csipet
     - name: Bors
-      mennyiseg: 2 csipet
+      portion: 2 csipet
     - name: Cukor
-      mennyiseg: 2 kvk
+      portion: 2 kvk
   cookingSteps:
       - Először megmossuk a zöldségeket, majd a sárgarépát meghámozzuk. 
       - Ezután egy mélyebb tálba reszeljük, vagy vékony csíkokra vágjuk a kétféle káposztával és a hagymával együtt. 
@@ -81,23 +81,23 @@ Ananászos csirke:
     - ebéd
   ingredients:
     - name: Csirkemell
-      mennyiseg: 60 dkg
+      portion: 60 dkg
     - name: Ananász (konzerv)
-      mennyiseg: 350 g
+      portion: 350 g
     - name: Vöröshagyma
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Alaplé
-      mennyiseg: 1 dl
+      portion: 1 dl
     - name: Kókusztej
-      mennyiseg: 1 dl
+      portion: 1 dl
     - name: Curry
-      mennyiseg: 1 ek
+      portion: 1 ek
     - name: Koriander
-      mennyiseg: 1 csipet
+      portion: 1 csipet
     - name: Napraforgóolaj
-      mennyiseg: 3 ek
+      portion: 3 ek
     - name: Só
-      mennyiseg: 1 csipet
+      portion: 1 csipet
   cookingSteps:
     - Mossuk meg, és kockázzuk fel a csirkemellet.
     - Forrósítsunk fel 3 evőkanál olajat, enyhén pirítsuk meg benne az apróra vágott hagymát és a curry port.
@@ -116,23 +116,23 @@ Aranygaluska:
     - desszert
   ingredients:
     - name: Finomliszt
-      mennyiseg: 60 dkg
+      portion: 60 dkg
     - name: Tej
-      mennyiseg: 3.5 dl
+      portion: 3.5 dl
     - name: Élesztő
-      mennyiseg: 2 dkg
+      portion: 2 dkg
     - name: Tojás
-      mennyiseg: 2 db
+      portion: 2 db
     - name: Cukor
-      mennyiseg: 1 ek
+      portion: 1 ek
     - name: Vaj
-      mennyiseg: 8 dkg
+      portion: 8 dkg
     - name: Dió
-      mennyiseg: 30 dkg
+      portion: 30 dkg
     - name: Cukor
-      mennyiseg: 10 dkg
+      portion: 10 dkg
     - name: Vaj
-      mennyiseg: 10 dkg
+      portion: 10 dkg
   comments:
     - 30 dkg Dió (darált)
 
@@ -145,29 +145,29 @@ Avokádós tonhalsaláta madársalátával:
     - saláta
   ingredients:
     - name: Tojás
-      mennyiseg: 4 db
+      portion: 4 db
     - name: Lime
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Só
-      mennyiseg: 0.5 tk
+      portion: 0.5 tk
     - name: Bors
-      mennyiseg: 1 csipet
+      portion: 1 csipet
     - name: Cukor
-      mennyiseg: 1 csipet
+      portion: 1 csipet
     - name: Napraforgóolaj
-      mennyiseg: 3 ek
+      portion: 3 ek
     - name: Tonhal (konzerv)
-      mennyiseg: 280 g
+      portion: 280 g
     - name: Madársaláta
-      mennyiseg: 120 g
+      portion: 120 g
     - name: Jégsaláta
-      mennyiseg: 0.5 db
+      portion: 0.5 db
     - name: Paradicsom
-      mennyiseg: 4 db
+      portion: 4 db
     - name: Avokádó
-      mennyiseg: 2 db
+      portion: 2 db
     - name: Lilahagyma
-      mennyiseg: 1 db
+      portion: 1 db
   cookingSteps:
     - A tojásokat fövő vízben kb. 10 perc alatt megfőzzük, hideg vízzel leöblítjük, hűlni hagyjuk.
     - A chilit hosszában kettévágjuk, a magokat kiszedjük, és apró kockákra vágjuk.
@@ -192,17 +192,17 @@ Baconbe göngyölt mozzarellás csirkemell:
     - ebéd
   ingredients:
     - name: Csirkemell
-      mennyiseg: 50 dkg
+      portion: 50 dkg
     - name: Mozzarella sajt
-      mennyiseg: 20 dkg
+      portion: 20 dkg
     - name: Bacon (szeletelt)
-      mennyiseg: 20 dkg
+      portion: 20 dkg
     - name: Só
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Bazsalikom
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Olívaolaj
-      mennyiseg: 3 ek
+      portion: 3 ek
   cookingSteps:
     - A megmosott és szárazra törölt húst szeletekre vágjuk, kiklopfoljuk, majd megsózzuk, megborsozzuk.
     - A csirkemellszeleteket a kiterített baconre fektetjük, megszórjuk bazsalikommal és mindegyikre teszünk egy darabka sajtot, ezután a baconnel együtt mindet feltekerjük.
@@ -216,21 +216,21 @@ Bögrés süti:
     - desszert
   ingredients:
     - name: Finomliszt
-      mennyiseg: 4 ek
+      portion: 4 ek
     - name: Sütőpor
-      mennyiseg: 1 kk
+      portion: 1 kk
     - name: Porcukor
       # 4 ek helyett
-      mennyiseg: 2 ek
+      portion: 2 ek
     - name: Kakaópor
-      mennyiseg: 2 ek
+      portion: 2 ek
     - name: Tojás
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Tej
-      mennyiseg: 3 ek
+      portion: 3 ek
     - name: Napraforgóolaj
       # 3 ek helyett
-      mennyiseg: 1 ek
+      portion: 1 ek
 
 Bolognai:
   defaultPortion: 4
@@ -240,43 +240,43 @@ Bolognai:
     - ebéd
   ingredients:
     - name: Olívaolaj
-      mennyiseg: 3 ek
+      portion: 3 ek
     - name: Vöröshagyma
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Sárgarépa
-      mennyiseg: 0.5 db
+      portion: 0.5 db
     - name: Zellerszár
-      mennyiseg: 2 db
+      portion: 2 db
     - name: Darált hús
-      mennyiseg: 500 g
+      portion: 500 g
     - name: Vörösbor (száraz)
-      mennyiseg: 150 ml
+      portion: 150 ml
     - name: Paradicsom püré
-      mennyiseg: 250 ml
+      portion: 250 ml
     - name: Só
-      mennyiseg: 1 ek
+      portion: 1 ek
     - name: Bors
-      mennyiseg: 1 mk
+      portion: 1 mk
     - name: Szerecsendió
-      mennyiseg: 0.5 mk
+      portion: 0.5 mk
     - name: Babérlevél
-      mennyiseg: 2 db
+      portion: 2 db
     - name: Fokhagyma
-      mennyiseg: 2 gerezd
+      portion: 2 gerezd
     - name: Kakukkfű
-      mennyiseg: 1 csipet
+      portion: 1 csipet
     - name: Rozmaring
-      mennyiseg: 1 csipet
+      portion: 1 csipet
     - name: Worcester szósz
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Víz
-      mennyiseg: 3 dl
+      portion: 3 dl
     - name: Tej
-      mennyiseg: 100 ml
+      portion: 100 ml
     - name: Spagetti tészta
-      mennyiseg: 400 g
+      portion: 400 g
     - name: Parmezán sajt
-      mennyiseg: 40 g
+      portion: 40 g
   cookingSteps:
     - "{{Olívaolaj}} olajon üvegesre pároljuk az apróra vágott {{Vöröshagyma}} vöröshagymát,"
     - "majd hozzádobjuk a lereszelt {{Sárgarépa}} sárgarépát és {{Zellerszár}} angol zellert és együtt pirítjuk őket: ez a soffritto."
@@ -295,21 +295,21 @@ Bulgur:
     - köret
   ingredients:
     - name: Bulgur
-      mennyiseg: 30 dkg
+      portion: 30 dkg
     - name: Vöröshagyma
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Paradicsom
-      mennyiseg: 2 db
+      portion: 2 db
     - name: Paprika
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Olívaolaj
-      mennyiseg: 2 ek
+      portion: 2 ek
     - name: Alaplé
-      mennyiseg: 5 dl
+      portion: 5 dl
     - name: Só
-      mennyiseg: 0.5 tk
+      portion: 0.5 tk
     - name: Bors
-      mennyiseg: 1 csipet
+      portion: 1 csipet
 
 Bundás csirke:
   defaultPortion: 4
@@ -319,31 +319,31 @@ Bundás csirke:
     - ebéd
   ingredients:
     - name: Fokhagyma
-      mennyiseg: 3 gerezd
+      portion: 3 gerezd
     - name: Napraforgóolaj
-      mennyiseg: 2 dl
+      portion: 2 dl
     - name: Gyömbér por
-      mennyiseg: 1.5 tk
+      portion: 1.5 tk
     - name: Szerecsendió
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Piros paprika
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Zöldfűszer
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Cayenne bors
-      mennyiseg: 0.5 tk
+      portion: 0.5 tk
     - name: Olívaolaj
-      mennyiseg: 2 ek
+      portion: 2 ek
     - name: Finomliszt
-      mennyiseg: 1 bögre
+      portion: 1 bögre
     - name: Méz
-      mennyiseg: 50 ml
+      portion: 50 ml
     - name: Szójaszósz
-      mennyiseg: 50 ml
+      portion: 50 ml
     - name: Csirkemell
-      mennyiseg: 4 db
+      portion: 4 db
     - name: Tojás
-      mennyiseg: 3 db
+      portion: 3 db
   cookingSteps:
     - Egy mélytányérban a liszthez keverjük az összes fűszert.
     - Egy másik mélytányérban felverjük a tojást a vízzel.
@@ -369,21 +369,21 @@ Carbonara:
     - ebéd
   ingredients:
     - name: Kolozsvári szalonna
-      mennyiseg: 150 g
+      portion: 150 g
     - name: Olívaolaj
-      mennyiseg: 2 ek
+      portion: 2 ek
     - name: Spagetti tészta
-      mennyiseg: 250 g
+      portion: 250 g
     - name: Tojás
-      mennyiseg: 4 db
+      portion: 4 db
     - name: Só
-      mennyiseg: 1 mk
+      portion: 1 mk
     - name: Bors
-      mennyiseg: 1 csipet
+      portion: 1 csipet
     - name: Parmezán sajt
-      mennyiseg: 80 g
+      portion: 80 g
     - name: Szerecsendió
-      mennyiseg: 1 csipet
+      portion: 1 csipet
   comments:
     - 150-200 ml tésztafőzővíz
 
@@ -395,23 +395,23 @@ Chilis bab:
     - ebéd
   ingredients:
     - name: Vöröshagyma
-      mennyiseg: 2 db
+      portion: 2 db
     - name: Napraforgóolaj
-      mennyiseg: 3 ek
+      portion: 3 ek
     - name: Fokhagyma
-      mennyiseg: 4 gerezd
+      portion: 4 gerezd
     - name: Piros paprika
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Darált hús
-      mennyiseg: 50 dkg
+      portion: 50 dkg
     - name: Paradicsom püré
-      mennyiseg: 10 dkg
+      portion: 10 dkg
     - name: Chili
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Vörösbab (konzerv)
-      mennyiseg: 2 konzerv
+      portion: 2 konzerv
     - name: Kukorica (konzerv)
-      mennyiseg: 1 konzerv
+      portion: 1 konzerv
   cookingSteps:
     - A chilis bab elkészítéséhez a karikára vágott vöröshagymát olajon megpirítjuk, majd a zúzott fokhagymát is hozzápirítjuk 10 másodpercig.
     - Rászórjuk a pirospaprikát, és felengedjük 1/2 dl vízzel.
@@ -428,21 +428,21 @@ Chiliszósz (édes):
     - köret
   ingredients:
     - name: Chili
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Rizsecet
-      mennyiseg: 1 ek
+      portion: 1 ek
     - name: Szójaszósz
-      mennyiseg: 1 ek
+      portion: 1 ek
     - name: Só
-      mennyiseg: 2 csipet
+      portion: 2 csipet
     - name: Méz
-      mennyiseg: 2 tk
+      portion: 2 tk
     - name: Keményítő
-      mennyiseg: 1 ek
+      portion: 1 ek
     - name: Víz
-      mennyiseg: 2 dl
+      portion: 2 dl
     - name: Víz
-      mennyiseg: 2 ek
+      portion: 2 ek
   cookingSteps:
       - Keverjük össze a chilit, rizsecetet, szójaszószt, sót, vizet, mézet vagy cukrot
       - Egy kisebb edénybe - néha kavargatva - forraljuk fel
@@ -460,25 +460,25 @@ Citromos joghurtos csirkemell görögsalátával:
     - vacsora
   ingredients:
     - name: Citrom
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Jégsaláta
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Kígyóuborka
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Koktélparadicsom
-      mennyiseg: 40 dkg
+      portion: 40 dkg
     - name: Lilahagyma
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Olívaolaj
-      mennyiseg: 3 ek
+      portion: 3 ek
     - name: Oregánó
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Csirkemell
-      mennyiseg: 50 dkg
+      portion: 50 dkg
     - name: Natúr joghurt
-      mennyiseg: 37.5 dkg
+      portion: 37.5 dkg
     - name: Feta sajt
-      mennyiseg: 20 dkg
+      portion: 20 dkg
 
 Csirkemellpaprikás:
   defaultPortion: 4
@@ -488,23 +488,23 @@ Csirkemellpaprikás:
     - ebéd
   ingredients:
     - name: Vöröshagyma
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Fokhagyma
-      mennyiseg: 1 gerezd
+      portion: 1 gerezd
     - name: Paradicsom
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Piros paprika
-      mennyiseg: 1 ek
+      portion: 1 ek
     - name: Fehérbor
-      mennyiseg: 1 dl
+      portion: 1 dl
     - name: Paprika
-      mennyiseg: 2 db
+      portion: 2 db
     - name: Csirkemell
-      mennyiseg: 1 kg
+      portion: 1 kg
     - name: Tejföl
-      mennyiseg: 1 ek
+      portion: 1 ek
     - name: Tejszín
-      mennyiseg: 1 dl
+      portion: 1 dl
   cookingSteps:
     - Előkészítjük az alapanyagokat::
       - a vöröshagymát meghámozzuk, apróra kockázzuk;
@@ -536,37 +536,37 @@ Csirke gratin olaszosan:
     - ebéd
   ingredients:
     - name: Burgonya
-      mennyiseg: 300 g
+      portion: 300 g
     - name: Csirkemell
-      mennyiseg: 300 g
+      portion: 300 g
     - name: Kaliforniai paprika (piros)
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Olívaolaj
-      mennyiseg: 1 ek
+      portion: 1 ek
     - name: Fűszer paprika
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Bazsalikom
-      mennyiseg: 1 csipet
+      portion: 1 csipet
     - name: Oregánó
-      mennyiseg: 1 csipet
+      portion: 1 csipet
     - name: Majoranna
-      mennyiseg: 1 csipet
+      portion: 1 csipet
     - name: Kakukkfű
-      mennyiseg: 1 csipet
+      portion: 1 csipet
     - name: Só
-      mennyiseg: 0.5 tk
+      portion: 0.5 tk
     - name: Bors
-      mennyiseg: 1 csipet
+      portion: 1 csipet
     - name: Tej
-      mennyiseg: 75 ml
+      portion: 75 ml
     - name: Habtejszín
-      mennyiseg: 75 ml
+      portion: 75 ml
     - name: Tojás
-      mennyiseg: 2 db
+      portion: 2 db
     - name: Parmezán sajt
-      mennyiseg: 30 g
+      portion: 30 g
     - name: Bazsalikom levél
-      mennyiseg: 6 db
+      portion: 6 db
   cookingSteps:
     - A burgonyát meghámozzuk, hosszában és széltében elfelezzük, mossuk. Sós vízben körülbelül 15-20 percig főzzük.
     - A paprikát megtisztítjuk, mossuk, körülbelül 3 cm-es kockákra vágjuk.
@@ -591,33 +591,33 @@ Csirkemell rizstésztasalátával:
     - suli
   ingredients:
     - name: Csirkemell
-      mennyiseg: 400 g
+      portion: 400 g
     - name: Bors
-      mennyiseg: 2 csipet
+      portion: 2 csipet
     - name: Rizs tészta
-      mennyiseg: 300 g
+      portion: 300 g
     - name: Szójaszósz
-      mennyiseg: 8 ek
+      portion: 8 ek
     - name: Szezámolaj
-      mennyiseg: 2 ek
+      portion: 2 ek
     - name: Lime
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Fokhagyma
-      mennyiseg: 1 gerezd
+      portion: 1 gerezd
     - name: Sárgarépa
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Gyömbér
-      mennyiseg: 1 ek
+      portion: 1 ek
     - name: Káposzta
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Kaliforniai paprika (piros)
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Újhagyma
-      mennyiseg: 2 db
+      portion: 2 db
     - name: Koriander
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Szezámmag
-      mennyiseg: 1 ek
+      portion: 1 ek
   cookingSteps:
     - "{{ Sárgarépa }} répát, {{ Kaliforniai paprika (piros) }} paprikát és {{ Káposzta }} káposztát nagyon vékony csíkokra, {{ Újhagyma }} újhagymát szeletekre vágjuk."
     - "{{ Csirkemell }} csirkemellet 3 cm-es kockára vágjuk, majd összekeverjük {{ Szójaszósz * 0.75 }} szójaszósszal, {{ Szezámolaj / 2 }} szezámolajjal, {{ Bors }} borssal és hagyjuk állni legalább 1 órát. (De akár egy egész éjszakát is pihenhet a hűtőben.)"
@@ -637,27 +637,27 @@ Csirkés spárgás rizottó:
     - vacsora
   ingredients:
     - name: Csirkemell
-      mennyiseg: 35 dkg
+      portion: 35 dkg
     - name: Rizottó rizs
-      mennyiseg: 25 dkg
+      portion: 25 dkg
     - name: Spárga
-      mennyiseg: 8 db
+      portion: 8 db
     - name: Fehérbor
-      mennyiseg: 2.5 dl
+      portion: 2.5 dl
     - name: Parmezán sajt
-      mennyiseg: 5 dkg
+      portion: 5 dkg
     - name: Vöröshagyma
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Alaplé
-      mennyiseg: 15 dl
+      portion: 15 dl
     - name: Fokhagyma
-      mennyiseg: 2 gerezd
+      portion: 2 gerezd
     - name: Olívaolaj
-      mennyiseg: 3 ek
+      portion: 3 ek
     - name: Só
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Bors
-      mennyiseg: 1 mk
+      portion: 1 mk
   cookingSteps:
       - A spárgát tisztítsd meg, a fás részét törd le, és vágd 2-5 centis darabokra.
       - A csirkemelleket sózd, borsozd, és három-négy percig süsd olajon, majd add hozzá a spárgát, és párold puhára.
@@ -675,25 +675,25 @@ Csirkesaláta:
     - saláta
   ingredients:
     - name: Jégsaláta
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Paradicsom
-      mennyiseg: 3 db
+      portion: 3 db
     - name: Kígyóuborka
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Csirkemell
-      mennyiseg: 40 dkg
+      portion: 40 dkg
     - name: Szárnyas fűszerkeverék
-      mennyiseg: 2 tk
+      portion: 2 tk
     - name: Vöröshagyma
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Fokhagyma
-      mennyiseg: 1 gerezd
+      portion: 1 gerezd
     - name: Kenyér
-      mennyiseg: 3 db
+      portion: 3 db
     - name: Sajt
-      mennyiseg: 20 dkg
+      portion: 20 dkg
     - name: Natúr joghurt
-      mennyiseg: 100 ml
+      portion: 100 ml
   cookingSteps:
     - Megmossuk, majd apróra vágjuk a salátát, a paradicsomot, a kígyóuborkát, a hagymát. Beletesszük egy nagy tálba.
     - A csirkemellet apró kockákra vágjuk, megfűszerezzük szárnyas fűszerrel, majd kis lángon aranybarnára sütjük és hozzáadjuk a zöldségekhez.
@@ -709,23 +709,23 @@ Csőröge Fánk:
     - desszert
   ingredients:
     - name: Liszt
-      mennyiseg: 35 dkg
+      portion: 35 dkg
     - name: Vaj
-      mennyiseg: 1 ek
+      portion: 1 ek
     - name: Cukor
-      mennyiseg: 1 ek
+      portion: 1 ek
     - name: Só
-      mennyiseg: 1 csipet
+      portion: 1 csipet
     - name: Tojás
-      mennyiseg: 4 db
+      portion: 4 db
     - name: Tejföl
-      mennyiseg: 300 g
+      portion: 300 g
     - name: Szódabikarbóna
-      mennyiseg: 1 kk
+      portion: 1 kk
     - name: Ecet
-      mennyiseg: 1 csepp
+      portion: 1 csepp
     - name: Napraforgóolaj
-      mennyiseg: 2 dl
+      portion: 2 dl
   comments:
     - A vajat belemorzsoljuk a lisztbe.
     - Hozzáadjuk a cukrot és a sót.
@@ -745,19 +745,19 @@ Cukkinispagetti:
     - köret
   ingredients:
     - name: Cukkini
-      mennyiseg: 4 db
+      portion: 4 db
     - name: Parmezán sajt
-      mennyiseg: 10 dkg
+      portion: 10 dkg
     - name: Fokhagyma
-      mennyiseg: 2 gerezd
+      portion: 2 gerezd
     - name: Olívaolaj
-      mennyiseg: 3 ek
+      portion: 3 ek
     - name: Bazsalikom
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Só
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Bors
-      mennyiseg: 2 csipet
+      portion: 2 csipet
   cookingSteps:
     - A cukkinit mosd meg, csepegtesd le. Ha van spirálozód, vesd be. Annak hiányában reszeld vékony, hosszú csíkokra nagyobb lyukú reszelőn.
     - Ha kevésbé roppanósan szereted, sózd be, és pihentesd 30 percig, majd csavard ki belőle a vizet.
@@ -776,19 +776,19 @@ Cukkinitócsni:
     - köret
   ingredients:
     - name: Cukkini
-      mennyiseg: 300 g
+      portion: 300 g
     - name: Só
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Bors
-      mennyiseg: 2 csipet
+      portion: 2 csipet
     - name: Liszt
-      mennyiseg: 30 g
+      portion: 30 g
     - name: Fokhagyma
-      mennyiseg: 1 gerezd
+      portion: 1 gerezd
     - name: Cheddar sajt (reszelt)
-      mennyiseg: 50 g
+      portion: 50 g
     - name: Tojás
-      mennyiseg: 1 db
+      portion: 1 db
   cookingSteps:
     - A cukkinit megmossuk, levágjuk a két végét és lereszeljük.
     - Összekeverjük {{ Só }} sóval és 15 percre félrerakjuk.
@@ -812,23 +812,23 @@ Cukkini darált hússal töltve:
     - vacsora
   ingredients:
     - name: Cukkini
-      mennyiseg: 2 db
+      portion: 2 db
     - name: Só
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Olívaolaj
-      mennyiseg: 1 ek
+      portion: 1 ek
     - name: Vöröshagyma
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Darált hús
-      mennyiseg: 40 dkg
+      portion: 40 dkg
     - name: Bors
-      mennyiseg: 2 csipet
+      portion: 2 csipet
     - name: Fűszer paprika
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Tejföl
-      mennyiseg: 300 g
+      portion: 300 g
     - name: Gouda sajt
-      mennyiseg: 30 dkg
+      portion: 30 dkg
   cookingSteps:
     - A cukkinit megmossuk, majd hosszában félbevágjuk. Kivájjuk a közepét, kis csónakokat készítünk. A csónakokat besózzuk, és elkészítjük a tölteléket.
     - Az olajon megdinszteljük az apróra vágott hagymát.
@@ -845,27 +845,27 @@ Diós-almás sajtsaláta:
     - saláta
   ingredients:
     - name: Tejföl
-      mennyiseg: 450 g
+      portion: 450 g
     - name: Majonéz
-      mennyiseg: 7 ek
+      portion: 7 ek
     - name: Mustár
-      mennyiseg: 1 ek
+      portion: 1 ek
     - name: Dió
-      mennyiseg: 100 g
+      portion: 100 g
     - name: Trappista sajt
-      mennyiseg: 20 dkg
+      portion: 20 dkg
     - name: Alma
-      mennyiseg: 2 db
+      portion: 2 db
     - name: Lilahagyma
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Cukor
-      mennyiseg: 2 ek
+      portion: 2 ek
     - name: Só
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Bors
-      mennyiseg: 1 kk
+      portion: 1 kk
     - name: Ecet
-      mennyiseg: 1 kk
+      portion: 1 kk
   cookingSteps:
     - A lilahagymát félbevágjuk, vékonyan felszeleteljük.
     - Tálba tesszük, majd hozzáadjuk a diót, a sajtot és az almát.
@@ -880,17 +880,17 @@ Diós-almás sajtsaláta:
     - köret
   ingredients:
     - name: Édesburgonya
-      mennyiseg: 30 dkg
+      portion: 30 dkg
     - name: Só
-      mennyiseg: 1 csipet
+      portion: 1 csipet
     - name: Vaj
-      mennyiseg: 5 dkg
+      portion: 5 dkg
     - name: Fokhagyma
-      mennyiseg: 2 gerezd
+      portion: 2 gerezd
     - name: Szerecsendió
-      mennyiseg: 1 kh
+      portion: 1 kh
     - name: Mozzarella sajt
-      mennyiseg: 5 dkg
+      portion: 5 dkg
 
 Fahéjas almakarika:
   defaultPortion: 4
@@ -900,15 +900,15 @@ Fahéjas almakarika:
     - desszert
   ingredients:
     - name: Leveles tészta
-      mennyiseg: 1 csomag
+      portion: 1 csomag
     - name: Alma
-      mennyiseg: 2 db
+      portion: 2 db
     - name: Tojás
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Cukor
-      mennyiseg: 0.5 bögre
+      portion: 0.5 bögre
     - name: Fahéj
-      mennyiseg: 1 ek
+      portion: 1 ek
   comments:
     - Fahéj ízlés szerint
 
@@ -921,20 +921,20 @@ Fasírt:
     - vacsora
   ingredients:
     - name: Darált hús
-      mennyiseg: 1 kg
+      portion: 1 kg
     - name: Tojás
-      mennyiseg: 2 db
+      portion: 2 db
     - name: Vöröshagyma
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Fokhagyma
       # 1 fej fokhagyma recept szerint
-      mennyiseg: 3 gerezd
+      portion: 3 gerezd
     - name: Só
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Bors
-      mennyiseg: 1 mk
+      portion: 1 mk
     - name: Zsemlemorzsa
-      mennyiseg: 50 g
+      portion: 50 g
   cookingSteps:
     - A sütőt 180 fokra előmelegítjük.
     - A darált húst összekeverjük a tojással.
@@ -955,23 +955,23 @@ Fitness saláta:
     - saláta
   ingredients:
     - name: Jégsaláta
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Paradicsom
-      mennyiseg: 2 db
+      portion: 2 db
     - name: Kígyóuborka
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Kaliforniai paprika (piros)
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Kaliforniai paprika (sárga)
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Kukorica (konzerv)
-      mennyiseg: 150 g
+      portion: 150 g
     - name: Újhagyma
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Natúr joghurt
-      mennyiseg: 2 dl
+      portion: 2 dl
     - name: Petrezselyem
-      mennyiseg: 1 ek
+      portion: 1 ek
   cookingSteps:
     - Nagyon jól megmossuk a zöldségeket, és egészen apró kockákra daraboljuk. A friss zöldfűszereket finomra vágjuk.
     - A joghurtot, ha szükséges, egy pici vízzel hígítjuk, és a zöldfűszerek felét belekeverjük.
@@ -987,17 +987,17 @@ Fokhagymával és mézzel sült sárgarépa:
     - vacsora
   ingredients:
     - name: Sárgarépa
-      mennyiseg: 5 db
+      portion: 5 db
     - name: Fokhagyma
-      mennyiseg: 6 gerezd
+      portion: 6 gerezd
     - name: Méz
-      mennyiseg: 3 ek
+      portion: 3 ek
     - name: Olívaolaj
-      mennyiseg: 3 ek
+      portion: 3 ek
     - name: Só
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Bors
-      mennyiseg: 1 csipet
+      portion: 1 csipet
   cookingSteps:
     - A répát vágjuk néhány centis csíkokra, tegyük egy tálba, sózzuk, borsozzuk és locsoljuk meg olajjal, majd forgassuk össze.
     - Melegítsük elő a sütőt 180 fokra.
@@ -1013,19 +1013,19 @@ Forralt bor (gyümölcsös-fűszeres):
     - ital
   ingredients:
     - name: Narancslé
-      mennyiseg: 2 dl
+      portion: 2 dl
     - name: Fahéjrúd
-      mennyiseg: 2 db
+      portion: 2 db
     - name: Csillagánizs
-      mennyiseg: 3 db
+      portion: 3 db
     - name: Szegfűszeg
-      mennyiseg: 8 db
+      portion: 8 db
     - name: Vörösbor
-      mennyiseg: 7 dl
+      portion: 7 dl
     - name: Alma
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Narancs
-      mennyiseg: 1 db
+      portion: 1 db
 
 Frankfurti leves:
   defaultPortion: 8
@@ -1035,31 +1035,31 @@ Frankfurti leves:
     - leves
   ingredients:
     - name: Sertészsír
-      mennyiseg: 1 ek
+      portion: 1 ek
     - name: Vöröshagyma
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Fokhagyma
-      mennyiseg: 2 gerezd
+      portion: 2 gerezd
     - name: Fűszer paprika
-      mennyiseg: 1 ek
+      portion: 1 ek
     - name: Köménymag
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Burgonya
-      mennyiseg: 4 db
+      portion: 4 db
     - name: Kelkáposzta
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Virsli
-      mennyiseg: 10 dkg
+      portion: 10 dkg
     - name: Só
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Bors
-      mennyiseg: 1 mk
+      portion: 1 mk
     - name: Tejföl
-      mennyiseg: 175 g
+      portion: 175 g
     - name: Finomliszt
-      mennyiseg: 1 ek
+      portion: 1 ek
     - name: Víz
-      mennyiseg: 2 l
+      portion: 2 l
 
 Fűszeres csirkecsíkok:
   defaultPortion: 4
@@ -1070,19 +1070,19 @@ Fűszeres csirkecsíkok:
     - vacsora
   ingredients:
     - name: Csirkemell
-      mennyiseg: 2 db
+      portion: 2 db
     - name: Fokhagyma
-      mennyiseg: 2 gerezd
+      portion: 2 gerezd
     - name: Mustár
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Fűszerkömény
-      mennyiseg: 1 kvk
+      portion: 1 kvk
     - name: Só
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Bors
-      mennyiseg: 2 csipet
+      portion: 2 csipet
     - name: Olívaolaj
-      mennyiseg: 2 ek
+      portion: 2 ek
   cookingSteps:
     - A csirkemellet mosd meg, törölgesd szárazra, majd vágd vékony csíkokra, és sózd be.
     - Az olajat keverd össze a mustárral, a zúzott fokhagymával, a köménnyel és a borssal, majd kend be vele a hússzeleteket.
@@ -1099,23 +1099,23 @@ Fűszeres csirkeszárnyak:
     - ebéd
   ingredients:
     - name: Csirkeszárny
-      mennyiseg: 1 kg
+      portion: 1 kg
     - name: Olívaolaj
-      mennyiseg: 0.5 dl
+      portion: 0.5 dl
     - name: Fokhagyma
-      mennyiseg: 3 gerezd
+      portion: 3 gerezd
     - name: Piros paprika
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Citrom
-      mennyiseg: 0.5 db
+      portion: 0.5 db
     - name: Só
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Bors
-      mennyiseg: 1 mk
+      portion: 1 mk
     - name: Chili
-      mennyiseg: 1 mk
+      portion: 1 mk
     - name: Kakukkfű
-      mennyiseg: 1 mk
+      portion: 1 mk
   cookingSteps:
     - A szárnyakat mosd meg, tisztítsd meg, a hegyüket vágd le.
     - Keverd össze az olívaolajat a sóval, a borssal, a pirospaprikával, a zúzott fokhagymával, és rakd hozzá a citrom levét.
@@ -1133,18 +1133,18 @@ Fűszeres édesburgonya:
     - köret
   ingredients:
     - name: Édesburgonya
-      mennyiseg: 1 kg
+      portion: 1 kg
     - name: Olívaolaj
-      mennyiseg: 2 ek
+      portion: 2 ek
     - name: Lilahagyma
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Rozmaring
       # 1 ág rozmaring
-      mennyiseg: 1 mk
+      portion: 1 mk
     - name: Só
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Bors
-      mennyiseg: 1 csipet
+      portion: 1 csipet
 
 Fűszeres édesburgonya-gratin:
   defaultPortion: 4
@@ -1154,25 +1154,25 @@ Fűszeres édesburgonya-gratin:
     - köret
   ingredients:
     - name: Édesburgonya
-      mennyiseg: 80 dkg
+      portion: 80 dkg
     - name: Só
-      mennyiseg: 3 csipet
+      portion: 3 csipet
     - name: Bors
-      mennyiseg: 1 csipet
+      portion: 1 csipet
     - name: Kakukkfű
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Rozmaring
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Fokhagyma
-      mennyiseg: 1 gerezd
+      portion: 1 gerezd
     - name: Szerecsendió
-      mennyiseg: 1 kh
+      portion: 1 kh
     - name: Vaj
-      mennyiseg: 1 ek
+      portion: 1 ek
     - name: Sajt
-      mennyiseg: 20 dkg
+      portion: 20 dkg
     - name: Főzőtejszín
-      mennyiseg: 4 dl
+      portion: 4 dl
   cookingSteps:
     - A(z) {{ Édesburgonya }} édesburgonyát tisztítsuk meg, majd hajszálvékonyan szeleteljük fel.
     - Ezután forgassuk egybe a(z) {{ Só }} sóval, {{ Bors }} borssal, {{ Kakukkfű }} kakukkfűvel, {{ Rozmaring }} rozmaringgal, {{ Fokhagyma }} fokhagymával és {{ Szerecsendió }} szerecsendióval.
@@ -1189,23 +1189,23 @@ Gofri:
     - desszert
   ingredients:
     - name: Sütőpor
-      mennyiseg: 1 csomag
+      portion: 1 csomag
     - name: Finomliszt
-      mennyiseg: 400 g
+      portion: 400 g
     - name: Só
-      mennyiseg: 1 csipet
+      portion: 1 csipet
     - name: Kristálycukor
-      mennyiseg: 120 g
+      portion: 120 g
     - name: Vaj
-      mennyiseg: 100 g
+      portion: 100 g
     - name: Vaníliás cukor
-      mennyiseg: 12 g
+      portion: 12 g
     - name: Tojás
-      mennyiseg: 3 db
+      portion: 3 db
     - name: Tej
-      mennyiseg: 500 ml
+      portion: 500 ml
     - name: Étolaj
-      mennyiseg: 1 ek
+      portion: 1 ek
   cookingSteps:
     - A sütőporos gofri recept elkészítését a gofri tészta bekeverésével kezdjük.
     - Ehhez először {{ Sütőpor }} sütőport, a {{ Finomliszt }} lisztet és a {{ Só }} sót összekeverjük.
@@ -1221,23 +1221,23 @@ Gouda sajtos pogácsa:
     - desszert
   ingredients:
     - name: Gouda sajt
-      mennyiseg: 15 dkg
+      portion: 15 dkg
     - name: Tojás
-      mennyiseg: 2 db
+      portion: 2 db
     - name: Tejföl
-      mennyiseg: 10 dkg
+      portion: 10 dkg
     - name: Vaj
-      mennyiseg: 25 dkg
+      portion: 25 dkg
     - name: Élesztő
-      mennyiseg: 1 csomag
+      portion: 1 csomag
     - name: Finomliszt
-      mennyiseg: 25 dkg
+      portion: 25 dkg
     - name: Só
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Tojás
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Gouda sajt
-      mennyiseg: 8 dkg
+      portion: 8 dkg
   cookingSteps:
     - A sajt szélét vágjuk le, azt nem fogjuk használni, a többi részét reszeljük le.
     - A reszelt sajthoz adjuk hozzá a tojássárgáját, tejfölt és a puha vajat, az egészet keverjük össze.
@@ -1259,15 +1259,15 @@ Görög bab:
     - ebéd
   ingredients:
     - name: Vöröshagyma
-      mennyiseg: 4 db
+      portion: 4 db
     - name: Sertés comb
-      mennyiseg: 60 dkg
+      portion: 60 dkg
     - name: Zöldbab (mirelit)
-      mennyiseg: 2 kg
+      portion: 2 kg
     - name: Piros paprika
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Paradicsom püré
-      mennyiseg: 3 tk
+      portion: 3 tk
   comments:
     - A hagymát apróra vágjuk, a húst felkockázzuk.
     - A hagymát kevés olajon üvegesre pároljuk.
@@ -1287,54 +1287,54 @@ Görögös húsos palacsinta:
   ingredients:
     # A palacsintához
     - name: Liszt
-      mennyiseg: 20 dkg
+      portion: 20 dkg
     - name: Tojás
-      mennyiseg: 2 db
+      portion: 2 db
     - name: Szódavíz
-      mennyiseg: 2 dl
+      portion: 2 dl
     - name: Tej
-      mennyiseg: 2 dl
+      portion: 2 dl
     - name: Só
-      mennyiseg: 2 csipet
+      portion: 2 csipet
     - name: Bors
-      mennyiseg: 2 csipet
+      portion: 2 csipet
     - name: Kakukkfű
-      mennyiseg: 1 mk
+      portion: 1 mk
     # A töltelékhez
     - name: Darált hús
-      mennyiseg: 500 g
+      portion: 500 g
     - name: Vöröshagyma
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Fokhagyma
-      mennyiseg: 5 gerezd
+      portion: 5 gerezd
     - name: Főzőtejszín
-      mennyiseg: 3 dl
+      portion: 3 dl
     - name: Mustár
-      mennyiseg: 1 ek
+      portion: 1 ek
     - name: Só
-      mennyiseg: 1 kk
+      portion: 1 kk
     - name: Bors
-      mennyiseg: 1 kk
+      portion: 1 kk
     - name: Kakukkfű
-      mennyiseg: 1 kk
+      portion: 1 kk
     - name: Oregánó
-      mennyiseg: 1 kk
+      portion: 1 kk
     - name: Majoranna
-      mennyiseg: 1 kk
+      portion: 1 kk
     # fűszerkeverék vagy Fűszer paprika
     - name: Fűszerkeverék
-      mennyiseg: 1 kk
+      portion: 1 kk
     - name: Rozmaring
-      mennyiseg: 1 kk
+      portion: 1 kk
     - name: Cukor
-      mennyiseg: 1 csipet
+      portion: 1 csipet
     #  A tetejére
     - name: Tejföl
-      mennyiseg: 175 g
+      portion: 175 g
     - name: Mozzarella sajt
-      mennyiseg: 10 dkg
+      portion: 10 dkg
     - name: Fokhagyma
-      mennyiseg: 2 gerezd
+      portion: 2 gerezd
 
 Görög joghurtos torta:
   defaultPortion: 6
@@ -1345,19 +1345,19 @@ Görög joghurtos torta:
     - új
   ingredients:
     - name: Keményítő
-      mennyiseg: 3 ek
+      portion: 3 ek
     - name: Tojás
-      mennyiseg: 4 db
+      portion: 4 db
     - name: Só
-      mennyiseg: 1 csipet
+      portion: 1 csipet
     - name: Cukor
-      mennyiseg: 3 ek
+      portion: 3 ek
     - name: Sütőpor
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Porcukor
-      mennyiseg: 5 g
+      portion: 5 g
     - name: Görög joghurt
-      mennyiseg: 400 g
+      portion: 400 g
   cookingSteps:
       - A sütőt előmelegítjük 180°C-ra.
       - Egy 18 cm átmérőjű tepsit kivajazunk és enyhén lisztezzünk ki.
@@ -1383,19 +1383,19 @@ Görög saláta:
     - saláta
   ingredients:
     - name: Paradicsom
-      mennyiseg: 4 db
+      portion: 4 db
     - name: Kígyóuborka
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Lilahagyma
-      mennyiseg: 4 db
+      portion: 4 db
     - name: Feta sajt
-      mennyiseg: 125 g
+      portion: 125 g
     - name: Olívaolaj
-      mennyiseg: 4 ek
+      portion: 4 ek
     - name: Citrom
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Bazsalikom
-      mennyiseg: 1 tk
+      portion: 1 tk
   comments:
     - opcionális: 20 dkg Olívabogyó konzerv
 
@@ -1407,27 +1407,27 @@ Habos almás:
     - desszert
   ingredients:
     - name: Alma
-      mennyiseg: 2 kg
+      portion: 2 kg
     - name: Fahéj
-      mennyiseg: 1 ek
+      portion: 1 ek
     - name: Cukor
-      mennyiseg: 200 g
+      portion: 200 g
     - name: Só
-      mennyiseg: 1 csipet
+      portion: 1 csipet
     - name: Tojás
-      mennyiseg: 4 db
+      portion: 4 db
     - name: Vaj
-      mennyiseg: 220 g
+      portion: 220 g
     - name: Cukor
-      mennyiseg: 120 g
+      portion: 120 g
     - name: Liszt
-      mennyiseg: 300 g
+      portion: 300 g
     - name: Sütőpor
-      mennyiseg: 7 g
+      portion: 7 g
     - name: Tej
-      mennyiseg: 110 ml
+      portion: 110 ml
     - name: Cukor
-      mennyiseg: 180 g
+      portion: 180 g
   cookingSteps:
     - A habos almás első lépéseként az almákat meghámozzuk, lereszeljük, majd elkeverjük a fahéjjal, a cukorral és egy csipet sóval.
     - Hagyjuk, hogy kicsit kiengedje a levét, majd egy konyharuhába borítjuk és kifacsarjuk, de nem teljesen, hagyunk benne egy kis nedvességet.
@@ -1446,27 +1446,27 @@ Hamburger:
     - vacsora
   ingredients:
     - name: Hamburger zsemle
-      mennyiseg: 2 db
+      portion: 2 db
     - name: Darált hús
-      mennyiseg: 30 dkg
+      portion: 30 dkg
     - name: Gouda sajt
-      mennyiseg: 5 dkg
+      portion: 5 dkg
     - name: Paradicsom
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Jégsaláta
-      mennyiseg: 0.5 db
+      portion: 0.5 db
     - name: Bacon (szeletelt)
-      mennyiseg: 5 dkg
+      portion: 5 dkg
     - name: Pirított hagyma
-      mennyiseg: 20 g
+      portion: 20 g
     - name: Csemege uborka (konzerv)
-      mennyiseg: 10 dkg
+      portion: 10 dkg
     - name: Jalapeno (konzerv)
-      mennyiseg: 5 dkg
+      portion: 5 dkg
     - name: Ketchup
-      mennyiseg: 5 dkg
+      portion: 5 dkg
     - name: Majonéz
-      mennyiseg: 5 dkg
+      portion: 5 dkg
   comments:
     - opcionális::
       - 10 dkg Csemege uborka (konzerv)
@@ -1481,17 +1481,17 @@ Hawaii csirkemell:
     - vacsora
   ingredients:
     - name: Csirkemell
-      mennyiseg: 40 dkg
+      portion: 40 dkg
     - name: Olívaolaj
-      mennyiseg: 3 ek
+      portion: 3 ek
     - name: Só
-      mennyiseg: 2 csipet
+      portion: 2 csipet
     - name: Bors
-      mennyiseg: 1 csipet
+      portion: 1 csipet
     - name: Trappista sajt
-      mennyiseg: 5 dkg
+      portion: 5 dkg
     - name: Ananász (konzerv)
-      mennyiseg: 15 dkg
+      portion: 15 dkg
   cookingSteps:
     - A csirkemellet sózzuk, borsozzuk.
     - Az olívaolajat felhevítjük, és pár perc alatt átpirítjuk benne a csirkemellet.
@@ -1507,17 +1507,17 @@ Hollandi mártás:
     - köret
   ingredients:
     - name: Vaj
-      mennyiseg: 20 dkg
+      portion: 20 dkg
     - name: Tojás
-      mennyiseg: 3 db
+      portion: 3 db
     - name: Só
-      mennyiseg: 1 csipet
+      portion: 1 csipet
     - name: Cayenne bors
-      mennyiseg: 0.25 tk
+      portion: 0.25 tk
     - name: Citrom
-      mennyiseg: 0.5 db
+      portion: 0.5 db
     - name: Fehérborecet
-      mennyiseg: 1 tk
+      portion: 1 tk
   cookingSteps:
     - A hollandi mártás elkészítéséhez a vajat egy nyeles forralóban melegíteni kezdjük, ügyelve arra, hogy 50 foknál ne hevítsük tovább. A melegítés közben keletkező habot teaszűrő vagy kanál segítségével eltávolítjuk a tetejéről. Ha felolvadt, félretesszük.
     - A tojássárgájákat egy nagy csipet sóval keverőtálba tesszük, és vízgőz fölött folyamatosan keverve (ügyelve, hogy ne süssük meg a tojást!), időnként akár leemelve a gőzről, sűrűsíteni kezdjük. 60-65 fokon kell tartanunk az emulziót!
@@ -1536,35 +1536,35 @@ Hortobágyi Palacsinta:
     - ebéd
   ingredients:
     - name: Vöröshagyma
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Fokhagyma
-      mennyiseg: 1 gerezd
+      portion: 1 gerezd
     - name: Napraforgóolaj
-      mennyiseg: 1 ek
+      portion: 1 ek
     - name: Darált hús
-      mennyiseg: 50 dkg
+      portion: 50 dkg
     - name: Paprika
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Paradicsom
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Só
-      mennyiseg: 1 mk
+      portion: 1 mk
     - name: Bors
-      mennyiseg: 0.5 mk
+      portion: 0.5 mk
     - name: Piros paprika
-      mennyiseg: 1 mk
+      portion: 1 mk
     - name: Tejföl
-      mennyiseg: 400 g
+      portion: 400 g
     - name: Finomliszt
-      mennyiseg: 20 dkg
+      portion: 20 dkg
     - name: Szódavíz
-      mennyiseg: 2 dl
+      portion: 2 dl
     - name: Tej
-      mennyiseg: 2 dl
+      portion: 2 dl
     - name: Tojás
-      mennyiseg: 2 db
+      portion: 2 db
     - name: Só
-      mennyiseg: 1 csipet
+      portion: 1 csipet
   cookingSteps:
     - A hortobágyi húsos palacsinta töltelékéhez a megtisztított, apróra vágott vöröshagymát és fokhagymát megdinszteljük az olajon.
     - Hozzáadjuk a darált húst, a felkarikázott paprikát, a felszeletelt paradicsomot.
@@ -1589,34 +1589,34 @@ Illatos omlós csirkemell:
     - ebéd
   ingredients:
     - name: Csirkemell
-      mennyiseg: 60 dkg
+      portion: 60 dkg
     - name: Tojás
-      mennyiseg: 3 db
+      portion: 3 db
     - name: Só
-      mennyiseg: 1 kk
+      portion: 1 kk
     - name: Bors
-      mennyiseg: 1 csipet
+      portion: 1 csipet
     - name: Keményítő
-      mennyiseg: 5 ek
+      portion: 5 ek
     - name: Napraforgóolaj
-      mennyiseg: 4 dl
+      portion: 4 dl
     # A mártáshoz
     - name: Ketchup
-      mennyiseg: 200 ml
+      portion: 200 ml
     - name: Balzsamecet (fehér)
-      mennyiseg: 0.5 dl
+      portion: 0.5 dl
     - name: Méz
-      mennyiseg: 0.5 dl
+      portion: 0.5 dl
     - name: Szójaszósz
-      mennyiseg: 3 ek
+      portion: 3 ek
     - name: Gyömbér
-      mennyiseg: 1 kk
+      portion: 1 kk
     - name: Fokhagyma
-      mennyiseg: 1 gerezd
+      portion: 1 gerezd
     - name: Vöröshagyma
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Só
-      mennyiseg: 1 csipet
+      portion: 1 csipet
 
 Karfiolsteak:
   defaultPortion: 2
@@ -1627,19 +1627,19 @@ Karfiolsteak:
     - vacsora
   ingredients:
     - name: Karfiol
-      mennyiseg: 2 db
+      portion: 2 db
     - name: Piros paprika
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Curry
-      mennyiseg: 2 tk
+      portion: 2 tk
     - name: Bors
-      mennyiseg: 0.5 tk
+      portion: 0.5 tk
     - name: Só
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Fokhagymapor
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Napraforgóolaj
-      mennyiseg: 4 ek
+      portion: 4 ek
   cookingSteps:
     - A fűszeres karfiolsteak esetében érdemes a fűszerkeverék hozzávalóinak összekeverésével kezdeni.
     - A karfiolból 3-4 cm vastagságú steakeket vágunk.
@@ -1654,21 +1654,21 @@ Karfiolsteak sajtszósszal:
     - vacsora
   ingredients:
     - name: Karfiol
-      mennyiseg: 2 db
+      portion: 2 db
     - name: Pirított hagyma
-      mennyiseg: 50 g
+      portion: 50 g
     - name: Piros paprika
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Curry
-      mennyiseg: 2 tk
+      portion: 2 tk
     - name: Bors
-      mennyiseg: 0.5 tk
+      portion: 0.5 tk
     - name: Só
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Fokhagymapor
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Napraforgóolaj
-      mennyiseg: 4 ek
+      portion: 4 ek
     - ref: Sajtszósz
   cookingSteps:
     - A fűszeres karfiolsteak esetében érdemes a fűszerkeverék hozzávalóinak összekeverésével kezdeni.
@@ -1690,23 +1690,23 @@ Kefíres csirke:
     - ebéd
   ingredients:
     - name: Piros paprika
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Fűszerkeverék
-      mennyiseg: 1 ek
+      portion: 1 ek
     - name: Napraforgóolaj
-      mennyiseg: 4 dl
+      portion: 4 dl
     - name: Liszt
-      mennyiseg: 20 dkg
+      portion: 20 dkg
     - name: Sütőpor
-      mennyiseg: 1 ek
+      portion: 1 ek
     - name: Só
-      mennyiseg: 0.5 tk
+      portion: 0.5 tk
     - name: Csirkemell
-      mennyiseg: 50 dkg
+      portion: 50 dkg
     - name: Só
-      mennyiseg: 1.5 tk
+      portion: 1.5 tk
     - name: Kaukázusi kefír
-      mennyiseg: 3 dl
+      portion: 3 dl
   comments:
     - szeletelt csirkemellből nem érdemes készíteni, mert túl puha a bunda, és könnyen leszakad a csirkéről
   cookingSteps:
@@ -1728,29 +1728,29 @@ Kínai szezámmagos csirke:
   ingredients:
     # a bundához
     - name: Napraforgóolaj
-      mennyiseg: 1 ek
+      portion: 1 ek
     # a sütéshez
     - name: Napraforgóolaj
-      mennyiseg: 3 dl
+      portion: 3 dl
     # chili ízlés szerint
     - name: Chili
-      mennyiseg: 1 mk
+      portion: 1 mk
     - name: Sütőpor
-      mennyiseg: 1.5 kk
+      portion: 1.5 kk
     - name: Keményítő
-      mennyiseg: 3 ek
+      portion: 3 ek
     - name: Méz
-      mennyiseg: 2 tk
+      portion: 2 tk
     - name: Szezámmag
-      mennyiseg: 3 ek
+      portion: 3 ek
     - name: Finomliszt
-      mennyiseg: 6 ek
+      portion: 6 ek
     - name: Csirkemell
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Tojás
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Ketchup
-      mennyiseg: 100 g
+      portion: 100 g
 
 Körtés-parmezános saláta:
   defaultPortion: 2
@@ -1761,33 +1761,33 @@ Körtés-parmezános saláta:
     - saláta
   ingredients:
     - name: Napraforgóolaj
-      mennyiseg: 2 ek
+      portion: 2 ek
     # A salátához
     - name: Körte
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Madársaláta
-      mennyiseg: 50 g
+      portion: 50 g
     - name: Rukkola
-      mennyiseg: 50 g
+      portion: 50 g
     - name: Parmezán sajt
-      mennyiseg: 20 g
+      portion: 20 g
     - name: Dió
-      mennyiseg: 2 ek
+      portion: 2 ek
     # Az öntethez
     - name: Olívaolaj
-      mennyiseg: 35 ml
+      portion: 35 ml
     - name: Balzsamecet (fehér)
-      mennyiseg: 10 ml
+      portion: 10 ml
     - name: Mustár
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Méz
-      mennyiseg: 1 ek
+      portion: 1 ek
     - name: Só
-      mennyiseg: 1 csipet
+      portion: 1 csipet
     - name: Bors
-      mennyiseg: 1 csipet
+      portion: 1 csipet
     - name: Citromlé
-      mennyiseg: 3 csepp
+      portion: 3 csepp
   comments:
     - Az öntethez::
       - "{{ Olívaolaj }} Olívaolaj"
@@ -1815,23 +1815,23 @@ Krumpli főzelék fasírttal:
     - ebéd
   ingredients:
     - name: Napraforgóolaj
-      mennyiseg: 2 ek
+      portion: 2 ek
     - name: Fűszer paprika
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Burgonya
-      mennyiseg: 70 dkg
+      portion: 70 dkg
     - name: Majoranna
-      mennyiseg: 2 ek
+      portion: 2 ek
     - name: Babérlevél
-      mennyiseg: 3 db
+      portion: 3 db
     - name: Só
-      mennyiseg: 1 kk
+      portion: 1 kk
     - name: Tejföl
-      mennyiseg: 2 dl
+      portion: 2 dl
     - name: Finomliszt
-      mennyiseg: 1.5 dkg
+      portion: 1.5 dkg
     - name: Víz
-      mennyiseg: 4 dl
+      portion: 4 dl
     - ref: Fasírt
 
 Krumplipüré:
@@ -1842,15 +1842,15 @@ Krumplipüré:
     - köret
   ingredients:
     - name: Krumpli
-      mennyiseg: 1 kg
+      portion: 1 kg
     - name: Só
-      mennyiseg: 1 kk
+      portion: 1 kk
     - name: Tejföl
-      mennyiseg: 1 dl
+      portion: 1 dl
     - name: Bors
-      mennyiseg: 1 csipet
+      portion: 1 csipet
     - name: Szerecsendió
-      mennyiseg: 1 csipet
+      portion: 1 csipet
   comments:
     - 1 dl tejföl vagy 2 dl tej
 
@@ -1862,17 +1862,17 @@ Krumplipüré (póréhagymás):
     - köret
   ingredients:
     - name: Burgonya
-      mennyiseg: 40 dkg
+      portion: 40 dkg
     - name: Póréhagyma
-      mennyiseg: 10 dkg
+      portion: 10 dkg
     - name: Só
-      mennyiseg: 1 kk
+      portion: 1 kk
     - name: Bors
-      mennyiseg: 1 csipet
+      portion: 1 csipet
     - name: Vaj
-      mennyiseg: 2 ek
+      portion: 2 ek
     - name: Tejföl
-      mennyiseg: 1 dl
+      portion: 1 dl
   cookingSteps:
     - A burgonyát megtisztítjuk, kis kockákra vágjuk, sós vízben megfőzzük.
     - Közben a vajon a félbe-, majd csíkokra vágott pórét kevés sóval megszórva, takaréklángon megpuhítjuk.
@@ -1886,21 +1886,21 @@ Kukoricasaláta:
     - saláta
   ingredients:
     - name: Kukorica (konzerv)
-      mennyiseg: 140 g
+      portion: 140 g
     - name: Vöröshagyma
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Petrezselyem
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Majonéz
-      mennyiseg: 2 ek
+      portion: 2 ek
     - name: Tejföl
-      mennyiseg: 175 g
+      portion: 175 g
     - name: Só
-      mennyiseg: 1 csipet
+      portion: 1 csipet
     - name: Cukor
-      mennyiseg: 0.5 tk
+      portion: 0.5 tk
     - name: Bors
-      mennyiseg: 0.5 csipet
+      portion: 0.5 csipet
 
 Lazac:
   defaultPortion: 2
@@ -1911,19 +1911,19 @@ Lazac:
     - vacsora
   ingredients:
     - name: Lazac
-      mennyiseg: 36 dkg
+      portion: 36 dkg
     - name: Só
-      mennyiseg: 2 csipet
+      portion: 2 csipet
     - name: Bors
-      mennyiseg: 1 csipet
+      portion: 1 csipet
     - name: Rozmaring
-      mennyiseg: 2 csipet
+      portion: 2 csipet
     - name: Kakukkfű
-      mennyiseg: 2 csipet
+      portion: 2 csipet
     - name: Napraforgóolaj
-      mennyiseg: 2 ek
+      portion: 2 ek
     - name: Vaj
-      mennyiseg: 1 ek
+      portion: 1 ek
   cookingSteps:
     - A lazacfilék egyik felét csak sózzuk. A másik felét is megszórjuk sóval, és a többi fűszerrel is, ízlés szerint.
     - A serpenyőben az olajat felhevítjük, majd a lazac fűszeresebb felével beletesszük.
@@ -1940,21 +1940,21 @@ Lazac brokkolival:
     - vacsora
   ingredients:
     - name: Lazac
-      mennyiseg: 40 dkg
+      portion: 40 dkg
     - name: Brokkoli
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Só
-      mennyiseg: 2 csipet
+      portion: 2 csipet
     - name: Bors
-      mennyiseg: 1 csipet
+      portion: 1 csipet
     - name: Citrombors
-      mennyiseg: 1 csipet
+      portion: 1 csipet
     - name: Olívaolaj
-      mennyiseg: 2 ek
+      portion: 2 ek
     - name: Vaj
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Petrezselyem
-      mennyiseg: 1 mk
+      portion: 1 mk
 
 Lazacos tagliatelle:
   defaultPortion: 4
@@ -1964,27 +1964,27 @@ Lazacos tagliatelle:
     - ebéd
   ingredients:
     - name: Olívaolaj
-      mennyiseg: 0.5 dl
+      portion: 0.5 dl
     - name: Lazac
-      mennyiseg: 250 g
+      portion: 250 g
     - name: Fokhagyma
-      mennyiseg: 4 gerezd
+      portion: 4 gerezd
     - name: Fehérbor
-      mennyiseg: 1 dl
+      portion: 1 dl
     - name: Paradicsom püré
-      mennyiseg: 2 dl
+      portion: 2 dl
     - name: Főzőtejszín
-      mennyiseg: 1.5 dl
+      portion: 1.5 dl
     - name: Víz
-      mennyiseg: 1 dl
+      portion: 1 dl
     - name: Tagliatelle tészta
-      mennyiseg: 0.5 kg
+      portion: 0.5 kg
     - name: Só
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Bors
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Petrezselyem
-      mennyiseg: 5 g
+      portion: 5 g
   cookingSteps:
     - A tésztához egy lábasban vizet forralunk. Jól megsózzuk. Ha felforrt, beletesszük a tésztát, és al dente-re főzzük.
     - A szószhoz a lazacokat kis kockákra vágjuk, majd az olívaolajon 2 perc alatt megpirítjuk. A lazacot kiszedjük, félretesszük.
@@ -2004,19 +2004,19 @@ Lecsó:
     - ebéd
   ingredients:
     - name: Paradicsom
-      mennyiseg: 40 dkg
+      portion: 40 dkg
     - name: Paprika
-      mennyiseg: 80 dkg
+      portion: 80 dkg
     - name: Vöröshagyma
-      mennyiseg: 2 db
+      portion: 2 db
     - name: Kolozsvári szalonna
-      mennyiseg: 5 dkg
+      portion: 5 dkg
     - name: Napraforgóolaj
-      mennyiseg: 2 ek
+      portion: 2 ek
     - name: Piros paprika
-      mennyiseg: 1 ek
+      portion: 1 ek
     - name: Só
-      mennyiseg: 1 tk
+      portion: 1 tk
 
 Marokkói sárgarépa-saláta:
   defaultPortion: 4
@@ -2026,21 +2026,21 @@ Marokkói sárgarépa-saláta:
     - saláta
   ingredients:
     - name: Sárgarépa
-      mennyiseg: 2 db
+      portion: 2 db
     - name: Csicseriborsó (konzerv)
-      mennyiseg: 440 g
+      portion: 440 g
     - name: Lilahagyma
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Koriander
-      mennyiseg: 2 tk
+      portion: 2 tk
     - name: Narancs
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Római kömény
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Olívaolaj
-      mennyiseg: 2 ek
+      portion: 2 ek
     - name: Só
-      mennyiseg: 2 csipet
+      portion: 2 csipet
   cookingSteps:
     - A sárgarépákat megpucoljuk, és nagy lyukú reszelőn lereszeljük. Majd egy keverőtálba szórjuk.
     - Hozzáadjuk a leszűrt csicseriborsót, a vékonyra szelt lila hagymát, az apróra vágott friss koriandert, és meglocsoljuk egy narancsból kinyert lével.
@@ -2055,31 +2055,31 @@ Mediterrán bulgursaláta:
     - saláta
   ingredients:
     - name: Bulgur
-      mennyiseg: 200 g
+      portion: 200 g
     - name: Víz
-      mennyiseg: 4 dl
+      portion: 4 dl
     - name: Só
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Kígyóuborka
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Kaliforniai paprika (piros)
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Lilahagyma
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Csicseriborsó (konzerv)
-      mennyiseg: 240 g
+      portion: 240 g
     - name: Petrezselyem
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Olívaolaj
-      mennyiseg: 1 dl
+      portion: 1 dl
     - name: Fokhagyma
-      mennyiseg: 2 gerezd
+      portion: 2 gerezd
     - name: Só
-      mennyiseg: 2 csipet
+      portion: 2 csipet
     - name: Bors
-      mennyiseg: 1 csipet
+      portion: 1 csipet
     - name: Citrom
-      mennyiseg: 0.5 db
+      portion: 0.5 db
 
 Mexikói avokádósaláta:
   defaultPortion: 4
@@ -2090,27 +2090,27 @@ Mexikói avokádósaláta:
     - saláta
   ingredients:
     - name: Avokádó
-      mennyiseg: 3 db
+      portion: 3 db
     - name: Olívaolaj
-      mennyiseg: 40 ml
+      portion: 40 ml
     - name: Lime
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Agávé szirup
-      mennyiseg: 25 ml
+      portion: 25 ml
     - name: Petrezselyem
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Bors
-      mennyiseg: 1 csipet
+      portion: 1 csipet
     - name: Só
-      mennyiseg: 2 csipet
+      portion: 2 csipet
     - name: Kígyóuborka
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Kaliforniai paprika (zöld)
-      mennyiseg: 2 db
+      portion: 2 db
     - name: Jalapeno (konzerv)
-      mennyiseg: 3 dkg
+      portion: 3 dkg
     - name: Lilahagyma
-      mennyiseg: 1 db
+      portion: 1 db
   comments:
     - opcionális::
       - 3 dkg Jalapeno (konzerv)
@@ -2123,29 +2123,29 @@ Mexikói tonhalsaláta:
     - saláta
   ingredients:
     - name: Tonhal (konzerv)
-      mennyiseg: 180 g
+      portion: 180 g
     - name: Vörösbab (konzerv)
-      mennyiseg: 280 g
+      portion: 280 g
     - name: Kukorica (konzerv)
-      mennyiseg: 280 g
+      portion: 280 g
     - name: Kaliforniai paprika (piros)
-      mennyiseg: 0.5 db
+      portion: 0.5 db
     - name: Só
-      mennyiseg: 2 csipet
+      portion: 2 csipet
     - name: Bors
-      mennyiseg: 1 csipet
+      portion: 1 csipet
     - name: Olívaolaj
-      mennyiseg: 10 ml
+      portion: 10 ml
     - name: Citromlé
-      mennyiseg: 1 mk
+      portion: 1 mk
     - name: Cukor
-      mennyiseg: 0.5 mk
+      portion: 0.5 mk
     - name: Ecet
-      mennyiseg: 0.25 mk
+      portion: 0.25 mk
     - name: Ecet
-      mennyiseg: 0.25 mk
+      portion: 0.25 mk
     - name: Petrezselyem
-      mennyiseg: 1 tk
+      portion: 1 tk
   cookingSteps:
     - A tonhalkonzervet lecsepegtetjük, és egy nagyobb tálba rakjuk.
     - A vörösbabot és a kukoricát egy szűrőbe öntjük, átmossuk, lecsepegtetjük, és a tonhalhoz rakjuk.
@@ -2165,36 +2165,36 @@ Mézes-chilis csirkesaláta:
     - suli
   ingredients:
     - name: Csirkemell
-      mennyiseg: 25 dkg
+      portion: 25 dkg
     - name: Kínai kel
-      mennyiseg: 25 dkg
+      portion: 25 dkg
     - name: Kaliforniai paprika (piros)
-      mennyiseg: 0.5 db
+      portion: 0.5 db
     - name: Sárgarépa
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Lilahagyma
-      mennyiseg: 0.3 db
+      portion: 0.3 db
     - name: Chili
-      mennyiseg: 0.5 tk
+      portion: 0.5 tk
     - name: Só
-      mennyiseg: 2 csipet
+      portion: 2 csipet
     - name: Bors
-      mennyiseg: 1 csipet
+      portion: 1 csipet
     - name: Méz
-      mennyiseg: 1 ek
+      portion: 1 ek
     - name: Mogyoró olaj
-      mennyiseg: 1 ek
+      portion: 1 ek
     # Az öntethez
     - name: Szezámolaj
-      mennyiseg: 6 ek
+      portion: 6 ek
     - name: Rizsecet
-      mennyiseg: 2 ek
+      portion: 2 ek
     - name: Só
-      mennyiseg: 2 csipet
+      portion: 2 csipet
     - name: Bors
-      mennyiseg: 1 csipet
+      portion: 1 csipet
     - name: Fokhagyma
-      mennyiseg: 1 gerezd
+      portion: 1 gerezd
   cookingSteps:
     - A {{ Csirkemell }} csirkemellet félbevágjuk és vékonyan felcsíkozzuk, majd fűszerezzük {{ Só }} sóval, {{ Bors }} borssal, {{ Chili }} chilivel és picit állni hagyjuk.
     - Közben a {{ Kínai kel }} kínai kelt feldaraboljuk, a {{ Kaliforniai paprika (piros) }} paprikát felcsíkozzuk, a {{ Lilahagyma }} hagymát felszeleteljük, a {{ Sárgarépa }} répát gyufaszálra vágjuk.
@@ -2217,24 +2217,24 @@ Mézeskalács:
   ingredients:
 #    - tészta
     - name: Finomliszt
-      mennyiseg: 1 kg
+      portion: 1 kg
     - name: Porcukor
-      mennyiseg: 30 dkg
+      portion: 30 dkg
     - name: Szódabikarbóna
-      mennyiseg: 3 tk
+      portion: 3 tk
     - name: Mézeskalács fűszerkeverék
-      mennyiseg: 14 g
+      portion: 14 g
     - name: Margarin
-      mennyiseg: 30 dkg
+      portion: 30 dkg
     - name: Méz
-      mennyiseg: 250 ml
+      portion: 250 ml
     - name: Tojás
-      mennyiseg: 3 db
+      portion: 3 db
 #    - máz
     - name: Tojás
-      mennyiseg: 2 db
+      portion: 2 db
     - name: Porcukor
-      mennyiseg: 30 dkg
+      portion: 30 dkg
   comments:
     - tészta::
       - 1 kg finomliszt
@@ -2257,23 +2257,23 @@ Mézes-mustáros csirkemell:
     - vacsora
   ingredients:
     - name: Csirkemell
-      mennyiseg: 50 dkg
+      portion: 50 dkg
     - name: Liszt
-      mennyiseg: 3 ek
+      portion: 3 ek
     - name: Olívaolaj
-      mennyiseg: 3 ek
+      portion: 3 ek
     - name: Víz
-      mennyiseg: 3 dl
+      portion: 3 dl
     - name: Fokhagyma
-      mennyiseg: 3 gerezd
+      portion: 3 gerezd
     - name: Só
-      mennyiseg: 1 kk
+      portion: 1 kk
     - name: Fűszer paprika
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Méz
-      mennyiseg: 5 ek
+      portion: 5 ek
     - name: Mustár
-      mennyiseg: 5 ek
+      portion: 5 ek
   cookingSteps:
     - A csirkemellet csíkokra vágjuk. Megforgatjuk őket a lisztben.
     - Egy kevés olívaolajon fehéredésig pirítjuk a csirkemellcsíkokat.
@@ -2291,19 +2291,19 @@ Mozzarellás-pesztós csirkesaláta:
     - új
   ingredients:
     - name: Csirkemell
-      mennyiseg: 40 dkg
+      portion: 40 dkg
     - name: Jégsaláta
-      mennyiseg: 25 dkg
+      portion: 25 dkg
     - name: Mozzarella sajt (mini)
-      mennyiseg: 15 dkg
+      portion: 15 dkg
     - name: Pesto
-      mennyiseg: 2 ek
+      portion: 2 ek
     - name: Olívaolaj
-      mennyiseg: 5 ek
+      portion: 5 ek
     - name: Só
-      mennyiseg: 2 csipet
+      portion: 2 csipet
     - name: Bors
-      mennyiseg: 1 csipet
+      portion: 1 csipet
   cookingSteps:
     - A csirkemellet vágjuk kb 2x2 cm-es darabokra, majd sózzuk, borsozzuk, hagyjuk kicsit állni egy tányéron.
     - A salátát tépkedjük (ha előkészített, akkor öntsük) egy tál aljába.
@@ -2320,21 +2320,21 @@ Muffin:
     - desszert
   ingredients:
     - name: Tojás
-      mennyiseg: 2 db
+      portion: 2 db
     - name: Cukor
-      mennyiseg: 100 g
+      portion: 100 g
     - name: Vaj
-      mennyiseg: 120 g
+      portion: 120 g
     - name: Tej
-      mennyiseg: 175 ml
+      portion: 175 ml
     - name: Finomliszt
-      mennyiseg: 250 g
+      portion: 250 g
     - name: Vaníliás cukor
-      mennyiseg: 8 g
+      portion: 8 g
     - name: Sütőpor
-      mennyiseg: 2 tk
+      portion: 2 tk
     - name: Só
-      mennyiseg: 1 csipet
+      portion: 1 csipet
   comments:
     - 1 csomag Vaníliás cukor
 
@@ -2348,29 +2348,29 @@ Nyári saláta surimivel:
     - suli
   ingredients:
     - name: Petrezselyem
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Kígyóuborka
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Koktélparadicsom
-      mennyiseg: 20 db
+      portion: 20 db
     - name: Avokádó
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Kukorica (konzerv)
-      mennyiseg: 200 g
+      portion: 200 g
     - name: Lilahagyma
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Surimi
-      mennyiseg: 100 g
+      portion: 100 g
     - name: Olívaolaj
-      mennyiseg: 1 dl
+      portion: 1 dl
     - name: Fokhagyma
-      mennyiseg: 1 gerezd
+      portion: 1 gerezd
     - name: Citrom
-      mennyiseg: 0.5 db
+      portion: 0.5 db
     - name: Só
-      mennyiseg: 0.5 tk
+      portion: 0.5 tk
     - name: Bors
-      mennyiseg: 1 csipet
+      portion: 1 csipet
   cookingSteps:
       - A surimis nyári saláta elkészítéséhez a felaprított petrezselymet beleszórjuk egy tálba. 
       - Hozzáadjuk a kockára vágott uborkát, a félbevágott paradicsomokat és a megpucolt és feldarabolt avokádót.
@@ -2389,21 +2389,21 @@ Olaszos csirke:
     - vacsora
   ingredients:
     - name: Csirkemell
-      mennyiseg: 2 db
+      portion: 2 db
     - name: Paradicsom
-      mennyiseg: 0.5 kg
+      portion: 0.5 kg
     - name: Trappista sajt
-      mennyiseg: 30 dkg
+      portion: 30 dkg
     - name: Oregánó
-      mennyiseg: 4.5 g
+      portion: 4.5 g
     - name: Bazsalikom
-      mennyiseg: 2.5 g
+      portion: 2.5 g
     - name: Só
-      mennyiseg: 2 csipet
+      portion: 2 csipet
     - name: Bors
-      mennyiseg: 1 csipet
+      portion: 1 csipet
     - name: Napraforgóolaj
-      mennyiseg: 1 ek
+      portion: 1 ek
 
 Onigiri (おにぎり) - Tonhalas:
   defaultPortion: 6
@@ -2414,29 +2414,29 @@ Onigiri (おにぎり) - Tonhalas:
     - vacsora
   ingredients:
     - name: Nori lap
-      mennyiseg: 3 db
+      portion: 3 db
     - name: Szezámmag
-      mennyiseg: 2 tk
+      portion: 2 tk
     - name: Lenmag
-      mennyiseg: 2 tk
+      portion: 2 tk
     # Rizs
     - name: Rizs
-      mennyiseg: 400 g
+      portion: 400 g
     - name: Víz
-      mennyiseg: 8 dl
+      portion: 8 dl
     - name: Mirin
-      mennyiseg: 2 ek
+      portion: 2 ek
     - name: Szaké (főző)
-      mennyiseg: 2 ek
+      portion: 2 ek
     - name: Só
-      mennyiseg: 1 tk
+      portion: 1 tk
     # Töltelék
     - name: Tonhal (konzerv)
-      mennyiseg: 100 g
+      portion: 100 g
     - name: Majonéz
-      mennyiseg: 2 ek
+      portion: 2 ek
     - name: Szójaszósz
-      mennyiseg: 2 tk
+      portion: 2 tk
   cookingSteps:
     - Moss meg {{ Rizs }} rizst, kb 4-szer öblítsd
     - Tedd a rizst {{ Víz }} vízzel egy lábasba, és óvatosan keverd össze a hozzávalókkal::
@@ -2470,48 +2470,48 @@ Pad thai:
     - ebéd
   ingredients:
     - name: Vöröshagyma
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Fokhagyma
-      mennyiseg: 2 gerezd
+      portion: 2 gerezd
     - name: Gyömbér
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Chili
-      mennyiseg: 1 mk
+      portion: 1 mk
     - name: Csirkemell
-      mennyiseg: 200 g
+      portion: 200 g
     - name: Pak choi
-      mennyiseg: 0.5 db
+      portion: 0.5 db
     - name: Rizs tészta
-      mennyiseg: 150 g
+      portion: 150 g
     - name: Szezámolaj
-      mennyiseg: 2 ek
+      portion: 2 ek
     - name: Napraforgóolaj
-      mennyiseg: 5 ek
+      portion: 5 ek
     - name: Mungóbabcsíra
-      mennyiseg: 100 g
+      portion: 100 g
     - name: Tojás
-      mennyiseg: 2 db
+      portion: 2 db
     - name: Só
-      mennyiseg: 2 csipet
+      portion: 2 csipet
     - name: Bors
-      mennyiseg: 1 csipet
+      portion: 1 csipet
     - name: Mogyoró
-      mennyiseg: 100 g
+      portion: 100 g
     - name: Lime
-      mennyiseg: 0.5 db
+      portion: 0.5 db
     - name: Koriander
-      mennyiseg: 2 csipet
+      portion: 2 csipet
     # A marinádhoz
     - name: Tamarind szósz
-      mennyiseg: 2 tk
+      portion: 2 tk
     - name: Hal szósz
-      mennyiseg: 5 csepp
+      portion: 5 csepp
     - name: Szezámolaj
-      mennyiseg: 1 ek
+      portion: 1 ek
     - name: Víz
-      mennyiseg: 2 ek
+      portion: 2 ek
     - name: Barna cukor
-      mennyiseg: 1 tk
+      portion: 1 tk
   cookingSteps:
     - A {{ Rizs tészta }} rizstésztát fél órára hideg vízbe áztatjuk
     - Sós vízben 3-4 perc alatt készre főzzük, majd leszűrjük.
@@ -2547,19 +2547,19 @@ Palacsinta:
     - desszert
   ingredients:
     - name: Tojás
-      mennyiseg: 3 db
+      portion: 3 db
     - name: Cukor
-      mennyiseg: 2 ek
+      portion: 2 ek
     - name: Vaníliás cukor
-      mennyiseg: 2 g
+      portion: 2 g
     - name: Finomliszt
-      mennyiseg: 240 g
+      portion: 240 g
     - name: Tej
-      mennyiseg: 2.5 dl
+      portion: 2.5 dl
     - name: Szódavíz
-      mennyiseg: 2.5 dl
+      portion: 2.5 dl
     - name: Napraforgóolaj
-      mennyiseg: 0.5 dl
+      portion: 0.5 dl
   cookingSteps:
     - Egy tálba ütjük a tojásokat, majd a cukrokkal együtt kikeverjük.
     - Folyamatos keverés mellett hozzáadjuk a tojásos keverékhez a lisztet, majd a tejet és a szódát, végül az olajat, és csomómentesre keverjük.
@@ -2573,23 +2573,23 @@ Paprikás krumpli:
     - ebéd
   ingredients:
     - name: Burgonya
-      mennyiseg: 1 kg
+      portion: 1 kg
     - name: Kolbász
-      mennyiseg: 15 dkg
+      portion: 15 dkg
     - name: Virsli
-      mennyiseg: 20 dkg
+      portion: 20 dkg
     - name: Vöröshagyma
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Fokhagyma
-      mennyiseg: 2 gerezd
+      portion: 2 gerezd
     - name: Olívaolaj
-      mennyiseg: 4 ek
+      portion: 4 ek
     - name: Fűszer paprika
-      mennyiseg: 2 tk
+      portion: 2 tk
     - name: Só
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Bors
-      mennyiseg: 1 mk
+      portion: 1 mk
   cookingSteps:
     - A megtisztított krumplit felkarikázzuk vagy felkockázzuk, a hagymát apróra felvágjuk, virslit felkarikázzuk.
     - A kolbászt leforrázzuk, lehúzzuk a bőrét, felkarikázzuk. A forrázó vizet tartsuk meg, később rá önthetjük a krumplira.
@@ -2610,27 +2610,27 @@ Paradicsomos tészta:
     - ebéd
   ingredients:
     - name: Olívaolaj
-      mennyiseg: 2 ek
+      portion: 2 ek
     - name: Vöröshagyma
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Fokhagyma
-      mennyiseg: 2 gerezd
+      portion: 2 gerezd
     - name: Majoranna
-      mennyiseg: 1 mk
+      portion: 1 mk
     - name: Bazsalikom
-      mennyiseg: 1 mk
+      portion: 1 mk
     - name: Só
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Bors
-      mennyiseg: 1 csipet
+      portion: 1 csipet
     - name: Főzőtejszín
-      mennyiseg: 2 dl
+      portion: 2 dl
     - name: Paradicsom (konzerv)
-      mennyiseg: 45 dkg
+      portion: 45 dkg
     - name: Parmezán sajt
-      mennyiseg: 10 dkg
+      portion: 10 dkg
     - name: Fusilli tészta
-      mennyiseg: 40 dkg
+      portion: 40 dkg
 
 Párolt zöldbab:
   defaultPortion: 2
@@ -2640,13 +2640,13 @@ Párolt zöldbab:
     - köret
   ingredients:
     - name: Zöldbab (mirelit)
-      mennyiseg: 180 g
+      portion: 180 g
     - name: Vaj
-      mennyiseg: 0.5 ek
+      portion: 0.5 ek
     - name: Só
-      mennyiseg: 0.5 tk
+      portion: 0.5 tk
     - name: Bors
-      mennyiseg: 0.5 tk
+      portion: 0.5 tk
   cookingSteps:
     - A babok száras végét levágjuk, alaposan megmossuk, lecsepegtetjük, konyhai papírtörlővel szárítjuk
     - Egy serpenyőben a vajat megolvasztjuk
@@ -2660,11 +2660,11 @@ Pestos tészta:
     - ebéd
   ingredients:
     - name: Pesto
-      mennyiseg: 4 tk
+      portion: 4 tk
     - name: Parmezán sajt
-      mennyiseg: 20 g
+      portion: 20 g
     - name: Fusilli tészta
-      mennyiseg: 25 dkg
+      portion: 25 dkg
 
 Pihe-puha sajtos pogácsa:
   defaultPortion: 6
@@ -2674,23 +2674,23 @@ Pihe-puha sajtos pogácsa:
     - desszert
   ingredients:
     - name: Finomliszt
-      mennyiseg: 60 dkg
+      portion: 60 dkg
     - name: Tojás
-      mennyiseg: 3 db
+      portion: 3 db
     - name: Tejföl
-      mennyiseg: 175 g
+      portion: 175 g
     - name: Margarin
-      mennyiseg: 25 dkg
+      portion: 25 dkg
     - name: Só
-      mennyiseg: 4 tk
+      portion: 4 tk
     - name: Cukor
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Élesztő
-      mennyiseg: 5 dkg
+      portion: 5 dkg
     - name: Sajt (reszelt)
-      mennyiseg: 5 dkg
+      portion: 5 dkg
     - name: Tojásfehérje
-      mennyiseg: 1 db
+      portion: 1 db
   cookingSteps:
     - A lisztet egy nagy tálba öntjük, hozzáadjuk a cukrot, a sót és a tojásokat.
     - A margarint és a tejfölt a mikróban szobahőmérsékletűre melegítjük, és a tejfölbe belekeverjük az élesztőt.
@@ -2711,33 +2711,33 @@ Pirított csirkés quesadilla:
     - vacsora
   ingredients:
     - name: Csirkemell
-      mennyiseg: 200 g
+      portion: 200 g
     - name: Lilahagyma
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Kaliforniai paprika (piros)
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Jalapeno (konzerv)
-      mennyiseg: 20 g
+      portion: 20 g
     - name: Cayenne bors
-      mennyiseg: 0.5 tk
+      portion: 0.5 tk
     - name: Fűszer paprika
-      mennyiseg: 1 ek
+      portion: 1 ek
     - name: Fokhagymapor
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Római kömény
-      mennyiseg: 0.5 tk
+      portion: 0.5 tk
     - name: Só
-      mennyiseg: 0.5 tk
+      portion: 0.5 tk
     - name: Bors
-      mennyiseg: 1 csipet
+      portion: 1 csipet
     - name: Olívaolaj
-      mennyiseg: 3 ek
+      portion: 3 ek
     - name: Tortilla lap
-      mennyiseg: 4 db
+      portion: 4 db
     - name: Cheddar sajt (reszelt)
-      mennyiseg: 200 g
+      portion: 200 g
     - name: Kukorica (konzerv)
-      mennyiseg: 2 ek
+      portion: 2 ek
   cookingSteps:
     - Apróra vágunk {{ Lilahagyma }} lilahagymát, és {{ Kaliforniai paprika (piros) }} kaliforniai paprikát
     - "{{ Csirkemell }} csirkemellet nagyon apróra vágunk, majd {{ Olívaolaj }} olívaolajon elkezdjük lepirítani"
@@ -2763,13 +2763,13 @@ Piskóta tojásfehérjéből:
     - desszert
   ingredients:
     - name: Tojásfehérje
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Cukor
-      mennyiseg: 2 dkg
+      portion: 2 dkg
     - name: Finomliszt
-      mennyiseg: 3 dkg
+      portion: 3 dkg
     - name: Vaj
-      mennyiseg: 2 dkg
+      portion: 2 dkg
   cookingSteps:
     - A tojásfehérjéket habnak felverjük, hozzáadjuk a cukrot, amivel fényesre verjük.
     - Beleszitáljuk a a lisztet, és végül a langyosra olvasztott vajjal elkeverjük.
@@ -2785,13 +2785,13 @@ Pizza:
     - ebéd
   ingredients:
     - name: Paradicsom püré
-      mennyiseg: 100 g
+      portion: 100 g
     - name: Felvágott
-      mennyiseg: 15 dkg
+      portion: 15 dkg
     - name: Mozzarella sajt (reszelt)
-      mennyiseg: 150 g
+      portion: 150 g
     - name: Ketchup
-      mennyiseg: 50 g
+      portion: 50 g
     - ref: Pizzatészta
   cookingSteps:
     - A langyos vizet elkeverjük a cukorral, élesztővel, olíva olajjal, és hagyjuk pár percig állni.
@@ -2813,17 +2813,17 @@ Pizzatészta:
     - ebéd
   ingredients:
     - name: Finomliszt
-      mennyiseg: 500 g
+      portion: 500 g
     - name: Só
-      mennyiseg: 0.5 ek
+      portion: 0.5 ek
     - name: Cukor
-      mennyiseg: 0.5 ek
+      portion: 0.5 ek
     - name: Olívaolaj
-      mennyiseg: 2 ek
+      portion: 2 ek
     - name: Víz
-      mennyiseg: 325 ml
+      portion: 325 ml
     - name: Élesztő
-      mennyiseg: 7 g
+      portion: 7 g
   cookingSteps:
     - A langyos vizet elkeverjük a cukorral, élesztővel, olíva olajjal, és hagyjuk pár percig állni.
     - Ezalatt a lisztet közvetlenül a gyúródeszkára szitáljuk, hozzáadjuk a sót, kissé összekeverjük vele, és egy mélyedést alakítunk ki a közepén.
@@ -2844,21 +2844,21 @@ Póréhagyma leves:
     - leves
   ingredients:
     - name: Póréhagyma
-      mennyiseg: 2 db
+      portion: 2 db
     - name: Burgonya
-      mennyiseg: 2 db
+      portion: 2 db
     - name: Vaj
-      mennyiseg: 3 dkg
+      portion: 3 dkg
     - name: Zellerszár
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Só
-      mennyiseg: 2 tk
+      portion: 2 tk
     - name: Bors
-      mennyiseg: 2 csipet
+      portion: 2 csipet
     - name: Habtejszín
-      mennyiseg: 200 ml
+      portion: 200 ml
     - name: Alaplé
-      mennyiseg: 10 dl
+      portion: 10 dl
   cookingSteps:
       - A póréhagymát és a zellert karikára vágjuk, a krumplit megpucoljuk és felkockázzuk.
       - A vajat megolvasztjuk, rádobjuk a póréhagymát, és 2-3 percig kevergetjük.
@@ -2877,19 +2877,19 @@ Rakott krumpli:
     - ebéd
   ingredients:
     - name: Krumpli
-      mennyiseg: 1 kg
+      portion: 1 kg
     - name: Tojás
-      mennyiseg: 6 db
+      portion: 6 db
     - name: Só
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Kolbász
-      mennyiseg: 10 dkg
+      portion: 10 dkg
     - name: Tejföl
-      mennyiseg: 5 dl
+      portion: 5 dl
     - name: Vaj
-      mennyiseg: 2 tk
+      portion: 2 tk
     - name: Bacon (kockázott)
-      mennyiseg: 10 dkg
+      portion: 10 dkg
 
 Rántotta:
   defaultPortion: 2
@@ -2900,13 +2900,13 @@ Rántotta:
     - vacsora
   ingredients:
     - name: Kenyér
-      mennyiseg: 10 dkg
+      portion: 10 dkg
     - name: Tojás
-      mennyiseg: 5 db
+      portion: 5 db
     - name: Só
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Bors
-      mennyiseg: 1 csipet
+      portion: 1 csipet
 
 Reggeli:
   defaultPortion: 4
@@ -2914,17 +2914,17 @@ Reggeli:
     - reggeli
   ingredients:
     - name: Kenyér
-      mennyiseg: 0.5 kg
+      portion: 0.5 kg
     - name: Felvágott
-      mennyiseg: 20 dkg
+      portion: 20 dkg
     - name: Gouda sajt
-      mennyiseg: 10 dkg
+      portion: 10 dkg
     - name: Tej
-      mennyiseg: 1.2 l
+      portion: 1.2 l
     - name: Koktélparadicsom
-      mennyiseg: 20 dkg
+      portion: 20 dkg
     - name: Kígyóuborka
-      mennyiseg: 1 db
+      portion: 1 db
 
 Retkes uborka saláta:
   defaultPortion: 4
@@ -2934,15 +2934,15 @@ Retkes uborka saláta:
     - saláta
   ingredients:
     - name: Kígyóuborka
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Retek
-      mennyiseg: 20 db
+      portion: 20 db
     - name: Csemegehagyma
-      mennyiseg: 20 db
+      portion: 20 db
     - name: Tejföl
-      mennyiseg: 250 ml
+      portion: 250 ml
     - name: Só
-      mennyiseg: 1 tk
+      portion: 1 tk
   cookingSteps:
     - Szeleteljük fel az uborkát, a retket és a csemegehagymát.
     - Egy közepes tálban összekeverjük össze.
@@ -2956,11 +2956,11 @@ Rizs:
     - köret
   ingredients:
     - name: Rizs
-      mennyiseg: 200 g
+      portion: 200 g
     - name: Só
-      mennyiseg: 1 kk
+      portion: 1 kk
     - name: Bors
-      mennyiseg: 1 csipet
+      portion: 1 csipet
 
 Rizskoch:
   defaultPortion: 1
@@ -2970,23 +2970,23 @@ Rizskoch:
     - desszert
   ingredients:
     - name: Rizs
-      mennyiseg: 250 g
+      portion: 250 g
     - name: Tej
-      mennyiseg: 8 dl
+      portion: 8 dl
     - name: Víz
-      mennyiseg: 4 dl
+      portion: 4 dl
     - name: Vaníliás cukor
-      mennyiseg: 20 g
+      portion: 20 g
     - name: Tojás
-      mennyiseg: 5 db
+      portion: 5 db
     - name: Só
-      mennyiseg: 1 csipet
+      portion: 1 csipet
     - name: Cukor
-      mennyiseg: 130 g
+      portion: 130 g
     - name: Citrom
-      mennyiseg: 0.5 db
+      portion: 0.5 db
     - name: Mazsola
-      mennyiseg: 100 g
+      portion: 100 g
   cookingSteps:
     - Először a rizst, a tejet, a vizet és a vaníliás cukrot egy lábasba tesszük,
     - és közepes hőfokon, néhány percenként kevergetve tejberizst főzünk, amit utána kihűtünk.
@@ -3009,27 +3009,27 @@ Rukkolás lencsesaláta fetasajttal:
     - saláta
   ingredients:
     - name: Rukkola
-      mennyiseg: 100 g
+      portion: 100 g
     - name: Lencse
-      mennyiseg: 100 g
+      portion: 100 g
     - name: Feta sajt
-      mennyiseg: 75 g
+      portion: 75 g
     - name: Víz
-      mennyiseg: 1 l
+      portion: 1 l
     - name: Babérlevél
-      mennyiseg: 3 db
+      portion: 3 db
     - name: Petrezselyem
-      mennyiseg: 2 ek
+      portion: 2 ek
     - name: Vöröshagyma
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Napraforgóolaj
-      mennyiseg: 3 ek
+      portion: 3 ek
     - name: Olívaolaj
-      mennyiseg: 4 ek
+      portion: 4 ek
     - name: Só
-      mennyiseg: 0.5 tk
+      portion: 0.5 tk
     - name: Bors
-      mennyiseg: 2 csipet
+      portion: 2 csipet
   cookingSteps:
     - A lencsét egy éjszakára vízbe áztatjuk.
     - A hagymát apróra vágjuk, a petrezselyemzöldet felaprítjuk, a rukkolát megmossuk, majd lecsepegtetjük.
@@ -3050,21 +3050,21 @@ Sajtszósz:
     - köret
   ingredients:
     - name: Vaj
-      mennyiseg: 50 g
+      portion: 50 g
     - name: Liszt
-      mennyiseg: 40 g
+      portion: 40 g
     - name: Tej
-      mennyiseg: 500 ml
+      portion: 500 ml
     - name: Cheddar sajt (vörös)
-      mennyiseg: 150 g
+      portion: 150 g
     - name: Trappista sajt (füstölt)
-      mennyiseg: 50 g
+      portion: 50 g
     - name: Só
-      mennyiseg: 2 csipet
+      portion: 2 csipet
     - name: Bors
-      mennyiseg: 1 csipet
+      portion: 1 csipet
     - name: Kurkuma
-      mennyiseg: 0.5 tk
+      portion: 0.5 tk
   cookingSteps:
     - A vajat felolvasztjuk,
     - megszórjuk a liszttel,
@@ -3081,23 +3081,23 @@ Sárgarépás kínai kel saláta:
     - saláta
   ingredients:
     - name: Kínai kel
-      mennyiseg: 200 g
+      portion: 200 g
     - name: Sárgarépa
-      mennyiseg: 200 g
+      portion: 200 g
     - name: Alma
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Natúr joghurt
-      mennyiseg: 100 g
+      portion: 100 g
     - name: Citrom
-      mennyiseg: 0.5 db
+      portion: 0.5 db
     - name: Só
-      mennyiseg: 1 csipet
+      portion: 1 csipet
     - name: Bors
-      mennyiseg: 1 csipet
+      portion: 1 csipet
     - name: Cukor
-      mennyiseg: 1 csipet
+      portion: 1 csipet
     - name: Metélőhagyma
-      mennyiseg: 5 db
+      portion: 5 db
   cookingSteps:
       - A kínai kelt vékony csíkokra vágjuk. A sárgarépát megpucoljuk, mossuk, durvára reszeljük. Az almát durvára reszeljük. Az egészet egy edénybe tesszük.
       - Az öntethez a joghurtot elkeverjük a citromlével. Sóval, borssal, cukorral ízesítjük, majd hozzákeverjük vékony gyűrűkre vágott metélőhagymát.
@@ -3114,19 +3114,19 @@ Serpenyős csirkemell:
     - vacsora
   ingredients:
     - name: Csirkemell
-      mennyiseg: 60 dkg
+      portion: 60 dkg
     - name: Olívaolaj
-      mennyiseg: 4 ek
+      portion: 4 ek
     - name: Fokhagyma
-      mennyiseg: 2 gerezd
+      portion: 2 gerezd
     - name: Póréhagyma
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Petrezselyem
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Só
-      mennyiseg: 0.5 tk
+      portion: 0.5 tk
     - name: Bors
-      mennyiseg: 0.5 mk
+      portion: 0.5 mk
   cookingSteps:
     - A csirkemellet mosd meg, és vágd körülbelül 2x2 centis kockákra.
     - Az olívaolajat keverd össze a sóval, borssal, majd forgasd meg benne a húst.
@@ -3146,23 +3146,23 @@ Serpenyős fűszeres tejszínes pulykamell:
     - ebéd
   ingredients:
     - name: Pulykamell
-      mennyiseg: 400 g
+      portion: 400 g
     - name: Tárkony
-      mennyiseg: 1 ek
+      portion: 1 ek
     - name: BBQ fűszerkeverék
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Piros paprika
-      mennyiseg: 1 mk
+      portion: 1 mk
     - name: Cayenne bors
-      mennyiseg: 1 mk
+      portion: 1 mk
     - name: Olívaolaj
-      mennyiseg: 2 ek
+      portion: 2 ek
     - name: Mustár
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Főzőtejszín
-      mennyiseg: 2 dl
+      portion: 2 dl
     - name: Víz
-      mennyiseg: 2 dl
+      portion: 2 dl
   cookingSteps:
     - A húst tisztítom és darabolom. Serpenyőben kevés olajon pirítom, közben BBQ fűszerkeverékkel szórom.
     - Meghintem édes őrölt paprikával és felöntöm vízzel, megszórom szárított tárkonnyal.
@@ -3179,25 +3179,25 @@ Serpenyős tojásos krumpli:
     - ebéd
   ingredients:
     - name: Bacon (szeletelt)
-      mennyiseg: 200 g
+      portion: 200 g
     - name: Étolaj
-      mennyiseg: 1 ek
+      portion: 1 ek
     - name: Zöldhagyma
-      mennyiseg: 2 db
+      portion: 2 db
     - name: Karaj (szeletelt)
-      mennyiseg: 100 g
+      portion: 100 g
     - name: Tejszín
-      mennyiseg: 1 dl
+      portion: 1 dl
     - name: Krumpli
-      mennyiseg: 1 kg
+      portion: 1 kg
     - name: Tojás
-      mennyiseg: 7 db
+      portion: 7 db
     - name: Bors
-      mennyiseg: 1 mk
+      portion: 1 mk
     - name: Só
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Petrezselyem
-      mennyiseg: 1 ek
+      portion: 1 ek
 
 Serpenyős zöldséges darált hús:
   defaultPortion: 4
@@ -3209,31 +3209,31 @@ Serpenyős zöldséges darált hús:
     - vacsora
   ingredients:
     - name: Darált hús
-      mennyiseg: 500 g
+      portion: 500 g
     - name: Étolaj
-      mennyiseg: 3 ek
+      portion: 3 ek
     - name: Vöröshagyma
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Karfiol
-      mennyiseg: 200 g
+      portion: 200 g
     - name: Brokkoli
-      mennyiseg: 200 g
+      portion: 200 g
     - name: Sárgarépa
-      mennyiseg: 2 db
+      portion: 2 db
     - name: Burgonya
-      mennyiseg: 200 g
+      portion: 200 g
     - name: Édesburgonya
-      mennyiseg: 200 g
+      portion: 200 g
     - name: Babérlevél
-      mennyiseg: 3 db
+      portion: 3 db
     - name: Petrezselyem
-      mennyiseg: 1 ek
+      portion: 1 ek
     - name: Só
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Bors
-      mennyiseg: 1 csipet
+      portion: 1 csipet
     - name: Majoranna
-      mennyiseg: 1 csipet
+      portion: 1 csipet
 
 Sertéspörkölt:
   defaultPortion: 2
@@ -3243,29 +3243,29 @@ Sertéspörkölt:
     - ebéd
   ingredients:
     - name: Sertés lapocka
-      mennyiseg: 25 dkg
+      portion: 25 dkg
     - name: Paprika
-      mennyiseg: 2 db
+      portion: 2 db
     - name: Paradicsom
-      mennyiseg: 2 db
+      portion: 2 db
     - name: Vöröshagyma
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Fokhagyma
-      mennyiseg: 2 gerezd fokhagyma
+      portion: 2 gerezd fokhagyma
     - name: Sertészsír
-      mennyiseg: 1 ek
+      portion: 1 ek
     - name: Víz
-      mennyiseg: 5 dl
+      portion: 5 dl
     - name: Fűszerkömény
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Babérlevél
-      mennyiseg: 2 db
+      portion: 2 db
     - name: Fűszer paprika
-      mennyiseg: 1 ek
+      portion: 1 ek
     - name: Bors
-      mennyiseg: 1 csipet
+      portion: 1 csipet
     - name: Só
-      mennyiseg: 0.5 tk
+      portion: 0.5 tk
   cookingSteps:
       - Egy magas falú edényben olvasszuk meg a zsírt, majd szórjuk bele a kockára vágott húst, amit sózzunk és borsozzunk, ízlésünknek megfelelően. Plusz az őrölt köményt se felejtsük el hozzáadni.
       - Amikor a hús kifehéredett, öntsük hozzá a kockára vágott hagymát is, és kis idő múlva a zúzott fokhagymát is. Majd rövid ideig pároljuk őket együtt.
@@ -3283,11 +3283,11 @@ Sonkába tekert cikória:
     - új
   ingredients:
     - name: Cikória
-      mennyiseg: 2 db
+      portion: 2 db
     - name: Főtt sonka (szeletelt)
-      mennyiseg: 8 dkg
+      portion: 8 dkg
     - name: Vaj
-      mennyiseg: 1 ek
+      portion: 1 ek
   comments:
     - recept gorgozola szósszal készíti, hollandi mártással is működik
   cookingSteps:
@@ -3305,19 +3305,19 @@ Sörös tepsis sertés:
     - vacsora
   ingredients:
     - name: Vöröshagyma
-      mennyiseg: 5 db
+      portion: 5 db
     - name: Olívaolaj
-      mennyiseg: 50 ml
+      portion: 50 ml
     - name: Sertés comb
-      mennyiseg: 1 kg
+      portion: 1 kg
     - name: Só
-      mennyiseg: 10 g
+      portion: 10 g
     - name: Bors
-      mennyiseg: 5 g
+      portion: 5 g
     - name: Fűszer paprika
-      mennyiseg: 5 g
+      portion: 5 g
     - name: Sör
-      mennyiseg: 70 ml
+      portion: 70 ml
   comments:
     - Sertés comb vagy Sertés karaj
     - Tepsi mérete 30 cm x 35 cm
@@ -3331,25 +3331,25 @@ Sült zeller hasábok:
     - köret
   ingredients:
     - name: Fűszer paprika
-      mennyiseg: 1.5 ek
+      portion: 1.5 ek
     - name: Cayenne bors
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Fekete bors
-      mennyiseg: 2 tk
+      portion: 2 tk
     - name: Fokhagymapor
-      mennyiseg: 1 ek
+      portion: 1 ek
     - name: Só
-      mennyiseg: 1 ek
+      portion: 1 ek
     - name: Oregánó
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Kakukkfű
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Zeller
-      mennyiseg: 75 dkg
+      portion: 75 dkg
     - name: Olívaolaj
-      mennyiseg: 2 ek
+      portion: 2 ek
     - name: Só
-      mennyiseg: 2 tk
+      portion: 2 tk
   cookingSteps:
     - A fűszereket összekeverjük, kis üvegcsébe töltve hűvös, naptól és párától védett helyre tesszük. Hat hónapig használhatjuk húsok és zöldségek ízesítésére.
     - A zellert megpucoljuk, megmossuk, kisujjnyi hasábokra vágjuk.
@@ -3377,23 +3377,23 @@ Sütőtökkrémleves egyszerűen:
     - leves
   ingredients:
     - name: Sütőtök
-      mennyiseg: 1 kg
+      portion: 1 kg
     - name: Alaplé
-      mennyiseg: 10 dl
+      portion: 10 dl
     - name: Olívaolaj
-      mennyiseg: 2 ek
+      portion: 2 ek
     - name: Vöröshagyma
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Fokhagyma
-      mennyiseg: 1 gerezd
+      portion: 1 gerezd
     - name: Főzőtejszín
-      mennyiseg: 200 ml
+      portion: 200 ml
     - name: Só
-      mennyiseg: 2 csipet
+      portion: 2 csipet
     - name: Fehér bors
-      mennyiseg: 1 csipet
+      portion: 1 csipet
     - name: Szerecsendió
-      mennyiseg: 1 csipet
+      portion: 1 csipet
   comments:
     - 1 l alaplé (1 liter vízben 2 tyúkhúsleves vagy zöldségleves kockát felfőzni)
     - Só ízlés szerint
@@ -3408,17 +3408,17 @@ Sütőtökös golyó:
     - desszert
   ingredients:
     - name: Sütőtök
-      mennyiseg: 50 dkg
+      portion: 50 dkg
     - name: Háztartási keksz (darált)
-      mennyiseg: 20 dkg
+      portion: 20 dkg
     - name: Porcukor
-      mennyiseg: 10 dkg
+      portion: 10 dkg
     - name: Dió
-      mennyiseg: 15 dkg
+      portion: 15 dkg
     - name: Lekvár
-      mennyiseg: 1 ek
+      portion: 1 ek
     - name: Kókuszreszelék
-      mennyiseg: 5 dkg
+      portion: 5 dkg
   comments:
     - Dió (darált)
 
@@ -3430,21 +3430,21 @@ Sütőtökös muffin:
     - desszert
   ingredients:
     - name: Sütőtök
-      mennyiseg: 250 g
+      portion: 250 g
     - name: Tojás
-      mennyiseg: 2 db
+      portion: 2 db
     - name: Olívaolaj
-      mennyiseg: 80 ml
+      portion: 80 ml
     - name: Finomliszt
-      mennyiseg: 150 g
+      portion: 150 g
     - name: Barna cukor
-      mennyiseg: 150 g
+      portion: 150 g
     - name: Fahéj
-      mennyiseg: 1 kk
+      portion: 1 kk
     - name: Sütőpor
-      mennyiseg: 1 csomag
+      portion: 1 csomag
     - name: Só
-      mennyiseg: 1 csipet
+      portion: 1 csipet
 
 Sütőben sült sajtos brokkolifasírt:
   defaultPortion: 4
@@ -3455,23 +3455,23 @@ Sütőben sült sajtos brokkolifasírt:
     - vacsora
   ingredients:
     - name: Brokkoli
-      mennyiseg: 500 g
+      portion: 500 g
     - name: Tojás
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Vöröshagyma
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Fokhagyma
-      mennyiseg: 1 gerezd
+      portion: 1 gerezd
     - name: Zsemlemorzsa
-      mennyiseg: 5 ek
+      portion: 5 ek
     - name: Sajt
-      mennyiseg: 100 g
+      portion: 100 g
     - name: Só
-      mennyiseg: 1 mk
+      portion: 1 mk
     - name: Bors
-      mennyiseg: 1 csipet
+      portion: 1 csipet
     - name: Napraforgóolaj
-      mennyiseg: 2 ek
+      portion: 2 ek
   cookingSteps:
     - A brokkolit megmossuk, rózsáira szedjük és lobogó, sós vízben puhára főzzük.
     - Ha megfőtt, hagyjuk hűlni.
@@ -3490,25 +3490,25 @@ Székelykáposzta:
     - ebéd
   ingredients:
     - name: Sertészsír
-      mennyiseg: 1.5 ek
+      portion: 1.5 ek
     - name: Vöröshagyma
-      mennyiseg: 2 db
+      portion: 2 db
     - name: Sertés comb
-      mennyiseg: 1 kg
+      portion: 1 kg
     - name: Fűszer paprika
-      mennyiseg: 1.5 ek
+      portion: 1.5 ek
     - name: Só
-      mennyiseg: 2 tk
+      portion: 2 tk
     - name: Bors
-      mennyiseg: 4 csipet
+      portion: 4 csipet
     - name: Víz
-      mennyiseg: 3 dl
+      portion: 3 dl
     - name: Babérlevél
-      mennyiseg: 2 db
+      portion: 2 db
     - name: Savanyú káposzta
-      mennyiseg: 1.2 kg
+      portion: 1.2 kg
     - name: Tejföl
-      mennyiseg: 150 g
+      portion: 150 g
   cookingSteps:
     - Egy nagyobb fazékban felolvasztjuk a sertészsírt, majd rádobjuk a finomra vágott hagymát, és üvegesre pároljuk
     - Hozzáadjuk a kockára vágott sertéshúst, fehéredésig keverjük
@@ -3528,29 +3528,29 @@ Szerzetesek eledele:
     - vacsora
   ingredients:
     - name: Brokkoli
-      mennyiseg: 200 g
+      portion: 200 g
     - name: Kínai kel
-      mennyiseg: 100 g
+      portion: 100 g
     - name: Sárgarépa
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Gyömbér
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Fokhagyma
-      mennyiseg: 2 gerezd
+      portion: 2 gerezd
     - name: Étolaj
-      mennyiseg: 2 ek
+      portion: 2 ek
     - name: Só
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Szójaszósz
-      mennyiseg: 2 ek
+      portion: 2 ek
     - name: Bors
-      mennyiseg: 1 mk
+      portion: 1 mk
     - name: Cukor
-      mennyiseg: 1 mk
+      portion: 1 mk
     - name: Keményítő
-      mennyiseg: 1 ek
+      portion: 1 ek
     - name: Szezámolaj
-      mennyiseg: 2 tk
+      portion: 2 tk
   cookingSteps:
     - Egy fazékban vizet forralunk, majd először a brokkolit rakjuk bele, és 1 percig előfőzzük.
     - Ezt követően hozzászórjuk a répát és a kínai kelt is, majd további 2 percig főzzük.
@@ -3580,29 +3580,29 @@ Szőlős-sajtos focaccia:
     - desszert
   ingredients:
     - name: Finomliszt
-      mennyiseg: 50 dkg
+      portion: 50 dkg
     - name: Cukor
-      mennyiseg: 1 ek
+      portion: 1 ek
     - name: Élesztő
-      mennyiseg: 7 g
+      portion: 7 g
     - name: Só
-      mennyiseg: 2 csipet
+      portion: 2 csipet
     - name: Vaj
-      mennyiseg: 50 g
+      portion: 50 g
     - name: Tej
-      mennyiseg: 2.5 dl
+      portion: 2.5 dl
     - name: Sajt
-      mennyiseg: 100 g
+      portion: 100 g
     - name: Olívaolaj
-      mennyiseg: 3 ek
+      portion: 3 ek
     - name: Szőlő
-      mennyiseg: 15 dkg
+      portion: 15 dkg
     - name: Pisztácia
-      mennyiseg: 75 g
+      portion: 75 g
     - name: Rozmaring
-      mennyiseg: 2 tk
+      portion: 2 tk
     - name: Bors
-      mennyiseg: 1 csipet
+      portion: 1 csipet
   cookingSteps:
     - A lisztet, a cukrot, a sót és az instant élesztőt egy nagy tálba kimérjük.
     - Hozzáadjuk a felkockázott vajat, és összemorzsoljuk.
@@ -3622,21 +3622,21 @@ Szőlős Waldorf-saláta:
     - saláta
   ingredients:
     - name: Szőlő (piros)
-      mennyiseg: 200 g
+      portion: 200 g
     - name: Szőlő (fehér)
-      mennyiseg: 200 g
+      portion: 200 g
     - name: Dió
-      mennyiseg: 100 g
+      portion: 100 g
     - name: Zellerszár
-      mennyiseg: 3 db
+      portion: 3 db
     - name: Görög joghurt
-      mennyiseg: 200 g
+      portion: 200 g
     - name: Majonéz
-      mennyiseg: 100 g
+      portion: 100 g
     - name: Citromlé
-      mennyiseg: 0.5 db
+      portion: 0.5 db
     - name: Só
-      mennyiseg: 1 csipet
+      portion: 1 csipet
   cookingSteps:
     - A szőlős Waldorf-saláta első lépésként a szőlőszemeket, ha túl nagyok, elfelezzük, majd egy tálba tesszük. (A tálaláshoz kb. 6 szemet rakjunk félre.)
     - Hozzáadjuk a durvára tört dió kb. 80%-át, a vékony szeletekre vágott szárzellert, a joghurtot, a majonézt és a citrom levét, sózzuk, és az egészet összeforgatjuk.
@@ -3650,31 +3650,31 @@ Tárkonyos csirkeraguleves:
     - leves
   ingredients:
     - name: Csirkemell
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Napraforgóolaj
-      mennyiseg: 3 ek
+      portion: 3 ek
     - name: Sárgarépa
-      mennyiseg: 3 db
+      portion: 3 db
     - name: Fehérrépa
-      mennyiseg: 2 db
+      portion: 2 db
     - name: Karalábé
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Zeller
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Vöröshagyma
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Zöldborsó (mirelit)
-      mennyiseg: 30 dkg
+      portion: 30 dkg
     - name: Tárkony
-      mennyiseg: 1 ek
+      portion: 1 ek
     - name: Főzőtejszín
-      mennyiseg: 3 dl
+      portion: 3 dl
     - name: Citrom
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Erőleves kocka
-      mennyiseg: 4 db
+      portion: 4 db
     - name: Petrezselyem
-      mennyiseg: 3 ek
+      portion: 3 ek
   cookingSteps:
     - A csirkemellfilét apró kockákra vágjuk.
     - Egy jó nagy lábosban felhevítjük az olajat, rádobjuk a húst és fehéredésig pirítjuk.
@@ -3694,15 +3694,15 @@ Tejbegríz:
     - desszert
   ingredients:
     - name: Tej
-      mennyiseg: 5 dl
+      portion: 5 dl
     - name: Cukor
-      mennyiseg: 2 ek
+      portion: 2 ek
     - name: Búzadara
-      mennyiseg: 4 ek
+      portion: 4 ek
     - name: Só
-      mennyiseg: 1 csipet
+      portion: 1 csipet
     - name: Kakaópor
-      mennyiseg: 2 tk
+      portion: 2 tk
 
 Tejfölös-füstölt sajtos csirkemell:
   defaultPortion: 4
@@ -3712,21 +3712,21 @@ Tejfölös-füstölt sajtos csirkemell:
     - ebéd
   ingredients:
     - name: Csirkemell
-      mennyiseg: 80 dkg
+      portion: 80 dkg
     - name: Trappista sajt (füstölt)
-      mennyiseg: 25 dkg
+      portion: 25 dkg
     - name: Fokhagyma
-      mennyiseg: 4 gerezd
+      portion: 4 gerezd
     - name: Olívaolaj
-      mennyiseg: 1 ek
+      portion: 1 ek
     - name: Só
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Bors
-      mennyiseg: 2 csipet
+      portion: 2 csipet
     - name: Tejszín
-      mennyiseg: 2 dl
+      portion: 2 dl
     - name: Tejföl
-      mennyiseg: 30 dkg
+      portion: 30 dkg
   cookingSteps:
     - A csirkemellet szeleteljük, a sajtot lereszeljük, a fokhagymagerezdeket fokhagymanyomón átnyomjuk.
     - Egy tepsibe csorgatjuk az olívaolajat, majd meghintjük sóval és borssal.
@@ -3744,21 +3744,21 @@ Tejfölös-sajtos csirkemell:
     - ebéd
   ingredients:
     - name: Csirkemell
-      mennyiseg: 2 db
+      portion: 2 db
     - name: Tejföl
-      mennyiseg: 250 g
+      portion: 250 g
     - name: Gouda sajt
-      mennyiseg: 30 dkg
+      portion: 30 dkg
     - name: Fűszer paprika
-      mennyiseg: 5 tk
+      portion: 5 tk
     - name: Só
-      mennyiseg: 0.5 tk
+      portion: 0.5 tk
     - name: Bors
-      mennyiseg: 0.5 mk
+      portion: 0.5 mk
     - name: Petrezselyem
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Olívaolaj
-      mennyiseg: 5 ek
+      portion: 5 ek
 
 Tejszínes-baconos cukkinispagetti:
   defaultPortion: 4
@@ -3769,25 +3769,25 @@ Tejszínes-baconos cukkinispagetti:
     - vacsora
   ingredients:
     - name: Cukkini
-      mennyiseg: 4 db
+      portion: 4 db
     - name: Bacon (kockázott)
-      mennyiseg: 10 dkg
+      portion: 10 dkg
     - name: Fokhagyma
-      mennyiseg: 2 gerezd
+      portion: 2 gerezd
     - name: Petrezselyem
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Koktélparadicsom
-      mennyiseg: 3 db
+      portion: 3 db
     - name: Tejszín
-      mennyiseg: 2 dl
+      portion: 2 dl
     - name: Só
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Bors
-      mennyiseg: 2 csipet
+      portion: 2 csipet
     - name: Bazsalikom
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Parmezán sajt
-      mennyiseg: 5 dkg
+      portion: 5 dkg
   cookingSteps:
     - A cukkiniket zöldségspagetti-készítővel hosszú, vékony csíkokra vágjuk.
     - Egy lábasban sós vizet forralunk, és a felcsíkozott zöldséget 2,5-3 percig blansírozzuk benne.
@@ -3808,29 +3808,29 @@ Tejszínes-parmezános csirkemell:
     - ebéd
   ingredients:
     - name: Csirkemell
-      mennyiseg: 2 db
+      portion: 2 db
     - name: Só
-      mennyiseg: 2 csipet
+      portion: 2 csipet
     - name: Bors
-      mennyiseg: 1 csipet
+      portion: 1 csipet
     - name: Fokhagymapor
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Olívaolaj
-      mennyiseg: 1 ek
+      portion: 1 ek
     - name: Vaj
-      mennyiseg: 1 ek
+      portion: 1 ek
     - name: Fokhagyma
-      mennyiseg: 3 gerezd
+      portion: 3 gerezd
     - name: Liszt
-      mennyiseg: 1 ek
+      portion: 1 ek
     - name: Alaplé
-      mennyiseg: 1.2 dl
+      portion: 1.2 dl
     - name: Tejszín
-      mennyiseg: 2.5 dl
+      portion: 2.5 dl
     - name: Parmezán sajt
-      mennyiseg: 5 dkg
+      portion: 5 dkg
     - name: Petrezselyem
-      mennyiseg: 1 tk
+      portion: 1 tk
 
 Tepertőkrém:
   defaultPortion: 3
@@ -3840,19 +3840,19 @@ Tepertőkrém:
     - reggeli
   ingredients:
     - name: Tepertő (sertés)
-      mennyiseg: 200 g
+      portion: 200 g
     - name: Tojás
-      mennyiseg: 2 db
+      portion: 2 db
     - name: Vöröshagyma
-      mennyiseg: 0.5 db
+      portion: 0.5 db
     - name: Tejföl
-      mennyiseg: 3 ek
+      portion: 3 ek
     - name: Mustár
-      mennyiseg: 1 ek
+      portion: 1 ek
     - name: Só
-      mennyiseg: 2 csipet
+      portion: 2 csipet
     - name: Bors
-      mennyiseg: 1 csipet
+      portion: 1 csipet
   cookingSteps:
     - A tojást 10-12 perc alatt megfőzzük.
     - A tepertőt turmixban vagy botmixerrel pépesítjük. (Nem baj, ha maradnak benne kisebb, ropogós darabok. Sőt.)
@@ -3871,33 +3871,33 @@ Tepsis Csirke Zöldséggel:
     - vacsora
   ingredients:
     - name: Csirkemell
-      mennyiseg: 50 dkg
+      portion: 50 dkg
     - name: Lilahagyma
-      mennyiseg: 2 db
+      portion: 2 db
     - name: Fokhagyma
-      mennyiseg: 5 gerezd
+      portion: 5 gerezd
     - name: Sárgarépa
-      mennyiseg: 2 db
+      portion: 2 db
     - name: Brokkoli
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Kaliforniai paprika (piros)
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Krumpli
-      mennyiseg: 5 db
+      portion: 5 db
     - name: Cukkini
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Só
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Bors
-      mennyiseg: 2 csipet
+      portion: 2 csipet
     - name: Piros paprika
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Olívaolaj
-      mennyiseg: 2 tk
+      portion: 2 tk
     - name: Tejföl
-      mennyiseg: 200 g
+      portion: 200 g
     - name: Fokhagyma
-      mennyiseg: 1 gerezd
+      portion: 1 gerezd
   comments:
     - Az öntethez:
       - 200 g Tejföl
@@ -3911,19 +3911,19 @@ Tepsis édesburgonya:
     - köret
   ingredients:
     - name: Édesburgonya
-      mennyiseg: 500 g
+      portion: 500 g
     - name: Keményítő
-      mennyiseg: 2 ek
+      portion: 2 ek
     - name: Só
-      mennyiseg: 0.5 tk
+      portion: 0.5 tk
     - name: Piros paprika
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Rozmaring
-      mennyiseg: 0.5 tk
+      portion: 0.5 tk
     - name: Fokhagyma granulátum
-      mennyiseg: 0.5 tk
+      portion: 0.5 tk
     - name: Olívaolaj
-      mennyiseg: 3 ek
+      portion: 3 ek
 
 Tepsis Krumpli:
   defaultPortion: 3
@@ -3933,17 +3933,17 @@ Tepsis Krumpli:
     - köret
   ingredients:
     - name: Burgonya
-      mennyiseg: 1 kg
+      portion: 1 kg
     - name: Piros paprika
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Só
-      mennyiseg: 1 kvk
+      portion: 1 kvk
     - name: Bors
-      mennyiseg: 1 kvk
+      portion: 1 kvk
     - name: Rozmaring
-      mennyiseg: 1 mk
+      portion: 1 mk
     - name: Napraforgóolaj
-      mennyiseg: 1 dl
+      portion: 1 dl
   cookingSteps:
     - A burgonyát meghámozzuk, felvágjuk hasábokra.
     - Sütőpapírral bélelt tepsibe tesszük.
@@ -3960,19 +3960,19 @@ Teriyaki szószos csirke:
     - vacsora
   ingredients:
     - name: Szaké
-      mennyiseg: 20 ml
+      portion: 20 ml
     - name: Mirin
-      mennyiseg: 20 ml
+      portion: 20 ml
     - name: Szójaszósz
-      mennyiseg: 2 ek
+      portion: 2 ek
     - name: Cukor
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Gyömbér por
-      mennyiseg: 1 csipet
+      portion: 1 csipet
     - name: Szezámmag
-      mennyiseg: 1 ek
+      portion: 1 ek
     - name: Bors
-      mennyiseg: 1 csipet
+      portion: 1 csipet
   cookingSteps:
     - A csirkecombokat mossuk meg, szárítsuk le papírtörlővel, filézzük ki. (Aki nem szereti a bőrét, leszedheti.)
     - Tegyünk egy serpenyőbe olajat, és közepes lángon, bőrös felével lefelé kezdjük el sütni a csirkét. Süssük, amíg aranybarna nem lesz, majd jöhet a másik oldala.
@@ -3990,19 +3990,19 @@ Teriyaki szósz:
     - köret
   ingredients:
     - name: Szaké
-      mennyiseg: 20 ml
+      portion: 20 ml
     - name: Mirin
-      mennyiseg: 20 ml
+      portion: 20 ml
     - name: Szójaszósz
-      mennyiseg: 2 ek
+      portion: 2 ek
     - name: Cukor
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Gyömbér por
-      mennyiseg: 1 csipet
+      portion: 1 csipet
     - name: Szezámmag
-      mennyiseg: 1 ek
+      portion: 1 ek
     - name: Bors
-      mennyiseg: 1 csipet
+      portion: 1 csipet
   cookingSteps:
     - Keverjük össze a mirint, szójaszószt és a szakét
     - Keverjük bele a cukrot, gyömbérport, szezámmagot, borsot
@@ -4015,19 +4015,19 @@ Tiramisu:
     - desszert
   ingredients:
     - name: Mascarpone
-      mennyiseg: 25 dkg
+      portion: 25 dkg
     - name: Porcukor
-      mennyiseg: 3 dkg
+      portion: 3 dkg
     - name: Tojás
-      mennyiseg: 3 db
+      portion: 3 db
     - name: Kávé
-      mennyiseg: 2 dl
+      portion: 2 dl
     - name: Rum aroma
-      mennyiseg: 0.5 tk
+      portion: 0.5 tk
     - name: Babapiskóta
-      mennyiseg: 36 db
+      portion: 36 db
     - name: Kakaópor
-      mennyiseg: 20 g
+      portion: 20 g
   cookingSteps:
     - A tiramisu elkészítéséhez a mascarponét egy nagy keverőtálba tesszük, hozzáadjuk a porcukrot és a tojások sárgáját.
     - A fehérjéket robotgéppel kemény habbá verjük, és laza mozdulatokkal a mascarponéhez keverjük.
@@ -4045,15 +4045,15 @@ Tortilla lap:
     - köret
   ingredients:
     - name: Finomliszt
-      mennyiseg: 400 g
+      portion: 400 g
     - name: Só
-      mennyiseg: 5 g
+      portion: 5 g
     - name: Sütőpor
-      mennyiseg: 5 g
+      portion: 5 g
     - name: Olívaolaj
-      mennyiseg: 60 ml
+      portion: 60 ml
     - name: Víz
-      mennyiseg: 240 ml
+      portion: 240 ml
   cookingSteps:
     - A tortillalap elkészítéséhez először a lisztet, a sót, a sütőport, az olívaolajat és a vizet egy keverőtálba tesszük, alaposan összegyúrjuk.
     - A tésztából 10 db közel azonos méretű golyót formázunk.
@@ -4070,33 +4070,33 @@ Töltött káposzta (klasszikus):
     - ebéd
   ingredients:
     - name: Savanyú káposzta
-      mennyiseg: 1 kg
+      portion: 1 kg
     - name: Káposzta
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Vöröshagyma
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Fokhagyma
-      mennyiseg: 2 gerezd
+      portion: 2 gerezd
     - name: Fűszer paprika
-      mennyiseg: 3 tk
+      portion: 3 tk
     - name: Fűszerkömény
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Babérlevél
-      mennyiseg: 5 db
+      portion: 5 db
     - name: Rizs
-      mennyiseg: 20 dkg
+      portion: 20 dkg
     - name: Finomliszt
-      mennyiseg: 1 ek
+      portion: 1 ek
     - name: Darált hús
-      mennyiseg: 50 dkg
+      portion: 50 dkg
     - name: Kolozsvári szalonna
-      mennyiseg: 20 dkg
+      portion: 20 dkg
     - name: Kolbász
-      mennyiseg: 20 dkg
+      portion: 20 dkg
     - name: Sertészsír
-      mennyiseg: 1 ek
+      portion: 1 ek
     - name: Paradicsom püré
-      mennyiseg: 400 ml
+      portion: 400 ml
 
 Töltött káposzta (saját):
   defaultPortion: 8
@@ -4106,33 +4106,33 @@ Töltött káposzta (saját):
     - ebéd
   ingredients:
     - name: Káposzta
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Sertészsír
-      mennyiseg: 1 ek
+      portion: 1 ek
     - name: Vöröshagyma
-      mennyiseg: 3 db
+      portion: 3 db
     - name: Fokhagyma
-      mennyiseg: 4 gerezd
+      portion: 4 gerezd
     - name: Kolbász
-      mennyiseg: 20 dkg
+      portion: 20 dkg
     - name: Só
-      mennyiseg: 2 tk
+      portion: 2 tk
     - name: Bors
-      mennyiseg: 3 csipet
+      portion: 3 csipet
     - name: Fűszerkömény
-      mennyiseg: 2 tk
+      portion: 2 tk
     - name: Piros paprika
-      mennyiseg: 1 ek
+      portion: 1 ek
     - name: Darált hús
-      mennyiseg: 800 g
+      portion: 800 g
     - name: Rizs
-      mennyiseg: 150 g
+      portion: 150 g
     - name: Napraforgóolaj
-      mennyiseg: 2 ek
+      portion: 2 ek
     - name: Sűrített paradicsom
-      mennyiseg: 200 g
+      portion: 200 g
     - name: Kolozsvári szalonna
-      mennyiseg: 350 g
+      portion: 350 g
   comments:
     - 2 recept keveréke::
       - https://www.nosalty.hu/recept/szabolcsi-toltott-kaposzta-paradicsomos
@@ -4146,35 +4146,35 @@ Töltött káposzta (szabolcsi):
     - ebéd
   ingredients:
     - name: Káposzta
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Kenyérszalonna
-      mennyiseg: 150 g
+      portion: 150 g
     - name: Vöröshagyma
-      mennyiseg: 3 db
+      portion: 3 db
     - name: Fokhagyma
-      mennyiseg: 4 gerezd
+      portion: 4 gerezd
     - name: Kápia paprika
-      mennyiseg: 3 db
+      portion: 3 db
     - name: Só
-      mennyiseg: 2 tk
+      portion: 2 tk
     - name: Bors
-      mennyiseg: 3 csipet
+      portion: 3 csipet
     - name: Fűszerkömény
-      mennyiseg: 2 tk
+      portion: 2 tk
     - name: Piros paprika
-      mennyiseg: 1 ek
+      portion: 1 ek
     - name: Darált hús
-      mennyiseg: 800 g
+      portion: 800 g
     - name: Rizs
-      mennyiseg: 150 g
+      portion: 150 g
     - name: Napraforgóolaj
-      mennyiseg: 2 ek
+      portion: 2 ek
     - name: Sűrített paradicsom
-      mennyiseg: 200 g
+      portion: 200 g
     - name: Kolozsvári szalonna
-      mennyiseg: 350 g
+      portion: 350 g
     - name: Víz
-      mennyiseg: 1.5 l
+      portion: 1.5 l
   comments:
     - ez a recept nem ír savanyú káposztát
 
@@ -4187,27 +4187,27 @@ Tonhalas babsaláta:
     - saláta
   ingredients:
     - name: Citromlé
-      mennyiseg: 2 ek
+      portion: 2 ek
     - name: Balzsamecet (fehér)
-      mennyiseg: 1 ek
+      portion: 1 ek
     - name: Só
-      mennyiseg: 3 csipet
+      portion: 3 csipet
     - name: Bors
-      mennyiseg: 1 csipet
+      portion: 1 csipet
     - name: Cukor
-      mennyiseg: 1 csipet
+      portion: 1 csipet
     - name: Napraforgóolaj
-      mennyiseg: 2 ek
+      portion: 2 ek
     - name: Petrezselyem
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Fehérbab (konzerv)
-      mennyiseg: 250 g
+      portion: 250 g
     - name: Tonhal (konzerv)
-      mennyiseg: 185 g
+      portion: 185 g
     - name: Lilahagyma
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Koktélparadicsom
-      mennyiseg: 20 dkg
+      portion: 20 dkg
   cookingSteps:
     - A babot egy szűrőbe öntjük, hideg vízzel lemossuk, hagyjuk lecsepegni.
     - A tonhalat leszűrjük, villával darabokra tépkedjük.
@@ -4236,23 +4236,23 @@ Tonhalas tabulé:
     - vacsora
   ingredients:
     - name: Kígyóuborka
-      mennyiseg: 2 db
+      portion: 2 db
     - name: Koktélparadicsom
-      mennyiseg: 5 db
+      portion: 5 db
     - name: Petrezselyem
-      mennyiseg: 1 tk
+      portion: 1 tk
     - name: Citrom
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Bors
-      mennyiseg: 2 csipet
+      portion: 2 csipet
     - name: Só
-      mennyiseg: 2 csipet
+      portion: 2 csipet
     - name: Tonhal (konzerv)
-      mennyiseg: 240 g
+      portion: 240 g
     - name: Lilahagyma
-      mennyiseg: 2 db
+      portion: 2 db
     - name: Bulgur
-      mennyiseg: 150 g
+      portion: 150 g
   cookingSteps:
     - "{{ Bulgur }} bulgurt felöntünk dupla mennyiségű forró vízzel és pár perc alatt megfőzzük."
     - "{{ Kígyóuborka }} kígyóuborkát kicsi kockákra vágjuk."
@@ -4271,23 +4271,23 @@ Túrógombóc:
     - suli
   ingredients:
     - name: Túró
-      mennyiseg: 50 dkg
+      portion: 50 dkg
     - name: Tojás
-      mennyiseg: 2 db
+      portion: 2 db
     - name: Búzadara
-      mennyiseg: 5 ek
+      portion: 5 ek
     - name: Só
-      mennyiseg: 1 csipet
+      portion: 1 csipet
     - name: Cukor
-      mennyiseg: 1 ek
+      portion: 1 ek
     - name: Zsemlemorzsa
-      mennyiseg: 20 dkg
+      portion: 20 dkg
     - name: Napraforgóolaj
-      mennyiseg: 2.5 ek
+      portion: 2.5 ek
     - name: Tejföl
-      mennyiseg: 175 g
+      portion: 175 g
     - name: Porcukor
-      mennyiseg: 4 ek
+      portion: 4 ek
 
 Túrós tészta:
   defaultPortion: 4
@@ -4297,15 +4297,15 @@ Túrós tészta:
     - ebéd
   ingredients:
     - name: Csusza tészta
-      mennyiseg: 500 g
+      portion: 500 g
     - name: Só
-      mennyiseg: 1 csipet
+      portion: 1 csipet
     - name: Kolozsvári szalonna
-      mennyiseg: 200 g
+      portion: 200 g
     - name: Tejföl
-      mennyiseg: 200 g
+      portion: 200 g
     - name: Túró
-      mennyiseg: 200 g
+      portion: 200 g
 
 Tzatziki:
   defaultPortion: 4
@@ -4315,19 +4315,19 @@ Tzatziki:
     - saláta
   ingredients:
     - name: Görög joghurt
-      mennyiseg: 300 g
+      portion: 300 g
     - name: Kígyóuborka
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Fokhagyma
-      mennyiseg: 0.3 gerezd
+      portion: 0.3 gerezd
     - name: Fehérborecet
-      mennyiseg: 3 tk
+      portion: 3 tk
     - name: Olívaolaj
-      mennyiseg: 2 tk
+      portion: 2 tk
     - name: Só
-      mennyiseg: 1 csipet
+      portion: 1 csipet
     - name: Bors
-      mennyiseg: 1 csipet
+      portion: 1 csipet
   comments:
     - 3 tk Fehérborecet vagy 3 tk Almaborecet
 
@@ -4340,15 +4340,15 @@ Uborkasaláta:
     - saláta
   ingredients:
     - name: Kígyóuborka
-      mennyiseg: 2 db
+      portion: 2 db
     - name: Fokhagyma
-      mennyiseg: 2 gerezd
+      portion: 2 gerezd
     - name: Ecet
-      mennyiseg: 1 ek
+      portion: 1 ek
     - name: Só
-      mennyiseg: 2 csipet
+      portion: 2 csipet
     - name: Cukor
-      mennyiseg: 1 ek
+      portion: 1 ek
   cookingSteps:
     - Az uborkákat meghámozzuk (a héjával keserűbb lenne), és egy szeletővel a tálba szeleteljük.
     - Megsózzuk, jól átkeverjük, és hagyjuk állni pár percet. Szinte azonnal levet ereszt.
@@ -4365,15 +4365,15 @@ Vajas kukoricás csicseriborsó:
     - köret
   ingredients:
     - name: Kukorica (konzerv)
-      mennyiseg: 200 g
+      portion: 200 g
     - name: Csicseriborsó (konzerv)
-      mennyiseg: 150 g
+      portion: 150 g
     - name: Vaj
-      mennyiseg: 1 ek
+      portion: 1 ek
     - name: Petrezselyem
-      mennyiseg: 1 ek
+      portion: 1 ek
     - name: Só
-      mennyiseg: 1 csipet
+      portion: 1 csipet
   cookingSteps:
     - A vajat felolvasztjuk, és megpároljuk benne a kukoricát, csipet sót szórunk rá.
     - Rákanalazzuk a csicserikonzervet, és egy kicsit összemelegítjük.
@@ -4388,17 +4388,17 @@ Vaníliasodó:
     - desszert
   ingredients:
     - name: Tej
-      mennyiseg: 1 l
+      portion: 1 l
     - name: Tojás
-      mennyiseg: 4 db
+      portion: 4 db
     - name: Cukor
-      mennyiseg: 10 dkg
+      portion: 10 dkg
     - name: Finomliszt
-      mennyiseg: 2 ek
+      portion: 2 ek
     - name: Vaníliás cukor
-      mennyiseg: 16 g
+      portion: 16 g
     - name: Vaj
-      mennyiseg: 2 dkg
+      portion: 2 dkg
   comments:
     - 4 db Tojás sárgája
     - 2 csomag Vaníliás cukor
@@ -4412,21 +4412,21 @@ Vitaminsaláta madársalátával:
     - suli
   ingredients:
     - name: Madársaláta
-      mennyiseg: 40 g
+      portion: 40 g
     - name: Retek
-      mennyiseg: 5 db
+      portion: 5 db
     - name: Zöldhagyma
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Natúr joghurt
-      mennyiseg: 1 dl
+      portion: 1 dl
     - name: Cukor
-      mennyiseg: 0.5 tk
+      portion: 0.5 tk
     - name: Só
-      mennyiseg: 2 csipet
+      portion: 2 csipet
     - name: Citrom
-      mennyiseg: 1 db
+      portion: 1 db
     - name: Olívaolaj
-      mennyiseg: 2 tk
+      portion: 2 tk
   comments:
     - Pár csepp citromlé
     - opcionális::

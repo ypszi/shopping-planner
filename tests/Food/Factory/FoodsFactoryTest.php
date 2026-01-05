@@ -49,44 +49,44 @@ class FoodsFactoryTest extends TestCase
                 fn(string $foodName, array $ingredient) => match ([$foodName, $ingredient]) {
                     [
                         $expectedFoodName,
-                        ['name' => 'Burgonya', 'mennyiseg' => '40 dkg'],
+                        ['name' => 'Burgonya', 'portion' => '40 dkg'],
                     ],
                     [
                         $expectedFoodName,
-                        ['name' => 'Só', 'mennyiseg' => '1 tk'],
+                        ['name' => 'Só', 'portion' => '1 tk'],
                     ],
                     [
                         $expectedFoodName,
-                        ['name' => 'Makaróni tészta', 'mennyiseg' => '25 dkg'],
+                        ['name' => 'Makaróni tészta', 'portion' => '25 dkg'],
                     ],
                     [
                         $expectedFoodName,
-                        ['name' => 'Gouda sajt', 'mennyiseg' => '20 dkg'],
+                        ['name' => 'Gouda sajt', 'portion' => '20 dkg'],
                     ],
                     [
                         $expectedFoodName,
-                        ['name' => 'Tej', 'mennyiseg' => '1.5 dl'],
+                        ['name' => 'Tej', 'portion' => '1.5 dl'],
                     ],
                     [
                         $expectedFoodName,
-                        ['name' => 'Tejszín', 'mennyiseg' => '1 dl'],
+                        ['name' => 'Tejszín', 'portion' => '1 dl'],
                     ],
                     [
                         $expectedFoodName,
-                        ['name' => 'Bors', 'mennyiseg' => '1 csipet'],
+                        ['name' => 'Bors', 'portion' => '1 csipet'],
                     ],
                     [
                         $expectedFoodName,
-                        ['name' => 'Vöröshagyma', 'mennyiseg' => '2 db'],
+                        ['name' => 'Vöröshagyma', 'portion' => '2 db'],
                     ],
                     [
                         $expectedFoodName,
-                        ['name' => 'Olívaolaj', 'mennyiseg' => '2 ek'],
+                        ['name' => 'Olívaolaj', 'portion' => '2 ek'],
                     ],
                     [
                         $expectedFoodName,
-                        ['name' => 'Petrezselyem', 'mennyiseg' => '1 ek'],
-                    ] => $expectedIngredient,
+                        ['name' => 'Petrezselyem', 'portion' => '1 ek'],
+                    ]       => $expectedIngredient,
                     default => $this->fail(sprintf('Unexpected food: "%s" or ingredient: "%s"', $foodName, json_encode($ingredient)))
                 }
             );
@@ -125,44 +125,44 @@ class FoodsFactoryTest extends TestCase
                 fn(string $foodName, array $ingredient) => match ([$foodName, $ingredient]) {
                     [
                         $expectedFoodName,
-                        ['name' => 'Paradicsom püré', 'mennyiseg' => '100 g'],
+                        ['name' => 'Paradicsom püré', 'portion' => '100 g'],
                     ],
                     [
                         $expectedFoodName,
-                        ['name' => 'Felvágott', 'mennyiseg' => '15 dkg'],
+                        ['name' => 'Felvágott', 'portion' => '15 dkg'],
                     ],
                     [
                         $expectedFoodName,
-                        ['name' => 'Mozzarella sajt (reszelt)', 'mennyiseg' => '150 g'],
+                        ['name' => 'Mozzarella sajt (reszelt)', 'portion' => '150 g'],
                     ],
                     [
                         $expectedFoodName,
-                        ['name' => 'Ketchup', 'mennyiseg' => '50 g'],
+                        ['name' => 'Ketchup', 'portion' => '50 g'],
                     ],
                     [
                         $expectedRefFoodName,
-                        ['name' => 'Finomliszt', 'mennyiseg' => '500 g'],
+                        ['name' => 'Finomliszt', 'portion' => '500 g'],
                     ],
                     [
                         $expectedRefFoodName,
-                        ['name' => 'Só', 'mennyiseg' => '0.5 ek'],
+                        ['name' => 'Só', 'portion' => '0.5 ek'],
                     ],
                     [
                         $expectedRefFoodName,
-                        ['name' => 'Cukor', 'mennyiseg' => '0.5 ek'],
+                        ['name' => 'Cukor', 'portion' => '0.5 ek'],
                     ],
                     [
                         $expectedRefFoodName,
-                        ['name' => 'Olívaolaj', 'mennyiseg' => '2 ek'],
+                        ['name' => 'Olívaolaj', 'portion' => '2 ek'],
                     ],
                     [
                         $expectedRefFoodName,
-                        ['name' => 'Víz', 'mennyiseg' => '325 ml'],
+                        ['name' => 'Víz', 'portion' => '325 ml'],
                     ],
                     [
                         $expectedRefFoodName,
-                        ['name' => 'Élesztő', 'mennyiseg' => '7 g'],
-                    ] => $expectedIngredient,
+                        ['name' => 'Élesztő', 'portion' => '7 g'],
+                    ]       => $expectedIngredient,
                     default => $this->fail(sprintf('Unexpected food: "%s" or ingredient: "%s"', $foodName, json_encode($ingredient)))
                 }
             );

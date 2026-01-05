@@ -25,11 +25,11 @@ class IngredientFactoryTest extends TestCase
     public function testForFood(): void
     {
         $ingredient = $this->sut->forFood(
-            foodName:   'food',
+            foodName  : 'food',
             ingredient: [
-                            'name'      => 'Bors',
-                            'mennyiseg' => '4 dkg',
-                        ]
+                'name'    => 'Bors',
+                'portion' => '4 dkg',
+            ]
         );
 
         $this->assertEquals('Fekete bors', $ingredient->name());
@@ -44,11 +44,11 @@ class IngredientFactoryTest extends TestCase
     public function testForFoodWithRefernce(): void
     {
         $ingredient = $this->sut->forFood(
-            foodName:   'food',
+            foodName  : 'food',
             ingredient: [
-                            'name'      => 'Étolaj',
-                            'mennyiseg' => '1 dl',
-                        ]
+                'name'    => 'Étolaj',
+                'portion' => '1 dl',
+            ]
         );
 
         $this->assertEquals('Napraforgóolaj', $ingredient->name());
