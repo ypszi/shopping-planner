@@ -937,8 +937,8 @@ Fasírt:
       portion: 50 g
   cookingSteps:
     - A sütőt 180 fokra előmelegítjük.
-    - A darált húst összekeverjük a tojással.
-    - Hozzáadjuk az apróra vágott vöröshagymát és fokhagymát.
+    - "{{ Darált hús }} darált húst összekeverünk {{ Tojás }} tojással."
+    - Hozzáadjuk az apróra vágott {{ Vöröshagyma }} vöröshagymát és {{ Fokhagyma }} fokhagymát.
     - Megsózzuk, megborsozzuk, és annyi zsemlemorzsát adunk hozzá, hogy golyókat tudjunk belőle formálni.
     - Egy tepsibe kevés olajat öntünk, és elhelyezzük rajta a fasírtgolyókat.
     - A forró sütőbe toljuk.
