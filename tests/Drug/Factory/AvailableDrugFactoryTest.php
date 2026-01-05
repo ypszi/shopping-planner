@@ -6,6 +6,7 @@ namespace PeterPecosz\ShoppingPlanner\Tests\Drug\Factory;
 
 use PeterPecosz\ShoppingPlanner\Drug\Factory\AvailableDrugFactory;
 use PeterPecosz\ShoppingPlanner\Drug\Factory\DrugFactory;
+use PeterPecosz\ShoppingPlanner\Food\Factory\ThumbnailFactory;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 
@@ -18,7 +19,8 @@ class AvailableDrugFactoryTest extends TestCase
         $this->sut = new AvailableDrugFactory(
             new DrugFactory(
                 __DIR__ . '/../../../app/drugs.yaml',
-                __DIR__ . '/../../../app/drugCategories.yaml'
+                __DIR__ . '/../../../app/drugCategories.yaml',
+                $this->createMock(ThumbnailFactory::class),
             ),
             __DIR__ . '/../../../app/drugs.yaml',
         );

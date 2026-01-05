@@ -9,6 +9,7 @@ use PeterPecosz\ShoppingPlanner\Drug\DrugForShopping;
 use PeterPecosz\ShoppingPlanner\Drug\Factory\DrugFactory;
 use PeterPecosz\ShoppingPlanner\Drug\Factory\DrugsFactory;
 use PeterPecosz\ShoppingPlanner\Drug\Factory\DrugShoppingListFactory;
+use PeterPecosz\ShoppingPlanner\Food\Factory\ThumbnailFactory;
 use PeterPecosz\ShoppingPlanner\Measure\Measure;
 use PHPUnit\Framework\TestCase;
 
@@ -22,7 +23,8 @@ class DrugShoppingListFactoryTest extends TestCase
             new DrugsFactory(
                 new DrugFactory(
                     __DIR__ . '/../../../app/drugs.yaml',
-                    __DIR__ . '/../../../app/drugCategories.yaml'
+                    __DIR__ . '/../../../app/drugCategories.yaml',
+                    $this->createMock(ThumbnailFactory::class),
                 ),
                 __DIR__ . '/../../../app/drugs.yaml',
             )
@@ -50,44 +52,49 @@ class DrugShoppingListFactoryTest extends TestCase
                 'rows'   => [
                     [
                         new DrugForShopping(
-                            'Dezodor (férfi)',
-                            new DrugCategory('Tisztálkodás', 5, 1),
-                            1,
-                            null,
-                            Measure::DB
+                            name             : 'Dezodor (férfi)',
+                            category         : new DrugCategory('Tisztálkodás', 5, 1),
+                            defaultPortion   : 1,
+                            portion          : 1,
+                            measure          : null,
+                            measurePreference: Measure::DB
                         ),
                         new DrugForShopping(
-                            'Mosószer',
-                            new DrugCategory('Tisztítószer', 5, 1),
-                            4,
-                            null,
-                            Measure::L
+                            name             : 'Mosószer',
+                            category         : new DrugCategory('Tisztítószer', 5, 1),
+                            defaultPortion   : 1,
+                            portion          : 4,
+                            measure          : null,
+                            measurePreference: Measure::L
                         ),
                     ],
                     [
                         new DrugForShopping(
-                            'Folyékony szappan',
-                            new DrugCategory('Tisztálkodás', 500, 100),
-                            200,
-                            null,
-                            Measure::ML
+                            name             : 'Folyékony szappan',
+                            category         : new DrugCategory('Tisztálkodás', 500, 100),
+                            defaultPortion   : 200,
+                            portion          : 200,
+                            measure          : null,
+                            measurePreference: Measure::ML
                         ),
                         new DrugForShopping(
-                            'Öblítő',
-                            new DrugCategory('Tisztítószer', 5, 1),
-                            2,
-                            null,
-                            Measure::L
+                            name             : 'Öblítő',
+                            category         : new DrugCategory('Tisztítószer', 5, 1),
+                            defaultPortion   : 1,
+                            portion          : 2,
+                            measure          : null,
+                            measurePreference: Measure::L
                         ),
                     ],
                     [
                         '',
                         new DrugForShopping(
-                            'Papírtörlő',
-                            new DrugCategory('Tisztítószer', 5, 1),
-                            1,
-                            null,
-                            Measure::DB
+                            name             : 'Papírtörlő',
+                            category         : new DrugCategory('Tisztítószer', 5, 1),
+                            defaultPortion   : 1,
+                            portion          : 1,
+                            measure          : null,
+                            measurePreference: Measure::DB
                         ),
                     ],
                 ],

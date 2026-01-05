@@ -8,20 +8,13 @@ use PeterPecosz\ShoppingPlanner\Measure\Measure;
 
 class Drug
 {
-    private string $name;
-
-    private DrugCategory $category;
-
-    private ?Measure $measurePreference;
-
     public function __construct(
-        string $name,
-        DrugCategory $category,
-        ?Measure $measurePreference = null
+        private readonly string $name,
+        private readonly DrugCategory $category,
+        private readonly int $defaultPortion,
+        private readonly ?string $thumbnailUrl = null,
+        private readonly ?Measure $measurePreference = null
     ) {
-        $this->name              = $name;
-        $this->category          = $category;
-        $this->measurePreference = $measurePreference;
     }
 
     public function name(): string
@@ -32,6 +25,16 @@ class Drug
     public function category(): DrugCategory
     {
         return $this->category;
+    }
+
+    public function defaultPortion(): int
+    {
+        return $this->defaultPortion;
+    }
+
+    public function thumbnailUrl(): ?string
+    {
+        return $this->thumbnailUrl;
     }
 
     public function measurePreference(): ?Measure

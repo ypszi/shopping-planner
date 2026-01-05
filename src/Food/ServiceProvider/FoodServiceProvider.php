@@ -24,7 +24,8 @@ class FoodServiceProvider implements ServiceDefinitionProviderInterface
     {
         return [
             FoodFactory::class => autowire()
-                ->constructorParameter('foodsPath', get('config.foods.path')),
+                ->constructorParameter('foodsPath', get('config.foods.path'))
+                ->constructorParameter('thumbnailFactory', get('foods.thumbnail_factory')),
 
             FoodsFactory::class => autowire()
                 ->constructorParameter('foodsPath', get('config.foods.path')),
@@ -35,7 +36,7 @@ class FoodServiceProvider implements ServiceDefinitionProviderInterface
             AvailableFoodTagFactory::class => autowire()
                 ->constructorParameter('foodsPath', get('config.foods.path')),
 
-            ThumbnailFactory::class => autowire()
+            'foods.thumbnail_factory' => autowire(ThumbnailFactory::class)
                 ->constructorParameter(
                     'httpClient',
                     create(Client::class)

@@ -12,4 +12,7 @@ return [
 
     'config.foods.thumbnail_cache.path' => __DIR__ . '/../../../web/foods/thumbnails/',
     'config.foods.thumbnail_asset.path' => 'foods/thumbnails/',
+
+    'config.drugs.thumbnail_cache.path' => __DIR__ . '/../../../web/drugs/thumbnails/',
+    'config.drugs.thumbnail_asset.path' => 'drugs/thumbnails/',
 ];

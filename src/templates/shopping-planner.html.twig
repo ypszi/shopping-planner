@@ -18,7 +18,10 @@
 	}
 
 	.hover-img .hover-container span img {
-		width: 15rem;
+		max-width: 15rem;
+		max-height: 15rem;
+		width: auto;
+		height: auto;
 	}
 
 	.hover-img .hover-container span img:hover {
@@ -174,11 +177,11 @@
             {% set availableDrugName = availableDrug.name %}
             {% set availableDrugNameKey = availableDrugName|replace({' ': '_'}) %}
             {% set isAvailableDrugSelected = selectedDrugs[availableDrugName] is defined %}
-            {% set portion = isAvailableDrugSelected ? selectedDrugs[availableDrugName] : 0 %}
+            {% set portion = isAvailableDrugSelected ? selectedDrugs[availableDrugName] : availableDrug.defaultPortion %}
 
             <fieldset class="row mb-2">
                 <div class="col-md-8">
-                    <div class="form-check form-switch">
+                    <div class="form-check form-switch hover-img">
                         <input
                                 type="checkbox"
                                 role="switch"
@@ -190,6 +193,14 @@
                                 {% if isAvailableDrugSelected %}checked="checked"{% endif %}
                         >
                         <label for="drug-{{ availableDrugNameKey }}" class="form-check-label">{{ availableDrugName }}</label>
+                        {% if availableDrug.thumbnailUrl %}
+                            <div class="hover-container">
+                                <i class="emoji emoji-thumbnail"></i>
+                                <span>
+                                    <img src="{{ availableDrug.thumbnailUrl }}" alt="{{ availableDrugName }}" class="img-fluid img-thumbnail">
+                                </span>
+                            </div>
+                        {% endif %}
                         <output id="portion-output-{{ availableDrugNameKey }}">({{ portion }} {{ availableDrug.measurePreference.value }})</output>
                     </div>
                 </div>

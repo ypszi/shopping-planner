@@ -27,6 +27,38 @@
 <!doctype html>
 <html lang="en">
 {% include 'head.html.twig' %}
+<style>
+	.row-thumbnail {
+		max-width: 15rem;
+	}
+
+	.row-comment {
+		min-width: 10rem;
+	}
+
+	.food-thumbnail {
+		min-width: 100px;
+		width: 100%;
+	}
+
+	.food-thumbnail img {
+		max-width: 24rem;
+		max-height: 24rem;
+		width: auto;
+		height: auto;
+	}
+
+	.drug-thumbnail {
+		max-width: 100px;
+	}
+
+	.drug-thumbnail img {
+		max-width: 8rem;
+		max-height: 8rem;
+		width: auto;
+		height: auto;
+	}
+</style>
 <body>
 <div class="container-fluid">
     <div id="bevasarlokozpont">
@@ -327,6 +359,7 @@
             <table class="table table-bordered table-responsive">
                 <thead class="bg-light-orange">
                     <tr>
+                        <th scope="col">Kép</th>
                         {% for header in drugShoppingList.header %}
                             <th scope="col">{{ header }}</th>
                         {% endfor %}
@@ -337,14 +370,21 @@
                         <tr>
                             {% for colId, col in row %}
                                 {% set cellId = rowId ~ '-' ~ colId %}
+                                <td class="row-thumbnail">
+                                    <div class="drug-thumbnail col-sm-12 col-md-8 col-lg-6 col-xl-4">
+                                        {% if col.thumbnailUrl %}
+                                            <img src="{{ col.thumbnailUrl }}" alt="{{ col.name }}" class="img-fluid img-thumbnail">
+                                        {% endif %}
+                                    </div>
+                                </td>
                                 <td>
-                                <span
-                                        id="drug-cell-label-{{ cellId }}"
-                                        class="form-check-label clickable"
-                                        onclick="done(this);"
-                                >
-                                    {{ col }}
-                                </span>
+                                    <span
+                                            id="drug-cell-label-{{ cellId }}"
+                                            class="form-check-label clickable"
+                                            onclick="done(this);"
+                                    >
+                                        {{ col }}
+                                    </span>
                                 </td>
                             {% endfor %}
                         </tr>

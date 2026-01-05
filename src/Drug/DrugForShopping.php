@@ -8,21 +8,16 @@ use PeterPecosz\ShoppingPlanner\Measure\Measure;
 
 class DrugForShopping extends Drug
 {
-    private float $portion;
-
-    private ?Measure $measure;
-
     public function __construct(
         string $name,
         DrugCategory $category,
-        float $portion,
-        ?Measure $measure,
+        int $defaultPortion,
+        private readonly float $portion,
+        private readonly ?Measure $measure,
+        ?string $thumbnailUrl = null,
         ?Measure $measurePreference = null
     ) {
-        $this->portion = $portion;
-        $this->measure = $measure;
-
-        parent::__construct($name, $category, $measurePreference);
+        parent::__construct($name, $category, $defaultPortion, $thumbnailUrl, $measurePreference);
     }
 
     public function portion(): float

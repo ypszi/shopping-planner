@@ -8,12 +8,13 @@ use PeterPecosz\ShoppingPlanner\Drug\Drug;
 use PeterPecosz\ShoppingPlanner\Drug\DrugCategory;
 use PeterPecosz\ShoppingPlanner\Drug\DrugForShopping;
 use PeterPecosz\ShoppingPlanner\Drug\Exception\UnknownDrugException;
+use PeterPecosz\ShoppingPlanner\Food\Factory\ThumbnailFactory;
 use PeterPecosz\ShoppingPlanner\Measure\Measure;
 use Symfony\Component\Yaml\Yaml;
 
 readonly class DrugFactory
 {
-    private const DEFAULT_MAX  = 5;
+    private const DEFAULT_MAX = 5;
     private const DEFAULT_STEP = 1;
 
     /** @var array<string, array<string, string>> */
@@ -24,7 +25,8 @@ readonly class DrugFactory
 
     public function __construct(
         string $drugsPath,
-        string $drugCategoriesPath
+        string $drugCategoriesPath,
+        private ThumbnailFactory $thumbnailFactory,
     ) {
         $this->drugs          = Yaml::parseFile($drugsPath);
         $this->drugCategories = Yaml::parseFile($drugCategoriesPath);
@@ -40,10 +42,12 @@ readonly class DrugFactory
         $drug = $this->create($drugName);
 
         return new DrugForShopping(
-            name:              $drug->name(),
-            category:          $drug->category(),
-            portion:           $portion,
-            measure:           null,
+            name             : $drug->name(),
+            category         : $drug->category(),
+            defaultPortion   : $drug->defaultPortion(),
+            portion          : $portion,
+            measure          : null,
+            thumbnailUrl     : $drug->thumbnailUrl(),
             measurePreference: $drug->measurePreference()
         );
     }
@@ -53,9 +57,9 @@ readonly class DrugFactory
      */
     public function create(string $drugName): Drug
     {
-        $drug = $this->drugs[$drugName] ?? null;
+        $rawDrug = $this->drugs[$drugName] ?? null;
 
-        if (!isset($drug)) {
+        if (!isset($rawDrug)) {
             throw new UnknownDrugException(sprintf('Drug was not found: "%s"', $drugName));
         }
 
@@ -69,12 +73,12 @@ readonly class DrugFactory
             }
 
             $drugName = $drugRefName;
-            $drug     = $drugRef;
+            $rawDrug  = $drugRef;
         }
 
         $defaultDrug       = $this->drugs[$drugName] ?? [];
-        $category          = $drug['kategoria'] ?? $defaultDrug['kategoria'] ?? null;
-        $measurePreference = $drug['mertekegysegPreference']
+        $category          = $rawDrug['kategoria'] ?? $defaultDrug['kategoria'] ?? null;
+        $measurePreference = $rawDrug['mertekegysegPreference']
                              ?? $defaultDrug['mertekegysegPreference']
                                 ?? $this->drugCategories[$category]['mertekegysegPreference']
                                    ?? null;
@@ -90,7 +94,7 @@ readonly class DrugFactory
                 sprintf(
                     'Drug category mismatch for "%s": "%s" - "%s"',
                     $drugName,
-                    $drug['kategoria'],
+                    $rawDrug['kategoria'],
                     $defaultDrug['kategoria']
                 )
             );
@@ -119,13 +123,21 @@ readonly class DrugFactory
         $drugCategory = $this->drugCategories[$category] ?? null;
         $storageSetup = $drugCategory['storage'] ?? [];
 
+        $thumbnail = $rawDrug['thumbnailUrl'] ?? null;
+
+        if ($thumbnail) {
+            $thumbnail = $this->thumbnailFactory->create($drugName, $thumbnail);
+        }
+
         return new Drug(
-            name:              $drugName,
-            category:          new DrugCategory(
-                                   name:        $category,
-                                   storageMax:  $drug['storage']['max'] ?? $storageSetup['max'] ?? self::DEFAULT_MAX,
-                                   storageStep: $drug['storage']['step'] ?? $storageSetup['step'] ?? self::DEFAULT_STEP
-                               ),
+            name             : $drugName,
+            category         : new DrugCategory(
+                name       : $category,
+                storageMax : $rawDrug['storage']['max'] ?? $storageSetup['max'] ?? self::DEFAULT_MAX,
+                storageStep: $rawDrug['storage']['step'] ?? $storageSetup['step'] ?? self::DEFAULT_STEP
+            ),
+            defaultPortion   : $rawDrug['defaultPortion'],
+            thumbnailUrl     : $thumbnail,
             measurePreference: $drugMeasurePreference ?? null
         );
     }

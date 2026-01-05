@@ -11,20 +11,17 @@ use PeterPecosz\ShoppingPlanner\Food\TemplatingProcessor;
 use PeterPecosz\ShoppingPlanner\Ingredient\IngredientForFood;
 use PeterPecosz\ShoppingPlanner\Measure\Measure;
 use PHPUnit\Framework\Attributes\Test;
-use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 
 class FoodFactoryTest extends TestCase
 {
-    private ThumbnailFactory&MockObject $thumbnailFactory;
-
     private FoodFactory $sut;
 
     protected function setUp(): void
     {
         $this->sut = new FoodFactory(
             __DIR__ . '/../../../app/foods.yaml',
-            $this->thumbnailFactory = $this->createMock(ThumbnailFactory::class),
+            $this->createMock(ThumbnailFactory::class),
             $templatingProcessor = $this->createMock(TemplatingProcessor::class),
         );
 
