@@ -21,7 +21,7 @@ return static function (Container $container): App {
     $routeCollector->setDefaultInvocationStrategy(new RequestResponseTypedArgs());
 
     if ($container->get('cache.routes_cache.is_enabled')) {
-        $cacheDir  = __DIR__ . '/../var/cache/routes';
+        $cacheDir  = $container->get('cache.routes_cache.path');
         $cacheFile = $cacheDir . '/routes_cache.php';
 
         if (!is_dir($cacheDir)) {

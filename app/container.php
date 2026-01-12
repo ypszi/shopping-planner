@@ -30,7 +30,7 @@ $builder->useAutowiring(true);
 $builder->useAttributes(true);
 
 if ($config['cache.container_cache.is_enabled']) {
-    $containerCacheDir = __DIR__ . '/../var/cache/container';
+    $containerCacheDir = $config['cache.container_cache.path'];
 
     $builder->enableCompilation($containerCacheDir);
     $builder->writeProxiesToFile(true, $containerCacheDir);

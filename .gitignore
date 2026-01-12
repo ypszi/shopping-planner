@@ -10,3 +10,4 @@ web/drugs/*
 .env
 
 node_modules/
+.serverless/
