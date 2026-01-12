@@ -1,0 +1,21 @@
+service: shopping-planner
+
+provider:
+  name: aws
+  region: eu-north-1
+  runtime: provided.al2
+  httpApi:
+    payload: '2.0'
+  environment:
+    APP_ENV: prod
+
+functions:
+  web:
+    handler: web/index.php
+    layers:
+      - ${bref:layer.php-82}
+    events:
+      - httpApi: '*'
+
+plugins:
+  - ./vendor/bref/bref
