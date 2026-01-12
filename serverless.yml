@@ -12,8 +12,7 @@ provider:
 functions:
   web:
     handler: web/index.php
-    layers:
-      - ${bref:layer.php-82}
+    runtime: php-82-fpm
     events:
       - httpApi: '*'
 

@@ -11,8 +11,11 @@ use function DI\get;
 return [
     'settings.display_error_details' => true,
 
-    'cache.routes_cache.is_enabled'    => true,
+    'cache.routes_cache.is_enabled' => true,
+    'cache.routes_cache.path'       => '/tmp/var/cache/routes',
+
     'cache.container_cache.is_enabled' => true,
+    'cache.container_cache.path'       => '/tmp/var/cache/container',
 
     'twig.parameters' => [
         'cache' => '/tmp/var/cache/twig/',
