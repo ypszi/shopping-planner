@@ -8,6 +8,7 @@
     "require": {
         "php": "^8.2",
         "ext-curl": "*",
+        "bref/bref": "^2.4",
         "guzzlehttp/guzzle": "^7.9",
         "php-di/php-di": "^7.0",
         "slim/http": "^1.4",

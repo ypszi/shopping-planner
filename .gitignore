@@ -8,3 +8,5 @@ web/foods/*
 web/drugs/*
 
 .env
+
+node_modules/

@@ -10,10 +10,12 @@ try {
     (static function (): void {
         require __DIR__ . '/../vendor/autoload.php';
 
-        $dotenv = new Dotenv();
-        $dotenv
-            ->usePutenv()
-            ->load(__DIR__ . '/../.env');
+        if (getenv('APP_ENV') !== 'prod') {
+            $dotenv = new Dotenv();
+            $dotenv
+                ->usePutenv()
+                ->load(__DIR__ . '/../.env');
+        }
 
         /** @var Container $container */
         $container = require __DIR__ . '/container.php';
