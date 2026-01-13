@@ -34,18 +34,17 @@ class DrugServiceProvider implements ServiceDefinitionProviderInterface
             DrugsFactory::class => autowire()
                 ->constructorParameter('drugsPath', get('config.drugs.path')),
 
-            'drugs.thumbnail_factory' => autowire(ThumbnailFactory::class)
-                ->constructorParameter(
-                    'httpClient',
+            'drugs.thumbnail_factory' => create(ThumbnailFactory::class)
+                ->constructor(
                     create(Client::class)
                         ->constructor(
                             [
                                 RequestOptions::ALLOW_REDIRECTS => true,
                             ]
-                        )
-                )
-                ->constructorParameter('thumbnailWebPath', get('config.drugs.thumbnail_asset.path'))
-                ->constructorParameter('thumbnailCachePath', get('config.drugs.thumbnail_cache.path')),
+                        ),
+                    get('drugs.storage')
+                ),
+
         ];
     }
 }

@@ -2,6 +2,12 @@
 
 declare(strict_types=1);
 
+use PeterPecosz\ShoppingPlanner\Core\Filename\LocalFileSystemFileNameNormalizer;
+use PeterPecosz\ShoppingPlanner\Core\Storage\LocalFileSystemStorage;
+
+use function DI\create;
+use function DI\get;
+
 return [
     'settings.display_error_details' => true,
 
@@ -15,9 +21,23 @@ return [
         'cache' => '/tmp/var/cache/twig/',
     ],
 
-    'config.foods.thumbnail_cache.path' => '/tmp/foods/thumbnails/',
-    'config.foods.thumbnail_asset.path' => 'foods/thumbnails/',
+    'config.foods.thumbnail_cache.path' => 'thumbnails/foods/',
+    'config.foods.thumbnail_asset.path' => 'thumbnails/foods/',
 
-    'config.drugs.thumbnail_cache.path' => '/tmp/drugs/thumbnails/',
-    'config.drugs.thumbnail_asset.path' => 'drugs/thumbnails/',
+    'foods.storage' => create(LocalFileSystemStorage::class)
+        ->constructor(
+            create(LocalFileSystemFileNameNormalizer::class),
+            get('config.foods.thumbnail_cache.path'),
+            get('config.foods.thumbnail_asset.path'),
+        ),
+
+    'config.drugs.thumbnail_cache.path' => 'thumbnails/drugs/',
+    'config.drugs.thumbnail_asset.path' => 'thumbnails/drugs/',
+
+    'drugs.storage' => create(LocalFileSystemStorage::class)
+        ->constructor(
+            create(LocalFileSystemFileNameNormalizer::class),
+            get('config.drugs.thumbnail_cache.path'),
+            get('config.drugs.thumbnail_asset.path'),
+        ),
 ];
