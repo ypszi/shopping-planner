@@ -11,7 +11,7 @@ use PeterPecosz\ShoppingPlanner\Ingredient\ServiceProvider\IngredientServiceProv
 use PeterPecosz\ShoppingPlanner\Measure\ServiceProvider\MeasureServiceProvider;
 use PeterPecosz\ShoppingPlanner\Supermarket\ServiceProvider\SupermarketServiceProvider;
 
-$env          = getenv('APP_ENV') ?: $_ENV['APP_ENV'] ?? Environment::prod->value;
+$env          = getenv('APP_ENV') ?: $_ENV['APP_ENV'] ?? Environment::Prod->value;
 $environment  = Environment::from($env);
 $commonConfig = require __DIR__ . '/config/common/config.php';
 $config       = require __DIR__ . '/config/' . $environment->value . '/config.php';

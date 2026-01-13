@@ -6,23 +6,23 @@ namespace PeterPecosz\ShoppingPlanner\Tests\Food\Factory;
 
 use Fig\Http\Message\StatusCodeInterface;
 use GuzzleHttp\Psr7\Request;
+use PeterPecosz\ShoppingPlanner\Core\Storage\Extension;
+use PeterPecosz\ShoppingPlanner\Core\Storage\File;
+use PeterPecosz\ShoppingPlanner\Core\Storage\Storage;
 use PeterPecosz\ShoppingPlanner\Food\Factory\ThumbnailFactory;
+use PeterPecosz\ShoppingPlanner\Food\Thumbnail;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 use Psr\Http\Client\ClientInterface;
 use Psr\Http\Message\ResponseInterface;
+use Psr\Http\Message\StreamInterface;
 
 class ThumbnailFactoryTest extends TestCase
 {
     private ClientInterface&MockObject $httpClient;
 
-    private string $filePath;
-
-    private string $assetPath;
-
-    /** @var string[] */
-    private array $savedFileNames;
+    private Storage&MockObject $storage;
 
     private ThumbnailFactory $sut;
 
@@ -30,15 +30,21 @@ class ThumbnailFactoryTest extends TestCase
     {
         $this->sut = new ThumbnailFactory(
             $this->httpClient = $this->createMock(ClientInterface::class),
-            $this->filePath = __DIR__ . '/../../../var/cache/',
-            $this->assetPath = '/'
+            $this->storage = $this->createMock(Storage::class),
         );
     }
 
     #[Test]
-    public function testCreate(): void
+    public function testCreateWhenNotFound(): void
     {
+        $foodName     = 'Bolognai';
         $thumbnailUrl = 'https://cdn.foods.com/Bolognai.jpg';
+
+        $this->storage
+            ->expects($this->once())
+            ->method('get')
+            ->with($foodName)
+            ->willReturn(null);
 
         $this->httpClient
             ->expects($this->once())
@@ -53,25 +59,69 @@ class ThumbnailFactoryTest extends TestCase
         $response
             ->method('getHeaderLine')
             ->with('Content-Type')
-            ->willReturn('image/jpeg');
+            ->willReturn($mimeType = 'image/jpeg');
+
+        $stream = $this->createMock(StreamInterface::class);
+        $response
+            ->method('getBody')
+            ->willReturn($stream);
+
+        $stream
+            ->method('__toString')
+            ->willReturn($content = 'fileContent');
+
+        $this->storage
+            ->expects($this->once())
+            ->method('save')
+            ->with(
+                new File(
+                    fileName: $foodName,
+                    mimeType: $mimeType,
+                    content : $content
+                )
+            )
+            ->willReturn(
+                $createdThumbnail = new Thumbnail(
+                    filePath : '/tmp/assets/' . $foodName,
+                    assetPath: 'web/assets/' . $foodName,
+                    extension: Extension::JPG
+                )
+            );
 
         $thumbnail = $this->sut->create(
-            foodName:     'Bolognai',
+            foodName    : 'Bolognai',
             thumbnailUrl: $thumbnailUrl
         );
 
-        $fileName               = 'Bolognai.jpg';
-        $this->savedFileNames[] = $fileName;
-
-        $this->assertEquals($this->assetPath . $fileName, $thumbnail);
+        $this->assertEquals($createdThumbnail, $thumbnail);
     }
 
-    protected function tearDown(): void
+    #[Test]
+    public function testCreateWhenFound(): void
     {
-        foreach ($this->savedFileNames as $savedFileName) {
-            unlink($this->filePath . $savedFileName);
-        }
+        $foodName = 'Bolognai';
 
-        parent::tearDown();
+        $this->storage
+            ->expects($this->once())
+            ->method('get')
+            ->with($foodName)
+            ->willReturn(
+                $foundThumbnail = new Thumbnail(
+                    filePath : '/tmp/assets/' . $foodName,
+                    assetPath: 'web/assets/' . $foodName,
+                    extension: Extension::JPG
+                )
+            );
+
+        $this->httpClient
+            ->expects($this->never())
+            ->method('sendRequest');
+
+        $thumbnail = $this->sut->create(
+            foodName    : $foodName,
+            thumbnailUrl: 'https://cdn.foods.com/Bolognai.jpg'
+        );
+
+        $this->assertEquals($foundThumbnail, $thumbnail);
     }
 }

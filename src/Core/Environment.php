@@ -6,6 +6,6 @@ namespace PeterPecosz\ShoppingPlanner\Core;
 
 enum Environment: string
 {
-    case dev = 'dev';
-    case prod = 'prod';
+    case Dev = 'dev';
+    case Prod = 'prod';
 }

@@ -4,12 +4,14 @@ declare(strict_types=1);
 
 namespace PeterPecosz\ShoppingPlanner\Food;
 
+use PeterPecosz\ShoppingPlanner\Core\Storage\Extension;
+
 readonly class Thumbnail
 {
     public function __construct(
         private string $filePath,
         private string $assetPath,
-        private string $extension
+        private Extension $extension
     ) {
     }
 
@@ -25,6 +27,6 @@ readonly class Thumbnail
 
     public function getExtension(): string
     {
-        return $this->extension;
+        return $this->extension->value;
     }
 }

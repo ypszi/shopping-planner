@@ -36,18 +36,16 @@ class FoodServiceProvider implements ServiceDefinitionProviderInterface
             AvailableFoodTagFactory::class => autowire()
                 ->constructorParameter('foodsPath', get('config.foods.path')),
 
-            'foods.thumbnail_factory' => autowire(ThumbnailFactory::class)
-                ->constructorParameter(
-                    'httpClient',
+            'foods.thumbnail_factory' => create(ThumbnailFactory::class)
+                ->constructor(
                     create(Client::class)
                         ->constructor(
                             [
                                 RequestOptions::ALLOW_REDIRECTS => true,
                             ]
-                        )
-                )
-                ->constructorParameter('thumbnailWebPath', get('config.foods.thumbnail_asset.path'))
-                ->constructorParameter('thumbnailCachePath', get('config.foods.thumbnail_cache.path')),
+                        ),
+                    get('foods.storage')
+                ),
 
             TemplatingProcessor::class => autowire(),
         ];
