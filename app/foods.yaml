@@ -169,20 +169,17 @@ Avokádós tonhalsaláta madársalátával:
     - name: Lilahagyma
       portion: 1 db
   cookingSteps:
-    - A tojásokat fövő vízben kb. 10 perc alatt megfőzzük, hideg vízzel leöblítjük, hűlni hagyjuk.
-    - A chilit hosszában kettévágjuk, a magokat kiszedjük, és apró kockákra vágjuk.
-    - 3 ek limelét sóval, borssal és cukorral ízesítjük, majd hozzákeverjük az olajat.
+    - "{{ Tojás }} tojást lobogó vízben kb. 10 perc alatt megfőzzük, hideg vízzel leöblítjük, hűlni hagyjuk."
+    - "{{ Lime }} lime levét {{ Só }} sóval, {{ Bors }} borssal és {{ Cukor }} cukorral ízesítjük, majd hozzákeverünk {{ Napraforgóolaj }} olajat."
     - A tojásokat meghántjuk, négybe vágjuk.
-    - A tonhal konzerveket leszűrjük.
-    - A madársalátát megtisztítjuk, mossuk, saláta centrifugába megpörgetjük.
-    - A jégcsapsalátát megtisztítjuk, vékony csíkokra vágjuk.
-    - A paradicsomot megmossuk, vékony cikkekre vágjuk.
-    - Az avokádókat kettévágjuk, a magokat kiemeljük, a feleket még egyszer elfelezzük, a gyümölcshúst kiemeljük a héjból.
+    - "{{ Tonhal (konzerv) }} tonhal konzervet leszűrjük."
+    - "{{ Madársaláta }} madársalátát megtisztítjuk, mossuk, saláta centrifugába megpörgetjük."
+    - "{{ Jégsaláta }} jégsalátát megtisztítjuk, vékony csíkokra vágjuk."
+    - "{{ Paradicsom }} paradicsomot megmosunk, vékony cikkekre vágjuk."
+    - "{{ Avokádó }} avokádót kettévágjuk, a magokat kiemeljük, a feleket még egyszer elfelezzük, a gyümölcshúst kiemeljük a héjból."
     - A negyed avokádókat szeletekre vágjuk, és meglocsoljuk a maradék limelével.
-    - A hagymát megtisztítjuk, vékony szeletekre vágjuk.
+    - "{{ Lilahagyma }} hagymát megtisztítjuk, vékony szeletekre vágjuk."
     - A jégsalátát, a madársalátát, tojást, tonhalat, paradicsomot, avokádót és a hagymát összekeverjük. Meglocsoljuk a vinaigrettel, és tányérokra osztjuk.
-  comments:
-    - 4 ek Limelé
 
 Baconbe göngyölt mozzarellás csirkemell:
   defaultPortion: 4
