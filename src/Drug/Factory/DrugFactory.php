@@ -123,15 +123,7 @@ readonly class DrugFactory
         $drugCategory = $this->drugCategories[$category] ?? null;
         $storageSetup = $drugCategory['storage'] ?? [];
 
-        $thumbnailUrl = $rawDrug['thumbnailUrl'] ?? null;
-
-        if ($thumbnailUrl) {
-            $thumbnailUrl = $this->thumbnailFactory
-                ->create($drugName, $thumbnailUrl)
-                ?->getAssetPath();
-        }
-
-        return new Drug(
+        $drug = new Drug(
             name             : $drugName,
             category         : new DrugCategory(
                 name       : $category,
@@ -139,8 +131,13 @@ readonly class DrugFactory
                 storageStep: $rawDrug['storage']['step'] ?? $storageSetup['step'] ?? self::DEFAULT_STEP
             ),
             defaultPortion   : $rawDrug['defaultPortion'],
-            thumbnailUrl     : $thumbnailUrl,
             measurePreference: $drugMeasurePreference ?? null
         );
+
+        $thumbnailUrl = $rawDrug['thumbnailUrl'] ?? null;
+        $thumbnail    = $this->thumbnailFactory->create($drug, $thumbnailUrl);
+
+        return $drug
+            ->withThumnailUrl($thumbnail?->getAssetPath());
     }
 }

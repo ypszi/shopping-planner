@@ -6,6 +6,7 @@ namespace PeterPecosz\ShoppingPlanner\Food\Factory;
 
 use Fig\Http\Message\StatusCodeInterface;
 use GuzzleHttp\Psr7\Request;
+use PeterPecosz\ShoppingPlanner\Core\Product;
 use PeterPecosz\ShoppingPlanner\Core\Storage\File;
 use PeterPecosz\ShoppingPlanner\Core\Storage\Storage;
 use PeterPecosz\ShoppingPlanner\Food\Thumbnail;
@@ -20,13 +21,13 @@ readonly class ThumbnailFactory
     ) {
     }
 
-    public function create(string $foodName, ?string $thumbnailUrl): ?Thumbnail
+    public function create(Product $product, ?string $thumbnailUrl): ?Thumbnail
     {
-        if (!$thumbnailUrl) {
+        if (empty($thumbnailUrl)) {
             return null;
         }
 
-        $thumbnail = $this->storage->get(filename: $foodName);
+        $thumbnail = $this->storage->get(filename: $product->name());
 
         if ($thumbnail) {
             return $thumbnail;
@@ -40,7 +41,7 @@ readonly class ThumbnailFactory
 
         $mimeType = $response->getHeaderLine('Content-Type');
         $file     = new File(
-            fileName: $foodName,
+            fileName: $product->name(),
             mimeType: $mimeType,
             content : (string)$response->getBody()
         );

@@ -4,22 +4,19 @@ declare(strict_types=1);
 
 namespace PeterPecosz\ShoppingPlanner\Drug;
 
+use PeterPecosz\ShoppingPlanner\Core\Product;
 use PeterPecosz\ShoppingPlanner\Measure\Measure;
 
-class Drug
+class Drug extends Product
 {
     public function __construct(
-        private readonly string $name,
+        string $name,
         private readonly DrugCategory $category,
         private readonly int $defaultPortion,
-        private readonly ?string $thumbnailUrl = null,
+        ?string $thumbnailUrl = null,
         private readonly ?Measure $measurePreference = null
     ) {
-    }
-
-    public function name(): string
-    {
-        return $this->name;
+        parent::__construct($name, $thumbnailUrl);
     }
 
     public function category(): DrugCategory
@@ -30,11 +27,6 @@ class Drug
     public function defaultPortion(): int
     {
         return $this->defaultPortion;
-    }
-
-    public function thumbnailUrl(): ?string
-    {
-        return $this->thumbnailUrl;
     }
 
     public function measurePreference(): ?Measure

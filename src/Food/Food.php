@@ -4,9 +4,10 @@ declare(strict_types=1);
 
 namespace PeterPecosz\ShoppingPlanner\Food;
 
+use PeterPecosz\ShoppingPlanner\Core\Product;
 use PeterPecosz\ShoppingPlanner\Ingredient\IngredientForFood;
 
-class Food
+class Food extends Product
 {
     /**
      * @param string[]            $tags
@@ -15,24 +16,21 @@ class Food
      * @param IngredientForFood[] $ingredients
      */
     public function __construct(
-        private readonly string $name,
+        string $name,
         private readonly int $defaultPortion,
         private ?int $portion = null,
         private readonly ?string $recipeUrl = null,
-        private readonly ?string $thumbnailUrl = null,
+        ?string $thumbnailUrl = null,
         private readonly array $tags = [],
         private array $comments = [],
         private array $cookingSteps = [],
         private array $ingredients = []
     ) {
+        parent::__construct($name, $thumbnailUrl);
+
         $this->portion = $portion ?? $defaultPortion;
 
         $this->addIngredients($ingredients);
-    }
-
-    public function name(): string
-    {
-        return $this->name;
     }
 
     public function defaultPortion(): int
@@ -65,11 +63,6 @@ class Food
         }
 
         return $this->decorateNoSaltyRecipeUrl($rawRecipeUrl);
-    }
-
-    public function thumbnailUrl(): ?string
-    {
-        return $this->thumbnailUrl;
     }
 
     protected function rawRecipeUrl(): ?string

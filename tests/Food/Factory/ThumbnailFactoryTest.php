@@ -6,6 +6,7 @@ namespace PeterPecosz\ShoppingPlanner\Tests\Food\Factory;
 
 use Fig\Http\Message\StatusCodeInterface;
 use GuzzleHttp\Psr7\Request;
+use PeterPecosz\ShoppingPlanner\Core\Product;
 use PeterPecosz\ShoppingPlanner\Core\Storage\Extension;
 use PeterPecosz\ShoppingPlanner\Core\Storage\File;
 use PeterPecosz\ShoppingPlanner\Core\Storage\Storage;
@@ -88,8 +89,11 @@ class ThumbnailFactoryTest extends TestCase
                 )
             );
 
+        $product = $this->createMock(Product::class);
+        $product->method('name')->willReturn($foodName);
+
         $thumbnail = $this->sut->create(
-            foodName    : 'Bolognai',
+            product     : $product,
             thumbnailUrl: $thumbnailUrl
         );
 
@@ -117,8 +121,11 @@ class ThumbnailFactoryTest extends TestCase
             ->expects($this->never())
             ->method('sendRequest');
 
+        $product = $this->createMock(Product::class);
+        $product->method('name')->willReturn($foodName);
+
         $thumbnail = $this->sut->create(
-            foodName    : $foodName,
+            product     : $product,
             thumbnailUrl: 'https://cdn.foods.com/Bolognai.jpg'
         );
 
