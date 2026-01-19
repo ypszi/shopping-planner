@@ -1745,8 +1745,6 @@ Karfiolsteak:
         - köret
         - saláta
     ingredients:
-        - name: Napraforgóolaj
-          portion: '2 ek'
         - name: Körte
           portion: '1 db'
         - name: Madársaláta
@@ -1758,9 +1756,9 @@ Karfiolsteak:
         - name: Dió
           portion: '2 ek'
         - name: Olívaolaj
-          portion: '35 ml'
+          portion: '2 ek'
         - name: 'Balzsamecet (fehér)'
-          portion: '10 ml'
+          portion: '2 tk'
         - name: Mustár
           portion: '1 tk'
         - name: Méz
@@ -1772,23 +1770,21 @@ Karfiolsteak:
         - name: Citromlé
           portion: '3 csepp'
     cookingSteps:
-        - 'A körtét kicsumázzuk, és vékonyabb szeletekre vágjuk.'
-        - 'A madársalátát és a rukkolát egy tálba dobjuk.'
-        - 'A parmezánt zöldséghámozóval felszeleteljük.'
-        - 'A diót pedig egy száraz serpenyőben, pár perc alatt megpirítjuk.'
+        - '{{ Körte }} körtét kicsumázunk, és vékonyabb szeletekre vagy kockákra vágjuk.'
+        - '{{ Madársaláta }} madársalátát és {{ Rukkola }} rukkolát egy tálba dobjuk.'
+        - '{{ Parmezán sajt }} parmezánt zöldséghámozóval felszeleteljük.'
+        - '{{ Dió }} diót pedig egy száraz serpenyőben, pár perc alatt megpirítjuk.'
         - 'A parmezán és a dió nagy része mehet is a salátához, a díszítéshez mindkettőből egy keveset félrerakunk.'
-        - 'Az öntet hozzávalóit egy kis üvegben alaposan összerázzuk, és tálalás előtt a salátára öntjük.'
+        - 'Az öntet hozzávalóit egy kis üvegben alaposan összerázzuk, és tálalás előtt a salátára öntjük:':
+          - '{{ Olívaolaj }} Olívaolaj'
+          - '{{ Balzsamecet (fehér) }} Balzsamecet'
+          - '{{ Mustár }} Mustár'
+          - '{{ Méz }} Méz'
+          - '{{ Só }} Só'
+          - '{{ Bors }} Bors'
+          - '{{ Citromlé }} Citromlé'
         - 'Összeforgatjuk a salátát, hogy mindenhol bevonja az öntet.'
         - 'Tálakba szedjük, és a félrerakott parmezánnal és dióval megszórva tálaljuk.'
-    comments:
-        - 'Az öntethez:':
-              - '{{ Olívaolaj }} Olívaolaj'
-              - '{{ Balzsamecet (fehér) }} Balzsamecet'
-              - '{{ Mustár }} Mustár'
-              - '{{ Méz }} Méz'
-              - '{{ Só }} Só'
-              - '{{ Bors }} Bors'
-              - '{{ Citromlé }} Citromlé'
 'Krumpli főzelék fasírttal':
     defaultPortion: 4
     receptUrl: 'https://www.nosalty.hu/recept/legegyszerubb-krumplifozelek'
