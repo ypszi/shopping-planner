@@ -4,14 +4,19 @@ declare(strict_types=1);
 
 namespace PeterPecosz\ShoppingPlanner\Tests\Drug\Factory;
 
+use PeterPecosz\ShoppingPlanner\Drug\Drug;
 use PeterPecosz\ShoppingPlanner\Drug\DrugCategory;
 use PeterPecosz\ShoppingPlanner\Drug\Factory\DrugFactory;
 use PeterPecosz\ShoppingPlanner\Food\Factory\ThumbnailFactory;
+use PeterPecosz\ShoppingPlanner\Food\Thumbnail;
 use PeterPecosz\ShoppingPlanner\Measure\Measure;
+use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 
 class DrugFactoryTest extends TestCase
 {
+    private ThumbnailFactory&MockObject $thumbnailFactory;
+
     private DrugFactory $sut;
 
     protected function setUp(): void
@@ -19,12 +24,18 @@ class DrugFactoryTest extends TestCase
         $this->sut = new DrugFactory(
             __DIR__ . '/../../../app/drugs.yaml',
             __DIR__ . '/../../../app/drugCategories.yaml',
-            $this->createMock(ThumbnailFactory::class),
+            $this->thumbnailFactory = $this->createMock(ThumbnailFactory::class),
         );
     }
 
     public function testCreateWithPortion(): void
     {
+        $this->thumbnailFactory
+            ->expects($this->once())
+            ->method('create')
+            ->with($this->isInstanceOf(Drug::class))
+            ->willReturn(null);
+
         $drug = $this->sut->createWithPortion('Mosószer', 4);
 
         $this->assertEquals('Mosószer', $drug->name());
@@ -36,10 +47,35 @@ class DrugFactoryTest extends TestCase
 
     public function testCreate(): void
     {
+        $this->thumbnailFactory
+            ->expects($this->once())
+            ->method('create')
+            ->with($this->isInstanceOf(Drug::class))
+            ->willReturn(null);
+
         $drug = $this->sut->create('Mosószer');
 
         $this->assertEquals('Mosószer', $drug->name());
         $this->assertEquals(new DrugCategory('Tisztítószer', 5, 1), $drug->category());
         $this->assertEquals(Measure::L, $drug->measurePreference());
+    }
+
+    public function testCreateWithThumbnail(): void
+    {
+        $this->thumbnailFactory
+            ->expects($this->once())
+            ->method('create')
+            ->with($this->isInstanceOf(Drug::class))
+            ->willReturn($thumbnail = $this->createMock(Thumbnail::class));
+
+        $thumbnail
+            ->expects($this->once())
+            ->method('getAssetPath')
+            ->willReturn('thumbnails/Mosószer.jpg');
+
+        $drug = $this->sut->create('Mosószer');
+
+        $this->assertEquals('Mosószer', $drug->name());
+        $this->assertEquals('thumbnails/Mosószer.jpg', $drug->thumbnailUrl());
     }
 }

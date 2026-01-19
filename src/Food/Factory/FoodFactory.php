@@ -55,14 +55,14 @@ readonly class FoodFactory
             defaultPortion: $rawFood['defaultPortion'],
             portion       : $portion,
             recipeUrl     : $rawFood['receptUrl'] ?? null,
+            thumbnailUrl  : $rawFood['thumbnailUrl'] ?? null,
             tags          : $tags,
             comments      : $rawFood['comments'] ?? [],
             cookingSteps  : $rawFood['cookingSteps'] ?? [],
             ingredients   : $ingredients
         );
 
-        $thumbnailUrl = $rawFood['thumbnailUrl'] ?? null;
-        $thumbnail    = $this->thumbnailFactory->create($food, $thumbnailUrl);
+        $thumbnail = $this->thumbnailFactory->create($food);
 
         return $food
             ->withThumnailUrl($thumbnail?->getAssetPath())

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace PeterPecosz\ShoppingPlanner\Core\Filename;
+namespace PeterPecosz\ShoppingPlanner\Core\File;
 
 interface FileNameNormalizer
 {

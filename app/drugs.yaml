@@ -1,67 +1,65 @@
-Dezodor (férfi):
-  kategoria: Tisztálkodás
-  defaultPortion: 1
-  thumbnailUrl: https://products.dm-static.com/images/f_auto,q_auto,c_fit,h_440,w_500/v1747454329/assets/pas/images/58a8962b-a2e9-402b-a15b-feccdd8bb4f7/balea-men-deo-roll-on-fresh
-
-Dezodor (női):
-  kategoria: Tisztálkodás
-  defaultPortion: 1
-  thumbnailUrl: https://products.dm-static.com/images/f_auto,q_auto,c_fit,h_440,w_500/v1747534328/assets/pas/images/f4dedb3b-630e-4a70-bc08-01c891c9be8d/rexona-deo-spray-invisible-fresh-power
-
-DM cica kaja:
-  kategoria: Cica kaja
-  defaultPortion: 6
-  thumbnailUrl: https://products.dm-static.com/images/f_auto,q_auto,c_fit,h_440,w_500/v1747487157/assets/pas/images/f1c0e801-8b62-4cac-bbfb-2bccc9a3b3f9/dein-bestes-nedves-eledel-felnott-macskaknak-marhaval-es-pulykaval-szoszban
-
+'Dezodor (férfi)':
+    kategoria: Tisztálkodás
+    defaultPortion: 1
+    thumbnailUrl: 'https://products.dm-static.com/images/f_auto,q_auto,c_fit,h_440,w_500/v1747454329/assets/pas/images/58a8962b-a2e9-402b-a15b-feccdd8bb4f7/balea-men-deo-roll-on-fresh'
+    thumbnailExtension: png
+'Dezodor (női)':
+    kategoria: Tisztálkodás
+    defaultPortion: 1
+    thumbnailUrl: 'https://products.dm-static.com/images/f_auto,q_auto,c_fit,h_440,w_500/v1747534328/assets/pas/images/f4dedb3b-630e-4a70-bc08-01c891c9be8d/rexona-deo-spray-invisible-fresh-power'
+    thumbnailExtension: png
+'DM cica kaja':
+    kategoria: 'Cica kaja'
+    defaultPortion: 6
+    thumbnailUrl: 'https://products.dm-static.com/images/f_auto,q_auto,c_fit,h_440,w_500/v1747487157/assets/pas/images/f1c0e801-8b62-4cac-bbfb-2bccc9a3b3f9/dein-bestes-nedves-eledel-felnott-macskaknak-marhaval-es-pulykaval-szoszban'
+    thumbnailExtension: png
 Fogkrém:
-  kategoria: Tisztálkodás
-  thumbnailUrl: https://products.dm-static.com/images/f_auto,q_auto,c_fit,h_440,w_500/v1747488348/assets/pas/images/a3aba1ad-e37c-4164-94f1-9f52a1edc684/dontodent-szenzitiv-fogkrem-erzekeny-fogakra
-  defaultPortion: 1
-  mertekegysegPreference: db
-
-Folyékony szappan:
-  kategoria: Tisztálkodás
-  defaultPortion: 200
-  thumbnailUrl: https://products.dm-static.com/images/f_auto,q_auto,c_fit,h_440,w_500/v1747485145/assets/pas/images/a1ea000f-bd73-4de6-9ba1-2c7bd5816c07/balea-szenzitiv-folyekony-kremszappan-aloe-veraval-utantolto
-  mertekegysegPreference: ml
-  storage:
-    max: 500
-    step: 100
-
+    kategoria: Tisztálkodás
+    mertekegysegPreference: db
+    defaultPortion: 1
+    thumbnailUrl: 'https://products.dm-static.com/images/f_auto,q_auto,c_fit,h_440,w_500/v1747488348/assets/pas/images/a3aba1ad-e37c-4164-94f1-9f52a1edc684/dontodent-szenzitiv-fogkrem-erzekeny-fogakra'
+    thumbnailExtension: png
+'Folyékony szappan':
+    kategoria: Tisztálkodás
+    defaultPortion: 200
+    mertekegysegPreference: ml
+    storage:
+        max: 500
+        step: 100
+    thumbnailUrl: 'https://products.dm-static.com/images/f_auto,q_auto,c_fit,h_440,w_500/v1747485145/assets/pas/images/a1ea000f-bd73-4de6-9ba1-2c7bd5816c07/balea-szenzitiv-folyekony-kremszappan-aloe-veraval-utantolto'
+    thumbnailExtension: png
 Mosogatószer:
-  kategoria: Tisztítószer
-  defaultPortion: 200
-  mertekegysegPreference: ml
-  storage:
-    max: 500
-    step: 100
-
+    kategoria: Tisztítószer
+    defaultPortion: 200
+    mertekegysegPreference: ml
+    storage:
+        max: 500
+        step: 100
 Mosószer:
-  kategoria: Tisztítószer
-  defaultPortion: 1
-  thumbnailUrl: https://products.dm-static.com/images/f_auto,q_auto,c_fit,h_440,w_500/v1747508115/assets/pas/images/ecd7d1c8-fcb5-41b1-8d56-287df03daabe/dr-m-mosodio-gel-narancsolaj-66-mosas
-
+    kategoria: Tisztítószer
+    defaultPortion: 1
+    thumbnailUrl: 'https://products.dm-static.com/images/f_auto,q_auto,c_fit,h_440,w_500/v1747508115/assets/pas/images/ecd7d1c8-fcb5-41b1-8d56-287df03daabe/dr-m-mosodio-gel-narancsolaj-66-mosas'
+    thumbnailExtension: png
 Öblítő:
-  kategoria: Tisztítószer
-  defaultPortion: 1
-  thumbnailUrl: https://products.dm-static.com/images/f_auto,q_auto,c_fit,h_440,w_500/v1748991838/assets/pas/images/877c4538-e804-4f4f-a3f6-a2086e685670/frosch-oblito-aloe-vera
-
+    kategoria: Tisztítószer
+    defaultPortion: 1
+    thumbnailUrl: 'https://products.dm-static.com/images/f_auto,q_auto,c_fit,h_440,w_500/v1748991838/assets/pas/images/877c4538-e804-4f4f-a3f6-a2086e685670/frosch-oblito-aloe-vera'
+    thumbnailExtension: png
 Papírtörlő:
-  kategoria: Tisztítószer
-  defaultPortion: 1
-  mertekegysegPreference: db
-
-Tusfürdő (férfi):
-  kategoria: Tisztálkodás
-  defaultPortion: 1
-  thumbnailUrl: https://products.dm-static.com/images/f_auto,q_auto,c_fit,h_440,w_500/v1759532975/assets/pas/images/c8b8c899-b681-4a82-a513-94d89a7d1839/adidas-ferfi-tusfurdo-ice-dive
-
-Tusfürdő (női):
-  kategoria: Tisztálkodás
-  defaultPortion: 1
-  thumbnailUrl: https://products.dm-static.com/images/f_auto,q_auto,c_fit,h_440,w_500/v1747478691/assets/pas/images/766ff412-a1d8-44ee-a5c1-c852b47b7468/balea-szenzitiv-kremtusfurdo-aloe-veraval-utantolto
-
-WC papír:
-  kategoria: Tisztítószer
-  defaultPortion: 1
-  mertekegysegPreference: csomag
+    kategoria: Tisztítószer
+    defaultPortion: 1
+    mertekegysegPreference: db
+'Tusfürdő (férfi)':
+    kategoria: Tisztálkodás
+    defaultPortion: 1
+    thumbnailUrl: 'https://products.dm-static.com/images/f_auto,q_auto,c_fit,h_440,w_500/v1759532975/assets/pas/images/c8b8c899-b681-4a82-a513-94d89a7d1839/adidas-ferfi-tusfurdo-ice-dive'
+    thumbnailExtension: png
+'Tusfürdő (női)':
+    kategoria: Tisztálkodás
+    defaultPortion: 1
+    thumbnailUrl: 'https://products.dm-static.com/images/f_auto,q_auto,c_fit,h_440,w_500/v1747478691/assets/pas/images/766ff412-a1d8-44ee-a5c1-c852b47b7468/balea-szenzitiv-kremtusfurdo-aloe-veraval-utantolto'
+    thumbnailExtension: png
+'WC papír':
+    kategoria: Tisztítószer
+    defaultPortion: 1
+    mertekegysegPreference: csomag

@@ -4,9 +4,8 @@ declare(strict_types=1);
 
 namespace PeterPecosz\ShoppingPlanner\Drug\ServiceProvider;
 
-use GuzzleHttp\Client;
-use GuzzleHttp\RequestOptions;
 use PeterPecosz\ShoppingPlanner\Core\ServiceProvider\ServiceDefinitionProviderInterface;
+use PeterPecosz\ShoppingPlanner\Core\Storage\ThumbnailExtensionStorage;
 use PeterPecosz\ShoppingPlanner\Drug\Factory\AvailableDrugFactory;
 use PeterPecosz\ShoppingPlanner\Drug\Factory\DrugFactory;
 use PeterPecosz\ShoppingPlanner\Drug\Factory\DrugsFactory;
@@ -34,17 +33,13 @@ class DrugServiceProvider implements ServiceDefinitionProviderInterface
             DrugsFactory::class => autowire()
                 ->constructorParameter('drugsPath', get('config.drugs.path')),
 
-            'drugs.thumbnail_factory' => create(ThumbnailFactory::class)
-                ->constructor(
-                    create(Client::class)
-                        ->constructor(
-                            [
-                                RequestOptions::ALLOW_REDIRECTS => true,
-                            ]
-                        ),
-                    get('drugs.storage')
+            'drugs.thumbnail_factory' => autowire(ThumbnailFactory::class)
+                ->constructorParameter('storage', get('drugs.storage'))
+                ->constructorParameter(
+                    'thumbnailExtensionStorage',
+                    create(ThumbnailExtensionStorage::class)
+                        ->constructor(get('config.drugs.path'))
                 ),
-
         ];
     }
 }

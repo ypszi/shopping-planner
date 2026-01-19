@@ -4,9 +4,9 @@ declare(strict_types=1);
 
 namespace Core\Storage;
 
-use PeterPecosz\ShoppingPlanner\Core\Filename\FileNameNormalizer;
-use PeterPecosz\ShoppingPlanner\Core\Storage\Extension;
-use PeterPecosz\ShoppingPlanner\Core\Storage\File;
+use PeterPecosz\ShoppingPlanner\Core\File\Extension;
+use PeterPecosz\ShoppingPlanner\Core\File\File;
+use PeterPecosz\ShoppingPlanner\Core\File\FileNameNormalizer;
 use PeterPecosz\ShoppingPlanner\Core\Storage\LocalFileSystemStorage;
 use PeterPecosz\ShoppingPlanner\Food\Thumbnail;
 use PHPUnit\Framework\Attributes\Test;
@@ -56,9 +56,9 @@ class LocalFileSystemStorageTest extends TestCase
         $fileName = 'Alpesi Sajtos-Tészta (~Älplermagronen) / Alpesi_Macaroni';
 
         $this->fileNameNormalizer
-            ->expects($this->exactly(3))
+            ->expects($this->once())
             ->method('normalize')
-            ->with()
+            ->with($fileName)
             ->willReturn($fileName);
 
         file_put_contents(
@@ -66,7 +66,7 @@ class LocalFileSystemStorageTest extends TestCase
             file_get_contents(__DIR__ . '/mock-image.jpg')
         );
 
-        $thumbnail = $this->sut->get($fileName);
+        $thumbnail = $this->sut->get($fileName, Extension::JPG);
 
         $this->assertNull($thumbnail);
     }
@@ -84,10 +84,10 @@ class LocalFileSystemStorageTest extends TestCase
         $this->fileNameNormalizer
             ->expects($this->once())
             ->method('normalize')
-            ->with()
+            ->with($fileName)
             ->willReturn($fileName);
 
-        $thumbnail = $this->sut->get($fileName);
+        $thumbnail = $this->sut->get($fileName, Extension::JPG);
 
         unlink($this->filePath . $fileName . '.' . Extension::JPG->value);
 

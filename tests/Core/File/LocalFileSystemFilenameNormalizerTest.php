@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Core\Filename;
+namespace Core\File;
 
-use PeterPecosz\ShoppingPlanner\Core\Filename\LocalFileSystemFileNameNormalizer;
+use PeterPecosz\ShoppingPlanner\Core\File\LocalFileSystemFileNameNormalizer;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 

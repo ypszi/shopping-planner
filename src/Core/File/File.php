@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace PeterPecosz\ShoppingPlanner\Core\Storage;
+namespace PeterPecosz\ShoppingPlanner\Core\File;
 
 use InvalidArgumentException;
 
 class File
 {
-    public const MIME_TYPE_EXTENSION_MAP = [
+    private const MIME_TYPE_EXTENSION_MAP = [
         'image/jpeg' => Extension::JPG,
         'image/png'  => Extension::PNG,
         'image/webp' => Extension::WEBP,
@@ -17,7 +17,7 @@ class File
     private Extension $extension;
 
     public function __construct(
-        public readonly string $fileName,
+        private string $fileName,
         string $mimeType,
         public readonly mixed $content,
     ) {
@@ -28,20 +28,25 @@ class File
         $this->extension = self::MIME_TYPE_EXTENSION_MAP[$mimeType];
     }
 
+    public function fileName(): string
+    {
+        return $this->fileName;
+    }
+
+    public function withFileName(string $fileName): self
+    {
+        $clone           = clone $this;
+        $clone->fileName = $fileName;
+
+        return $clone;
+    }
+
     public static function isMimeTypeValid(string $mimetype): bool
     {
         return isset(self::MIME_TYPE_EXTENSION_MAP[$mimetype]);
     }
 
-    /**
-     * @return Extension[]
-     */
-    public static function getAvailableExtensions(): array
-    {
-        return array_values(self::MIME_TYPE_EXTENSION_MAP);
-    }
-
-    public function getExtension(): Extension
+    public function extension(): Extension
     {
         return $this->extension;
     }

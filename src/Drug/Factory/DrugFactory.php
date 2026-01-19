@@ -131,11 +131,11 @@ readonly class DrugFactory
                 storageStep: $rawDrug['storage']['step'] ?? $storageSetup['step'] ?? self::DEFAULT_STEP
             ),
             defaultPortion   : $rawDrug['defaultPortion'],
+            thumbnailUrl     : $rawDrug['thumbnailUrl'] ?? null,
             measurePreference: $drugMeasurePreference ?? null
         );
 
-        $thumbnailUrl = $rawDrug['thumbnailUrl'] ?? null;
-        $thumbnail    = $this->thumbnailFactory->create($drug, $thumbnailUrl);
+        $thumbnail = $this->thumbnailFactory->create($drug);
 
         return $drug
             ->withThumnailUrl($thumbnail?->getAssetPath());

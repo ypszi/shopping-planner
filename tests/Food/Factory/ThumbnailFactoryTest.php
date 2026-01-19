@@ -4,34 +4,34 @@ declare(strict_types=1);
 
 namespace PeterPecosz\ShoppingPlanner\Tests\Food\Factory;
 
-use Fig\Http\Message\StatusCodeInterface;
-use GuzzleHttp\Psr7\Request;
+use PeterPecosz\ShoppingPlanner\Core\File\Extension;
+use PeterPecosz\ShoppingPlanner\Core\File\File;
+use PeterPecosz\ShoppingPlanner\Core\File\FileDownloader;
 use PeterPecosz\ShoppingPlanner\Core\Product;
-use PeterPecosz\ShoppingPlanner\Core\Storage\Extension;
-use PeterPecosz\ShoppingPlanner\Core\Storage\File;
 use PeterPecosz\ShoppingPlanner\Core\Storage\Storage;
+use PeterPecosz\ShoppingPlanner\Core\Storage\ThumbnailExtensionStorage;
 use PeterPecosz\ShoppingPlanner\Food\Factory\ThumbnailFactory;
 use PeterPecosz\ShoppingPlanner\Food\Thumbnail;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
-use Psr\Http\Client\ClientInterface;
-use Psr\Http\Message\ResponseInterface;
-use Psr\Http\Message\StreamInterface;
 
 class ThumbnailFactoryTest extends TestCase
 {
-    private ClientInterface&MockObject $httpClient;
+    private FileDownloader&MockObject $fileDownloader;
 
     private Storage&MockObject $storage;
+
+    private ThumbnailExtensionStorage&MockObject $thumbnailExtensionStorage;
 
     private ThumbnailFactory $sut;
 
     protected function setUp(): void
     {
         $this->sut = new ThumbnailFactory(
-            $this->httpClient = $this->createMock(ClientInterface::class),
+            $this->fileDownloader = $this->createMock(FileDownloader::class),
             $this->storage = $this->createMock(Storage::class),
+            $this->thumbnailExtensionStorage = $this->createMock(ThumbnailExtensionStorage::class),
         );
     }
 
@@ -40,47 +40,48 @@ class ThumbnailFactoryTest extends TestCase
     {
         $foodName     = 'Bolognai';
         $thumbnailUrl = 'https://cdn.foods.com/Bolognai.jpg';
+        $product      = $this->createMock(Product::class);
+        $product->method('name')->willReturn($foodName);
+        $product->method('thumbnailUrl')->willReturn($thumbnailUrl);
+
+        $this->thumbnailExtensionStorage
+            ->expects($this->once())
+            ->method('getThumbnailExtension')
+            ->with($product)
+            ->willReturn(Extension::JPG);
 
         $this->storage
             ->expects($this->once())
             ->method('get')
-            ->with($foodName)
+            ->with($foodName, Extension::JPG)
             ->willReturn(null);
 
-        $this->httpClient
+        $this->fileDownloader
             ->expects($this->once())
-            ->method('sendRequest')
-            ->with(new Request('GET', $thumbnailUrl))
-            ->willReturn($response = $this->createMock(ResponseInterface::class));
+            ->method('download')
+            ->with($thumbnailUrl)
+            ->willReturn($file = $this->createMock(File::class));
 
-        $response
-            ->method('getStatusCode')
-            ->willReturn(StatusCodeInterface::STATUS_OK);
+        $file
+            ->expects($this->once())
+            ->method('withFileName')
+            ->with($foodName)
+            ->willReturn($file);
 
-        $response
-            ->method('getHeaderLine')
-            ->with('Content-Type')
-            ->willReturn($mimeType = 'image/jpeg');
+        $file
+            ->expects($this->once())
+            ->method('extension')
+            ->willReturn(Extension::JPG);
 
-        $stream = $this->createMock(StreamInterface::class);
-        $response
-            ->method('getBody')
-            ->willReturn($stream);
-
-        $stream
-            ->method('__toString')
-            ->willReturn($content = 'fileContent');
+        $this->thumbnailExtensionStorage
+            ->expects($this->once())
+            ->method('assignExtension')
+            ->with($product, Extension::JPG);
 
         $this->storage
             ->expects($this->once())
             ->method('save')
-            ->with(
-                new File(
-                    fileName: $foodName,
-                    mimeType: $mimeType,
-                    content : $content
-                )
-            )
+            ->with($file)
             ->willReturn(
                 $createdThumbnail = new Thumbnail(
                     filePath : '/tmp/assets/' . $foodName,
@@ -89,13 +90,7 @@ class ThumbnailFactoryTest extends TestCase
                 )
             );
 
-        $product = $this->createMock(Product::class);
-        $product->method('name')->willReturn($foodName);
-
-        $thumbnail = $this->sut->create(
-            product     : $product,
-            thumbnailUrl: $thumbnailUrl
-        );
+        $thumbnail = $this->sut->create($product);
 
         $this->assertEquals($createdThumbnail, $thumbnail);
     }
@@ -104,11 +99,20 @@ class ThumbnailFactoryTest extends TestCase
     public function testCreateWhenFound(): void
     {
         $foodName = 'Bolognai';
+        $product  = $this->createMock(Product::class);
+        $product->method('name')->willReturn($foodName);
+        $product->method('thumbnailUrl')->willReturn('https://cdn.foods.com/Bolognai.jpg');
+
+        $this->thumbnailExtensionStorage
+            ->expects($this->once())
+            ->method('getThumbnailExtension')
+            ->with($product)
+            ->willReturn(Extension::JPG);
 
         $this->storage
             ->expects($this->once())
             ->method('get')
-            ->with($foodName)
+            ->with($foodName, Extension::JPG)
             ->willReturn(
                 $foundThumbnail = new Thumbnail(
                     filePath : '/tmp/assets/' . $foodName,
@@ -117,17 +121,19 @@ class ThumbnailFactoryTest extends TestCase
                 )
             );
 
-        $this->httpClient
+        $this->fileDownloader
             ->expects($this->never())
-            ->method('sendRequest');
+            ->method('download');
 
-        $product = $this->createMock(Product::class);
-        $product->method('name')->willReturn($foodName);
+        $this->thumbnailExtensionStorage
+            ->expects($this->never())
+            ->method('assignExtension');
 
-        $thumbnail = $this->sut->create(
-            product     : $product,
-            thumbnailUrl: 'https://cdn.foods.com/Bolognai.jpg'
-        );
+        $this->storage
+            ->expects($this->never())
+            ->method('save');
+
+        $thumbnail = $this->sut->create($product);
 
         $this->assertEquals($foundThumbnail, $thumbnail);
     }

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace PeterPecosz\ShoppingPlanner\Core\Filename;
+namespace PeterPecosz\ShoppingPlanner\Core\File;
 
-class LocalFileSystemFileNameNormalizer implements FileNameNormalizer
+readonly class LocalFileSystemFileNameNormalizer implements FileNameNormalizer
 {
     private const FORBIDDEN_FILENAME_CHARS = [
         '~',
