@@ -28,7 +28,7 @@ class CategoryMapTest extends TestCase
     }
 
     #[Test]
-    public function testMapWhenKategoriaNotFoundInMap(): void
+    public function testMapWhenCategoryNotFoundInMap(): void
     {
         $this->assertEquals('Tejtermék', $this->sut->map('Tejtermék'));
     }

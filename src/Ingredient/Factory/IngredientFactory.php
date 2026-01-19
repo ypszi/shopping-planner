@@ -148,7 +148,7 @@ readonly class IngredientFactory
         ?Ingredient $ingredientReference = null
     ): Ingredient {
         $originalIngredient   = $this->ingredients[$ingredientRefName ?? $ingredientName] ?? [];
-        $category             = $rawIngredient['kategoria'] ?? $originalIngredient['kategoria'] ?? null;
+        $category             = $rawIngredient['category'] ?? $originalIngredient['category'] ?? null;
         $rawMeasurePreference = $rawIngredient['mertekegysegPreference']
                                 ?? $originalIngredient['mertekegysegPreference']
                                    ?? $this->ingredientCategories[$category]['mertekegysegPreference']
@@ -157,8 +157,8 @@ readonly class IngredientFactory
         $this->validateIngredientCategory(
             $ingredientName,
             $category,
-            $rawIngredient['kategoria'],
-            $originalIngredient['kategoria']
+            $rawIngredient['category'],
+            $originalIngredient['category']
         );
 
         $measurePreference = $this->createMeasurePreference($ingredientName, $rawMeasurePreference);

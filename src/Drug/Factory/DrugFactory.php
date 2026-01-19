@@ -77,7 +77,7 @@ readonly class DrugFactory
         }
 
         $defaultDrug       = $this->drugs[$drugName] ?? [];
-        $category          = $rawDrug['kategoria'] ?? $defaultDrug['kategoria'] ?? null;
+        $category          = $rawDrug['category'] ?? $defaultDrug['category'] ?? null;
         $measurePreference = $rawDrug['mertekegysegPreference']
                              ?? $defaultDrug['mertekegysegPreference']
                                 ?? $this->drugCategories[$category]['mertekegysegPreference']
@@ -89,23 +89,23 @@ readonly class DrugFactory
             );
         }
 
-        if ($category !== $defaultDrug['kategoria']) {
+        if ($category !== $defaultDrug['category']) {
             throw new UnknownDrugException(
                 sprintf(
                     'Drug category mismatch for "%s": "%s" - "%s"',
                     $drugName,
-                    $rawDrug['kategoria'],
-                    $defaultDrug['kategoria']
+                    $rawDrug['category'],
+                    $defaultDrug['category']
                 )
             );
         }
 
-        if ($defaultDrug && !isset($this->drugCategories[$defaultDrug['kategoria']])) {
+        if ($defaultDrug && !isset($this->drugCategories[$defaultDrug['category']])) {
             throw new UnknownDrugException(
                 sprintf(
                     'Drug category not found for "%s": "%s"',
                     $drugName,
-                    $defaultDrug['kategoria']
+                    $defaultDrug['category']
                 )
             );
         }

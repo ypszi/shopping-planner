@@ -12,7 +12,7 @@ class ThumbnailExtensionStorage
 {
     /** @var string[] */
     private const ORDER = [
-        'kategoria',
+        'category',
         'defaultPortion',
         'receptUrl',
         'thumbnailUrl',
