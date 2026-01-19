@@ -688,15 +688,23 @@ Csirkesaláta:
           portion: '3 db'
         - name: Sajt
           portion: '20 dkg'
+        - name: 'Cézár salátaöntet fűszerkeverék'
+          portion: '1 csomag'
         - name: 'Natúr joghurt'
           portion: '100 ml'
     cookingSteps:
-        - 'Megmossuk, majd apróra vágjuk a salátát, a paradicsomot, a kígyóuborkát, a hagymát. Beletesszük egy nagy tálba.'
-        - 'A csirkemellet apró kockákra vágjuk, megfűszerezzük szárnyas fűszerrel, majd kis lángon aranybarnára sütjük és hozzáadjuk a zöldségekhez.'
-        - 'A kenyérszeleteket megpirítjuk, és jól bedörzsöljük őket fokhagymával. Kockákra vágjuk, majd hozzáadjuk a többihez.'
-        - 'Reszelt sajttal megszórjuk (én füstölt sajttal csináltam, szerintem úgy a legjobb), majd megöntözzük cézár salátaöntettel, jól összekeverjük az egészet.'
-    comments:
-        - 'Natúr joghurt / Salátaöntet'
+        - 'Megmossuk, majd apróra vágunk:':
+          - '{{ Jégsaláta }} salátát,'
+          - '{{ Paradicsom }} paradicsomot,'
+          - '{{ Kígyóuborka }} kígyóuborkát,'
+          - '{{ Vöröshagyma }} hagymát.'
+        - 'Beletesszük egy nagy tálba.'
+        - '{{ Csirkemell }} csirkemellet apró kockákra vágjuk, megfűszerezzük {{ Szárnyas fűszerkeverék }} szárnyas fűszerrel.'
+        - 'Kis lángon aranybarnára sütjük és hozzáadjuk a zöldségekhez.'
+        - '{{ Kenyér }} kenyérszeletet megpirítunk, és jól bedörzsöljük őket fokhagymával. Kockákra vágjuk, majd hozzáadjuk a többihez.'
+        - '{{ Sajt }} Reszelt sajttal megszórjuk (én füstölt sajttal csináltam, szerintem úgy a legjobb).'
+        - 'Kikeverjük a cézár salátaöntetet {{ Natúr joghurt }} joghurttal'
+        - 'Megöntözzük cézár salátaöntettel, jól összekeverjük az egészet.'
 'Csőröge Fánk':
     defaultPortion: 4
     thumbnailUrl: 'https://www.mindmegette.hu/images/369/Social/lead_Social_klasszikus-csoroge-fank-recept.jpg'
