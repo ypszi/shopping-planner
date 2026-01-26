@@ -27,10 +27,7 @@ readonly class ThumbnailFactory
             return null;
         }
 
-        $thumbnail = $this->storage->get(
-            filename : $product->name(),
-            extension: $this->thumbnailExtensionStorage->getThumbnailExtension($product)
-        );
+        $thumbnail = $this->find($product);
 
         if ($thumbnail) {
             return $thumbnail;
@@ -47,5 +44,25 @@ readonly class ThumbnailFactory
         $this->thumbnailExtensionStorage->assignExtension($product, $file->extension());
 
         return $this->storage->save($file);
+    }
+
+    private function find(Product $product): ?Thumbnail
+    {
+        $thumbnailUrl = $product->thumbnailUrl();
+
+        if (empty($thumbnailUrl)) {
+            return null;
+        }
+
+        $extension = $this->thumbnailExtensionStorage->getThumbnailExtension($product);
+
+        if (!$extension) {
+            return null;
+        }
+
+        return $this->storage->get(
+            filename : $product->name(),
+            extension: $extension
+        );
     }
 }

@@ -35,9 +35,13 @@ class ThumbnailExtensionStorage
         $this->products = Yaml::parseFile($yamlPath);
     }
 
-    public function getThumbnailExtension(Product $product): Extension
+    public function getThumbnailExtension(Product $product): ?Extension
     {
         $rawProduct = $this->products[$product->name()];
+
+        if (!isset($rawProduct['thumbnailExtension'])) {
+            return null;
+        }
 
         return Extension::from($rawProduct['thumbnailExtension']);
     }
