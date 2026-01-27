@@ -300,6 +300,36 @@ class TemplatingProcessorTest extends TestCase
     }
 
     #[Test]
+    public function testMultiOperandMathCanBeDoneInVariables(): void
+    {
+        $food = new Food(
+            name          : 'test food',
+            defaultPortion: 4,
+            cookingSteps  : $cookingSteps = [
+                'cut {{onion / 3}} onions',
+                'cut {{onion / 3 * 2}} more onions',
+                'cook',
+                'serve',
+            ],
+            ingredients   : [
+                new IngredientForFood('onion', 'vegetable', 3, Measure::DB),
+            ]
+        );
+
+        $result = $this->sut->process($food, $cookingSteps);
+
+        $this->assertEquals(
+            [
+                'cut 1 db onions',
+                'cut 2 db more onions',
+                'cook',
+                'serve',
+            ],
+            $result
+        );
+    }
+
+    #[Test]
     public function testMathFailsInVariablesWhenTotalDoesNotAddUp(): void
     {
         $food = new Food(
@@ -332,6 +362,44 @@ class TemplatingProcessorTest extends TestCase
                 'peal 0.5 db avocado',
                 'pour 2 dl wine',
                 'cut 1 db more onions',
+                'peal 0.5 db more avocado',
+                'cook',
+                'serve',
+            ],
+            $result
+        );
+    }
+
+    #[Test]
+    public function testMathPassesInVariablesWhenTotalDoesAddUpForTwoDecimalPrecision(): void
+    {
+        $food = new Food(
+            name          : 'test food',
+            defaultPortion: 4,
+            cookingSteps  : $cookingSteps = [
+                'cut {{onion * 0.33}} onions',
+                'peal {{ avocado * 0.5 }} avocado',
+                'pour {{wine (dry) + 1}} wine',
+                'cut {{onion * 0.66}} more onions',
+                'peal {{ avocado * 0.5 }} more avocado',
+                'cook',
+                'serve',
+            ],
+            ingredients   : [
+                new IngredientForFood('onion', 'vegetable', 3, Measure::DB),
+                new IngredientForFood('avocado', 'fruit', 1, Measure::DB),
+                new IngredientForFood('wine (dry)', 'drink', 1, Measure::DL),
+            ]
+        );
+
+        $result = $this->sut->process($food, $cookingSteps);
+
+        $this->assertEquals(
+            [
+                'cut 1 db onions',
+                'peal 0.5 db avocado',
+                'pour 2 dl wine',
+                'cut 2 db more onions',
                 'peal 0.5 db more avocado',
                 'cook',
                 'serve',
