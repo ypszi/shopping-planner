@@ -694,10 +694,10 @@ Csirkesaláta:
           portion: '100 ml'
     cookingSteps:
         - 'Megmossuk, majd apróra vágunk:':
-          - '{{ Jégsaláta }} salátát,'
-          - '{{ Paradicsom }} paradicsomot,'
-          - '{{ Kígyóuborka }} kígyóuborkát,'
-          - '{{ Vöröshagyma }} hagymát.'
+              - '{{ Jégsaláta }} salátát,'
+              - '{{ Paradicsom }} paradicsomot,'
+              - '{{ Kígyóuborka }} kígyóuborkát,'
+              - '{{ Vöröshagyma }} hagymát.'
         - 'Beletesszük egy nagy tálba.'
         - '{{ Csirkemell }} csirkemellet apró kockákra vágjuk, megfűszerezzük {{ Szárnyas fűszerkeverék }} szárnyas fűszerrel.'
         - 'Kis lángon aranybarnára sütjük és hozzáadjuk a zöldségekhez.'
@@ -1784,13 +1784,13 @@ Karfiolsteak:
         - '{{ Dió }} diót pedig egy száraz serpenyőben, pár perc alatt megpirítjuk.'
         - 'A parmezán és a dió nagy része mehet is a salátához, a díszítéshez mindkettőből egy keveset félrerakunk.'
         - 'Az öntet hozzávalóit egy kis üvegben alaposan összerázzuk, és tálalás előtt a salátára öntjük:':
-          - '{{ Olívaolaj }} Olívaolaj'
-          - '{{ Balzsamecet (fehér) }} Balzsamecet'
-          - '{{ Mustár }} Mustár'
-          - '{{ Méz }} Méz'
-          - '{{ Só }} Só'
-          - '{{ Bors }} Bors'
-          - '{{ Citromlé }} Citromlé'
+              - '{{ Olívaolaj }} Olívaolaj'
+              - '{{ Balzsamecet (fehér) }} Balzsamecet'
+              - '{{ Mustár }} Mustár'
+              - '{{ Méz }} Méz'
+              - '{{ Só }} Só'
+              - '{{ Bors }} Bors'
+              - '{{ Citromlé }} Citromlé'
         - 'Összeforgatjuk a salátát, hogy mindenhol bevonja az öntet.'
         - 'Tálakba szedjük, és a félrerakott parmezánnal és dióval megszórva tálaljuk.'
 'Krumpli főzelék fasírttal':
@@ -3084,6 +3084,47 @@ Sajtszósz:
         - 'Az öntetet a salátához adjuk, és összekavarjuk.'
     comments:
         - '0.5 csokor Metélőhagyma'
+'Serpenyőben sült lazac salátával':
+    defaultPortion: 4
+    receptUrl: 'https://magyarkonyhaonline.hu/receptek/serpenyoben-sult-lazac-salataval'
+    thumbnailUrl: 'https://magyarkonyhaonline.hu/storage/media/images/2020/06/23/Serpenyoben-sult-lazac-salataval.jpg'
+    thumbnailExtension: jpg
+    tags:
+        - ebéd
+        - vacsora
+    ingredients:
+        - name: Lazac
+          portion: '1 db'
+        - name: Olívaolaj
+          portion: '4 ek'
+        - name: Salátakeverék
+          portion: '1 csomag'
+        - name: Petrezselyem
+          portion: '2 tk'
+        - name: Mustár
+          portion: '1 kk'
+        - name: Méz
+          portion: '1 kk'
+        - name: Citromlé
+          portion: '0.5 db'
+        - name: Só
+          portion: '3 csipet'
+        - name: Bors
+          portion: '1 csipet'
+    cookingSteps:
+        - '{{ Lazac }} lazacot lepikkelyezünk, majd konyhai papírtörlővel alaposan szárazra töröljük mindkét oldalát, és {{ Só / 3 * 2 }} sóval sózzuk.'
+        - 'A serpenyőt felhevítjük, beleöntünk {{ Olívaolaj / 2 }} olajat, majd bőrével lefelé belefektetjük a halat.'
+        - 'Spatulával gyorsan lenyomjuk, hogy a bőr teljesen a serpenyőre lapuljon.'
+        - 'Sütés közben ne mozgassuk, hagyjuk, hogy a hal bőre ropogósra süljön, a húsa pedig majdnem teljesen átsüljön.'
+        - 'Ekkor pár másodpercre megfordítjuk, végül papírtörlővel bélelt tányérra emeljük, hogy leitassuk a felesleges zsiradékot.'
+        - 'Közben összeállítjuk a mustáros vinaigrette-et:':
+              - '{{ Méz }} mézből'
+              - '{{ Mustár }} mustárból'
+              - '{{ Citromlé }} citromléből'
+              - '{{ Olívaolaj / 2 }} olívaolajból'
+              - 'és {{ Petrezselyem / 2 }} finomra vágott petrezselyemből'
+              - '{{ Só / 3 }} sóval sózzuk, {{ Bors }} borssal borsozzuk.'
+        - 'Tálalás előtt az öntetet összeforgatjuk {{ Salátakeverék }} salátával, megszórjuk {{ Petrezselyem / 2 }} petrezselyemmel, és a lazac mellé halmozzuk.'
 'Serpenyős csirkemell':
     defaultPortion: 4
     receptUrl: 'https://femina.hu/recept/serpenyos-csirkemell/'
