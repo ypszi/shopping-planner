@@ -4230,10 +4230,17 @@ Tiramisu:
         - name: Koktélparadicsom
           portion: '20 dkg'
     cookingSteps:
-        - 'A babot egy szűrőbe öntjük, hideg vízzel lemossuk, hagyjuk lecsepegni.'
-        - 'A tonhalat leszűrjük, villával darabokra tépkedjük.'
-        - 'A hagymát vékony gyűrűkre, a paradicsomokat kettévágjuk.'
-        - 'Az öntethez a citromlét és az ecetet elkeverjük a sóval, borssal és cukorral, majd hozzákeverjük az olajat és az apróra vágott petrezselymet.'
+        - '{{ Fehérbab (konzerv) }} babot egy szűrőbe öntjük, hideg vízzel lemossuk, hagyjuk lecsepegni.'
+        - '{{ Tonhal (konzerv) }} tonhalat leszűrjük, villával darabokra tépkedjük.'
+        - '{{ Lilahagyma }} hagymát vékony gyűrűkre, {{ Koktélparadicsom }} paradicsomot felvágjuk.'
+        - 'Az öntethez összekeverjük:':
+              - '{{ Citromlé }} citromlét'
+              - '{{ Balzsamecet (fehér) }} balzsamecetet'
+              - '{{ Só }} sóval'
+              - '{{ Bors }} borssal'
+              - '{{ Cukor }} cukorral'
+              - 'majd hozzákeverünk {{ Napraforgóolaj }} olajat'
+              - 'és {{ Petrezselyem }} apróra vágott petrezselymet.'
         - 'Az egészet meglocsoljuk az öntettel, jól összekeverjük, és kb. 30 percig állni hagyjuk.'
 'Tonhalas bulgur saláta':
     defaultPortion: 4
