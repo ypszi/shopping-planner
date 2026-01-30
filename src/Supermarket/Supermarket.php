@@ -23,7 +23,7 @@ class Supermarket
         private readonly string $name,
         private readonly array $categories,
         private readonly CategoryMap $categoryMap,
-        private readonly MeasureConverter $mertekegysegAtvalto,
+        private readonly MeasureConverter $measureConverter,
         private readonly ?IngredientToCategoryMap $ingredientToCategoryMap = null
     ) {
     }
@@ -66,7 +66,7 @@ class Supermarket
 
     private function createIngredientRows(IngredientsByCategory $ingredientsByCategory): IngredientRows
     {
-        $ingredientRows = new IngredientRows($this, $this->mertekegysegAtvalto);
+        $ingredientRows = new IngredientRows($this, $this->measureConverter);
 
         foreach ($ingredientsByCategory as $ingredients) {
             /** @var Ingredient $ingredient */
