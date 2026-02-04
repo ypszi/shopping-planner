@@ -10,7 +10,7 @@ use PeterPecosz\ShoppingPlanner\Food\Thumbnail;
 
 interface Storage
 {
-    public function get(string $filename, Extension $extension): ?Thumbnail;
+    public function get(string $fileName, Extension $extension): ?Thumbnail;
 
     public function save(File $file): Thumbnail;
 }

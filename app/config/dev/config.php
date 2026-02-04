@@ -39,3 +39,4 @@ return [
             get('config.drugs.thumbnail_asset.path'),
         ),
 ];
+

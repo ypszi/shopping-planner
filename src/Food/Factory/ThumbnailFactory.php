@@ -61,7 +61,7 @@ readonly class ThumbnailFactory
         }
 
         return $this->storage->get(
-            filename : $product->name(),
+            fileName : $product->name(),
             extension: $extension
         );
     }

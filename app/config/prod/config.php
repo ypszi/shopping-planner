@@ -2,8 +2,9 @@
 
 declare(strict_types=1);
 
-use PeterPecosz\ShoppingPlanner\Core\File\LocalFileSystemFileNameNormalizer;
-use PeterPecosz\ShoppingPlanner\Core\Storage\LocalFileSystemStorage;
+use Aws\S3\S3Client;
+use PeterPecosz\ShoppingPlanner\Core\File\S3FileNameNormalizer;
+use PeterPecosz\ShoppingPlanner\Core\Storage\S3Storage;
 
 use function DI\create;
 use function DI\get;
@@ -24,9 +25,15 @@ return [
     'config.foods.thumbnail_cache.path' => 'thumbnails/foods/',
     'config.foods.thumbnail_asset.path' => 'thumbnails/foods/',
 
-    'foods.storage' => create(LocalFileSystemStorage::class)
+    'foods.storage' => create(S3Storage::class)
         ->constructor(
-            create(LocalFileSystemFileNameNormalizer::class),
+            create(S3FileNameNormalizer::class),
+            create(S3Client::class)
+                ->constructor(
+                    ['region' => getenv('AWS_REGION')]
+                ),
+            get('config.storage.s3.bucket'),
+            get('config.storage.s3.region'),
             get('config.foods.thumbnail_cache.path'),
             get('config.foods.thumbnail_asset.path'),
         ),
@@ -34,10 +41,19 @@ return [
     'config.drugs.thumbnail_cache.path' => 'thumbnails/drugs/',
     'config.drugs.thumbnail_asset.path' => 'thumbnails/drugs/',
 
-    'drugs.storage' => create(LocalFileSystemStorage::class)
+    'drugs.storage' => create(S3Storage::class)
         ->constructor(
-            create(LocalFileSystemFileNameNormalizer::class),
+            create(S3FileNameNormalizer::class),
+            create(S3Client::class)
+                ->constructor(
+                    ['region' => getenv('AWS_REGION')]
+                ),
+            get('config.storage.s3.bucket'),
+            get('config.storage.s3.region'),
             get('config.drugs.thumbnail_cache.path'),
             get('config.drugs.thumbnail_asset.path'),
         ),
+
+    'config.storage.s3.bucket' => getenv('S3_BUCKET'),
+    'config.storage.s3.region' => getenv('AWS_REGION'),
 ];
