@@ -4048,9 +4048,10 @@ Tiramisu:
         - name: Kakaópor
           portion: '20 g'
     cookingSteps:
-        - 'A tiramisu elkészítéséhez a mascarponét egy nagy keverőtálba tesszük, hozzáadjuk a porcukrot és a tojások sárgáját.'
+        - 'A tiramisu elkészítéséhez {{ Mascarpone }} mascarponét egy nagy keverőtálba tesszük'
+        - 'Hozzáadunk {{ Porcukor }} porcukrot és {{ Tojás }} tojás sárgáját.'
         - 'A fehérjéket robotgéppel kemény habbá verjük, és laza mozdulatokkal a mascarponéhez keverjük.'
-        - 'Egy mélytányérba töltjük a kávét, és belekeverjük az alkoholt.'
+        - 'Egy mélytányérba töltünk {{ Kávé }} kávét, és belekeverünk {{ Rum aroma }} rum aromát.'
         - 'Majd a babapiskótákat gyors mozdulatokkal megforgatjuk benne, vigyázva, hogy ne ázzanak el.'
         - 'Egy kb. 6 cm falmagasságú tálban szorosan egymás mellé tesszük a megmártott piskóták felét.'
         - 'Rákenjük a krém felét, majd beterítjük egy újabb réteg kávéba áztatott babapiskótával, és rátesszük a maradék krémet.'
