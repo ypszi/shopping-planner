@@ -8,6 +8,7 @@ provider:
     payload: '2.0'
   environment:
     APP_ENV: prod
+    S3_BUCKET: shopping-planner-thumbnails-eu-north-1
 
 functions:
   web:
