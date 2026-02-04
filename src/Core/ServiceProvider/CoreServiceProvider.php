@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 namespace PeterPecosz\ShoppingPlanner\Core\ServiceProvider;
 
+use GuzzleHttp\Client;
+use GuzzleHttp\RequestOptions;
+use PeterPecosz\ShoppingPlanner\Core\File\FileDownloader;
 use PeterPecosz\ShoppingPlanner\Core\Url\Url;
 use Psr\Http\Message\ResponseFactoryInterface;
 use Psr\Http\Message\ServerRequestInterface;
@@ -66,6 +69,16 @@ class CoreServiceProvider implements ServiceDefinitionProviderInterface
                 ),
 
             ExpressionLanguage::class => create(),
+
+            FileDownloader::class => create()
+                ->constructor(
+                    create(Client::class)
+                        ->constructor(
+                            [
+                                RequestOptions::ALLOW_REDIRECTS => true,
+                            ]
+                        )
+                ),
         ];
     }
 }

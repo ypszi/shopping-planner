@@ -13,7 +13,7 @@ readonly class SupermarketFactory
     /** @var array<string, string[]> */
     private array $supermarkets;
 
-    public function __construct(string $supermarketsPath, private MeasureConverter $mertekegysegAtvalto)
+    public function __construct(string $supermarketsPath, private MeasureConverter $measureConverter)
     {
         $this->supermarkets = Yaml::parseFile($supermarketsPath);
     }
@@ -30,7 +30,7 @@ readonly class SupermarketFactory
             $name,
             $rawSupermarket['categories'],
             new CategoryMap($rawSupermarket['categoryMap']),
-            $this->mertekegysegAtvalto,
+            $this->measureConverter,
             new IngredientToCategoryMap($rawSupermarket['ingredientMap'] ?? [])
         );
     }

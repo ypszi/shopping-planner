@@ -4,9 +4,8 @@ declare(strict_types=1);
 
 namespace PeterPecosz\ShoppingPlanner\Food\ServiceProvider;
 
-use GuzzleHttp\Client;
-use GuzzleHttp\RequestOptions;
 use PeterPecosz\ShoppingPlanner\Core\ServiceProvider\ServiceDefinitionProviderInterface;
+use PeterPecosz\ShoppingPlanner\Core\Storage\ThumbnailExtensionStorage;
 use PeterPecosz\ShoppingPlanner\Food\Factory\AvailableFoodFactory;
 use PeterPecosz\ShoppingPlanner\Food\Factory\AvailableFoodTagFactory;
 use PeterPecosz\ShoppingPlanner\Food\Factory\FoodFactory;
@@ -36,15 +35,12 @@ class FoodServiceProvider implements ServiceDefinitionProviderInterface
             AvailableFoodTagFactory::class => autowire()
                 ->constructorParameter('foodsPath', get('config.foods.path')),
 
-            'foods.thumbnail_factory' => create(ThumbnailFactory::class)
-                ->constructor(
-                    create(Client::class)
-                        ->constructor(
-                            [
-                                RequestOptions::ALLOW_REDIRECTS => true,
-                            ]
-                        ),
-                    get('foods.storage')
+            'foods.thumbnail_factory' => autowire(ThumbnailFactory::class)
+                ->constructorParameter('storage', get('foods.storage'))
+                ->constructorParameter(
+                    'thumbnailExtensionStorage',
+                    create(ThumbnailExtensionStorage::class)
+                        ->constructor(get('config.foods.path'))
                 ),
 
             TemplatingProcessor::class => autowire(),

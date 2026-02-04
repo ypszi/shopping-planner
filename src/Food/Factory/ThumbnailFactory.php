@@ -4,68 +4,65 @@ declare(strict_types=1);
 
 namespace PeterPecosz\ShoppingPlanner\Food\Factory;
 
-use Fig\Http\Message\StatusCodeInterface;
-use GuzzleHttp\Psr7\Request;
-use PeterPecosz\ShoppingPlanner\Core\Storage\File;
+use PeterPecosz\ShoppingPlanner\Core\File\FileDownloader;
+use PeterPecosz\ShoppingPlanner\Core\Product;
 use PeterPecosz\ShoppingPlanner\Core\Storage\Storage;
+use PeterPecosz\ShoppingPlanner\Core\Storage\ThumbnailExtensionStorage;
 use PeterPecosz\ShoppingPlanner\Food\Thumbnail;
-use Psr\Http\Client\ClientInterface;
-use Psr\Http\Message\ResponseInterface;
 
 readonly class ThumbnailFactory
 {
     public function __construct(
-        private ClientInterface $httpClient,
+        private FileDownloader $fileDownloader,
         private Storage $storage,
+        private ThumbnailExtensionStorage $thumbnailExtensionStorage,
     ) {
     }
 
-    public function create(string $foodName, ?string $thumbnailUrl): ?Thumbnail
+    public function create(Product $product): ?Thumbnail
     {
-        if (!$thumbnailUrl) {
+        $thumbnailUrl = $product->thumbnailUrl();
+
+        if (empty($thumbnailUrl)) {
             return null;
         }
 
-        $thumbnail = $this->storage->get(filename: $foodName);
+        $thumbnail = $this->find($product);
 
         if ($thumbnail) {
             return $thumbnail;
         }
 
-        $response = $this->download($thumbnailUrl);
+        $file = $this->fileDownloader->download($thumbnailUrl);
 
-        if (!$response) {
+        if (!$file) {
             return null;
         }
 
-        $mimeType = $response->getHeaderLine('Content-Type');
-        $file     = new File(
-            fileName: $foodName,
-            mimeType: $mimeType,
-            content : (string)$response->getBody()
-        );
+        $file = $file->withFileName($product->name());
+
+        $this->thumbnailExtensionStorage->assignExtension($product, $file->extension());
 
         return $this->storage->save($file);
     }
 
-    private function download(string $thumbnailUrl): ?ResponseInterface
+    private function find(Product $product): ?Thumbnail
     {
-        $response     = $this->httpClient->sendRequest(new Request('GET', $thumbnailUrl));
-        $responseCode = $response->getStatusCode();
+        $thumbnailUrl = $product->thumbnailUrl();
 
-        if (
-            $responseCode === StatusCodeInterface::STATUS_MOVED_PERMANENTLY
-            || $responseCode === StatusCodeInterface::STATUS_FOUND
-        ) {
-            $thumbnailUrl = $response->getHeaderLine('Location');
-            $response     = $this->httpClient->sendRequest(new Request('GET', $thumbnailUrl));
-            $responseCode = $response->getStatusCode();
-        }
-
-        if ($responseCode !== StatusCodeInterface::STATUS_OK) {
+        if (empty($thumbnailUrl)) {
             return null;
         }
 
-        return $response;
+        $extension = $this->thumbnailExtensionStorage->getThumbnailExtension($product);
+
+        if (!$extension) {
+            return null;
+        }
+
+        return $this->storage->get(
+            filename : $product->name(),
+            extension: $extension
+        );
     }
 }

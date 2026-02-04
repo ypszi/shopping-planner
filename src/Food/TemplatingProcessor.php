@@ -151,7 +151,10 @@ class TemplatingProcessor
     private function placeholderWithOptionalMath(string $name): string
     {
         return sprintf(
-            '/\{\{\s?(?<ingredirent>%s)\s?(?<expression>(?<operand>[+\-\/*])\s?(?<operator>\d+\.?\d*))?\s?\}\}/i',
+            '/\{\{\s?'
+            . '(?<ingredirent>%s)\s?'
+            . '(?<expression>((?<operand>[+\-\/*])\s?(?<operator>\d+\.?\d*)\s?)*)?'
+            . '\s?\}\}/i',
             $this->escapeSpecialChars($name)
         );
     }
@@ -178,7 +181,7 @@ class TemplatingProcessor
 
             $originalPortion    = $ingredient->portion();
             $newPortion         = $this->evaluateMathExpression($originalPortion, $expression);
-            $adjustedIngredient = $ingredient->withPortion($newPortion);
+            $adjustedIngredient = $ingredient->withPortion(round($newPortion, 1));
 
             $this->processedIngredients[$ingredient->name()][] = $adjustedIngredient->portion();
 

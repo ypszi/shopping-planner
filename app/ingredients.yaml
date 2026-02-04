@@ -1,246 +1,248 @@
 # Bor
 Fehérbor:
-  kategoria: Bor
+  category: Bor
 Fehérbor (száraz):
-  kategoria: Bor
+  category: Bor
 Vörösbor:
-  kategoria: Bor
+  category: Bor
 Vörösbor (száraz):
-  kategoria: Bor
+  category: Bor
 
 # Ecet
 Almaborecet:
-  kategoria: Ecet
+  category: Ecet
 Balzsamecet (fehér):
-  kategoria: Ecet
+  category: Ecet
 Ecet:
-  kategoria: Ecet
+  category: Ecet
 Fehérborecet:
-  kategoria: Ecet
+  category: Ecet
 Rizsecet:
-  kategoria: Ecet
+  category: Ecet
 
 # Felvágott
 Felvágott:
-  kategoria: Felvágott
+  category: Felvágott
 Bacon (kockázott):
-  kategoria: Felvágott
+  category: Felvágott
 Bacon (szeletelt):
-  kategoria: Felvágott
+  category: Felvágott
 Főtt sonka (szeletelt):
-  kategoria: Felvágott
+  category: Felvágott
 Karaj (szeletelt):
-  kategoria: Felvágott
+  category: Felvágott
 Kenyérszalonna: Zsírszalonna
 Kolbász:
-  kategoria: Felvágott
+  category: Felvágott
 Virsli:
-  kategoria: Felvágott
+  category: Felvágott
 Zsírszalonna:
-  kategoria: Felvágott
+  category: Felvágott
 
 # Fűszer
 Alaplé:
-  kategoria: Fűszer
+  category: Fűszer
   mertekegysegPreference: l
 Babérlevél:
-  kategoria: Fűszer
+  category: Fűszer
 Bazsalikom:
-  kategoria: Fűszer
+  category: Fűszer
 Bazsalikom levél:
-  kategoria: Fűszer
+  category: Fűszer
 BBQ fűszerkeverék:
-  kategoria: Fűszer
+  category: Fűszer
 Bors: Fekete bors
 Cayenne bors:
-  kategoria: Fűszer
+  category: Fűszer
+Cézár salátaöntet fűszerkeverék:
+  category: Fűszer
 Chili:
-  kategoria: Fűszer
+  category: Fűszer
 Citrombors:
-  kategoria: Fűszer
+  category: Fűszer
 Csillagánizs:
-  kategoria: Fűszer
+  category: Fűszer
 Curry:
-  kategoria: Fűszer
+  category: Fűszer
 Erőleves kocka:
-  kategoria: Fűszer
+  category: Fűszer
   mertekegysegPreference: db
   storage:
     max: 15
     step: 1
 Fahéj:
-  kategoria: Fűszer
+  category: Fűszer
 Fahéj (egész):
-  kategoria: Fűszer
+  category: Fűszer
 Fahéjrúd: Fahéj (egész)
 Fekete bors:
-  kategoria: Fűszer
+  category: Fűszer
 Fehér bors:
-  kategoria: Fűszer
+  category: Fűszer
 Fokhagymapor:
-  kategoria: Fűszer
+  category: Fűszer
 Fokhagyma granulátum: Fokhagymapor
 Fűszerkeverék:
-  kategoria: Fűszer
+  category: Fűszer
 Fűszerkömény:
-  kategoria: Fűszer
+  category: Fűszer
 Fűszer paprika: Piros paprika
 Gulyás krém:
-  kategoria: Fűszer
+  category: Fűszer
 Gyömbér por:
-  kategoria: Fűszer
+  category: Fűszer
 Húsleves kocka:
-  kategoria: Fűszer
+  category: Fűszer
   mertekegysegPreference: db
   storage:
     max: 15
     step: 1
 Kakukkfű:
-  kategoria: Fűszer
+  category: Fűszer
 Ketchup:
-  kategoria: Fűszer
+  category: Fűszer
   storage:
     max: 500
     step: 50
 Koriander:
-  kategoria: Fűszer
+  category: Fűszer
 Köménymag:
-  kategoria: Fűszer
+  category: Fűszer
 Kurkuma:
-  kategoria: Fűszer
+  category: Fűszer
 Majonéz:
-  kategoria: Fűszer
+  category: Fűszer
   storage:
     max: 300
     step: 50
 Majoranna:
-  kategoria: Fűszer
+  category: Fűszer
 Mézeskalács fűszerkeverék:
-  kategoria: Fűszer
+  category: Fűszer
 Mustár:
-  kategoria: Fűszer
+  category: Fűszer
   storage:
     max: 300
     step: 50
 Oregánó:
-  kategoria: Fűszer
+  category: Fűszer
 Petrezselyem:
-  kategoria: Fűszer
+  category: Fűszer
 Pirított hagyma:
-  kategoria: Fűszer
+  category: Fűszer
 Piros paprika:
-  kategoria: Fűszer
+  category: Fűszer
 Római kömény:
-  kategoria: Fűszer
+  category: Fűszer
 Rozmaring:
-  kategoria: Fűszer
+  category: Fűszer
 Só:
-  kategoria: Fűszer
+  category: Fűszer
   storage:
     max: 2000
     step: 100
 Szárnyas fűszerkeverék:
-  kategoria: Fűszer
+  category: Fűszer
 Szódabikarbóna:
-  kategoria: Fűszer
+  category: Fűszer
 Szegfűszeg:
-  kategoria: Fűszer
+  category: Fűszer
 Szerecsendió:
-  kategoria: Fűszer
+  category: Fűszer
 Tárkony:
-  kategoria: Fűszer
+  category: Fűszer
 Zöldfűszer:
-  kategoria: Fűszer
+  category: Fűszer
 
 # Hal
 Lazac:
-  kategoria: Hal
+  category: Hal
 Lazac (füstölt):
-  kategoria: Hal
+  category: Hal
 Surimi:
-  kategoria: Hal
+  category: Hal
 
 # Hús
 Csirkemell:
-  kategoria: Hús
+  category: Hús
 Csirkeszárny:
-  kategoria: Hús
+  category: Hús
 Darált hús:
-  kategoria: Hús
+  category: Hús
 Kolozsvári szalonna:
-  kategoria: Hús
+  category: Hús
 Pulykamell:
-  kategoria: Hús
+  category: Hús
 Sertés comb:
-  kategoria: Hús
+  category: Hús
 Sertés lapocka:
-  kategoria: Hús
+  category: Hús
 Sertészsír:
-  kategoria: Hús
+  category: Hús
   mertekegysegPreference: g
 Tepertő (sertés):
-  kategoria: Hús
+  category: Hús
   mertekegysegPreference: g
 
 # Kávé
 Kávé:
-  kategoria: Kávé
+  category: Kávé
 
 # Magvak
 Dió:
-  kategoria: Magvak
+  category: Magvak
 Lenmag:
-  kategoria: Magvak
+  category: Magvak
 Mogyoró:
-  kategoria: Magvak
+  category: Magvak
   storage:
     max: 300
 Pisztácia:
-  kategoria: Magvak
+  category: Magvak
 Szezámmag:
-  kategoria: Magvak
+  category: Magvak
 
 # Mirelit
 Spárga (mirelit):
-  kategoria: Mirelit
+  category: Mirelit
 Zöldbab (mirelit):
-  kategoria: Mirelit
+  category: Mirelit
 Zöldborsó (mirelit):
-  kategoria: Mirelit
+  category: Mirelit
 
 # Nemzetközi
 Hal szósz:
-  kategoria: Nemzetközi
+  category: Nemzetközi
 Rizs tészta:
-  kategoria: Nemzetközi
+  category: Nemzetközi
   mertekegysegPreference: g
 Mirin:
-  kategoria: Nemzetközi
+  category: Nemzetközi
 Nori lap:
-  kategoria: Nemzetközi
+  category: Nemzetközi
 Szaké (főző):
-  kategoria: Nemzetközi
+  category: Nemzetközi
 Szaké:
-  kategoria: Nemzetközi
+  category: Nemzetközi
 Szójaszósz:
-  kategoria: Nemzetközi
+  category: Nemzetközi
 Tamarind szósz:
-  kategoria: Nemzetközi
+  category: Nemzetközi
 
 # Olaj
 Étolaj: Napraforgóolaj
 Mogyoró olaj:
-  kategoria: Olaj
+  category: Olaj
   mertekegysegPreference: ml
   storage:
     max: 500
     step: 10
 Napraforgóolaj:
-  kategoria: Olaj
+  category: Olaj
 Olívaolaj:
-  kategoria: Olaj
+  category: Olaj
 Szezámolaj:
-  kategoria: Olaj
+  category: Olaj
   mertekegysegPreference: ml
   storage:
     max: 500
@@ -248,172 +250,172 @@ Szezámolaj:
 
 # Pékárú
 Kenyér:
-  kategoria: Pékárú
+  category: Pékárú
 Hamburger zsemle:
-  kategoria: Pékárú
+  category: Pékárú
   mertekegysegPreference: db
 Tortilla lap:
-  kategoria: Pékárú
+  category: Pékárú
   mertekegysegPreference: db
 
 # Sajt
 Cheddar sajt (vörös):
-  kategoria: Sajt
+  category: Sajt
 Cheddar sajt (reszelt):
-  kategoria: Sajt
+  category: Sajt
 Feta sajt:
-  kategoria: Sajt
+  category: Sajt
 Gouda sajt:
-  kategoria: Sajt
+  category: Sajt
 Mascarpone:
-  kategoria: Sajt
+  category: Sajt
 Mozzarella sajt:
-  kategoria: Sajt
+  category: Sajt
 Mozzarella sajt (reszelt):
-  kategoria: Sajt
+  category: Sajt
 Mozzarella sajt (mini):
-  kategoria: Sajt
+  category: Sajt
 Parmezán sajt:
-  kategoria: Sajt
+  category: Sajt
 Sajt:
-  kategoria: Sajt
+  category: Sajt
 Sajt (reszelt):
-  kategoria: Sajt
+  category: Sajt
 Trappista sajt:
-  kategoria: Sajt
+  category: Sajt
 Trappista sajt (füstölt):
-  kategoria: Sajt
+  category: Sajt
 
 # Sütés / Sütemény
 Babapiskóta:
-  kategoria: Sütés / Sütemény
+  category: Sütés / Sütemény
 Barna cukor:
-  kategoria: Sütés / Sütemény
+  category: Sütés / Sütemény
   storage:
     max: 3000
     step: 100
 Cukor:
-  kategoria: Sütés / Sütemény
+  category: Sütés / Sütemény
   storage:
     max: 3000
     step: 100
 Élesztő:
-  kategoria: Sütés / Sütemény
+  category: Sütés / Sütemény
   storage:
     max: 100
     step: 5
 Finomliszt:
-  kategoria: Sütés / Sütemény
+  category: Sütés / Sütemény
   storage:
     max: 3000
     step: 100
 Háztartási keksz (darált):
-  kategoria: Sütés / Sütemény
+  category: Sütés / Sütemény
 Kakaópor:
-  kategoria: Sütés / Sütemény
+  category: Sütés / Sütemény
 Kókuszreszelék:
-  kategoria: Sütés / Sütemény
+  category: Sütés / Sütemény
 Kristálycukor: Cukor
 Lekvár:
-  kategoria: Sütés / Sütemény
+  category: Sütés / Sütemény
 Liszt: Finomliszt
 Mazsola:
-  kategoria: Sütés / Sütemény
+  category: Sütés / Sütemény
 Porcukor:
-  kategoria: Sütés / Sütemény
+  category: Sütés / Sütemény
 Rum aroma:
-  kategoria: Sütés / Sütemény
+  category: Sütés / Sütemény
 Sütőpor:
-  kategoria: Sütés / Sütemény
+  category: Sütés / Sütemény
   storage:
     max: 100
     step: 5
 Vaníliás cukor:
-  kategoria: Sütés / Sütemény
+  category: Sütés / Sütemény
   storage:
     max: 100
     step: 5
 
 # Tartós élelmiszer
 Agávé szirup:
-  kategoria: Tartós élelmiszer
+  category: Tartós élelmiszer
   mertekegysegPreference: ml
   storage:
     max: 400
     step: 50
 Baracklekvár:
-  kategoria: Tartós élelmiszer
+  category: Tartós élelmiszer
 Bulgur:
-  kategoria: Tartós élelmiszer
+  category: Tartós élelmiszer
 Búzadara:
-  kategoria: Tartós élelmiszer
+  category: Tartós élelmiszer
 Csusza tészta:
-  kategoria: Tartós élelmiszer
+  category: Tartós élelmiszer
 Fusilli tészta:
-  kategoria: Tartós élelmiszer
+  category: Tartós élelmiszer
 Keményítő:
-  kategoria: Tartós élelmiszer
+  category: Tartós élelmiszer
 Leveles tészta:
-  kategoria: Tartós élelmiszer
+  category: Tartós élelmiszer
 Makaróni tészta:
-  kategoria: Tartós élelmiszer
+  category: Tartós élelmiszer
 Méz:
-  kategoria: Tartós élelmiszer
+  category: Tartós élelmiszer
 Paradicsom püré:
-  kategoria: Tartós élelmiszer
+  category: Tartós élelmiszer
 Pesto:
-  kategoria: Tartós élelmiszer
+  category: Tartós élelmiszer
 Penne tészta:
-  kategoria: Tartós élelmiszer
+  category: Tartós élelmiszer
 Rizottó rizs:
-  kategoria: Tartós élelmiszer
+  category: Tartós élelmiszer
 Rizs:
-  kategoria: Tartós élelmiszer
+  category: Tartós élelmiszer
 Spagetti tészta:
-  kategoria: Tartós élelmiszer
+  category: Tartós élelmiszer
 Sűrített paradicsom: Paradicsom püré
 Tagliatelle tészta:
-  kategoria: Tartós élelmiszer
+  category: Tartós élelmiszer
 Worcester szósz:
-  kategoria: Tartós élelmiszer
+  category: Tartós élelmiszer
 Zsemlemorzsa:
-  kategoria: Tartós élelmiszer
+  category: Tartós élelmiszer
 
 # Konzerv
 Ananász (konzerv):
-  kategoria: Konzerv
+  category: Konzerv
 Csemege uborka (konzerv):
-  kategoria: Konzerv
+  category: Konzerv
 Csicseriborsó (konzerv):
-  kategoria: Konzerv
+  category: Konzerv
 Fehérbab (konzerv):
-  kategoria: Konzerv
+  category: Konzerv
 Jalapeno (konzerv):
-  kategoria: Konzerv
+  category: Konzerv
 Kukorica (konzerv):
-  kategoria: Konzerv
+  category: Konzerv
 Olivabogyó (konzerv):
-  kategoria: Konzerv
+  category: Konzerv
 Paradicsom (konzerv):
-  kategoria: Konzerv
+  category: Konzerv
 Tonhal (konzerv):
-  kategoria: Konzerv
+  category: Konzerv
 Vörösbab (konzerv):
-  kategoria: Konzerv
+  category: Konzerv
 
 # Tartós tejtermék
 Főzőtejszín:
-  kategoria: Tartós tejtermék
+  category: Tartós tejtermék
 Habtejszín:
-  kategoria: Tartós tejtermék
+  category: Tartós tejtermék
 Kókusztej:
-  kategoria: Tartós tejtermék
+  category: Tartós tejtermék
   mertekegysegPreference: l
   storage:
     max: 5
     step: 1
 Tej:
-  kategoria: Tartós tejtermék
+  category: Tartós tejtermék
   mertekegysegPreference: l
   storage:
     max: 10
@@ -422,171 +424,173 @@ Tejszín: Főzőtejszín
 
 # Tejtermék
 Görög joghurt:
-  kategoria: Tejtermék
+  category: Tejtermék
 Kaukázusi kefír:
-  kategoria: Tejtermék
+  category: Tejtermék
 Kefír:
-  kategoria: Tejtermék
+  category: Tejtermék
 Margarin: Vaj
 Natúr joghurt:
-  kategoria: Tejtermék
+  category: Tejtermék
 Tejföl:
-  kategoria: Tejtermék
+  category: Tejtermék
   storage:
     max: 1500
     step: 25
 Tojás:
-  kategoria: Tejtermék
+  category: Tejtermék
   mertekegysegPreference: db
   storage:
     max: 40
     step: 1
 Tojásfehérje:
-  kategoria: Tejtermék
+  category: Tejtermék
   mertekegysegPreference: db
 Túró:
-  kategoria: Tejtermék
+  category: Tejtermék
 Vaj:
-  kategoria: Tejtermék
+  category: Tejtermék
   storage:
     max: 1000
     step: 50
 
 # Üditő
 Narancslé:
-  kategoria: Üditő
+  category: Üditő
 Sör:
-  kategoria: Üditő
+  category: Üditő
 Szódavíz:
-  kategoria: Üditő
+  category: Üditő
 Víz:
-  kategoria: Üditő
+  category: Üditő
   mertekegysegPreference: dl
 
 # Zöldség / Gyümölcs
 Alma:
-  kategoria: Zöldség / Gyümölcs
+  category: Zöldség / Gyümölcs
 Ananász:
-  kategoria: Zöldség / Gyümölcs
+  category: Zöldség / Gyümölcs
 Avokádó:
-  kategoria: Zöldség / Gyümölcs
+  category: Zöldség / Gyümölcs
 Brokkoli:
-  kategoria: Zöldség / Gyümölcs
+  category: Zöldség / Gyümölcs
 Burgonya:
-  kategoria: Zöldség / Gyümölcs
+  category: Zöldség / Gyümölcs
   mertekegysegPreference: dkg
   storage:
     max: 200
     step: 5
 Cikória: Endívia
 Citrom:
-  kategoria: Zöldség / Gyümölcs
+  category: Zöldség / Gyümölcs
 Citromlé:
-  kategoria: Zöldség / Gyümölcs
+  category: Zöldség / Gyümölcs
 Csemegehagyma:
-  kategoria: Zöldség / Gyümölcs
+  category: Zöldség / Gyümölcs
 Cukkini:
-  kategoria: Zöldség / Gyümölcs
+  category: Zöldség / Gyümölcs
 Édesburgonya:
-  kategoria: Zöldség / Gyümölcs
+  category: Zöldség / Gyümölcs
   mertekegysegPreference: dkg
   storage:
     max: 200
     step: 5
 Endívia:
-  kategoria: Zöldség / Gyümölcs
+  category: Zöldség / Gyümölcs
 Fehérrépa:
-  kategoria: Zöldség / Gyümölcs
+  category: Zöldség / Gyümölcs
 Fokhagyma:
-  kategoria: Zöldség / Gyümölcs
+  category: Zöldség / Gyümölcs
 Gyömbér:
-  kategoria: Zöldség / Gyümölcs
+  category: Zöldség / Gyümölcs
 Hegyes paprika:
-  kategoria: Zöldség / Gyümölcs
+  category: Zöldség / Gyümölcs
 Jégsaláta:
-  kategoria: Zöldség / Gyümölcs
+  category: Zöldség / Gyümölcs
 Kaliforniai paprika:
-  kategoria: Zöldség / Gyümölcs
+  category: Zöldség / Gyümölcs
 Kaliforniai paprika (piros):
-  kategoria: Zöldség / Gyümölcs
+  category: Zöldség / Gyümölcs
 Kaliforniai paprika (sárga):
-  kategoria: Zöldség / Gyümölcs
+  category: Zöldség / Gyümölcs
 Kaliforniai paprika (zöld):
-  kategoria: Zöldség / Gyümölcs
+  category: Zöldség / Gyümölcs
 Kápia paprika:
-  kategoria: Zöldség / Gyümölcs
+  category: Zöldség / Gyümölcs
 Káposzta:
-  kategoria: Zöldség / Gyümölcs
+  category: Zöldség / Gyümölcs
 Karalábé:
-  kategoria: Zöldség / Gyümölcs
+  category: Zöldség / Gyümölcs
 Karfiol:
-  kategoria: Zöldség / Gyümölcs
+  category: Zöldség / Gyümölcs
 Kelkáposzta:
-  kategoria: Zöldség / Gyümölcs
+  category: Zöldség / Gyümölcs
 Kígyóuborka:
-  kategoria: Zöldség / Gyümölcs
+  category: Zöldség / Gyümölcs
 Kínai kel:
-  kategoria: Zöldség / Gyümölcs
+  category: Zöldség / Gyümölcs
 Koktélparadicsom:
-  kategoria: Zöldség / Gyümölcs
+  category: Zöldség / Gyümölcs
 Körte:
-  kategoria: Zöldség / Gyümölcs
+  category: Zöldség / Gyümölcs
 Krumpli: Burgonya
 Lencse:
-  kategoria: Zöldség / Gyümölcs
+  category: Zöldség / Gyümölcs
 Lilahagyma:
-  kategoria: Zöldség / Gyümölcs
+  category: Zöldség / Gyümölcs
 Lilakáposzta:
-  kategoria: Zöldség / Gyümölcs
+  category: Zöldség / Gyümölcs
 Lime:
-  kategoria: Zöldség / Gyümölcs
+  category: Zöldség / Gyümölcs
 Madársaláta:
-  kategoria: Zöldség / Gyümölcs
+  category: Zöldség / Gyümölcs
   mertekegysegPreference: dkg
   storage:
     max: 300
     step: 50
 Metélőhagyma:
-  kategoria: Zöldség / Gyümölcs
+  category: Zöldség / Gyümölcs
 Mungóbabcsíra:
-  kategoria: Zöldség / Gyümölcs
+  category: Zöldség / Gyümölcs
 Narancs:
-  kategoria: Zöldség / Gyümölcs
+  category: Zöldség / Gyümölcs
 Pak choi:
-  kategoria: Zöldség / Gyümölcs
+  category: Zöldség / Gyümölcs
 Paprika:
-  kategoria: Zöldség / Gyümölcs
+  category: Zöldség / Gyümölcs
 Paradicsom:
-  kategoria: Zöldség / Gyümölcs
+  category: Zöldség / Gyümölcs
 Póréhagyma:
-  kategoria: Zöldség / Gyümölcs
+  category: Zöldség / Gyümölcs
 Retek:
-  kategoria: Zöldség / Gyümölcs
+  category: Zöldség / Gyümölcs
 Rukkola:
-  kategoria: Zöldség / Gyümölcs
+  category: Zöldség / Gyümölcs
   mertekegysegPreference: dkg
   storage:
     max: 300
     step: 50
+Salátakeverék:
+  category: Zöldség / Gyümölcs
 Sárgarépa:
-  kategoria: Zöldség / Gyümölcs
+  category: Zöldség / Gyümölcs
 Savanyú káposzta:
-  kategoria: Zöldség / Gyümölcs
+  category: Zöldség / Gyümölcs
 Snidling: Metélőhagyma
 Spárga:
-  kategoria: Zöldség / Gyümölcs
+  category: Zöldség / Gyümölcs
 Sütőtök:
-  kategoria: Zöldség / Gyümölcs
+  category: Zöldség / Gyümölcs
 Szőlő: Szőlő (fehér)
 Szőlő (fehér):
-  kategoria: Zöldség / Gyümölcs
+  category: Zöldség / Gyümölcs
 Szőlő (piros):
-  kategoria: Zöldség / Gyümölcs
+  category: Zöldség / Gyümölcs
 Újhagyma: Csemegehagyma
 Vöröshagyma:
-  kategoria: Zöldség / Gyümölcs
+  category: Zöldség / Gyümölcs
 Zeller:
-  kategoria: Zöldség / Gyümölcs
+  category: Zöldség / Gyümölcs
 Zellerszár:
-  kategoria: Zöldség / Gyümölcs
+  category: Zöldség / Gyümölcs
 Zöldhagyma: Csemegehagyma

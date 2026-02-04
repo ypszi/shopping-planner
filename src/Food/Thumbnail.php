@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace PeterPecosz\ShoppingPlanner\Food;
 
-use PeterPecosz\ShoppingPlanner\Core\Storage\Extension;
+use PeterPecosz\ShoppingPlanner\Core\File\Extension;
 
 readonly class Thumbnail
 {

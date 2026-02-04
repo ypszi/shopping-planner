@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use PeterPecosz\ShoppingPlanner\Core\Filename\LocalFileSystemFileNameNormalizer;
+use PeterPecosz\ShoppingPlanner\Core\File\LocalFileSystemFileNameNormalizer;
 use PeterPecosz\ShoppingPlanner\Core\Storage\LocalFileSystemStorage;
 
 use function DI\create;

@@ -14,7 +14,7 @@ class IngredientRows
 
     public function __construct(
         private readonly Supermarket $supermarket,
-        private readonly MeasureConverter $mertekegysegAtvalto
+        private readonly MeasureConverter $measureConverter
     ) {
         $this->ingredientRows = [];
     }
@@ -37,7 +37,7 @@ class IngredientRows
     public function sort(): self
     {
         $sortedIngredients = $this->sortIngredients();
-        $ingredientRows    = new self($this->supermarket, $this->mertekegysegAtvalto);
+        $ingredientRows    = new self($this->supermarket, $this->measureConverter);
 
         foreach ($sortedIngredients as $ingredients) {
             foreach ($ingredients as $ingredient) {
@@ -61,7 +61,7 @@ class IngredientRows
             }
         }
 
-        $nextIngredientRow = new IngredientRow($this->mertekegysegAtvalto);
+        $nextIngredientRow = new IngredientRow($this->measureConverter);
         $nextIngredientRow->add($ingredient);
         $nextIngredientRow->sort($this->supermarket->toOrder());
 

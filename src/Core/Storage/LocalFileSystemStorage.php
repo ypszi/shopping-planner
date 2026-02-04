@@ -4,7 +4,9 @@ declare(strict_types=1);
 
 namespace PeterPecosz\ShoppingPlanner\Core\Storage;
 
-use PeterPecosz\ShoppingPlanner\Core\Filename\FileNameNormalizer;
+use PeterPecosz\ShoppingPlanner\Core\File\Extension;
+use PeterPecosz\ShoppingPlanner\Core\File\File;
+use PeterPecosz\ShoppingPlanner\Core\File\FileNameNormalizer;
 use PeterPecosz\ShoppingPlanner\Food\Thumbnail;
 
 readonly class LocalFileSystemStorage implements Storage
@@ -16,18 +18,16 @@ readonly class LocalFileSystemStorage implements Storage
     ) {
     }
 
-    public function get(string $filename): ?Thumbnail
+    public function get(string $filename, Extension $extension): ?Thumbnail
     {
-        foreach (File::getAvailableExtensions() as $extension) {
-            $fileName = $this->filenameNormalizer->normalize($filename) . '.' . $extension->value;
+        $fileName = $this->filenameNormalizer->normalize($filename) . '.' . $extension->value;
 
-            if (file_exists($this->thumbnailCachePath . $fileName)) {
-                return new Thumbnail(
-                    $this->thumbnailCachePath . $fileName,
-                    $this->thumbnailWebPath . $fileName,
-                    $extension
-                );
-            }
+        if (file_exists($this->thumbnailCachePath . $fileName)) {
+            return new Thumbnail(
+                $this->thumbnailCachePath . $fileName,
+                $this->thumbnailWebPath . $fileName,
+                $extension
+            );
         }
 
         return null;
@@ -35,11 +35,11 @@ readonly class LocalFileSystemStorage implements Storage
 
     public function save(File $file): Thumbnail
     {
-        $fileName  = $this->filenameNormalizer->normalize($file->fileName) . '.' . $file->getExtension()->value;
+        $fileName  = $this->filenameNormalizer->normalize($file->fileName()) . '.' . $file->extension()->value;
         $thumbnail = new Thumbnail(
             $this->thumbnailCachePath . $fileName,
             $this->thumbnailWebPath . $fileName,
-            $file->getExtension()
+            $file->extension()
         );
 
         if (!is_dir($this->thumbnailCachePath)) {

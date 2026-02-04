@@ -13,7 +13,7 @@ class IngredientRow
     /** @var array<string, IngredientForFood> */
     private array $ingredientsByCategory;
 
-    public function __construct(private readonly MeasureConverter $mertekegysegAtvalto)
+    public function __construct(private readonly MeasureConverter $measureConverter)
     {
         $this->ingredientsByCategory = [];
     }
@@ -38,7 +38,7 @@ class IngredientRow
         }
 
         if ($this->canAddUsingConvert($ingredient, $addedIngredient)) {
-            $newIngredient = $this->mertekegysegAtvalto->convert($ingredient, $addedIngredient);
+            $newIngredient = $this->measureConverter->convert($ingredient, $addedIngredient);
 
             $this->ingredientsByCategory[$ingredient->category()] = $newIngredient->withPortion(
                 $newIngredient->portion() + $addedIngredient->portion()
@@ -84,7 +84,7 @@ class IngredientRow
         }
 
         try {
-            $ingredient = $this->mertekegysegAtvalto->convert($ingredient, $ingredient->withMeasure($newMeasure));
+            $ingredient = $this->measureConverter->convert($ingredient, $ingredient->withMeasure($newMeasure));
         } catch (UnknownUnitOfMeasureException) {
         }
 
@@ -118,7 +118,7 @@ class IngredientRow
             $addedIngredient->name() === $ingredient->name()
             && $addedIngredient->measure() !== $ingredient->measure()
         ) {
-            return $this->mertekegysegAtvalto->canConvert($ingredient, $addedIngredient);
+            return $this->measureConverter->canConvert($ingredient, $addedIngredient);
         }
 
         return false;

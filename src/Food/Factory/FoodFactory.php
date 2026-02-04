@@ -50,27 +50,22 @@ readonly class FoodFactory
             );
         }
 
-        $thumbnailUrl = $rawFood['thumbnailUrl'] ?? null;
-
-        if ($thumbnailUrl) {
-            $thumbnailUrl = $this->thumbnailFactory
-                ->create($foodName, $thumbnailUrl)
-                ?->getAssetPath();
-        }
-
         $food = new Food(
             name          : $foodName,
             defaultPortion: $rawFood['defaultPortion'],
             portion       : $portion,
             recipeUrl     : $rawFood['receptUrl'] ?? null,
-            thumbnailUrl  : $thumbnailUrl,
+            thumbnailUrl  : $rawFood['thumbnailUrl'] ?? null,
             tags          : $tags,
             comments      : $rawFood['comments'] ?? [],
             cookingSteps  : $rawFood['cookingSteps'] ?? [],
             ingredients   : $ingredients
         );
 
+        $thumbnail = $this->thumbnailFactory->create($food);
+
         return $food
+            ->withThumnailUrl($thumbnail?->getAssetPath())
             ->withComments($this->templatingProcessor->process($food, $rawFood['comments'] ?? []))
             ->withCookingSteps($this->templatingProcessor->process($food, $rawFood['cookingSteps'] ?? []));
     }

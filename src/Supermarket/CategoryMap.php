@@ -4,23 +4,21 @@ declare(strict_types=1);
 
 namespace PeterPecosz\ShoppingPlanner\Supermarket;
 
-class CategoryMap
+readonly class CategoryMap
 {
     /**
      * @param array<string, string> $map
      */
-    public function __construct(private readonly array $map)
+    public function __construct(private array $map)
     {
     }
 
-    public function map(string $kategoria): string
+    public function map(string $category): string
     {
-        $mappedKategoria = $this->map[$kategoria] ?? null;
-
-        if (!isset($mappedKategoria)) {
-            return $kategoria;
+        if (!isset($this->map[$category])) {
+            return $category;
         }
 
-        return $mappedKategoria;
+        return $this->map[$category];
     }
 }
