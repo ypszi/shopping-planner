@@ -2129,15 +2129,13 @@ Lecsó:
           portion: '0.5 mk'
         - name: Ecet
           portion: '0.25 mk'
-        - name: Ecet
-          portion: '0.25 mk'
         - name: Petrezselyem
           portion: '1 tk'
     cookingSteps:
-        - 'A tonhalkonzervet lecsepegtetjük, és egy nagyobb tálba rakjuk.'
-        - 'A vörösbabot és a kukoricát egy szűrőbe öntjük, átmossuk, lecsepegtetjük, és a tonhalhoz rakjuk.'
-        - 'A kaliforniai paprikát kukoricaszem méretűre vágjuk, és ez is mehet a babos keverékhez.'
-        - 'Sózzuk, borsozzuk a salátát, majd hozzáadjuk az olívaolajat, a citromlevet, a cukrot és ecetet.'
+        - '{{ Tonhal (konzerv) }} tonhalkonzervet lecsepegtetünk, és egy nagyobb tálba rakjuk.'
+        - '{{ Vörösbab (konzerv) }} vörösbabot és {{ Kukorica (konzerv) }} kukoricát egy szűrőbe öntjük, átmossuk, lecsepegtetjük, és a tonhalhoz rakjuk.'
+        - '{{ Kaliforniai paprika (piros) }} kaliforniai paprikát kukoricaszem méretűre vágjuk, és ez is mehet a babos keverékhez.'
+        - '{{ Só }} só, {{ Bors }} bors mehet a salátához, majd hozzáadunk {{ Olívaolaj }} olívaolajat, {{ Citromlé }} citromlevet, {{ Cukor }} cukrot és {{ Ecet }} ecetet.'
         - 'A petrezselymet apróra vágjuk, és ezt is a salátához adjuk.'
         - 'Az egészet összekeverjük, és akár azonnal is ehetjük, de még jobb, ha 2-3 órát a hűtőben pihentetjük, mert úgy jobban összeérnek az ízek.'
 'Mézes-chilis csirkesaláta':
