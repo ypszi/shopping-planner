@@ -18,9 +18,9 @@ readonly class LocalFileSystemStorage implements Storage
     ) {
     }
 
-    public function get(string $filename, Extension $extension): ?Thumbnail
+    public function get(string $fileName, Extension $extension): ?Thumbnail
     {
-        $fileName = $this->filenameNormalizer->normalize($filename) . '.' . $extension->value;
+        $fileName = $this->filenameNormalizer->normalize($fileName) . '.' . $extension->value;
 
         if (file_exists($this->thumbnailCachePath . $fileName)) {
             return new Thumbnail(
