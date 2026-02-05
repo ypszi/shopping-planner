@@ -9,6 +9,18 @@ provider:
   environment:
     APP_ENV: prod
     S3_BUCKET: shopping-planner-thumbnails-eu-north-1
+  iam:
+    role:
+      statements:
+        - Effect: Allow
+          Action:
+            - s3:ListBucket
+          Resource: arn:aws:s3:::shopping-planner-thumbnails-eu-north-1
+        - Effect: Allow
+          Action:
+            - s3:GetObject
+            - s3:PutObject
+          Resource: arn:aws:s3:::shopping-planner-thumbnails-eu-north-1/*
 
 functions:
   web:
