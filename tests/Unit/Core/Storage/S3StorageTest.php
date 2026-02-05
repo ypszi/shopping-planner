@@ -100,7 +100,7 @@ class S3StorageTest extends TestCase
                 [
                     [
                         'Bucket' => 'test-bucket-1',
-                        'Key'    => $normalizedFileName . '.' . Extension::JPG->value,
+                        'Key'    => $this->filePath . $normalizedFileName . '.' . Extension::JPG->value,
                         'Body'   => $fileContent,
                     ],
                 ]
