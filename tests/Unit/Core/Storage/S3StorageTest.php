@@ -83,7 +83,8 @@ class S3StorageTest extends TestCase
     #[Test]
     public function testSave(): void
     {
-        $fileName = 'Alpesi Sajtos-Tészta (Älplermagronen)';
+        $fileName    = 'Alpesi Sajtos-Tészta (Älplermagronen)';
+        $fileContent = file_get_contents(__DIR__ . '/mock-image.jpg');
 
         $this->fileNameNormalizer
             ->expects($this->once())
@@ -100,6 +101,7 @@ class S3StorageTest extends TestCase
                     [
                         'Bucket' => 'test-bucket-1',
                         'Key'    => $normalizedFileName . '.' . Extension::JPG->value,
+                        'Body'   => $fileContent,
                     ],
                 ]
             );
@@ -108,14 +110,14 @@ class S3StorageTest extends TestCase
             new File(
                 fileName: $fileName,
                 mimeType: 'image/jpeg',
-                content : file_get_contents(__DIR__ . '/mock-image.jpg'),
+                content : $fileContent,
             )
         );
 
         $this->assertEquals(
             new Thumbnail(
                 filePath : $this->filePath . $normalizedFileName . '.' . Extension::JPG->value,
-                assetPath: $this->assetPath . $normalizedFileName . '.' . Extension::JPG->value,
+                assetPath: 'https://test-bucket-1.s3.test-region-eu-north-1.amazonaws.com/' . $this->assetPath . $normalizedFileName . '.' . Extension::JPG->value,
                 extension: Extension::JPG,
             ),
             $thumbnail
