@@ -61,7 +61,7 @@ readonly class S3Storage implements Storage
         $this->client->putObject(
             [
                 'Bucket' => $this->bucket,
-                'Key'    => $fileName,
+                'Key'    => $this->thumbnailCachePath . $fileName,
                 'Body'   => $file->content,
             ]
         );
