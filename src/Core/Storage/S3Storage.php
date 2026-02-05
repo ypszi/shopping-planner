@@ -42,12 +42,7 @@ readonly class S3Storage implements Storage
 
             return new Thumbnail(
                 filePath : $this->thumbnailCachePath . $fileName,
-                assetPath: sprintf(
-                    'https://%s.s3.%s.amazonaws.com/%s',
-                    $this->bucket,
-                    $this->region,
-                    $this->thumbnailWebPath . $fileName
-                ),
+                assetPath: $this->createAssetPath($fileName),
                 extension: $extension,
             );
         } catch (AwsException $e) {
@@ -73,8 +68,18 @@ readonly class S3Storage implements Storage
 
         return new Thumbnail(
             filePath : $this->thumbnailCachePath . $fileName,
-            assetPath: $this->thumbnailWebPath . $fileName,
+            assetPath: $this->createAssetPath($fileName),
             extension: $file->extension(),
+        );
+    }
+
+    public function createAssetPath(string $fileName): string
+    {
+        return sprintf(
+            'https://%s.s3.%s.amazonaws.com/%s',
+            $this->bucket,
+            $this->region,
+            $this->thumbnailWebPath . $fileName
         );
     }
 }
