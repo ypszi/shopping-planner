@@ -19,7 +19,7 @@ class File
     public function __construct(
         private string $fileName,
         string $mimeType,
-        public readonly mixed $content,
+        public readonly string $content,
     ) {
         if (!self::isMimeTypeValid($mimeType)) {
             throw new InvalidArgumentException(sprintf('Mime type "%s" is not supported.', $mimeType));

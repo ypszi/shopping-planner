@@ -67,6 +67,7 @@ readonly class S3Storage implements Storage
             [
                 'Bucket' => $this->bucket,
                 'Key'    => $fileName,
+                'Body'   => $file->content,
             ]
         );
 
