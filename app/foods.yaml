@@ -2540,8 +2540,8 @@ Palacsinta:
         - name: Napraforgóolaj
           portion: '0.5 dl'
     cookingSteps:
-        - 'Egy tálba ütjük a tojásokat, majd a cukrokkal együtt kikeverjük.'
-        - 'Folyamatos keverés mellett hozzáadjuk a tojásos keverékhez a lisztet, majd a tejet és a szódát, végül az olajat, és csomómentesre keverjük.'
+        - 'Egy tálba ütünk {{ Tojás }} tojást, majd {{ Cukor }} cukorral együtt kikeverjük.'
+        - 'Folyamatos keverés mellett hozzáadunk a tojásos keverékhez {{ Finomliszt }} lisztet, majd {{ Tej }} tejet és {{ Szódavíz }} szódát, végül {{ Napraforgóolaj }} olajat, és csomómentesre keverjük.'
         - 'Egy serpenyőt vagy palacsintasütőt egy ecsettel vékonyan megkenünk olajjal, majd megsütjük a palacsintákat.'
 'Paprikás krumpli':
     defaultPortion: 4
