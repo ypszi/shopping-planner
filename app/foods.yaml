@@ -4056,6 +4056,30 @@ Tiramisu:
         - 'Egy kb. 6 cm falmagasságú tálban szorosan egymás mellé tesszük a megmártott piskóták felét.'
         - 'Rákenjük a krém felét, majd beterítjük egy újabb réteg kávéba áztatott babapiskótával, és rátesszük a maradék krémet.'
         - 'Egy éjszakára a hűtőszekrénybe tesszük, hogy összeérjenek az ízek. Tálalás előtt megszórjuk kakaóporral.'
+Tojáskrém:
+    defaultPortion: 2
+    receptUrl: 'https://www.nosalty.hu/recept/villamgyors-tojaskrem'
+    thumbnailUrl: 'https://image-api.nosalty.hu/nosalty/images/recipes/Lp/YL/villamgyors-tojaskrem.jpg?w=3000&fit=crop&s=fefb30ad2e5a73c37c0ef330fb299578'
+    thumbnailExtension: jpg
+    tags:
+        - reggeli
+    ingredients:
+        - name: Tojás
+          portion: '5 db'
+        - name: Tejföl
+          portion: '1 ek'
+        - name: Majonéz
+          portion: '1 ek'
+        - name: Mustár
+          portion: '1 tk'
+        - name: Snidling
+          portion: '1 ek'
+        - name: Petrezselyem
+          portion: '1 ek'
+        - name: Só
+          portion: '3 csipet'
+        - name: Bors
+          portion: '1 csipet'
 'Tortilla lap':
     defaultPortion: 10
     receptUrl: 'https://streetkitchen.hu/alapkeszitmenyek/tortilla-lap-recept/'

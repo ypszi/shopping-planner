@@ -85,7 +85,7 @@ class AvailableFoodFactoryTest extends TestCase
     public static function foodTagDataProvider(): array
     {
         return [
-            'reggeli'  => ['tags' => ['reggeli'], 'expectedCount' => 4],
+            'reggeli'  => ['tags' => ['reggeli'], 'expectedCount' => 5],
             'ebéd'     => ['tags' => ['ebéd'], 'expectedCount' => 69],
             'vacsora'  => ['tags' => ['vacsora'], 'expectedCount' => 36],
             'köret'    => ['tags' => ['köret'], 'expectedCount' => 23],
@@ -113,7 +113,7 @@ class AvailableFoodFactoryTest extends TestCase
         $this->mockTemplatingProcessor();
 
         $this->assertCount(
-            77,
+            78,
             $this->sut->listAvailableFoods(new FoodFilterInput(tags: ['reggeli', 'ebéd', 'vacsora'])),
             'Expectation failed for tags: "reggeli, ebéd, vacsora"'
         );
