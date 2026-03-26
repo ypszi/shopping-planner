@@ -3875,13 +3875,13 @@ Tepertőkrém:
         - name: Bors
           portion: '1 csipet'
     cookingSteps:
-        - 'A tojást 10-12 perc alatt megfőzzük.'
+        - '{{ Tojás }} tojást 10-12 perc alatt megfőzünk.'
         - 'A tepertőt turmixban vagy botmixerrel pépesítjük. (Nem baj, ha maradnak benne kisebb, ropogós darabok. Sőt.)'
-        - 'Tálba tesszük a tepertőt, hozzáadjuk a nagyon finomra aprított vöröshagymát és a mustárt.'
+        - 'Tálba teszünk {{ Tepertő (sertés) }} tepertőt, hozzáadjuk a nagyon finomra aprított {{ Vöröshagyma }} vöröshagymát és {{ Mustár }} mustárt.'
         - 'A főtt tojásokat picire kockázzuk, ez is mehet a tálba.'
-        - 'Sóval, borssal ízesítjük.'
+        - '{{ Só }} sóval, {{ Bors }} borssal ízesítjük.'
         - 'Villa segítségével alaposan összedolgozzuk a hozzávalókat.'
-        - 'A végén tejföllel lágyítjuk a pástétomot.'
+        - 'A végén {{ Tejföl }} tejföllel lágyítjuk a pástétomot.'
 'Tepsis Csirke Zöldséggel':
     defaultPortion: 4
     receptUrl: 'https://www.mindmegette.hu/tepsis-csirke-zoldseggel.recept'
