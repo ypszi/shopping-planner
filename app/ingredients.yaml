@@ -355,6 +355,7 @@ Fusilli tészta:
   category: Tartós élelmiszer
 Keményítő:
   category: Tartós élelmiszer
+Kenyérkocka: Zsemlekocka
 Leveles tészta:
   category: Tartós élelmiszer
 Makaróni tészta:
@@ -377,6 +378,8 @@ Sűrített paradicsom: Paradicsom püré
 Tagliatelle tészta:
   category: Tartós élelmiszer
 Worcester szósz:
+  category: Tartós élelmiszer
+Zsemlekocka:
   category: Tartós élelmiszer
 Zsemlemorzsa:
   category: Tartós élelmiszer

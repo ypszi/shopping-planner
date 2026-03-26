@@ -2838,6 +2838,8 @@ Pizzatészta:
           portion: '200 ml'
         - name: Alaplé
           portion: '10 dl'
+        - name: Zsemlekocka
+          portion: '100 g'
     cookingSteps:
         - 'A póréhagymát és a zellert karikára vágjuk, a krumplit megpucoljuk és felkockázzuk.'
         - 'A vajat megolvasztjuk, rádobjuk a póréhagymát, és 2-3 percig kevergetjük.'
