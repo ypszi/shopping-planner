@@ -90,7 +90,7 @@ class AvailableFoodFactoryTest extends TestCase
             'vacsora'  => ['tags' => ['vacsora'], 'expectedCount' => 36],
             'köret'    => ['tags' => ['köret'], 'expectedCount' => 23],
             'leves'    => ['tags' => ['leves'], 'expectedCount' => 4],
-            'saláta'   => ['tags' => ['saláta'], 'expectedCount' => 25],
+            'saláta'   => ['tags' => ['saláta'], 'expectedCount' => 26],
             'desszert' => ['tags' => ['desszert'], 'expectedCount' => 21],
             'új'       => ['tags' => ['új'], 'expectedCount' => 9],
             'suli'     => ['tags' => ['suli'], 'expectedCount' => 5],

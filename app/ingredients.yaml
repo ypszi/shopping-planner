@@ -13,6 +13,8 @@ Almaborecet:
   category: Ecet
 Balzsamecet (fehér):
   category: Ecet
+Balzsamecet (sötét):
+  category: Ecet
 Ecet:
   category: Ecet
 Fehérborecet:
@@ -475,6 +477,8 @@ Ananász:
   category: Zöldség / Gyümölcs
 Avokádó:
   category: Zöldség / Gyümölcs
+Bébispenót:
+  category: Zöldség / Gyümölcs
 Brokkoli:
   category: Zöldség / Gyümölcs
 Burgonya:
@@ -577,6 +581,7 @@ Salátakeverék:
   category: Zöldség / Gyümölcs
 Sárgarépa:
   category: Zöldség / Gyümölcs
+Szárzeller: Zellerszár
 Savanyú káposzta:
   category: Zöldség / Gyümölcs
 Snidling: Metélőhagyma

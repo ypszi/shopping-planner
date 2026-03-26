@@ -2067,6 +2067,55 @@ Lecsó:
           portion: '1 csipet'
         - name: Citrom
           portion: '0.5 db'
+'Mediterrán csicseriborsó-saláta':
+    defaultPortion: 2
+    receptUrl: 'https://streetkitchen.hu/receptek/mediterran-csicseriborso-salata'
+    thumbnailUrl: 'https://production.streetkitchen-cdn.com/mediterran-csicseriborso-salata-2-scaled-MIGT6K.webp'
+    thumbnailExtension: jpg
+    tags:
+        - saláta
+    ingredients:
+        - name: 'Csicseriborsó (konzerv)'
+          portion: '400 g'
+        - name: 'Kaliforniai paprika (sárga)'
+          portion: '0.5 db'
+        - name: Kígyóuborka
+          portion: '0.5 db'
+        - name: Paradicsom
+          portion: '1 db'
+        - name: Lilahagyma
+          portion: '1 db'
+        - name: Szárzeller
+          portion: '1 db'
+        - name: Bébispenót
+          portion: '50 g'
+        - name: Olívaolaj
+          portion: '4 ek'
+        - name: 'Balzsamecet (sötét)'
+          portion: '1 ek'
+        - name: Fokhagyma
+          portion: '2 gerezd'
+        - name: Petrezselyem
+          portion: '1 tk'
+        - name: Bazsalikom
+          portion: '1 tk'
+        - name: Só
+          portion: '2 csipet'
+        - name: Bors
+          portion: '1 csipet'
+    cookingSteps:
+        - '{{ Csicseriborsó (konzerv) }} csicseriborsót lecsepegtetünk és egy keverőtálba tesszük.'
+        - 'Előkészítjük a zöldségeket:':
+              - '1 cm-es kockára vágunk {{ Kaliforniai paprika (sárga) }} paprikát és {{ Kígyóuborka }} uborkát'
+              - 'cikkezünk {{ Paradicsom }} paradicsomot'
+              - 'vékony szeletekre vágunk {{ Lilahagyma }} lilahagymát, {{ Szárzeller }} zellert'
+        - 'Hozzáadjuk a paprikát és az uborkát, a paradicsomot, a lilahagymát, a zellert és végül {{ Bébispenót }} spenótleveleket.'
+        - 'Alaposan összekeverjük, és elterítjük egy tálon.'
+        - 'Az öntethez {{ Olívaolaj }} olívaolajat és {{ Balzsamecet (sötét) }} balzsamecetet egy tálba öntünk,'
+        - 'belereszeljük {{ Fokhagyma }} fokhagymát,'
+        - 'hozzáadjuk {{ Petrezselyem }} petrezselymet és {{ Bazsalikom }} bazsalikomot,'
+        - 'sózzuk ({{ Só }}), borsozzuk ({{ Bors }}) és az egészet alaposan kikeverjük.'
+        - 'Az öntetet a salátára csorgatjuk, összeforgatjuk, és ezennel el is készültünk.'
 'Mexikói avokádósaláta':
     defaultPortion: 4
     receptUrl: 'https://www.nosalty.hu/recept/avokadosalata'
@@ -4088,13 +4137,13 @@ Tojáskrém:
         - 'Hideg vízben lehűtjük őket, majd eltávolítjuk a héjukat.'
         - 'Nagy lyukú reszelőn reszeljük le őket egy tálba.'
         - 'A lereszelt tojásokhoz hozzáadunk:':
-            - '{{ Tejföl }} Tejfölt'
-            - '{{ Majonéz }} Majonézt'
-            - '{{ Mustár }} Mustárt'
-            - '{{ Snidling }} Snidlinget'
-            - '{{ Petrezselyem }} Petrezselymet'
-            - '{{ Só }} Sót'
-            - '{{ Bors }} Borst'
+              - '{{ Tejföl }} Tejfölt'
+              - '{{ Majonéz }} Majonézt'
+              - '{{ Mustár }} Mustárt'
+              - '{{ Snidling }} Snidlinget'
+              - '{{ Petrezselyem }} Petrezselymet'
+              - '{{ Só }} Sót'
+              - '{{ Bors }} Borst'
         - 'Alaposan elkeverjük.'
         - 'Fogyasztás előtt érdemes hűtőbe tenni, hogy összeérjen a krém.'
 'Tortilla lap':
