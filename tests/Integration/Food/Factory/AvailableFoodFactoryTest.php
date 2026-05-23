@@ -86,7 +86,7 @@ class AvailableFoodFactoryTest extends TestCase
     {
         return [
             'reggeli'  => ['tags' => ['reggeli'], 'expectedCount' => 5],
-            'ebéd'     => ['tags' => ['ebéd'], 'expectedCount' => 69],
+            'ebéd'     => ['tags' => ['ebéd'], 'expectedCount' => 70],
             'vacsora'  => ['tags' => ['vacsora'], 'expectedCount' => 36],
             'köret'    => ['tags' => ['köret'], 'expectedCount' => 23],
             'leves'    => ['tags' => ['leves'], 'expectedCount' => 4],
@@ -113,7 +113,7 @@ class AvailableFoodFactoryTest extends TestCase
         $this->mockTemplatingProcessor();
 
         $this->assertCount(
-            78,
+            79,
             $this->sut->listAvailableFoods(new FoodFilterInput(tags: ['reggeli', 'ebéd', 'vacsora'])),
             'Expectation failed for tags: "reggeli, ebéd, vacsora"'
         );

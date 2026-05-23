@@ -199,9 +199,13 @@ Mogyoró:
   category: Magvak
   storage:
     max: 300
+Napraforgómag:
+  category: Magvak
 Pisztácia:
   category: Magvak
 Szezámmag:
+  category: Magvak
+Tökmag:
   category: Magvak
 
 # Mirelit

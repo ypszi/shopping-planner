@@ -2680,6 +2680,39 @@ Palacsinta:
         - 'Egy serpenyőben a vajat megolvasztjuk'
         - 'Beletesszük az egész babokat, sózzuk, frissen őrölt borsot hintünk rá'
         - 'Néhány perc alatt pároljuk (nem kell teljesen puhára párolni, inkább roppanós legyen)'
+'Parmezános bundában sült magvas csirkemell':
+    defaultPortion: 4
+    receptUrl: 'https://www.nosalty.hu/recept/parmezanos-bundaban-sult-csirkemell'
+    thumbnailUrl: 'https://image-api.nosalty.hu/nosalty/images/recipes/7V/CS/parmezanos-bundaban-sult-csirkemell.jpeg?w=1200&fit=crop&s=597f58c2ea4f11ea1e71374aea277b84'
+    thumbnailExtension: jpg
+    tags:
+        - ebéd
+    ingredients:
+        - name: Csirkemell
+          portion: '100 dkg'
+        - name: Só
+          portion: '2 tk'
+        - name: 'Fekete bors'
+          portion: '1 tk'
+        - name: Finomliszt
+          portion: '15 dkg'
+        - name: Tojás
+          portion: '2 db'
+        - name: 'Parmezán sajt'
+          portion: '10 dkg'
+        - name: Zsemlemorzsa
+          portion: '5 dkg'
+        - name: Tökmag
+          portion: '1 ek'
+        - name: Napraforgómag
+          portion: '1 ek'
+        - name: Szezámmag
+          portion: '2 ek'
+    cookingSteps:
+        - '{{ Csirkemell }} csirkemellet vékony szeletekre vágjuk, majd miután papírtörlőn szárazra töröltük, mindkét oldalukat sózzuk ({{ Só }}), borsozzuk ({{ Bors }}).'
+        - 'Előkészülünk a bundázáshoz: {{ Finomliszt }} lisztet egy tálba szitáljuk, {{ tojás }} tojást felverjük, és hozzáadjuk a {{ Parmezán sajt }} reszelt parmezánt és kevés sót. Ha túl sűrű lenne, akkor kevés ásványvízzel hígítsuk.'
+        - '{{ Tökmag }} Tökmagot, {{ Napraforgómag }} Napraforgómagot, és {{ Szezámmag }} Szezámmagot keverjük össze alaposan {{ Zsemlemorzsa }} zsemlemorzsával.'
+        - 'A csirkemelleket a szokásos módon bepanírozzuk, majd kiolajozott, sütőpapírral bélelt tepsibe helyezzük őket, és 200 fokra előmelegített sütőben mindkét oldalukat aranybarnára sütjük. Ha biztosra szeretnénk menni, a husik tetejét vékonyan olajozzunk meg.'
 'Pestos tészta':
     defaultPortion: 2
     thumbnailUrl: 'https://image-api.nosalty.hu/nosalty/images/recipes/j3/sc/petrezselyem-pestos-fusilli.jpeg?w=1200&fit=crop&s=05dec19e7137d45e8f2cd859cc3cd11e'
