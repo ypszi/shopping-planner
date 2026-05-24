@@ -16,7 +16,7 @@
         "symfony/dotenv": "^7.3",
         "symfony/expression-language": "^7.3",
         "symfony/yaml": "^7.1",
-        "twig/twig": "^3.14"
+        "twig/twig": "^3.26"
     },
     "require-dev": {
         "fakerphp/faker": "^1.24",

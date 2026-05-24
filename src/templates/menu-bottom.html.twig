@@ -1,0 +1,21 @@
+<div class="sticky-bottom">
+    <div class="row justify-content-center sticky-bottom-btn-row">
+        {% set btnCount = buttons | length %}
+        {% set btnCol = 12 // btnCount - 1 %}
+
+        {% for btn in buttons %}
+            {% if btn.type == 'submit' %}
+                <button type="submit" class="btn {{ btn.class }} col-{{ btnCol }} text-center" title="{{ btn.title }}">
+                    <i class="emoji {{ btn.emoji }}"></i>
+                </button>
+            {% elseif btn.type == 'a' %}
+                <a href="{{ btn.href }}" class="btn {{ btn.class }} col-{{ btnCol }} text-center" title="{{ btn.title }}">
+                    <i class="emoji {{ btn.emoji }}"></i>
+                </a>
+            {% endif %}
+            {% if not loop.last %}
+                <div class="col-1"></div>
+            {% endif %}
+        {% endfor %}
+    </div>
+</div>

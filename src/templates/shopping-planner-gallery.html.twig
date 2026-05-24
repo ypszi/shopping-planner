@@ -241,21 +241,13 @@
             {% endfor %}
         </div>
 
-        <div class="sticky-bottom">
-            <div class="row justify-content-center sticky-bottom-btn-row">
-                <a href="/" class="btn btn-warning col-3 text-center" title="HOME">
-                    <i class="emoji emoji-home"></i>
-                </a>
-                <div class="col-1"></div>
-                <a href="{{ ingredientStorageUrl }}" class="btn btn-info col-3 text-center" title="STORAGE">
-                    <i class="emoji emoji-box"></i>
-                </a>
-                <div class="col-1"></div>
-                <button type="submit" class="btn btn-primary col-3 text-center" title="PLAN">
-                    <i class="emoji emoji-checkmark"></i>
-                </button>
-            </div>
-        </div>
+        {% include 'menu-bottom.html.twig' with {
+            'buttons': [
+                {'type': 'a', 'href': '/', 'class': 'btn-warning', 'title': 'HOME', 'emoji': 'emoji-home'},
+                {'type': 'a', 'href': ingredientStorageUrl, 'class': 'btn-info', 'title': 'STORAGE', 'emoji': 'emoji-box'},
+                {'type': 'submit', 'class': 'btn-primary', 'title': 'PLAN', 'emoji': 'emoji-checkmark'}
+            ]
+        } %}
     </form>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
