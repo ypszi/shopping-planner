@@ -2709,7 +2709,7 @@ Palacsinta:
         - name: Szezámmag
           portion: '2 ek'
     cookingSteps:
-        - '{{ Csirkemell }} csirkemellet vékony szeletekre vágjuk, majd miután papírtörlőn szárazra töröltük, mindkét oldalukat sózzuk ({{ Só }}), borsozzuk ({{ Bors }}).'
+        - '{{ Csirkemell }} csirkemellet vékony szeletekre vágjuk, majd miután papírtörlőn szárazra töröltük, mindkét oldalukat sózzuk ({{ Só }}), borsozzuk ({{ Fekete bors }}).'
         - 'Előkészülünk a bundázáshoz: {{ Finomliszt }} lisztet egy tálba szitáljuk, {{ tojás }} tojást felverjük, és hozzáadjuk a {{ Parmezán sajt }} reszelt parmezánt és kevés sót. Ha túl sűrű lenne, akkor kevés ásványvízzel hígítsuk.'
         - '{{ Tökmag }} Tökmagot, {{ Napraforgómag }} Napraforgómagot, és {{ Szezámmag }} Szezámmagot keverjük össze alaposan {{ Zsemlemorzsa }} zsemlemorzsával.'
         - 'A csirkemelleket a szokásos módon bepanírozzuk, majd kiolajozott, sütőpapírral bélelt tepsibe helyezzük őket, és 200 fokra előmelegített sütőben mindkét oldalukat aranybarnára sütjük. Ha biztosra szeretnénk menni, a husik tetejét vékonyan olajozzunk meg.'
